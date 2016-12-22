@@ -1,0 +1,9 @@
+q.Natalie { color: #8CDAFF; }
+q.James   { color: #DA9FAF; }
+q.Kat     { color: #9ADFAF; }
+q.Asara   { color: #8CDAFF; }
+
+q.Guildmaster { color: #9FDAAF; }
+
+img.Natalie { transform: scale(0.8); }
+img.Natalie.right { transform: scaleX(-0.8) scaleY(0.8); }
