@@ -15,10 +15,10 @@ $.extend Place, {
 
     if g.location is place
       distanceClass = 'here'
-      distanceDesc = '- Docked'
+      distanceDesc = 'Docked'
     else
       distanceClass = ''
-      distanceDesc = "- #{Place.travelDays(g.location, place)} days"
+      distanceDesc = "#{Place.travelDays(g.location, place)} days"
 
     deliverable = g.cargo.filter (job)-> job.to is place
     available = g.availableCargo.filter (job)-> job.from is place
@@ -26,15 +26,12 @@ $.extend Place, {
 
     return """<div place="#{place}" class="place has-full #{distanceClass}" style="left: #{location.x}px; top: #{location.y}px;">
       <div class="name">#{place}</div>
-      <div class="full">
-        <div class="name">#{place} #{distanceDesc}</div>
-        <table class='table table-striped'>
-          #{Game.drawList deliverable, Cargo.drawDelivery}
-          #{Game.drawList available, Cargo.draw}
-          <tr><td class="reputation">Reputation: #{Math.floor(g.reputation[place])}</td></tr>
-          #{Game.drawList visiblePages, Page.draw.bind(null, place)}
-        </table>
-      </div>
+      <div class="description">#{distanceDesc} - #{Math.floor(g.reputation[place])} reputation</div>
+      <table>
+        #{Game.drawList deliverable, Cargo.drawDelivery}
+        #{Game.drawList available, Cargo.draw}
+        #{Game.drawList visiblePages, Page.draw.bind(null, place)}
+      </table>
     </div>"""
 
   animateTravel: (to)->

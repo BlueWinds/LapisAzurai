@@ -34,6 +34,7 @@ Object.defineProperty String.prototype, 'capitalize', {value: ->
 }
 
 Object.defineProperty Array.prototype, 'wordJoin', {value: ->
+  if @length is 1 then return @[0]
   str = @slice(0, -1).join(', ')
   str += ' and ' + @[@length - 1]
   return str

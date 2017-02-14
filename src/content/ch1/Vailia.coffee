@@ -7,7 +7,8 @@ Game.starting =
   location: 'Vailia'
   distance: 0
   reputation:
-    Vailia: 0
+    Vailia: 20
+    MtJulia: 0
   people:
     Natalie:
       name: 'Natalie'
@@ -19,7 +20,8 @@ Game.starting =
       experience: 0
       skills: {}
       colors: ['none', 'light', 'green', 'fiery', 'none']
-  history: {}
+  history:
+    Intro: 0
 
 p = {}
 

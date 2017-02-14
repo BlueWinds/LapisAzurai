@@ -8,7 +8,6 @@
     "canvas": "1.x",
     "coffeelint": "1.x",
     "grunt": "0.4.x",
-    "grunt-bump": "0.3.x",
     "grunt-cli": "0.1.x",
     "grunt-coffeelint": "0.x",
     "grunt-contrib-clean": "0.x",

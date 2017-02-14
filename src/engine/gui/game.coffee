@@ -34,7 +34,7 @@ $.extend Game, {
 
   drawList: (items, draw)->
     if items.length
-      """<tr><td>#{items.map(draw).join "</td></tr><tr><td>"}</td></tr>"""
+      """<tr>#{items.map(draw).join "</tr><tr>"}</tr>"""
     else ""
 
   guiSetup: ->
@@ -48,7 +48,7 @@ $.extend Game, {
     $('#save-game').click ->
       unless g then return
 
-      localStorage.setItem Date.now(), jsyaml.safeDump(g.export())
+      localStorage.setItem Date.now(), jsyaml.safeDump(g)
       $('#save-game .success').animate {opacity: 1}, 500
       .animate {opacity: 0}, 2000
 
@@ -88,6 +88,19 @@ $.extend Game, {
 
     $(window).on 'mouseup touchend touchcancel', -> map.off('mousemove touchmove')
 
+    $('#LabelLayer g').on 'click', ->
+      label = $(@)
+      place = $('[place="' + @id + '"]')
+      place.stop().animate({to: place.outerHeight()}, {step: animateClip, duration: 200})
+      label.stop().animate {opacity: 0}, 200
+      $('#map').one 'click', ->
+        place.stop().animate({to: 0}, {step: animateClip, duration: 200})
+        label.stop().animate {opacity: 1}, 200
+
+      return false
+
+    animateClip = (now, fx)->
+      $(@).css('clip', 'rect(0px 500px ' + now + 'px 0)')
 }
 
 oldPassDay = Game.passDay

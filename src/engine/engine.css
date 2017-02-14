@@ -55,6 +55,24 @@ a {
   text-decoration: none;
 }
 
+table {
+  background-color: #181818;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr:nth-of-type(2n+1) {
+  background-color: #080808;
+}
+
+table td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #282828;
+}
+
 .success {
   color: #77b300;
   font-weight: 700;
@@ -92,6 +110,57 @@ a {
   height: 100%;
   position: absolute;
   width: 100%;
+}
+
+#places {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+#places .place {
+  background-color: #151515;
+  border: 1px solid #030303;
+  clip: rect(0, 500px, 0, 0);
+  cursor: default;
+  border-radius: 4px;
+  position: absolute;
+  transform: translate(-5px, -5px);
+  width: 190px;
+}
+
+#places .name {
+  color: #fff;
+  font-size: 1.4em;
+  padding: 8px 0 0 12px;
+}
+
+#places .description {
+  font-size: 0.8em;
+  margin: -5px 0 8px 22px;
+}
+
+#places .cost {
+  font-size: 0.8em;
+  float: right;
+}
+
+#places .participants, #places .need {
+  font-size: 0.8em;
+  margin: -1px 0px -3px 15px;
+}
+
+#places .page {
+  opacity: 0.6;
+}
+
+#places .page.active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+#places .page .label {
+  color: #fff;
 }
 
 #LabelLayer g {

@@ -24,7 +24,7 @@ window.Page = {
 
   matchesHistory: (foresight, extraTime, page)->
     if g.history[page]? then return false
-    for value, key of Page[page].history
+    for key, value of Page[page].history
       unless g.history[key]? then return false
       if value > 0 and g.history[key] > g.day - (value - foresight) then return false
       if value < 0 and g.history[key] < g.day + (value - extraTime) then return false
@@ -35,6 +35,5 @@ window.Page = {
       g.people[character].experience += exp
     g.reputation[place] -= Page.reputationNeeded()
     g.history[page] = g.day
-    g.backlog.push(page)
-    g.passDay()
+    Game.passDay()
 }

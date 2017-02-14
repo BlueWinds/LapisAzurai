@@ -25,6 +25,7 @@ sampleGame =
         EarToTheGround2: true
       color: ['tanned', 'none', 'green', 'ash', 'none', 'none']
   history:
+    Intro: 0
     ExploreWilds: 1
 
 window.Game =

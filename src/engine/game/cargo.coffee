@@ -19,23 +19,22 @@ window.Cargo =
 
   deliveryTimeRemaining: (cargo)->
     passed = g.day - cargo.start
-    distance = Place.distance(cargo.from, cargo.to)
-    return 10 + distance - passed
+    travel = Place.travelDays(cargo.from, cargo.to)
+    return 10 + travel - passed
 
   passDay: ->
-    g.availabileCargo = g.availabileCargo.filter (cargo)-> Cargo.acceptTimeRemaining(cargo.start) >= 0
-
+    g.availableCargo = g.availableCargo.filter (cargo)-> Cargo.acceptTimeRemaining(cargo.start) >= 0
     Cargo.createRandom(Cargo.newCargoDaily())
 
-  potentialCargoCount: (placeName)->
+  potentialCargoCount: (place)->
     count = 0
-    for destination, goods of Place[placeName].goods when g.reputation[destination]?
+    for destination, goods of Place[place].goods when g.reputation[destination]?
       count += goods.length
     return count
 
   createRandom: (count)->
     possibleCargo = {}
-    for r, place in g.reputation
+    for place of g.reputation
       possibleCargo[place] = Cargo.potentialCargoCount(place)
 
     for i in [0 ... count]
@@ -44,7 +43,7 @@ window.Cargo =
 
   create: (from)->
     potentialDestinations = {}
-    for destination, goods in Place[from].goods when g.reputation[destination]?
+    for destination, goods of Place[from].goods when g.reputation[destination]?
       potentialDestinations[destination] = goods.length
 
     to = Math.weightedChoice(potentialDestinations)

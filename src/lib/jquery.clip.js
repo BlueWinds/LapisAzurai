@@ -38,6 +38,7 @@
     }
 
     jQuery.fx.step.clip = function (fx) {
+        console.log(arguments)
         if (fx.pos === 0) {
             var cRE = /rect\(([0-9\.]{1,})(px|em)[,]?\s+([0-9\.]{1,})(px|em)[,]?\s+([0-9\.]{1,})(px|em)[,]?\s+([0-9\.]{1,})(px|em)\)/;
 
@@ -45,6 +46,7 @@
             if (typeof fx.end === 'string') {
                 fx.end = cRE.exec(fx.end.replace(/,/g, ' '));
             }
+            console.log(fx)
         }
         if (fx.start && fx.end) {
             var sarr = new Array(), earr = new Array(), spos = fx.start.length, epos = fx.end.length,

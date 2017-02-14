@@ -1,6 +1,6 @@
 remainingDiv = (days) ->
-  if remaining >= 0
-    """<div><span class="remaining">#{remaining} days remaining</span></div>"""
+  if days >= 0
+    """<div><span class="remaining">#{days} days remaining</span></div>"""
   else
     """<div><span class="remaining expired">Expired</span></div>"""
 
@@ -16,18 +16,18 @@ $.extend Cargo, {
       'onclick="Cargo.accept(' + g.availableCargo.indexOf(cargo) + ');Place.drawMap();"'
     else ''
 
-    """<div class="cargo #{if onclick then 'active' else ''}" #{onclick}>
+    """<td class="cargo #{if onclick then 'active' else ''}" #{onclick}>
       <div>Transport <span class="what">#{cargo.name}</span> from <span class="from">#{cargo.from}</span> to <span class="to">#{cargo.to}</span></div>
       #{remainingDiv Cargo.deliveryTimeRemaining(cargo)}
-    </div>"""
+    </nd>"""
 
   drawDelivery: (cargo)->
     onclick = if g.location is cargo.to
       'onclick="Cargo.deliver(' + g.cargo.indexOf(cargo) + ');Place.drawMap();"'
     else ''
 
-    """<div class="cargo delivery #{if onclick then 'active' else ''}" #{onclick}>
+    """<td class="cargo delivery #{if onclick then 'active' else ''}" #{onclick}>
       <div>Deliver <span class="what">#{cargo.name}</span> from <span class="from">#{cargo.from}</span></div>
       #{remainingDiv Cargo.deliveryTimeRemaining(cargo)}
-    </div>"""
+    </td>"""
 }

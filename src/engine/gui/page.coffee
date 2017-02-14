@@ -29,18 +29,18 @@ $.extend Page, {
     need = if skill
       """<div class="need">#{person} needs #{Person[person].skills[skill].label}</div>"""
     else if g.reputation[place] < Page.reputationNeeded()
-      " " # Evaluates to true to disable the page, but doesn't show a need line.
-    else false
+      """<div class="need">Need #{Math.ceil(Page.reputationNeeded() - g.reputation[place])} more rep</div>"""
+    else ""
 
     onclick = if g.location is place and not need
-      'onclick="Page.apply("' + page + '");Page.display("' + page + '");Place.drawMap();"'
+      'onclick=\'Page.apply("' + place + '", "' + page + '");Page.display("' + page + '");Place.drawMap();\''
     else ''
 
-    return """<div class="page #{if onclick then 'active' else '' }">
-      <div>#{Page[page].label} - #{Page.reputationNeeded()} reputation</div>
-      <div class="participants">#{Object.keys(Page[page].experience or {}).join(', ')}</div>
+    return """<td class="page #{if onclick then 'active' else '' }" #{onclick}>
+      <span class="label">#{Page[page].label}</span><span class="cost">#{Page.reputationNeeded()} rep</span></div>
+      <div class="participants">#{Object.keys(Page[page].experience).wordJoin()}</div>
       #{need}
-    </div>"""
+    </td>"""
 
   display: (page, goto = true)->
     elements = Page.render(page)
@@ -118,8 +118,8 @@ $.extend Page, {
         Page.backPage(targetElement, 500)
     else
       # Moving back to the main map
-      currentElement.animate {opacity: 0}, 500, ->
-        $('#content page').not('.active').css {display: 'none'}
+      $('#content').animate {opacity: 0}, 500, ->
+        $('#content page, #content').removeClass('active').css {display: 'none'}
 
   forwardPage: (to, speed)->
     to.addClass('active').css({display: 'block', opacity: 0})
@@ -151,6 +151,9 @@ $.extend Page, {
 addPageAttrs = (element, line, lastBg)->
   for image in (line.match(/((?:far)?(?:Left|Right|Center)=\w+\/\w+)/ig) or [])
     [_, position, name, expression] = image.match(/(.+)=(.+)\/(.+)/)
+    unless Person[name] or Person.alias[name]
+      console.error "Can't find person for image " + image
+      continue
     element.prepend Person.drawImage(position, name, expression)
 
   bg = line.match(/bg=([\w\/]+)/) or lastBg

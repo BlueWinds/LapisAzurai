@@ -11,7 +11,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-compress'
-  grunt.loadNpmTasks 'grunt-bump'
   grunt.loadNpmTasks 'grunt-string-replace'
 
   e = {level: 'error'}
@@ -75,11 +74,6 @@ module.exports = (grunt) ->
         src: ['**/*']
         cwd: 'dist'
         expand: true
-    bump:
-      options:
-        pushTo: 'origin'
-        commitFiles: ['-a']
-        createTag: false
     'string-replace':
       dist:
         files: 'dist/index.html': 'src/index.html'

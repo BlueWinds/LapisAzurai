@@ -86,10 +86,120 @@ p.ColinthAmulets2 =
 
     `K What was it?` Kat hugged her arms across her chest, uncertain voice barely above a whisper.
 
-    `N I don't know. It just... it tried to taste my magic or something, and I resisted, which hurt. My power read that as an attack, and hit back, which hurt more, and, well, ouch.` She rubbed her forehead, then seeing the non-comprehension on Kat's face, `N I'm not sure why, but it's always hurt to use my powers. Usually it's under my control, so I'm expecting it and can brace myself, but...` She shrugged helplessly. `N Honestly, I'm not even sure the amulet was hostile. I think my lack of skill just caused a vicious cycle which spiraled out of control.`
+    `N I don't know. It just... it tried to taste my magic or something, and I resisted, which hurt. My power read that as an attack, and hit back, which hurt more, and it was too dumb to back down and too strong to smash, and well, ouch.` She rubbed her forehead, then seeing the non-comprehension on Kat's face, `N I'm not sure why, but it's always hurt to use my powers. Usually it's under my control, so I'm expecting it and can brace myself, but...` She shrugged helplessly. `N Honestly, I'm not even sure the amulet was hostile. I think my lack of skill just caused a vicious cycle which spiraled out of control.`
 
     `K That's...` Kat hesitated, then threw her arms around Natalie, burying her head in the other woman's neck. `K I was so scared.`
+  """
 
+p.Muggers =
+  label: 'Muggers'
+  history:
+    ColinthArrive: 0
+  experience:
+    Asara: 3
+  text: -> """
+  || bg=places/ColinthNight
+    `A I do not like this place.` Asara kept close to Natalie as they walked.
+
+    Natalie nodded agreement, and quickened her pace. There was nothing to say, since she agreed with the sentiment. Colinth had seemed bright and friendly by daylight, but now that the sun had set, it was far less welcoming. The streets were clean, but poorly lit. Not enough people stayed out past evening. Everyone hurrying home as soon as the sun set worried Natalie. She tried to put a comforting hand on Asara's shoulder, but the smaller woman ducked out form under the touch, and her hand brushed only empty air.
+
+    -- She turned a corner, and suddenly there was a heavy hand on her shoulder. Natalie didn't scream, nor did she try to pull away or ask what was happening. She just drove a knee forward, aiming for a stomach or groin. She made contact, drawing a heavy oof from the man. He didn't go down. A second hand descended on her waist, and before she could slip the grip, he just shoved her sideways into the wall. It was all too fast to think.
+
+  || bg=blank
+    -- Natalie's head bounced off the brick wall.
+    She saw stars.
+    She tasted blood.
+    She saw nothing.
+
+  || bg=places/ColinthNight speed=verySlow
+    -- Blood. Moonlight. Pain. Slowly Natalie returned to consciousness. She moved her head and her vision swam, drawing a gasp of pain. Bracing herself with one hand she managed to sit up.
+
+    Asara was the only one standing. Silver moonlight streamed around her, lighting her hair like a halo and glinting off the sword in her hand. Drip. Drip. In reflected off the pools of rivulets of blood surrounding her, slowly making their way along the cracks in the coblestone. Nothing else moved. Natalie couldn't breathe. Asara stayed motionless a moment longer, then flicked her blade to clean of most of the blood. She wiped her sword on a piece of cloth and sheathed it at her hip. That action accomplished, Asara returned to stillness, as though waiting for something more to happen.
+
+    -- Natalie broke the tableau by groaning. She gingerly felt the poinful spot on her head - it wasn't wet. Good. No lump yet either, which meant she'd only been out a moment. She inched up the wall towards standing. She stepped away without wobbling. Doubly good.
+
+    `N What... you killed them?`
+
+    Asara turned slowly. The light was too dim to actually see, but Natalie could imagine the haunted, dead look of Asara's eyes. Nat had seen that look enough for a lifetime from when they'd first rescued Asara from the wreckage on the beach. `A They tried to touch me with ill intent.` Her voice was completely flat. Then, in a whisper, `A Never again.`
+
+    -- `A We should go.`
+
+    `N I... you know, I don't really want to explain this to the authorities. You're right.`
+
+    `A There are no witnesses. A woman across the street closed her shutters a moment before it began.`
+
+    `N You killed them all?` Natalie didn't really need to ask. Her eyes slid around the three unmoving... slid around things, but no one lay that still if they were still breathing. `N I need to think about this.`
+
+    -- `A What is there to think about?` The dead voice was back again. `A They hurt you and I killed them. Killing your enemies is how you stop them from hurting you more.`
+
+    `N Let's... let's just go.`
+  """
+
+p.KantianSorcerer =
+  label: "Sorcerer"
+  history:
+    ColinthAmulets: 0
+  experience:
+    Natalie: 3
+  text: ->"""
+  || bg=places/ColinthStorm
+    Natalie stood in the storm, luxuriating it the feel of wind and lightning and rain untamed. The region around Kantis felt somehow different from that around Vailia - wilder, less controlled. Perhaps it was the lack of Lady Meghan. Without a supremely powerful sorceress drawing the elements into her orbit, they were free. For once Natalie's magic didn't hurt. She let the power flow through and around her, ignoring the chill seeping steadily through her bones and rivulets of water finding their way underneath her cloak.
+
+    -- Immersed in magic as she was, she became aware of another presence approaching long before he was visible through the pouring rain. A man. Not as strong as herself, but confident and controlled, his presence as tightly wound as a coiled watch spring.
+
+    His physical appearance matched that impression. Blue cloak and sharply pressed white sleeves, water sleeting around him but leaving him untouched. His retinue wasn't so lucky. The manservant following behind with a pair of heavy bags looked miserable, and even the two soldiers keeping the way clear ahead of him seemed worse for the wear. Or at least they would have been keeping the way clear if anyone else were so foolish as to stand out in the storm.
+
+    -- Natalie stepped aside as he approached, but rather than passing by, he stopped in front of her. `Sorcerer Who are you?` His accent was so thick that even Natalie, not a native of these parts, could tell he want from Kantis rather than Colinth.
+
+    `N Natalie Rowena. Vailia. And you?`
+
+    He studied her a moment in silence. The rain continued to fall over them in a heavy blanket, comforting her with its wild power and avoiding him entirely. `Sorcerer Eliakim, of house Apollon. Welcome to Colinth.` He lapsed into silence again, studying her.
+
+    -- `N Forgive me if I've said something improper. Vailia is far, and I've never met a Kantian sorcerer before.`
+
+    `Sorcerer No, forgive me for staring. I was not aware that Vailia had more than one sorcerer. And your power is... unusual.` His continued appraising stare was at odds with the appology of his words.
+
+    `N Unusual in what way?`
+
+    `Sorcerer I am sure you must have your reasons for keeping it as you do. Please feel free to visit the Apollon estate if you are ever in Kantis. I will swear a guest oath and entertain you properly.` He gave a little half bow and turned to continue on his way.
+
+    -- As much as she wanted to call him back and ask him to explain more, Natalie didn't think it go over well with Eliakin. She watched him departing for a moment, then hugged herself and stepped back inside the inn. The storm no longer felt quite so welcoming.
+  """
+
+p.AsarasTrauma =
+  label: "Asara's Trauma"
+  history:
+    Muggers: 0
+    AsaraTalkSisters: 0
+  text: ->"""
+  || bg=travel/CabinNight
+    `N Please, sit down.`
+
+    Asara glanced between Natalie sitting on her bed and the chair she was gesturing to, then shook her head. Natalie sighed.
+
+    `N No, please, sit.` She tried to put kindness and frustration frustration and desire to help into her voice, and it must have worked, because after a moment, Asara did take the seat.
+
+    `N Thanks.` Natalie cradled her head in her hands for a moment, trying to compose her next words. She knew what to say. She'd decided this had to be done. She'd rehersed it a hundred times in her mind. Why was it so hard to make the words come out?
+
+    `N Asara, I want to help you. But I can't because I don't know anything about you, and you won't open up to me. You've told me things... but they're so incomplete, so fragmented, I can't make sense of you. I want to help you so much." Natalie laid a hand on Asara's shoulder, flinching a little in sympathy when Asara flinched from the touch. She didn't let go though, and Asara made no move to shrug her off.
+
+    Silence.
+
+    Then... a hiccing little sob. Barely noticeable, it wasn't repeated. Asara was always so quiet - even her breathing was inaudible.
+
+    ` Asara... will you tell me what happened to the ship you were on before I met you?`
+
+    `A I... I'm on a mission. My home... my sister Antinua. She's in Vailia. We need her home again. She's so strong, and I'm so weak, and... I was coming to find her. A pirate ship. I killed them, and killed them, and killed them, but the Kantians pay so much money for one of the priestessess that they kept me alive when everyone else on the ship was dead.` The dead, lifeless tone she used sent shivers down Natalie's spine, and she drew her hand back. She wished Asara would cry - that would have been so much better than hearing her emotionless and bleeding like a stone.
+
+    `A They... they kept me alive. My wounds would have killed anyone without the blessings of the goddess. They did horrible things to me, and kept me drugged, and wouldn't kill me. I healed from... from things, and I wanted to die, and then they started again.`
+
+    `A Finally, after nearly a week, I summoned the will to call upon my blessings. I burned the drugs out of my system. I burned the men standing over me. I burned the room. I burned everything and everyone.`
+
+    `A And then you found me. And I still want to die, but I can't because I need to find Antinua.`
+
+    Natalie folded Asara in a hug, hiding the young woman from the world in the folds of her shirt. It tore at her heart the way Asara shivered at the touch and shrunk away, but slowly the the shudders gave way to silent sobs. Natalie held her tightly.
+
+    `N Ssh, ssh, it's alright, you're with me now, I won't let anyone hurt you...`
   """
 
 Place.Colinth.pages.Ch2 = Object.keys(p)

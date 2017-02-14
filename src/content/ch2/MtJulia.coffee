@@ -45,7 +45,7 @@ p.ExploreForest =
   history:
     GatherWood: 0
   experience:
-    James: 5
+    James: 3
   text: ->"""
   || bg=travel/DeckDay right=N/uncertain
     `N I don't see what you hope to find. The bartender's a little odd, sure, but outside of Vailia <i>everywhere</i> is a little odd. This place is harmless enough. Let's not go poking it with a stick to see what we can wake up.`

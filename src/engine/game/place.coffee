@@ -31,14 +31,14 @@ window.Place = {
   location: (place, distance)->
     # A path
     if '_' in place
-      len = Place.distanceAlongPath(distance)
+      len = Place.distanceAlongPath(place, distance)
       return element.getPointAtLength(len)
 
     # A port
     circle = document.getElementById(place).children[0]
     return {x: circle.cx.baseVal.value, y: circle.cy.baseVal.value}
 
-  distanceAlongPath: (distance)->
+  distanceAlongPath: (place, distance)->
     element = document.getElementById(place)
     return if distance > 0 then distance else element.getTotalLength() + distance
 
@@ -56,7 +56,7 @@ window.Place = {
       document.getElementById(string)
 
     loop
-      if location.paths[destination] instanceof Number
+      if typeof location.paths[destination] is 'number'
         paths.push getElement(location.name, destination, location.paths[destination])
         break
 

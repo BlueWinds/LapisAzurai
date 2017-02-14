@@ -101,7 +101,6 @@ p.KantisRegion =
     AsaraJoinsCrew: 0
   experience:
     Natalie: 3
-    James: 3
   text: -> """
   || bg=places/TomenoiDay
     `N I give up.` Natalie flopped back against the stone wall and slid down to the ground, ignoring the dust that puffed up around her. `N No idea where to go from here.`
