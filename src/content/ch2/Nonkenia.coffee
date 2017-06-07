@@ -40,12 +40,12 @@ p.NonkeniaDiplomatDelivery =
     Natalie: 3
     James: 3
   text: -> """
-  || bg=places/NonkeniaDay left=N/exctied
+  || bg=places/NonkeniaDay left=N/excited
     Sploosh.
 
     `N Bye-bye!` Natalie waved cheerfully at the rippling ocean as an irate bodyguard bobbed to the surface, shot Natalie a dirty look, and began swimming for shore.
 
-  || left=N/exctied right=J/upset
+  || left=N/excited right=J/upset
     `J ...`
 
     'J ...I didn't think you'd really do it.`
@@ -69,7 +69,7 @@ p.AsaraTalkEyes =
   || bg=places/NonkeniaNight
     `N Your eyes, you pointed to them when you mentioned the 'blessing of steel'?` Natalie decided to press for some answers. She had many more questions, but this seemed safer than the others for the moment.
 
-    `A They are a symbol. Like my hair and my skin,` Asara gestured to her straw-blond hair and fair skin, shrugging, ` they set me and my sisters apart from my people. Are not all Azaraki tribeswomen the color of sand, dusky eyed and dusky haired? I am, and I am not.`
+    `A They are a symbol. Like my hair and my skin,` Asara gestured to her straw-blond hair and fair skin, shrugging, ` they set me and my sisters apart from my people. Are not all Azaraki tribes-women the color of sand, dusky eyed and dusky haired? I am, and I am not.`
 
     `N Azaraki?`
 
@@ -94,7 +94,7 @@ p.AsaraTalkSisters =
 
     `N Your goddess? Which one?`
 
-    `A Azaraki. We are her chosen people.` Natalie wracked her brain trying to remember anything about the name other than that Asara had used it to refer to her people before. It was odd – the gods and goddesses worshiped didn't vary much throughout all the cultures Vailia had encountered – it was hard to debate exactly who belonged in the pantheon and who didn't when divine influence was quick to correct such matters on a personal level. Only so many false idols could be struck by lightning before people stopped worshiping them. Curious, then, that Natalie had never heard of a goddess potent enough to grant her priestesses such power. There were centainly no temples in Vailia.
+    `A Azaraki. We are her chosen people.` Natalie wracked her brain trying to remember anything about the name other than that Asara had used it to refer to her people before. It was odd – the gods and goddesses worshiped didn't vary much throughout all the cultures Vailia had encountered – it was hard to debate exactly who belonged in the pantheon and who didn't when divine influence was quick to correct such matters on a personal level. Only so many false idols could be struck by lightning before people stopped worshiping them. Curious, then, that Natalie had never heard of a goddess potent enough to grant her priestesses such power. There were certainly no temples in Vailia.
 
     `N Tell me more about her?`
 
@@ -130,7 +130,7 @@ p.NonkeniaHunters =
     Asara: 3
   text: ->"""
   || bg=places/NonkeniaStorm left=A/normal
-    Blinking, Asara stepped back into the bushes from which she had just come. Half a dozen men and women stood in the clearing just ahead, gathering at the front door of a hut and applying paint to eachother's faces. Each of them was armed with a spear, and two little girls walked around passing out javelins.
+    Blinking, Asara stepped back into the bushes from which she had just come. Half a dozen men and women stood in the clearing just ahead, gathering at the front door of a hut and applying paint to each other's faces. Each of them was armed with a spear, and two little girls walked around passing out javelins.
 
     Uncertain that she should interfere with a private ceremony, Asara was about to turn back for the ship when a hand tugged at her pants. She he looked down to find a trio of young boys looking up expectantly. ` You have to go into the hut.`
 

@@ -9,7 +9,7 @@ p.ColinthArrive =
     Kat: 3
   text: -> """
   || bg=places/ColinthDay
-    For the first time since taking possession of the Lapis Azurai, Natalie was reminded of exactly how <i>small</i> of a ship it was. While Colinth's docks teamed with fishing boats, cutters, and other ships of the Lapis' class, all of them moved around several hulking giants, clearly ships of war. Catapaults mounted on deck, tripple banks of oars, high fore and aft castles with arrow slits... Vailia had nothing like them.
+    For the first time since taking possession of the Lapis Azurai, Natalie was reminded of exactly how <i>small</i> of a ship it was. While Colinth's docks teamed with fishing boats, cutters, and other ships of the Lapis' class, all of them moved around several hulking giants, clearly ships of war. Catapults mounted on deck, triple banks of oars, high fore and aft castles with arrow slits... Vailia had nothing like them.
 
     Not that Vailia <i>needed</i> anything like them. She could see James shaking his head, and thought he was agreeing with her estimate - a waste of good timber. They looked fearsome, surely and no other ship would dare stand before them, but their sails would be too small for long journeys on the open ocean, and the castles made it too heavy to survive a storm on the open sea.
 
@@ -19,7 +19,7 @@ p.ColinthArrive =
 
     `K They're not all from Colinth,` Kat pointed. `K See, the sailors on that one are dressed differently.`
 
-    Nat squinted and shielded her eyes from the sun with one hand, but couldn't make out anything more than 'there are people there' on the ship Kat pointed to, still distant. `N I suppose so. It would match with what I heard - Kantis and Colnith in an uneasy peace, taking turns dominating the region as the balance of power sways. Janos thinks it's unstable, will result in a war soon.`
+    Nat squinted and shielded her eyes from the sun with one hand, but couldn't make out anything more than 'there are people there' on the ship Kat pointed to, still distant. `N I suppose so. It would match with what I heard - Kantis and Colinth in an uneasy peace, taking turns dominating the region as the balance of power sways. Janos thinks it's unstable, will result in a war soon.`
 
     Kat muttered darkly, but shook her head when Natalie asked. `K Don't worry about it. So, what are we here for?`
   """
@@ -36,7 +36,7 @@ p.ColinthAmulets =
 
     The merchant repeated his offer, a rather good price on fresh mulberries, but Natalie found her attention drifting again even as he went through the terms again for her. He had a most interesting amulet - a red gem of some kind on a silver chain. With a start, Natalie realized it was the source of the buzz that was distracting her so. It was magic. She wrenched her attention back to the business deal. `N Um, yes. I can take a small load first, see how well they sell in Vailia. The ones I've seen before haven't traveled well, but it's possible a faster ship like the Lapis might make the difference. You'll have to cover 50% of the cost though - I can't afford all the risk, even for a small sample run. Acceptable?`
 
-    -- While he mulled it over, Natalie realized why the amulet hurt - it was tugging on her own power, and she'd reflexively raised it to protect herself. Using her own magic always brought pain. No wonked Kat hadn't felt anything.
+    -- While he mulled it over, Natalie realized why the amulet hurt - it was tugging on her own power, and she'd reflexively raised it to protect herself. Using her own magic always brought pain. No wonder Kat hadn't felt anything.
 
     `K You like it?` Kat leaned close and whispered in her ear, apparently noting the way she was staring at the amulet.
 
@@ -60,9 +60,9 @@ p.ColinthAmulets2 =
 
     `N You should give it back. I don't like it.` Natalie was rubbing her head the same way as she had been in the shop before.
 
-    Kat grinned at her, giving her best 'I'm not sorry and you can't make me be' look, the one that Natalie found both exhasperating and endearing. She opened her mouth to chide her crew member more, but Kat shut her up by tossing the amulet to her. `K I want to know what it is, before you make me give it back to him.`
+    Kat grinned at her, giving her best 'I'm not sorry and you can't make me be' look, the one that Natalie found both exasperating and endearing. She opened her mouth to chide her crew member more, but Kat shut her up by tossing the amulet to her. `K I want to know what it is, before you make me give it back to him.`
 
-    -- Reflexively, Natalie caught it. White-hot light blazed from the captain's hand, and she whimpered. The light grew brigther, and Natalie screamed.
+    -- Reflexively, Natalie caught it. White-hot light blazed from the captain's hand, and she whimpered. The light grew brighter, and Natalie screamed.
 
     Kat grabbed the pendant out of her hand, and the light vanished. Natalie slumped in her chair, breathing heavily. `K Are... are you ok?`
 
@@ -114,9 +114,9 @@ p.Muggers =
   || bg=places/ColinthNight speed=verySlow
     -- Blood. Moonlight. Pain. Slowly Natalie returned to consciousness. She moved her head and her vision swam, drawing a gasp of pain. Bracing herself with one hand she managed to sit up.
 
-    Asara was the only one standing. Silver moonlight streamed around her, lighting her hair like a halo and glinting off the sword in her hand. Drip. Drip. In reflected off the pools of rivulets of blood surrounding her, slowly making their way along the cracks in the coblestone. Nothing else moved. Natalie couldn't breathe. Asara stayed motionless a moment longer, then flicked her blade to clean of most of the blood. She wiped her sword on a piece of cloth and sheathed it at her hip. That action accomplished, Asara returned to stillness, as though waiting for something more to happen.
+    Asara was the only one standing. Silver moonlight streamed around her, lighting her hair like a halo and glinting off the sword in her hand. Drip. Drip. In reflected off the pools of rivulets of blood surrounding her, slowly making their way along the cracks in the cobblestone. Nothing else moved. Natalie couldn't breathe. Asara stayed motionless a moment longer, then flicked her blade to clean of most of the blood. She wiped her sword on a piece of cloth and sheathed it at her hip. That action accomplished, Asara returned to stillness, as though waiting for something more to happen.
 
-    -- Natalie broke the tableau by groaning. She gingerly felt the poinful spot on her head - it wasn't wet. Good. No lump yet either, which meant she'd only been out a moment. She inched up the wall towards standing. She stepped away without wobbling. Doubly good.
+    -- Natalie broke the tableau by groaning. She gingerly felt the painful spot on her head - it wasn't wet. Good. No lump yet either, which meant she'd only been out a moment. She inched up the wall towards standing. She stepped away without wobbling. Doubly good.
 
     `N What... you killed them?`
 
@@ -153,17 +153,17 @@ p.KantianSorcerer =
 
     `N Natalie Rowena. Vailia. And you?`
 
-    He studied her a moment in silence. The rain continued to fall over them in a heavy blanket, comforting her with its wild power and avoiding him entirely. `Sorcerer Eliakim, of house Apollon. Welcome to Colinth.` He lapsed into silence again, studying her.
+    He studied her a moment in silence. The rain continued to fall over them in a heavy blanket, comforting her with its wild power and avoiding him entirely. `Sorcerer Elakim, of house Apollon. Welcome to Colinth.` He lapsed into silence again, studying her.
 
     -- `N Forgive me if I've said something improper. Vailia is far, and I've never met a Kantian sorcerer before.`
 
-    `Sorcerer No, forgive me for staring. I was not aware that Vailia had more than one sorcerer. And your power is... unusual.` His continued appraising stare was at odds with the appology of his words.
+    `Sorcerer No, forgive me for staring. I was not aware that Vailia had more than one sorcerer. And your power is... unusual.` His continued appraising stare was at odds with the apology of his words.
 
     `N Unusual in what way?`
 
     `Sorcerer I am sure you must have your reasons for keeping it as you do. Please feel free to visit the Apollon estate if you are ever in Kantis. I will swear a guest oath and entertain you properly.` He gave a little half bow and turned to continue on his way.
 
-    -- As much as she wanted to call him back and ask him to explain more, Natalie didn't think it go over well with Eliakin. She watched him departing for a moment, then hugged herself and stepped back inside the inn. The storm no longer felt quite so welcoming.
+    -- As much as she wanted to call him back and ask him to explain more, Natalie didn't think it go over well with Elakim. She watched him departing for a moment, then hugged herself and stepped back inside the inn. The storm no longer felt quite so welcoming.
   """
 
 p.AsarasTrauma =
@@ -179,7 +179,7 @@ p.AsarasTrauma =
 
     `N No, please, sit.` She tried to put kindness and frustration frustration and desire to help into her voice, and it must have worked, because after a moment, Asara did take the seat.
 
-    `N Thanks.` Natalie cradled her head in her hands for a moment, trying to compose her next words. She knew what to say. She'd decided this had to be done. She'd rehersed it a hundred times in her mind. Why was it so hard to make the words come out?
+    `N Thanks.` Natalie cradled her head in her hands for a moment, trying to compose her next words. She knew what to say. She'd decided this had to be done. She'd rehearsed it a hundred times in her mind. Why was it so hard to make the words come out?
 
     `N Asara, I want to help you. But I can't because I don't know anything about you, and you won't open up to me. You've told me things... but they're so incomplete, so fragmented, I can't make sense of you. I want to help you so much." Natalie laid a hand on Asara's shoulder, flinching a little in sympathy when Asara flinched from the touch. She didn't let go though, and Asara made no move to shrug her off.
 
@@ -189,7 +189,7 @@ p.AsarasTrauma =
 
     ` Asara... will you tell me what happened to the ship you were on before I met you?`
 
-    `A I... I'm on a mission. My home... my sister Antinua. She's in Vailia. We need her home again. She's so strong, and I'm so weak, and... I was coming to find her. A pirate ship. I killed them, and killed them, and killed them, but the Kantians pay so much money for one of the priestessess that they kept me alive when everyone else on the ship was dead.` The dead, lifeless tone she used sent shivers down Natalie's spine, and she drew her hand back. She wished Asara would cry - that would have been so much better than hearing her emotionless and bleeding like a stone.
+    `A I... I'm on a mission. My home... my sister Antinua. She's in Vailia. We need her home again. She's so strong, and I'm so weak, and... I was coming to find her. A pirate ship. I killed them, and killed them, and killed them, but the Kantians pay so much money for one of the priestesses that they kept me alive when everyone else on the ship was dead.` The dead, lifeless tone she used sent shivers down Natalie's spine, and she drew her hand back. She wished Asara would cry - that would have been so much better than hearing her emotionless and bleeding like a stone.
 
     `A They... they kept me alive. My wounds would have killed anyone without the blessings of the goddess. They did horrible things to me, and kept me drugged, and wouldn't kill me. I healed from... from things, and I wanted to die, and then they started again.`
 

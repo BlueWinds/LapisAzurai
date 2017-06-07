@@ -23,7 +23,7 @@ Place.Vailia =
 Place.MtJulia =
   name: 'Mt. Julia'
   paths:
-    Valia: -1
+    Vailia: -1
     Alkenia: 1
     Nonkenia: 1
     IronSands: 1
@@ -39,7 +39,7 @@ Place.MtJulia =
 Place.Alkenia =
   name: 'Alkenia'
   paths:
-    Valia: -1
+    Vailia: -1
     MtJulia: -1
     Nonkenia: 1
     IronSands: 'Vailia'
@@ -60,7 +60,7 @@ Place.Alkenia =
 Place.Nonkenia =
   name: 'Nonkenia'
   paths:
-    Valia: -1
+    Vailia: -1
     MtJulia: -1
     Alkenia: -1
     IronSands: 'Vailia'
@@ -77,7 +77,7 @@ Place.Nonkenia =
 Place.IronSands =
   name: 'Iron Sands'
   paths:
-    Valia: -1
+    Vailia: -1
     MtJulia: -1
     Alkenia: 'Vailia'
     Nonkenia: 'Vailia'
@@ -95,7 +95,7 @@ Place.IronSands =
 Place.Tomenoi =
   name: 'Tomenoi'
   paths:
-    Valia: -1
+    Vailia: -1
     MtJulia: -1
     Alkenia: 'Vailia'
     Nonkenia: 'Vailia'
@@ -114,7 +114,7 @@ Place.Tomenoi =
 Place.Colinth =
   name: 'Colinth'
   paths:
-    Valia: 'Tomenoi'
+    Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
     Alkenia: 'Tomenoi'
     Nonkenia: 'Tomenoi'
@@ -132,7 +132,7 @@ Place.Colinth =
 Place.Kantis =
   name: 'Kantis'
   paths:
-    Valia: 'Tomenoi'
+    Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
     Alkenia: 'Tomenoi'
     Nonkenia: 'Tomenoi'
@@ -150,7 +150,7 @@ Place.Kantis =
 Place.Amandais =
   name: 'Amandais'
   paths:
-    Valia: 'Tomenoi'
+    Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
     Alkenia: 'Tomenoi'
     Nonkenia: 'Tomenoi'

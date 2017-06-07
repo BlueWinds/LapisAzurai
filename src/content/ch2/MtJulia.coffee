@@ -11,7 +11,7 @@ p.NonkeniaDiplomatSailing =
     `N Come in, please.` Natalie shut the door behind Ameliss and gestured to the single chair, taking a seat on the bed herself.
 
   || left=N/normal right=Ameliss/normal
-    Ameliss sat down with a flurish, sweeping her long dress to one side. Ignoring any semblance of common sense, the diplomat looked better dressed for a ballroom than moving around aboard a ship. Long icicle black hair and steel eyes, piercing lips, a smile that seemed to mean the opposite of what one should...
+    Ameliss sat down with a flourish, sweeping her long dress to one side. Ignoring any semblance of common sense, the diplomat looked better dressed for a ballroom than moving around aboard a ship. Long icicle black hair and steel eyes, piercing lips, a smile that seemed to mean the opposite of what one should...
 
     `N I'm afraid Guildmaster Janos never gave me your bodyguard's name,` Natalie reached for something to talk about.
 
@@ -58,17 +58,17 @@ p.ExploreForest =
 
   || bg=places/MtJuliaDay speed=slow
 
-  !! Around behind the inn and at a distance from the large storage building sat a small hut, nestled back a hundred yards from the other buildings and half obscured by the forest. A little curl of smoke rose from the stone chimeny. James and one of the crew took a roundabout approach, avoiding the inn and approaching from another direction.
+  !! Around behind the inn and at a distance from the large storage building sat a small hut, nestled back a hundred yards from the other buildings and half obscured by the forest. A little curl of smoke rose from the stone chimney. James and one of the crew took a roundabout approach, avoiding the inn and approaching from another direction.
 
-    After ten minutes of picking their way around trees and over logs and scrambling down and back up gulleys, they'd both noticed something wrong. Though the hut remained close enough to see, it somehow never seemed to draw any closer. James nodded, and the sailor nodded in agreement. It was strange, but they weren't ready to give up just yet.
+    After ten minutes of picking their way around trees and over logs and scrambling down and back up gullies, they'd both noticed something wrong. Though the hut remained close enough to see, it somehow never seemed to draw any closer. James nodded, and the sailor nodded in agreement. It was strange, but they weren't ready to give up just yet.
 
-    Slowly, much more slowly than their legs and minds reported, they began to draw nearer. More worrisome than the mere fact that they'd come at least a mile on their way to a distination only a hundred yards distant, were the changes in the forest around them. It was darker now, the trees closer overhead, the bushes more thorny and with fewer friendly leaves.
+    Slowly, much more slowly than their legs and minds reported, they began to draw nearer. More worrisome than the mere fact that they'd come at least a mile on their way to a destination only a hundred yards distant, were the changes in the forest around them. It was darker now, the trees closer overhead, the bushes more thorny and with fewer friendly leaves.
 
     Something was very wrong here. ` We should go back, sir. I don't like this.` The crewman hugged himself, looking around nervously.
 
     `N Nor I. Just a little further, we are making progress.` He gestured to the hut - by now only half as far away. They started walking again.
 
-    The forest grew darker still, silent now, no sound of the distant ocean, which couldn't possibly actually be distant. Shadows began to flank them, something fast and preditory running through the forest in the distance, watching them. James stopped and drew his sword. When they stopped moving, the shadows also paused, watching.
+    The forest grew darker still, silent now, no sound of the distant ocean, which couldn't possibly actually be distant. Shadows began to flank them, something fast and predatory running through the forest in the distance, watching them. James stopped and drew his sword. When they stopped moving, the shadows also paused, watching.
 
     `J Ok, you're right, this was a bad idea,` James finally admitted. The sailor nodded, but didn't say anything. `J Let's turn back.`
 
@@ -119,7 +119,7 @@ p.AsarasMagic =
 
     Natalie tripped over her own feet, startled. She could have sworn she was alone on deck, everyone else asleep. `S Oh, Asara, make some more noise. You'll frighten me to an early grave.`
 
-    `A Unlikely. You are my friend, and only enemies should fear me.` She said it with such a straight face that Natalie wasn't sure if it was a joke or not. She wasn't sure if Asara even knew how to joke. Natalie settled for an uncertain laugh.
+    `A You are my friend. Only enemies should fear me.` She said it with such a straight face that Natalie wasn't sure if it was a joke or not. She wasn't sure if Asara even knew how to joke. Natalie settled for an uncertain laugh.
 
     `N You, um, you aren't going to burn the ship down, are you?`
 
@@ -135,13 +135,13 @@ p.AsarasMagic =
 
     `N Go ahead. Thank you for the warning.`
 
-    Asara brought out the half-melted chain that she'd been bound with when they first met – Natalie hadn't known she'd kept it. She strained at the broken manacles, tugging at the melted links. Ruined, yes, but still steel. Of course nothing happened.
+    Asara brought out the half-melted chain that had bound her wrists when they first met. Natalie hadn't known she'd kept it. She strained at the broken manacles, tugging at the melted links. Ruined, yes, but still steel. Of course nothing happened.
 
-    -- Then Natalie felt powers gathering, like a storm only visible to the inner mind, making her bones ache and her head pound. Nothing happened. Her head began to swim. Slowly, ever so slowly, the steel links between Asara's hands began to twist and groan, stretching and warping as though being ripped apart by a team of horses rather than in a small girl's bare hands. Natalie grasped her head with both hands. It hurt to think.
+    -- Then Natalie felt powers gathering, like a storm only visible to the inner mind, making her bones ache and her head pound. Nothing happened. Her head began to swim. Slowly, ever so slowly, the steel links between Asara's hands began to twist and groan, stretching and warping as though being ripped apart by a team of horses rather than a delicate pair of hands. Natalie grasped her head with both hands. It hurt to think.
 
     And suddenly it was over. The manacles remained deformed, but the chain hadn't broken. The world no longer pounded nails into Natalie's head. Asara looked at her, then at the metal in her hands, pursing her lips. She threw them. It was a good throw – a plunk reached them a moment later as they landed in the water and sank.
 
-    `A I am not yet ready.` She walked away, leaving Natalie with a million more questions than before the conversation had begun.
+    `A I am not yet ready.` She walked away, leaving Natalie with a million more questions.
   """
 
 Place.MtJulia.pages.Ch2 = Object.keys(p)

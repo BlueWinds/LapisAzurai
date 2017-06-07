@@ -12,7 +12,7 @@ sampleData =
   text: -> """|| ...etc..."""
 
 window.Page = {
-  reputationNeeded: (place)-> return 15
+  reputationNeeded: (page)-> if Page[page].blocking then 0 else 15
 
   skillNeeded: (page)->
     for skill, person of Page[page].skills
@@ -21,6 +21,9 @@ window.Page = {
 
   visiblePages: (pages)->
     return pages.filter(Page.matchesHistory.bind(null, 0, 0))
+
+  canSail: ->
+    not Page.visiblePages(Place[g.location].pages[g.chapter]).some (p)-> Page[p].blocking
 
   matchesHistory: (foresight, extraTime, page)->
     if g.history[page]? then return false
@@ -33,7 +36,7 @@ window.Page = {
   apply: (place, page)->
     for character, exp in Page[page].experience
       g.people[character].experience += exp
-    g.reputation[place] -= Page.reputationNeeded()
+    g.reputation[place] -= Page.reputationNeeded(page)
     g.history[page] = g.day
     Game.passDay()
 }

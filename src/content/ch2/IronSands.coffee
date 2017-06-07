@@ -14,7 +14,7 @@ p.IronSandsArrive =
 
     Asara lifted her arms to the breeze and closed her eyes, a pleasant half smile on her lips.
 
-    -- There wasn't a single plant in sight anywhere in sight, dark sand unbroken except for a stone pier and single small warehouse sticking out into the water. Half a dozen people waited for them on there, ropes in hand to help them dock against the wind. A hundred yards back from the water rose cliffs, sheer and of the same dark tan stone as the beach, a hundred feet high. A path had been laborously cut into the side of the cliff, narrow and treacherous switchbacks. Against the dusty sky Natalie could see buildings at the top - that must be the main camp.
+    -- There wasn't a single plant in sight anywhere in sight, dark sand unbroken except for a stone pier and single small warehouse sticking out into the water. Half a dozen people waited for them on there, ropes in hand to help them dock against the wind. A hundred yards back from the water rose cliffs, sheer and of the same dark tan stone as the beach, a hundred feet high. A path had been laboriously cut into the side of the cliff, narrow and treacherous switchbacks. Against the dusty sky Natalie could see buildings at the top - that must be the main camp.
 
     -- The Lapis nosed against the pier, bobbing in choppy water and gusty, unpredictable wind. While the crew tied it down with ropes tossed up from the dock, Natalie hopped over to speak with the woman in charge. Asara and James followed.
 
@@ -27,7 +27,7 @@ p.IronSandsArrive =
     `N Got it. I'm Natalie Rowena, nice to meet you.`
 
   || left=N/normal right=Cara/serious
-    -- `Cara That's nice, now shut up and listen. The sand here eats at everything, and it gets in everywhere. It'll burn bare skin right quick. Don't walk in sand unless you have to, wear heavy boots, iron-shod is best. If I catch anyone in short sleeves, I'll throw 'em off the cliff myself. Sweep off your deck every night, and sweep out any room you're going to sleep in. It's not as bad up on the cliffs, so stay up there as much as you can. Now the nice bit is that there're no pests and no dangerous creatures, so don't worry about that even though we're awefully exposed without a wall - humans and our donkeys are the only things that can live here. Also no spirits and no demons. They don't like the sand any more than plants do. You can go anywhere you like, but you're an idiot if you go anywhere except the dock and the camp. Clear?`
+    -- `Cara That's nice, now shut up and listen. The sand here eats at everything, and it gets in everywhere. It'll burn bare skin right quick. Don't walk in sand unless you have to, wear heavy boots, iron-shod is best. If I catch anyone in short sleeves, I'll throw 'em off the cliff myself. Sweep off your deck every night, and sweep out any room you're going to sleep in. It's not as bad up on the cliffs, so stay up there as much as you can. Now the nice bit is that there're no pests and no dangerous creatures, so don't worry about that even though we're awfully exposed without a wall - humans and our donkeys are the only things that can live here. Also no spirits and no demons. They don't like the sand any more than plants do. You can go anywhere you like, but you're an idiot if you go anywhere except the dock and the camp. Clear?`
 
   || left=N/uncertain right=Cara/serious
     -- `N Sounds like hell.`
@@ -113,7 +113,7 @@ p.IronSandsRest =
     Kat: 3
   text: -> """
   || bg=places/IronSandsDay
-    -- Kat flopped onto the couch and rested her head against the padded surface. Even in here, in the bunkhouse that served as an inn for the miners, grit was everywhere, and when she'd complained about it to the proprieter, she'd only gotten a pittying look and the repeated promise that the place was swept twice a day.
+    -- Kat flopped onto the couch and rested her head against the padded surface. Even in here, in the bunkhouse that served as an inn for the miners, grit was everywhere, and when she'd complained about it to the proprietor, she'd only gotten a pitying look and the repeated promise that the place was swept twice a day.
 
     Still, it was immensely better than being outside, and the beer was decent as well as being reasonably cold. It had an odd tang to it, not entirely unpleasant. The chatter of miners eager for a new voice finally coaxed her into sharing news of home, and listened eagerly to every story she could think of, the taller the better. A better evening than many, even if she did wake up to spit out grit more than once during the night.
   """
@@ -164,7 +164,7 @@ p.IronSandsAsaraTalk =
 
     -- `Cara I won't argue the point. What I really want to know is what we can do about them. We could cut costs in half if the damned dust didn't eat everything. The ore's so good that we stay anyway, but it plays hell with equipment.`
 
-    Asara nodded. `A The spirits here are very hungary. They fought a war, long ago.` She shielded her eyes and looked out into the desert, completely baren and devoid of life. `A But they fought so hard that there was nothing left. They were so hungry that they ate anything that grew here, so nothing more grew, and they became hungrier still.`
+    Asara nodded. `A The spirits here are very hungry. They fought a war, long ago.` She shielded her eyes and looked out into the desert, completely barren and devoid of life. `A But they fought so hard that there was nothing left. They were so hungry that they ate anything that grew here, so nothing more grew, and they became hungrier still.`
 
     `Cara What can we do about it?`
 

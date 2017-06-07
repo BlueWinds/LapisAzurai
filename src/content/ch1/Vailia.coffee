@@ -1,6 +1,7 @@
 Game.starting =
   version: 0
   day: 0
+  scroll: 0
   chapter: 'Ch1'
   cargo: []
   availableCargo: []
@@ -65,7 +66,7 @@ p.Intro =
     || left=N/excited right=J/embarrassed
     Natalie poked James in the forehead, causing him to wince. `N I knew it, you just woke up too.`
 
-    -- He shook his head, mop of hair unrully and uncombed, trying to deny it, but she quirked an eyebrow, and he finally relented. `J Hey, it was our very first night on board your new ship. A little drinking seemed in order.` He dropped his eyes guiltily.
+    -- He shook his head, mop of hair unruly and uncombed, trying to deny it, but she quirked an eyebrow, and he finally relented. `J Hey, it was our very first night on board your new ship. A little drinking seemed in order.` He dropped his eyes guiltily.
 
     || left=N/normal right=J/embarrassed
     `N Never said it wasn't. Now, come on, I want breakfast before we meet with the Guildmaster.`
@@ -282,7 +283,7 @@ p.FirstStormSick =
 
   -- No one had expected a ship to come into dock the day after a Grandmother Storm, and even with two masts snapped, the Azurai was in remarkably good condition. No hands lost. That was news. News attracted crowds. Natalie would know how to deal with this, but that wasn't much help when Natalie was the thing that needed dealing with.
 
-  James nodded to one of the crew, guarding the ship and looking somewhat overwhelmed. The quartemaster didn't have any answers to give about how they'd survived. He understodd nothing more than the sailors.
+  James nodded to one of the crew, guarding the ship and looking somewhat overwhelmed. The quartermaster didn't have any answers to give about how they'd survived. He understood nothing more than the sailors.
 
   || bg=travel/CabinDay
   -- Natalie looked exactly as she had yesterday, cheerful cheeks the perfect picture of health, chest rising and falling steadily. The priest glanced at James for permission, then knelt down next to her and put his ear to her chest. James wished he could sense magic, even the slightest bit, but his family had never displayed an inch of talent, no matter how far back they went. He had no way of telling a charlatan from a healer.
@@ -310,9 +311,9 @@ p.WastingMoney =
   || bg=places/VailiaDay
     `N Here. 13 obols for the last voyage, plus 3 back pay from last voyage - sorry about that, it was a little tight when they refused to pay full price - minus 4 for that bottle of wine you stole from the cargo - ` Natalie smiled inwardly at Kat's guilty look. Mystery solved, and score one point for guessing where it had run off to. `N - minus 2 for that day you forgot your wallet... makes... 10.`
 
-    Natalie dropped the coins one by one into Kat's outstreched hands, bearing the stamp of the Guild. There wasn't any better currency in all the world, pure silver and backed by the largest trading company in Vailia. The Guild hadn't needed to debase it in more than two centuries.
+    Natalie dropped the coins one by one into Kat's outstretched hands, bearing the stamp of the Guild. There wasn't any better currency in all the world, pure silver and backed by the largest trading company in Vailia. The Guild hadn't needed to debase it in more than two centuries.
 
-    Kat smooched her cheek, the coins disappearing into... well, Natalie wasn't entirely sure <i>where</i> they disappeared to, only that one moment they were in Kat's hand, the next moment, gone. `K Thanks Nat. Gonna go buy myself some new trowsers, a sweet hat, a nice dinner then get drunk with the rest. Honest money is great - no one in Vailia calls for the guards when they see I have coins.`
+    Kat smooched her cheek, the coins disappearing into... well, Natalie wasn't entirely sure <i>where</i> they disappeared to, only that one moment they were in Kat's hand, the next moment, gone. `K Thanks Nat. Gonna go buy myself some new trousers, a sweet hat, a nice dinner then get drunk with the rest. Honest money is great - no one in Vailia calls for the guards when they see I have coins.`
 
     `N You're going to spend it all today?`
 
@@ -320,7 +321,7 @@ p.WastingMoney =
 
     `N Yes, but...`
 
-    Kat grinned and kissed Nat's cheek again, cutting her off. `K Go, be boring and responible. I love that about you.` She ran into the crowd before Natalie could formulate a response. She stared after the young woman, one hand rising up to touch her cheek.
+    Kat grinned and kissed Nat's cheek again, cutting her off. `K Go, be boring and responsible. I love that about you.` She ran into the crowd before Natalie could formulate a response. She stared after the young woman, one hand rising up to touch her cheek.
   """
 
 p.AsaraArrives =
@@ -333,9 +334,9 @@ p.AsaraArrives =
   || bg=places/VailiaDay
   `A Not leaving.`
 
-  Natalie leaned against the door, but Asara held it closed against her. She let out an exasperated sigh and slumped against it. One of the crew quirked an eyebrow to see his captain locked out of her own room, but didn't say anything. Natalie rolled her eyes and hit him lightly in the shoulder. He checkled.
+  Natalie leaned against the door, but Asara held it closed against her. She let out an exasperated sigh and slumped against it. One of the crew quirked an eyebrow to see his captain locked out of her own room, but didn't say anything. Natalie rolled her eyes and hit him lightly in the shoulder. He chuckled.
 
-  `J Well, I guess that's that. Are you coming or not?` James smothered a smile, so Natalie hit him too. Apparenly Asara wasn't ready to visit Vailia yet.
+  `J Well, I guess that's that. Are you coming or not?` James smothered a smile, so Natalie hit him too. Apparently Asara wasn't ready to visit Vailia yet.
   """
 
 p.AsaraWorriesJames =
@@ -347,13 +348,14 @@ p.AsaraWorriesJames =
     James: 3
   text: -> """
   || bg=travel/DeckDay
-    `J Everything about this is a bad idea,` James therw out casually, without pausing in his work. One of the LApis' sails lay opread out on deck while they checked for worn spots. Natalio hadn't liked the way it had hung druing the last trip. `N Everything about what?"
+    `J Everything about this is a bad idea,` James threw out casually, not pausing in his work. One of the Lapis' sails lay spread out on deck while they checked for worn spots. Natalie hadn't liked the way it had hung during the last trip.
+    `N Everything about what?"
     `J Asara.`
 
-    -- Natalie stopped, turned to him, waited. He didn't respond to her dsiapproving stare, so finally, `N We can't just abandon her.`
-    `J You should leave her with a temple, someone who can take care of her properly. She's dangerous and hurting and more than a little broken, and what if it's Kat who startles her next time? Or you?` James rolled his shoulder experimentally, wincing. He'd startled her below decks, coming around a corner when she wasn't expecting it, and she'd nearly dislocated his shoulder. Then, mortified, she'd run off and hid in Natalie's room again, refusing to come out for nearly a week.
+    -- Natalie stopped, turned to him, waited. He didn't respond to her disapproving stare, so finally, `N We can't just abandon her.`
+    `J You should leave her with a temple, someone who can take care of her properly. She's dangerous and hurting and more than a little broken. What if it's Kat who startles her next time? Or you?` James rolled his shoulder experimentally, wincing. He'd startled her below decks, coming around a corner when she wasn't expecting it. She'd nearly dislocated his shoulder. Then, mortified, she'd run off and hid in Natalie's room again, refusing to come out two fuul days.
     `N She wouldn't do that!`
-    He turned his attention back to the saul, tugging experimentally on a section and ignoring Natalie's angry glare. "She's barely spoken a word to you. None of us know what she is, where she came from, or if that silver glow will..."
+    He turned his attention back to the sail, tugging experimentally on a section and ignoring Natalie's angry glare. "She's barely spoken a word to you. None of us know what she is, where she came from, or if that silver glow will..."
 
     -- `N She stays."
     For the first time in the conversation James turned fully to look at her. `J I... ok. Just... be careful, Nat. I can't protect you from this.`
@@ -374,16 +376,16 @@ p.AlkeniaRoute =
   `J That's what I'm here for.` He accepted the parcel - wrapped in brown paper, tied with twine, sealed with the Guildmaster's emblem.
   ` You know what it is?` His voice cracked, and embarrassment warred with eager curiosity as he rubbed his throat.
 
-  -- `J I do, but I'm not telling you. Some things are secret for a reason.` He smiled appologetically.
+  -- `J I do, but I'm not telling you. Some things are secret for a reason.` He smiled apologetically.
 
   || bg=places/VailiaDay
   --
   || bg=travel/cabinDay left=J/normal
   -- `J One package, still sealed.`
   ||
-  Natalie took it and excitedly unwrapped her present, cracking the wax seal and untieing the twine. Inside... a notebook, wrapped in oiled leather and tied closed with another string. She opened it reverently to a random page. A map, precisely drawn and carefully annotated of the waters around Mt. Julia. Another page - lists of wind speeds, seasons, storm likelyhood in vicinity of Nonkenia.
+  Natalie took it and excitedly unwrapped her present, cracking the wax seal and untying the twine. Inside... a notebook, wrapped in oiled leather and tied closed with another string. She opened it reverently to a random page. A map, precisely drawn and carefully annotated of the waters around Mt. Julia. Another page - lists of wind speeds, seasons, storm likelihood in vicinity of Nonkenia.
 
-  -- A tightly guarded secret - one of the Guild's rutters. Everything an enterprising captain needed to travel safely around the continental coast near Vailia and her allied cities. Or everything a rival needed to run their own shipping business without Guild sponsership or control. Precious almost beyond measure.
+  -- A tightly guarded secret - one of the Guild's rutters. Everything an enterprising captain needed to travel safely around the continental coast near Vailia and her allied cities. Or everything a rival needed to run their own shipping business without Guild sponsorship or control. Precious almost beyond measure.
 
   Natalie's eyes sparkled as she started reading. She looked radiant, alive. James tried not to stare, and his heart beat faster when she reached over to squeeze his hand before returning to her reading. She didn't notice when he excused himself.
   """

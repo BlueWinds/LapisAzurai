@@ -82,6 +82,10 @@ table td {
   padding-left: 3px;
 }
 
+.cargo .success {
+  right: 0;
+}
+
 #flex {
   top: 65px;
   left: 0px;
@@ -124,9 +128,10 @@ table td {
   clip: rect(0, 500px, 0, 0);
   cursor: default;
   border-radius: 4px;
+  min-height: 60px;
   position: absolute;
   transform: translate(-5px, -5px);
-  width: 190px;
+  width: 280px;
 }
 
 #places .name {
@@ -150,16 +155,16 @@ table td {
   margin: -1px 0px -3px 15px;
 }
 
-#places .page {
+#places td {
   opacity: 0.6;
 }
 
-#places .page.active {
+#places .active {
   cursor: pointer;
   opacity: 1;
 }
 
-#places .page .label {
+#places .label {
   color: #fff;
 }
 
@@ -221,3 +226,16 @@ img.person {
 
 img.person.left { left: 18%; }
 img.person.right { right: 18%; transform: scaleX(-1); filter: blur(0); }
+
+.travel {
+  color: #FFF;
+  cursor: pointer;
+  float: right;
+  font-size: 2.8em;
+  padding-right: 10px;
+}
+
+.travel.disabled {
+  color: #666;
+  cursor: default;
+}

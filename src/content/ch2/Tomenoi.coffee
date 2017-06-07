@@ -13,11 +13,11 @@ p.TomenoiArrive =
 
     A small crowd gathered to watch them come in, shouting advice, encouragement, or in a few cases, warning them off. Natalie ignored the noise, spun the wheel, shouted to the crew.
 
-    -- `N That's it, strike the sails!` Coasting forward on its momentum, the Lapis dipped between two of the ships already docked and inched forwards towards the pier. The crew tossed lines to the dockworkers, and suddenly everyone was shouting and hauling on ropes and pulling against the wind that wanted to push the Lapis sideways into one of the nearby ships.
+    -- `N That's it, strike the sails!` Coasting forward on its momentum, the Lapis dipped between two of the ships already docked and inched forwards towards the pier. The crew tossed lines to the dock workers, and suddenly everyone was shouting and hauling on ropes and pulling against the wind that wanted to push the Lapis sideways into one of the nearby ships.
 
     All in all, a rather graceful arrival given the circumstances. Natalie grinned at Kat, at James, at Asara, and hopped onto the pier.
 
-    !! Tomenoi was an odd combination of bustling and dreary. The buildings looked like they could use a fresh coat of paint to hide the dirt, and the streets weren't so much "streets" as they were "beaten paths in the dust." But at the same time, those who greeted her were cheerful and loud, a mix of Vailian sailors and captains slapping her on the back and Kantian merchants and townfolks keeping a more respectful distance.
+    !! Tomenoi was an odd combination of bustling and dreary. The buildings looked like they could use a fresh coat of paint to hide the dirt, and the streets weren't so much "streets" as they were "beaten paths in the dust." But at the same time, those who greeted her were cheerful and loud, a mix of Vailian sailors and captains slapping her on the back and Kantian merchants and townsfolk keeping a more respectful distance.
 
     She hadn't seen more than a few Kantians in her life before now. Their ships were square rigged, solid but slow, making the journey to Vailia rather arduous for them. The few she had seen were mostly wealthy or powerful - the sort that could afford to take a month or more away from their affairs for a vacation at the center of the known world. The Kantians were generally darker than the Vailians, golden skin and deep brown or black waves of hair.
 
@@ -55,7 +55,7 @@ p.AsaraJoinsCrew =
 
     She didn't really know how to respond to such an accurate insight, so she stayed silent.
 
-    `A I have a... a job? A purpose? A thing I wish to do,` she struggled for the proper word, reinforcing Natalie's conviction that she had learned Vailian only recently. Asara continued, a bit of bitterness crepping into her voice. `A But I am not yet ready, as I have learned. I would stay here a while, if you will. Your kindness in keeping me is worthy, but I wish to contribute as well.`
+    `A I have a... a job? A purpose? A thing I wish to do,` she struggled for the proper word, reinforcing Natalie's conviction that she had learned Vailian only recently. Asara continued, a bit of bitterness creeping into her voice. `A But I am not yet ready, as I have learned. I would stay here a while, if you will. Your kindness in keeping me is worthy, but I wish to contribute as well.`
 
     -- `N Ah, yes, stay as long as you like. What is your task?`
 
@@ -76,7 +76,7 @@ p.StrandedShip =
 
     `K There, there!` Kat shouted and pointed impatiently.
 
-    Natalie looked where she was pointing again. Nothing, nothing... wait, there was a darker shadow. It soldified slowly as the Lapis came closer. The other ship was drifting, no intention to its motion. She gestured to James, currently taking a turn at the helm, and her nodded. They'd go take a look, rather than let it pass silently.
+    Natalie looked where she was pointing again. Nothing, nothing... wait, there was a darker shadow. It solidified slowly as the Lapis came closer. The other ship was drifting, no intention to its motion. She gestured to James, currently taking a turn at the helm, and her nodded. They'd go take a look, rather than let it pass silently.
 
     -- It was not a pleasant sight. The Kantian ship was missing one mast entirely, and the other square sail was ripped to shreds. Surviving a storm didn't necessarily mean living to tell the tale.
 
@@ -107,7 +107,7 @@ p.KantisRegion =
 
     James crouched down beside her, watching the way she wrinkled her nose against the dust. `J No luck with the locals?`
 
-    `N None. They see a Vailian, they clam right up. I thought they might be more open than the Guild with their maps, but no luck at all. I still don't understand why Janos didn't just give me a full rutter for the region - Tomenoi's a great waypoint, and there's plenty of trading to be done here, but he asked me to deliver a letter to Kantis, then only gave directions halfway there.` She sighed and rubbed her eyes, followed by a cute little sneeze.
+    `N None. They see a Vailian, they clam right up. I thought they might be more open than the Guild with their maps, but no luck at all. I still don't understand why Janos didn't just give me a full rutter for the region - Tomenoi's a great way point, and there's plenty of trading to be done here, but he asked me to deliver a letter to Kantis, then only gave directions halfway there.` She sighed and rubbed her eyes, followed by a cute little sneeze.
 
     -- `J Why don't we just head back to Vailia and ask him? We can load up on cargo here, it won't be a waste of a trip. Have you tried these the dates? They're quite good, and would be an excellent novelty back home.`
 
@@ -120,23 +120,23 @@ p.KantisRegion2 =
   label: 'Route to Kantis'
   history:
     KantisRegion: 0
-  expercience:
+  experience:
     Asara: 3
   text: -> """
   || bg=places/TomenoiDay
     ` Priestess.`
 
-    Asara turned slowly at the unexpected greeting. Busy day and night, dealing with goods from the Kantian region and from Vailia, Asara's ears none the less picked out one subtle word directed at her from all the noise filling Tomenoi's market. It had been little more than a whisper. One of the cooks at a food stall gave her a brief bow when he noticed her attention. Asara nooded, and he turned back to his stove before anyone else could notice the exchange.
+    Asara turned slowly at the unexpected greeting. Busy day and night, dealing with goods from the Kantian region and from Vailia, Asara's ears none the less picked out one subtle word directed at her from all the noise filling Tomenoi's market. It had been little more than a whisper. One of the cooks at a food stall gave her a brief bow when he noticed her attention. Asara nodded, and he turned back to his stove before anyone else could notice the exchange.
 
     -- She found a seat nearby and waited. An hour passed. Two. Finally, he approached her.
 
-    ` Appologies for the delay, priestess. It is hard to find work here, and I could not leave my post until now.`
+    ` Apologies for the delay, priestess. It is hard to find work here, and I could not leave my post until now.`
 
     `A You live here, but still follow the old ways?` she inquired. She'd been surprised to see another one of her people so far from home, but he was here, and there might be something he could do.
 
     ` There are more of us here than you might think,` he smiled. ` And not all who move beyond the desert forget what we are owed. How may I help you?` They looked little alike - his black hair and dark brown eyes compared to her own silver and blonde, but if one looked beyond the coloration, the resemblance was strong.
 
-    -- Asara nooded, and he took a seat beside her. `A I need a map to Kantis.`
+    -- Asara nodded, and he took a seat beside her. `A I need a map to Kantis.`
 
     ` I heard a Vailian witch asking for the same thing. Is this related?`
 
@@ -146,7 +146,7 @@ p.KantisRegion2 =
 
     -- `A You could hardly stop Natalie from showering you with coins. Be you shielded from the wind,` she invoked the ritual words.
 
-    ` Thank you, priestess. You are kind.` He returned the correct response. He stood, bowed, and slipped back into the crowd. Asara's eyes smile faded. A taste of home like that should have been comforting, but all she could taste was ash. She fled for the docks and her room aboard the Lapis before her stoic mask could disolve entirely.
+    ` Thank you, priestess. You are kind.` He returned the correct response. He stood, bowed, and slipped back into the crowd. Asara's eyes smile faded. A taste of home like that should have been comforting, but all she could taste was ash. She fled for the docks and her room aboard the Lapis before her stoic mask could dissolve entirely.
   """
 
 p.KantisRegion3 =
@@ -166,7 +166,7 @@ p.KantisRegion3 =
 
     Asara started to shake her head again, then shuddered and stopped. Pushing people away was easy. She was very good at at. But... she forced herself to meet Natalie's gaze. Maybe. Maybe she could try. `A It is... I saw you could not do this alone. So I asked some of my people to help.`
 
-    `N Your people?` Natalie leaned closer again, intereset piqued.
+    `N Your people?` Natalie leaned closer again, interest piqued.
 
     Asara shook her head again. Too much sharing. Maybe later, once she'd seen that Natalie wouldn't try to hurt her with this information. Maybe.
   """

@@ -51,7 +51,7 @@ window.Cargo =
     return {name, from, to, start: g.day}
 
   accept: (cargo)->
-    g.availableCargo = g.availabileCargo.filter (c)-> c isnt cargo
+    g.availableCargo = g.availableCargo.filter (c)-> c isnt cargo
     cargo.start = g.day
     g.cargo.push cargo
     Game.passDay()

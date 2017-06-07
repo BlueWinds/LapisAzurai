@@ -14,7 +14,7 @@ p.Ch2 =
   || bg=places/GuildOffice
     -- She hesitated at his door - voices inside. She knocked smartly. The voices paused a moment, then resumed. Apparently he meant to finish whatever business he was attending before inviting her in. Natalie sighed and went over to a window. The view was impressive, looking down over the city. The Lapis was just barely visible from here. She tapped her foot on the polished wood floor, ran her finger along the windowsill (not as spotless as she'd kept it, when cleaning this office had been her job), and waited.
 
-    Ten minutes later the door opened, and a weary looking Guildmaster held it for his guests. A stern looking older woman nodded as Natalie as she brushed past, decked in a foreign and formal dress. Janos' knuckles whitened on the doorframe, and he didn't so much as glance at Natalie as he watched the woman move sedately down the long hallway.
+    Ten minutes later the door opened, and a weary looking Guildmaster held it for his guests. A stern looking older woman nodded as Natalie as she brushed past, decked in a foreign and formal dress. Janos' knuckles whitened on the door frame, and he didn't so much as glance at Natalie as he watched the woman move sedately down the long hallway.
 
   || right=Guildmaster/skeptical
     -- Finally, once she had turned out of sight he nodded to Natalie, and gestured with one hand for her to enter. While she made herself comfortable in her usual chair, he sat down behind the desk with a sigh.
@@ -51,7 +51,7 @@ p.Ch2 =
   || left=N/normal right=Guildmaster/normal
     -- Natalie stood and saluted, garnering another grumble, and turned to leave.
 
-    `Guildmaster Take some glassblowing tools with you. The price in Kantis won't disappoint.` Though it seemed an afterthought, the delivery was too timely and smooth. The advice was, she could guess, to be her means of payment for the mission. That, and a rutter to Kantis. A book showing the sea-lanes, tides, locations and details of a distant land was a secret worth many times what it would cost to have a different captain deliver the message. A promotion, effectively. The
+    `Guildmaster Take some glass blowing tools with you. The price in Kantis won't disappoint.` Though it seemed an afterthought, the delivery was too timely and smooth. The advice was, she could guess, to be her means of payment for the mission. That, and a rutter to Kantis. A book showing the sea-lanes, tides, locations and details of a distant land was a secret worth many times what it would cost to have a different captain deliver the message. A promotion, effectively. The
 
   || left=N/excited right=Guildmaster/normal
     `N Aye aye sir!` She saluted again, and danced out before he could object.
@@ -85,7 +85,7 @@ p.TomenoiRoute =
 
     Asara looked unhappy at the mention of her name. `A You are her commander, are you not?`
 
-    `Guildmaster Something more like her father.` He saw the subtle widening of her eyes at that, quickly supressed. He smiled. Though he'd been the one startled when she'd seemed to appear from thin air, now that he'd had a minute to observe her, he could see that she was practially vibrating with tension. `Guildmaster Please do not be so nervous. Any friend of Natalie's is a friend of mine, and your name is safe with me, I won't repeat it further.`
+    `Guildmaster Something more like her father.` He saw the subtle widening of her eyes at that, quickly suppressed. He smiled. Though he'd been the one startled when she'd seemed to appear from thin air, now that he'd had a minute to observe her, he could see that she was practically vibrating with tension. `Guildmaster Please do not be so nervous. Any friend of Natalie's is a friend of mine, and your name is safe with me, I won't repeat it further.`
 
     `A Thank you.` She waited silently, giving nothing more.
 
@@ -334,7 +334,7 @@ p.IronSandsRutter2 =
 
     `K Of course not. Why'd I know how to do something like that?`
 
-    `N Because the free schools... oh. In Vailia. Where you're not from. Sorry.` Natalie unwrapped the folio and flipped it open. It was a rutter to Iron Sands, a recently opened mining colony on the coast. The location was a closely guarded Guild secret. Janus had established it somewhere to the south, selling the iron and steel it produced at a staggering loss to undercut Alkenian sources. It had been a master stroke, costing a fortune but consoldiating the Guild's hold on its foreign cities. That had been before she was born, but she'd studied the economics of it closely. It had been a master stroke.
+    `N Because the free schools... oh. In Vailia. Where you're not from. Sorry.` Natalie unwrapped the folio and flipped it open. It was a rutter to Iron Sands, a recently opened mining colony on the coast. The location was a closely guarded Guild secret. Janus had established it somewhere to the south, selling the iron and steel it produced at a staggering loss to undercut Alkenian sources. It had been a master stroke, costing a fortune but consolidating the Guild's hold on its foreign cities. That had been before she was born, but she'd studied the economics of it closely. It had been a master stroke.
 
     `N Sorry I yelled at you, Kat. Please don't forget about things like this - when I send you on jobs, they're always important, or I'd just have the crew do them.`
 
@@ -358,7 +358,7 @@ p.AsaraTalkFlames =
 
     `A I made more noise, like you asked me to.`
 
-    `N Oh. Well, thanks.` Disapointing, that she'd only heard Asara because she was <i>intentionally</i> making noise. `N Someday.`
+    `N Oh. Well, thanks.` Disappointing, that she'd only heard Asara because she was <i>intentionally</i> making noise. `N Someday.`
 
     -- `N You called that silver fire, what was it, 'the flames'? You can't do it again?` Natalie seized on the chance to ask one of the many questions that had been bothering her since the night when Asara had decided to ` test her power.`
 
@@ -391,7 +391,7 @@ p.AsaraTalkNotMagic =
 
     `N A choice?` Natalie prompted her to go on, leaning in closer. Asara was finally opening up a little - and beneath the sharp exterior there was something as fascinating as Nat has known there would be.
 
-    `A I was five when my mother asked if I wished to join her on Azaraki's path, when I accepted the sword and the silver.` She shook her head at Natalie's horrified expression. `A I have seen the way you Vailians coddle your children. It's a wonder your city survives such indulence.`
+    `A I was five when my mother asked if I wished to join her on Azaraki's path, when I accepted the sword and the silver.` She shook her head at Natalie's horrified expression. `A I have seen the way you Vailians coddle your children. It's a wonder your city survives such indulgence.`
   """
 
 p.AsaraTalkWitch =
@@ -409,7 +409,7 @@ p.AsaraTalkWitch =
 
     `N Oh.`
 
-    `A I trust you, Natalie. Completely.` If anyone else had used such a cheesy line she'd have hit them and laughed it off, but Asara let the statement drop with so much earnesty, not a drop of guile in it that, Natalie couldn't help but blush and look away herself.
+    `A I trust you, Natalie. Completely.` If anyone else had used such a cheesy line she'd have hit them and laughed it off, but Asara let the statement drop with so much earnestness, not a drop of guile in it that, Natalie couldn't help but blush and look away herself.
 
     `N I, um, I have to go help James in the cargo hold.`
   """
@@ -422,13 +422,13 @@ p.JamesParents =
     James: 3
   text: ->"""
   || bg=places/VailiaDay
-    James raised a hand to knock, hesitated, lowered it again. The weather beaten door was the same as ever, but not the same at all. Scarred and blackened with soot, he traced a finger along a groove where the boards were coming apart. His mother had wanted to replace it for years, but James agreed with his pather - it was a piece of family history, as irreplacable in its own way as the anvil upon which three generations had made their living.
+    James raised a hand to knock, hesitated, lowered it again. The weather beaten door was the same as ever, but not the same at all. Scarred and blackened with soot, he traced a finger along a groove where the boards were coming apart. His mother had wanted to replace it for years, but James agreed with his father - it was a piece of family history, as irreplaceable in its own way as the anvil upon which three generations had made their living.
 
-  !! The roar of the forge and billows of soot from the chimeny abvoe showed him what he'd find if he went inside - his father shirtless and sweating, his mother shoveling charcoal into the furncae. That had been her job before James had been old enough, and doubtless was again since he'd run off with Natalie.
+  !! The roar of the forge and billows of soot from the chimney above showed him what he'd find if he went inside - his father shirtless and sweating, his mother shoveling charcoal into the furnace. That had been her job before James had been old enough, and doubtless was again since he'd run off with Natalie.
 
-    He could smell it too, and not only in his imagination. Hot metal, smoke, sweat, warm winters and blazing summers nestleed alone in the attic above the shop. The heat and smells were benefits - better clean industry than effluent odors from the street, and they never worried about staying warm, unlike so many others. There were worse lots in life, and he had only to turn around to be reminded of that. Smithys clustered in the poorest part of Vailia not because they were themselves poor, but because no one else would tollerate the noise.
+    He could smell it too, and not only in his imagination. Hot metal, smoke, sweat, warm winters and blazing summers nestled alone in the attic above the shop. The heat and smells were benefits - better clean industry than effluent odors from the street, and they never worried about staying warm, unlike so many others. There were worse lots in life, and he had only to turn around to be reminded of that. smithies[D[D[D[D[D[D[D[D[D[C[S clustered in the poorest part of Vailia not because they were themselves poor, but because no one else would tolerate the noise.
 
-    James remembered his father, loud and angry that he would abandon his apprenticeship and family history, and his mother, jaw set grimly and glancing every few minuse towardse the distant sea. It hed claimed both her mother and her fist husband.
+    James remembered his father, loud and angry that he would abandon his apprenticeship and family history, and his mother, jaw set grimly and glancing every few minutes towards the distant sea. It had claimed both her mother and her fist husband.
 
     He turned away and left without knocking. They be happier without the reminder of his presence.
   """
@@ -445,7 +445,7 @@ p.JamesParents2 =
   || bg=travel/DeckNight
     `N You didn't speak with them.` Natalie came up behind James and rapped him on the back of his head.
 
-    `J Why do you say that?` James lay down the rope he was splicking together, having cut out the frayed patch. He tried to turn to look at her without standing up, but she shifted around to stay out of his sight.
+    `J Why do you say that?` James lay down the rope he was splicing together, having cut out the frayed patch. He tried to turn to look at her without standing up, but she shifted around to stay out of his sight.
 
     `N You are transparent.` Natalie waved a hand in front of his face. `N I can see my fingers though your skull, that's how transparent you are.` She jammed a rolled up piece of paper against his chest as he finally stood and turned to face her. `N And because your father wrote to me.`
 
@@ -476,13 +476,13 @@ p.TomenoiHistory2 =
 
     `K Kat. Pleased to meetcha.`
 
-    `Meghan Please, come in,` Lady Meghan swept the door the rest of the way open and stepped aside. Her house was entriely out of place with its surroundings, a tiny little cot nestled among tremendous mansions, only two blocks from the palace itself. The inside was even more out of place - crammed with books, doodads and trinkets, it looked like it hadn't seen the hand of a maid in... well, ever. `Meghan I'm glad you came. I've had about all I can stand of dealing with Janos for the moment. You're not here on his business, are you?` She looked suddenly suspicious.
+    `Meghan Please, come in,` Lady Meghan swept the door the rest of the way open and stepped aside. Her house was entirely out of place with its surroundings, a tiny little cot nestled among tremendous mansions, only two blocks from the palace itself. The inside was even more out of place - crammed with books, doodads and trinkets, it looked like it hadn't seen the hand of a maid in... well, ever. `Meghan I'm glad you came. I've had about all I can stand of dealing with Janos for the moment. You're not here on his business, are you?` She looked suddenly suspicious.
 
     !! `N No, not at all. What business is that?`
 
     `Meghan If you don't already know, don't badger me about it. Would you like some tea?`
 
-    Kat was too busy staring around the apartment to answer, but Natalie agreed. With a neglegent wave of one hand, Meghan set the kettle to whistling, hot steam piping from it atop an unlit stove. It was... where had all the energy for that <i>come from</i>? To draw that much power internally would have left Natalie half-delirious with magical strain, and Lady Meghan had done it idly, without thought. Natalie was impressed.
+    Kat was too busy staring around the apartment to answer, but Natalie agreed. With a negligent wave of one hand, Meghan set the kettle to whistling, hot steam piping from it atop an unlit stove. It was... where had all the energy for that <i>come from</i>? To draw that much power internally would have left Natalie half-delirious with magical strain, and Lady Meghan had done it idly, without thought. Natalie was impressed.
 
     `K I'm sorry to bother your ladyship,`
     `Meghan Just Meghan, please.`
@@ -524,7 +524,7 @@ p.MeghanSuitors =
   || bg=places/VailiaNight
     `N James. Stop fidgeting and stand still. Yes, I know. It's too fancy for you. But stop fidgeting anyway, because you're here now and I'm not leaving until I've made my rounds.` Grasping him firmly by the upper arm - without appearing to do so, because actually needing to drag her date around by the arm was too embarrassing to contemplate - Natalie made her way to the next noble she wished to speak with.
 
-    Before she could get there though, Janos swept in and took her other arm, tugging her away. `Guildmaster Oh, Natalie, just the person I was looking forward to seeing tonight.` Natalie flashed James an appologetic look for leaving him alone, and let the Guildmaster pull her away.
+    Before she could get there though, Janos swept in and took her other arm, tugging her away. `Guildmaster Oh, Natalie, just the person I was looking forward to seeing tonight.` Natalie flashed James an apologetic look for leaving him alone, and let the Guildmaster pull her away.
 
     -- `N Having a pleasant evening, sir?`
 
@@ -566,7 +566,7 @@ p.MeghanSuitors =
 
     She cleared her throat. Meghan looked at her, and slowly the suitors turned in her direction.
 
-    `N Lady Meghan VAilia.` She caugh Meghan's eye - Natalie couldn't wink, with all eyes on her, but she tried to make her tone sparkle, and hoped the lady would play along.
+    `N Lady Meghan Vailia.` She caught Meghan's eye - Natalie couldn't wink, with all eyes on her, but she tried to make her tone sparkle, and hoped the lady would play along.
 
     `Meghan Yes, Natalie Rowena?`
 
@@ -596,7 +596,7 @@ p.MeghanSuitors2 =
   || bg=places/VailiaNight
     `N I can't believe I got away with that,` Natalie burst into nervous giggles as soon as the door to Meghan's tiny little house closed behind them.
 
-    `Meghan That was magnificent. I wish I could do that,` Meghan's gave was admiring, and Natalie was suddently bashful.
+    `Meghan That was magnificent. I wish I could do that,` Meghan's gave was admiring, and Natalie was suddenly bashful.
 
     `N You're the most powerful wizard in the world, you could totally do that. Also one of the most politically influential people in Vailia, and smart, and...`
 
@@ -608,7 +608,7 @@ p.MeghanSuitors2 =
 
     Nat held up her hands. `N Sorry, sorry, I didn't mean it like that. Promise I'm not trying and get in your pants, I just wanted to make all those expectant looks sod off, and it seemed like you did too, so...` she trailed off hopefully.
 
-    -- Meghan nodded, accepting the appology. `Meghan Let's talk about something else. Um... have you read Treatise on Historical Storm Patterns?`
+    -- Meghan nodded, accepting the apology. `Meghan Let's talk about something else. Um... have you read Treatise on Historical Storm Patterns?`
 
     Natalie relaxed and gave a tentative smile. `N I think he's wrong about the causes, but...`
   """

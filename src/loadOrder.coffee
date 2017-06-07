@@ -17,8 +17,10 @@ module.exports = [
 
 # Finally the content
   'content/map.coffee'
+  'content/travel/travel.coffee'
   'content/people/Natalie/_.coffee'
   'content/people/James/_.coffee'
+  'content/people/Guildmaster/_.coffee'
 
   'content/ch1/Vailia.coffee'
   'content/ch1/MtJulia.coffee'

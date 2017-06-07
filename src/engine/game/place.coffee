@@ -48,7 +48,7 @@ window.Place = {
     return Place.svgElements(origin, destination).reduce(sumLength, 0)
 
   svgElements: (origin, destination)-> # Returns array of svg elements between two locations (direct or indirect route)
-    location = Place[origin]
+    location = origin
     paths = []
 
     getElement = (from, to, direction)->
@@ -56,18 +56,18 @@ window.Place = {
       document.getElementById(string)
 
     loop
-      if typeof location.paths[destination] is 'number'
-        paths.push getElement(location.name, destination, location.paths[destination])
+      if typeof Place[location].paths[destination] is 'number'
+        paths.push getElement(location, destination, Place[location].paths[destination])
         break
 
-      nextStop = location.paths[destination]
-      paths.push getElement(location.name, nextStop, location.paths[nextStop])
-      location = Place[nextStop]
+      nextStop = Place[location].paths[destination]
+      paths.push getElement(location, nextStop, location.paths[nextStop])
+      location = nextStop
 
     return paths
 
   travelImages: (element, set)->
-    Place.travelImages[element.travel][set]
+    Place.travelImages[element.attributes.travel.value][set]
 
   travelEvents: (to)->
     path = Place.svgElements(g.location, to)[0]
@@ -82,7 +82,7 @@ window.Place = {
       if Math.random() < Place.delayChance()
         for stormDay in [0 ... Math.ceil(Place.delayDuration())]
           event = {image: Math.choice(Place.travelImages(path, 'delay'))}
-          dayEvents.push
+          events.push event
         lastMoveStart = null
       else
         event = {image: Math.choice(Place.travelImages(path, 'normal'))}
@@ -94,5 +94,6 @@ window.Place = {
           event.travelDays = 1
           event.startTravel = pxPerDay
         events.push event
+    events[0].location = path.id
     return events
 }

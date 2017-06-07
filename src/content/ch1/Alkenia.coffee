@@ -142,7 +142,7 @@ p.KatTrial =
   -- `N How did you even get those keys?` Natalie shoved the chains back into Kat's arms, or at least tried to. The thief was too busy grinning, and had no intention of taking them back.
 
   || left=K/normal
-  `N One guy forgot his chin strap, so I knicked his helmet, and while he was getting it back from me I grabbed his wallet, and while two of them tried to hold me down I got the keys, and when the whole group piled on, I squirmed out and... been fun, but I gotta run. What's your name?`
+  `N One guy forgot his chin strap, so I nicked his helmet, and while he was getting it back from me I grabbed his wallet, and while two of them tried to hold me down I got the keys, and when the whole group piled on, I squirmed out and... been fun, but I gotta run. What's your name?`
 
   || right=N/normal
   -- `N Natalie,` she answered, bemused and wondering exactly why she wasn't stopping Kat. A thief chatting with her victim and expressing not an ounce of remorse.
@@ -267,7 +267,7 @@ p.KatStorm2 =
   `K A Vailian Guildswoman, eh? A woman of many talents. So, what do you want with the likes of me? Still trying to get that money back?`
 
   || left=N/excited
-  -- `N What? No! I saw you dieing by the side of the road and decided to do something about it. That's all.` Natalie felt as though she should be indignant about the suggestion of her selfish motives, but really, how many times had she walked past someone in exactly the same situation?
+  -- `N What? No! I saw you dying by the side of the road and decided to do something about it. That's all.` Natalie felt as though she should be indignant about the suggestion of her selfish motives, but really, how many times had she walked past someone in exactly the same situation?
 
   || left=N/normal
   -- `N I know some people who might want some help, if you're interested.` Natalie wondered briefly who would accept a known pickpocket street-person into their employ, even one as irrepressible as Kat seemed to be, still joking around even with pneumonia.

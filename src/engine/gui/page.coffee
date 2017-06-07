@@ -28,8 +28,8 @@ $.extend Page, {
     [skill, person] = Page.skillNeeded(page)
     need = if skill
       """<div class="need">#{person} needs #{Person[person].skills[skill].label}</div>"""
-    else if g.reputation[place] < Page.reputationNeeded()
-      """<div class="need">Need #{Math.ceil(Page.reputationNeeded() - g.reputation[place])} more rep</div>"""
+    else if g.reputation[place] < Page.reputationNeeded(page)
+      """<div class="need">Need #{Math.ceil(Page.reputationNeeded(page) - g.reputation[place])} more rep</div>"""
     else ""
 
     onclick = if g.location is place and not need
@@ -37,27 +37,35 @@ $.extend Page, {
     else ''
 
     return """<td class="page #{if onclick then 'active' else '' }" #{onclick}>
-      <span class="label">#{Page[page].label}</span><span class="cost">#{Page.reputationNeeded()} rep</span></div>
+      <span class="label">#{Page[page].label}</span><span class="cost">#{Page.reputationNeeded(page)} rep</span></div>
       <div class="participants">#{Object.keys(Page[page].experience).wordJoin()}</div>
       #{need}
     </td>"""
 
   display: (page, goto = true)->
     elements = Page.render(page)
-    $('#content').append(elements)
+    $('#content').css({opacity: 1, display: 'block'}).append(elements)
     elements.css {display: 'none'}
     if goto
       Page.forwardPage(elements.first(), 1)
 
   drawHistory: ->
-    unless g.history.Intro
+    unless g.history.Intro?
       return Page.display('Intro')
-    inverted = {}
-    for event, day of g.history then inverted[day] = event
 
-    for day in [g.day - 30 ... g.day] when inverted[day]
-      Page.display(inverted[day], false)
-    Page.setNav()
+    if g.scroll >= 0
+      inverted = {}
+      for event, day of g.history then inverted[day] = event
+      day = g.day
+      loop
+        if inverted[day]
+          Page.display(inverted[day])
+          break
+        day -= 1
+
+    for i in [0 ... g.scroll]
+      Page.changePage(0, true)
+    return
 
   render: (page)->
     text = Page[page].text()
@@ -66,14 +74,14 @@ $.extend Page, {
     lastPage = $('<page></page>')
     lastBg = false
     for line in text.split("\n").filter(Boolean)
-      line = line.trim().replace(/`(\w+) (.+?)`/g, Person.quote)
+      line = line.trim().replace(/`(\w*) (.+?)`/g, Person.quote)
       unless line then continue
 
       if line.match /^\|\|/
         speed = line.match(/speed=(\w+)/)
         if speed then lastPage.attr('speed', speed[1])
 
-        t = lastPage.children('text').clone()
+        t = lastPage.children('text').clone() or $('<text></text>')
         lastPage = $('<page></page>').append(t)
         lastBg = addPageAttrs(lastPage, line, lastBg)
         continue
@@ -92,6 +100,8 @@ $.extend Page, {
         line = line.replace('>>', '')
         lastPage.find('p').last().append(line)
       else
+        unless lastPage.children('text').length
+          lastPage.append('<text></text>')
         lastPage.children('text').append('<p>' + line + '</p>')
 
       pages.append(lastPage)
@@ -99,40 +109,48 @@ $.extend Page, {
     return pages.children()
 
   changePage: (direction = 1, force = false)->
+    if g.scroll is 0 and direction < 0 then return
     currentElement = $('page.active')
-    if currentElement.hasClass('noClickThrough') and direction > 0 and not force then return
+    if currentElement.hasClass('noClickThrough') and direction >= 0 and not force then return
     targetElement = elementInDirection(currentElement, direction)
 
-    if targetElement.length
-      # We're moving into a page. Stop any previous animations.
-      $('page').removeClass('active').stop().css({display: 'none'})
-      currentElement.css({display: 'block', opacity: 1})
+    # We're moving into a page. Stop any previous animations.
+    $('page').removeClass('active').stop().css({display: 'none'})
+    currentElement.css({display: 'block', opacity: 1})
 
-      if direction > 0
-        speed = if currentElement.attr('speed') is 'slow' then speed = 1500
-        else if currentElement.attr('speed') is 'verySlow' then speed = 4000
-        else 500
-
-        Page.forwardPage(targetElement, speed)
-      else
-        Page.backPage(targetElement, 500)
+    g.scroll += direction
+    if direction >= 0
+      speed = animationSpeed(currentElement, direction)
+      Page.forwardPage(targetElement, speed)
     else
-      # Moving back to the main map
-      $('#content').animate {opacity: 0}, 500, ->
-        $('#content page, #content').removeClass('active').css {display: 'none'}
+      Page.backPage(currentElement, targetElement, 500)
 
   forwardPage: (to, speed)->
-    to.addClass('active').css({display: 'block', opacity: 0})
+    unless to.length then return Page.enterMap(speed)
 
+    to.addClass('active').css({display: 'block', opacity: 0})
     to.animate {opacity: 1}, speed, ->
       if to.hasClass('active')
         $('page').not('.active').css {display: 'none'}
 
-  backPage: (to, speed)->
+  backPage: (from, to, speed)->
+    unless to.length then return
+    unless from.length then return Page.exitMap(speed)
+
     to.addClass('active').css({display: 'block', opacity: 1})
     to.next().animate {opacity: 0}, speed, ->
       if to.next().hasClass('active')
         $('page').not('.active').css {display: 'none'}
+
+  enterMap: (speed)->
+    g.scroll = -1
+    $('#content').animate {opacity: 0}, speed, ->
+      $('#content, #content page').removeClass('active').css {display: 'none'}
+
+  exitMap: (speed)->
+    g.scroll = $('#content').children().length - 1
+    $('#content page:last-child').addClass('active').css {display: 'block'}
+    $('#content').css({display: 'block'}).animate {opacity: 1}, speed
 
   guiSetup: ->
     $('#content').on 'click', (e)->
@@ -147,6 +165,11 @@ $.extend Page, {
     $(window).keydown(keyPress)
 }
 
+animationSpeed = (currentElement, direction)->
+  if direction is 0 then 0
+  else if currentElement?.attr('speed') is 'slow' then speed = 1500
+  else if currentElement?.attr('speed') is 'verySlow' then speed = 4000
+  else 500
 
 addPageAttrs = (element, line, lastBg)->
   for image in (line.match(/((?:far)?(?:Left|Right|Center)=\w+\/\w+)/ig) or [])
