@@ -91,6 +91,8 @@ $.extend Game, {
     $('#LabelLayer g').on 'click', ->
       label = $(@)
       place = $('[place="' + @id + '"]')
+      unless place.length then return false
+
       place.stop().animate({to: place.outerHeight()}, {step: animateClip, duration: 200})
       label.stop().animate {opacity: 0}, 200
       $('#map').one 'click', ->

@@ -20,7 +20,9 @@ module.exports = [
   'content/travel/travel.coffee'
   'content/people/Natalie/_.coffee'
   'content/people/James/_.coffee'
+  'content/people/Kat/_.coffee'
   'content/people/Guildmaster/_.coffee'
+  'content/people/Sailors/_.coffee'
 
   'content/ch1/Vailia.coffee'
   'content/ch1/MtJulia.coffee'

@@ -47,6 +47,7 @@ $.extend Page, {
     $('#content').css({opacity: 1, display: 'block'}).append(elements)
     elements.css {display: 'none'}
     if goto
+      if g.scroll is -1 then g.scroll = 0
       Page.forwardPage(elements.first(), 1)
 
   drawHistory: ->
@@ -174,9 +175,6 @@ animationSpeed = (currentElement, direction)->
 addPageAttrs = (element, line, lastBg)->
   for image in (line.match(/((?:far)?(?:Left|Right|Center)=\w+\/\w+)/ig) or [])
     [_, position, name, expression] = image.match(/(.+)=(.+)\/(.+)/)
-    unless Person[name] or Person.alias[name]
-      console.error "Can't find person for image " + image
-      continue
     element.prepend Person.drawImage(position, name, expression)
 
   bg = line.match(/bg=([\w\/]+)/) or lastBg

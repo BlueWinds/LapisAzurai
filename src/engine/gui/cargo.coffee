@@ -49,10 +49,10 @@ $.extend Cargo, {
         Place.drawMap()
 
   clickDeliver: (i)->
-    cargo = g.cargo[i]
-    Cargo.deliver(cargo)
+    Cargo.deliver(i)
 
     $('.cargo.delivery.' + i + ' .success')
       .animate({opacity: 1}, 500)
-      .animate {opacity: 0}, 2000, -> Place.drawMap()
+      .animate {opacity: 0}, 2000, ->
+        Place.drawMap()
 }

@@ -1,14 +1,15 @@
 $.extend Place, {
-  drawMap: ->
-
+  drawMap: (interactive = true)->
+    $('#overlay').hide()
     $('#PathLayer path').hide()
     $('#MapMask').children('circle, ellipse').attr('fill', 'none')
     $('#LabelLayer g').hide()
+
     places = for place, r of g.reputation
       $('#' + place).show().animate {opacity: 1}, 200
       $('#' + place + 'Mask').attr('fill', 'url(#maskBlur)')
-      Place.draw(place)
-
+      if interactive
+        Place.draw(place)
     $('#places').empty().append places.join('')
 
     location = Place.location(g.location, g.distance)
@@ -32,7 +33,6 @@ $.extend Place, {
     available = g.availableCargo.filter (job)-> job.from is place
     visiblePages = Page.visiblePages(Place[place].pages[g.chapter])
 
-
     return """<div place="#{place}" class="place has-full" style="left: #{location.x}px; top: #{location.y}px;">
       #{travel}
       <div class="name">#{Place[place].name}</div>
@@ -45,32 +45,48 @@ $.extend Place, {
     </div>"""
 
   animateTravel: (to)->
+    Place.drawMap(false)
     events = Place.travelEvents(to)
     Place.animateEvent(to, events)
 
   animateEvent: (to, events)->
     event = events.shift()
     unless event
-      return drawMap()
+      g.location = to
+      return Place.drawMap()
 
     Game.passDay()
     Game.drawStatus()
     if event.location then g.location = event.location
-    dayDuration = 500
+    dayDuration = 3000
 
     if event.startTravel
-      Place.animateLocation(to, event.startTravel, event.travelDays * dayDuration)
+      destination = g.distance + event.startTravel
+      Place.animateLocation(destination, event.travelDays * dayDuration)
+      g.distance = destination
 
-  animateLocation: (to, toDistance, duration)->
+    showOverlay(event.image, dayDuration)
+    setTimeout Place.animateEvent.bind(null, to, events), dayDuration
+
+  animateLocation: (toDistance, duration)->
     ship = document.getElementById('Ship')
     path = document.getElementById(g.location)
 
-    $({distance: Place.distanceAlongPath(g.location, g.distance)})
+    $({distance: g.distance})
     .animate({distance: toDistance}, {
-      duration: duration,
+      duration: duration
+      easing: 'linear'
       step: (now)->
         pos = path.getPointAtLength(now)
-        ship.x = pos.x
-        ship.y = pos.y
+        ship.attributes.x.value = pos.x
+        ship.attributes.y.value = pos.y
     })
 }
+
+showOverlay = (image, duration)->
+  overlay = $("""<div class='overlay'><img src='#{image}'></div>""").css('opacity', 0)
+  $('#container').append(overlay)
+  overlay.animate({opacity: 1}, duration / 2)
+    .delay(duration / 2)
+    .animate {opacity: 0}, duration / 2, ->
+      overlay.remove()

@@ -4,12 +4,11 @@ Person.alias.K = 'Kat'
 Person.Kat =
   name: 'Kat'
   images:
-    normal: p + 'Excited'
-    embarrassed: p + 'Embarrassed'
+    normal: p + 'Normal'
+    angry: p + 'Angry'
+    happy: p + 'Happy'
     sad: p + 'Sad'
-    uncertain: p + 'Uncertain'
-    unimpressed: p + 'Unimpressed'
-    upset: p + 'Upset'
+    serious: p + 'Serious'
 
   skills:
     Bright:

@@ -4,7 +4,7 @@ Person.Guildmaster =
   name: 'Guildmaster Janos'
   images:
     normal: p + 'Normal'
-    serious: p + 'serious'
-    skeptical: p + 'skeptical'
+    serious: p + 'Serious'
+    skeptical: p + 'Skeptical'
     smiling: p + 'Smiling'
     thinking: p + 'Thinking'

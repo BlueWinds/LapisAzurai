@@ -1,15 +1,17 @@
+p = 'game/content/travel/'
+
 Place.travelImages.Sail =
   normal: [
-    'Cabin Day.jpg'
-    'Cabin Night.jpg'
-    'Deck Day.jpg'
-    'Deck Night.jpg'
-    'Deck Fog.jpg'
-    'Sailing Day.jpg'
-    'Sailing Night.jpg'
+    p + 'CabinDay.jpg'
+    p + 'CabinNight.jpg'
+    p + 'DeckDay.jpg'
+    p + 'DeckNight.jpg'
+    p + 'DeckFog.jpg'
+    p + 'SailingDay.jpg'
+    p + 'SailingNight.jpg'
   ]
   delay: [
-    'Cabin Storm.jpg',
-    'Deck Storm.jpg',
-    'Sailing Storm.jpg'
+    p + 'CabinStorm.jpg',
+    p + 'DeckStorm.jpg',
+    p + 'SailingStorm.jpg'
   ]

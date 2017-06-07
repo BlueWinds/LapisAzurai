@@ -15,9 +15,9 @@ samplePlaceData =
   ]
 
 window.Place = {
-  delayChance: -> 0.1
+  delayChance: -> 0.06
 
-  delayDuration: -> Math.random() * 5 + 1
+  delayDuration: -> Math.random() * 3 + 1
 
   decayReputation: (rep)->
     return Math.floor(rep * 0.9)
@@ -25,8 +25,7 @@ window.Place = {
   passDay: ->
     for place, reputation of g.reputation
       g.reputation[place] = Place.decayReputation(reputation)
-    if g.distance
-      sailDay()
+    return
 
   location: (place, distance)->
     # A path
@@ -40,7 +39,7 @@ window.Place = {
 
   distanceAlongPath: (place, distance)->
     element = document.getElementById(place)
-    return if distance > 0 then distance else element.getTotalLength() + distance
+    return if distance >= 0 then distance else element.getTotalLength() + distance
 
   travelDays: (origin, destination)-> # Returns days between two locations, including indirect routes
     sumLength = (sum, e)->
@@ -84,16 +83,16 @@ window.Place = {
           event = {image: Math.choice(Place.travelImages(path, 'delay'))}
           events.push event
         lastMoveStart = null
+
+      event = {image: Math.choice(Place.travelImages(path, 'normal'))}
+      if lastMoveStart
+        lastMoveStart.travelDays += 1
+        lastMoveStart.startTravel += pxPerDay
       else
-        event = {image: Math.choice(Place.travelImages(path, 'normal'))}
-        if lastMoveStart
-          lastMoveStart.travelDays += 1
-          lastMoveStart.startTravel += pxPerDay
-        else
-          lastMoveStart = event
-          event.travelDays = 1
-          event.startTravel = pxPerDay
-        events.push event
+        lastMoveStart = event
+        event.travelDays = 1
+        event.startTravel = pxPerDay
+      events.push event
     events[0].location = path.id
     return events
 }

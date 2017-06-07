@@ -57,8 +57,9 @@ window.Cargo =
     Game.passDay()
 
   deliver: (index)->
-    g.cargo = g.cargo.splice(index, 1)
-    if Cargo.acceptTimeRemaining() >= 0
+    cargo = g.cargo[index]
+    g.cargo.splice(index, 1)
+    if Cargo.acceptTimeRemaining(cargo) >= 0
       g.reputation[cargo.from] += Cargo.fromReputation()
       g.reputation[cargo.to] += Cargo.toReputation()
     Game.passDay()

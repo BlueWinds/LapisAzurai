@@ -13,10 +13,10 @@ p.MtJuliaArrive =
 
   Though the crew was still perhaps a little small should they encounter rough weather, they'd done admirably so far. They'd also been lucky, sailing in clear weather and steady wind - an auspicious beginning for a first voyage. Hopefully the trip home would be as smooth.
 
-  || bg=travel/DeckDay left=Natalie/happy
+  || bg=travel/DeckDay left=Natalie/excited
   -- `N Tell James what you were telling me last night,` Natalie waved over one of the sailors and her Quartermaster. He saluted the officers, bringing a smile to Natalie's face – she loved that feeling – and began again.
 
-  || right=SailorMale/normal
+  || right=SailorM/normal
   ` Mount Julia's not much more than a couple of warehouses, some wharves and an inn. I last sailed here about two years ago, and I don't imagine much has changed. The area's too rugged to support a real town, and there are... things... in the forest, but the natural harbor is such a good layover on the way out from Vailia that only idiots don't take the chance to top off supplies and rest a night on shore. Begging your pardon, ma'am,` he repeated the salute.
 
   || left=N/normal
