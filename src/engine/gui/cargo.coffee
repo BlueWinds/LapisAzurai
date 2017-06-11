@@ -17,7 +17,7 @@ $.extend Cargo, {
 
   draw: (cargo)->
     i = g.availableCargo.indexOf(cargo)
-    onclick = if g.location is cargo.from and Cargo.maxCargo() > g.cargo.length
+    onclick = if g.location is cargo.from and Cargo.maxCargo() > g.cargo.length and Story.canSail()
       'onclick="Cargo.clickAccept(' + i + ');"'
     else ''
 
@@ -28,7 +28,7 @@ $.extend Cargo, {
 
   drawDelivery: (cargo)->
     i = g.cargo.indexOf(cargo)
-    onclick = if g.location is cargo.to
+    onclick = if g.location is cargo.to and Story.canSail()
       'onclick="Cargo.clickDeliver(' + i + ');"'
     else ''
 

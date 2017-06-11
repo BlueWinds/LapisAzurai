@@ -99,7 +99,7 @@ s.JamesUpsetMagic =
 
     `N You're kidding me. What ever's got you so knotted up you look me in the eyes. Spit it out.`
 
-  || J/upset
+  || J/Upset
     `J I don't want to talk about it. Let's just finish this.` James leaned over to check her numbers – they matched, arrived at independently.
 
     Natalie stole the pen out of his hand before he could use it to mark his paper and set it on the desk out of easy reach. `N Let's not. Let's talk.`
@@ -170,7 +170,7 @@ s.TrainCombatNat =
   experience:
     Natalie: 3
   text: -> """
-  || places/VailiaStorm
+  || places/VailiaDay
     `N Hey! I heard you teach people weapons?` Natalie squatted down in front of the man drinking from a clay pitcher. He was rough-faced, at least six feet tall, and wore a broadsword strapped to his back. There was no denying that this was Torril, one of the more famous mercenaries in Vailia, now retired. Sitting and drinking in the rain, for some reason, rather than under the awning only a few steps behind him.
 
     ` I do. I take it you're interested?`
@@ -187,7 +187,7 @@ s.TrainCombatJames =
   experience:
     James: 3
   text: -> """
-  || places/VailiaStorm
+  || places/VailiaDay
     `J I need some help.` James presented himself to Torril, a retired mercenary captain.
 
     ` What sort of help?`
@@ -208,7 +208,7 @@ s.TrainCombatKat =
   experience:
     Kat: 3
   text: -> """
-  || places/VailiaStorm
+  || places/VailiaDay
     Kat slumped her way into the courtyard, managing to look as though she was being dragged even though no one was anywhere near her. `K I'm supposed to learn how to fight,` she addressed the retired mercenary.
 
     ` Ah, you must be Kat. Natalie told me about you. I hear you're quick like a demon and lazy like one too.`
@@ -229,7 +229,7 @@ s.TrainCombatKat =
   experience:
     Asara: 3
   text: -> """
-  || places/VailiaStorm
+  || places/VailiaDay
     `K I believe you can help me,` Asara spoke to the mercenary captain without preamble or introduction.
 
   He stared at her, then slowly shook his head. ` If you are who you look like, then I think you could teach me, miss, rather than the other way around. Natalie didn't mention anyone like you on her crew.`
@@ -259,7 +259,7 @@ s.IronSandsRutter =
 
     `Guildmaster She sent you here so that I could meet you. Do you know why she'd do that?`
 
-  || Kat/Uncertain
+  || K/Serious
     Kat shook her head.
 
     `Guildmaster It's because she likes you. Natalie's like a daughter to me, and if she likes you, then it's my pleasure to make your acquaintance.`
@@ -282,7 +282,7 @@ s.IronSandsRutter =
 
     `Guildmaster Delicious.`
 
-  || Kat/Excited
+  || K/Happy
     Kat grinned and offered her hand. `K Ok, you're not so bad.`
 
     Rather than shake, Janos put a slim leather-bound folio in her hand. `Guildmaster I see that sticky-paper on your hand, miss. You'll have to clean that prank off the rutter before you give it to Natalie. Please thank her for her good work in Kantis.`
@@ -306,7 +306,7 @@ s.IronSandsRutter2 =
 
     `N #{g.day - g.events.IronSandsRutter} days. It says deliver immediately, and you hang onto it for #{g.day - g.events.IronSandsRutter} days.`
 
-  || K/Uncertain
+  || K/Serious
     `K How was I supposed to know that?` Kat crossed her arms defensively over her chest.
 
     `N It says that right here on the cover!`
@@ -323,8 +323,7 @@ s.IronSandsRutter2 =
 
     Kat nodded guiltily. `K Yes ma'am. I'll do better next time.`
 
-  || N/Uncertain
-    --> She leaned over and kissed Natalie on the cheek. `K thanks for sending me to meet your dad. Even if he does eat babies.`
+    She leaned over and kissed Natalie on the cheek. `K thanks for sending me to meet your dad. Even if he does eat babies.`
 
     `N He's neither my dad nor does he... hey, come back here!`
   """
@@ -542,7 +541,7 @@ s.MeghanSuitors =
 
     `J I thought I had to stay and...`
 
-  || N/Shouting
+  || N/Angry
     She shushed him with a finger to his lips. `N I'm about to make a scene, and I don't want you caught up in any backlash.`
 
     `J That's... have I mentioned recently how much I admire you, Nat? Anything I can help with?`

@@ -23,7 +23,11 @@ module.exports = [
   'content/people/Kat/_.coffee'
   'content/people/Guildmaster/_.coffee'
   'content/people/Sailors/_.coffee'
+  'content/people/Guard/_.coffee'
   'content/people/Meghan/_.coffee'
+  'content/people/Elakim/_.coffee'
+  'content/people/Cara/_.coffee'
+  'content/people/Ameliss/_.coffee'
 
   'content/ch1/Vailia.coffee'
   'content/ch1/MtJulia.coffee'

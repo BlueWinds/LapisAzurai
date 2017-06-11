@@ -138,7 +138,6 @@ addSectionImage = (element, line)->
   if img
     # It might be an aliased person's name
     name = Person.alias[img[1]] or img[1]
-    console.log img[1], name, Person[name]
     src = if Person[name]
       "game/content/people/#{name}/#{img[2]}.png"
     else

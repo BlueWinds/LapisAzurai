@@ -42,19 +42,15 @@
 <script src="../dist/game/lib.js"></script>
 <script src="../dist/game/compiled.js"></script>
 <script>
+  window.g = {events: {}, people: {}}
+
   function drawEvents(chapter) {
     var i = $('#index').empty()
     var w = $('#warnings').empty()
     var s = $('#stories').empty()
-    var places = {};
-    Object.keys(Place).forEach(function(place) {
-      if (!Place[place].stories || !Place[place].stories[chapter]) { return; }
-
-      Place[place].stories[chapter].forEach(function(story) { places[story] = place; });
-    });
 
     for (let key in Story) {
-      if (!Story[key].text || !places[key]) { continue; }
+      if (!Story[key].text) { continue; }
 
       sections = Story.render(key);
       sections.each(function(i) {

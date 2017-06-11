@@ -67,7 +67,7 @@ s.Intro =
 
     Natalie poked James in the forehead, causing him to wince. `N I knew it, you just woke up too.`
 
-  || J/embarrassed
+  || J/Embarrassed
     He shook his head, mop of hair unruly and uncombed, trying to deny it, but she quirked an eyebrow, and he finally relented. `J Hey, it was our very first night on board your new ship. A little drinking seemed in order.` He dropped his eyes guiltily.
 
     `N Never said it wasn't. Now, come on, I want breakfast before we meet with the Guildmaster.`
@@ -99,7 +99,7 @@ s.Ch1 =
 
     Guildmaster Janos looked up from his reading and smiled at them. Though he had assistants to handle all the papers necessary, he still preferred to touch at least some of that work himself. Understanding the details and not merely the overview of the Guild's operations gave him important advantages, he'd once told her. Natalie briefly saw a column of figures – expenses, deposits – before he leaned forward, covering it with one arm.
 
-  || Guildmaster/smiling
+  || Guildmaster/Smiling
     `Guildmaster Please, I'm not going to bite. James Thadel, is it? I understand you're to be Natalie's first mate?`
 
     `J Sorry sir, yes sir.` James stood up straighter, self consciously moving out from his position half hidden behind her. `J Quartermaster,` he corrected.
@@ -134,7 +134,7 @@ s.ReadyToGo =
     He started guiltily and stepped into her cabin, closing the door behind him with a foot. He remained standing. Other than the chair she occupied, the only place to sit would be on her bed, and he wasn't the sort to be comfortable with that. The space was cramped, but a private room was still more than most people aboard a ship this size would get, even the quartermaster. He'd have to share a room with the first-mate, once they had one.
 
 
-  || J/upset
+  || J/Upset
     `J Nat...` he trailed off, then started again. `J I'm not sure we're ready yet.`
 
     She waited for him to go on. He didn't, just fidgeted and leaned against the door, resisting the swell and roll of the deck beneath them. Timber creaked, adjusting to new stresses. `N What aren't we ready for?`
@@ -145,7 +145,7 @@ s.ReadyToGo =
 
     Natalie stood and moved over to the bed, patting the chair and indicating that he should take the seat. `N The Azurai is a good ship. She'll see us through. The shipwrights knew what they were doing when they built her. She may be small, but she's fast and sturdy.` She patted his knee, attempting to reassure him of something she wasn't entirely sure of herself.
 
-  || J/embarrassed
+  || J/Embarrassed
     `J What are we even doing here, Natalie? There's plenty of opportunity at home, without risking your life.`
 
     `N You have a future in Vailia, and I never asked you to give it up. It's not my future. I don't have anyone to hand me a house and a trade, James. Do you know what I'd be doing, right now, if I weren't a captain?`
@@ -177,7 +177,7 @@ s.FirstStorm =
 
     `J A storm is rolling in! I've got the crew pulling up the sails, but it's eating the horizon like you wouldn't believe...` He stepped out of the way as she opened the door in his face.
 
-  || N/shouting
+  || N/Angry
     In one direction lay a peaceful night – dark sky and twinkling stars, ocean quiet but growing rougher. In the other... she groaned.
 
     `N Strike the sails, lock down all the booms, get everyone else up,` she left the door swinging open and scrambled for something warmer to wear. Waxed cap, waxed jacket, stiff boots – everything she'd need for working outdoors in the worst weather the ocean could throw at them.
@@ -277,7 +277,7 @@ s.FirstStormSick =
 
     After only a minute of listening to Natalie breathe, the priest shook his head as though to clear it and stood again. ` I'm afraid there is nothing I can do. Rest is the only solution, rest and time.`
 
-  || J/upset
+  || J/Upset
     `J Solution to what?` James pursed his lips, trying to dispel the previous thought. That it had been unfair of him to consider such a thing.
 
     The priest tilted his head, as though confused by the question. ` The shock.`
@@ -340,7 +340,7 @@ s.AsaraWorriesJames =
     `N Everything about what?"
     `J Asara.`
 
-  || N/upset
+  || N/Upset
     Natalie stopped, turned to him, waited. He didn't respond to her disapproving stare, so finally, `N We can't just abandon her.`
     `J You should leave her with a temple, someone who can take care of her properly. She's dangerous and hurting and more than a little broken. What if it's Kat who startles her next time? Or you?` James rolled his shoulder experimentally, wincing. He'd startled her below decks, coming around a corner when she wasn't expecting it. She'd nearly dislocated his shoulder. Then, mortified, she'd run off and hid in Natalie's room again, refusing to come out two fuul days.
     `N She wouldn't do that!`
