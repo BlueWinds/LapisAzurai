@@ -1,6 +1,6 @@
-p = {}
+s = {}
 
-p.TomenoiArrive =
+s.TomenoiArrive =
   label: 'Arrival'
   blocking: true
   history:
@@ -34,7 +34,7 @@ p.TomenoiArrive =
     Natalie dug in her pocket. Better than anchoring in the bay and wasting time trying to move cargo by longboat.
   """
 
-p.AsaraJoinsCrew =
+s.AsaraJoinsCrew =
   label: 'Asara Joins'
   history:
     TomenoiArrive: 0
@@ -62,7 +62,7 @@ p.AsaraJoinsCrew =
     Asara shook her head. `A I am not yet ready. I shall tell you when I am.`
   """
 
-p.StrandedShip =
+s.StrandedShip =
   label: 'Stranded Ship'
   history:
     TomenoiArrive: 0
@@ -95,7 +95,7 @@ p.StrandedShip =
     Natalie reassured him that they'd share what they could, and shuddered. Money meant nothing compared to her pleasure that she could help one more crew return safely to port. She was captain of one of the finest ships in the world, and had her magic to protect herself - even so, the open ocean frightened her. Kantians were a brave people indeed.
   """
 
-p.KantisRegion =
+s.KantisRegion =
   label: 'Route to Kantis'
   history:
     AsaraJoinsCrew: 0
@@ -116,7 +116,7 @@ p.KantisRegion =
     `J I'm sure you'll figure something out.` James pressed the bag of dates into her hand, and leaned back against the wall himself. `J Don't worry about it so much.`
   """
 
-p.KantisRegion2 =
+s.KantisRegion2 =
   label: 'Route to Kantis'
   history:
     KantisRegion: 0
@@ -149,7 +149,7 @@ p.KantisRegion2 =
     ` Thank you, priestess. You are kind.` He returned the correct response. He stood, bowed, and slipped back into the crowd. Asara's eyes smile faded. A taste of home like that should have been comforting, but all she could taste was ash. She fled for the docks and her room aboard the Lapis before her stoic mask could dissolve entirely.
   """
 
-p.KantisRegion3 =
+s.KantisRegion3 =
   label: 'Route to Kantis'
   blocking: true
   history:
@@ -171,7 +171,7 @@ p.KantisRegion3 =
     Asara shook her head again. Too much sharing. Maybe later, once she'd seen that Natalie wouldn't try to hurt her with this information. Maybe.
   """
 
-p.TomenoiHistory =
+s.TomenoiHistory =
   label: 'History'
   history:
     TomenoiArrive: 0
@@ -194,6 +194,6 @@ p.TomenoiHistory =
     Kat pulled her hand back, suddenly unwilling to touch the stone any further. Too much history.
   """
 
-Place.Tomenoi.pages.Ch2 = Object.keys(p)
-for key, value of p
-  Page[key] = value
+Place.Tomenoi.stories.Ch2 = Object.keys(s)
+for key, value of s
+  Story[key] = value

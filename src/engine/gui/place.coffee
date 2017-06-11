@@ -1,6 +1,5 @@
 $.extend Place, {
   drawMap: (interactive = true)->
-    $('#overlay').hide()
     $('#PathLayer path').hide()
     $('#MapMask').children('circle, ellipse').attr('fill', 'none')
     $('#LabelLayer g').hide()
@@ -24,14 +23,14 @@ $.extend Place, {
       travel = ''
     else
       distanceDesc = "#{Place.travelDays(g.location, place)} days"
-      disabled = if Page.canSail() then '' else 'disabled'
+      disabled = if Story.canSail() then '' else 'disabled'
       travel = """<div class="travel #{disabled}" #{if disabled then '' else 'onclick="Place.animateTravel(\'' + place + '\');"'}>
         ⛵⇢
       </div>"""
 
     deliverable = g.cargo.filter (job)-> job.to is place
     available = g.availableCargo.filter (job)-> job.from is place
-    visiblePages = Page.visiblePages(Place[place].pages[g.chapter])
+    visibleStories = Story.visibleStories(Place[place].stories[g.chapter])
 
     return """<div place="#{place}" class="place has-full" style="left: #{location.x}px; top: #{location.y}px;">
       #{travel}
@@ -40,7 +39,7 @@ $.extend Place, {
       <table>
         #{Game.drawList deliverable, Cargo.drawDelivery}
         #{Game.drawList available, Cargo.draw}
-        #{Game.drawList visiblePages, Page.draw.bind(null, place)}
+        #{Game.drawList visibleStories, Story.draw.bind(null, place)}
       </table>
     </div>"""
 
@@ -65,7 +64,7 @@ $.extend Place, {
       Place.animateLocation(destination, event.travelDays * dayDuration)
       g.distance = destination
 
-    showOverlay(event.image, dayDuration)
+    Game.showOverlay(event.image, dayDuration, 'travelOverlay')
     setTimeout Place.animateEvent.bind(null, to, events), dayDuration
 
   animateLocation: (toDistance, duration)->
@@ -82,11 +81,3 @@ $.extend Place, {
         ship.attributes.y.value = pos.y
     })
 }
-
-showOverlay = (image, duration)->
-  overlay = $("""<div class='overlay'><img src='#{image}'></div>""").css('opacity', 0)
-  $('#container').append(overlay)
-  overlay.animate({opacity: 1}, duration / 2)
-    .delay(duration / 2)
-    .animate {opacity: 0}, duration / 2, ->
-      overlay.remove()

@@ -11,32 +11,32 @@ sampleData =
     James: 5
   text: -> """|| ...etc..."""
 
-window.Page = {
-  reputationNeeded: (page)-> if Page[page].blocking then 0 else 15
+window.Story = {
+  reputationNeeded: (story)-> if Story[story].blocking then 0 else 15
 
-  skillNeeded: (page)->
-    for skill, person of Page[page].skills
+  skillNeeded: (story)->
+    for skill, person of Story[story].skills
       unless g.people[person].skills[skill] then return [person, skill]
     return []
 
-  visiblePages: (pages)->
-    return pages.filter(Page.matchesHistory.bind(null, 0, 0))
+  visibleStories: (stories)->
+    return stories.filter(Story.matchesHistory.bind(null, 0, 0))
 
   canSail: ->
-    not Page.visiblePages(Place[g.location].pages[g.chapter]).some (p)-> Page[p].blocking
+    not Story.visibleStories(Place[g.location].stories[g.chapter]).some (p)-> Story[p].blocking
 
-  matchesHistory: (foresight, extraTime, page)->
-    if g.history[page]? then return false
-    for key, value of Page[page].history
+  matchesHistory: (foresight, extraTime, story)->
+    if g.history[story]? then return false
+    for key, value of Story[story].history
       unless g.history[key]? then return false
       if value > 0 and g.history[key] > g.day - (value - foresight) then return false
       if value < 0 and g.history[key] < g.day + (value - extraTime) then return false
     return true
 
-  apply: (place, page)->
-    for character, exp in Page[page].experience
+  apply: (place, story)->
+    for character, exp in Story[story].experience
       g.people[character].experience += exp
-    g.reputation[place] -= Page.reputationNeeded(page)
-    g.history[page] = g.day
+    g.reputation[place] -= Story.reputationNeeded(story)
+    g.history[story] = g.day
     Game.passDay()
 }

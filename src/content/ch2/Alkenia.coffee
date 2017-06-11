@@ -1,5 +1,5 @@
-p = {}
-p.KatShowsSamsGrave =
+s = {}
+s.KatShowsSamsGrave =
   history:
     JamesUpsetMagic: 0
   experience:
@@ -32,7 +32,7 @@ p.KatShowsSamsGrave =
   `J I understand.` He put a hand reassuringly on her shoulder, the muscles tense beneath his touch. `J Let's go back to the market. Thank you for showing me this.`
   """
 
-p.AlkeniaWeaponsRunning =
+s.AlkeniaWeaponsRunning =
   label: 'Forestry'
   history:
     Ch2: 0
@@ -52,7 +52,7 @@ p.AlkeniaWeaponsRunning =
     ` Possible. And more generous than I was expecting, to be honest. Take a seat, let's talk.` He dropped the log with a tremendous thud, and gestured her to the impromptu bench. She sat.
   """
 
-p.AlkeniaWeaponsRunning2 =
+s.AlkeniaWeaponsRunning2 =
   label: 'Weapons Running'
   history:
     AlkeniaWeaponsRunning: 0
@@ -72,7 +72,7 @@ p.AlkeniaWeaponsRunning2 =
     James tilted his head with a little hmph sound. `J I didn't think you'd actually listen. Huh. That can't be the first time you've taken my advice...` His surprise turned into a pleased smile, and he patted her hand where it still lay on his arm. `J No, I think it <i>is</i> a first. Thank you.`
   """
 
-p.AlkeniaRaid =
+s.AlkeniaRaid =
   label: 'Nonkenian Raid'
   history:
     NonkeniaHunters: 0
@@ -102,7 +102,7 @@ p.AlkeniaRaid =
   """
 
 
-p.DeliciousFood =
+s.DeliciousFood =
   label: 'Delicious Food'
   history:
     AsaraJoinsCrew: 0
@@ -126,7 +126,7 @@ p.DeliciousFood =
     `K You're the best, thanks. Hey, have you ever had a corn dog before?`
   """
 
-p.KatBringsToys =
+s.KatBringsToys =
   label: 'Vailian Toys'
   history:
     KatShowsSamsGrave: 0
@@ -147,6 +147,6 @@ p.KatBringsToys =
     She'd planned to spend the rest of the day with them, but ultimately, it was too uncomfortable. They devoured her stories and listened raptly to her tales of far away ports, but ultimately it was too uncomfortable for Kat to stay longer. This was no longer her world. By sheer chance, she no longer belonged - and by sheer chance her friends remained stuck, hungry and cold. She fled back to the Lapis, and back to her new life.
   """
 
-Place.Alkenia.pages.Ch2 = Object.keys(p)
-for key, value of p
-  Page[key] = value
+Place.Alkenia.stories.Ch2 = Object.keys(s)
+for key, value of s
+  Story[key] = value

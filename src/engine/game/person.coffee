@@ -3,7 +3,6 @@ samplePerson =
   experience: 100
   skills:
     EarToTheGround: true
-  color: ['tanned', 'none', 'green', 'ash', 'none', 'none']
 
 sampleData =
   name: 'Natalie'
@@ -17,22 +16,7 @@ sampleData =
       requiresOr: ['EarToTheGround']
       requiresAnd: ['EarToTheGround']
 
-  images:
-    scale: 0.45
-    normal: [
-      "Skin"
-      "Neutral"
-      "NeutralEyes"
-    ]
   quoteColor: '#8CDAFF'
-  colors: [
-    { # Skin
-      light: false
-      ivory: [16, 67, 41]
-    }
-    {none: false} # Expression
-    {none: false} # Eyes
-  ]
 
 window.Person = {
   alias: {}

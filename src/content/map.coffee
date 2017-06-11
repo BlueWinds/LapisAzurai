@@ -9,7 +9,7 @@ Place.Vailia =
     Colinth: 'Tomonoi'
     Kantis: 'Tomenoi'
     Amandais: 'Tomenoi'
-  pages: {}
+  stories: {}
   goods:
     MtJulia: ['Apples', 'Beer', 'Butter', 'Cast iron cookware', 'Chickens', 'Composite Bows', 'Fish hooks', 'Garlic', 'Hatchets and Saws', 'Kitchen Utensils', 'Nails', 'Pickled fish', 'Pickles', 'Rope', 'Salt', 'Soap', 'Spears']
     Alkenia: ['Apple Vinegar', 'Beer', 'Brass fittings', 'Carpet', 'Cast Iron Cookware', 'Chains', 'Clockwork Machinery', 'Cloves', 'Composite Bows', 'Fine Furniture', 'Fine Wine', 'Fish hooks', 'Fruit Jam', 'Furs', 'Glass Jars', 'Hatchets and Saws', 'Hats', 'Helmets', 'Honey', 'Indigo', 'Ink', 'Linen', 'Matches', 'Mustard', 'Nails and tacks', 'Olive Oil', 'Paper', 'Rope', 'Rough Clothing', 'Soap', 'Steel Wire', 'Swords']
@@ -31,7 +31,7 @@ Place.MtJulia =
     Colinth: 'Tomenoi'
     Kantis: 'Tomenoi'
     Amandais: 'Tomenoi'
-  pages: {}
+  stories: {}
   goods:
     Vailia: ['Lumber', 'Maiden Tea', 'Masts', 'Smoked Fish']
     Tomenoi: ['Lumber']
@@ -47,7 +47,7 @@ Place.Alkenia =
     Colinth: 'Vailia'
     Kantis: 'Vailia'
     Amandais: 'Vailia'
-  pages: {}
+  stories: {}
   goods:
     Vailia: ['Canvas', 'Charcoal', 'Cotton', 'Flour', 'Garlic', 'Lumber', 'Maiden Tea', 'Mint', 'Smoked Fish', 'Wax', 'Wheat', 'Wool']
     MtJulia: ['Canvas', 'Flour', 'Oars', 'Onions']
@@ -68,7 +68,7 @@ Place.Nonkenia =
     Colinth: 'Vailia'
     Kantis: 'Vailia'
     Amandais: 'Vailia'
-  pages: {}
+  stories: {}
   goods:
     Vailia: ['Alchemical Reagents', 'Apples', 'Bacon', 'Butter', 'Chamomile', 'Cheese', 'Feathers', 'Fruit Jam', 'Furs', 'Honey', 'Leather', 'Live Cattle', 'Maiden Tea', 'Mint', 'Mustard', 'Rope', 'Rosehips', 'Sage', 'Smoked game meat', 'Walnuts', 'Woad', 'Wormwood']
     MtJulia: ['Apples', 'Bacon', 'Butter', 'Cheese', 'Fruit Jam', 'Honey', 'Smoked game meat']
@@ -85,7 +85,7 @@ Place.IronSands =
     Colinth: 'Vailia'
     Kantis: 'Vailia'
     Amandais: 'Vailia'
-  pages: {}
+  stories: {}
   goods:
     Vailia: ['Decorative Stone', 'Iron', 'Lead', 'Mercury', 'Tar', 'Tin']
     MtJulia: ['Cast iron cookware', 'Tar']
@@ -103,7 +103,7 @@ Place.Tomenoi =
     Colinth: 1
     Kantis: 1
     Amandais: 1
-  pages: {}
+  stories: {}
   goods:
     Vailia: ['Alchemical Reagents', 'Coffee', 'Copper', 'Cork', 'Cumin', 'Dates', 'Decorative Stone', 'Expensive Pottery', 'Flour', 'Indigo', 'Iron', 'Lemons', 'Olive Oil', 'Olives', 'Oranges', 'Peanuts', 'Red Pepper', 'Tar', 'Tea leaves', 'Veined marble']
     MtJulia: ['Coffee', 'Onions', 'Oranges']
@@ -122,7 +122,7 @@ Place.Colinth =
     Tomenoi: -1
     Kantis: 1
     Amandais: 1
-  pages: {}
+  stories: {}
   goods:
     Vailia: ['Apricots', 'Chalk', 'Iron', 'Lead', 'Lemons', 'Limestone', 'Mulberry', 'Oranges']
     Tomenoi: ['Apricots', 'Decorative Stone', 'Iron', 'Lemons', 'Onions', 'Oranges']
@@ -140,7 +140,7 @@ Place.Kantis =
     Tomenoi: -1
     Colinth: -1
     Amandais: 1
-  pages: {}
+  stories: {}
   goods:
     Vailia: ['Carpet', 'Dates', 'Fashionable Clothing', 'Fine Furniture', 'Flour', 'Honey', 'Olive Oil', 'Olives', 'Peanuts', 'Silver', 'Stone Sculpture', 'Veined marble']
     Tomenoi: ['Canvas', 'Chickens', 'Dates', 'Flour', 'Garlic', 'Hatchets and Saws', 'Helmets', 'Olive Oil', 'Olives', 'Peanuts', 'Rope', 'Veined marble', 'Wheat']
@@ -158,7 +158,7 @@ Place.Amandais =
     Tomenoi: -1
     Colinth: -1
     Kantis: -1
-  pages: {}
+  stories: {}
   goods:
     Vailia: ['Alchemical Reagents', 'Allspice', 'Almonds', 'Amber', 'Bronze Sculpture', 'Camphor', 'Carpet', 'Cashews', 'Cloves', 'Coffee', 'Coral', 'Cork', 'Cumin', 'Decorative Stone', 'Eucalyptus', 'Feathers', 'Figs', 'Frankincense', 'Gold', 'Gold jewelry', 'Indigo', 'Ivory', 'Jasmine', 'Lemons', 'Liquorice', 'Myrrh', 'Nutmeg', 'Opal', 'Pearls', 'Pepper', 'Rubber', 'Ruby', 'Safflour', 'Saffron', 'Sandalweed', 'Saphires', 'Stone Sculpture', 'Sulphur', 'Tea leaves', 'Topaz', 'Tumeric', 'Vanilla', 'Wood Carvings']
     Tomenoi: ['Coffee', 'Cork', 'Cumin', 'Decorative Stone', 'Indigo', 'Lemons', 'Papyrus', 'Pepper', 'Tea leaves']

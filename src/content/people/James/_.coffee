@@ -1,15 +1,6 @@
-p = 'people/James/'
-
 Person.alias.J = 'James'
 Person.James =
   name: 'James'
-  images:
-    normal: p + 'Normal'
-    excited: p + 'Excited'
-    embarrassed: p + 'Embarrassed'
-    upset: p + 'Upset'
-    shouting: p + 'Shouting'
-
   skills:
     Reliable:
       description: '+1 day to deliver cargo'

@@ -15,7 +15,7 @@
   function drawEvents(chapter) {
     var chPlaces = {};
     for (var p in Place) {
-      if (Place[p].pages && Place[p].pages[chapter]) { chPlaces[p] = true; }
+      if (Place[p].stories && Place[p].stories[chapter]) { chPlaces[p] = true; }
     }
 
     var routes = {};

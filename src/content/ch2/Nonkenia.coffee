@@ -1,6 +1,6 @@
-p = {}
+s = {}
 
-p.NonkeniaArrive =
+s.NonkeniaArrive =
   label: 'Arrival'
   history:
     NonkeniaRoute: 0
@@ -31,7 +31,7 @@ p.NonkeniaArrive =
     -- ` There you go, girl. The forest isn't dangerous anymore. For you. As long as you take the left trail, then left fork, then right. Got that? Left, left, right.` Another dry chuckle, a sound Natalie was beginning to thoroughly loathe. ` Anyone else who feels like walking to the city, come and take your turn. You can wipe it off once you're between buildings, but make sure you get anointed again before you try to return to the ship. It'd be a shame if some of you didn't make it back.`
   """
 
-p.NonkeniaDiplomatDelivery =
+s.NonkeniaDiplomatDelivery =
   label: 'Deliver the "Diplomat"'
   history:
     NonkeniaDiplomatSailing: 0
@@ -59,7 +59,7 @@ p.NonkeniaDiplomatDelivery =
     Natalie rolled her eyes and sighed. ` Can't take a joke, can you? Oh well. Come on boys, lower the boat and we'll take Ms. Not-going-for-a-swim ashore along with her luggage.`
   """
 
-p.AsaraTalkEyes =
+s.AsaraTalkEyes =
   label: 'Talk with Asara - Silver Eyes'
   history:
     AsarasMagic: 0
@@ -80,7 +80,7 @@ p.AsaraTalkEyes =
     `A It is dry, and far away.` Apparently there were some subjects she didn't feel like talking about yet.
   """
 
-p.AsaraTalkSisters =
+s.AsaraTalkSisters =
   label: 'Talk with Asara - Sisters'
   history:
     AsaraTalkEyes: 0
@@ -101,7 +101,7 @@ p.AsaraTalkSisters =
     Asara shook her head. Many of their conversations recently seemed to be going fine, then suddenly, a wall. Natalie didn't understand it, but pressing Asara only resulted in the small woman shying away, withdrawing into herself, or bursting out into tears. She sighed and let the subject drop.
   """
 
-p.JamesConfusion =
+s.JamesConfusion =
   label: 'Tension'
   history:
     JamesParents: 0
@@ -122,7 +122,7 @@ p.JamesConfusion =
     `N Well, fine, just so you know the option's open,` she poked his shoulder with one finger, then pressed a gold coin in his hand. `N Visit a brothel next time we make landfall. Might at least help ease the tension, if you're not going to fuck the girl you really want.`
   """
 
-p.NonkeniaHunters =
+s.NonkeniaHunters =
   label: 'Hunters'
   history:
     NonkeniaArrive: 0
@@ -143,6 +143,6 @@ p.NonkeniaHunters =
     ` You saw them before they came back, so now you have to pray.` The boy tugged at her pants again impatiently while his friends ran ahead. She followed.
   """
 
-Place.Nonkenia.pages.Ch2 = Object.keys(p)
-for key, value of p
-  Page[key] = value
+Place.Nonkenia.stories.Ch2 = Object.keys(s)
+for key, value of s
+  Story[key] = value

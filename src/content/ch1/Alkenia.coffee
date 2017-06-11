@@ -1,5 +1,5 @@
-p = {}
-p.AlkeniaArrive =
+s = {}
+s.AlkeniaArrive =
   label: 'Arrival'
   blocking: true
   history:
@@ -25,7 +25,7 @@ p.AlkeniaArrive =
   `N He's not... ah, yes, thank you.` She decided it wasn't worth arguing over.
   """
 
-p.MeetKat =
+s.MeetKat =
   history:
     AlkeniaArrive: 0
   experience:
@@ -54,7 +54,7 @@ p.MeetKat =
   Natalie stopped, shook her head in dismay, assessed the situation. It wasn't much money, all told, but still... She shook her head. She was getting careless, to let someone lift off her. `N I'm afraid that was all my pocket money. Perhaps another time.`
   """
 
-p.MeetKat2 =
+s.MeetKat2 =
   history:
     MeetKat: 0
   experience:
@@ -109,7 +109,7 @@ p.MeetKat2 =
   Natalie nodded and looked away. Don't feel too bad for her indeed.
   """
 
-p.KatTrial =
+s.KatTrial =
   history:
     MeetKat2: 0
   experience:
@@ -154,7 +154,7 @@ p.KatTrial =
   ` There she is! Stop her!` One of the pursuing guards finally made their way close enough to catch sight of Kat ducking through the outside door. Natalie just stepped out of the way and watched with a laugh. Somehow she didn't think Kat would get caught again any time soon.
   """
 
-p.KatMeetsJames =
+s.KatMeetsJames =
   blocking: true
   history:
     KatTrial: 0
@@ -193,7 +193,7 @@ p.KatMeetsJames =
   He shook his head, trying to make sense of the conversation, and gave up.
   """
 
-p.KatStorm =
+s.KatStorm =
   history:
     KatMeetsJames: 0
   experience:
@@ -237,7 +237,7 @@ p.KatStorm =
   Natalie felt her forehead again and sat by Kat's side. It was going to be a long night.
   """
 
-p.KatStorm2 =
+s.KatStorm2 =
   blocking: true
   history:
     KatStorm: 0
@@ -285,7 +285,7 @@ p.KatStorm2 =
   `N I suppose it's a better answer than 'no.'` Natalie laughed, drawing a smile from Kat as well. Despite nearly freezing to death, her mood didn't seem much affected. `N Let me ask around a bit today and see what I can arrange.`
   """
 
-p.KatJoins =
+s.KatJoins =
   history:
     KatStorm2: 0
   experience:
@@ -346,6 +346,6 @@ p.KatJoins =
   `K Hey, don't worry about it. I kept this shitty job, didn't I? How much worse can it be?`
   """
 
-Place.Alkenia.pages.Ch1 = Object.keys(p)
-for key, value of p
-  Page[key] = value
+Place.Alkenia.stories.Ch1 = Object.keys(s)
+for key, value of s
+  Story[key] = value

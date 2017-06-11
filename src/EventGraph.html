@@ -37,11 +37,11 @@
 
     var places = {};
     Object.keys(Place).forEach(function(place) {
-      if (!Place[place].pages) { return; }
+      if (!Place[place].stories) { return; }
 
       var element = document.getElementsByClassName('place ' + place)[0];
-      if (Place[place].pages[chapter]) {
-        Place[place].pages[chapter].forEach(function(page) { places[page] = place; });
+      if (Place[place].stories[chapter]) {
+        Place[place].stories[chapter].forEach(function(story) { places[story] = place; });
         colors[place] = color(colorI);
         colorI++;
         element.style.display = 'block';
@@ -51,14 +51,14 @@
       }
     });
 
-    for (var key in Page) {
-      if (typeof Page[key] != 'object' || !places[key]) { continue; }
+    for (var key in Story) {
+      if (typeof Story[key] != 'object' || !places[key]) { continue; }
 
       nodes[key] = {name: key, location: places[key]};
-      var h = Page[key].history;
+      var h = Story[key].history;
       for (var link in h) {
         // "backwards" so that the arrows point in an intuitive direction
-        links.push({source: link, target: key, type: Page[key].blocking ? 'blocking' : 'leadsTo'});
+        links.push({source: link, target: key, type: Story[key].blocking ? 'blocking' : 'leadsTo'});
       }
     }
 

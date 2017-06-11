@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<style>
+  body {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  #index {
+    margin: auto;
+    width: 20%;
+  }
+
+  img {
+    float: left;
+    max-width: 300px;
+    max-height: 200px;
+    margin: 0 15px 10px 0;
+  }
+
+  section {
+    clear: both;
+    margin-bottom: 20px;
+  }
+
+  hr {
+    clear: both;
+    margin-top: 20px;
+  }
+
+  h1 {
+    border-top: 5px solid black;
+    clear: both;
+    margin-top: 60px;
+    padding-top: 30px;
+    text-align: center;
+  }
+</style>
+<script src="../dist/game/lib.js"></script>
+<script src="../dist/game/compiled.js"></script>
+<script>
+  function drawEvents(chapter) {
+    var i = $('#index').empty()
+    var w = $('#warnings').empty()
+    var s = $('#stories').empty()
+    var places = {};
+    Object.keys(Place).forEach(function(place) {
+      if (!Place[place].stories || !Place[place].stories[chapter]) { return; }
+
+      Place[place].stories[chapter].forEach(function(story) { places[story] = place; });
+    });
+
+    for (let key in Story) {
+      if (!Story[key].text || !places[key]) { continue; }
+
+      sections = Story.render(key);
+      sections.each(function(i) {
+        len = $(this).text().length;
+
+        if ($(this).find('img').length && len < 200) {
+          w.append('<li><a href="#' + key + '">' + key + '.' + i + '</a> has an image, but is only ' + len + ' characters long.</li>');
+        }
+
+        if (len > 1500) {
+           w.append('<li><a href="#' + key + '">' + key + '.' + i + '</a> is ' + len + ' characters long, consider breaking it up.</li>');
+        }
+
+        $(this).find('img').on('error', function(e) {
+          w.prepend('<li><a href="#' + key + '">' + key + '.' + i + '</a> wanted invalid image "' + decodeURI(this.src.split('content/')[1]) + '"</li>');
+        });
+      });
+
+      i.append('<li><a href="#' + key + '">' + key + '</a></li>');
+      s.append('<h1 id="' + key + '">' + key + ' <a href="#index">^</a></h1>');
+      s.append(sections);
+    }
+
+    $('img').each(function() {
+      this.src = this.src.replace('game/content', 'content')
+    })
+  }
+</script>
+</head>
+<body onload="drawEvents('Ch1')">
+  <ul id="warnings"></ul>
+  <ul id="index"></ul>
+  <div id="stories"></div>
+</body>

@@ -44,8 +44,7 @@ $.extend Cargo, {
 
     $('.cargo.accept.' + i + ' .success')
       .animate({opacity: 1}, 500)
-      .animate {opacity: 0}, 2000, ->
-        console.log('hi')
+      .animate {opacity: 0}, 1500, ->
         Place.drawMap()
 
   clickDeliver: (i)->

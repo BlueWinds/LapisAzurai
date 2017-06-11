@@ -1,6 +1,6 @@
-p = {}
+s = {}
 
-p.NonkeniaDiplomatSailing =
+s.NonkeniaDiplomatSailing =
   label: 'Make nice with Diplomat'
   history:
     NonkeniaDiplomat: 0
@@ -27,7 +27,7 @@ p.NonkeniaDiplomatSailing =
     It sounded like an apology, but couldn't help but feel like the Ameliss was more annoyed at her for refusing to fault the sailor than anything. She tried not to sigh. This was going to be a long voyage.
 """
 
-p.GatherWood =
+s.GatherWood =
   label: 'Gather Wood'
   history:
     Ch2: 0
@@ -40,7 +40,7 @@ p.GatherWood =
   -- James pointed out several trees to the crew, marking them for felling and cutting into the planks and boards needed to keep the ship in good repair. Strange that no one lived here - wandering through the pleasant woodland paths, the usual explanation of "too rugged" didn't really hold up. Perhaps something else kept settlers away. James shivered and sought the Lapis out with his eyes. He already had a home, and it suddenly seemed more inviting than this far-too-perfect isle.
   """
 
-p.ExploreForest =
+s.ExploreForest =
   label: 'Explore Forest'
   history:
     GatherWood: 0
@@ -79,7 +79,7 @@ p.ExploreForest =
     James shuddered again.
   """
 
-p.AbandonedShip =
+s.AbandonedShip =
   label: 'Encounter at Sea'
   history:
     Ch2: 0
@@ -107,7 +107,7 @@ p.AbandonedShip =
   """
 
 
-p.AsarasMagic =
+s.AsarasMagic =
   label: "Asara's Magic"
   history:
     TomenoiRoute: 0
@@ -144,6 +144,6 @@ p.AsarasMagic =
     `A I am not yet ready.` She walked away, leaving Natalie with a million more questions.
   """
 
-Place.MtJulia.pages.Ch2 = Object.keys(p)
-for key, value of p
-  Page[key] = value
+Place.MtJulia.stories.Ch2 = Object.keys(s)
+for key, value of s
+  Story[key] = value

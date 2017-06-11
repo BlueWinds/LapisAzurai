@@ -1,5 +1,5 @@
-p = {}
+s = {}
 
-Place.IronSands.pages.Ch3 = Object.keys(p)
-for key, value of p
-  Page[key] = value
+Place.IronSands.stories.Ch3 = Object.keys(s)
+for key, value of s
+  Story[key] = value

@@ -69,9 +69,9 @@ oldDelayChance = Place.delayChance
 Place.delayChance = ->
   return oldDelayChance() * (1 - has('J', 'WeatherEye') * 0.1)
 
-oldApply = Page.apply
-Page.apply = (place, page)->
-  exp = Page[page].experience
+oldApply = Story.apply
+Story.apply = (place, story)->
+  exp = Story[story].experience
   nonParticipants = ['Natalie', 'James', 'Kat', 'Asara'].filter((p)-> not exp[p])
 
   for i in [0 ... has('K', 'Bright')]
@@ -79,17 +79,17 @@ Page.apply = (place, page)->
     g.people[person].experience += 1
 
   for i in [0 ... has('K', 'Generous')]
-    person = Math.choice(Object.keys(Page[page].experience))
+    person = Math.choice(Object.keys(Story[story].experience))
     # If nonParticipants is empty, this'll just fall into the void.
     g.people[person]?.experience += 1
-  oldApply(place, page)
+  oldApply(place, story)
 
 # We don't save the old version because, unfortunately, there's no clean way to extend it - we just have to override.
-Page.visiblePages = (pages)->
+Story.visibleStories = (stories)->
   foresight = has('K', 'SixthSense') * 2
   extraTime = has('K', 'NeverTooLate')
-  return pages.filter(Page.matchesHistory.bind(null, foresight, extraTime))
+  return stories.filter(Story.matchesHistory.bind(null, foresight, extraTime))
 
-oldReputationNeeded = Page.reputationNeeded
-Page.reputationNeeded = ()->
+oldReputationNeeded = Story.reputationNeeded
+Story.reputationNeeded = ()->
   oldReputationNeeded() - has('K', 'HowNotToLose')

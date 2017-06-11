@@ -10,7 +10,7 @@ samplePlaceData =
       "Silver"
       "Lumber"
     ]
-  pages: [
+  stories: [
     'ExploreWilds'
   ]
 
@@ -72,10 +72,12 @@ window.Place = {
     path = Place.svgElements(g.location, to)[0]
     days = Place.travelDays(g.location, to)
 
+    direction = if path.id.match(to + '_') then -1 else 1
+
     lastMoveStart = null
     events = []
     # Use this division here rather than travelPxPerDay because path length won't be a perfect multiple and we want an exact value
-    pxPerDay = path.getTotalLength() / days
+    pxPerDay = path.getTotalLength() / days * direction
 
     for day in [0 ... days]
       if Math.random() < Place.delayChance()

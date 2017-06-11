@@ -1,17 +1,6 @@
-p = 'people/Asara/'
-
 Person.alias.A = 'Asara'
 Person.Asara =
   name: 'Asara'
-  images:
-    normal: p + 'Normal'
-    excited: p + 'Excited'
-    blush: p + 'Blush'
-    upset: p + 'Upset'
-    angry: p + 'Angry'
-    serious: p + 'Serious'
-    sad: p + 'Sad'
-
   skills:
     Tears:
       Description: "Nothing"

@@ -9,12 +9,12 @@ $ ->
 
   if not $('#content').length then return
   Game.guiSetup()
-  Page.guiSetup()
+  Story.guiSetup()
 
   Game.start Game.mostRecentGameData()
   Game.drawStatus()
   Place.drawMap()
-  Page.drawHistory()
+  Story.drawHistory()
 
 $.extend Game, {
   year: -> (g.day + startDay) // 360
@@ -43,7 +43,9 @@ $.extend Game, {
     $('#new-game').click ->
       c.empty()
       Game.start($.extend(true, {}, Game.starting))
-      Page.display('Intro')
+      Game.drawStatus()
+      Place.drawMap()
+      Story.display('Intro')
 
     $('#save-game').click ->
       unless g then return
@@ -86,7 +88,8 @@ $.extend Game, {
         mapElements.css('transform', "translate(#{dX}px, #{dY}px)")
         lastE = e
 
-    $(window).on 'mouseup touchend touchcancel', -> map.off('mousemove touchmove')
+    $(window).on 'mouseup touchend touchcancel', ->
+      map.off('mousemove touchmove')
 
     $('#LabelLayer g').on 'click', ->
       label = $(@)
@@ -103,6 +106,22 @@ $.extend Game, {
 
     animateClip = (now, fx)->
       $(@).css('clip', 'rect(0px 500px ' + now + 'px 0)')
+
+    $('#container').on 'click', '.overlay', ->
+      $('.overlay').animate {opacity: 0}, ->
+        @remove()
+
+  showOverlay: (image, duration = 0, c = 'overlay')->
+    overlay = $("""<div class='#{c}'><img src='#{image}'></div>""").css('opacity', 0)
+    $('#container').append(overlay)
+    if duration
+      overlay
+        .animate({opacity: 1}, duration / 2)
+        .delay(duration / 2)
+        .animate {opacity: 0}, duration / 2, ->
+          overlay.remove()
+    else
+      overlay.animate({opacity: 1}, 500)
 }
 
 oldPassDay = Game.passDay

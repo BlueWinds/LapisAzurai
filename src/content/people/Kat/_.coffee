@@ -1,15 +1,6 @@
-p = 'people/Kat/'
-
 Person.alias.K = 'Kat'
 Person.Kat =
   name: 'Kat'
-  images:
-    normal: p + 'Normal'
-    angry: p + 'Angry'
-    happy: p + 'Happy'
-    sad: p + 'Sad'
-    serious: p + 'Serious'
-
   skills:
     Bright:
       description: 'Events grant +1 experience to a random participant'

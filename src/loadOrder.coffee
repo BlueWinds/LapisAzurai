@@ -3,7 +3,7 @@ module.exports = [
   'engine/feature-detect.coffee'
   'engine/util.coffee'
   'engine/game/game.coffee'
-  'engine/game/page.coffee'
+  'engine/game/story.coffee'
   'engine/game/person.coffee'
   'engine/game/place.coffee'
   'engine/game/cargo.coffee'
@@ -11,7 +11,7 @@ module.exports = [
 # Now the game gui
   'engine/gui/game.coffee'
   'engine/gui/person.coffee'
-  'engine/gui/page.coffee'
+  'engine/gui/story.coffee'
   'engine/gui/place.coffee'
   'engine/gui/cargo.coffee'
 
@@ -23,6 +23,7 @@ module.exports = [
   'content/people/Kat/_.coffee'
   'content/people/Guildmaster/_.coffee'
   'content/people/Sailors/_.coffee'
+  'content/people/Meghan/_.coffee'
 
   'content/ch1/Vailia.coffee'
   'content/ch1/MtJulia.coffee'

@@ -1,15 +1,6 @@
-p = 'people/Natalie/'
-
 Person.alias.N = 'Natalie'
 Person.Natalie =
   name: 'Natalie'
-  images:
-    normal: p + 'Normal'
-    excited: p + 'Excited'
-    embarrassed: p + 'Embarrassed'
-    upset: p + 'Upset'
-    shouting: p + 'Shouting'
-
   skills:
     WinningSmile:
       description: 'Reputation decays 20% slower'

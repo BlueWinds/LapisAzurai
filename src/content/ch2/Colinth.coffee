@@ -1,6 +1,6 @@
-p = {}
+s = {}
 
-p.ColinthArrive =
+s.ColinthArrive =
   label: 'Arrival'
   blocking: true
   history:
@@ -24,7 +24,7 @@ p.ColinthArrive =
     Kat muttered darkly, but shook her head when Natalie asked. `K Don't worry about it. So, what are we here for?`
   """
 
-p.ColinthAmulets =
+s.ColinthAmulets =
   label: 'Magical Amulet'
   history:
     ColinthArrive: 0
@@ -46,7 +46,7 @@ p.ColinthAmulets =
     --
   """
 
-p.ColinthAmulets2 =
+s.ColinthAmulets2 =
   label: 'Magical Amulet'
   history:
     ColinthAmulets: 0
@@ -91,7 +91,7 @@ p.ColinthAmulets2 =
     `K That's...` Kat hesitated, then threw her arms around Natalie, burying her head in the other woman's neck. `K I was so scared.`
   """
 
-p.Muggers =
+s.Muggers =
   label: 'Muggers'
   history:
     ColinthArrive: 0
@@ -135,7 +135,7 @@ p.Muggers =
     `N Let's... let's just go.`
   """
 
-p.KantianSorcerer =
+s.KantianSorcerer =
   label: "Sorcerer"
   history:
     ColinthAmulets: 0
@@ -166,7 +166,7 @@ p.KantianSorcerer =
     -- As much as she wanted to call him back and ask him to explain more, Natalie didn't think it go over well with Elakim. She watched him departing for a moment, then hugged herself and stepped back inside the inn. The storm no longer felt quite so welcoming.
   """
 
-p.AsarasTrauma =
+s.AsarasTrauma =
   label: "Asara's Trauma"
   history:
     Muggers: 0
@@ -202,6 +202,6 @@ p.AsarasTrauma =
     `N Ssh, ssh, it's alright, you're with me now, I won't let anyone hurt you...`
   """
 
-Place.Colinth.pages.Ch2 = Object.keys(p)
-for key, value of p
-  Page[key] = value
+Place.Colinth.stories.Ch2 = Object.keys(s)
+for key, value of s
+  Story[key] = value

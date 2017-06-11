@@ -1,7 +1,7 @@
-p = {}
+s = {}
 
 
 
-Place.Kantis.pages.Ch2 = Object.keys(p)
-for key, value of p
-  Page[key] = value
+Place.Kantis.stories.Ch2 = Object.keys(s)
+for key, value of s
+  Story[key] = value
