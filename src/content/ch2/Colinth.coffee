@@ -143,7 +143,7 @@ s.KantianSorcerer =
   experience:
     Natalie: 3
   text: ->"""
-  || places/ColinthStorm
+  || places/ColinthNight
     Natalie stood in the storm, luxuriating it the feel of wind and lightning and rain untamed. The region around Kantis felt somehow different from that around Vailia - wilder, less controlled. Perhaps it was the lack of Lady Meghan. Without a supremely powerful sorceress drawing the elements into her orbit, they were free. For once Natalie's magic didn't hurt. She let the power flow through and around her, ignoring the chill seeping steadily through her bones and rivulets of water finding their way underneath her cloak.
 
     Immersed in magic as she was, she became aware of another presence approaching long before he was visible through the pouring rain. A man. Not as strong as herself, but confident and wary, his presence as tightly wound as a coiled watch spring.

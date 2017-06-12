@@ -113,7 +113,7 @@ s.MeetAsara =
 
     `N Nothing we can do until morning. Back to Mt. Julia. We'll proceed as planned tomorrow.` She ignored the question.
 
-  || J/uncertain
+  || J/Upset
     `j Nat...` he searched her face uncomfortably. `J Is she a demon?`
 
     Natalie bit her lip, and after a moment shook her head. `N I don't know. But what can we do, just leave her there floating in the wreckage?`

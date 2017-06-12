@@ -193,14 +193,14 @@ s.FirstStorm =
 
     `J <b>How do you know!</b>` James repeated his question, grabbing her waist to steady her as the water washed over the deck below.
 
-  || travel/ShipStorm
+  || travel/SailingStorm
     Two sailors snapped to the end of their safety lines, saved by the rope anchoring them to their posts, while the rest remained on their feet. This one hadn't risen high enough to flood over the poop deck, but it was just a warm up. Looking deeper into the storm from their position at the top of the wave, they could see even more monstrous waves coming toward them. Natalie spun the wheel, hoping desperately that the ship would turn fast enough to take the next head-on.
 
     Storms like this swept across the world, leaving nothing but wreckage in their wake. Refuges like Mt. Julia were vital for any ships to survive at all. Seagoing vessels existed as fugitives, darting between safe ports in the intervening lulls. No captain set sail in anything except perfect weather, to reduce their chances of getting caught out. Like they had. And even still, as often as not, ships were unlucky. Like they were.
 
     Another wave towered over them, a tremendous mountain in the ocean. James managed to wrap a rope around Natalie's waist and tie it to the wheel just in time. This one didn't spill over the deck as more than a plume of spray, but surging water and gusting wind spun the ship around like a cork, and the deck tilted precipitously.
 
-  || J/angry
+  || J/Angry
     James shouted something at her, but Natalie couldn't hear what he said, drowned out by howling wind that hit them almost like a solid object. He pointed. One of the sailors hung limply from his line, blood running from his forehead. Natalie shook her head, made a sharp gesture of denial – James shouldn't go down there. He gritted his teeth and ignored her, untied his line and ran down the stairs.
 
     This was the sort of storm that left no survivors. A Grandmother Storm. The last had been just a month ago. Natalie had helped comb the beach for wreckage and survivors in its wake. There were precious few of the latter, and far too much of the former.
@@ -238,7 +238,7 @@ s.FirstStorm =
 
     Up on the poop deck he found Natalie, passed out and still tied to the wheel.  Numb fingers fumbled with the rope, then he bypassed them by using a knife to cut her free. They had plenty of rope. He winced away from the contact. Unlike his own icy skin, she was burning hot to the touch, as if wracked by a terrible fever. Only the strength and steadiness of her breaths reassured him she wasn't on death's doorstep.
 
-  || travel/cabinNight
+  || travel/CabinNight
     He carried her down below decks, to her cabin. Against all odds, the interior was still dry. Even a Grandmother Storm that had snapped both masts and torn away every sail hadn't been a match for the rubber seal around the door to the captain's cabin.
 
     Efficiently he stripped her, all the way down to bare skin. Any other time he would have hesitated, or at the very least been blushing and mortified as he worked, but not now. Any feelings beyond mere practicality were gone, washed away somewhere in the last six hours.
@@ -261,7 +261,7 @@ s.FirstStormSick =
   experience:
     James: 3
   text: -> """
-  || places/MarketDay
+  || places/VailiaDay
     ` And she hasn't moved since?` The priest shook his head, trying to keep pace with the young man as he pushed his way through the crowd.
 
     `J Right. She was burning hot at first, like a harsh fever, but she wasn't sweating at all, and looked perfectly comfortable.` James gave everyone apologetic looks as he bulled his way towards the ship, priest in tow, but didn't stop even when he knocked a sailor over and she began hurling curses in his direction.
@@ -369,7 +369,7 @@ s.AlkeniaRoute =
 
     `J I do, but I'm not telling you. Some things are secret for a reason.` He smiled apologetically.
 
-  || travel/cabinDay
+  || travel/CabinDay
     `J One package, still sealed.`
 
     Natalie took it and excitedly unwrapped her present, cracking the wax seal and untying the twine. Inside... a notebook, wrapped in oiled leather and tied closed with another string. She opened it reverently to a random page. A map, precisely drawn and carefully annotated of the waters around Mt. Julia. Another page - lists of wind speeds, seasons, storm likelihood in vicinity of Nonkenia.
