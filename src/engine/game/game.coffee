@@ -23,7 +23,6 @@ sampleGame =
         Captain: true
         EarToTheGround: true
         EarToTheGround2: true
-      color: ['tanned', 'none', 'green', 'ash', 'none', 'none']
   history:
     Intro: 0
     ExploreWilds: 1
@@ -31,7 +30,7 @@ sampleGame =
 window.Game =
   travelPxPerDay: (type)-> 15
 
-  updates: [] # Update items are functions taking one argument, a game state.
+  updates: [] # Functions taking one argument, a game state.
 
   mostRecentGameData: ->
     last = Object.keys(localStorage).map((key) -> parseFloat(key) or 0).sort().pop()

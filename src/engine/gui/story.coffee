@@ -99,7 +99,7 @@ $.extend Story, {
 
     to.addClass('active').css('opacity', 0)
     $('section.active').animate {opacity: 1}, 300
-    $('#content').scrollTo(to, 300, {over: 1})
+    $('#content').scrollTo(to, 300, {over: 1}).focus()
 
   backSection: (from, to)->
     unless to.length then return
@@ -108,7 +108,7 @@ $.extend Story, {
     from.animate {opacity: 0}, 300, ->
       from.removeClass('active')
       $('section.active').animate {opacity: 1}, 300
-    $('#content').scrollTo(to, 300, {over: 1})
+    $('#content').scrollTo(to, 300, {over: 1}).focus()
 
   enterMap: ->
     g.scroll = -1
@@ -126,10 +126,12 @@ $.extend Story, {
     $('#content').on 'click', 'img', (e)->
       Game.showOverlay(e.target.src)
       return false
-    $('#content').on 'click', (e)->
+    $('#content').on 'click', ->
       Story.changeSection(1)
 
     $(window).keydown(keyPress)
+    $('#back').on 'click', ->
+      Story.changeSection(-1)
 }
 
 addSectionImage = (element, line)->
@@ -151,9 +153,9 @@ elementInDirection = (element, direction)->
   else element.next()
 
 keyPress = (e)->
-  # Right, down
-  if e.keyCode in [39, 40]
+  # Right
+  if e.keyCode is 39
     Story.changeSection(1)
-  # Left, up
-  else if e.keyCode in [37, 38]
+  # Left
+  else if e.keyCode is 37
     Story.changeSection(-1)

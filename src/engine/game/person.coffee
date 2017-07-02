@@ -1,5 +1,4 @@
 samplePerson =
-  name: 'Natalie'
   experience: 100
   skills:
     EarToTheGround: true

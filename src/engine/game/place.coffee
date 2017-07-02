@@ -15,12 +15,12 @@ samplePlaceData =
   ]
 
 window.Place = {
-  delayChance: -> 0.06
+  delayChance: -> 0.05
 
   delayDuration: -> Math.random() * 3 + 1
 
   decayReputation: (rep)->
-    return Math.floor(rep * 0.9)
+    return rep * 0.95
 
   passDay: ->
     for place, reputation of g.reputation

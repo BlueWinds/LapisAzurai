@@ -37,6 +37,7 @@ window.Story = {
     for character, exp in Story[story].experience
       g.people[character].experience += exp
     g.reputation[place] -= Story.reputationNeeded(story)
+    if Story[story].apply then Story[story].apply()
     g.history[story] = g.day
     Game.passDay()
 }

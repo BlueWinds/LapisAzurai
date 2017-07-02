@@ -84,6 +84,8 @@ s.TomenoiRoute =
 
     Asara gave a little half bow, and she was gone. Janus shook his head and tried not to glance at the door. Natalie had chosen a strange companion.
   """
+  apply: ->
+    g.roputation.Tomenoi = 0
 
 s.JamesUpsetMagic =
   label: 'James is Upset'
@@ -132,6 +134,8 @@ s.NonkeniaRoute =
 
     Asara let out a tense breath and took the package. She hated being babbled at. A curt nod to the clerk and she turned to leave. She didn't hate the city. Really, she didn't. It was just... she wanted to be back on the ship. Fewer people. People who knew her. She couldn't relax around strangers. She ignored the clerk's attempt to make more conversation and fled with all possible haste short of actually running.
   """
+  apply: ->
+    g.roputation.Nonkenia = 0
 
 s.NonkeniaDiplomat =
   label: 'Diplomatic Delivery'
@@ -327,6 +331,8 @@ s.IronSandsRutter2 =
 
     `N He's neither my dad nor does he... hey, come back here!`
   """
+  apply: ->
+    g.roputation.IronSands = 0
 
 s.AsaraTalkFlames =
   label: "Talk with Asara - Flames"

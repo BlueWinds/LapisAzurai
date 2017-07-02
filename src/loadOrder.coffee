@@ -12,6 +12,7 @@ module.exports = [
   'engine/gui/game.coffee'
   'engine/gui/person.coffee'
   'engine/gui/story.coffee'
+  'engine/gui/load.coffee'
   'engine/gui/place.coffee'
   'engine/gui/cargo.coffee'
 

@@ -12,15 +12,11 @@ Game.starting =
     MtJulia: 0
   people:
     Natalie:
-      name: 'Natalie'
       experience: 0
       skills: {}
-      colors: ['tanned', 'none', 'green', 'ash', 'none', 'none']
     James:
-      name: 'James'
       experience: 0
       skills: {}
-      colors: ['none', 'light', 'green', 'fiery', 'none']
   history:
     Intro: 0
 
@@ -31,7 +27,7 @@ s.Intro =
   blocking: true
   text: -> """
   ||
-    <center><i>Click anywhere on the page or use the down or right arrow keys to advance</i></center>
+    <center><i>Click anywhere on the page or use the right arrow key to advance</i></center>
 
   ||
     <center>Natalie dreamt of Fire.</center>
@@ -378,6 +374,8 @@ s.AlkeniaRoute =
 
     Natalie's eyes sparkled as she started reading. She looked radiant, alive. James tried not to stare, and his heart beat faster when she reached over to squeeze his hand before returning to her reading. She didn't notice when he excused himself.
   """
+  apply: ->
+    g.roputation.Alkenia = 0
 
 
 s.MeetMeghan =

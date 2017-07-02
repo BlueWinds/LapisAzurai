@@ -29,6 +29,7 @@ s.AlkeniaArrive =
   """
 
 s.MeetKat =
+  label: 'Pickpocket'
   history:
     AlkeniaArrive: 0
   experience:

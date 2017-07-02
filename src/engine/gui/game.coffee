@@ -128,3 +128,10 @@ oldPassDay = Game.passDay
 Game.passDay = ->
   oldPassDay()
   Game.drawStatus()
+
+  setTimeout ->
+    delete localStorage[localStorage.autosave]
+    now = Date.now()
+    localStorage.setItem now, jsyaml.safeDump(g)
+    localStorage.autosave = now
+  , 0

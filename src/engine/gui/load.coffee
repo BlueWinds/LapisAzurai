@@ -1,33 +1,40 @@
+Story.Load =
+  text: ->
+    rows = for key in Object.keys(localStorage).sort().reverse()
+      date = new Date parseInt(key, 10)
+      unless date.getTime() then continue
+      try
+        game = jsyaml.safeLoad(localStorage[key])
+      catch e
+        continue
+
+      blob = new Blob [localStorage[key]], {type: 'text/plain'}
+      blob = URL.createObjectURL blob
+
+      name = "#{game.chapter} - Day #{game.day} - #{game.location}"
+      if localStorage.autosave is key then name += ' (auto)'
+
+      row = [
+        name
+        "#{date.toLocaleString().replace(/:\d+( | $)/, ' ')}"
+        """<button class="load">Load</button>
+          <a class="export" download="#{name}.yaml" href="#{blob}">Export</a>
+          <button class="delete">Delete</button>"""
+      ].join('</td><td>')
+      "<tr game='#{key}'><td>" + row + '</td></tr>'
+
+    table = """<table class="load-game">
+      <tr><td colspan="3"><input type="file"></td></tr>
+      #{rows.join("\n")}
+    </table>""".replace(/\n/g, '')
+
+    return """|| class="screen load"
+      #{table}
+    """
+
 Game.showLoadPage = ->
-  rows = for key in Object.keys(localStorage).sort().reverse()
-    date = new Date parseInt(key, 10)
-    unless date.getTime() then continue
-    try
-      game = jsyaml.safeLoad(localStorage[key])
-    catch e
-      continue
-
-    blob = new Blob [localStorage[key]], {type: 'text/plain'}
-    blob = URL.createObjectURL blob
-
-    name = "Day #{game.day} - #{game.chapter} - #{game.location}"
-    row = [
-      name
-      "#{months[date.getMonth()]} #{date.getDate()}, #{date.getHours()}:#{date.getMinutes()}"
-      """<button class="btn btn-xs btn-primary">Load</button>
-        <a class="btn btn-xs btn-link" download="#{name}.yaml" href="#{blob}">Export</a>
-        <button class="btn btn-xs btn-link">Delete</button>"""
-    ].join('</td><td>')
-    "<tr game='#{key}'><td>" + row + '</td></tr>'
-
-  table = """<table class="table table-striped table-hover">
-    <tr><td colspan="3"><input type="file"></td></tr>
-    #{rows.join("\n")}
-  </table>""".replace(/\n/g, '')
-
-  element = $.render """|| class="screen load"
-    <div class="col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">#{table}</div>
-  """
+  Story.display('Load')
+  element = $('#content section')
 
   $('input', element).change ->
     unless file = @files[0]
@@ -53,11 +60,11 @@ Game.showLoadPage = ->
   $('button', element).click ->
     row = $(@).closest('tr')
     key = row.attr 'game'
+
     if $(@).html() is 'Delete'
       delete localStorage[key]
       row.remove()
-      return
-    if $(@).html() is 'Export'
+    else if $(@).html() is 'Export'
       name = $(@).parent().prev().prev().html()
 
       link = $("<a class='btn btn-xs btn-link'>Export</a>")
@@ -65,10 +72,9 @@ Game.showLoadPage = ->
       link.attr('href', blob)
       link.attr('download', name)
       link.click()
-      return
-
-    window.g = new Game jsyaml.safeLoad(localStorage[key])
-    $('#content').empty()
-    g.last.show()
-    g.setGameInfo()
-    Game.gotoPage()
+    else
+      Game.start jsyaml.safeLoad(localStorage[key])
+      Game.drawStatus()
+      Place.drawMap()
+      Story.drawHistory()
+    return false
