@@ -16,12 +16,7 @@ Formatting guide:
 
 $.extend Story, {
   draw: (place, story)->
-    [skill, person] = Story.skillNeeded(story)
-    need = if skill
-      """<div class="need">#{person} needs #{Person[person].skills[skill].label}</div>"""
-    else if g.reputation[place] < Story.reputationNeeded(story)
-      """<div class="need">Need #{Math.ceil(Story.reputationNeeded(story) - g.reputation[place])} more rep</div>"""
-    else ""
+    need = Story.unmetNeed(place, story)
 
     onclick = if g.location is place and not need
       'onclick=\'Story.apply("' + place + '", "' + story + '");Story.display("' + story + '");Place.drawMap();\''

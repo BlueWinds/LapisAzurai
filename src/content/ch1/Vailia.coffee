@@ -375,7 +375,7 @@ s.AlkeniaRoute =
     Natalie's eyes sparkled as she started reading. She looked radiant, alive. James tried not to stare, and his heart beat faster when she reached over to squeeze his hand before returning to her reading. She didn't notice when he excused himself.
   """
   apply: ->
-    g.roputation.Alkenia = 0
+    g.reputation.Alkenia = 0
 
 
 s.MeetMeghan =

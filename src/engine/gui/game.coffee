@@ -130,6 +130,9 @@ Game.passDay = ->
   Game.drawStatus()
 
   setTimeout ->
+    # Don't save while we're in the middle of traveling
+    unless Place[g.location] then return
+
     delete localStorage[localStorage.autosave]
     now = Date.now()
     localStorage.setItem now, jsyaml.safeDump(g)

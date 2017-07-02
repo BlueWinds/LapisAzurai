@@ -33,6 +33,16 @@ window.Story = {
       if value < 0 and g.history[key] < g.day + (value - extraTime) then return false
     return true
 
+  unmetNeed: (place, story)->
+    [skill, person] = Story.skillNeeded(story)
+    need = if skill
+      """#{person} needs #{Person[person].skills[skill].label}"""
+    else if g.reputation[place] < Story.reputationNeeded(story)
+      """Need #{Math.ceil(Story.reputationNeeded(story) - g.reputation[place])} more rep"""
+    else ""
+
+    return need
+
   apply: (place, story)->
     for character, exp in Story[story].experience
       g.people[character].experience += exp

@@ -22,7 +22,7 @@ $.extend Place, {
       distanceDesc = 'Docked'
       travel = ''
     else
-      distanceDesc = "#{Place.travelDays(g.location, place)} days"
+      distanceDesc = "#{Place.travelDays(g.location, place)} days sailing"
       disabled = if Story.canSail() then '' else 'disabled'
       travel = """<div class="travel #{disabled}" #{if disabled then '' else 'onclick="Place.animateTravel(\'' + place + '\');"'}>
         ⛵⇢
@@ -32,11 +32,15 @@ $.extend Place, {
     available = g.availableCargo.filter (job)-> job.from is place
     visibleStories = Story.visibleStories(Place[place].stories[g.chapter])
 
+    clickableStories = visibleStories.filter((s)-> not Story.unmetNeed(place, s))
+    visibleStories = visibleStories.filter(Story.unmetNeed.bind(null, place))
+
     return """<div place="#{place}" class="place has-full" style="left: #{location.x}px; top: #{location.y}px;">
       #{travel}
       <div class="name">#{Place[place].name}</div>
       <div class="description">#{distanceDesc} - #{Math.floor(g.reputation[place])} reputation</div>
       <table>
+        #{Game.drawList clickableStories, Story.draw.bind(null, place)}
         #{Game.drawList deliverable, Cargo.drawDelivery}
         #{Game.drawList available, Cargo.draw}
         #{Game.drawList visibleStories, Story.draw.bind(null, place)}
@@ -57,7 +61,7 @@ $.extend Place, {
     Game.passDay()
     Game.drawStatus()
     if event.location then g.location = event.location
-    dayDuration = 3000
+    dayDuration = 2000
 
     if event.startTravel
       destination = g.distance + event.startTravel

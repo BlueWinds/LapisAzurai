@@ -10,7 +10,7 @@
       <rect height="1080" width="1542" fill="#fff" />
       <circle id="VailiaMask" cx="646" cy="566" r="250" fill="url(#maskBlur)" />
       <circle id="MtJuliaMask" cx="540" cy="551" r="150" fill="url(#maskBlur)" />
-      <circle id="AlkeniaMask" cx="472" cy="526" r="150" fill="url(#maskBlur)" />
+      <circle id="AlkeniaMask" cx="468" cy="516" r="150" fill="url(#maskBlur)" />
       <circle id="NonkeniaMask" cx="445" cy="486" r="150" fill="url(#maskBlur)" />
       <circle id="IronSandsMask" cx="525" cy="675" r="125" fill="url(#maskBlur)" />
       <circle id="TomenoiMask" cx="832" cy="470" r="150" fill="url(#maskBlur)" />
@@ -29,14 +29,14 @@
   </g>
   <g id="PathLayer" stroke="#f00" stroke-miterlimit="0" stroke-dasharray="9, 3" stroke-width="3.3" fill="none">
     <path id="Vailia_MtJulia"    d="M 646 566 C 652 603, 557 525, 540 551" travel="Sail"/>
-    <path id="Vailia_Alkenia"    d="M 646 566 C 662 609, 467 485, 472 526" travel="Sail"/>
+    <path id="Vailia_Alkenia"    d="M 646 566 C 662 609, 467 485, 468 516" travel="Sail"/>
     <path id="Vailia_Nonkenia"   d="M 646 566 C 658 603, 547 533, 445 486" travel="Sail"/>
     <path id="Vailia_IronSands"  d="M 646 566 C 667 569, 511 702, 525 675" travel="Sail"/>
     <path id="Vailia_Tomenoi"    d="M 646 566 C 633 584, 845 480, 832 470" travel="Sail"/>
-    <path id="MtJulia_Alkenia"   d="M 540 551 C 572 543, 463 502, 472 526" travel="Sail"/>
+    <path id="MtJulia_Alkenia"   d="M 540 551 C 572 543, 463 502, 468 516" travel="Sail"/>
     <path id="MtJulia_Nonkenia"  d="M 540 551 C 575 544, 457 494, 445 486" travel="Sail"/>
     <path id="MtJulia_IronSands" d="M 540 551 C 596 512, 551 694, 525 675" travel="Sail"/>
-    <path id="Alkenia_Nonkenia"  d="M 472 526 C 487 518, 468 508, 445 486" travel="Sail"/>
+    <path id="Alkenia_Nonkenia"  d="M 468 516 C 487 518, 468 508, 445 486" travel="Sail"/>
   </g>
   <svg id="Ship" x="0" y="0" overflow="visible">
     <circle cx="0" cy="0" r="5" style="fill:#DD0000;stroke:none"/>
@@ -45,7 +45,7 @@
   <g id="LabelLayer"  font-family="Sans" font-size="18px">
     <g id="Vailia"><circle cx="646" cy="566" r="5" /><text y="572" x="655">Vailia</text></g>
     <g id="MtJulia"><circle cx="540" cy="551" r="5" /><text y="573" x="505">Mt. Julia</text></g>
-    <g id="Alkenia"><circle cx="472" cy="526" r="5" /><text y="531" x="400">Alkenia</text></g>
+    <g id="Alkenia"><circle cx="468" cy="516" r="5" /><text y="521" x="393">Alkenia</text></g>
     <g id="Nonkenia"><circle cx="445" cy="486" r="5" /><text y="477" x="405">Nonkenia</text></g>
     <g id="IronSands"><circle cx="525" cy="675" r="5" /><text y="695" x="477">Iron Sands</text></g>
     <g id="Tomenoi"><circle cx="832" cy="470" r="5" /><text y="460" x="792">Tomenoi</text></g>
