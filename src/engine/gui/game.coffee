@@ -37,8 +37,16 @@ $.extend Game, {
       """<tr>#{items.map(draw).join "</tr><tr>"}</tr>"""
     else ""
 
+  drawOverview: ->
+    o = $('#overview').empty()
+    o.append """
+      #{Place.drawOverview()}
+      #{Person.drawOverview()}
+    """
+    Person.activateDrawings(o)
+
   guiSetup: ->
-    c = $ '#content'
+    c = $('#content')
 
     $('#new-game').click ->
       c.empty()
@@ -108,8 +116,18 @@ $.extend Game, {
       $(@).css('clip', 'rect(0px 500px ' + now + 'px 0)')
 
     $('#container').on 'click', '.overlay', ->
-      $('.overlay').animate {opacity: 0}, ->
-        @remove()
+      $('.overlay').animate {opacity: 0}, -> @remove()
+
+    o = $('#overview')
+    $('.logo').on 'click', ->
+      if o.hasClass('active')
+        $('.logo').removeClass('active')
+        o.removeClass('active').stop().animate {opacity: 0}, 200, ->
+          unless o.hasClass('active') then o.css('display', 'none')
+      else
+        Game.drawOverview()
+        $('.logo').addClass('active')
+        o.addClass('active').css({opacity: 0, display: 'block'}).stop().animate({opacity: 1}, 200)
 
   showOverlay: (image, duration = 0, c = 'overlay')->
     overlay = $("""<div class='#{c}'><img src='#{image}'></div>""").css('opacity', 0)

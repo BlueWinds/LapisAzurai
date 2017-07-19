@@ -52,7 +52,7 @@ module.exports = (grunt) ->
         files: [{
           cwd: 'src/content'
           expand: true
-          src: ['**/*.png', '**/*.jpg']
+          src: ['**/*.png', '**/*.jpg', '**/*.svg']
           dest: 'dist/game/content'
         }]
     uglify:
@@ -63,8 +63,19 @@ module.exports = (grunt) ->
           'dist/game/lib.js': ['src/lib/*.js']
     watch:
       compile:
-        files: ['src/**/*']
+        files: ['src/**/*.coffee', 'src/**/*.css']
         tasks: ['compile']
+        options:
+          livereload: true
+      images:
+        files: ['src/**/*.svg', 'src/**/*.png', 'src/**/*.jpg', 'src/**/*.css']
+        tasks: ['copy:images']
+        options:
+          livereload: true
+      configFiles:
+        files: [ 'Gruntfile.coffee', 'src/loadOrder.coffee' ],
+        options:
+          reload: true
     clean:
       game: ['dist', 'LapisAzurai.zip']
     compress:

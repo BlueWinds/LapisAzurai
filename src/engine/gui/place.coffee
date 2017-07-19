@@ -15,6 +15,12 @@ $.extend Place, {
     document.getElementById('Ship').attributes.x.value = location.x
     document.getElementById('Ship').attributes.y.value = location.y
 
+  drawOverview: ->
+    """<div class="places">
+      <img src="game/content/#{Place[g.location].img}.jpg">
+      #{Place.byDistance(g.location).map(Place.draw).join('\n')}
+    </div>"""
+
   draw: (place)->
     location = Place.location(place)
 

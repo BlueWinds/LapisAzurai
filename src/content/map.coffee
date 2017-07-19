@@ -22,6 +22,7 @@ Place.Vailia =
 
 Place.MtJulia =
   name: 'Mt. Julia'
+  img: 'places/MtJuliaDay'
   paths:
     Vailia: -1
     Alkenia: 1
@@ -38,6 +39,7 @@ Place.MtJulia =
 
 Place.Alkenia =
   name: 'Alkenia'
+  img: 'places/AlkeniaDay'
   paths:
     Vailia: -1
     MtJulia: -1
@@ -59,6 +61,7 @@ Place.Alkenia =
 
 Place.Nonkenia =
   name: 'Nonkenia'
+  img: 'places/NonkeniaDay'
   paths:
     Vailia: -1
     MtJulia: -1
@@ -76,6 +79,7 @@ Place.Nonkenia =
 
 Place.IronSands =
   name: 'Iron Sands'
+  img: 'places/IronSandsDay'
   paths:
     Vailia: -1
     MtJulia: -1
@@ -94,6 +98,7 @@ Place.IronSands =
 
 Place.Tomenoi =
   name: 'Tomenoi'
+  img: 'places/TomenoiDay'
   paths:
     Vailia: -1
     MtJulia: -1
@@ -113,6 +118,7 @@ Place.Tomenoi =
 
 Place.Colinth =
   name: 'Colinth'
+  img: 'places/ColinthDay'
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
@@ -131,6 +137,7 @@ Place.Colinth =
 
 Place.Kantis =
   name: 'Kantis'
+  img: 'places/KantisDay'
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
@@ -149,6 +156,7 @@ Place.Kantis =
 
 Place.Amandais =
   name: 'Amandais'
+  img: 'places/AmandaisDay'
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'

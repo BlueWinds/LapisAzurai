@@ -19,7 +19,29 @@ sampleData =
 
 window.Person = {
   alias: {}
-  expForNextSkill: (person)->
-    skills = Object.keys(person.skills).length
-    return skills * (skills + 4)
+
+  xpNeeded: (level)-> level * (level + 4)
+
+  level: (xp)->
+    l = 0
+    while Person.xpNeeded(l + 1) <= xp
+      l++
+    return l
+
+  skillPoints: (person)->
+    level = Person.level(g.people[person].experience)
+    return level - Object.keys(g.people[person].skills).length
+
+  unmetRequirements: (person, skill)->
+    skills = g.people[person].skills
+    data = Person[person].skills[skill]
+
+    unmetAnd = (data.requiresAnd or []).filter((s)-> not skills[s])
+    if unmetAnd.length
+      return unmetAnd.map((s)-> Person[person].skills[s].name or s).wordJoin()
+
+    if data.requiresOr and not data.requiresOr.some((s)-> skills[s])
+      return data.requiresOr.map((s)-> Person[person].skills[s].name or s).wordJoin('or')
+
+    return ''
 }

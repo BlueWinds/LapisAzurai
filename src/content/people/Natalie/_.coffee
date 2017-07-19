@@ -1,8 +1,11 @@
 Person.alias.N = 'Natalie'
 Person.Natalie =
   name: 'Natalie'
+  img: 'people/Natalie/Normal'
+  svg: 'people/Natalie/skills.svg'
   skills:
     WinningSmile:
+      name: 'Winning Smile'
       description: 'Reputation decays 20% slower'
       doubledBy: 'Fear'
     Overdeliver:
@@ -21,18 +24,22 @@ Person.Natalie =
       requiresAnd: ['Gregarious', 'Grounded']
 
     Overdeliver2:
+      name: 'Overdeliver 2'
       description: '+1 Reputation at the destination when delivering cargo'
       requiresAnd: ['Initiate']
       doubledBy: 'Trust'
     Gregarious2:
+      name: 'Gregarious 2'
       description: '+1 Reputation at the origin when delivering cargo'
       requiresAnd: ['Initiate']
       doubledBy: 'Trust'
     WellInformed:
+      name: 'Well Informed'
       description: 'One additional cargo available daily'
       requiresAnd: ['Overdeliver2']
       doubledBy: 'Trust'
     SilverTongue:
+      name: 'Silver Tongue'
       description: '+1 Reputation at each location daily'
       requiresAnd: ['Gregarious2']
       doubledBy: 'Trust'
@@ -41,21 +48,25 @@ Person.Natalie =
       requiresAnd: ['WellInformed', 'SilverTongue2']
 
     WinningSmile2:
+      name: 'Winning Smile 2'
       description: 'Reputation decays 10% slower'
       requiresAnd: ['Adept']
       doubledBy: 'Love'
     Grounded2:
+      name: 'Grounded 2'
       description: 'A new cargo becomes available whenever you deliver one'
       requiresAnd: ['Adept']
       doubledBy: 'Love'
     WellInformed2:
+      name: 'Well Informed 2'
       description: 'One additional cargo available daily'
       requiresAnd: ['WinningSmile2']
       doubledBy: 'Love'
     SilverTongue2:
+      name: 'Silver Tongue 2'
       description: '+1 Reputation at each location daily'
       requiresAnd: ['Grounded2']
       doubledBy: 'Love'
     Mage:
-      description: 'Unlock finale'
+      description: 'Unlock endings'
       requiresAnd: ['WellInformed2', 'SilverTongue2']

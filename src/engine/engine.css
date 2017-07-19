@@ -43,8 +43,24 @@ header .right {
 }
 
 header .logo {
-  padding-top: 15px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
   height: 40px;
+  margin: 10px 5px 0px 0px;
+  padding: 5px 5px 10px 5px;
+}
+
+header .logo.active, header .logo:hover {
+  background: #000;
+  border: 1px solid #2a9fd6;
+  border-bottom-width: 0px;
+  padding: 4px 4px 11px 4px;
+  position: relative;
+  z-index: 1;
+}
+
+header .logo:hover {
+  border-color: #1f79a3;
 }
 
 header .day, header .cargo { cursor: default; }
@@ -109,7 +125,7 @@ table td {
   width: 90%;
 }
 
-#content, #drag-map {
+#content, #drag-map, #overview {
   background: #000;
   height: 100%;
   position: absolute;
@@ -170,7 +186,7 @@ hr {
   top: 0;
 }
 
-#places .place {
+.place {
   background-color: #151515;
   border: 1px solid #030303;
   clip: rect(0, 500px, 0, 0);
@@ -182,42 +198,38 @@ hr {
   width: 280px;
 }
 
-#places .name {
+.name {
   color: #fff;
   font-size: 1.4em;
   padding: 8px 0 0 12px;
 }
 
-#places .description {
+.description {
   font-size: 0.8em;
   margin: -5px 0 8px 22px;
 }
 
-#places .cost {
+.place .cost {
   font-size: 0.8em;
   float: right;
 }
 
-#places .participants, #places .need {
+.place .participants, .place .need {
   font-size: 0.8em;
   margin: -1px 0px -3px 15px;
 }
 
-#places td {
+.place td {
   opacity: 0.6;
 }
 
-#places .active {
+.place .active {
   cursor: pointer;
   opacity: 1;
 }
 
-#places .label {
+.place .label {
   color: #fff;
-}
-
-#LabelLayer g {
-  cursor: pointer;
 }
 
 .travel {
@@ -326,4 +338,88 @@ hr {
 
 .delete:hover, .delete:focus {
   text-decoration: underline;
+}
+
+#overview {
+  border: 1px solid #2a9fd6;
+  border-radius: 0 6px 0 0;
+  display: none;
+  overflow: auto;
+  width: calc(100% - 2px);
+}
+
+#overview img {
+  max-width: 100%;
+}
+
+#overview .places {
+  float: left;
+  width: 280px;
+  margin: 10px;
+}
+
+#overview .place {
+  border: none;
+  transform: none;
+  position: static;
+}
+
+#overview .people {
+  float: left;
+  margin: 10px;
+  width: 620px;
+}
+
+.person {
+  clear: both;
+}
+
+.person img {
+  float: left;
+  margin: 10px;
+  height: 150px;
+}
+
+.person object {
+  clear: left;
+}
+
+.person > div {
+  display: inline-block;
+}
+
+.person .picks {
+  font-weight: 700;
+  margin-left: 20px;
+  vertical-align: top;
+  margin-top: 17px;
+}
+
+.person .picks.active {
+  color: #FFF;
+}
+
+.skill {
+  text-align: center;
+}
+
+.skill .name {
+  padding: 0;
+}
+
+.skill button {
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #2a9fd6;
+  border: 1px solid #2a9fd6;
+}
+
+.skill button.active:hover, .skill button.active:focus {
+  background-color: #2386b4;
+  border-color: #1f79a3;
+}
+
+.skill button:disabled {
+  cursor: default;
+  opacity: 0.5;
 }

@@ -1,6 +1,8 @@
 Person.alias.A = 'Asara'
 Person.Asara =
   name: 'Asara'
+  img: 'people/Asara/Normal'
+  svg: 'people/Asara/skills.svg'
   skills:
     Tears:
       Description: "Nothing"
@@ -31,7 +33,7 @@ Person.Asara =
       description: "Double the benefits of all of James' 2nd tier skills"
       requiresAnd: ['Death']
     Goddess:
-      description: "Unlock finale in Asara's route"
+      description: "Unlock Asara's ending (also requires Mage on Natalie)"
       requiresAnd: ['Power']
 
     Love:

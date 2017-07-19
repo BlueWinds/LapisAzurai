@@ -33,10 +33,10 @@ Object.defineProperty String.prototype, 'capitalize', {value: ->
   @charAt(0).toUpperCase() + @slice(1)
 }
 
-Object.defineProperty Array.prototype, 'wordJoin', {value: ->
+Object.defineProperty Array.prototype, 'wordJoin', {value: (join = 'and')->
   if @length is 1 then return @[0]
   str = @slice(0, -1).join(', ')
-  str += ' and ' + @[@length - 1]
+  str += " #{join} " + @[@length - 1]
   return str
 }
 

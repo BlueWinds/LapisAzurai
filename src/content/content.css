@@ -8,3 +8,24 @@ q.Guildmaster { color: #9FDAAF; }
 
 img.Natalie { transform: scale(0.8); }
 img.Natalie.right { transform: scaleX(-0.8) scaleY(0.8); }
+
+/* This stylesheet is also loaded for the various skill svgs. These rules are used there, rather than for html. */
+g {
+  cursor: pointer;
+}
+
+g path:first-child {
+  opacity: 0;
+}
+
+g:hover path:first-child {
+  opacity: 0.7;
+}
+
+g.active path:first-child {
+  opacity: 1;
+}
+
+g path:nth-child(3) {
+  display: none;
+}

@@ -42,6 +42,7 @@ window.Place = {
     return if distance >= 0 then distance else element.getTotalLength() + distance
 
   travelDays: (origin, destination)-> # Returns days between two locations, including indirect routes
+    if origin is destination then return 0
     sumLength = (sum, e)->
       sum + Math.ceil(e.getTotalLength() / Game.travelPxPerDay(e.travel))
     return Place.svgElements(origin, destination).reduce(sumLength, 0)
@@ -97,4 +98,9 @@ window.Place = {
       events.push event
     events[0].location = path.id
     return events
+
+  byDistance: (origin)->
+    return Object.keys(g.reputation).sort((p1, p2) ->
+      Place.travelDays(origin, p1) - Place.travelDays(origin, p2)
+    )
 }
