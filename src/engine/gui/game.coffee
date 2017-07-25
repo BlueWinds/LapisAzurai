@@ -35,7 +35,7 @@ $.extend Game, {
   drawList: (items, draw)->
     if items.length
       """<tr>#{items.map(draw).join "</tr><tr>"}</tr>"""
-    else ""
+    else ''
 
   drawOverview: ->
     o = $('#overview').empty()

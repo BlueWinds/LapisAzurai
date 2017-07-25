@@ -1,14 +1,14 @@
 samplePlaceData =
-  name: "Mt Julia"
+  name: 'Mt Julia'
   paths:
     Vailia: -1 # -1: The path is ThereHere (it needs to be animated "in reverse")
     Alkenia: 1 # 1: The path goes HereThere (it is animated "forward")
-    Tomenoi: "Vailia" # A string: The path from here to Tomenoi goes to Vailia next
+    Tomenoi: 'Vailia' # A string: The path from here to Tomenoi goes to Vailia next
   goods:
     Vailia: [
-      "Fish"
-      "Silver"
-      "Lumber"
+      'Fish'
+      'Silver'
+      'Lumber'
     ]
   stories: [
     'ExploreWilds'

@@ -137,7 +137,7 @@ s.Muggers =
   """
 
 s.KantianSorcerer =
-  label: "Sorcerer"
+  label: 'Sorcerer'
   history:
     ColinthAmulets: 0
   experience:

@@ -293,7 +293,7 @@ s.IronSandsRutter =
   """
 
 s.IronSandsRutter2 =
-  label: "Route to Iron Sands (part 2)"
+  label: 'Route to Iron Sands (part 2)'
   history:
     IronSandsRutter: 0
   experience:
@@ -335,7 +335,7 @@ s.IronSandsRutter2 =
     g.roputation.IronSands = 0
 
 s.AsaraTalkFlames =
-  label: "Talk with Asara - Flames"
+  label: 'Talk with Asara - Flames'
   history:
     AsarasMagic: 0
   experience:
@@ -363,7 +363,7 @@ s.AsaraTalkFlames =
   """
 
 s.AsaraTalkNotMagic =
-  label: "Talk with Asara - Magic"
+  label: 'Talk with Asara - Magic'
   history:
     AsarasMagic: 0
   experience:
@@ -385,7 +385,7 @@ s.AsaraTalkNotMagic =
   """
 
 s.AsaraTalkWitch =
-  label: "Talk with Asara - Witch"
+  label: 'Talk with Asara - Witch'
   history:
     AsaraTalkNotMagic: 0
   experience:

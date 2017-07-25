@@ -20,24 +20,22 @@ $ cd /wherever/you/downloaded/the/repository
 $ npm install
 ```
 
-In addition to downloading the necessary dependencies, this will try and build the game. You can also perform a build later, with
+After downloading the necessary dependencies, you can compile the game with
 
 ```
-$ grunt full-build
+$ npm run
 ```
 
-`grunt lib` minifies all the external libraries, while `grunt compile` copies the game js and css. `grunt dump` regenerates dump.html from the coffeescript sources. `grunt sprites` compiles the spritesheets, and is by far the slowest part of the full-build process - fortunately, you won't need to re-run it unless you change the images or fiddle with a character's colors. It accepts people's names as an argument - `grunt sprites:Natalie` will compile images only for her.
+This will compile the game, then watch for changes to any of the source code and recompile. If that went well (no errors), you can now open "/dist/index.html" and it will load your new freshly compiled copy of the game. For the development you can use the task `grunt dev` to start a process which opens a new window and refreshes the browser automatically on changes :)
 
-The default grunt task (invoked with just `grunt`) compiles all of the game's Coffeescript and copies the css into the "/public/game" directory. It then monitors the files in "/src" for changes and recompiles as necessary for as long as you leave it running in the background.
-
-If that all went well (no errors), you can now open "/public/index.html" and it will load your new freshly compiled copy of the game. For the development you can use the task `grunt dev` to start a process which opens a new window and refreshes the browser automatically on changes :)
+When ready to distribute, `npm run full-build` cleans up the current build, starts a new one, and then compresses a ready-to-ship LapisAzurai.zip. Easy peasy!
 
 # License
 
 ## tl;dr
 Share all you like, upload pictures to image boards, make a torrent. Give credit (a link to "created by BlueWinds at http://winds.blue" is enough).
 
-Use the game engine to make your own stuff, but ask me first if you want to use my characters or art in a commercial manner.
+Use the game engine to make your own stuff without getting it touch (including commercially), but ask me first if you want to use my characters or art in a commercial manner.
 
 ## Longer
 * Everything in the "/src/content" folder is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -45,14 +43,14 @@ Use the game engine to make your own stuff, but ask me first if you want to use 
   If you do include it, or a derivative of it in another work, that work must be similarly licensed.
 * All code in the "/src/engine" folder is licensed under [the GPL v2](http://www.gnu.org/licenses/gpl.txt)
   This means that you can redistribute this folder freely as long as you (A) give credit.
-  If you do include it (or a derivative of it) in another work, that work must be freely licensed.
+  If you do include it (or a derivative of it) in another work, that work must also be similarly licensed.
 * Each library in the "/src/lib" directory has its own license. See the header of each file there for details (most are MIT or public domain).
 
 # Credits
 
 * Design, coding, writing and characters are all by BlueWinds (http://winds.blue).
-* Art is commissioned by BlueWinds (released under CC-NC-SA).
+* Art is commissioned or created by BlueWinds. All images included are released under CC-NC-SA
 ** Map by Junior Mclean (http://lordfreeza.deviantart.com/)
-** Location art by Hoang Viet Anh (http://mitteam.deviantart.com/)
-** Natalie, James, Kat and Asara by Kagura Kurosaki (http://kagura-kurosaki.deviantart.com/)
-** All other character art by Indy K (http://indy-k.deviantart.com/)
+** Character art by Indy K (http://indy-k.deviantart.com/)
+** Amandais, Colinth and Tomenoi are modifications of public domain images (original sources unknown) by BlueWinds (http://winds.blue)
+** All other location art by Hoang Viet Anh (http://mitteam.deviantart.com/)

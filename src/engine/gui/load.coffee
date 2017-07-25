@@ -1,14 +1,14 @@
 Story.Load =
   text: ->
     rows = for key in Object.keys(localStorage).sort().reverse()
-      date = new Date parseInt(key, 10)
+      date = new Date(parseInt(key, 10))
       unless date.getTime() then continue
       try
         game = jsyaml.safeLoad(localStorage[key])
       catch e
         continue
 
-      blob = new Blob [localStorage[key]], {type: 'text/plain'}
+      blob = new Blob([localStorage[key]], {type: 'text/plain'})
       blob = URL.createObjectURL blob
 
       name = "#{game.chapter} - Day #{game.day} - #{game.location}"
@@ -43,7 +43,7 @@ Game.showLoadPage = ->
     reader.onload = =>
       $('.import-error', element).remove()
       try
-        window.g = new Game jsyaml.safeLoad(reader.result)
+        window.g = new Game(jsyaml.safeLoad(reader.result))
         $('#content').empty()
         g.last.show()
         g.setGameInfo()

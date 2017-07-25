@@ -58,7 +58,7 @@ $.extend Story, {
     sections = $('<div></div>')
 
     lastSection = $('<section></section>')
-    for line in text.split("\n").filter(Boolean)
+    for line in text.split('\n').filter(Boolean)
       line = line.trim().replace(/`(\w*) (.+?)`/g, Person.quote)
       unless line then continue
 

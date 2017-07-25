@@ -5,7 +5,7 @@ Person.Asara =
   svg: 'people/Asara/skills.svg'
   skills:
     Tears:
-      Description: "Nothing"
+      Description: 'Nothing'
     Fear:
       description: "Double the benefit of all of Natalie's 1st tier skills"
       requiresAnd: ['Tears']

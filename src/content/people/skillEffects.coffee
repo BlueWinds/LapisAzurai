@@ -54,7 +54,7 @@ Cargo.acceptTimeRemaining = (cargo)->
   oldAcceptTimeRemaining(cargo) + has('J', 'Trustworthy')
 
 oldMaxCargo = Cargo.maxCargo
-Cargo.maxCargo = ()->
+Cargo.maxCargo = ->
   oldMaxCargo() + has('J', 'Organized')
 
 oldTravelSpeed = Game.travelPxPerDay
@@ -62,7 +62,7 @@ Game.travelPxPerDay = (type)->
   oldTravelSpeed() + has('J', 'Navigator')
 
 oldDelayDuration = Place.delayDuration
-Place.delayDuration = ()->
+Place.delayDuration = ->
   return oldDelayDuration() - has('J', 'Stoic') * 0.5
 
 oldDelayChance = Place.delayChance
@@ -91,5 +91,5 @@ Story.visibleStories = (stories)->
   return stories.filter(Story.matchesHistory.bind(null, foresight, extraTime))
 
 oldReputationNeeded = Story.reputationNeeded
-Story.reputationNeeded = ()->
+Story.reputationNeeded = ->
   oldReputationNeeded() - has('K', 'HowNotToLose')

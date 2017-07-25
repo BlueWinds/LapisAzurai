@@ -51,13 +51,13 @@ $.extend Person, {
     selected = g.people[person].skills[skill]
 
     selectButton = if selected
-      "<button disabled>Already selected</button>"
+      '<button disabled>Already selected</button>'
     else if Person.unmetRequirements(person, skill)
       "<button disabled>Requires #{Person.unmetRequirements(person, skill)}</button>"
     else if Person.skillPoints(person) <= 0
-      "<button disabled>No skill points</button>"
+      '<button disabled>No skill points</button>'
     else
-      "<button>Select skill</button>"
+      '<button>Select skill</button>'
 
     """<div class="skill" skill=#{skill}>
       <div class="name">#{data.name or skill}</div>

@@ -9,7 +9,7 @@ sampleData =
   experience:
     Natalie: 3
     James: 5
-  text: -> """|| ...etc..."""
+  text: -> '''|| ...etc...'''
 
 window.Story = {
   reputationNeeded: (story)-> if Story[story].blocking then 0 else 15
@@ -39,7 +39,7 @@ window.Story = {
       """#{person} needs #{Person[person].skills[skill].label}"""
     else if g.reputation[place] < Story.reputationNeeded(story)
       """Need #{Math.ceil(Story.reputationNeeded(story) - g.reputation[place])} more rep"""
-    else ""
+    else ''
 
     return need
 

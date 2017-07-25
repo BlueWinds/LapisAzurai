@@ -2,7 +2,7 @@ remainingDiv = (days) ->
   if days >= 0
     """<div><span class="remaining">#{days} days to deliver</span></div>"""
   else
-    """<div><span class="remaining expired">Expired</span></div>"""
+    '''<div><span class="remaining expired">Expired</span></div>'''
 
 $.extend Cargo, {
   drawCargo: ->

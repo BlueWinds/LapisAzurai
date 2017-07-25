@@ -26,7 +26,7 @@ Object.defineProperty Number.prototype, 'toWord', {value: ->
 }
 
 Object.defineProperty Number.prototype, 'round', {value: (count = 1)->
-  return Number(@).toFixed(count).replace(/\.0+$/, "")
+  return Number(@).toFixed(count).replace(/\.0+$/, '')
 }
 
 Object.defineProperty String.prototype, 'capitalize', {value: ->
