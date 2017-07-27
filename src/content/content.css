@@ -14,18 +14,18 @@ g {
   cursor: pointer;
 }
 
-g path:first-child {
+g circle:first-child {
   opacity: 0;
 }
 
-g:hover path:first-child {
+g:hover circle:first-child {
   opacity: 0.7;
 }
 
-g.active path:first-child {
+g.active circle:first-child {
   opacity: 1;
 }
 
-g path:nth-child(3) {
+g circle:nth-child(3) {
   display: none;
 }

@@ -24,7 +24,7 @@
     </mask>
   </defs>
   <g id="MapLayer" >
-    <image id="image3956" xlink:href="content/Map.png" height="1080" width="1542" />
+    <image id="image3956" xlink:href="game/content/Map.png" height="1080" width="1542" />
     <rect id="rect3963" mask="url(#MapMask)" height="1080" width="1542" fill="#000" />
   </g>
   <g id="PathLayer" stroke="#f00" stroke-miterlimit="0" stroke-dasharray="9, 3" stroke-width="3.3" fill="none">

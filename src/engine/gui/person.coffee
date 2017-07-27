@@ -34,9 +34,9 @@ $.extend Person, {
       # 1 = aura
       # 2 = outline
       # 3 = fill
-      $('g path:nth-child(3)', svg).css('display', 'none')
+      $('g circle:nth-child(3)', svg).css('display', 'none')
       for skill of g.people[person].skills
-        $("##{skill} path:nth-child(3)", svg).css('display', 'initial')
+        $("##{skill} circle:nth-child(3)", svg).css('display', 'initial')
 
       $('g', svg).on 'click', ->
         element.find('object').each ->
@@ -45,6 +45,14 @@ $.extend Person, {
 
         element.find('.skill').remove()
         personElement.after(Person.drawSkill(person, @id))
+
+      $('g', svg).hover ->
+        element.find('.skill.mouse-over').remove()
+        skill = $(Person.drawSkill(person, @id)).addClass('mouse-over')
+        personElement.after(skill)
+      , ->
+        if element.find('.skill').length > 1
+          element.find('.skill.mouse-over').remove()
 
   drawSkill: (person, skill)->
     data = Person[person].skills[skill]

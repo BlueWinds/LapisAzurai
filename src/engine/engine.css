@@ -400,6 +400,11 @@ hr {
 }
 
 .skill {
+  border: 1px solid;
+  border-radius: 6px;
+  display: table;
+  margin: auto;
+  padding: 10px;
   text-align: center;
 }
 
@@ -422,4 +427,8 @@ hr {
 .skill button:disabled {
   cursor: default;
   opacity: 0.5;
+}
+
+.skill.mouse-over + .skill {
+  display: none;
 }

@@ -35,7 +35,7 @@ Person.Kat =
       doubledBy: 'Death'
     Deckhand:
       description: "Unlock Kat' route"
-      requiresAnd: ['HowNotToLose', 'NeverTooLate', 'Devilish']
+      requiresOr: ['HowNotToLose', 'NeverTooLate', 'Devilish']
 
     Bright2:
       name: 'Bright 2'
@@ -55,7 +55,7 @@ Person.Kat =
     FreeWoman:
       name: 'Free Woman'
       description: "Unlock Kat's ending (also requires Mage on Natalie)"
-      requiresAnd: ['Bright2', 'Generous2', 'SixthSense2']
+      requiresOr: ['Bright2', 'Generous2', 'SixthSense2']
 
     HowNotToLose2:
       name: 'How Not To Lose 2'

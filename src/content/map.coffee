@@ -1,5 +1,6 @@
 Place.Vailia =
   name: 'Vailia'
+  img: 'places/VailiaDay'
   paths:
     MtJulia: 1
     Alkenia: 1

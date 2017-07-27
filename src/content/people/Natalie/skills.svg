@@ -10,92 +10,92 @@
   </rdf:RDF>
  </metadata>
  <defs>
-  <filter id="bigBlur" height="1.972" width="1.972" y="-.486" x="-.486" color-interpolation-filters="sRGB">
-   <feGaussianBlur stdDeviation="24.304"/>
+  <filter id="bigBlur">
+   <feGaussianBlur stdDeviation="3"/>
   </filter>
-  <radialGradient id="radialGradient9179" gradientUnits="userSpaceOnUse" cy="483.79" cx="251.43" r="60">
+  <radialGradient id="bigBlurGradient">
    <stop stop-color="#aa3600" offset="0"/>
    <stop stop-color="#ffc57d" offset="1"/>
   </radialGradient>
-  <radialGradient id="radialGradient9181" gradientUnits="userSpaceOnUse" cy="483.79" cx="251.43" gradientTransform="matrix(.10482 0 0 .10482 25.906 819.39)" r="60">
+  <radialGradient id="solidGradient">
    <stop stop-color="#ffc57d" offset="0"/>
    <stop stop-color="#aa3600" offset="1"/>
   </radialGradient>
  </defs>
  <path fill="none" d="m33.688 82.738h26.889m93.111-40h26.889m-26.889 40h26.889m93.111-40h26.889m-26.889 40h26.889m-266.89-40h26.889m41.001 22.9-28.726 14.016m28.726-20.016-28.726-13.97m39.996 19.97 28.726 14.016m-28.726-20.016 28.726-14.016m80.004 20.016-28.73 14m28.73-20-28.73-13.97m40 19.97 28.726 14.016m-28.726-20.016 28.726-14.016m80.004 20.016-28.73 14m28.73-20-28.73-13.97" stroke="#999"/>
- <g id="WinningSmile" transform="translate(-24.998 -787.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="WinningSmile" transform="translate(27, 43)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Overdeliver" transform="translate(-24.998 -827.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Overdeliver" transform="translate(27, 83)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Gregarious" transform="translate(15.002 -787.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Gregarious" transform="translate(67, 43)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Grounded" transform="translate(15.002 -827.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Grounded" transform="translate(67, 83)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Initiate" transform="translate(55.002 -807.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Initiate" transform="translate(107, 63)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Overdeliver2" transform="translate(95.002 -787.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Overdeliver2" transform="translate(147, 43)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Gregarious2" transform="translate(95.002 -827.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Gregarious2" transform="translate(147, 83)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="WellInformed" transform="translate(135 -787.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="WellInformed" transform="translate(187, 43)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="SilverTongue" transform="translate(135 -827.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="SilverTongue" transform="translate(187, 83)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Adept" transform="translate(175 -807.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Adept" transform="translate(227, 63)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="WinningSmile2" transform="translate(215 -787.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="WinningSmile2" transform="translate(267, 43)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Grounded2" transform="translate(215 -827.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Grounded2" transform="translate(267, 83)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="WellInformed2" transform="translate(255 -787.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="WellInformed2" transform="translate(307, 43)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="SilverTongue2" transform="translate(255 -827.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="SilverTongue2" transform="translate(307, 83)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Mage" transform="translate(295 -807.36)">
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.18815 0 0 .18815 4.954 779.07)" filter="url(#bigBlur)" fill="url(#radialGradient9179)"/>
-  <path d="m311.43 483.79c0 33.137-26.863 60-60 60s-60-26.863-60-60 26.863-60 60-60 60 26.863 60 60z" transform="matrix(.10482 0 0 .10482 25.906 819.39)" stroke="#ffc57d" stroke-width="8.7" fill="none"/>
-  <path fill="url(#radialGradient9181)" d="m58.55 870.1c0 3.4734-2.8158 6.2892-6.2892 6.2892s-6.2892-2.8158-6.2892-6.2892 2.8158-6.2892 6.2892-6.2892 6.2892 2.8158 6.2892 6.2892z"/>
+ <g id="Mage" transform="translate(347, 63)">
+  <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
+  <circle r="7" fill="url(#solidGradient)"/>
  </g>
 </svg>
