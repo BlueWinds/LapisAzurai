@@ -8,6 +8,7 @@
     "async": "2.x",
     "canvas": "1.x",
     "coffeelint": "1.x",
+    "livereload": "0.x",
     "nodemon": "1.x",
     "npm-run-all": "4.x",
     "shelljs": "0.x",
@@ -25,9 +26,9 @@
     "url": "https://github.com:BlueWinds/LapisAzurai.git"
   },
   "scripts": {
-    "start": "coffeelint -q src/ || true && run-s clean && run-p copy-images uglify watch",
+    "start": "coffeelint -q src/ || true && run-s clean && run-p copy-images uglify watch livereload",
     "compile": "run-p coffee copy-css string-replace",
-    "full-build": "npm run full-compile && zip -r LapisAzurai.zip dist/",
+    "build-dist": "run-s full-compile remove-livereload && zip -r LapisAzurai.zip dist/",
     "full-compile": "coffeelint -q src/ && run-s clean && run-p copy-images copy-static uglify compile",
     "clean": "rm -rf dist LapisAzurai.zip && mkdir dist && mkdir dist/game",
     "coffee": "cat $(grep -v '^#' src/loadOrder) | coffee --compile --stdio > dist/game/compiled.js",
@@ -36,7 +37,9 @@
     "copy-static": "cp src/content/CC-by-nc-sa-4.0.txt dist/game/CC-by-nc-sa-4.0.txt && cp src/engine/GPL.txt dist/game/GPL.txt && cp src/README.txt dist/README.txt",
     "string-replace": "sed '/<svg id=\"map\"><\\/svg>/r src/content/Map.svg' src/index.html | sed 's/<svg id=\"map\"><\\/svg>//' > dist/index.html",
     "uglify": "uglifyjs --compress -- src/lib/*.js > dist/game/lib.js",
-    "watch": "nodemon --watch src/ -e coffee,css --exec 'npm run compile'"
+    "watch": "nodemon --watch src/ -e coffee,css,html --exec 'npm run compile'",
+    "livereload": "livereload dist/",
+    "remove-livereload": "sed -i 's/<script src=\"http:\\/\\/localhost:35729\\/livereload.js\"><\\/script>//' dist/index.html"
   },
   "coffeelintConfig": {
     "arrow_spacing": {

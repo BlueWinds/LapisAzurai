@@ -147,7 +147,7 @@ table td {
 section {
   clear: both;
   display: none;
-  margin-bottom: 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 section:last-child {
@@ -167,7 +167,7 @@ hr {
   border: 0;
   clear: both;
   height: 1px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 #back {

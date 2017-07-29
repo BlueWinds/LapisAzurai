@@ -23,12 +23,12 @@ $ npm install
 After downloading the necessary dependencies, you can compile the game with
 
 ```
-$ npm run
+$ npm start
 ```
 
 This will compile the game, then watch for changes to any of the source code and recompile. If that went well (no errors), you can now open "/dist/index.html" and it will load your new freshly compiled copy of the game. For the development you can use the task `grunt dev` to start a process which opens a new window and refreshes the browser automatically on changes :)
 
-When ready to distribute, `npm run full-build` cleans up the current build, starts a new one, and then compresses a ready-to-ship LapisAzurai.zip. Easy peasy!
+When ready to distribute, `npm run build-dist` cleans up the current build, starts a new one, removes the live-reload script, and then compresses a ready-to-ship LapisAzurai.zip. Easy peasy!
 
 # License
 
