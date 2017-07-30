@@ -23,7 +23,7 @@ s.AlkeniaArrive =
 
     `N No, thank you. A local guide would not be amiss, but I wouldn't want to impose.`
 
-    ` I'm sure any one of the little scoundrels harassing your husband would be happy to help.
+    ` I'm sure any one of the little scoundrels harassing your husband would be happy to help.`
 
     `N He's not... ah, yes, thank you.` She decided it wasn't worth arguing over.
   """
