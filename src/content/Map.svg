@@ -43,18 +43,57 @@
     <circle cx="0" cy="0" r="8" style="fill:none;stroke:#DD0000;stroke-width:1.2;"/>
   </svg>
   <g id="LabelLayer"  font-family="Sans" font-size="18px">
-    <g id="Vailia"><circle cx="646" cy="566" r="5" /><text y="572" x="655">Vailia</text></g>
-    <g id="MtJulia"><circle cx="540" cy="551" r="5" /><text y="573" x="505">Mt. Julia</text></g>
-    <g id="Alkenia"><circle cx="468" cy="516" r="5" /><text y="521" x="393">Alkenia</text></g>
-    <g id="Nonkenia"><circle cx="445" cy="486" r="5" /><text y="477" x="405">Nonkenia</text></g>
-    <g id="IronSands"><circle cx="525" cy="675" r="5" /><text y="695" x="477">Iron Sands</text></g>
-    <g id="Tomenoi"><circle cx="832" cy="470" r="5" /><text y="460" x="792">Tomenoi</text></g>
-    <g id="Colinth"><circle cx="1079" cy="413" r="5" /><text y="403" x="1047">Colinth</text></g>
-    <g id="Kantis"><circle cx="1083" cy="442" r="5" /><text y="464" x="1053">Kantis</text></g>
-    <g id="Spinis"><circle cx="1173" cy="493" r="5" /><text y="515" x="1146">Spinis</text></g>
-    <g id="Lephai"><circle cx="1190" cy="372" r="5" /><text y="378" x="1198">Lephai</text></g>
-    <g id="Amandais"><circle cx="1243" cy="487" r="5" /><text y="507" x="1203">Amandais</text></g>
-    <g id="Ment"><circle cx="1177" cy="332" r="5" /><text y="336" x="1120">Ment</text></g>
-    <g id="Crater"><circle cx="1211" cy="302" r="5" /><text y="307" x="1143">Crater</text></g>
+    <g id="Vailia">
+      <rect x="636" y="556" width="70" height="20" fill="#FFF" />
+      <circle cx="646" cy="566" r="5" /><text y="572" x="655">Vailia</text>
+    </g>
+    <g id="MtJulia">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="540" cy="551" r="5" /><text y="573" x="505">Mt. Julia</text>
+    </g>
+    <g id="Alkenia">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="468" cy="516" r="5" /><text y="521" x="393">Alkenia</text>
+    </g>
+    <g id="Nonkenia">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="445" cy="486" r="5" /><text y="477" x="405">Nonkenia</text>
+    </g>
+    <g id="IronSands">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="525" cy="675" r="5" /><text y="695" x="477">Iron Sands</text>
+    </g>
+    <g id="Tomenoi">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="832" cy="470" r="5" /><text y="460" x="792">Tomenoi</text>
+    </g>
+    <g id="Colinth">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="1079" cy="413" r="5" /><text y="403" x="1047">Colinth</text>
+    </g>
+    <g id="Kantis">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="1083" cy="442" r="5" /><text y="464" x="1053">Kantis</text>
+    </g>
+    <g id="Spinis">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="1173" cy="493" r="5" /><text y="515" x="1146">Spinis</text>
+    </g>
+    <g id="Lephai">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="1190" cy="372" r="5" /><text y="378" x="1198">Lephai</text>
+    </g>
+    <g id="Amandais">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="1243" cy="487" r="5" /><text y="507" x="1203">Amandais</text>
+    </g>
+    <g id="Ment">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="1177" cy="332" r="5" /><text y="336" x="1120">Ment</text>
+    </g>
+    <g id="Crater">
+      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <circle cx="1211" cy="302" r="5" /><text y="307" x="1143">Crater</text>
+    </g>
   </g>
 </svg>

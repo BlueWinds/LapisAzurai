@@ -19,7 +19,7 @@ window.Story = {
       unless g.people[person].skills[skill] then return [person, skill]
     return []
 
-  visibleStories: (stories)->
+  visibleStories: (stories = [])->
     return stories.filter(Story.matchesHistory.bind(null, 0, 0))
 
   canSail: ->

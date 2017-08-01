@@ -186,6 +186,10 @@ hr {
   top: 0;
 }
 
+#LabelLayer g {
+  cursor: pointer;
+}
+
 .place {
   background-color: #151515;
   border: 1px solid #030303;

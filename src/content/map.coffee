@@ -7,7 +7,7 @@ Place.Vailia =
     Nonkenia: 1
     IronSands: 1
     Tomenoi: 1
-    Colinth: 'Tomonoi'
+    Colinth: 'Tomenoi'
     Kantis: 'Tomenoi'
     Amandais: 'Tomenoi'
   stories: {}

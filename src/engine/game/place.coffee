@@ -34,7 +34,7 @@ window.Place = {
       return element.getPointAtLength(len)
 
     # A port
-    circle = document.getElementById(place).children[0]
+    circle = document.getElementById(place).children[1]
     return {x: circle.cx.baseVal.value, y: circle.cy.baseVal.value}
 
   distanceAlongPath: (place, distance)->
@@ -53,17 +53,21 @@ window.Place = {
 
     getElement = (from, to, direction)->
       string = if direction is 1 then (from + '_' + to) else (to + '_' + from)
+      console.log string
       document.getElementById(string)
 
+    console.log origin, destination
     loop
       if typeof Place[location].paths[destination] is 'number'
         paths.push getElement(location, destination, Place[location].paths[destination])
         break
 
       nextStop = Place[location].paths[destination]
-      paths.push getElement(location, nextStop, location.paths[nextStop])
+      console.log 'hi', location, nextStop
+      paths.push getElement(location, nextStop, Place[location].paths[nextStop])
       location = nextStop
 
+    console.log paths
     return paths
 
   travelImages: (element, set)->
