@@ -7,7 +7,7 @@ seasonList = ['Wood', 'Fire', 'Earth', 'Water']
 $ ->
   if not featureDetect() then return
 
-  if not $('#content').length then return
+  if not $('#container').length then return
   Game.guiSetup()
   Story.guiSetup()
 
@@ -17,19 +17,19 @@ $ ->
   Story.drawHistory()
 
 $.extend Game, {
-  year: -> (g.day + startDay) // 360
-  dayOfYear: -> (g.day + startDay) % 360
-  season: -> seasonList[Game.dayOfYear() // 90]
-  dayOfSeason: -> Game.dayOfYear() % 90
-  month: -> monthList[Game.dayOfSeason() // 30]
-  dayOfMonth: -> Game.dayOfYear() % 30
-  date: -> "#{dayList[Game.dayOfMonth()]} of #{Game.month()} #{Game.season()}, #{Game.year()}"
+  year: (d = g.day)-> (d + startDay) // 360
+  dayOfYear: (d = g.day)-> (d + startDay) % 360
+  season: (d = g.day)-> seasonList[Game.dayOfYear(d) // 90]
+  dayOfSeason: (d = g.day)-> Game.dayOfYear(d) % 90
+  month: (d = g.day)-> monthList[Game.dayOfSeason(d) // 30]
+  dayOfMonth: (d = g.day)-> Game.dayOfYear(d) % 30
+  date: (d = g.day)-> "#{dayList[Game.dayOfMonth(d)]} of #{Game.month(d)} #{Game.season(d)}, #{Game.year(d)}"
 
-  drawDate: ->
-    $('header .day').html Game.date()
+  drawDate: (d = g.day)->
+    $('header .day').html Game.date(d)
 
-  drawStatus: -> # Draws the status bar and included items
-    Game.drawDate()
+  drawStatus: (d = g.day)-> # Draws the status bar and included items
+    Game.drawDate(d)
     Cargo.drawCargo()
 
   drawList: (items, draw)->
@@ -49,7 +49,6 @@ $.extend Game, {
     c = $('#content')
 
     $('#new-game').click ->
-      c.empty()
       Game.start($.extend(true, {}, Game.starting))
       Game.drawStatus()
       Place.drawMap()
@@ -63,57 +62,6 @@ $.extend Game, {
       .animate {opacity: 0}, 2000
 
     $('#load-game').click -> Game.showLoadPage()
-
-
-    # Set up draggable map
-    map = $('#map')
-    mapElements = $('#map, #places')
-    dragMap = $('#drag-map')
-
-    # Center the map initially
-    w = map.width()
-    h = map.height()
-    dX = 0
-    dY = 0
-    center = ->
-      dX = (dragMap.width() - w) / 2
-      dY = (dragMap.height() - h) / 2
-      mapElements.css('transform', "translate(#{dX}px, #{dY}px)")
-
-    $(window).on 'resize', center
-    center()
-
-    map.on 'mousedown touchstart', (lastE)->
-      map.on 'mousemove touchmove', (e)->
-        if w > dragMap.width()
-          dX += e.pageX - lastE.pageX
-          dX = Math.min(0, Math.max(dX, dragMap.width() - w))
-
-        if h > dragMap.height()
-          dY += e.pageY - lastE.pageY
-          dY = Math.min(0, Math.max(dY, dragMap.height() - h))
-
-        mapElements.css('transform', "translate(#{dX}px, #{dY}px)")
-        lastE = e
-
-    $(window).on 'mouseup touchend touchcancel', ->
-      map.off('mousemove touchmove')
-
-    $('#LabelLayer g').on 'click', ->
-      label = $(@)
-      place = $('[place="' + @id + '"]')
-      unless place.length then return false
-
-      place.stop().animate({to: place.outerHeight()}, {step: animateClip, duration: 200})
-      label.stop().animate {opacity: 0}, 200
-      $('#map').one 'click', ->
-        place.stop().animate({to: 0}, {step: animateClip, duration: 200})
-        label.stop().animate {opacity: 1}, 200
-
-      return false
-
-    animateClip = (now, fx)->
-      $(@).css('clip', 'rect(0px 500px ' + now + 'px 0)')
 
     $('#container').on 'click', '.overlay', ->
       $('.overlay').animate {opacity: 0}, -> @remove()
@@ -129,28 +77,33 @@ $.extend Game, {
         $('.logo').addClass('active')
         o.addClass('active').css({opacity: 0, display: 'block'}).stop().animate({opacity: 1}, 200)
 
-  showOverlay: (image, duration = 0, c = 'overlay')->
-    overlay = $("""<div class='#{c}'><img src='#{image}'></div>""").css('opacity', 0)
+    Place.guiSetup()
+
+  showOverlay: (element, duration = 0, c = 'overlay', done)->
+    overlay = $("""<div class='#{c}'></div>""").css('opacity', 0).append(element)
     $('#container').append(overlay)
     if duration
       overlay
         .animate({opacity: 1}, duration / 2)
         .delay(duration / 2)
+        # Dummy animation so we can trigger the callback after delay, rather than waiting for the overlay to entirely fade out
+        .animate {opacity: 1}, 1, ->
+          if done then done()
         .animate {opacity: 0}, duration / 2, ->
           overlay.remove()
     else
       overlay.animate({opacity: 1}, 500)
+
+  showPassDayOverlay: (day, next)->
+    Game.showOverlay("<h1>#{Game.date(day)}</h1>", 2000, 'dayOverlay', next)
 }
 
+# Autosave every time a day passes
 oldPassDay = Game.passDay
 Game.passDay = ->
   oldPassDay()
-  Game.drawStatus()
 
   setTimeout ->
-    # Don't save while we're in the middle of traveling
-    unless Place[g.location] then return
-
     delete localStorage[localStorage.autosave]
     now = Date.now()
     localStorage.setItem now, jsyaml.safeDump(g)

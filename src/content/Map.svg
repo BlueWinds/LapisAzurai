@@ -28,15 +28,16 @@
     <rect id="rect3963" mask="url(#MapMask)" height="1080" width="1542" fill="#000" />
   </g>
   <g id="PathLayer" stroke="#f00" stroke-miterlimit="0" stroke-dasharray="9, 3" stroke-width="3.3" fill="none">
-    <path id="Vailia_MtJulia"    d="M 646 566 C 652 603, 557 525, 540 551" travel="Sail"/>
-    <path id="Vailia_Alkenia"    d="M 646 566 C 662 609, 467 485, 468 516" travel="Sail"/>
-    <path id="Vailia_Nonkenia"   d="M 646 566 C 658 603, 547 533, 445 486" travel="Sail"/>
-    <path id="Vailia_IronSands"  d="M 646 566 C 667 569, 511 702, 525 675" travel="Sail"/>
-    <path id="Vailia_Tomenoi"    d="M 646 566 C 633 584, 845 480, 832 470" travel="Sail"/>
-    <path id="MtJulia_Alkenia"   d="M 540 551 C 572 543, 463 502, 468 516" travel="Sail"/>
-    <path id="MtJulia_Nonkenia"  d="M 540 551 C 575 544, 457 494, 445 486" travel="Sail"/>
-    <path id="MtJulia_IronSands" d="M 540 551 C 596 512, 551 694, 525 675" travel="Sail"/>
-    <path id="Alkenia_Nonkenia"  d="M 468 516 C 487 518, 468 508, 445 486" travel="Sail"/>
+    <path id="Vailia_MtJulia"    travel="Sail" d="M 646 566 C 652 603, 557 525, 540 551"/>
+    <path id="Vailia_Alkenia"    travel="Sail" d="M 646 566 C 662 609, 467 485, 468 516"/>
+    <path id="Vailia_Nonkenia"   travel="Sail" d="M 646 566 C 658 603, 547 533, 445 486"/>
+    <path id="Vailia_IronSands"  travel="Sail" d="M 646 566 C 667 569, 511 702, 525 675"/>
+    <path id="Vailia_Tomenoi"    travel="Sail" d="M 646 566 C 633 584, 845 480, 832 470"/>
+    <path id="MtJulia_Alkenia"   travel="Sail" d="M 540 551 C 572 543, 463 502, 468 516"/>
+    <path id="MtJulia_Nonkenia"  travel="Sail" d="M 540 551 C 575 544, 457 494, 445 486"/>
+    <path id="MtJulia_IronSands" travel="Sail" d="M 540 551 C 596 512, 551 694, 525 675"/>
+    <path id="MtJulia_Tomenoi"   travel="Sail" d="M 540,551 c 36,-19 32, 7 71, -7 86, -31 240, -61 221, -75"/>
+    <path id="Alkenia_Nonkenia"  travel="Sail" d="M 468 516 C 487 518, 468 508, 445 486"/>
   </g>
   <svg id="Ship" x="0" y="0" overflow="visible">
     <circle cx="0" cy="0" r="5" style="fill:#DD0000;stroke:none"/>
@@ -44,55 +45,55 @@
   </svg>
   <g id="LabelLayer"  font-family="Sans" font-size="18px">
     <g id="Vailia">
-      <rect x="636" y="556" width="70" height="20" fill="#FFF" />
+      <rect x="636" y="556" width="70" height="20" fill="transparent" />
       <circle cx="646" cy="566" r="5" /><text y="572" x="655">Vailia</text>
     </g>
     <g id="MtJulia">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="505" width="75" y="543" height="36" fill="transparent" />
       <circle cx="540" cy="551" r="5" /><text y="573" x="505">Mt. Julia</text>
     </g>
     <g id="Alkenia">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="390" width="85" y="505" height="20" fill="transparent" />
       <circle cx="468" cy="516" r="5" /><text y="521" x="393">Alkenia</text>
     </g>
     <g id="Nonkenia">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="405" width="83" y="461" height="36" fill="transparent" />
       <circle cx="445" cy="486" r="5" /><text y="477" x="405">Nonkenia</text>
     </g>
     <g id="IronSands">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="476" width="95" y="665" height="36" fill="transparent" />
       <circle cx="525" cy="675" r="5" /><text y="695" x="477">Iron Sands</text>
     </g>
     <g id="Tomenoi">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="790" width="79" y="443" height="36" fill="transparent" />
       <circle cx="832" cy="470" r="5" /><text y="460" x="792">Tomenoi</text>
     </g>
     <g id="Colinth">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="1043" width="72" y="387" height="36" fill="transparent" />
       <circle cx="1079" cy="413" r="5" /><text y="403" x="1047">Colinth</text>
     </g>
     <g id="Kantis">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="1049" width="64" y="432" height="36" fill="transparent" />
       <circle cx="1083" cy="442" r="5" /><text y="464" x="1053">Kantis</text>
     </g>
     <g id="Spinis">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="1143" width="59" y="484" height="36" fill="transparent" />
       <circle cx="1173" cy="493" r="5" /><text y="515" x="1146">Spinis</text>
     </g>
     <g id="Lephai">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="1182" width="78" y="361" height="23" fill="transparent" />
       <circle cx="1190" cy="372" r="5" /><text y="378" x="1198">Lephai</text>
     </g>
     <g id="Amandais">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="1203" width="90" y="477" height="36" fill="transparent" />
       <circle cx="1243" cy="487" r="5" /><text y="507" x="1203">Amandais</text>
     </g>
     <g id="Ment">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="1117" width="69" y="320" height="20" fill="transparent" />
       <circle cx="1177" cy="332" r="5" /><text y="336" x="1120">Ment</text>
     </g>
     <g id="Crater">
-      <rect x="505" width="75" y="543" height="36" fill="#FFF" />
+      <rect x="1142" width="76" y="291" height="20" fill="transparent" />
       <circle cx="1211" cy="302" r="5" /><text y="307" x="1143">Crater</text>
     </g>
   </g>

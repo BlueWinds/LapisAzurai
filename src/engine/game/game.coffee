@@ -26,6 +26,8 @@ sampleGame =
   history:
     Intro: 0
     ExploreWilds: 1
+  openMenus:
+    Alkenia: true
 
 window.Game =
   travelPxPerDay: (type)-> 15

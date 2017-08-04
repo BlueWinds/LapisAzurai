@@ -44,7 +44,7 @@ $.extend Cargo, {
     cargo = g.availableCargo[i]
     Cargo.accept(cargo)
 
-
+    Game.showPassDayOverlay()
     $('.cargo.accept.' + i + ' .success')
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 1500, ->
@@ -53,6 +53,7 @@ $.extend Cargo, {
   clickDeliver: (i)->
     Cargo.deliver(i)
 
+    Game.showPassDayOverlay()
     $('.cargo.delivery.' + i + ' .success')
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 2000, ->

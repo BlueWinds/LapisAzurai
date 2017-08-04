@@ -38,7 +38,7 @@
     "string-replace": "sed '/<svg id=\"map\"><\\/svg>/r src/content/Map.svg' src/index.html | sed 's/<svg id=\"map\"><\\/svg>//' > dist/index.html",
     "uglify": "uglifyjs --compress -- src/lib/*.js > dist/game/lib.js",
     "watch": "nodemon --watch src/ -e coffee,css,html --exec 'npm run compile'",
-    "livereload": "livereload dist/",
+    "livereload": "livereload dist/ -w 150",
     "remove-livereload": "sed -i 's/<script src=\"http:\\/\\/localhost:35729\\/livereload.js\"><\\/script>//' dist/index.html"
   },
   "coffeelintConfig": {

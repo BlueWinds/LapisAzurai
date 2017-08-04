@@ -50,24 +50,21 @@ window.Place = {
   svgElements: (origin, destination)-> # Returns array of svg elements between two locations (direct or indirect route)
     location = origin
     paths = []
+    if origin is destination then return
 
     getElement = (from, to, direction)->
       string = if direction is 1 then (from + '_' + to) else (to + '_' + from)
-      console.log string
       document.getElementById(string)
 
-    console.log origin, destination
     loop
       if typeof Place[location].paths[destination] is 'number'
         paths.push getElement(location, destination, Place[location].paths[destination])
         break
 
       nextStop = Place[location].paths[destination]
-      console.log 'hi', location, nextStop
       paths.push getElement(location, nextStop, Place[location].paths[nextStop])
       location = nextStop
 
-    console.log paths
     return paths
 
   travelImages: (element, set)->
@@ -78,6 +75,7 @@ window.Place = {
     days = Place.travelDays(g.location, to)
 
     direction = if path.id.match(to + '_') then -1 else 1
+    startPoint = (1 - direction) / 2 * path.getTotalLength()
 
     lastMoveStart = null
     events = []
@@ -85,7 +83,7 @@ window.Place = {
     pxPerDay = path.getTotalLength() / days * direction
 
     for day in [0 ... days]
-      if Math.random() < Place.delayChance()
+      if day and Math.random() < Place.delayChance()
         for stormDay in [0 ... Math.ceil(Place.delayDuration())]
           event = {image: Math.choice(Place.travelImages(path, 'delay'))}
           events.push event
@@ -94,13 +92,14 @@ window.Place = {
       event = {image: Math.choice(Place.travelImages(path, 'normal'))}
       if lastMoveStart
         lastMoveStart.travelDays += 1
-        lastMoveStart.startTravel += pxPerDay
+        lastMoveStart.to += pxPerDay
       else
         lastMoveStart = event
         event.travelDays = 1
-        event.startTravel = pxPerDay
+        event.from = startPoint + day * pxPerDay
+        event.to = event.from + pxPerDay
+        event.path = if direction > 0 then (g.location + '_' + to) else (to + '_' + g.location)
       events.push event
-    events[0].location = path.id
     return events
 
   byDistance: (origin)->

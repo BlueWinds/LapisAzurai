@@ -19,7 +19,7 @@ $.extend Story, {
     need = Story.unmetNeed(place, story)
 
     onclick = if g.location is place and not need
-      'onclick=\'Story.apply("' + place + '", "' + story + '");Story.display("' + story + '");Place.drawMap();\''
+      'onclick=\'Story.apply("' + place + '", "' + story + '");Story.display("' + story + '");\''
     else ''
 
     return """<td class="story #{if onclick then 'active' else '' }" #{onclick}>
@@ -29,11 +29,14 @@ $.extend Story, {
     </td>"""
 
   display: (story, goto = true)->
-    elements = Story.render(story)
-    $('#content').empty().css({display: 'block'}).animate({opacity: 1}, 300).append(elements)
-    if goto
-      if g.scroll is -1 then g.scroll = 0
-      Story.forwardSection(elements.first(), 1)
+    Game.showPassDayOverlay g.day, ->
+      elements = Story.render(story)
+      $('#content').css({display: 'block'}).animate {opacity: 1}, 1000, ->
+        Place.drawMap()
+      $('#stories').empty().append(elements)
+      if goto
+        if g.scroll is -1 then g.scroll = 0
+        Story.forwardSection(elements.first(), 1)
 
   drawHistory: ->
     unless g.history.Intro?
@@ -93,35 +96,35 @@ $.extend Story, {
     unless to.length then return Story.enterMap()
 
     to.addClass('active').css('opacity', 0)
-    $('section.active').animate {opacity: 1}, 300
-    $('#content').scrollTo(to, 300, {over: 1}).focus()
+    $('section.active').animate {opacity: 1}, 500
+    $('#stories').stop().scrollTo(to, 300, {over: 1}).focus()
 
   backSection: (from, to)->
     unless to.length then return
     if $('#content').css('display') is 'none' then return Story.exitMap()
 
-    from.animate {opacity: 0}, 300, ->
+    from.animate {opacity: 0}, 500, ->
       from.removeClass('active')
-      $('section.active').animate {opacity: 1}, 300
-    $('#content').scrollTo(to, 300, {over: 1}).focus()
+      $('section.active').animate {opacity: 1}, 500
+    $('#stories').stop().scrollTo(to, 300, {over: 1}).focus()
 
   enterMap: ->
     g.scroll = -1
-    $('#content').stop().animate {opacity: 0}, 300, ->
+    $('#content').stop().animate {opacity: 0}, 500, ->
       # Make sure the user didn't cancel and go back to the previous page before hiding the #content + deactivating sections.
       if $('#content').css('opacity') is '0'
         $('#content').css {display: 'none'}
 
   exitMap: ->
-    g.scroll = $('#content').children().length - 1
-    $('#content').stop().css({display: 'block'}).animate {opacity: 1}, 300
-    $('section.active').animate {opacity: 1}, 300
+    g.scroll = $('#stories').children().length - 1
+    $('#content').stop().css({display: 'block'}).animate {opacity: 1}, 500
+    $('section.active').animate {opacity: 1}, 500
 
   guiSetup: ->
-    $('#content').on 'click', 'img', (e)->
-      Game.showOverlay(e.target.src)
+    $('#stories').on 'click', 'img', (e)->
+      Game.showOverlay("<img src='#{e.target.src}'>")
       return false
-    $('#content').on 'click', ->
+    $('#stories').on 'click', ->
       Story.changeSection(1)
 
     $(window).keydown(keyPress)

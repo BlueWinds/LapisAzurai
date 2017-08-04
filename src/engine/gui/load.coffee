@@ -33,15 +33,17 @@ Story.Load =
     """
 
 Game.showLoadPage = ->
-  Story.display('Load')
-  element = $('#content section')
+  elements = Story.render('Load')
+  $('#content').css({display: 'block'}).animate({opacity: 1}, 300)
+  $('#stories').empty().append(elements)
+  Story.forwardSection(elements.first(), 1)
 
-  $('input', element).change ->
+  $('#stories input').change ->
     unless file = @files[0]
       return
     reader = new FileReader()
     reader.onload = =>
-      $('.import-error', element).remove()
+      $('.import-error').remove()
       try
         window.g = new Game(jsyaml.safeLoad(reader.result))
         $('#content').empty()
@@ -57,7 +59,7 @@ Game.showLoadPage = ->
 
     reader.readAsText file
 
-  $('button', element).click ->
+  $('#stories button').click ->
     row = $(@).closest('tr')
     key = row.attr 'game'
 

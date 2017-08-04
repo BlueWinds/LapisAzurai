@@ -19,6 +19,7 @@ Game.starting =
       skills: {}
   history:
     Intro: 0
+  openMenu: ''
 
 s = {}
 
