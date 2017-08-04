@@ -45,6 +45,17 @@ $.extend Game, {
     """
     Person.activateDrawings(o)
 
+  showOverview: ->
+    Game.drawOverview()
+    $('.logo').addClass('active')
+    $('#overview').addClass('active').css({opacity: 0, display: 'block'})
+    .stop().animate({opacity: 1}, 200)
+
+  hideOverview: ->
+    $('.logo').removeClass('active')
+    $('#overview').removeClass('active').stop().animate {opacity: 0}, 200, ->
+      unless $('#overview').hasClass('active') then o.css('display', 'none')
+
   guiSetup: ->
     c = $('#content')
 
@@ -66,16 +77,11 @@ $.extend Game, {
     $('#container').on 'click', '.overlay', ->
       $('.overlay').animate {opacity: 0}, -> @remove()
 
-    o = $('#overview')
     $('.logo').on 'click', ->
-      if o.hasClass('active')
-        $('.logo').removeClass('active')
-        o.removeClass('active').stop().animate {opacity: 0}, 200, ->
-          unless o.hasClass('active') then o.css('display', 'none')
+      if $('#overview').hasClass('active')
+        Game.hideOverview()
       else
-        Game.drawOverview()
-        $('.logo').addClass('active')
-        o.addClass('active').css({opacity: 0, display: 'block'}).stop().animate({opacity: 1}, 200)
+        Game.showOverview()
 
     Place.guiSetup()
 

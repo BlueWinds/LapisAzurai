@@ -96,6 +96,7 @@ $.extend Place, {
     </div>"""
 
   animateTravel: (to)->
+    Game.hideOverview()
     g.openMenu = ''
     Place.drawMap(false)
     events = Place.travelEvents(to)
