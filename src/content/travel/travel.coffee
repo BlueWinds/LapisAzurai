@@ -1,7 +1,7 @@
-p = 'game/content/travel/'
+p = 'travel/'
 
-Place.travelImages.Sail =
-  normal: [
+Place.travel.Sail =
+  normalImages: [
     p + 'CabinDay.jpg'
     p + 'CabinNight.jpg'
     p + 'DeckDay.jpg'
@@ -10,7 +10,10 @@ Place.travelImages.Sail =
     p + 'SailingDay.jpg'
     p + 'SailingNight.jpg'
   ]
-  delay: [
+  delayDailyChance: 0.05
+  delayDailyDamage: 1.5
+  delayAvgDuration: 4
+  delayImages: [
     p + 'CabinStorm.jpg',
     p + 'DeckStorm.jpg',
     p + 'SailingStorm.jpg'

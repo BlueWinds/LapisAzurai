@@ -52,6 +52,9 @@
     for (let key in Story) {
       if (!Story[key].text) { continue; }
 
+      if (!Story[key].effects) {
+        console.log(key);
+      }
       sections = Story.render(key);
       sections.each(function(i) {
         len = $(this).text().length;

@@ -27,7 +27,7 @@
     <image id="image3956" xlink:href="game/content/Map.png" height="1080" width="1542" />
     <rect id="rect3963" mask="url(#MapMask)" height="1080" width="1542" fill="#000" />
   </g>
-  <g id="PathLayer" stroke="#f00" stroke-miterlimit="0" stroke-dasharray="9, 3" stroke-width="3.3" fill="none">
+  <g id="PathLayer" stroke="#f00" stroke-dasharray="9, 6" stroke-width="1.5" fill="none">
     <path id="Vailia_MtJulia"    travel="Sail" d="M 646 566 C 652 603, 557 525, 540 551"/>
     <path id="Vailia_Alkenia"    travel="Sail" d="M 646 566 C 662 609, 467 485, 468 516"/>
     <path id="Vailia_Nonkenia"   travel="Sail" d="M 646 566 C 658 603, 547 533, 445 486"/>

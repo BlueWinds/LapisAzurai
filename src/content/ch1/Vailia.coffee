@@ -12,10 +12,10 @@ Game.starting =
     MtJulia: 0
   people:
     Natalie:
-      experience: 0
+      xp: 0
       skills: {}
     James:
-      experience: 0
+      xp: 0
       skills: {}
   history:
     Intro: 0
@@ -77,8 +77,9 @@ s.Ch1 =
   blocking: true
   history:
     Intro: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || N/Normal
     The Guild.
@@ -122,8 +123,9 @@ s.ReadyToGo =
   blocking: true
   history:
     Ch1: 0
-  experience:
-    James: 2
+  effects:
+    xp:
+      James: 2
   text: -> """
   || travel/CabinDay
     Natalie laid aside her pen and admonished James, looming in the doorway. `N If you're going to fill the room with dread, at least enter all the way.`
@@ -163,9 +165,11 @@ s.FirstStorm =
   blocking: true
   history:
     MtJuliaArrive: 0
-  experience:
-    James: 3
-    Natalie: 3
+  effects:
+    damage: 6
+    xp:
+      James: 3
+      Natalie: 3
   text: -> """
   || travel/CabinStorm
     `J Natalie! <b>Nat! Get up!</b>` James pounded on her door and shouted.
@@ -255,8 +259,9 @@ s.FirstStormSick =
   blocking: true
   history:
     FirstStorm: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: -> """
   || places/VailiaDay
     ` And she hasn't moved since?` The priest shook his head, trying to keep pace with the young man as he pushed his way through the crowd.
@@ -288,9 +293,10 @@ s.WastingMoney =
   label: 'Wasting Money'
   history:
     KatJoins: 0
-  experience:
-    Kat: 5
-    Natalie: 3
+  effects:
+    xp:
+      Kat: 5
+      Natalie: 3
   text: -> """
   || places/VailiaDay
     `N Here. 13 obols for the last voyage, plus 3 back pay from last voyage - sorry about that, it was a little tight when they refused to pay full price - minus 4 for that bottle of wine you stole from the cargo - ` Natalie smiled inwardly at Kat's guilty look. Mystery solved, and score one point for guessing where it had run off to. `N - minus 2 for that day you forgot your wallet... makes... 10.`
@@ -313,8 +319,9 @@ s.AsaraArrives =
   label: 'Asara Arrives'
   history:
     AsaraAwakens: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: -> """
   || A/Normal
     `A Not leaving.`
@@ -328,9 +335,10 @@ s.AsaraWorriesJames =
   label: 'James Worries'
   history:
     AsaraAwakens: 0
-  experience:
-    Asara: 3
-    James: 3
+  effects:
+    xp:
+      Asara: 3
+      James: 3
   text: -> """
   || travel/DeckDay
     `J Everything about this is a bad idea,` James threw out casually, not pausing in his work. One of the Lapis' sails lay spread out on deck while they checked for worn spots. Natalie hadn't liked the way it had hung during the last trip.
@@ -352,8 +360,9 @@ s.AlkeniaRoute =
   label: 'Route to Alkenia'
   history:
     FirstStormSick: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: -> """
   || places/GuildOffice
     The Guild building was fortified. James noted with some satisfaction that even though they had no <i>current</i> rivals for power in Vailia, they still kept the sharp edge that they'd used finally secure a monopoly on Vailian trading abroad a generation ago. He liked working for people like that - an institution you could count on to endure. He wondered if Natalie had ever noticed the metal gates ready to be dropped in the face of violence, and the way a guard - unobtrusive, but present - appraised him as he entered. Probably not. She didn't care about things like that.
@@ -384,8 +393,9 @@ s.MeetMeghan =
   history:
     AsaraArrives: 0
     KatJoins: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/GuildOffice
     Janos glanced between Natalie and his other guest. His desk was, unusually, clear, as though he'd put away everything in preparation for Natalie's arrival. No, he wouldn't care if Natalie saw his work - he'd put it away for his other guest.

@@ -5,8 +5,9 @@ s.Ch2 =
   label: 'Chapter 2 - Kantis'
   history:
     MeetMeghan: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/GuildOffice
     Natalie grinned and waved at the young man at the front desk, but didn't stop – no time to chat, only time to pause and shake water out her hair. Without James here to tug at her wrist she was running rather late, despite having given herself plenty of time to arrive. She hurried along the familiar corridors towards Janos' office.
@@ -53,8 +54,9 @@ s.TomenoiRoute =
   label: 'Route to Kantis'
   history:
     Ch2: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: ->"""
   || places/GuildOffice
     `A Natalie sent me.`
@@ -91,8 +93,9 @@ s.JamesUpsetMagic =
   label: 'James is Upset'
   history:
     Ch2: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: ->"""
   || travel/CabinNight
     `N So, when're you going to say something?`
@@ -115,8 +118,9 @@ s.NonkeniaRoute =
   label: 'Nonkenia Rutter'
   history:
     TomenoiRoute: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: -> """
   || places/GuildOffice
     Asara stood silently in the lobby of the Guild hall. No one approached her. No one met her eyes. It was unnerving, having so many people passing by and not one of them cared about her presence. The lack of attention - positive or negative - was unnerving. She was here on Natalie's business. She'd spoken with the ruler of this place, the one they called Guildmaster. Someone should have known why she was here and taken care of it without prompting.
@@ -141,8 +145,9 @@ s.NonkeniaDiplomat =
   label: 'Diplomatic Delivery'
   history:
     NonkeniaRoute: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/GuildOffice
     `N Guildmaster Janos,` Natalie grinned and sauntered into his office unannounced. It had cost her an obol at the front desk to see him on the quiet, but the look of surprise on his face as she sat herself down across from him was worth it.
@@ -171,8 +176,9 @@ s.TrainCombatNat =
   label: 'Lessons for Natalie'
   history:
     Ch2: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/VailiaDay
     `N Hey! I heard you teach people weapons?` Natalie squatted down in front of the man drinking from a clay pitcher. He was rough-faced, at least six feet tall, and wore a broadsword strapped to his back. There was no denying that this was Torril, one of the more famous mercenaries in Vailia, now retired. Sitting and drinking in the rain, for some reason, rather than under the awning only a few steps behind him.
@@ -188,8 +194,9 @@ s.TrainCombatJames =
   label: 'Lessons for James'
   history:
     TrainCombatNat: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: -> """
   || places/VailiaDay
     `J I need some help.` James presented himself to Torril, a retired mercenary captain.
@@ -209,8 +216,9 @@ s.TrainCombatKat =
   label: 'Lessons for Kat'
   history:
     TrainCombatNat: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: -> """
   || places/VailiaDay
     Kat slumped her way into the courtyard, managing to look as though she was being dragged even though no one was anywhere near her. `K I'm supposed to learn how to fight,` she addressed the retired mercenary.
@@ -230,8 +238,9 @@ s.TrainCombatKat =
   label: 'Lessons for Asara'
   history:
     TrainCombatNat: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: -> """
   || places/VailiaDay
     `K I believe you can help me,` Asara spoke to the mercenary captain without preamble or introduction.
@@ -249,8 +258,9 @@ s.IronSandsRutter =
   label: 'Route to Iron Sands (part 1)'
   history:
     JamesUpsetMagic: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: -> """
   || places/GuildOffice
     `Guildmaster Come in. Kat, is it?`
@@ -296,8 +306,9 @@ s.IronSandsRutter2 =
   label: 'Route to Iron Sands (part 2)'
   history:
     IronSandsRutter: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: ->"""
   || travel/CabinDay
     `N Kat, did you ever visit Janos? I've been so busy it slipped my mind. It didn't sound like anything urgent.`
@@ -338,8 +349,9 @@ s.AsaraTalkFlames =
   label: 'Talk with Asara - Flames'
   history:
     AsarasMagic: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: ->"""
   || places/VailiaDay
     `N Hah, caught you!` Natalie spun around, pointing dramatically at Asara still several paces away, ghosting in her direction.
@@ -366,8 +378,9 @@ s.AsaraTalkNotMagic =
   label: 'Talk with Asara - Magic'
   history:
     AsarasMagic: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: ->"""
   || places/VailiaNight
     `N You said that your blessings weren't magic?` Natalie popped one of the questions that had been on her mind ever since the night when Asara had demonstrated the strength to bend steel with her bare hands. Even ignoring the time when she'd reduced a large vessel to burned splinters while handcuffed. This night was similar - cloudless sky, calm water, a sense of quiet waiting.
@@ -388,9 +401,10 @@ s.AsaraTalkWitch =
   label: 'Talk with Asara - Witch'
   history:
     AsaraTalkNotMagic: 0
-  experience:
-    Natalie: 3
-    Asara: 2
+  effects:
+    xp:
+      Natalie: 3
+      Asara: 2
   text: ->"""
   || travel/CabinStorm
     `N Why do you keep calling me a witch?` Natalie looked up from her her reading and quirked her head, finally asking one of the many questions that had been bothering her. The room rocked gently, no more sign of the storm's fury reaching them in her cabin than the creaking of wood and an occasional draft of damp air.
@@ -408,8 +422,9 @@ s.JamesParents =
   label: "James' Parents"
   history:
     JamesUpsetMagic2: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: ->"""
   || places/VailiaDay
     James raised a hand to knock, hesitated, lowered it again. The weather beaten door was the same as ever, but not the same at all. Scarred and blackened with soot, he traced a finger along a groove where the boards were coming apart. His mother had wanted to replace it for years, but James agreed with his father - it was a piece of family history, as irreplaceable in its own way as the anvil upon which three generations had made their living.
@@ -428,9 +443,10 @@ s.JamesParents2 =
   history:
     JamesParents: 0
   blocking: true
-  experience:
-    James: 2
-    Natalie: 2
+  effects:
+    xp:
+      James: 2
+      Natalie: 2
   text: ->"""
   || travel/DeckNight
     `N You didn't speak with them.` Natalie came up behind James and rapped him on the back of his head.
@@ -458,8 +474,9 @@ s.TomenoiHistory2 =
   label: 'History'
   history:
     TomenoiHistory: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: ->"""
   || places/VailiaDay
     `Meghan Natalie, welcome. And you are...`
@@ -509,9 +526,10 @@ s.MeghanSuitors =
   label: "Lady Meghan's Problem"
   history:
     MeetMeghan: 0
-  experience:
-    Natalie: 2
-    James: 2
+  effects:
+    xp:
+      Natalie: 2
+      James: 2
   text: ->"""
   || places/VailiaNight
     `N James. Stop fidgeting and stand still. Yes, I know. It's too fancy for you. But stop fidgeting anyway, because you're here now and I'm not leaving until I've made my rounds.` Grasping him firmly by the upper arm - without appearing to do so, because actually needing to drag her date around by the arm was too embarrassing to contemplate - Natalie made her way to the next noble she wished to speak with.
@@ -585,8 +603,9 @@ s.MeghanSuitors2 =
   blocking: true
   history:
     MeghanSuitors: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/VailiaNight
     `N I can't believe I got away with that,` Natalie burst into nervous giggles as soon as the door to Meghan's tiny little house closed behind them.

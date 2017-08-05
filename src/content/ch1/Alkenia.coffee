@@ -4,8 +4,9 @@ s.AlkeniaArrive =
   blocking: true
   history:
     AlkeniaRoute: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/AlkeniaDay
     Excited shouts and waving arms guided the Azurai into dock at Alkenia, one of Vailia's primary trading partners. Another free city, Alkenia nestled in the arms of an encircling mountain, stone bluffs trailing into the sea on either side of the city and providing protection from storms. A stream ran down the valley though the center of town fed by springs further up the slope. The Alkenians made their livings from the forest and the shore, supplying Vailia with timber in return for steady shipments manufactured goods or other items from farther afield. Without the vast and relatively safe forests, Natalie's homeland would be unable to keep a significant navy afloat against the terrible attrition of the open ocean.
@@ -32,8 +33,9 @@ s.MeetKat =
   label: 'Pickpocket'
   history:
     AlkeniaArrive: 0
-  experience:
-    Natalie: 2
+  effects:
+    xp:
+      Natalie: 2
   text: -> """
   || places/AlkeniaDay
     Alkenia's market was a crowded place, stalls buying and selling almost every imaginable good. Though, Natalie noted, the prices were often somewhat inflated compared to what one would pay in Vailia itself. She had never before had enough money to consider most of the items on sale, or at least not had the intention to spend that much money. She was too busy saving up for her grand adventure. Now, though... now she could sample whatever she liked and call it a business expense. A merchant had to know what, exactly, they were selling, after all!
@@ -59,8 +61,9 @@ s.MeetKat =
 s.MeetKat2 =
   history:
     MeetKat: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/AlkeniaDay
     Wandering the market, enjoying the scene, looking for new and exotic items, Natalie was enjoying her afternoon. A slight breeze, a feeling of lightness, a...
@@ -102,8 +105,9 @@ s.MeetKat2 =
 s.KatTrial =
   history:
     MeetKat2: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/AlkeniaStorm
     Natalie arrived early at the courthouse – one of two in Alkenia, and by far the poorest and busiest. This one handled justice for those neither wealthy nor influential enough to arrange trial away from all the noise and bustle.
@@ -139,9 +143,10 @@ s.KatMeetsJames =
   blocking: true
   history:
     KatTrial: 0
-  experience:
-    James: 2
-    Kat: 3
+  effects:
+    xp:
+      James: 2
+      Kat: 3
   text: -> """
   || places/AlkeniaNight
     `K Hi!`
@@ -169,9 +174,10 @@ s.KatMeetsJames =
 s.KatStorm =
   history:
     KatMeetsJames: 0
-  experience:
-    Natalie: 3
-    Kat: 3
+  effects:
+    xp:
+      Natalie: 3
+      Kat: 3
   text: -> """
   || places/AlkeniaStorm
     Though the weather had maintained a pleasant tenor all through the day, as the sun set, clouds began to blow in from the horizon. Not a dangerous storm, just a bit of nasty rain to put a damper on Natalie's plans for the evening in town.
@@ -242,8 +248,9 @@ s.KatStorm2 =
 s.KatJoins =
   history:
     KatStorm2: 0
-  experience:
-    Kat: 5
+  effects:
+    xp:
+      Kat: 5
   text: -> """
   || places/AlkeniaDay
     `K Get me out of here.`

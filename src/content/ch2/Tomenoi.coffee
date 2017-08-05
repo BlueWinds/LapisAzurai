@@ -5,8 +5,9 @@ s.TomenoiArrive =
   blocking: true
   history:
     TomenoiRoute: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/TomenoiDay
     The keel shifted under Natalie's guidance, and the Lapis turned briefly into the wind before settling down on the other tack. She frowned in concentration - if the wind had been blowing any harder against them, she'd have settled for weighing anchor in the harbor and conducting business by boat. But the ship felt good under her hands, the crew confident and cheerful, so an upwind docking into the space between two other ships it was.
@@ -40,8 +41,9 @@ s.AsaraJoinsCrew =
   history:
     TomenoiArrive: 0
     AsarasMagic: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: -> """
   || travel/CabinDay
     `A I will work.`
@@ -68,8 +70,9 @@ s.StrandedShip =
   label: 'Stranded Ship'
   history:
     TomenoiArrive: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || travel/DeckFog
     The Lapis was half a day out from Tomenoi when Kat called down from the crow's nest. `K Ship ahoy! 30 degrees starboard!` Natalie rushed up to the front of the ship, peering into the fog.
@@ -102,8 +105,9 @@ s.KantisRegion =
   label: 'Route to Kantis'
   history:
     AsaraJoinsCrew: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/TomenoiDay
     `N I give up.` Natalie flopped back against the stone wall and slid down to the ground, ignoring the dust that puffed up around her. `N No idea where to go from here.`
@@ -123,8 +127,9 @@ s.KantisRegion2 =
   label: 'Route to Kantis'
   history:
     KantisRegion: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: -> """
   || places/TomenoiDay
     ` Priestess.`
@@ -158,8 +163,9 @@ s.KantisRegion3 =
   blocking: true
   history:
     KantisRegion2: 0
-  experience:
-    Asara: 2
+  effects:
+    xp:
+      Asara: 2
   text: -> """
   || travel/CabinNight
     `N Were did you get this?`
@@ -179,8 +185,9 @@ s.TomenoiHistory =
   label: 'History'
   history:
     TomenoiArrive: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: ->"""
   || places/TomenoiDay
     Too much James brooding. Too much Asara brooding. Too much Natalie hovering over them and pretending not too. Kat went for a walk. Too much everyone being idiots and not talking to each other the way they should.

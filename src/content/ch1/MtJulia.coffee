@@ -4,9 +4,10 @@ s.MtJuliaArrive =
   blocking: true
   history:
     ReadyToGo: 0
-  experience:
-    James: 3
-    Natalie: 3
+  effects:
+    xp:
+      James: 3
+      Natalie: 3
   text: -> """
   || places/MtJuliaDay
     Mount Julia loomed up out of the ocean, a jagged peak that had been growing on the horizon all day. If the current wind held steady, the Lapis would arrive just after midnight – enough time for everyone to rest and catch their breath before exploring the city in the morning. A week of sailing had settled the crew into a comfortable routine. James often took the night shift, watching the helm while the captain slept, and some of the more experienced sailors were finally starting to warm up tho Natalie and respect her judgment.
@@ -29,8 +30,9 @@ s.CheckShip =
   label: 'Check for Damage'
   history:
     MtJuliaArrive: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: -> """
   || places/MtJuliaDay
     The Azurai shouldn't have taken any damage from such a minor voyage in calm weather, but it didn't hurt to check. James stripped down to his trunks – any issues would begin below the waterline on the outside of the hull long before they became visible to the occupants.
@@ -46,8 +48,9 @@ s.VisitInn =
   label: 'Visit Inn'
   history:
     MtJuliaArrive: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || places/Tavern
     Natalie was surprised, walking in, to see a little girl tending the bar. Perhaps twelve, she smiled and greeted Nat with a cheerful wave, not pausing in her current attempt to mop the floor into some state of cleanliness. Rather than spilled beer, though, her main enemy at the moment seemed to be leaves, seeds, and other detritus from the forest. It wasn't hard to understand why – other than the Azurai, there are no other ships docked in the bay.
@@ -69,8 +72,9 @@ s.MeetAsara =
   label: 'Castaway'
   history:
     FirstStormSick: 0
-  experience:
-    Natalie: 2
+  effects:
+    xp:
+      Natalie: 2
   text: -> """
   || travel/SilverFire
     Natalie stood up suddenly, hair prickling along the back of her neck. It felt... It felt like a storm, but it wasn't. Powerful magic lashed the sea and sky. She threw open her door and dashed on-deck.
@@ -127,9 +131,10 @@ s.AsaraAwakens =
   label: 'Castaway'
   history:
     MeetAsara: 0
-  experience:
-    Natalie: 2
-    Asara: 5
+  effects:
+    xp:
+      Natalie: 2
+      Asara: 5
   text: -> """
   || travel/CabinDay
     The Azurai's new passenger had nightmares. Her terrible, screaming terrors roused the whole ship before Natalie could shake her free of them. Physical contact seemed to reinforce the fear rather than assuage it. Still, Natalie figured, passing out from terror and resting peacefully must be better for her recovery than thrashing and screaming.

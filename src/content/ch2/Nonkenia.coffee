@@ -4,8 +4,9 @@ s.NonkeniaArrive =
   label: 'Arrival'
   history:
     NonkeniaRoute: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: ->"""
   || places/NonkeniaNight
     The Lapis arrived late at night, slipping silently into the sheltered bay that Natalie's maps insisted was the center of Nonkenia. It was hard to believe that this empty expanse of sand, much like hundreds of others they'd already sailed past, was something special.
@@ -35,9 +36,10 @@ s.NonkeniaDiplomatDelivery =
   history:
     NonkeniaDiplomatSailing: 0
     NonkeniaArrive: 0
-  experience:
-    Natalie: 3
-    James: 3
+  effects:
+    xp:
+      Natalie: 3
+      James: 3
   text: -> """
   || places/NonkeniaDay
     Sploosh.
@@ -60,8 +62,9 @@ s.AsaraTalkEyes =
   label: 'Talk with Asara - Silver Eyes'
   history:
     AsarasMagic: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: ->"""
   || places/NonkeniaNight
     `N Your eyes, you pointed to them when you mentioned the 'blessing of steel'?` Natalie decided to press for some answers. She had many more questions, but this seemed safer than the others for the moment.
@@ -81,8 +84,9 @@ s.AsaraTalkSisters =
   label: 'Talk with Asara - Sisters'
   history:
     AsaraTalkEyes: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: ->"""
   || places/NonkeniaDay
     `N You've mentioned your sisters a couple of times. Not biological sisters, I gather?` Natalie asked, curious to see if Asara would continue talking about herself. The young woman never volunteered information, only answered questions, but somehow it didn't feel like Natalie's intrusions were unwelcome.
@@ -102,8 +106,9 @@ s.JamesConfusion =
   label: 'Tension'
   history:
     JamesParents: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: -> """
   || travel/DeckDay
     `N Look, are you going to jump me or not?` Natalie finally expressed her frustration straight to James' face. Those deckhands who happened to be in the area were wise enough to clear out immediately. He gaped at her, turned a bright shade of red. Though he worked his mouth, nothing came out.
@@ -123,8 +128,9 @@ s.NonkeniaHunters =
   label: 'Hunters'
   history:
     NonkeniaArrive: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: ->"""
   || places/NonkeniaStorm
     Blinking, Asara stepped back into the bushes from which she had just come. Half a dozen men and women stood in the clearing just ahead, gathering at the front door of a hut and applying paint to each other's faces. Each of them was armed with a spear, and two little girls walked around passing out javelins.

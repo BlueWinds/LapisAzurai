@@ -66,7 +66,11 @@ window.Cargo =
   deliver: (index)->
     cargo = g.cargo[index]
     g.cargo.splice(index, 1)
+    effects = {reputation: {}}
     if Cargo.deliveryTimeRemaining(cargo) >= 0
-      g.reputation[cargo.from] += Cargo.fromReputation()
-      g.reputation[cargo.to] += Cargo.toReputation()
+      effects.reputation[cargo.from] = Cargo.fromReputation()
+      effects.reputation[cargo.to] = Cargo.toReputation()
     Game.passDay()
+    Game.applyEffects(effects)
+
+    return effects

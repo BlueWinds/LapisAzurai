@@ -24,12 +24,12 @@ $.extend Story, {
 
     return """<td class="story #{if onclick then 'active' else '' }" #{onclick}>
       <span class="label">#{Story[story].label}</span><span class="cost">#{Story.reputationNeeded(story)} rep</span></div>
-      <div class="participants">#{Object.keys(Story[story].experience).wordJoin()}</div>
+      <div class="participants">#{Game.drawEffects Story[story].effects}</div>
       #{need}
     </td>"""
 
   display: (story, goto = true)->
-    Game.showPassDayOverlay g.day, ->
+    Game.showPassDayOverlay g.day, Game.drawEffects(Story.effects(story)), ->
       elements = Story.render(story)
       $('#content').css({display: 'block'}).animate {opacity: 1}, 1000, ->
         Place.drawMap()

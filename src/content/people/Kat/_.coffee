@@ -5,10 +5,10 @@ Person.Kat =
   svg: 'people/Kat/skills.svg'
   skills:
     Bright:
-      description: 'Events grant +1 experience to a random participant'
+      description: 'Events grant +1 xp to a random participant'
       doubledBy: 'Regret'
     Generous:
-      description: 'Events grant +1 experience to a random non-participant'
+      description: 'Events grant +1 xp to a random non-participant'
       doubledBy: 'Regret'
     SixthSense:
       name: 'Sixth Sense'
@@ -21,16 +21,16 @@ Person.Kat =
 
     HowNotToLose:
       name: 'How Not To Lose'
-      description: 'Events cost -1 Reputation'
+      description: 'Events cost -2 Reputation'
       requiresAnd: ['StreetRat']
       doubledBy: 'Regret'
     NeverTooLate:
       name: 'Never Too Late'
-      description: 'Events last an additional day'
+      description: 'Events are available for an additional day'
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Devilish:
-      description: '50% change to discard an expired cargo when completing another one'
+      description: '50% change to discard an expired cargo when completing a different delivery'
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Deckhand:
@@ -39,12 +39,12 @@ Person.Kat =
 
     Bright2:
       name: 'Bright 2'
-      description: 'Events grant +1 experience to a random participant'
+      description: 'Events grant +1 xp to a random participant'
       requiresAnd: ['Deckhand']
       doubledBy: 'Death'
     Generous2:
       name: 'Generous 2'
-      description: 'Events grant +1 experience to a random non-participant'
+      description: 'Events grant +1 xp to a random non-participant'
       requiresAnd: ['Deckhand']
       doubledBy: 'Death'
     SixthSense2:
@@ -59,12 +59,12 @@ Person.Kat =
 
     HowNotToLose2:
       name: 'How Not To Lose 2'
-      description: 'Events cost -1 Reputation'
+      description: 'Events cost -2 Reputation'
       requiresAnd: ['FreeWoman']
       doubledBy: 'Desire'
     NeverTooLate2:
       name: 'Never Too Late 2'
-      description: 'Events last an additional day'
+      description: 'Events are available for an additional day'
       requiresAnd: ['FreeWoman']
       doubledBy: 'Desire'
     Devilish2:

@@ -40,7 +40,7 @@ Person.Natalie =
       doubledBy: 'Trust'
     SilverTongue:
       name: 'Silver Tongue'
-      description: '+1 Reputation at each location daily'
+      description: '+0.5 Reputation at each location daily'
       requiresAnd: ['Gregarious2']
       doubledBy: 'Trust'
     Adept:
@@ -64,7 +64,7 @@ Person.Natalie =
       doubledBy: 'Love'
     SilverTongue2:
       name: 'Silver Tongue 2'
-      description: '+1 Reputation at each location daily'
+      description: '+0.5 Reputation at each location daily'
       requiresAnd: ['Grounded2']
       doubledBy: 'Love'
     Mage:

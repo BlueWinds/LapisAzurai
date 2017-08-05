@@ -17,8 +17,7 @@ sampleGame =
     Vailia: 0.95231
   people:
     Natalie:
-      name: 'Natalie'
-      experience: 100
+      xp: 100
       skills:
         Captain: true
         EarToTheGround: true
@@ -46,6 +45,18 @@ window.Game =
     for i in [data.version ... Game.updates.length]
       Game.updates[i](data)
     data.version = Game.updates.length
+
+  applyEffects: (e)->
+    for place, rep of (e.reputation or {})
+      g.reputation[place] or= 0
+      g.reputation[place] += rep
+    for person, xp of (e.xp or {})
+      g.people[person] or= {skills: {}, xp: 0}
+      g.people[person].xp += xp
+    if e.damage
+      g.damage += e.damage
+      g.damage = Math.max(0, g.damage)
+    return
 
   passDay: ->
     g.day++

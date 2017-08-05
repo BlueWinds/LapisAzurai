@@ -5,13 +5,13 @@ Person.James =
   svg: 'people/James/skills.svg'
   skills:
     Reliable:
-      description: '+1 day to deliver cargo'
+      description: 'Repair the ship 50% faster'
       doubledBy: 'Duty'
     Trustworthy:
-      description: '+1 day to accept cargo'
+      description: '+1 day to deliver cargo'
       doubledBy: 'Duty'
     Stoic:
-      description: 'Storms delay by half a day less'
+      description: 'Storms are half a day shorter (on average)'
       requiresOr: ['Reliable', 'Stoic']
       doubledBy: 'Duty'
     WeatherEye:
@@ -25,12 +25,12 @@ Person.James =
 
     Reliable2:
       name: 'Reliable 2'
-      description: '+1 day to deliver cargo'
+      description: 'Repair the ship 50% faster'
       requiresOr: ['Stoic', 'Trustworthy2']
       doubledBy: 'Power'
     Trustworthy2:
       name: 'Trustworthy 2'
-      description: '+1 day to accept cargo'
+      description: '+1 day to deliver cargo'
       requiresOr: ['WeatherEye', 'Reliable2']
       doubledBy: 'Power'
     Organized:
@@ -52,7 +52,7 @@ Person.James =
       doubledBy: 'Devotion'
     Stoic2:
       name: 'Stoic 2'
-      description: 'Storms delay by half a day less'
+      description: 'Storms are half a day shorter (on average)'
       requiresOr: ['Navigator', 'WeatherEye2']
       doubledBy: 'Devotion'
     Organized2:

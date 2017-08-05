@@ -1,6 +1,6 @@
 Place.Vailia =
   name: 'Vailia'
-  img: 'places/VailiaDay'
+  img: 'places/VailiaDay.jpg'
   paths:
     MtJulia: 1
     Alkenia: 1
@@ -23,7 +23,7 @@ Place.Vailia =
 
 Place.MtJulia =
   name: 'Mt. Julia'
-  img: 'places/MtJuliaDay'
+  img: 'places/MtJuliaDay.jpg'
   paths:
     Vailia: -1
     Alkenia: 1
@@ -40,7 +40,7 @@ Place.MtJulia =
 
 Place.Alkenia =
   name: 'Alkenia'
-  img: 'places/AlkeniaDay'
+  img: 'places/AlkeniaDay.jpg'
   paths:
     Vailia: -1
     MtJulia: -1
@@ -62,7 +62,7 @@ Place.Alkenia =
 
 Place.Nonkenia =
   name: 'Nonkenia'
-  img: 'places/NonkeniaDay'
+  img: 'places/NonkeniaDay.jpg'
   paths:
     Vailia: -1
     MtJulia: -1
@@ -80,7 +80,7 @@ Place.Nonkenia =
 
 Place.IronSands =
   name: 'Iron Sands'
-  img: 'places/IronSandsDay'
+  img: 'places/IronSandsDay.jpg'
   paths:
     Vailia: -1
     MtJulia: -1
@@ -99,7 +99,7 @@ Place.IronSands =
 
 Place.Tomenoi =
   name: 'Tomenoi'
-  img: 'places/TomenoiDay'
+  img: 'places/TomenoiDay.jpg'
   paths:
     Vailia: -1
     MtJulia: -1
@@ -119,7 +119,7 @@ Place.Tomenoi =
 
 Place.Colinth =
   name: 'Colinth'
-  img: 'places/ColinthDay'
+  img: 'places/ColinthDay.jpg'
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
@@ -138,7 +138,7 @@ Place.Colinth =
 
 Place.Kantis =
   name: 'Kantis'
-  img: 'places/KantisDay'
+  img: 'places/KantisDay.jpg'
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
@@ -157,7 +157,7 @@ Place.Kantis =
 
 Place.Amandais =
   name: 'Amandais'
-  img: 'places/AmandaisDay'
+  img: 'places/AmandaisDay.jpg'
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'

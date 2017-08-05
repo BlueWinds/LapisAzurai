@@ -5,9 +5,10 @@ s.IronSandsArrive =
   blocking: true
   history:
     IronSandsRutter2: 0
-  experience:
-    James: 3
-    Natalie: 3
+  effects:
+    xp:
+      James: 3
+      Natalie: 3
   text: -> """
   || places/IronSandsDay
     Natalie shielded her eyes from the sun and hugged her jacket closer around her. Wind bit through the cloth, whipped her hair into her eyes, blew grit into her mouth if she opened it at the wrong moment. How a place could be both so blindingly bright and yet so cold at the same time was a mystery to her, one she had no real desire to solve. Finally, in frustration, she pulled on a storm-cap just to keep her hair out of her eyes.
@@ -42,9 +43,10 @@ s.JamesUpsetMagic2 =
   history:
     JamesUpsetMagic: 0
     IronSandsArrive: 0
-  experience:
-    Natalie: 3
-    James: 3
+  effects:
+    xp:
+      Natalie: 3
+      James: 3
   text: ->"""
   || travel/CabinNight
     A hesitant knock. That could only mean one thing. James never hesitated to address business, no matter how bad the news. He must finally want to discuss whatever has been bothering him. Natalie hesitated a moment, then, `N Enter.`
@@ -94,8 +96,9 @@ s.IronSandsRest =
   label: 'Resting in the Bunkhouse'
   history:
     IronSandsArrive: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: -> """
   || places/IronSandsDay
     Kat flopped onto the couch and rested her head against the padded surface. Even in here, in the bunkhouse that served as an inn for the miners, grit was everywhere, and when she'd complained about it to the proprietor, she'd only gotten a pitying look and the repeated promise that the place was swept twice a day.
@@ -107,8 +110,9 @@ s.IronSandsJamesFlirt =
   label: 'Flirting Cara'
   history:
     IronSandsArrive: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: ->"""
   || places/IronSandsNight
     James swallowed and stared at his beer, not daring to look up. A half-occupied bunkhouse served as the tavern here in Iron Sands. He'd come for a drink, but now couldn't relax. Every time he'd looked up he was being stared at. Not by most people, happy to mind their own business, just, with unnerving intensity by...
@@ -133,8 +137,9 @@ s.IronSandsAsaraTalk =
   label: "Asara's Spirits"
   history:
     IronSandsArrive: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: ->"""
   || places/IronSandsDay
     `Cara I wanted to talk to you about those spirits of yours.`

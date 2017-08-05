@@ -2,9 +2,10 @@ s = {}
 s.KatShowsSamsGrave =
   history:
     JamesUpsetMagic: 0
-  experience:
-    James: 3
-    Kat: 4
+  effects:
+    xp:
+      James: 3
+      Kat: 4
   text: ->"""
   || places/AlkeniaDay
     James jerked and rubbed the side of his head, looking around for the source of the sting. Kat. Sitting on the roof at the edge of the market, she gave him a cheerful wave and hucked another pebble at his head. This one missed, stinging the back of another shopper. James muttered an apology on her on her behalf and went to see what she wanted.
@@ -49,8 +50,9 @@ s.AlkeniaWeaponsRunning =
   label: 'Forestry'
   history:
     Ch2: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: ->"""
   || places/AlkeniaDay
     ` The biggest danger is raiders from Nonkenia,` the lumberjack spat the name. ` They have some devilish pact or other that keeps 'em hidden in the forest until too late. You take my advice, miss,` he leaned against his burden, a section of tree trunk almost as big around and tall as as she was, ` you won't go out there without a nice big group to keep you safe.`
@@ -68,8 +70,9 @@ s.AlkeniaWeaponsRunning2 =
   label: 'Weapons Running'
   history:
     AlkeniaWeaponsRunning: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: ->"""
   || travel/CabinDay
     `J Are you sure we should be doing this, Nat?` James kicked the cask. Compared to the beating it'd take during loading or unloading, a stray kick was nothing. It did waft the scent of the pine oil and honey in Natalie's direction, one sealing the contents against saltwater in case the hold flooded and the other hinting at the contents. Most deals were primarily in goods - far easier for a company to find spare stock than hard cash, and easier for the merchants as well. Only large companies had enough cash to outright purchase enough cargo to fill a ship. `J I don't like being an arms merchant.`
@@ -88,8 +91,9 @@ s.AlkeniaRaid =
   label: 'Nonkenian Raid'
   history:
     NonkeniaHunters: 0
-  experience:
-    Asara: 5
+  effects:
+    xp:
+      Asara: 5
   text: ->"""
   || places/AlkeniaStorm
     An alarm beat in the distance, brass gong barely audible over the crash of waves in the harbor. Asara shielded her eyes, trying to keep the driving rain out of them long enough to see something useful, but to no avail. Alkenia looked quiet as ever, the same buildings huddling together for shelter and same empty streets washing storm water down to the harbor.
@@ -119,9 +123,10 @@ s.DeliciousFood =
   label: 'Delicious Food'
   history:
     AsaraJoinsCrew: 0
-  experience:
-    Kat: 3
-    Asara: 3
+  effects:
+    xp:
+      Kat: 3
+      Asara: 3
   text: -> """
   || places/AlkeniaDay
     `K Asara. This is the best, come on, try it.` Kat dragged the reluctant woman by one wrist, pulling her towards one of the many street food venders lining Vailia's streets on a market day.
@@ -143,8 +148,9 @@ s.KatBringsToys =
   label: 'Vailian Toys'
   history:
     KatShowsSamsGrave: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: -> """
   || places/AlkeniaDay
     Kat huffed as she dropped the heavy canvas bag. It had been a long hill, and she almost wished she'd accepted James' offer to come with her. Almost. This was still a thing better done alone.

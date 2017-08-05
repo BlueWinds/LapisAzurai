@@ -1,5 +1,5 @@
 samplePerson =
-  experience: 100
+  xp: 100
   skills:
     EarToTheGround: true
 
@@ -29,7 +29,7 @@ window.Person = {
     return l
 
   skillPoints: (person)->
-    level = Person.level(g.people[person].experience)
+    level = Person.level(g.people[person].xp)
     return level - Object.keys(g.people[person].skills).length
 
   unmetRequirements: (person, skill)->

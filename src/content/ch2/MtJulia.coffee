@@ -4,8 +4,9 @@ s.NonkeniaDiplomatSailing =
   label: 'Make nice with Diplomat'
   history:
     NonkeniaDiplomat: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: -> """
   || Ameliss/Normal
     `N Come in, please.` Natalie shut the door behind Ameliss and gestured to the single chair, taking a seat on the bed herself.
@@ -27,8 +28,9 @@ s.GatherWood =
   label: 'Gather Wood'
   history:
     Ch2: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: -> """
   || places/MtJuliaDay
     Mt. Julia's forested surroundings were an excellent source of timber, untamed and mostly unexploited by human hands - but only a secondary source of lumber for Vailia's growing merchant fleet. With almost no permanent inhabitants, it made only a minimal contribution to the region's industry, despite its seeming abundance.
@@ -40,8 +42,9 @@ s.ExploreForest =
   label: 'Explore Forest'
   history:
     GatherWood: 0
-  experience:
-    James: 3
+  effects:
+    xp:
+      James: 3
   text: ->"""
   || N/Upset
     `N I don't see what you hope to find. The bartender's a little odd, sure, but outside of Vailia <i>everywhere</i> is a little odd. This place is harmless enough. Let's not go poking it with a stick to see what we can wake up.`
@@ -76,8 +79,9 @@ s.AbandonedShip =
   label: 'Encounter at Sea'
   history:
     Ch2: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: ->"""
   || travel/SailingDay
     `K Ship ahoy!` Kat called out from her position on the starboard side of the deck, and everyone turned to look. Natalie shaded her eyes, trying to make out anything in the bright sun.
@@ -105,8 +109,9 @@ s.AsarasMagic =
   label: "Asara's Magic"
   history:
     TomenoiRoute: 0
-  experience:
-    Asara: 5
+  effects:
+    xp:
+      Asara: 5
   text: -> """
   || travel/DeckNight
     `A I wish to test my power.`

@@ -9,7 +9,7 @@ $.extend Person, {
     </div>"""
 
   draw: (person)->
-    xp = g.people[person].experience
+    xp = g.people[person].xp
     level = Person.level(xp)
     needed = Person.xpNeeded(level + 1)
     skillPoints = Person.skillPoints(person)
@@ -20,7 +20,7 @@ $.extend Person, {
       <img src="game/content/#{Person[person].img}.png">
       <div>
         <div class="name">#{Person[person].name}</div>
-        <div class="description">Level #{level} (#{xp}/#{needed} xp)</div>
+        <div class="description">Level #{level} (#{needed - xp}xp needed for level #{level + 1})</div>
       </div>
       <div class="picks #{if skillPoints > 0 then 'active' else ''}">#{skillPoints} skill point#{s} remaining</div>
       <object data="game/content/#{Person[person].svg}"></object>
@@ -65,11 +65,15 @@ $.extend Person, {
     else if Person.skillPoints(person) <= 0
       '<button disabled>No skill points</button>'
     else
-      '<button>Select skill</button>'
+      "<button onclick='Person.clickSkill(\"#{person}\", \"#{skill}\")'>Select skill</button>"
 
     """<div class="skill" skill=#{skill}>
       <div class="name">#{data.name or skill}</div>
       #{selectButton}
       <p>#{data.description}</p>
     </div>"""
+
+  clickSkill: (person, skill)->
+    g.people[person].skills[skill] = true
+    Game.drawOverview()
 }

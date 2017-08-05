@@ -5,8 +5,9 @@ s.ColinthArrive =
   blocking: true
   history:
     KantisRegion3: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: -> """
   || places/ColinthDay
     For the first time since taking possession of the Lapis Azurai, Natalie was reminded of exactly how <i>small</i> of a ship it was. While Colinth's docks teamed with fishing boats, cutters, and other ships of the Lapis' class, all of them moved around several hulking giants, clearly ships of war. Catapults mounted on deck, triple banks of oars, high fore and aft castles with arrow slits... Vailia had nothing like them.
@@ -28,8 +29,9 @@ s.ColinthAmulets =
   label: 'Magical Amulet'
   history:
     ColinthArrive: 0
-  experience:
-    Natalie: 2
+  effects:
+    xp:
+      Natalie: 2
   text: -> """
   || places/ColinthDay
     Natalie winced and rubbed her forehead. Something in the air around here felt miserable, a constant low buzzing. It had begun when she'd entered the shop, and Kat had only shaken her head, not feeling anything, when Nat had asked her. `N I'm sorry, what I got distracted. What was that?` She tried to refocus on the conversation.
@@ -51,8 +53,9 @@ s.ColinthAmulets2 =
   label: 'Magical Amulet'
   history:
     ColinthAmulets: 0
-  experience:
-    Kat: 3
+  effects:
+    xp:
+      Kat: 3
   text: -> """
   || travel/CabinNight
     `N You didn't.`
@@ -96,8 +99,9 @@ s.Muggers =
   label: 'Muggers'
   history:
     ColinthArrive: 0
-  experience:
-    Asara: 3
+  effects:
+    xp:
+      Asara: 3
   text: -> """
   || places/ColinthNight
     `A I do not like this place.` Asara kept close to Natalie as they walked.
@@ -140,8 +144,9 @@ s.KantianSorcerer =
   label: 'Sorcerer'
   history:
     ColinthAmulets: 0
-  experience:
-    Natalie: 3
+  effects:
+    xp:
+      Natalie: 3
   text: ->"""
   || places/ColinthNight
     Natalie stood in the storm, luxuriating it the feel of wind and lightning and rain untamed. The region around Kantis felt somehow different from that around Vailia - wilder, less controlled. Perhaps it was the lack of Lady Meghan. Without a supremely powerful sorceress drawing the elements into her orbit, they were free. For once Natalie's magic didn't hurt. She let the power flow through and around her, ignoring the chill seeping steadily through her bones and rivulets of water finding their way underneath her cloak.

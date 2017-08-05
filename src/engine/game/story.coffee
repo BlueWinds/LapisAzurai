@@ -6,9 +6,10 @@ sampleData =
   history:
     DeliciousFood: 5 # Must be at least 5 days in the past
     Chapter3: -10 # Must have occurred within the last 10 days
-  experience:
-    Natalie: 3
-    James: 5
+  effects:
+    xp:
+      Natalie: 3
+      James: 5
   text: -> '''|| ...etc...'''
 
 window.Story = {
@@ -23,6 +24,7 @@ window.Story = {
     return stories.filter(Story.matchesHistory.bind(null, 0, 0))
 
   canSail: ->
+    if g.damage then return false
     not Story.visibleStories(Place[g.location].stories[g.chapter]).some (p)-> Story[p].blocking
 
   matchesHistory: (foresight, extraTime, story)->
@@ -43,9 +45,10 @@ window.Story = {
 
     return need
 
+  effects: (story)-> Story[story].effects or {}
+
   apply: (place, story)->
-    for character, exp in Story[story].experience
-      g.people[character].experience += exp
+    Game.applyEffects(Story.effects(story))
     g.reputation[place] -= Story.reputationNeeded(story)
     if Story[story].apply then Story[story].apply()
     g.history[story] = g.day

@@ -45,6 +45,17 @@ $.extend Game, {
     """
     Person.activateDrawings(o)
 
+  drawEffects: (e)->
+    text = []
+    for key, results of e
+      if typeof results is 'number'
+        results = Math.round(results * 10) / 10
+        text.push "#{results} #{key}"
+      else
+        for name, amount of results
+          text.push "#{amount} #{key} for #{name}"
+    return text.join('\n')
+
   showOverview: ->
     Game.drawOverview()
     $('.logo').addClass('active')
@@ -54,7 +65,7 @@ $.extend Game, {
   hideOverview: ->
     $('.logo').removeClass('active')
     $('#overview').removeClass('active').stop().animate {opacity: 0}, 200, ->
-      unless $('#overview').hasClass('active') then o.css('display', 'none')
+      unless $('#overview').hasClass('active') then $('#overview').css('display', 'none')
 
   guiSetup: ->
     c = $('#content')
@@ -100,8 +111,10 @@ $.extend Game, {
     else
       overlay.animate({opacity: 1}, 500)
 
-  showPassDayOverlay: (day, next)->
-    Game.showOverlay("<h1>#{Game.date(day)}</h1>", 2000, 'dayOverlay', next)
+  showPassDayOverlay: (day, result, next)->
+    console.log result
+    Game.drawStatus(day)
+    Game.showOverlay("<h1>#{Game.date(day)}</h1><h3>#{result}</h3>", 2000, 'dayOverlay', next)
 }
 
 # Autosave every time a day passes

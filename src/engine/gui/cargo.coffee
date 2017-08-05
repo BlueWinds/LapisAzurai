@@ -44,16 +44,16 @@ $.extend Cargo, {
     cargo = g.availableCargo[i]
     Cargo.accept(cargo)
 
-    Game.showPassDayOverlay()
+    Game.showPassDayOverlay(undefined, "Loaded #{cargo.name.toLowerCase()} destined for #{cargo.to}")
     $('.cargo.accept.' + i + ' .success')
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 1500, ->
         Place.drawMap()
 
   clickDeliver: (i)->
-    Cargo.deliver(i)
+    effects = Cargo.deliver(i)
 
-    Game.showPassDayOverlay()
+    Game.showPassDayOverlay(undefined, Game.drawEffects(effects))
     $('.cargo.delivery.' + i + ' .success')
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 2000, ->
