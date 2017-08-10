@@ -22,16 +22,23 @@ $.extend Story, {
       'onclick=\'Story.apply("' + place + '", "' + story + '");Story.display("' + story + '");\''
     else ''
 
-    return """<td class="story #{if onclick then 'active' else '' }" #{onclick}>
-      <span class="label">#{Story[story].label}</span><span class="cost">#{Story.reputationNeeded(story)} rep</span></div>
+    return """<td class="story #{if onclick then 'active' else '' }" #{onclick} story="#{story}">
+      <div>
+        <span class="label">#{Story[story].label}</span><span class="cost">#{Story.reputationNeeded(story)} rep</span>
+        <span class="success">✓</span>
+      </div>
       <div class="participants">#{Game.drawEffects Story[story].effects}</div>
       #{need}
     </td>"""
 
   display: (story, goto = true)->
+    $('.story[story="' + story + '"] .success')
+      .animate({opacity: 1}, 500)
+      .animate {opacity: 0}, 1500
     Game.showPassDayOverlay g.day, Game.drawEffects(Story.effects(story)), ->
       elements = Story.render(story)
       $('#content').css({display: 'block'}).animate {opacity: 1}, 1000, ->
+        Game.hideOverview(500)
         Place.drawMap()
       $('#stories').empty().append(elements)
       if goto

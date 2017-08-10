@@ -3,6 +3,11 @@ $.extend Person, {
     unless Person[name] then name = Person.alias[name]
     "<q class=#{name}>#{text}</q>"
 
+  drawPicks: ->
+    skillPoints = Math.sum Object.keys(g.people).map((p)-> Person.skillPoints(p))
+    s = if skillPoints is 1 then '' else 's'
+    $('header .picks').html "#{skillPoints} skill point#{s} available"
+
   drawOverview: ->
     """<div class="people">
       #{Object.keys(g.people).map(Person.draw).join('\n')}
@@ -22,7 +27,7 @@ $.extend Person, {
         <div class="name">#{Person[person].name}</div>
         <div class="description">Level #{level} (#{needed - xp}xp needed for level #{level + 1})</div>
       </div>
-      <div class="picks #{if skillPoints > 0 then 'active' else ''}">#{skillPoints} skill point#{s} remaining</div>
+      <div class="picks #{if skillPoints > 0 then 'active' else ''}">#{skillPoints} skill point#{s} available</div>
       <object data="game/content/#{Person[person].svg}"></object>
     </div>"""
 

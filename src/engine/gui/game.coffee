@@ -25,12 +25,10 @@ $.extend Game, {
   dayOfMonth: (d = g.day)-> Game.dayOfYear(d) % 30
   date: (d = g.day)-> "#{dayList[Game.dayOfMonth(d)]} of #{Game.month(d)} #{Game.season(d)}, #{Game.year(d)}"
 
-  drawDate: (d = g.day)->
-    $('header .day').html Game.date(d)
-
   drawStatus: (d = g.day)-> # Draws the status bar and included items
-    Game.drawDate(d)
+    $('header .day').html Game.date(d)
     Cargo.drawCargo()
+    Person.drawPicks()
 
   drawList: (items, draw)->
     if items.length
@@ -49,12 +47,11 @@ $.extend Game, {
     text = []
     for key, results of e
       if typeof results is 'number'
-        results = Math.round(results * 10) / 10
-        text.push "#{results} #{key}"
+        text.push "#{results.toFixed(1)} #{key}"
       else
         for name, amount of results
-          text.push "#{amount} #{key} for #{name}"
-    return text.join('\n')
+          text.push "#{amount} #{key} for #{Place[name]?.name or Person[name]?.name}"
+    return text.join('<br>\n')
 
   showOverview: ->
     Game.drawOverview()
@@ -62,9 +59,9 @@ $.extend Game, {
     $('#overview').addClass('active').css({opacity: 0, display: 'block'})
     .stop().animate({opacity: 1}, 200)
 
-  hideOverview: ->
+  hideOverview: (duration = 200)->
     $('.logo').removeClass('active')
-    $('#overview').removeClass('active').stop().animate {opacity: 0}, 200, ->
+    $('#overview').removeClass('active').stop().animate {opacity: 0}, duration, ->
       unless $('#overview').hasClass('active') then $('#overview').css('display', 'none')
 
   guiSetup: ->
@@ -112,7 +109,6 @@ $.extend Game, {
       overlay.animate({opacity: 1}, 500)
 
   showPassDayOverlay: (day, result, next)->
-    console.log result
     Game.drawStatus(day)
     Game.showOverlay("<h1>#{Game.date(day)}</h1><h3>#{result}</h3>", 2000, 'dayOverlay', next)
 }

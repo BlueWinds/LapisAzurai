@@ -18,9 +18,12 @@ src/engine/gui/cargo.coffee
 # Finally the content
 src/content/map.coffee
 src/content/travel/travel.coffee
+src/content/people/skillEffects.coffee
+
 src/content/people/Natalie/_.coffee
 src/content/people/James/_.coffee
 src/content/people/Kat/_.coffee
+src/content/people/Asara/_.coffee
 src/content/people/Guildmaster/_.coffee
 src/content/people/Sailors/_.coffee
 src/content/people/Guard/_.coffee
@@ -28,6 +31,7 @@ src/content/people/Meghan/_.coffee
 src/content/people/Elakim/_.coffee
 src/content/people/Cara/_.coffee
 src/content/people/Ameliss/_.coffee
+
 
 src/content/ch1/Vailia.coffee
 src/content/ch1/MtJulia.coffee

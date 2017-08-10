@@ -68,7 +68,7 @@
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Adept" transform="translate(227, 63)">
+ <g id="Mage" transform="translate(227, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
@@ -93,7 +93,7 @@
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
  </g>
- <g id="Mage" transform="translate(347, 63)">
+ <g id="Adept" transform="translate(347, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>

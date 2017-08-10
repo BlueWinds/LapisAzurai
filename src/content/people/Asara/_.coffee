@@ -5,7 +5,7 @@ Person.Asara =
   svg: 'people/Asara/skills.svg'
   skills:
     Tears:
-      Description: 'Nothing'
+      description: 'Nothing'
     Fear:
       description: "Double the benefit of all of Natalie's 1st tier skills"
       requiresAnd: ['Tears']
@@ -23,7 +23,7 @@ Person.Asara =
       description: "Double the benefit of all of Natalie's 2nd tier skills"
       requiresAnd: ['Duty']
     Moon:
-      description: "Unlock Asara's route"
+      description: "Unlock Asara's route (also requires Mage on Natalie)"
       requiresAnd: ['Trust']
 
     Death:
@@ -33,7 +33,7 @@ Person.Asara =
       description: "Double the benefits of all of James' 2nd tier skills"
       requiresAnd: ['Death']
     Goddess:
-      description: "Unlock Asara's ending (also requires Mage on Natalie)"
+      description: "Unlock Asara's ending (also requires Adept on Natalie)"
       requiresAnd: ['Power']
 
     Love:

@@ -43,19 +43,19 @@ Person.Natalie =
       description: '+0.5 Reputation at each location daily'
       requiresAnd: ['Gregarious2']
       doubledBy: 'Trust'
-    Adept:
+    Mage:
       description: 'Unlock character routes'
       requiresAnd: ['WellInformed', 'SilverTongue2']
 
     WinningSmile2:
       name: 'Winning Smile 2'
       description: 'Reputation decays 10% slower'
-      requiresAnd: ['Adept']
+      requiresAnd: ['Mage']
       doubledBy: 'Love'
     Grounded2:
       name: 'Grounded 2'
       description: 'A new cargo becomes available whenever you deliver one'
-      requiresAnd: ['Adept']
+      requiresAnd: ['Mage']
       doubledBy: 'Love'
     WellInformed2:
       name: 'Well Informed 2'
@@ -67,6 +67,6 @@ Person.Natalie =
       description: '+0.5 Reputation at each location daily'
       requiresAnd: ['Grounded2']
       doubledBy: 'Love'
-    Mage:
+    Adept:
       description: 'Unlock endings'
       requiresAnd: ['WellInformed2', 'SilverTongue2']

@@ -52,27 +52,30 @@
     for (let key in Story) {
       if (!Story[key].text) { continue; }
 
-      if (!Story[key].effects) {
-        console.log(key);
+      link = '<a href="#' + key + '">' + key + '</a>';
+
+      if (!Story[key].label) {
+        w.append('<li>' + link + ' is missing a label</li>');
       }
+
       sections = Story.render(key);
       sections.each(function(i) {
         len = $(this).text().length;
 
         if ($(this).find('img').length && len < 200) {
-          w.append('<li><a href="#' + key + '">' + key + '.' + i + '</a> has an image, but is only ' + len + ' characters long.</li>');
+          w.append('<li>' + link + ' has an image, but is only ' + len + ' characters long.</li>');
         }
 
         if (len > 1500) {
-           w.append('<li><a href="#' + key + '">' + key + '.' + i + '</a> is ' + len + ' characters long, consider breaking it up.</li>');
+           w.append('<li>' + link + ' is ' + len + ' characters long, consider breaking it up.</li>');
         }
 
         $(this).find('img').on('error', function(e) {
-          w.prepend('<li><a href="#' + key + '">' + key + '.' + i + '</a> wanted invalid image "' + decodeURI(this.src.split('content/')[1]) + '"</li>');
+          w.prepend('<li>' + link + ' wanted invalid image "' + decodeURI(this.src.split('content/')[1]) + '"</li>');
         });
       });
 
-      i.append('<li><a href="#' + key + '">' + key + '</a></li>');
+      i.append('<li>' + link + '</li>');
       s.append('<h1 id="' + key + '">' + key + ' <a href="#index">^</a></h1>');
       s.append(sections);
     }

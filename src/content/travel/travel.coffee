@@ -10,7 +10,7 @@ Place.travel.Sail =
     p + 'SailingDay.jpg'
     p + 'SailingNight.jpg'
   ]
-  delayDailyChance: 0.05
+  delayDailyChance: 0.04
   delayDailyDamage: 1.5
   delayAvgDuration: 4
   delayImages: [

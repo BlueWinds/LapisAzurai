@@ -31,12 +31,12 @@ $.extend Cargo, {
 
   drawDelivery: (cargo)->
     i = g.cargo.indexOf(cargo)
-    onclick = if g.location is cargo.to and Story.canSail()
+    onclick = if g.location is cargo.to
       'onclick="Cargo.clickDeliver(' + i + ');"'
     else ''
 
     """<td class="cargo delivery #{i} #{if onclick then 'active' else ''}" #{onclick}>
-      <div>Deliver <span class="what">#{cargo.name}</span> from <span class="from">#{cargo.from}</span><span class="success">✓</span></div>
+      <div>Deliver <span class="what">#{cargo.name}</span> from <span class="from">#{Place[cargo.from].name}</span><span class="success">✓</span></div>
       #{remainingDiv Cargo.deliveryTimeRemaining(cargo)}
     </td>"""
 

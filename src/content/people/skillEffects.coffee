@@ -2,13 +2,13 @@
 has = (alias, skill, second)->
   p = Person.alias[alias]
   doubledBy = Person[p].skills[skill].doubledBy
-  multiplier = if g.people.Asara.skills[doubledBy] then 2 else 1
+  multiplier = if g.people.Asara?.skills[doubledBy] then 2 else 1
 
-  skill = (g.people[p].skills[skill] or 0) * multiplier
-  unless second then skill += has(alias, skill + '2', true)
-  return skill
+  value = (g.people[p]?.skills[skill] or 0) * multiplier
+  unless second then value += has(alias, skill + '2', true)
+  return value
 
-oldDecay = Game.decayReputation
+oldDecay = Place.decayReputation
 Place.decayReputation = (rep)->
   decay = 1 + has('N', 'WinningSmile') * 0.02
   return oldDecay(rep * decay)
@@ -23,7 +23,7 @@ Cargo.fromReputation = ->
 
 oldDeliver = Cargo.deliver
 Cargo.deliver = (cargo)->
-  oldDeliver(cargo)
+  effects = oldDeliver(cargo)
   Cargo.createRandom(has('N', 'Grounded'))
 
   # Select a maximum of (Devilish / 2) expired cargoes...
@@ -32,6 +32,8 @@ Cargo.deliver = (cargo)->
   discard = undelivered.slice(0, discardCount)
   # ... and remove them from the ship.
   g.cargo = g.cargo.filter (c)-> c not in discard
+
+  return effects
 
 oldNewCargoDaily = Cargo.newCargoDaily
 Cargo.newCargoDaily = ->
@@ -47,6 +49,7 @@ Place.passDay = ->
 
 oldRepairRate = Place.repairRate
 Place.repairRate = ->
+  console.log oldRepairRate(), has('J', 'Reliable')
   oldRepairRate() * (1 + 0.5 * has('J', 'Reliable'))
 
 oldDeliveryTimeRemaining = Cargo.deliveryTimeRemaining
@@ -58,16 +61,16 @@ Cargo.maxCargo = ->
   oldMaxCargo() + has('J', 'Organized')
 
 oldTravelSpeed = Game.travelPxPerDay
-Game.travelPxPerDay = (type)->
-  oldTravelSpeed() + has('J', 'Navigator')
+Game.travelPxPerDay = (travel)->
+  oldTravelSpeed(travel) + has('J', 'Navigator')
 
 oldDelayDuration = Place.delayDuration
-Place.delayDuration = ->
-  return oldDelayDuration() - has('J', 'Stoic') * 0.5
+Place.delayDuration = (travel)->
+  return oldDelayDuration(travel) - has('J', 'Stoic') * 0.5
 
 oldDelayChance = Place.delayChance
-Place.delayChance = ->
-  return oldDelayChance() * (1 - has('J', 'WeatherEye') * 0.1)
+Place.delayChance = (travel)->
+  return oldDelayChance(travel) * (1 - has('J', 'WeatherEye') * 0.1)
 
 oldEffects = Story.effects
 Story.effects = (story)->
@@ -95,5 +98,5 @@ Story.visibleStories = (stories)->
   return stories.filter(Story.matchesHistory.bind(null, foresight, extraTime))
 
 oldReputationNeeded = Story.reputationNeeded
-Story.reputationNeeded = ->
-  Math.max(0, oldReputationNeeded() - 2 * has('K', 'HowNotToLose'))
+Story.reputationNeeded = (story)->
+  Math.max(0, oldReputationNeeded(story) - 2 * has('K', 'HowNotToLose'))

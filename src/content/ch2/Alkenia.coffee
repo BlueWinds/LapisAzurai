@@ -1,5 +1,6 @@
 s = {}
 s.KatShowsSamsGrave =
+  label: "Kat's Grave"
   history:
     JamesUpsetMagic: 0
   effects:

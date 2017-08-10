@@ -4,6 +4,7 @@ Game.starting =
   scroll: 0
   chapter: 'Ch1'
   cargo: []
+  damage: 0
   availableCargo: []
   location: 'Vailia'
   distance: 0
@@ -248,6 +249,7 @@ s.FirstStorm =
 
     He slumped to the floor, his back to her bed, and waited.
 
+  ||
     Waited.
 
   ||

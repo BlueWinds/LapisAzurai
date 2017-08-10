@@ -102,6 +102,11 @@ table td {
   right: 0;
 }
 
+.repair .success, .story .success {
+  line-height: 2.8em;
+  right: 0;
+}
+
 #flex {
   top: 65px;
   left: 0px;

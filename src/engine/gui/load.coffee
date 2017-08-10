@@ -1,4 +1,5 @@
 Story.Load =
+  label: 'Load'
   text: ->
     rows = for key in Object.keys(localStorage).sort().reverse()
       date = new Date(parseInt(key, 10))

@@ -67,10 +67,14 @@ $.extend Place, {
     </div>"""
 
   drawRepair: ->
+    repair = Math.min(Place.repairRate(), g.damage)
     """<td class="story active repair" onclick="Place.clickRepair();">
-      <span class="label">Repair Ship</span>
-      <span class="cost">#{Game.drawEffects({damage: -Place.repairRate()})}</span>
-      <span class="success">✓</span></div>
+      <div>
+        <span class="label">Repair Ship</span>
+        <span class="cost">#{Game.drawEffects({damage: -repair})}</span>
+        <span class="success">✓</span>
+      </div>
+      <div class="damage">#{(g.damage - repair).toFixed(1)} damage will remain</div>
     </td>"""
 
   clickRepair: (i)->
@@ -165,7 +169,7 @@ $.extend Place, {
 
 showMenu = (place, showDuration = 200)->
   label = $('#' + place)
-  placeDiv = $('[place="' + place + '"]')
+  placeDiv = $('#places [place="' + place + '"]')
   unless placeDiv.length then return false
 
   paths = $(Place.travelSteps(place, g.location).map(Place.svgElement))

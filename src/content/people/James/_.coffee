@@ -42,7 +42,7 @@ Person.James =
       requiresOr: ['Trustworthy2', 'Organized']
       doubledBy: 'Power'
     Journeyman:
-      description: "Unlock James' route"
+      description: "Unlock James' route (also requires Mage on Natalie)"
       requiresAnd: ['Reliable2', 'Trustworthy2']
 
     WeatherEye2:
@@ -66,5 +66,5 @@ Person.James =
       requiresOr: ['Stoic2', 'Organized2']
       doubledBy: 'Devotion'
     Master:
-      description: "Unlock James' ending (also requires Mage on Natalie)"
-      requiresAnd: ['Stoic2', 'Stoic2']
+      description: "Unlock James' ending (also requires Adept on Natalie)"
+      requiresAnd: ['Stoic2', 'WeatherEye2']

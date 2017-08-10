@@ -7,20 +7,20 @@ sampleCargo =
 window.Cargo =
   acceptTimeRemaining: (cargo)->
     passed = g.day - cargo.start
-    return 12 - passed
+    return 10 - passed
 
   newCargoDaily: -> Math.floor(Math.random() * 1.5)
 
   maxCargo: -> 3
 
-  fromReputation: -> 10
+  fromReputation: -> 7
 
-  toReputation: -> 10
+  toReputation: -> 8
 
   deliveryTimeRemaining: (cargo)->
     passed = g.day - cargo.start
     travel = Place.travelDays(cargo.from, cargo.to)
-    return 15 + travel - passed
+    return 11 + travel - passed
 
   passDay: ->
     g.availableCargo = g.availableCargo.filter (cargo)->

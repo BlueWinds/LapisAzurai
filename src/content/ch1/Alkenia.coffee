@@ -59,6 +59,7 @@ s.MeetKat =
   """
 
 s.MeetKat2 =
+  label: 'Pickpocket (again)'
   history:
     MeetKat: 0
   effects:
@@ -103,6 +104,7 @@ s.MeetKat2 =
   """
 
 s.KatTrial =
+  label: "Kat's Trial"
   history:
     MeetKat2: 0
   effects:
@@ -140,13 +142,13 @@ s.KatTrial =
   """
 
 s.KatMeetsJames =
+  label: 'Kat and James'
   blocking: true
   history:
     KatTrial: 0
   effects:
     xp:
       James: 2
-      Kat: 3
   text: -> """
   || places/AlkeniaNight
     `K Hi!`
@@ -172,12 +174,12 @@ s.KatMeetsJames =
   """
 
 s.KatStorm =
+  label: 'Out in a Storm'
   history:
     KatMeetsJames: 0
   effects:
     xp:
       Natalie: 3
-      Kat: 3
   text: -> """
   || places/AlkeniaStorm
     Though the weather had maintained a pleasant tenor all through the day, as the sun set, clouds began to blow in from the horizon. Not a dangerous storm, just a bit of nasty rain to put a damper on Natalie's plans for the evening in town.
@@ -207,6 +209,7 @@ s.KatStorm =
   """
 
 s.KatStorm2 =
+  label: 'Out of the Storm'
   blocking: true
   history:
     KatStorm: 0
@@ -246,11 +249,12 @@ s.KatStorm2 =
   """
 
 s.KatJoins =
+  label: 'Kat Joins'
   history:
     KatStorm2: 0
   effects:
     xp:
-      Kat: 5
+      Kat: 10
   text: -> """
   || places/AlkeniaDay
     `K Get me out of here.`
