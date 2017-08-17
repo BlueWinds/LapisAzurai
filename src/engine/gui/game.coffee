@@ -47,10 +47,11 @@ $.extend Game, {
     text = []
     for key, results of e
       if typeof results is 'number'
-        text.push "#{results.toFixed(1)} #{key}"
+        text.push "#{Math.round(results)} #{key}"
       else
+        at = if key is 'reputation' then 'at' else 'for'
         for name, amount of results
-          text.push "#{amount} #{key} for #{Place[name]?.name or Person[name]?.name}"
+          text.push "#{amount} #{key} #{at} #{Place[name]?.name or Person[name]?.name}"
     return text.join('<br>\n')
 
   showOverview: ->
@@ -97,14 +98,14 @@ $.extend Game, {
     overlay = $("""<div class='#{c}'></div>""").css('opacity', 0).append(element)
     $('#container').append(overlay)
     if duration
+      fadeOut = -> overlay.animate {opacity: 0}, duration / 2, -> overlay.remove()
       overlay
         .animate({opacity: 1}, duration / 2)
         .delay(duration / 2)
         # Dummy animation so we can trigger the callback after delay, rather than waiting for the overlay to entirely fade out
         .animate {opacity: 1}, 1, ->
-          if done then done()
-        .animate {opacity: 0}, duration / 2, ->
-          overlay.remove()
+          if done then done(fadeOut) else fadeOut()
+
     else
       overlay.animate({opacity: 1}, 500)
 

@@ -30,7 +30,7 @@ Person.Kat =
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Devilish:
-      description: '50% change to discard an expired cargo when completing a different delivery'
+      description: '25% change to discard an expired cargo when completing a different delivery'
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Deckhand:
@@ -69,6 +69,6 @@ Person.Kat =
       doubledBy: 'Desire'
     Devilish2:
       name: 'Devlish 2'
-      description: '50% chance to discard an expired cargo when completing another one'
+      description: '25% chance to discard an expired cargo when completing another one'
       requiresAnd: ['FreeWoman']
       doubledBy: 'Desire'

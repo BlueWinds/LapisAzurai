@@ -23,7 +23,7 @@ s.MtJuliaArrive =
 
     `J I'll get everything cleaned up and check over the ship while you find a buyer.` He nodded, glancing behind them at the cargo hold. Several items hadn't been secured properly in the haste to depart, and one cask of fresh water had sprung a leak from the banging around.
 
-    `Good. I hardly expect to make more on this trip than I've spent in supplies and wages, but it'll be worth it for a shakedown cruise. Let's not waste time.`
+    `N Good. I hardly expect to make more on this trip than I've spent in supplies and wages, but it'll be worth it for a shakedown cruise. Let's not waste time.`
   """
 
 s.CheckShip =

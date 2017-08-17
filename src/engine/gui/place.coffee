@@ -74,7 +74,7 @@ $.extend Place, {
         <span class="cost">#{Game.drawEffects({damage: -repair})}</span>
         <span class="success">✓</span>
       </div>
-      <div class="damage">#{(g.damage - repair).toFixed(1)} damage will remain</div>
+      <div class="damage">#{Math.round(g.damage - repair)} damage will remain</div>
     </td>"""
 
   clickRepair: (i)->
@@ -144,8 +144,11 @@ $.extend Place, {
     if event.path
       Place.animateLocation(event, dayDuration)
 
-    Game.showPassDayOverlay(g.day - events.length, Game.drawEffects(event.effects or {}) + "<img src='game/content/#{event.image}'>")
-    setTimeout Place.animateEvent.bind(null, to, events), dayDuration
+    day = g.day - events.length
+    effects = Game.drawEffects(event.effects or {}) + "<img src='game/content/#{event.image}'>"
+    Game.showPassDayOverlay day, effects, (hideOverlay)->
+      setTimeout hideOverlay, 500
+      Place.animateEvent(to, events)
 
   animateLocation: (event, dayDuration)->
     ship = document.getElementById('Ship')

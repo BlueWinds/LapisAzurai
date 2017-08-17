@@ -16,17 +16,11 @@ samplePlaceData =
 
 window.Place = {
   travel: {}
-  delayChance: (travel)-> Place.travel[travel].delayDailyChance
-  delayDamage: (travel)->  Place.travel[travel].delayDailyDamage * (Math.random() + 0.5)
-  delayDuration: (travel)-> Place.travel[travel].delayAvgDuration * (Math.random() + 0.5)
+  delayChance: (travel)-> Place.travel[travel].delayDailyChance()
+  delayDamage: (travel)->  Place.travel[travel].delayDailyDamage()
+  delayDuration: (travel)-> Place.travel[travel].delayAvgDuration()
 
-  decayReputation: (rep)-> return rep * 0.95
-  repairRate: -> 3
-
-  passDay: ->
-    for place, reputation of g.reputation
-      g.reputation[place] = Place.decayReputation(reputation)
-    return
+  repairRate: -> 10
 
   location: (place, distance)->
     # A path

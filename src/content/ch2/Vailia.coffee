@@ -1,7 +1,7 @@
 s = {}
 
 Place.Vailia.stories.Ch1.push('Ch2')
-s.Ch2 =
+Story.Ch2 =
   label: 'Chapter 2 - Kantis'
   history:
     MeetMeghan: 0
@@ -49,6 +49,9 @@ s.Ch2 =
 
     `N Aye aye sir!` She saluted again, and danced out before he could object.
   """
+  apply: ->
+    g.chapter = 'Ch2'
+
 
 s.TomenoiRoute =
   label: 'Route to Kantis'
@@ -87,7 +90,7 @@ s.TomenoiRoute =
     Asara gave a little half bow, and she was gone. Janus shook his head and tried not to glance at the door. Natalie had chosen a strange companion.
   """
   apply: ->
-    g.roputation.Tomenoi = 0
+    g.reputation.Tomenoi = 0
 
 s.JamesUpsetMagic =
   label: 'James is Upset'
@@ -139,7 +142,7 @@ s.NonkeniaRoute =
     Asara let out a tense breath and took the package. She hated being babbled at. A curt nod to the clerk and she turned to leave. She didn't hate the city. Really, she didn't. It was just... she wanted to be back on the ship. Fewer people. People who knew her. She couldn't relax around strangers. She ignored the clerk's attempt to make more conversation and fled with all possible haste short of actually running.
   """
   apply: ->
-    g.roputation.Nonkenia = 0
+    g.reputation.Nonkenia = 0
 
 s.NonkeniaDiplomat =
   label: 'Diplomatic Delivery'
@@ -319,7 +322,7 @@ s.IronSandsRutter2 =
 
     `K Oh, and I guess he gave me a book to give to you. One sec, I'll grab it from my bunk.` She popped out of Natalie's cabin, returning a moment later bearing a leather folio pressed with the Guild emblem on the back, held closed by twine. "Natalie Rowena's eyes only. Deliver immediately" was written on a slip of paper hiding the cover, and a date.
 
-    `N #{g.day - g.events.IronSandsRutter} days. It says deliver immediately, and you hang onto it for #{g.day - g.events.IronSandsRutter} days.`
+    `N #{g.day - g.history.IronSandsRutter} days. It says deliver immediately, and you hang onto it for #{g.day - g.history.IronSandsRutter} days.`
 
   || K/Serious
     `K How was I supposed to know that?` Kat crossed her arms defensively over her chest.
@@ -343,7 +346,7 @@ s.IronSandsRutter2 =
     `N He's neither my dad nor does he... hey, come back here!`
   """
   apply: ->
-    g.roputation.IronSands = 0
+    g.reputation.IronSands = 0
 
 s.AsaraTalkFlames =
   label: 'Talk with Asara - Flames'

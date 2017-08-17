@@ -25,77 +25,77 @@
  <path fill="none" d="m33.688 82.738h26.889m93.111-40h26.889m-26.889 40h26.889m93.111-40h26.889m-26.889 40h26.889m-266.89-40h26.889m41.001 22.9-28.726 14.016m28.726-20.016-28.726-13.97m39.996 19.97 28.726 14.016m-28.726-20.016 28.726-14.016m80.004 20.016-28.73 14m28.73-20-28.73-13.97m40 19.97 28.726 14.016m-28.726-20.016 28.726-14.016m80.004 20.016-28.73 14m28.73-20-28.73-13.97" stroke="#999"/>
  <g id="WinningSmile" transform="translate(27, 43)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Overdeliver" transform="translate(27, 83)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Gregarious" transform="translate(67, 43)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Grounded" transform="translate(67, 83)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Initiate" transform="translate(107, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Overdeliver2" transform="translate(147, 43)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Gregarious2" transform="translate(147, 83)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="WellInformed" transform="translate(187, 43)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="SilverTongue" transform="translate(187, 83)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Mage" transform="translate(227, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="WinningSmile2" transform="translate(267, 43)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Grounded2" transform="translate(267, 83)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="WellInformed2" transform="translate(307, 43)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="SilverTongue2" transform="translate(307, 83)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Adept" transform="translate(347, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
 </svg>

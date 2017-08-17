@@ -27,7 +27,7 @@ $.extend Story, {
         <span class="label">#{Story[story].label}</span><span class="cost">#{Story.reputationNeeded(story)} rep</span>
         <span class="success">✓</span>
       </div>
-      <div class="participants">#{Game.drawEffects Story[story].effects}</div>
+      <div class="participants">#{Game.drawEffects Story.effects(story)}</div>
       #{need}
     </td>"""
 
@@ -35,9 +35,10 @@ $.extend Story, {
     $('.story[story="' + story + '"] .success')
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 1500
-    Game.showPassDayOverlay g.day, Game.drawEffects(Story.effects(story)), ->
+    Game.showPassDayOverlay g.day, Game.drawEffects(Story.effects(story)), (removeOverlay)->
       elements = Story.render(story)
-      $('#content').css({display: 'block'}).animate {opacity: 1}, 1000, ->
+      removeOverlay()
+      $('#content').css({display: 'block'}).animate {opacity: 1}, 500, ->
         Game.hideOverview(500)
         Place.drawMap()
       $('#stories').empty().append(elements)

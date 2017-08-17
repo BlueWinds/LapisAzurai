@@ -9,7 +9,7 @@ Game.starting =
   location: 'Vailia'
   distance: 0
   reputation:
-    Vailia: 20
+    Vailia: 0
     MtJulia: 0
   people:
     Natalie:
@@ -47,10 +47,10 @@ s.Intro =
 
     She was on a ship. On her ship. Captain Natalie. She liked the sound of that. Provisional captain. If she brought it back from its maiden voyage she'd have earned the rank for real. If she didn't bring it back, well, not much use thinking about that. The ocean was not safe.
 
-    Not her though. This was her ship. It would return safely, and not just the first time. Every time.
+    Not for others, at least. Her ship would return safely, and not just the first time. Every time.
 
   || N/Normal
-    Grinning at the thought of herself in wrinkles and walking across the deck with a cane – as if! - she brushed copper strands out of her eyes and examined herself in the mirror, still groggy. She slapped her cheeks and stuck her tongue out at the reflection. There were old sailors and old captains, good enough or lucky enough, and she was going to be one of them. No cane though.
+    Natalie grinned at the thought of herself in wrinkles and walking across the deck with a cane. As if! She brushed copper strands out of her eyes and examined herself in the mirror, still groggy. She slapped her cheeks and stuck her tongue out at the reflection. There were old sailors and old captains, good enough or lucky enough, and she was going to be one of them. No cane though.
 
     `J Nat! You ok?` James called.
 
@@ -129,7 +129,7 @@ s.ReadyToGo =
       James: 2
   text: -> """
   || travel/CabinDay
-    Natalie laid aside her pen and admonished James, looming in the doorway. `N If you're going to fill the room with dread, at least enter all the way.`
+    James loomed in the doorway. Natalie laid aside her pen to admonish him. `N If you're going to fill the room with dread, at least enter all the way.`
 
     He started guiltily and stepped into her cabin, closing the door behind him with a foot. He remained standing. Other than the chair she occupied, the only place to sit would be on her bed, and he wasn't the sort to be comfortable with that. The space was cramped, but a private room was still more than most people aboard a ship this size would get, even the quartermaster. He'd have to share a room with the first-mate, once they had one.
 
@@ -143,7 +143,7 @@ s.ReadyToGo =
 
     `J It's just... I can't shake this feeling of doom. Do you know how many ships survive a storm? I did some figuring. The odds aren't pretty, if you get caught out at sea.`
 
-    Natalie stood and moved over to the bed, patting the chair and indicating that he should take the seat. `N The Azurai is a good ship. She'll see us through. The shipwrights knew what they were doing when they built her. She may be small, but she's fast and sturdy.` She patted his knee, attempting to reassure him of something she wasn't entirely sure of herself.
+    Natalie stood and moved over to the bed, patting the chair and indicating that he should take the seat. `N The Azurai is a good ship. She'll see us through. The shipwrights knew what they were doing when they built her. She may be small, but she's fast and sturdy.` She patted his knee as he sat, attempting to reassure him of something she wasn't entirely sure of herself.
 
   || J/Embarrassed
     `J What are we even doing here, Natalie? There's plenty of opportunity at home, without risking your life.`
@@ -160,6 +160,10 @@ s.ReadyToGo =
 
     `N Have a good night. Stop worrying.` She looked away and picked up her pen again.
   """
+  apply: ->
+    unless g.availableCargo.filter((f)-> f.from is 'Vailia').length
+      c = Cargo.create('Vailia')
+      g.availableCargo.push(c)
 
 s.FirstStorm =
   label: 'Storm'
@@ -167,7 +171,6 @@ s.FirstStorm =
   history:
     MtJuliaArrive: 0
   effects:
-    damage: 6
     xp:
       James: 3
       Natalie: 3
@@ -189,7 +192,7 @@ s.FirstStorm =
 
     `N Not good. It's a big one,` Natalie had to shout to be heard over the sound of the ocean.
 
-    `How do you know!?`
+    `J How do you know!?`
 
     `N It's... it'll take five, six hours to blow past!` She tasted the wind, unfurling instincts seldom used. The first wave caught them from the side before she could turn the ship.
 
@@ -207,7 +210,7 @@ s.FirstStorm =
 
     This was the sort of storm that left no survivors. A Grandmother Storm. The last had been just a month ago. Natalie had helped comb the beach for wreckage and survivors in its wake. There were precious few of the latter, and far too much of the former.
 
-    A wave towered over them, reaching halfway up the main mast for a brief moment before it crashed over the deck. Natalie clung to the wheel, fighting the maelstrom that tried to tear her away from her post. The Azurai popped out of the water on the other side, creaking timbers audible even over the sound of the wind. She checked the deck. James clung to one of the masts, holding the @sailor in one arm.
+    A wave towered over them, reaching halfway up the main mast for a brief moment before it crashed over the deck. Natalie clung to the wheel, fighting the maelstrom that tried to tear her away from her post. The Azurai popped out of the water on the other side, creaking timbers audible even over the sound of the wind. She checked the deck. James clung to one of the masts, holding the sailor in one arm.
 
     Against all odds, she felt giddy, alive. Death was so close, and yet... and yet, it wouldn't claim them. She could feel it in her bones, taste it in the wind, smell it in the salt spray. Natalie felt the storm as though it were an extension of her own body, felt the howling power that fed it, felt a hundred miles of terrible elemental force seeking release...
 
@@ -224,7 +227,7 @@ s.FirstStorm =
   || N/Excited
     `N Do you know why they gave me a ship, James? I'm smart, and I'm pretty, but that's not why.` Her laughing voice somehow cut through the wind, though he could barely hear his own shouting. He shook his head. This wasn't the time for that.
 
-    `They gave me a ship because I'm not going to die!` She let go of the wheel with one hand, gripped his shoulder with manic strength. Another wave crashed over the ship, burying them both in boiling, freezing foam for a moment. When it cleared, one of the sails had ripped away, floating in the ocean nearby, but the mast itself was still intact.
+    `N They gave me a ship because I'm not going to die!` She let go of the wheel with one hand, gripped his shoulder with manic strength. Another wave crashed over the ship, burying them both in boiling, freezing foam for a moment. When it cleared, one of the sails had ripped away, floating in the ocean nearby, but the mast itself was still intact.
 
     James shook his head again, trying to clear it. That they hadn't sunk yet was nearly a miracle. Whatever manic state had come over her, Natalie was still alive, and still holding the wheel, turning as best she could to face each new assault from the storm. In a brief lull in the wind, he heard someone below shouting to get buckets and head below decks. He clasped her shoulder again and headed off to help.
 
@@ -289,7 +292,46 @@ s.FirstStormSick =
     James just stared, waiting for him to go on.
 
     ` Magical drain. She must be quite powerful, to bring your ship through a storm like that.` Seeing the confusion reflected in James' face, he finally deigned to explain. ` Your captain here is a sorceress. And as I said, quite a powerful one at that. I wouldn't dare touch storm-energy. It's amazing she survived, but she'll make a full recovery, given enough time.` He patted James' arm. ` No charge, since I didn't do anything. Please ask her to stop by our temple once she awakens, if she is so inclined.`
+
+    Given the lack of response from James, he settled for patting him on the shoulder again. <q>I'll see myself out.</q>
+
+  || J/Upset
+    A sorceress. Damn.
+
+    He cupped his face in both hands and rubbed his eyes. It was an answer to far too many questions, but it raised more questions still. First among them, why hadn't she told him? They'd been friends since he was old enough to walk. Magic never manifested until puberty. They would have been best friends for a decade when she learned what she was.
+
+    It was a rare gift. One in ten thousand had a spark of magic, enough to light a candle. To hold a ship safe through a storm? He wondered if there were more than five mages that powerful in the entire city.
+
+    Why hadn't she told him?
   """
+
+s.FirstStormSick2 =
+  label: 'Storm - Aftermath'
+  blocking: true
+  history:
+    FirstStormSick: 0
+  effects:
+    xp:
+      James: 2
+      Natalie: 2
+  text: -> """
+  || travel/CabinDay
+    Natalie jerked awake, pulse pounding. The ship... the ship was safe, rocking gently beneath her. Instinctively she reached out, feeling fractures and weak points... and winced back, mind burning. Like touching a half-healed wound, or pulling with a strained muscle, the minor effort she'd put forth was enough to warn her that further pressing her magic would only lead to passing out again.
+
+    She felt weak, swinging her legs down off the edge of the bed, but steady enough. Someone had dressed her in a nightgown, and a cup of water waited on the desk for her attention. Also a roll, freshly baked even. Very considerate of them. She tore into it with an appetite.
+
+    They were, she surmised, back in Vailia. Mount Julia didn't have fresh baked garlic-cheese-rolls. They. Better check who <q>they</q> were. Her last memory was of pounding power surging through her body and a wave towering over the ship, threatening to reduce the Lapis to splinters if she couldn't grip the entire vessel tightly enough.
+
+  || travel/DeckDay"
+    Two of the crew grinned at her as she stood in the doorway, blinking owlishly in the bright light. ` Welcome back, Captain,` one of them volunteered, with a lazy salute and a grin.
+
+    `N How long was I asleep?` Natalie rubbed her eyes, looking out on the busy port. Standing in her nightshirt and underwear, she attracted little attention. Vailians weren't shy about that sort of thing.
+
+    ` Two days. You passed out at the wheel, but we made it through the storm, somehow, and limped home on one sail. The quartermaster is out in the city right now. Anything you need, captain?`
+
+    `N Nope, just a little something to eat and I'll be back in action. Good work,` she punched him lightly in the shoulder. `N We made it. That's one for the record books.`
+  """
+
 
 s.WastingMoney =
   label: 'Wasting Money'
@@ -344,16 +386,16 @@ s.AsaraWorriesJames =
   text: -> """
   || travel/DeckDay
     `J Everything about this is a bad idea,` James threw out casually, not pausing in his work. One of the Lapis' sails lay spread out on deck while they checked for worn spots. Natalie hadn't liked the way it had hung during the last trip.
-    `N Everything about what?"
+    `N Everything about what?`
     `J Asara.`
 
   || N/Upset
     Natalie stopped, turned to him, waited. He didn't respond to her disapproving stare, so finally, `N We can't just abandon her.`
-    `J You should leave her with a temple, someone who can take care of her properly. She's dangerous and hurting and more than a little broken. What if it's Kat who startles her next time? Or you?` James rolled his shoulder experimentally, wincing. He'd startled her below decks, coming around a corner when she wasn't expecting it. She'd nearly dislocated his shoulder. Then, mortified, she'd run off and hid in Natalie's room again, refusing to come out two fuul days.
+    `J You should leave her with a temple, someone who can take care of her properly. She's dangerous and hurting and more than a little broken. What if it's Kat who startles her next time? Or you?` James rolled his shoulder experimentally, wincing. He'd startled her below decks, coming around a corner when she wasn't expecting it. She'd nearly dislocated his shoulder. Then, mortified, she'd run off and hid in Natalie's room again, refusing to come out two full days.
     `N She wouldn't do that!`
     He turned his attention back to the sail, tugging experimentally on a section and ignoring Natalie's angry glare. "She's barely spoken a word to you. None of us know what she is, where she came from, or if that silver glow will..."
 
-    `N She stays."
+    `N She stays.`
     For the first time in the conversation James turned fully to look at her. `J I... ok. Just... be careful, Nat. I can't protect you from this.`
     Her sudden flash of anger draining, she sighed and rubbed her temples. `N I know, I know it doesn't make sense. But it's important, and... it'll be ok. Trust me on this one.`
   """
@@ -361,7 +403,7 @@ s.AsaraWorriesJames =
 s.AlkeniaRoute =
   label: 'Route to Alkenia'
   history:
-    FirstStormSick: 0
+    FirstStormSick2: 0
   effects:
     xp:
       James: 3
@@ -457,7 +499,7 @@ s.MeetMeghan =
 
     `N What?`
 
-    ` Kantis. Yea bear Kantian magic. You will need to take care if you ever visit.` Meghan nodded sharply and stood. ` Thank you for your time, Natalie, Guildmaster. Take care.` She took her leave without waiting for a response.
+    ` Kantis. You bear Kantian magic. You will need to take care if you ever visit.` Meghan nodded sharply and stood. ` Thank you for your time, Natalie, Guildmaster. Take care.` She took her leave without waiting for a response.
 
   || N/Excited
     With the Guildmaster and Natalie left alone, silence filled the room. Natalie watched Janos, trying to figure what he made of the visit. For her own part Natalie was inclined to dismiss it as merely Meghan assessing the threat of another mage in the city, but the Guildmaster had a far broader view of events than she did, and if there were political implications in Lady Vailia taking an interest in one of the Guild's captains, he'd be the one to know.

@@ -62,4 +62,3 @@ window.Game =
     g.day++
 
     Cargo.passDay()
-    Place.passDay()

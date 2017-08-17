@@ -98,6 +98,10 @@ table td {
   padding-left: 3px;
 }
 
+.cargo.active {
+  color: #DDD;
+}
+
 .cargo .success {
   right: 0;
 }

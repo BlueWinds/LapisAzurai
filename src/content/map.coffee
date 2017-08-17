@@ -20,6 +20,25 @@ Place.Vailia =
     Colinth: ['Anchors', 'Apple Vinegar', 'Bronze Sculpture', 'Candles', 'Carpet', 'Chains', 'Composite Bows', 'Fashionable Clothing', 'Fine wine', 'Hats', 'Helmets', 'Ink', 'Linen', 'Maiden Tea', 'Matches', 'Paper', 'Pickles', 'Steel Tools', 'Steel Wire']
     Kantis: ['Anchors', 'Apple Vinegar', 'Basil', 'Brandy', 'Bronze Sculpture', 'Candles', 'Carpet', 'Chamomile', 'Clockwork Machinery', 'Composite Bows', 'Fashionable Clothing', 'Fine Furniture', 'Hats', 'Helmets', 'Ink', 'Linen', 'Matches', 'Mirrors and Lenses', 'Paper', 'Raisins', 'Sage', 'Steel Tools', 'Steel Wire', 'Walnuts']
     Amandais: ['Basil', 'Brandy', 'Candles', 'Carpet', 'Chamomile', 'Composite Bows', 'Fine wine', 'Glass Beads', 'Helmets', 'Ink', 'Lavender', 'Lilac', 'Maiden Tea', 'Matches', 'Mirrors and Lenses', 'Paper', 'Raisins', 'Sage', 'Steel Tools', 'Steel Wire', 'Wormwood']
+  deliverDescriptions:
+    '*': [
+      "`N I don't care how leng we've been away, no one leaves until everything's unloaded. Your sweetheart will just have to wait.` Natalie slapped the sailor's forearm. `N Motivation to shift all this faster, eh?`"
+      "`N Take this over to the Guild hall, will you?` Natalie handed James a bag of coins. `N Don't want the bean counters getting upset over a missing tithe.`"
+    ]
+    MtJulia: [
+
+    ]
+  acceptDescriptions:
+    '*': [
+      'Fine Vailian goods, fresh from a Guild warehouse.'
+      "Gossip from the Guild. ` Be careful. I heard Lady Meghan saying there's a big storm on the way in.`"
+    ]
+    MtJulia: [
+      'A trading post and safe harbor for Vailian ships, the Guild kept Mt. Julia well supplied for those stranded by storms.'
+      'With a permanent population number less than a dozen, Mt. Julia produced little of its own.'
+      "`N Don't make that face, cash on delivery is fine just this once.` Natalie slapped James on the back. `N The inn at Mt. Julia always pays, don't worry about it.`"
+    ]
+
 
 Place.MtJulia =
   name: 'Mt. Julia'
@@ -37,6 +56,17 @@ Place.MtJulia =
   goods:
     Vailia: ['Lumber', 'Maiden Tea', 'Masts', 'Smoked Fish']
     Tomenoi: ['Lumber']
+  deliverDescriptions:
+    '*': [
+      "James shivers. `J Something about this place always feels off. Let's hurry.`"
+      'The inn at Mt. Julia stockpiles supplies, ready to aid damaged ships that can make it to the harbor.'
+      'With only a few permanent residents, most supplies delivered to Mt. Julia are resold to other ships.'
+      (c)-> """` Whad\'ya got for me?` The girl kicks one of the crates, listening to the sound. ` Fuck, more #{c.name.toLowerCase()}? Well, my own damn fault for asking for too much. Unload it, I'll buy.`"""
+    ]
+  acceptDescriptions: [
+    'A few intrepid woodsman make their home on the island, supplying lumber and other forest products to Vailia\'s shipyards.'
+    'The rugged terrain and steep mountains makes it difficult to exploit the forest. And the wolves. Can\'t forget the wolves.'
+  ]
 
 Place.Alkenia =
   name: 'Alkenia'

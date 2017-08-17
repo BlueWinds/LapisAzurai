@@ -25,13 +25,13 @@ $.extend Cargo, {
     accept = Cargo.acceptTimeRemaining(cargo)
     deliver = Cargo.deliveryTimeRemaining(cargo)
     """<td class="cargo accept #{i} #{if onclick then 'active' else ''}" #{onclick}>
-      <div><span class="what">#{cargo.name}</span> to <span class="to">#{Place[cargo.to].name}</span><span class="success">✓</span></div>
+      <div>Load <span class="what">#{cargo.name}</span> for <span class="to">#{Place[cargo.to].name}</span><span class="success">✓</span></div>
       <div><span class="remaining">#{accept} days to pick up, #{deliver} days to deliver</span></div>
     </nd>"""
 
   drawDelivery: (cargo)->
     i = g.cargo.indexOf(cargo)
-    onclick = if g.location is cargo.to
+    onclick = if g.location is cargo.to and Story.canSail()
       'onclick="Cargo.clickDeliver(' + i + ');"'
     else ''
 

@@ -25,67 +25,67 @@
  <path d="m25.788 62.46c4.422-4.42 17.659-19.44 39.442-19.44s34.939 14.665 39.716 19.442 18.501 19.442 40.284 19.442 35.205-14.647 40-19.442 18.216-19.442 40-19.442c21.783 0 34.8 14.242 40 19.442s18.217 19.442 40 19.442 35.147-15.147 39.442-19.442" stroke="#999" stroke-width="1.115" fill="none"/>
  <g id="Tears" transform="translate(25, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Fear" transform="translate(52, 45)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Regret" transform="translate(79, 45)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Desert" transform="translate(106, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Duty" transform="translate(133, 81)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Trust" transform="translate(160, 81)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Moon" transform="translate(187, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Death" transform="translate(214, 45)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Power" transform="translate(241, 45)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Goddess" transform="translate(268, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Love" transform="translate(295, 81)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Desire" transform="translate(322, 81)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Devotion" transform="translate(349, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
 </svg>

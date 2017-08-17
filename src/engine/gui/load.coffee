@@ -46,12 +46,12 @@ Game.showLoadPage = ->
     reader.onload = =>
       $('.import-error').remove()
       try
-        window.g = new Game(jsyaml.safeLoad(reader.result))
-        $('#content').empty()
-        g.last.show()
-        g.setGameInfo()
-        Game.gotoPage()
+        Game.start jsyaml.safeLoad(reader.result)
+        Game.drawStatus()
+        Place.drawMap()
+        Story.drawHistory()
       catch e
+        console.log e
         error = $ '<tr class="import-error danger"><td colspan="3">That doesn\'t seem to be a valid save file.</td></tr>'
         $(@).parent().parent().after(error)
         error.css('opacity', 0).animate({opacity: 1}, 1000)

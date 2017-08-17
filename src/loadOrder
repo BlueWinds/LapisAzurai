@@ -1,57 +1,57 @@
 # First the game engine
-src/engine/feature-detect.coffee
-src/engine/util.coffee
-src/engine/game/game.coffee
-src/engine/game/story.coffee
-src/engine/game/person.coffee
-src/engine/game/place.coffee
-src/engine/game/cargo.coffee
+dist/engine/feature-detect.js
+dist/engine/util.js
+dist/engine/game/game.js
+dist/engine/game/story.js
+dist/engine/game/person.js
+dist/engine/game/place.js
+dist/engine/game/cargo.js
 
 # Now the game gui
-src/engine/gui/game.coffee
-src/engine/gui/person.coffee
-src/engine/gui/story.coffee
-src/engine/gui/load.coffee
-src/engine/gui/place.coffee
-src/engine/gui/cargo.coffee
+dist/engine/gui/game.js
+dist/engine/gui/person.js
+dist/engine/gui/story.js
+dist/engine/gui/load.js
+dist/engine/gui/place.js
+dist/engine/gui/cargo.js
 
 # Finally the content
-src/content/map.coffee
-src/content/travel/travel.coffee
-src/content/people/skillEffects.coffee
+dist/content/map.js
+dist/content/travel/travel.js
+dist/content/people/skillEffects.js
 
-src/content/people/Natalie/_.coffee
-src/content/people/James/_.coffee
-src/content/people/Kat/_.coffee
-src/content/people/Asara/_.coffee
-src/content/people/Guildmaster/_.coffee
-src/content/people/Sailors/_.coffee
-src/content/people/Guard/_.coffee
-src/content/people/Meghan/_.coffee
-src/content/people/Elakim/_.coffee
-src/content/people/Cara/_.coffee
-src/content/people/Ameliss/_.coffee
+dist/content/people/Natalie/_.js
+dist/content/people/James/_.js
+dist/content/people/Kat/_.js
+dist/content/people/Asara/_.js
+dist/content/people/Guildmaster/_.js
+dist/content/people/Sailors/_.js
+dist/content/people/Guard/_.js
+dist/content/people/Meghan/_.js
+dist/content/people/Elakim/_.js
+dist/content/people/Cara/_.js
+dist/content/people/Ameliss/_.js
 
 
-src/content/ch1/Vailia.coffee
-src/content/ch1/MtJulia.coffee
-src/content/ch1/Alkenia.coffee
+dist/content/ch1/Vailia.js
+dist/content/ch1/MtJulia.js
+dist/content/ch1/Alkenia.js
 
-src/content/ch2/Vailia.coffee
-src/content/ch2/MtJulia.coffee
-src/content/ch2/Alkenia.coffee
-src/content/ch2/Nonkenia.coffee
-src/content/ch2/Tomenoi.coffee
-src/content/ch2/IronSands.coffee
-src/content/ch2/Kantis.coffee
-src/content/ch2/Colinth.coffee
+dist/content/ch2/Vailia.js
+dist/content/ch2/MtJulia.js
+dist/content/ch2/Alkenia.js
+dist/content/ch2/Nonkenia.js
+dist/content/ch2/Tomenoi.js
+dist/content/ch2/IronSands.js
+dist/content/ch2/Kantis.js
+dist/content/ch2/Colinth.js
 
-src/content/ch3/Vailia.coffee
-src/content/ch3/MtJulia.coffee
-src/content/ch3/Alkenia.coffee
-src/content/ch3/Nonkenia.coffee
-src/content/ch3/Tomenoi.coffee
-src/content/ch3/IronSands.coffee
-src/content/ch3/Kantis.coffee
-src/content/ch3/Colinth.coffee
-src/content/ch3/Amandais.coffee
+dist/content/ch3/Vailia.js
+dist/content/ch3/MtJulia.js
+dist/content/ch3/Alkenia.js
+dist/content/ch3/Nonkenia.js
+dist/content/ch3/Tomenoi.js
+dist/content/ch3/IronSands.js
+dist/content/ch3/Kantis.js
+dist/content/ch3/Colinth.js
+dist/content/ch3/Amandais.js

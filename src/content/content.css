@@ -26,6 +26,6 @@ img.Natalie.right { transform: scaleX(-0.8) scaleY(0.8); }
   opacity: 1;
 }
 
-.skills g circle:nth-child(3) {
+.skills g circle:nth-child(2) {
   display: none;
 }

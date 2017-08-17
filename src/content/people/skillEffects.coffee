@@ -8,11 +8,6 @@ has = (alias, skill, second)->
   unless second then value += has(alias, skill + '2', true)
   return value
 
-oldDecay = Place.decayReputation
-Place.decayReputation = (rep)->
-  decay = 1 + has('N', 'WinningSmile') * 0.02
-  return oldDecay(rep * decay)
-
 oldToReputation = Cargo.toReputation
 Cargo.toReputation = ->
   return oldToReputation() + has('N', 'Overdeliver')
@@ -26,12 +21,12 @@ Cargo.deliver = (cargo)->
   effects = oldDeliver(cargo)
   Cargo.createRandom(has('N', 'Grounded'))
 
-  # Select a maximum of (Devilish / 2) expired cargoes...
-  discardCount = Math.randomRound(has('K', 'Devilish') / 2)
-  undelivered = g.cargo.filter((c) -> Cargo.deliveryTimeRemaining(c) < 0)
-  discard = undelivered.slice(0, discardCount)
-  # ... and remove them from the ship.
-  g.cargo = g.cargo.filter (c)-> c not in discard
+  # Select 0 or 1 expired cargoes...
+  if Math.randomRound(has('K', 'Devilish') / 4)
+    undelivered = g.cargo.filter((c) -> Cargo.deliveryTimeRemaining(c) < 0)
+    discard = Math.choice(undelivered)
+    # ... and remove it from the ship.
+    g.cargo = g.cargo.filter (c)-> c not in discard
 
   return effects
 
@@ -39,17 +34,16 @@ oldNewCargoDaily = Cargo.newCargoDaily
 Cargo.newCargoDaily = ->
   return oldNewCargoDaily() + has('N', 'WellInformed')
 
-oldPlacePassDay = Place.passDay
-Place.passDay = ->
-  add = 0.5 * has('N', 'SilverTongue')
-  oldPlacePassDay()
+oldGamePassDay = Game.passDay
+Game.passDay = ->
+  oldGamePassDay()
+  add = 0.2 * has('N', 'SilverTongue')
   for place of g.reputation
     g.reputation[place] += add
   return
 
 oldRepairRate = Place.repairRate
 Place.repairRate = ->
-  console.log oldRepairRate(), has('J', 'Reliable')
   oldRepairRate() * (1 + 0.5 * has('J', 'Reliable'))
 
 oldDeliveryTimeRemaining = Cargo.deliveryTimeRemaining
@@ -88,6 +82,14 @@ Story.effects = (story)->
         person = Math.choice(nonParticipants, story)
         e.xp[person] or= 0
         e.xp[person] += 1
+
+  if Story[story].label is 'Arrival' and has('N', 'WinningSmile')
+    for place, data of Place when data.stories?[g.chapter]
+      if story in data.stories[g.chapter]
+        break
+    e.reputation or= {}
+    e.reputation[place] or= 0
+    e.reputation[place] += 5 * has('N', 'WinningSmile')
 
   return e
 

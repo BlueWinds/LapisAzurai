@@ -13,7 +13,7 @@ s.AlkeniaArrive =
 
     For those reasons, and others, the arrival of a ship from the east was always a welcome sight. A gaggle of children stood gaping at them as sailors hopped down from the Azurai and began to secure it to the wharf. A man bearing a clipboard and a pen waited patiently for Natalie to disembark.
 
-    The instant he set foot on the dock James was swarmed by children. Looking somewhat bewildered as he tried to answer their queries all at once. He looked at Natalie for help, but she just waved with one hand and smiled.
+    The instant he set foot on the dock James was swarmed by children. Looking somewhat bewildered as he tried to answer their queries all at once, he looked at Natalie for help. She just waved and smiled.
 
     ` Name, ship name, port of origin, docking fee?`
 

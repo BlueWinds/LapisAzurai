@@ -45,7 +45,7 @@ window.Story = {
 
     return need
 
-  effects: (story)-> Story[story].effects or {}
+  effects: (story)-> JSON.parse(JSON.stringify(Story[story].effects or {}))
 
   apply: (place, story)->
     Game.applyEffects(Story.effects(story))

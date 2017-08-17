@@ -6,7 +6,7 @@ Person.Natalie =
   skills:
     WinningSmile:
       name: 'Winning Smile'
-      description: 'Reputation decays 20% slower'
+      description: '+5 Reputation when arriving at a port for the first time'
       doubledBy: 'Fear'
     Overdeliver:
       description: '+1 Reputation at the destination when delivering cargo'
@@ -40,7 +40,7 @@ Person.Natalie =
       doubledBy: 'Trust'
     SilverTongue:
       name: 'Silver Tongue'
-      description: '+0.5 Reputation at each location daily'
+      description: '+0.2 Reputation at each location daily'
       requiresAnd: ['Gregarious2']
       doubledBy: 'Trust'
     Mage:
@@ -49,7 +49,7 @@ Person.Natalie =
 
     WinningSmile2:
       name: 'Winning Smile 2'
-      description: 'Reputation decays 10% slower'
+      description: '+5 Reputation when arriving at a port for the first time'
       requiresAnd: ['Mage']
       doubledBy: 'Love'
     Grounded2:
@@ -64,7 +64,7 @@ Person.Natalie =
       doubledBy: 'Love'
     SilverTongue2:
       name: 'Silver Tongue 2'
-      description: '+0.5 Reputation at each location daily'
+      description: '+0.2 Reputation at each location daily'
       requiresAnd: ['Grounded2']
       doubledBy: 'Love'
     Adept:

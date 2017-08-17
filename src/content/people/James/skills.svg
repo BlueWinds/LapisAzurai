@@ -25,77 +25,77 @@
  <path d="m37.177 39.198v47.143m53.572 6.427h-47.143m47.143-60h-47.143m53.571 6.43v47.143m53.571 6.427h-47.143m47.143-60h-47.143m53.573 6.43v47.143m53.57 6.427h-47.143m47.143-60h-47.143m53.573 6.43v47.143m53.57 6.427h-47.143m47.143-60h-47.143m53.573 6.43v47.143m53.57 6.427h-47.143m47.143-60h-47.143m53.573 6.43v47.143m-295.3-49.023 20.67 20.67m-20.67 30 20.67-20.67m99.335-30 20.67 20.67m-20.67 30 20.67-20.67m99.33-30 20.67 20.67m-20.67 30 20.67-20.67" stroke="#999"  fill="none"/>
  <g id="Reliable" transform="translate(37, 33)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Trustworthy" transform="translate(37, 93)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Stoic" transform="translate(97, 33)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="WeatherEye" transform="translate(97, 93)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Trustworthy2" transform="translate(157, 33)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Reliable2" transform="translate(157, 93)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Navigator" transform="translate(217, 33)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Organized" transform="translate(217, 93)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Stoic2" transform="translate(277, 33)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="WeatherEye2" transform="translate(277, 93)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Navigator2" transform="translate(337, 33)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Organized2" transform="translate(337, 93)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Apprentice" transform="translate(67, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Journeyman" transform="translate(187, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
  <g id="Master" transform="translate(307, 63)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
-  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
   <circle r="7" fill="url(#solidGradient)"/>
+  <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
 </svg>
