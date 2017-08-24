@@ -49,6 +49,7 @@ $.extend Cargo, {
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 1500, ->
         Place.drawMap()
+        Place.showOverview()
 
   clickDeliver: (i)->
     effects = Cargo.deliver(i)
@@ -58,4 +59,5 @@ $.extend Cargo, {
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 2000, ->
         Place.drawMap()
+        Place.showOverview()
 }

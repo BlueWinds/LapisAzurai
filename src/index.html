@@ -17,7 +17,6 @@
       <img src="game/content/Logo.png" class="logo" />
       <div class="day"></div>
       <div class="cargo"></div>
-      <div class="picks"></div>
       <div class="right">
         <a id="new-game">New</a>
         <a id="save-game">Save <span class="success">✓</span></a>
@@ -28,13 +27,15 @@
     <div id="flex"><div id="container">
       <div id="drag-map">
         <svg id="map"></svg>
-        <div id="places" draggable="false"></div>
         <div id="back">⬆️</div>
       </div>
       <div id="content">
         <div id="stories"></div>
       </div>
-      <div id="overview"></div>
+      <div id="overview">
+        <div class="place"></div>
+        <div class="people"></div>
+      </div>
     </div></div>
   </body>
 </html>

@@ -2,7 +2,6 @@ $.extend Place, {
   guiSetup: ->
     # Set up draggable map
     map = $('#map')
-    mapElements = $('#map, #places')
     dragMap = $('#drag-map')
 
     # Center the map initially
@@ -13,7 +12,7 @@ $.extend Place, {
     center = ->
       dX = (dragMap.width() - w) / 2
       dY = (dragMap.height() - h) / 2
-      mapElements.css('transform', "translate(#{dX}px, #{dY}px)")
+      map.css('transform', "translate(#{dX}px, #{dY}px)")
 
     $(window).on 'resize', center
     center()
@@ -28,14 +27,14 @@ $.extend Place, {
           dY += e.pageY - lastE.pageY
           dY = Math.min(0, Math.max(dY, dragMap.height() - h))
 
-        mapElements.css('transform', "translate(#{dX}px, #{dY}px)")
+        map.css('transform', "translate(#{dX}px, #{dY}px)")
         lastE = e
 
     $(window).on 'mouseup touchend touchcancel', ->
       map.off('mousemove touchmove')
 
     $('#LabelLayer g').on 'click', ->
-      showMenu(@id)
+      Place.showOverview(@id)
       return false
 
   drawMap: (interactive = true)->
@@ -46,25 +45,31 @@ $.extend Place, {
     $('#MapMask').children('circle, ellipse').attr('fill', 'none')
     $('#LabelLayer g').hide()
 
-    places = for place, r of g.reputation
+    for place of g.reputation
       $('#' + place).show().animate {opacity: 1}, 200
       $('#' + place + 'Mask').attr('fill', 'url(#maskBlur)')
-      if interactive
-        Place.draw(place)
-
-    $('#places').empty().append places.join('')
-    if g.openMenu
-      showMenu(g.openMenu, 0)
 
     location = Place.location(g.location, g.distance)
     document.getElementById('Ship').attributes.x.value = location.x
     document.getElementById('Ship').attributes.y.value = location.y
 
-  drawOverview: ->
-    """<div class="places">
-      <img src="game/content/#{Place[g.location].img}">
-      #{Place.byDistance(g.location).map(Place.draw).join('\n')}
-    </div>"""
+  showOverview: (place = g.location)->
+    o = $('#overview')
+    Person.updateOverview()
+
+    o.find('.place').replaceWith(Place.draw(place))
+    $('.place img', o).click -> Place.hideOverview()
+
+
+    unless o.hasClass('active')
+      o.css({opacity: 0, display: 'block'})
+      .stop().delay(100).animate({opacity: 1}, 400)
+    o.addClass('active')
+
+  hideOverview: (duration = 500)->
+    $('.logo').removeClass('active')
+    $('#overview').removeClass('active').stop().animate {opacity: 0}, duration, ->
+      unless $('#overview').hasClass('active') then $('#overview').css('display', 'none')
 
   drawRepair: ->
     repair = Math.min(Place.repairRate(), g.damage)
@@ -86,6 +91,7 @@ $.extend Place, {
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 1500, ->
         Place.drawMap()
+        Place.showOverview()
 
   draw: (place)->
     location = Place.location(place)
@@ -107,21 +113,22 @@ $.extend Place, {
     clickableStories = visibleStories.filter((s)-> not Story.unmetNeed(place, s))
     visibleStories = visibleStories.filter(Story.unmetNeed.bind(null, place))
 
-    return """<div place="#{place}" class="place has-full" style="left: #{location.x}px; top: #{location.y}px;">
+    return """<div place="#{place}" class="place">
+      <img src="game/content/#{Place[place].img}">
       #{travel}
       <div class="name">#{Place[place].name}</div>
       <div class="description">#{distanceDesc} - #{Math.floor(g.reputation[place])} reputation</div>
-      <table>
+      <div class="table-wrapper"><table>
         #{Game.drawList clickableStories, Story.draw.bind(null, place)}
         #{if g.damage and g.location is place then Game.drawList [true], Place.drawRepair else ''}
         #{Game.drawList deliverable, Cargo.drawDelivery}
         #{Game.drawList available, Cargo.draw}
         #{Game.drawList visibleStories, Story.draw.bind(null, place)}
-      </table>
+      </table></div>
     </div>"""
 
   animateTravel: (to)->
-    Game.hideOverview()
+    Place.hideOverview()
     g.openMenu = ''
     Place.drawMap(false)
     events = Place.travelEvents(g.location, to)
@@ -169,25 +176,3 @@ $.extend Place, {
         path.setAttribute('stroke-dashoffset', length * direction - now)
     })
 }
-
-showMenu = (place, showDuration = 200)->
-  label = $('#' + place)
-  placeDiv = $('#places [place="' + place + '"]')
-  unless placeDiv.length then return false
-
-  paths = $(Place.travelSteps(place, g.location).map(Place.svgElement))
-  $('[place]').not(placeDiv).stop().animate({to: 0}, {step: animateClip, duration: 200})
-
-  placeDiv.stop().animate({to: placeDiv.outerHeight()}, {step: animateClip, duration: showDuration})
-  label.stop().animate {opacity: 0}, showDuration
-  paths.stop().animate {opacity: 1}, 200
-  g.openMenu = place
-  placeDiv.find('.name, .description').one 'click', ->
-    if g.openMenu is place then g.openMenu = ''
-    placeDiv.stop().animate({to: 0}, {step: animateClip, duration: 200})
-    label.stop().animate {opacity: 1}, 200
-    paths.stop().animate {opacity: 0}, 200
-
-
-animateClip = (now, fx)->
-  $(@).css('clip', 'rect(0px 500px ' + now + 'px 0)')

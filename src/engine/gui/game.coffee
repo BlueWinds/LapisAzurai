@@ -28,20 +28,11 @@ $.extend Game, {
   drawStatus: (d = g.day)-> # Draws the status bar and included items
     $('header .day').html Game.date(d)
     Cargo.drawCargo()
-    Person.drawPicks()
 
   drawList: (items, draw)->
     if items.length
       """<tr>#{items.map(draw).join "</tr><tr>"}</tr>"""
     else ''
-
-  drawOverview: ->
-    o = $('#overview').empty()
-    o.append """
-      #{Place.drawOverview()}
-      #{Person.drawOverview()}
-    """
-    Person.activateDrawings(o)
 
   drawEffects: (e)->
     text = []
@@ -53,17 +44,6 @@ $.extend Game, {
         for name, amount of results
           text.push "#{amount} #{key} #{at} #{Place[name]?.name or Person[name]?.name}"
     return text.join('<br>\n')
-
-  showOverview: ->
-    Game.drawOverview()
-    $('.logo').addClass('active')
-    $('#overview').addClass('active').css({opacity: 0, display: 'block'})
-    .stop().animate({opacity: 1}, 200)
-
-  hideOverview: (duration = 200)->
-    $('.logo').removeClass('active')
-    $('#overview').removeClass('active').stop().animate {opacity: 0}, duration, ->
-      unless $('#overview').hasClass('active') then $('#overview').css('display', 'none')
 
   guiSetup: ->
     c = $('#content')
@@ -85,12 +65,6 @@ $.extend Game, {
 
     $('#container').on 'click', '.overlay', ->
       $('.overlay').animate {opacity: 0}, -> @remove()
-
-    $('.logo').on 'click', ->
-      if $('#overview').hasClass('active')
-        Game.hideOverview()
-      else
-        Game.showOverview()
 
     Place.guiSetup()
 

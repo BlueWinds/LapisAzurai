@@ -39,8 +39,8 @@ $.extend Story, {
       elements = Story.render(story)
       removeOverlay()
       $('#content').css({display: 'block'}).animate {opacity: 1}, 500, ->
-        Game.hideOverview(500)
         Place.drawMap()
+        Place.hideOverview(500)
       $('#stories').empty().append(elements)
       if goto
         if g.scroll is -1 then g.scroll = 0

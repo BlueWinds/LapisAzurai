@@ -100,6 +100,7 @@ s.MeetAsara =
 
     Finally, at the center of the devastation, they found something different. Leaning over the water with a lantern, James let out a cry and pointed. Amid the soot-black ocean and rent wood, a flash of white – a body, naked and seemingly unharmed. They drew it out of the water with a net.
 
+  || N/Upset
     A survivor. She coughed and shuddered as they lowered her on the deck, then lay still. A young woman – barely more than a girl – slender and pale-skinned, completely naked except for a metal collar and manacles binding her wrists and ankles. The metal was twisted and warped, as though it had melted hot enough to start dripping over her bare flesh.
 
     Natalie draped a blanket over her, then reached down to feel her forehead. The girl flinched away from the touch, so Natalie withdrew her hand. James reached down to pick her up, provoking a much more violent reaction. The girl moaned painfully, curled up into a ball beneath the blanket and began to sob.
@@ -143,7 +144,7 @@ s.AsaraAwakens =
 
     It took longer than those two days before their passenger woke enough to do more than take a few sips of water or broth and pass out again. Natalie sat plotting their progress on a chart when she heard a sound behind her, just a shifting of cloth and a rustle of movement before the links of the manacles descended around her throat, threatening to choke her. Only threatening, yet. They were tight, but not difficult to breathe around.
 
-  || A/Afraid
+  || A/Angry
       `A لا تصرخ. يمكنني كسر العنق.` The girl whispered gibberish in her ear.
 
     `N Please, I only want to hel-` Natalie's voice was choked off mid-sound, though the chain relaxed again soon after. Despite the danger in the situation, she couldn't help but notice the hot breath tickling her ear and the unclothed chest pressed against her back. She'd been misled by the survivor's delicate features - this was a woman, both in body and in strength.
@@ -156,7 +157,7 @@ s.AsaraAwakens =
 
     `N I want-` the chain strangled her brielf, and she coughed when it was loosened again. Natalie continued more quietly. `N I want to help. We rescued you from the wreckage.`
 
-  || A/Normal
+  || A/Sad
     That seemed to satisfy her. The chain relaxed around Natalie's neck, then  the girl stepped back, all sense of menace fading. Natalie stood and turned to face her. The survivor huddled back against the bed, arms crossed over her breasts and looking quite thoroughly miserable. She walked with small shuffling steps, limited by the chain between her ankles.
 
     `N Here, let me get you a robe.` Natalie dug through her closet, and came back with a black nightgown to drape over the girl's shoulders.

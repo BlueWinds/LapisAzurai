@@ -3,15 +3,14 @@ $.extend Person, {
     unless Person[name] then name = Person.alias[name]
     "<q class=#{name}>#{text}</q>"
 
-  drawPicks: ->
-    skillPoints = Math.sum Object.keys(g.people).map((p)-> Person.skillPoints(p))
-    s = if skillPoints is 1 then '' else 's'
-    $('header .picks').html "#{skillPoints} skill#{s} available"
-
-  drawOverview: ->
-    """<div class="people">
-      #{Object.keys(g.people).map(Person.draw).join('\n')}
-    </div>"""
+  updateOverview: ->
+    p = $('#overview .people')
+    for person of g.people when not p.find("[person=#{person}]").length
+      personDiv = $(Person.draw(person))
+      console.log personDiv
+      personDiv.find('object').on 'load', Person.activateSVG
+      p.append(personDiv)
+    return
 
   draw: (person)->
     xp = g.people[person].xp
@@ -25,39 +24,39 @@ $.extend Person, {
       <img src="game/content/#{Person[person].img}.png">
       <div>
         <div class="name">#{Person[person].name}</div>
-        <div class="description">Level #{level} (#{needed - xp}xp needed for level #{level + 1})</div>
+        <div class="description">Level #{level} (#{needed - xp}xp more for level #{level + 1})</div>
       </div>
       <div class="picks #{if skillPoints > 0 then 'active' else ''}">#{skillPoints} skill#{s} available</div>
       <object data="game/content/#{Person[person].svg}"></object>
     </div>"""
 
-  activateDrawings: (element)->
-    $('object', element).on 'load', ->
-      svg = @contentDocument
-      personElement = $(@).parent()
-      person = personElement.attr('person')
-      # 1 = aura
-      # 2 = fill
-      # 3 = outline
-      $('g circle:nth-child(2)', svg).css('display', 'none')
-      for skill of g.people[person].skills
-        $("##{skill} circle:nth-child(2)", svg).css('display', 'initial')
+  activateSVG: ->
+    svg = @contentDocument
+    personElement = $(@).parent()
+    person = personElement.attr('person')
+    p = $('#overview .people')
+    # 1 = aura
+    # 2 = fill
+    # 3 = outline
+    $('g circle:nth-child(2)', svg).css('display', 'none')
+    for skill of g.people[person].skills
+      $("##{skill} circle:nth-child(2)", svg).css('display', 'initial')
 
-      $('g', svg).on 'click', ->
-        element.find('object').each ->
-          $(@contentDocument).find('.active').removeClass('active')
-        $(@).addClass('active')
+    $('g', svg).on 'click', ->
+      p.find('object').each ->
+        $(@contentDocument).find('.active').removeClass('active')
+      $(@).addClass('active')
 
-        element.find(".skill[p=#{person}]").remove()
-        personElement.after(Person.drawSkill(person, @id))
+      p.find(".skill[p=#{person}]").remove()
+      personElement.after(Person.drawSkill(person, @id))
 
-      $('g', svg).hover ->
-        element.find(".skill.mouse-over[p=#{person}]").remove()
-        skill = $(Person.drawSkill(person, @id)).addClass('mouse-over')
-        personElement.after(skill)
-      , ->
-        if element.find(".skill[p=#{person}]").length > 1
-          element.find(".skill.mouse-over[p=#{person}]").remove()
+    $('g', svg).hover ->
+      p.find(".skill.mouse-over[p=#{person}]").remove()
+      skill = $(Person.drawSkill(person, @id)).addClass('mouse-over')
+      personElement.after(skill)
+    , ->
+      if p.find(".skill[p=#{person}]").length > 1
+        p.find(".skill.mouse-over[p=#{person}]").remove()
 
   drawSkill: (person, skill)->
     data = Person[person].skills[skill]
@@ -91,5 +90,4 @@ $.extend Person, {
     # Update available skill count
     newPicks = $(Person.draw(person)).find('.picks')
     $("[person=#{person}] .picks").replaceWith(newPicks)
-    Person.drawPicks()
 }

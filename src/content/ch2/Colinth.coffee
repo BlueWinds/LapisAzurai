@@ -44,9 +44,6 @@ s.ColinthAmulets =
     `K You like it?` Kat leaned close and whispered in her ear, apparently noting the way she was staring at the amulet.
 
     `N No! It hurts. It's magic.` She wanted to flick Kat's cheek, wipe off the speculative look that crossed her face, but instead had to turn attention back to the merchant. With the amulet. Which hurt to think about. `N I can't go lower than 50%, but I can certainly cut you in for half of the profit if it does go well. I'm looking to hedge the risk here, and that shouldn't be an issue if you're confident they'll keep properly on the voyage.` She fell back into haggling while Kat continued to stare at the amulet in a way that Nat tried to convince herself <i>didn't</i> mean she was going to steal it later.
-
-  || places/ColinthNight
-    --
   """
 
 s.ColinthAmulets2 =
@@ -68,9 +65,9 @@ s.ColinthAmulets2 =
 
     Reflexively, Natalie caught it. White-hot light blazed from the captain's hand, and she whimpered. The light grew brighter, and Natalie screamed.
 
-    Kat grabbed the pendant out of her hand, and the light vanished. Natalie slumped in her chair, breathing heavily. `K Are... are you ok?`
+    Kat grabbed the pendant out of her hand, and the light vanished. Natalie slumped in her chair, breathing heavily. `K What was that?!`
 
-    `N Take it back to him,` Natalie managed. She whimpered and pulled her knees up to her chest as Kat leaned forward, accidentally bringing the amulet close to her again.
+    `N Take it back to him,` Natalie managed. Kat leaned forward, accidentally bringing the amulet close again. Natalie whimpered and pulled her knees up to her chest.
 
     Kat hesitated a moment, torn between the impulses, then firmed her resolve and ran to do as she was told.
 
@@ -116,15 +113,16 @@ s.Muggers =
     She tasted blood.
     She saw nothing.
 
-  || A/Angry
+  ||
     Blood. Moonlight. Pain. Slowly Natalie returned to consciousness. She moved her head and her vision swam, drawing a gasp of pain. Bracing herself with one hand she managed to sit up.
 
-    Asara was the only one standing. Silver moonlight streamed around her, lighting her hair like a halo and glinting off the sword in her hand. Drip. Drip. In reflected off the pools of rivulets of blood surrounding her, slowly making their way along the cracks in the cobblestone. Nothing else moved. Natalie couldn't breathe. Asara stayed motionless a moment longer, then flicked her blade to clean of most of the blood. She wiped her sword on a piece of cloth and sheathed it at her hip. That action accomplished, Asara returned to stillness, as though waiting for something more to happen.
+    Asara was the only one standing. Silver moonlight streamed around her, lighting her hair like a halo and glinting off the sword in her hand. Drip. Drip. In reflected off the pools of rivulets of blood surrounding her, slowly making their way along the cracks in the cobblestone. Nothing else moved. Natalie couldn't breathe. Asara stayed motionless a moment longer, then flicked her blade, sending a flight of red droplets scattering. She wiped her sword on a piece of cloth and sheathed it at her hip. That action accomplished, Asara returned to stillness, as though waiting for something more to happen.
 
     Natalie broke the tableau by groaning. She gingerly felt the painful spot on her head - it wasn't wet. Good. No lump yet either, which meant she'd only been out a moment. She inched up the wall towards standing. She stepped away without wobbling. Doubly good.
 
     `N What... you killed them?`
 
+  || A/Sad
     Asara turned slowly. The light was too dim to actually see, but Natalie could imagine the haunted, dead look of Asara's eyes. Nat had seen that look enough for a lifetime from when they'd first rescued Asara from the wreckage on the beach. `A They tried to touch me with ill intent.` Her voice was completely flat. Then, in a whisper, `A Never again.`
 
     `A We should go.`
@@ -192,7 +190,7 @@ s.AsarasTrauma =
 
     Silence.
 
-  || A/Sad
+  || A/Crying
     Then... a hiccing little sob. Barely noticeable, it wasn't repeated. Asara was always so quiet - even her breathing was inaudible.
 
     ` Asara... will you tell me what happened to the ship you were on before I met you?`

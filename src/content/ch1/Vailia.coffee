@@ -322,7 +322,7 @@ s.FirstStormSick2 =
 
     They were, she surmised, back in Vailia. Mount Julia didn't have fresh baked garlic-cheese-rolls. They. Better check who <q>they</q> were. Her last memory was of pounding power surging through her body and a wave towering over the ship, threatening to reduce the Lapis to splinters if she couldn't grip the entire vessel tightly enough.
 
-  || travel/DeckDay"
+  || travel/DeckDay
     Two of the crew grinned at her as she stood in the doorway, blinking owlishly in the bright light. ` Welcome back, Captain,` one of them volunteered, with a lazy salute and a grin.
 
     `N How long was I asleep?` Natalie rubbed her eyes, looking out on the busy port. Standing in her nightshirt and underwear, she attracted little attention. Vailians weren't shy about that sort of thing.
@@ -367,7 +367,7 @@ s.AsaraArrives =
     xp:
       Asara: 3
   text: -> """
-  || A/Normal
+  || A/Tentative
     `A Not leaving.`
 
     Natalie leaned against the door, but Asara held it closed against her. She let out an exasperated sigh and slumped against it. One of the crew quirked an eyebrow to see his captain locked out of her own room, but didn't say anything. Natalie rolled her eyes and hit him lightly in the shoulder. He chuckled.

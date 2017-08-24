@@ -30,9 +30,9 @@ s.IronSandsArrive =
 
     `N Sounds like hell.`
 
+  || A/Sad
     `Cara Only if hell makes you rich. You want my advice, get what you came for and leave as soon as you can. Pretty face like yours doesn't need scars. What's she smiling at?`
 
-  || A/Happy
     They both turned to look at Asara, who had cracked open the door and was looking outside.
 
     `A The spirits in the sand are very hungry.` She stepped the rest of the way outside. `A It reminds me of home. I am glad there are no demons though. How long can we stay here, Natalie?`
@@ -152,7 +152,7 @@ s.IronSandsAsaraTalk =
 
     `Cara I won't argue the point. What I really want to know is what we can do about them. We could cut costs in half if the damned dust didn't eat everything. The ore's so good that we stay anyway, but it plays hell with equipment.`
 
-  || A/Normal
+  || A/Sad
     Asara nodded. `A The spirits here are very hungry. They fought a war, long ago.` She shielded her eyes and looked out into the desert, completely barren and devoid of life. `A But they fought so hard that there was nothing left. They were so hungry that they ate anything that grew here, so nothing more grew, and they became hungrier still.`
 
     `Cara What can we do about it?`

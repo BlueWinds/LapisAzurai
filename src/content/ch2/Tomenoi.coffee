@@ -9,7 +9,7 @@ s.TomenoiArrive =
     xp:
       Natalie: 3
   text: -> """
-  || places/TomenoiDay
+  || N/Upset
     The keel shifted under Natalie's guidance, and the Lapis turned briefly into the wind before settling down on the other tack. She frowned in concentration - if the wind had been blowing any harder against them, she'd have settled for weighing anchor in the harbor and conducting business by boat. But the ship felt good under her hands, the crew confident and cheerful, so an upwind docking into the space between two other ships it was.
 
     A small crowd gathered to watch them come in, shouting advice, encouragement, or in a few cases, warning them off. Natalie ignored the noise, spun the wheel, shouted to the crew.
@@ -18,13 +18,13 @@ s.TomenoiArrive =
 
     All in all, a rather graceful arrival given the circumstances. Natalie grinned at Kat, at James, at Asara, and hopped onto the pier.
 
+  || places/TomenoiDay
     Tomenoi was an odd combination of bustling and dreary. The buildings looked like they could use a fresh coat of paint to hide the dirt, and the streets weren't so much "streets" as they were "beaten paths in the dust." But at the same time, those who greeted her were cheerful and loud, a mix of Vailian sailors and captains slapping her on the back and Kantian merchants and townsfolk keeping a more respectful distance.
 
     She hadn't seen more than a few Kantians in her life before now. Their ships were square rigged, solid but slow, making the journey to Vailia rather arduous for them. The few she had seen were mostly wealthy or powerful - the sort that could afford to take a month or more away from their affairs for a vacation at the center of the known world. The Kantians were generally darker than the Vailians, golden skin and deep brown or black waves of hair.
 
     ` Welcome to Tomenoi. Docking fee 2 obols per day,` His accent was heavy on the vowels and emphasis, but still easily understandable.
 
-  || N/Normal
     Expensive. Natalie quirked an eyebrow at the man holding out his hand. `N I'll give you a half.`
 
     ` One and a half, and I make sure no one else unload same time you do.`
@@ -58,7 +58,7 @@ s.AsaraJoinsCrew =
 
     She didn't really know how to respond to such an accurate insight, so she stayed silent.
 
-  || A/Normal
+  || A/Sad
     `A I have a... a job? A purpose? A thing I wish to do,` she struggled for the proper word, reinforcing Natalie's conviction that she had learned Vailian only recently. Asara continued, a bit of bitterness creeping into her voice. `A But I am not yet ready, as I have learned. I would stay here a while, if you will. Your kindness in keeping me is worthy, but I wish to contribute as well.`
 
     `N Ah, yes, stay as long as you like. What is your task?`
@@ -89,11 +89,11 @@ s.StrandedShip =
 
     ` Akylas, captain of the Gallant, and thank the gods for your kindness,` a weather-beaten man introduced himself. He looked torn between wanting to salute her, hug her and run for the water as his crew was doing.
 
+  || N/Normal
     `N Natalie, of the Lapis Azurai, out from Vailia. What happened?`
 
     The sad tale was much as she'd guessed. The Gallant had been struck by a storm just over three weeks ago, not only smashing their mast and ripping away the sails, but also flooding the cargo bay and washing away most of their supplies. They'd had plenty of food, but precious little water except when it rained.
 
-  || N/Normal
     Natalie listened sympathetically, and patted Akylas' shoulder for reassurance. `N I think we should be able to rig something up. I can't give away all my spares, but I'm sure we have enough canvas to get you back to port.`
 
     ` I'm afraid I won't be able to give you anything in return. The storm took everything except our lives. But thank you for that, and for all your kindness.`
@@ -140,7 +140,7 @@ s.KantisRegion2 =
 
     ` Apologies for the delay, priestess. It is hard to find work here, and I could not leave my post until now.`
 
-  || A/Happy
+  || A/Tentative
     `A You live here?` she inquired. She'd been surprised to see another one of her people so far from home, but he was here, and there might be something he could do.
 
     ` There are more of us here than you might think,` he smiled. ` And not all who move beyond the desert forget what we are owed. How may I help you?` They looked little alike - his black hair and dark brown eyes compared to her own silver and blonde, but if one looked beyond the coloration, the resemblance was strong.

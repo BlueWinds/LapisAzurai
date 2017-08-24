@@ -44,19 +44,9 @@ header .right {
 
 header .logo {
   border-radius: 6px 6px 0 0;
-  cursor: pointer;
   height: 40px;
   margin: 10px 5px 0px 0px;
   padding: 5px 5px 10px 5px;
-}
-
-header .logo.active, header .logo:hover {
-  background: #000;
-  border: 1px solid #2a9fd6;
-  border-bottom-width: 0px;
-  padding: 4px 4px 11px 4px;
-  position: relative;
-  z-index: 1;
 }
 
 header .logo:hover {
@@ -75,6 +65,7 @@ table {
   background-color: #181818;
   border-collapse: collapse;
   border-spacing: 0;
+  position: relative;
   width: 100%;
 }
 
@@ -191,41 +182,29 @@ hr {
     top: 0;
 }
 
-#places {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-#places .name, #places .description {
-  cursor: pointer;
-}
-
 #LabelLayer g {
   cursor: pointer;
 }
 
 .place {
   background-color: #151515;
-  border: 1px solid #030303;
-  clip: rect(0, 500px, 0, 0);
   cursor: default;
   border-radius: 4px;
-  min-height: 60px;
-  position: absolute;
-  transform: translate(-5px, -5px);
-  width: 280px;
 }
 
-.name {
+.place img {
+  cursor: pointer;
+}
+
+.place .name {
   color: #fff;
-  font-size: 1.4em;
-  padding: 8px 0 0 12px;
+  font-size: 2em;
+  text-align: center;
 }
 
-.description {
+.place .description {
   font-size: 0.8em;
-  margin: -5px 0 8px 22px;
+  text-align: center;
 }
 
 .place .cost {
@@ -235,7 +214,6 @@ hr {
 
 .place .participants, .place .need {
   font-size: 0.8em;
-  margin: -1px 0px -3px 15px;
 }
 
 .place td {
@@ -362,33 +340,23 @@ hr {
 }
 
 #overview {
-  border: 1px solid #2a9fd6;
-  border-radius: 0 6px 0 0;
   display: none;
   overflow: auto;
-  width: calc(100% - 2px);
 }
 
 #overview img {
   max-width: 100%;
 }
 
-#overview .places {
-  float: left;
-  width: 280px;
-  margin: 10px;
-}
-
 #overview .place {
-  border: none;
-  transform: none;
-  position: static;
+  float: left;
+  width: 430px;
+  margin: 10px;
 }
 
 #overview .people {
   float: left;
-  margin: 10px;
-  width: 620px;
+  width: 490px;
 }
 
 .person {
@@ -401,8 +369,20 @@ hr {
   height: 150px;
 }
 
+.person .name {
+  color: #fff;
+  font-size: 1.4em;
+  padding: 8px 0 0 12px;
+}
+
+.person .description {
+  font-size: 0.8em;
+  margin: -5px 0 8px 22px;
+}
+
 .person object {
   clear: left;
+  width: 360px;
 }
 
 .person > div {

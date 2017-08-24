@@ -62,6 +62,7 @@ s.AlkeniaWeaponsRunning =
 
     ` Hah, a Vailian looking to help, there's a new one. You said you were a captain? Not much use to me, then. We already have an exclusive contract with charter company for forest products. Kind of you to ask, though.` With a grunt he heaved the log back to his shoulder, getting ready to leave. Then he paused, turning back to her, and she had to duck the swing of his beam. ` Well actually, maybe there is something. Bring me a dozen bows with spears and knives to match and I might start thinking you mean it about wanting to help. good Vailian ones, not the dreck we make here. That's what we need - help defending ourselves, not the pretty promises you'd prefer to give.` He laughed at her expression. That much weaponry was, not to put too fine a point on it, rather expensive.
 
+  || N/Normal
     Maybe she could work something out. `N I can bring you a load at-cost if you'll front 50% of the price.` Natalie winced. It was a huge risk, and if something went wrong, it could almost break her books. Quality arms weren't cheap, and her budget was always tight.
 
     ` Possible. And more generous than I was expecting, to be honest. Take a seat, let's talk.` He dropped the log with a tremendous thud, and gestured her to the impromptu bench. She sat.
@@ -105,7 +106,7 @@ s.AlkeniaRaid =
 
     Time to get moving. They'd have to defend themselves if the Alkenians were too busy hiding from the storm.
 
-  || A/Angry
+  || A/Tentative
     `A That's far enough,` Asara held up an empty hand, the other resting on the sword at her hip. She should have had to shout to make herself heard, but her quiet voice carried over the gusting wind. `A You may not come here.` The sailors behind her held steady, forming a grim line with James at the center.
 
     The raiders stopped. Half a dozen women, each with the same barbed vine painted across their left cheek and running down their necks, slowly smudging as rain washed them clean, each with the same vicious looking dagger in one hand. They didn't say anything. The silence was more terrifying shouting would have been.
@@ -114,6 +115,7 @@ s.AlkeniaRaid =
 
     Without warning they swept forward again, seeming to move with a single mind. Asara smoothly drew and parried the wicked dagger aimed at her chest. Beside her, one of the crew screamed and fell, tangled with a vine-woman, but Asara had her own problems to attend to. Her attacker ducked slid under her probing counter-stroke and came at her again.
 
+  || A/Angry
     It was over in an instant, too quickly to think. One of Natalie's crew bled on the ground, and two of the Nonkenians lay dead at Asara's feet. The remainder fled as silently as they'd come, one clutching an injured arm where James had used his own blade. Asara contemplated further violence, but it wasn't necessary. Natalie was still here. She needed to stay with Natalie.
 
     She wiped her blade on a dead man's shirt, wiped water from her eyes. It had been sloppy, letting them get past her to hurt one of Natalie's crew. Behind her the others tended to the sailor, but caring for the wounded was not her task. Asara kept her ears on the war drums, and her eyes on the streets.

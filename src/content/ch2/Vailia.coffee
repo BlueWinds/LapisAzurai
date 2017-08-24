@@ -74,7 +74,7 @@ s.TomenoiRoute =
 
     Janos sat back down heavily in his chair. `Guildmaster Sorry, you gave me quite a fright. Who are you?`
 
-  || A/Normal
+  || A/Tentative
     `A Natalie sent me.`
 
     `Guildmaster You must be Asara, right. One of Natalie's new officers. Do you know why she sent you instead of James?`
@@ -130,7 +130,7 @@ s.NonkeniaRoute =
 
     It was... sloppy. Disorganized. It was <i>loud.</i>
 
-  || A/Normal
+  || A/Tentative
     She gave up hoping someone would approach her and finally went over to the desk set up to greet visitors. She waited for the clerk to recognize her. They'd never met, but he must have been given a description of her, surely...
 
     He grew nervous under her silence. With an internal shrug, Asara gave up hope of getting through this without having to speak to anyone. It wasn't a big deal, she tried to convince herself. Vailia was different from home, and she'd have to accept that if she wanted to make her way in Natalie's world. She could do this.
@@ -369,7 +369,7 @@ s.AsaraTalkFlames =
 
     Natalie blinked, blushed, clamped her mouth shut. `N Oh, um, well, that's good.` Had she really been that transparent?
 
-  || A/Upset
+  || A/Sad
     Asara just seemed confused by Natalie's reaction. She went on. `A The Flames are one of the blessings my sisters and I may call upon. We are not as versatile as witches, but we do not need to be.` She grew reflective for a moment, then looked guilty. `A I have spoken too much, embarrassed you.`
 
     `N No, it's quite alright. You...`
@@ -392,7 +392,7 @@ s.AsaraTalkNotMagic =
 
     Now Natalie was genuinely curious. Everything she'd ever read suggested that, for humans, power came with birth, present or absent in set quantity from the moment when a potential sorcerer drew their first breath. Seeing her interest, Asara went on.
 
-  || A/Normal
+  || A/Tentative
     `A We are not witches. My sisters and I are priestesses. Guardians? Holy soldiers. I do not know a good word for it in Vailian, forgive me. Your birth defined you, but I was defined by a choice.`
 
     `N A choice?` Natalie prompted her to go on, leaning in closer. Asara was finally opening up a little - and beneath the sharp exterior there was something as fascinating as Nat has known there would be.

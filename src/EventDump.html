@@ -38,45 +38,66 @@
     padding-top: 30px;
     text-align: center;
   }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    margin: 10px;
+  }
 </style>
 <script src="../dist/game/lib.js"></script>
 <script src="../dist/game/compiled.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
 <script>
   window.g = {history: {}, people: {}}
 
   function drawEvents(chapter) {
-    var i = $('#index').empty()
+    var index = $('#index').empty()
     var w = $('#warnings').empty()
     var s = $('#stories').empty()
 
-    for (let key in Story) {
-      if (!Story[key].text) { continue; }
+    for (let chapter in Place.Vailia.stories) {
+      index.append('<h2>' + chapter + '</h2>')
+      for (let place in Place) {
+        if (!Place[place].stories || !Place[place].stories[chapter] || !Place[place].stories[chapter].length) { continue; }
 
-      link = '<a href="#' + key + '">' + key + '</a>';
+        index.append('<h4>' + place + '</h4>')
+        Place[place].stories[chapter].forEach(drawStory);
+      }
+    }
 
-      if (!Story[key].label) {
+    function drawStory(story) {
+      if (!Story[story].text) { return; }
+
+      const link = '<a href="#' + story + '">' + story + '</a>';
+
+      if (!Story[story].label) {
         w.append('<li>' + link + ' is missing a label</li>');
       }
 
-      sections = Story.render(key);
+      sections = Story.render(story);
       sections.each(function(i) {
-        len = $(this).text().length;
+        section = $(this).attr('id', story + i)
+        const i_link = '<a href="#' + story + i + '">' + story + '[' + i + ']</a>';
+        len = section.text().length;
 
-        if ($(this).find('img').length && len < 200) {
-          w.append('<li>' + link + ' has an image, but is only ' + len + ' characters long.</li>');
+        if (section.find('img').length && len < 200) {
+          w.append('<li>' + i_link + ' has an image, but is only ' + len + ' characters long.</li>');
         }
 
-        if (len > 1500) {
-           w.append('<li>' + link + ' is ' + len + ' characters long, consider breaking it up.</li>');
+        if (len > 1800) {
+           w.append('<li>' + i_link + ' is ' + len + ' characters long, consider breaking it up.</li>');
         }
 
-        $(this).find('img').on('error', function(e) {
-          w.prepend('<li>' + link + ' wanted invalid image "' + decodeURI(this.src.split('content/')[1]) + '"</li>');
+        section.find('img').on('error', function(e) {
+          w.prepend('<li>' + i_link + ' wanted invalid image "' + decodeURI(this.src.split('content/')[1]) + '"</li>');
         });
       });
 
-      i.append('<li>' + link + '</li>');
-      s.append('<h1 id="' + key + '">' + key + ' <a href="#index">^</a></h1>');
+      index.append('<li>' + link + '</li>');
+      s.append('<h1 id="' + story + '">' + story + ' <a href="#">^</a></h1>');
       s.append(sections);
     }
 

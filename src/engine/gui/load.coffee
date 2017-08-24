@@ -34,6 +34,7 @@ Story.Load =
     """
 
 Game.showLoadPage = ->
+  Place.hideOverview()
   elements = Story.render('Load')
   $('#content').css({display: 'block'}).animate({opacity: 1}, 300)
   $('#stories').empty().append(elements)
