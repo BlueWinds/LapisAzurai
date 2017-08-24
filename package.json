@@ -28,9 +28,9 @@
   "scripts": {
     "start": "coffeelint -q src/ || true && run-s clean && run-p copy-images uglify watch livereload",
     "compile": "run-p coffee copy-css string-replace",
-    "build-dist": "run-s full-compile remove-livereload && zip -r LapisAzurai.zip dist/",
+    "build-dist": "run-s full-compile remove-livereload && cd dist && zip -r LapisAzurai.zip *",
     "full-compile": "coffeelint -q src/ && run-s clean && run-p copy-images copy-static uglify compile",
-    "clean": "rm -rf dist LapisAzurai.zip && mkdir dist && mkdir dist/game",
+    "clean": "rm -rf dist && mkdir dist && mkdir dist/game",
     "coffee": "coffee --compile --output dist/ src/ && cat $(grep -v '^#' src/loadOrder) > dist/game/compiled.js && rm -rf dist/engine dist/content",
     "copy-css": "cp src/engine/engine.css dist/game/engine.css && cp src/content/content.css dist/game/content.css",
     "copy-images": "rsync -r --prune-empty-dirs --include='*/' --include='*.jpg' --include='*.png' --include='*.svg' --exclude='*' src/content dist/game/",

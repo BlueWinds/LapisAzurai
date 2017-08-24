@@ -1,0 +1,11 @@
+#!/bin/bash
+set -o errexit
+
+ssh-add
+echo "Compiling..."
+npm run build-dist
+echo "Uploading..."
+scp dist/LapisAzurai.zip threewestwinds.com:threewestwinds.com/LapisAzurai.zip
+echo "Unpacking..."
+ssh threewestwinds.com "cd threewestwinds.com/ && rm -rf LapisAzurai && unzip -qd LapisAzurai LapisAzurai.zip"
+echo "Deployed."
