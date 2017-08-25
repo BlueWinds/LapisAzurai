@@ -103,7 +103,7 @@ s.Ch1 =
   || Guildmaster/Smiling
     `Guildmaster Please, I'm not going to bite. James Thadel, is it? I understand you're to be Natalie's first mate?`
 
-    `J Sorry sir, yes sir.` James stood up straighter, self consciously moving out from his position half hidden behind her. `J Quartermaster,` he corrected.
+    `J Sorry sir, yes sir.` James stood up straighter, self consciously moving out from his position half hidden behind her.
 
     `Guildmaster Please take as good care of her as we have.` He gestured to a pair of chairs in front of his desk. Natalie relaxed into hers, while James perched on the edge. It was his first time meeting Janos, and she couldn't help but chuckle at his nerves. She'd been awed too, her first time meeting the most powerful man in the city - but eight year old Natalie had gotten over that nervousness by promptly sitting in his lap, rather than the offered chair. She smiled at the memory. He'd approved, as Wend had said he would, rather than scolding her.
 
@@ -133,7 +133,7 @@ s.ReadyToGo =
   || travel/CabinDay
     James loomed in the doorway. Natalie laid aside her pen to admonish him. `N If you're going to fill the room with dread, at least enter all the way.`
 
-    He started guiltily and stepped into her cabin, closing the door behind him with a foot. He remained standing. Other than the chair she occupied, the only place to sit would be on her bed, and he wasn't the sort to be comfortable with that. The space was cramped, but a private room was still more than most people aboard a ship this size would get, even the quartermaster. He'd have to share a room with the first-mate, once they had one.
+    He started guiltily and stepped into her cabin, closing the door behind him with a foot. He remained standing. Other than the chair she occupied, the only place to sit would be on her bed, and he wasn't the sort to be comfortable with that. The space was cramped, but a private room was still more than most people aboard a ship this size would get, even the first mate. He merely had first choice of spots among the crew, and no one crowded him too closely.
 
 
   || J/Upset
@@ -277,7 +277,7 @@ s.FirstStormSick =
 
     No one had expected a ship to come into dock the day after a Grandmother Storm, and even with two masts snapped, the Azurai was in remarkably good condition. No hands lost. That was news. News attracted crowds. Natalie would know how to deal with this, but that wasn't much help when Natalie was the thing that needed dealing with.
 
-    James nodded to one of the crew, guarding the ship and looking somewhat overwhelmed. The quartermaster didn't have any answers to give about how they'd survived. He understood nothing more than the sailors.
+    James nodded to one of the crew, guarding the ship and looking somewhat overwhelmed. The first mate didn't have any answers to give about how they'd survived. He understood nothing more than the sailors.
 
   || travel/CabinDay
     Natalie looked exactly as she had yesterday, cheerful cheeks the perfect picture of health, chest rising and falling steadily. The priest glanced at James for permission, then knelt down next to her and put his ear to her chest. James wished he could sense magic, even the slightest bit, but his family had never displayed an inch of talent, no matter how far back they went. He had no way of telling a charlatan from a healer.
@@ -329,11 +329,10 @@ s.FirstStormSick2 =
 
     `N How long was I asleep?` Natalie rubbed her eyes, looking out on the busy port. Standing in her nightshirt and underwear, she attracted little attention. Vailians weren't shy about that sort of thing.
 
-    ` Two days. You passed out at the wheel, but we made it through the storm, somehow, and limped home on one sail. The quartermaster is out in the city right now. Anything you need, captain?`
+    ` Two days. You passed out at the wheel, but we made it through the storm, somehow, and limped home on one sail. The first mate is out in the city right now. Anything you need, captain?`
 
     `N Nope, just a little something to eat and I'll be back in action. Good work,` she punched him lightly in the shoulder. `N We made it. That's one for the record books.`
   """
-
 
 s.WastingMoney =
   label: 'Wasting Money'

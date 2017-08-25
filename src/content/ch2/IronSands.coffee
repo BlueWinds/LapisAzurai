@@ -119,7 +119,7 @@ s.IronSandsJamesFlirt =
 
     `Cara Cara,` she loomed over him, finally tired of simply staring. James shook her offered hand, and she sat down across from him. She had a strong grip. `Cara What're you doing in my town, cute stuff?`
 
-    It took him a moment to realize he was being flirted with, not antagonized. James snapped his mouth shut. `J I'm the quartermaster on the Lapis Azurai,` he finally managed.
+    It took him a moment to realize he was being flirted with, not antagonized. James snapped his mouth shut. `J I'm first mate on the Lapis Azurai,` he finally managed.
 
   || Cara/Normal
     `Cara Yes, James. Natalie mentioned I might find you here. I see you've settled on imported liquor - good call. The stuff Teddy brews is fine once you're already drunk, but I'd never start with it.`

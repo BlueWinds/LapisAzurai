@@ -39,7 +39,6 @@ s.TomenoiArrive =
 s.AsaraJoinsCrew =
   label: 'Asara Joins'
   history:
-    TomenoiArrive: 0
     AsarasMagic: 0
   effects:
     xp:
@@ -203,6 +202,50 @@ s.TomenoiHistory =
       8th of Ascending Fire, year 23 of the new era`
 
     Kat pulled her hand back, suddenly unwilling to touch the stone any further. Too much history.
+  """
+
+s.SailorTroubles =
+  label: 'Sailor Troubles'
+  history:
+    TomenoiArrive: 0
+  effects:
+    xp:
+      James: 3
+  text: ->"""
+  || travel/DeckNight
+    `J Natalie, can we talk?` James pulled her aside as she was about to leave the ship, gesturing to her cabin. Seeing his serious expression, she nodded.
+
+    He closed the door behind them and leaned against it with a sigh. `J I hate bringing you into this, but I need a captain's decision.`
+
+    `N What do you need from me?`
+
+    `J So far as first mate I've kept crew discipline with a pretty light hand, and it's worked well. Most of them are more experienced than either of us.`
+
+    `N I offered good pay on a brand new ship with the Guildmaster's personal attention,` Natalie ticked off her advantages on one hand. `N I had a good selection to hire from.`
+
+    `J Yeah.` He glanced at the floor, rubbed at a dirty spot with his boot. `J Cimarin is giving me trouble. He works hard when either of us are looking, but shirks off if he thinks I'm not paying attention. Has to be ordered to do things, doesn't take any initiative. It rubs everyone else wrong. And... well, I've tried some of the lesser punishments to no effect. He keeps pushing.` James' unusual verbosity gave way to silence, and he crossed his arms over his chest.
+
+  || J/Upset
+    `J Nat, do you want me to fire him or flog him?`
+
+    Natalie didn't answer immediately. Flogging was normal enough - on some vessels for offenses far less severe than 'pushing' the first mate. Did she want it on her ship? Did she want James to do it? It would have to be him. While she took many tasks aboard ship, Natalie was not and never would be as strong as him.
+
+    `N Weigh it for me.`
+
+    `J We can be light handed by one until we get back to Vailia, that won't be a problem. Tomenoi's pretty far from home, but losing this post won't stop him finding another easily enough. It'd set a bad precedent though, marking us as soft. Traditions are traditions for a reason, and trying to be nice won't do us any favors.`
+
+    `N But you want to do it anyway. Why?`
+
+    `J I just keep thinking how pleasant it would be to wipe that smirk off his face. I'm worried I'll enjoy hurting him if we go that route.`
+
+    `N  James. Look at me. I've been watching Cimarin too. Now, you need to do your job as first mate, do what needs to be done to keep order aboard the ship. That's an order.`
+
+  || N/Normal
+    `N Nothing wrong with liking to hurt people. Cimarin doesn't want it though, so it wouldn't be ok to do this for fun.` She reached over to flick him in the nose. He flinched. `N You're not doing this for fun though, you're doing it because it needs to be done. Keep them separate. It's why I poke you so much.`
+
+    `J What?`
+
+    She laughed at his confused expression, poked him again, this time in the ribs. `N Hurting people is fun. You ever want some bite marks, you know where to find me.`
   """
 
 Place.Tomenoi.stories.Ch2 = Object.keys(s)

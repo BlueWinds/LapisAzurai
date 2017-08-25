@@ -35,7 +35,6 @@ s.NonkeniaDiplomatDelivery =
   label: 'Deliver the "Diplomat"'
   history:
     NonkeniaDiplomatSailing: 0
-    NonkeniaArrive: 0
   effects:
     xp:
       Natalie: 3

@@ -528,7 +528,7 @@ s.TomenoiHistory2 =
 s.MeghanSuitors =
   label: "Lady Meghan's Problem"
   history:
-    MeetMeghan: 0
+    Ch2: 0
   effects:
     xp:
       Natalie: 2

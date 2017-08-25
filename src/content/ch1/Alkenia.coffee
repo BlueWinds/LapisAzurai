@@ -162,7 +162,7 @@ s.KatMeetsJames =
   || K/Normal
     `K Oh, we spoke a few days ago, she helped me out a little. I saw you two talking down at the pier.` Kat kept glancing over her shoulder, looking out for something. `K Anyway, I gotta run. They're handing out free blankets at the church this afternoon. What's your name?`
 
-    `J James Thadel, quartermaster.` He relaxed a little. If Natalie had helped her, she couldn't be that bad.
+    `J James Thadel, first mate.` He relaxed a little. If Natalie had helped her, she couldn't be that bad.
 
     `K Ooh, she's a sailor, then?`
 

@@ -27,8 +27,10 @@
 <script src="http://d3js.org/d3.v3.js"></script>
 <script src="../dist/game/lib.js"></script>
 <script src="../dist/game/compiled.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
 <script>
   function drawEvents(chapter) {
+    window.location.hash = '#' + chapter;
     var links = [];
     var nodes = {};
     var colors = {};
@@ -36,6 +38,7 @@
     var color = d3.scale.category10();
 
     var places = {};
+    places[chapter] = 'Vailia';
     Object.keys(Place).forEach(function(place) {
       if (!Place[place].stories) { return; }
 
@@ -146,7 +149,7 @@
   }
 </script>
 </head>
-<body onload="drawEvents('Ch1')">
+<body onload="drawEvents(window.location.hash.substr(1) || 'Ch1')">
   <div style="position: absolute; top: 0; left: 0; z-index: 1;">
     <button onclick="drawEvents('Ch1')">Ch1</button>
     <button onclick="drawEvents('Ch2')">Ch2</button>
