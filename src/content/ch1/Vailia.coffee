@@ -6,8 +6,11 @@ Game.starting =
   cargo: []
   damage: 0
   availableCargo: []
-  location: 'Vailia'
-  distance: 0
+  map:
+    from: 'Vailia'
+    to: ''
+    distance: 0
+    delay: 0
   reputation:
     Vailia: 0
     MtJulia: 0
@@ -20,7 +23,6 @@ Game.starting =
       skills: {}
   history:
     Intro: 0
-  openMenu: ''
 
 s = {}
 

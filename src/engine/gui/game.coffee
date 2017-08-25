@@ -10,11 +10,7 @@ $ ->
   if not $('#container').length then return
   Game.guiSetup()
   Story.guiSetup()
-
-  Game.start Game.mostRecentGameData()
-  Game.drawStatus()
-  Place.drawMap()
-  Story.drawHistory()
+  Game.load(Game.mostRecentGameData())
 
 $.extend Game, {
   year: (d = g.day)-> (d + startDay) // 360
@@ -86,6 +82,14 @@ $.extend Game, {
   showPassDayOverlay: (day, result, next)->
     Game.drawStatus(day)
     Game.showOverlay("<h1>#{Game.date(day)}</h1><h3>#{result}</h3>", 2000, 'dayOverlay', next)
+
+  load: (data)->
+    Game.start data
+    Game.drawStatus()
+    Place.drawMap()
+    Story.drawHistory()
+    if (g.map.to)
+      Place.travel()
 }
 
 # Autosave every time a day passes

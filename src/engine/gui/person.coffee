@@ -7,7 +7,6 @@ $.extend Person, {
     p = $('#overview .people')
     for person of g.people when not p.find("[person=#{person}]").length
       personDiv = $(Person.draw(person))
-      console.log personDiv
       personDiv.find('object').on 'load', Person.activateSVG
       p.append(personDiv)
     return

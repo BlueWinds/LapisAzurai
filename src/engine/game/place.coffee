@@ -56,70 +56,39 @@ window.Place = {
       location = nextStop
     return steps
 
-  svgElement: ([from, to])->
-    direction = Place[from].paths[to]
-    unless typeof direction is 'number'
-      throw new Error('No direct path from ' + from + ' to ' + to)
-
-    string = if direction is 1 then (from + '_' + to) else (to + '_' + from)
+  svgElement: ([from, to] = [g.map.from, g.map.to])->
+    string = if Place.direction(from, to) is 1 then (from + '_' + to) else (to + '_' + from)
     return document.getElementById(string)
 
-  travelEvents: (from, to)->
-    events = []
-    for [stepFrom, stepTo] in Place.travelSteps(from, to)
-      e = stepEvents(stepFrom, stepTo)
-      events = events.concat(e)
-    return events
+  travelEvent: (map)->
+    path = Place.svgElement([map.from, map.to])
+    travel = path.attributes.travel.value
+    dir = Place.direction(map.from, map.to)
 
-  byDistance: (from)->
-    return Object.keys(g.reputation).sort((p1, p2) ->
-      Place.travelDays(from, p1) - Place.travelDays(from, p2)
-    )
+    if map.delay or Math.random() < Place.delayChance(travel)
+      duration = map.delay or Place.delayDuration(travel)
+      return {
+        image: Math.choice(Place.travel[travel].delayImages)
+        pxTravel: 0
+        delay: Math.max(0, duration - 1) # Subtract one day because this event already took up one of them
+        effects: {damage: Place.delayDamage(travel)}
+      }
+
+    pxPerDay = Game.travelPxPerDay(travel) * dir
+    to = Math.clamp(map.distance + pxPerDay, 0, path.getTotalLength())
+    event = {
+      image: Math.choice(Place.travel[travel].normalImages)
+      path: path
+      start: map.distance
+      pxTravel: to - map.distance
+    }
+    if event.pxTravel isnt pxPerDay
+      event.image = Place[map.to].img
+    return event
+
+  direction: (from, to)->
+    unless typeof Place[from].paths[to] is 'number'
+      throw new Error('No direct path from ' + from + ' to ' + to)
+    return Place[from].paths[to]
 }
 
-stepEvents = (from, to)->
-  events = []
-  path = Place.svgElement([from, to])
-  travel = path.attributes.travel.value
-  days = Place.travelDays(from, to)
-
-  direction = if path.id.match(to + '_') then -1 else 1
-  startPoint = (1 - direction) / 2 * path.getTotalLength()
-
-  lastMoveStart = null
-  # Use this division here rather than travelPxPerDay because path length won't be a perfect multiple and we want an exact value
-  pxPerDay = path.getTotalLength() / days * direction
-
-  for day in [0 ... days]
-    if day and Math.random() < Place.delayChance(travel)
-      delayE = delayEvents(travel)
-      delayE[0].travelDays = delayE.length
-      delayE[0].from = startPoint + day * pxPerDay
-      delayE[0].to = delayE[0].from + pxPerDay
-      delayE[0].path = path.id
-
-      events = events.concat delayE
-      events[events.length - 1]
-      lastMoveStart = null
-    else
-      event = {image: Math.choice(Place.travel[travel].normalImages)}
-      if lastMoveStart
-        lastMoveStart.travelDays += 1
-        lastMoveStart.to += pxPerDay
-      else
-        lastMoveStart = event
-        event.travelDays = 1
-        event.from = startPoint + day * pxPerDay
-        event.to = event.from + pxPerDay
-        event.path = path.id
-      events.push event
-
-  events[events.length - 1].image = Place[to].img
-  return events
-
-delayEvents = (travel)->
-  for stormDay in [0 ... Math.ceil(Place.delayDuration(travel))]
-    {
-      image: Math.choice(Place.travel[travel].delayImages)
-      effects: {damage: Place.delayDamage(travel)}
-    }

@@ -12,7 +12,7 @@ Story.Load =
       blob = new Blob([localStorage[key]], {type: 'text/plain'})
       blob = URL.createObjectURL blob
 
-      name = "#{game.chapter} - Day #{game.day} - #{game.location}"
+      name = "#{game.chapter} - Day #{game.day} - #{game.map.from}"
       if localStorage.autosave is key then name += ' (auto)'
 
       row = [
@@ -47,10 +47,7 @@ Game.showLoadPage = ->
     reader.onload = =>
       $('.import-error').remove()
       try
-        Game.start jsyaml.safeLoad(reader.result)
-        Game.drawStatus()
-        Place.drawMap()
-        Story.drawHistory()
+        Game.load(jsyaml.safeLoad(reader.result))
       catch e
         console.log e
         error = $ '<tr class="import-error danger"><td colspan="3">That doesn\'t seem to be a valid save file.</td></tr>'

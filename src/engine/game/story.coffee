@@ -25,7 +25,7 @@ window.Story = {
 
   canSail: ->
     if g.damage then return false
-    not Story.visibleStories(Place[g.location].stories[g.chapter]).some (p)-> Story[p].blocking
+    not Story.visibleStories(Place[g.map.from].stories[g.chapter]).some (p)-> Story[p].blocking
 
   matchesHistory: (foresight, extraTime, story)->
     if g.history[story]? then return false

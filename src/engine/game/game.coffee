@@ -10,8 +10,11 @@ sampleGame =
       start: 12 # Game day
     }
   ]
-  location: 'Vailia' # Can also be a path name, VailiaMtJulia
-  distance: 15 # 0 means at a location, 15 means 15px along the route, -15 means 15px along the route sailing "backwards."
+  map:
+    from: 'Vailia' # Last port we docked in
+    to: 'MtJulia' # If not empty, means we're currently traveling.
+    distance: 15 # Where on the current path we are.
+    delay: 0 # If there is an ongoing delay, how many more days it will last
   availableCargo: [] # As g.cargo
   reputation:
     Vailia: 0.95231
@@ -25,8 +28,6 @@ sampleGame =
   history:
     Intro: 0
     ExploreWilds: 1
-  openMenus:
-    Alkenia: true
 
 window.Game =
   travelPxPerDay: (type)-> 15

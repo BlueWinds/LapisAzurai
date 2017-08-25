@@ -18,7 +18,7 @@ $.extend Story, {
   draw: (place, story)->
     need = Story.unmetNeed(place, story)
 
-    onclick = if g.location is place and not need
+    onclick = if g.map.from is place and not need
       'onclick=\'Story.apply("' + place + '", "' + story + '");Story.display("' + story + '");\''
     else ''
 

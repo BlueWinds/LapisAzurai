@@ -78,3 +78,6 @@ Math.weightedChoice = (weights, seed)->
   for key, value of weights
     choice -= value
     if choice <= 0 then return key
+
+Math.clamp = (value, min, max)->
+  return Math.min(max, Math.max(min, value))

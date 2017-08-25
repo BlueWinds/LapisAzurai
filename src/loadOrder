@@ -13,6 +13,7 @@ dist/engine/gui/person.js
 dist/engine/gui/story.js
 dist/engine/gui/load.js
 dist/engine/gui/place.js
+dist/engine/gui/map.js
 dist/engine/gui/cargo.js
 
 # Finally the content
