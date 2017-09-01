@@ -12,7 +12,7 @@ Person.Kat =
       doubledBy: 'Regret'
     SixthSense:
       name: 'Sixth Sense'
-      description: "See events two days before they're available"
+      description: 'Extra 1% chance each day to get event while sailing'
       doubledBy: 'Regret'
     StreetRat:
       name: 'Street Rat'
@@ -26,7 +26,7 @@ Person.Kat =
       doubledBy: 'Regret'
     NeverTooLate:
       name: 'Never Too Late'
-      description: 'Events are available for an additional day'
+      description: 'Events are available for two extra days'
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Devilish:
@@ -48,8 +48,8 @@ Person.Kat =
       requiresAnd: ['Deckhand']
       doubledBy: 'Death'
     SixthSense2:
-      name: 'Sixith Sense 2'
-      description: "See events two days before they're available"
+      name: 'Sixth Sense 2'
+      description: 'Extra 1% chance each day to get event while sailing'
       requiresAnd: ['Deckhand']
       doubledBy: 'Desire'
     FreeWoman:
@@ -64,7 +64,7 @@ Person.Kat =
       doubledBy: 'Desire'
     NeverTooLate2:
       name: 'Never Too Late 2'
-      description: 'Events are available for an additional day'
+      description: 'Events are available for two extra days'
       requiresAnd: ['FreeWoman']
       doubledBy: 'Desire'
     Devilish2:

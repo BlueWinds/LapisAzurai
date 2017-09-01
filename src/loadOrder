@@ -19,6 +19,7 @@ dist/engine/gui/cargo.js
 # Finally the content
 dist/content/map.js
 dist/content/travel/travel.js
+dist/content/travel/delay.js
 dist/content/people/skillEffects.js
 
 dist/content/people/Natalie/_.js

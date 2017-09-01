@@ -67,8 +67,8 @@ $.extend Place, {
       return Place.drawMap()
 
     event = Place.travelEvent(g.map)
+    delete g.map.speedBonus
 
-    Game.passDay()
     g.map.delay = event.delay or 0
     g.map.distance += event.pxTravel
     if event.effects
@@ -76,6 +76,7 @@ $.extend Place, {
 
     Game.drawStatus()
     Place.animateTravel(event)
+    Game.passDay()
 
     # We have arrived at the destination
     if event.pxTravel and (g.map.distance <= 0 or g.map.distance >= Place.svgElement().getTotalLength())
@@ -85,13 +86,16 @@ $.extend Place, {
       Place.drawMap()
 
   animateTravel: (event)->
-    effects = Game.drawEffects(event.effects or {}) + "<img src='game/content/#{event.image}'>"
-    Game.showPassDayOverlay g.day, effects, (hideOverlay)->
-      setTimeout hideOverlay, 500
-      Place.travel()
-
-    # During a delay, we don't usually move the ship
-    unless event.path then return
+    effects = Game.drawEffects(event.effects or {})
+    if event.story
+      Story.apply(null, event.story)
+      Story.display(event.story, 2000)
+      Game.showPassDayOverlay g.day, effects
+    else
+      effects += "<img src='game/content/#{event.image}'>"
+      Game.showPassDayOverlay g.day, effects, (hideOverlay)->
+        setTimeout hideOverlay, 500
+        unless event.story then Place.travel()
 
     length = event.path.getTotalLength()
     direction = event.pxTravel > 0

@@ -138,14 +138,6 @@ table td {
   height: 100%;
 }
 
-#stories img {
-  float: left;
-  margin: 0 15px 10px 0;
-  max-height: 200px;
-  max-width: 300px;
-  cursor: pointer;
-}
-
 section {
   clear: both;
   display: none;
@@ -160,9 +152,47 @@ section.active {
   display: block;
 }
 
+section img {
+  float: left;
+  margin: 0 15px 10px 0;
+  max-height: 200px;
+  max-width: 300px;
+  cursor: pointer;
+}
+
 p {
   margin: 10px 0;
 }
+
+section.full-screen.active {
+  position: absolute;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+section.full-screen.active img {
+  float: none;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+section.full-screen.active p {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 6px 6px;
+  color: #FFF;
+  left: 5%;
+  margin: 0;
+  opacity: 1;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  width: calc(90% - 30px);
+}
+
+
 
 hr {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
@@ -413,19 +443,20 @@ hr {
   padding: 0;
 }
 
-.skill button {
+button {
   color: #ffffff;
   cursor: pointer;
   background-color: #2a9fd6;
   border: 1px solid #2a9fd6;
+  border-radius: 6px;
 }
 
-.skill button.active:hover, .skill button.active:focus {
+button.active:hover, .skill button.active:focus {
   background-color: #2386b4;
   border-color: #1f79a3;
 }
 
-.skill button:disabled {
+button:disabled {
   cursor: default;
   opacity: 0.5;
 }

@@ -42,9 +42,12 @@ Game.passDay = ->
     g.reputation[place] += add
   return
 
-oldRepairRate = Place.repairRate
-Place.repairRate = ->
-  oldRepairRate() * (1 + 0.5 * has('J', 'Reliable'))
+oldRepairEffects = Place.repairEffects
+Place.repairEffects = ->
+  e = oldRepairEffects()
+  e.damage *= (1 + 0.5 * has('J', 'Reliable'))
+  e.damage = Math.max(e.damage, -g.damage)
+  return e
 
 oldDeliveryTimeRemaining = Cargo.deliveryTimeRemaining
 Cargo.deliveryTimeRemaining = (cargo)->
@@ -58,13 +61,16 @@ oldTravelSpeed = Game.travelPxPerDay
 Game.travelPxPerDay = (travel)->
   oldTravelSpeed(travel) + has('J', 'Navigator')
 
-oldDelayDuration = Place.delayDuration
-Place.delayDuration = (travel)->
-  return oldDelayDuration(travel) - has('J', 'Stoic') * 0.5
+oldDelayDuration = Place.travel.Sail.delayDuration
+Place.travel.Sail.delayDuration = (from, to, distance)->
+  return Math.max(1, oldDelayDuration(from, to, distance) - has('J', 'Stoic') * 0.5)
 
-oldDelayChance = Place.delayChance
-Place.delayChance = (travel)->
-  return oldDelayChance(travel) * (1 - has('J', 'WeatherEye') * 0.1)
+oldDelayOccurs = Place.travel.Sail.delayOccurs
+Place.travel.Sail.delayOccurs = (from, to, distance)->
+  if oldDelayOccurs(from, to, distance)
+    if Math.random() > (has('J', 'WeatherEye') * 0.1)
+      return true
+  return false
 
 oldEffects = Story.effects
 Story.effects = (story)->
@@ -93,11 +99,14 @@ Story.effects = (story)->
 
   return e
 
-# We don't save the old version because, unfortunately, there's no clean way to extend it - we just have to override.
-Story.visibleStories = (stories)->
-  foresight = has('K', 'SixthSense') * 2
-  extraTime = has('K', 'NeverTooLate')
-  return stories.filter(Story.matchesHistory.bind(null, foresight, extraTime))
+oldMatchesHistory = Story.matchesHistory
+Story.matchesHistory = (extraTime, onlyOnce, story)->
+  extraTime += has('K', 'NeverTooLate') * 2
+  oldMatchesHistory(extraTime, onlyOnce, story)
+
+oldStoryOccurs = Place.travel.Sail.storyOccurs
+Place.travel.Sail.storyOccurs = (from, to, distance)->
+  return oldStoryOccurs(from, to, distance) or Math.random() < has('K', 'SixthSense') * 0.01
 
 oldReputationNeeded = Story.reputationNeeded
 Story.reputationNeeded = (story)->

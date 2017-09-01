@@ -44,7 +44,7 @@ window.Cargo =
     for i in [0 ... count]
       place = Math.weightedChoice(possibleCargo)
       if g.availableCargo.filter((c)-> c.from is place).length > 4
-        return
+        continue
 
       g.availableCargo.push Cargo.create(place)
 

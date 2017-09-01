@@ -1,5 +1,5 @@
 $.extend Place, {
-  showOverview: (place = g.map.from)->
+  showOverview: (place = $('.place').attr('place') or g.map.from)->
     o = $('#overview')
     Person.updateOverview()
 
@@ -51,19 +51,18 @@ $.extend Place, {
     </div>"""
 
   drawRepair: ->
-    repair = Math.min(Place.repairRate(), g.damage)
     """<td class="story active repair" onclick="Place.clickRepair();">
       <div>
         <span class="label">Repair Ship</span>
-        <span class="cost">#{Game.drawEffects({damage: -repair})}</span>
+        <span class="cost">#{Game.drawEffects(Place.repairEffects())}</span>
         <span class="success">✓</span>
       </div>
-      <div class="damage">#{Math.round(g.damage - repair)} damage will remain</div>
+      <div class="damage">#{Math.round(g.damage + Place.repairEffects().damage)} damage will remain</div>
     </td>"""
 
   clickRepair: (i)->
     Game.passDay()
-    Game.applyEffects {damage: -Place.repairRate()}
+    Game.applyEffects Place.repairEffects()
 
     Game.showPassDayOverlay(undefined, 'Repaired the ship')
     $('.repair.active .success')

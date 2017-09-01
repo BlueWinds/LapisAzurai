@@ -12,6 +12,9 @@ Formatting guide:
   Any section with a <button>button element</button> won't "click through" - your code is responsible for calling Story.changeSection(1, true) when you're ready to carry on (probably in an onclick handler).
 
   Sections are automatically divided into pages as the player advances between them, fitting as many as possible on the screen at once.
+
+|||| travel/SailingStorm
+  Starts a full-screen section. While active, the image will be used as a background rather than floating inline, and the text will be at the top of the screen. All other sections will be hidden.
 ###
 
 $.extend Story, {
@@ -19,7 +22,7 @@ $.extend Story, {
     need = Story.unmetNeed(place, story)
 
     onclick = if g.map.from is place and not need
-      'onclick=\'Story.apply("' + place + '", "' + story + '");Story.display("' + story + '");\''
+      'onclick=\'Story.apply("' + place + '", "' + story + '");Story.displayWithOverlay("' + story + '");\''
     else ''
 
     return """<td class="story #{if onclick then 'active' else '' }" #{onclick} story="#{story}">
@@ -31,20 +34,23 @@ $.extend Story, {
       #{need}
     </td>"""
 
-  display: (story, goto = true)->
+  displayWithOverlay: (story)->
     $('.story[story="' + story + '"] .success')
       .animate({opacity: 1}, 500)
       .animate {opacity: 0}, 1500
     Game.showPassDayOverlay g.day, Game.drawEffects(Story.effects(story)), (removeOverlay)->
-      elements = Story.render(story)
       removeOverlay()
-      $('#content').css({display: 'block'}).animate {opacity: 1}, 500, ->
-        Place.drawMap()
-        Place.hideOverview(500)
-      $('#stories').empty().append(elements)
-      if goto
-        if g.scroll is -1 then g.scroll = 0
-        Story.forwardSection(elements.first(), 1)
+      Story.display(story)
+
+  display: (story, speed = 500)->
+    elements = Story.render(story)
+    $('#content').css({display: 'block'}).animate {opacity: 1}, speed, ->
+      Place.drawMap()
+      Place.hideOverview(speed)
+
+    $('#stories').empty().append(elements)
+    if g.scroll is -1 then g.scroll = 0
+    Story.forwardSection(elements.first(), 1)
 
   drawHistory: ->
     unless g.history.Intro?
@@ -61,7 +67,7 @@ $.extend Story, {
         day -= 1
 
     for i in [0 ... g.scroll]
-      Story.changeSection(0, true)
+      Story.changeSection(1, true)
     return
 
   render: (story)->
@@ -78,6 +84,8 @@ $.extend Story, {
         lastSection = $('<section></section>')
         addSectionImage(lastSection, line)
         sections.append(lastSection)
+        if line.match /^\|\|\|\|/
+          lastSection.addClass('full-screen')
       else
         lastSection.append('<p>' + line + '</p>')
         if line.match /<button.*<\/button>/
@@ -118,6 +126,7 @@ $.extend Story, {
 
   enterMap: ->
     g.scroll = -1
+    if g.map.to then Place.travel()
     $('#content').stop().animate {opacity: 0}, 500, ->
       # Make sure the user didn't cancel and go back to the previous page before hiding the #content + deactivating sections.
       if $('#content').css('opacity') is '0'

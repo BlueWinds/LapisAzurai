@@ -3,6 +3,10 @@ $.extend Person, {
     unless Person[name] then name = Person.alias[name]
     "<q class=#{name}>#{text}</q>"
 
+  drawOverview: ->
+    $('#overview .people').empty()
+    Person.updateOverview()
+
   updateOverview: ->
     p = $('#overview .people')
     for person of g.people when not p.find("[person=#{person}]").length
@@ -23,7 +27,7 @@ $.extend Person, {
       <img src="game/content/#{Person[person].img}.png">
       <div>
         <div class="name">#{Person[person].name}</div>
-        <div class="description">Level #{level} (#{needed - xp}xp more for level #{level + 1})</div>
+        <div class="description">#{needed - xp}xp needed for next skill</div>
       </div>
       <div class="picks #{if skillPoints > 0 then 'active' else ''}">#{skillPoints} skill#{s} available</div>
       <object data="game/content/#{Person[person].svg}"></object>
@@ -78,6 +82,7 @@ $.extend Person, {
 
   clickSkill: (person, skill)->
     g.people[person].skills[skill] = true
+    Place.showOverview()
 
     # Mark the skill as selected
     svg = $("[person=#{person}] object")[0].contentDocument

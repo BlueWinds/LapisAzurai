@@ -37,7 +37,7 @@ $.extend Game, {
         text.push "#{Math.round(results)} #{key}"
       else
         at = if key is 'reputation' then 'at' else 'for'
-        for name, amount of results
+        for name, amount of results when amount
           text.push "#{amount} #{key} #{at} #{Place[name]?.name or Person[name]?.name}"
     return text.join('<br>\n')
 
@@ -81,6 +81,8 @@ $.extend Game, {
 
   showPassDayOverlay: (day, result, next)->
     Game.drawStatus(day)
+    if g.nextDayDescription
+      result += '<br>' + g.nextDayDescription
     Game.showOverlay("<h1>#{Game.date(day)}</h1><h3>#{result}</h3>", 2000, 'dayOverlay', next)
 
   load: (data)->
@@ -88,7 +90,8 @@ $.extend Game, {
     Game.drawStatus()
     Place.drawMap()
     Story.drawHistory()
-    if (g.map.to)
+    Person.drawOverview()
+    if (g.map.to and g.scroll < 0)
       Place.travel()
 }
 

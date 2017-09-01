@@ -16,11 +16,13 @@ samplePlaceData =
 
 window.Place = {
   travel: {}
-  delayChance: (travel)-> Place.travel[travel].delayDailyChance()
-  delayDamage: (travel)->  Place.travel[travel].delayDailyDamage()
-  delayDuration: (travel)-> Place.travel[travel].delayAvgDuration()
 
-  repairRate: -> 10
+  repairEffects: ->
+    e =
+      damage: -Math.min(10, g.damage)
+      reputation: {}
+    e.reputation[g.map.from] = -Math.min(3, g.reputation[g.map.from])
+    return e
 
   location: (place, distance)->
     # A path
@@ -65,22 +67,30 @@ window.Place = {
     travel = path.attributes.travel.value
     dir = Place.direction(map.from, map.to)
 
-    if map.delay or Math.random() < Place.delayChance(travel)
-      duration = map.delay or Place.delayDuration(travel)
-      return {
+    if map.delay or Place.travel[travel].delayOccurs(map.from, map.to, map.distance)
+      duration = map.delay or Place.travel[travel].delayDuration(map.from, map.to, map.distance)
+      event = {
         image: Math.choice(Place.travel[travel].delayImages)
-        pxTravel: 0
+        pxTravel: if map.speedBonus > 0 then map.speedBonus * dir else 0
+        path: path
+        start: map.distance
         delay: Math.max(0, duration - 1) # Subtract one day because this event already took up one of them
-        effects: {damage: Place.delayDamage(travel)}
+        effects: {damage: Place.travel[travel].delayDailyDamage(map.from, map.to, map.distance)}
       }
+      # If this is the first day of a delay, trigger an event
+      unless map.delay
+        event.story = Story.delayEvent(map.from, map.to, travel)
+      return event
 
     pxPerDay = Game.travelPxPerDay(travel) * dir
+    console.log pxPerDay
     to = Math.clamp(map.distance + pxPerDay, 0, path.getTotalLength())
     event = {
       image: Math.choice(Place.travel[travel].normalImages)
       path: path
       start: map.distance
       pxTravel: to - map.distance
+      story: Story.travelEvent(map.from, map.to, travel)
     }
     if event.pxTravel isnt pxPerDay
       event.image = Place[map.to].img
@@ -91,4 +101,3 @@ window.Place = {
       throw new Error('No direct path from ' + from + ' to ' + to)
     return Place[from].paths[to]
 }
-

@@ -15,6 +15,7 @@ sampleGame =
     to: 'MtJulia' # If not empty, means we're currently traveling.
     distance: 15 # Where on the current path we are.
     delay: 0 # If there is an ongoing delay, how many more days it will last
+    speedBonus: -12 # How many extra pixels of progress to make on the next day (negative will slow down, to minimum of 0px progress)
   availableCargo: [] # As g.cargo
   reputation:
     Vailia: 0.95231
@@ -28,9 +29,11 @@ sampleGame =
   history:
     Intro: 0
     ExploreWilds: 1
+  damage: 12 # How much damage has been done to the ship already
+  preventNextDamage: 5 # The next damage will be shielded
 
 window.Game =
-  travelPxPerDay: (type)-> 15
+  travelPxPerDay: (type)-> 15 + (g.map.speedBonus or 0)
 
   updates: [] # Functions taking one argument, a game state.
 
@@ -63,3 +66,4 @@ window.Game =
     g.day++
 
     Cargo.passDay()
+    delete g.nextDayDescription

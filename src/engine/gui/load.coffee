@@ -74,8 +74,5 @@ Game.showLoadPage = ->
       link.attr('download', name)
       link.click()
     else
-      Game.start jsyaml.safeLoad(localStorage[key])
-      Game.drawStatus()
-      Place.drawMap()
-      Story.drawHistory()
+      Game.load(jsyaml.safeLoad(localStorage[key]))
     return false
