@@ -83,7 +83,6 @@ window.Place = {
       return event
 
     pxPerDay = Game.travelPxPerDay(travel) * dir
-    console.log pxPerDay
     to = Math.clamp(map.distance + pxPerDay, 0, path.getTotalLength())
     event = {
       image: Math.choice(Place.travel[travel].normalImages)

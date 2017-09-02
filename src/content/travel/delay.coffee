@@ -102,25 +102,25 @@ Place.travel.Sail.lostCargo = ->
 Place.travel.Sail.extraDamage = ->
   damage = Math.random() * 15 + 10
   g.damage += damage
-  g.nextDayDescription="#{Math.round(damage)} extra damage"
+  g.nextDayDescription = "#{Math.round(damage)} extra damage"
   Story.changeSection(1, true)
 
 Place.travel.Sail.extraDelay = ->
   delay = Math.random() + 1
   g.map.delay += delay
-  g.nextDayDescription="Delayed #{Math.round(delay)} days"
+  g.nextDayDescription = "Delayed #{Math.round(delay)} days"
   Story.changeSection(1, true)
 
 Place.travel.Sail.makeProgress = ->
   distance = Math.random() * 15 + 15
   g.map.speedBonus = distance
-  g.nextDayDescription="Kept sailing despite the danger"
+  g.nextDayDescription = 'Kept sailing despite the danger'
   Story.changeSection(1, true)
 
 Place.travel.Sail.reduceDamage = ->
   damage = Math.random() * 15 + 5
   g.preventNextDamage += damage
-  g.nextDayDescription="#{Math.round(damage)} damage prevented"
+  g.nextDayDescription = "#{Math.round(damage)} damage prevented"
   Story.changeSection(1, true)
 
 s.StormDropOrDamage =
@@ -128,7 +128,7 @@ s.StormDropOrDamage =
   minCargo: 1
   text: -> """
   |||| travel/SailingStorm
-    Seas heave, the hull groans, masts crack. A ferocious squall blew in without warning, giving the crew scant time to prepare. Should James help <button onclick="Place.travel.Sail.lostCargo();">douse the sails</button> (random cargo will be lost) or <button onclick="Place.travel.Sail.extraDamage();">secure the cargo</button> (ship will take more damage)?
+    Seas heave, the hull groans, masts crack. A ferocious squall blew in without warning, giving the crew scant time to prepare. Should James help <button onclick='Place.travel.Sail.lostCargo();'>douse the sails</button> (random cargo will be lost) or <button onclick='Place.travel.Sail.extraDamage();'>secure the cargo</button> (ship will take more damage)?
   """
 
 s.StormDropOrDelay =
@@ -136,14 +136,14 @@ s.StormDropOrDelay =
   minCargo: 1
   text: -> """
   |||| travel/CabinStorm
-     James slammed the door in the face of storm outside, and took a moment to shake the water from his hair before he spoke. `J Nat, we're taking on water faster than we can pump it out. We need to <button onclick="Place.travel.Sail.lostCargo();">lighten the load</button> (random cargo will be lost) or put <button onclick="Place.travel.Sail.extraDelay();">more men on the pumps</button> (stuck in the storm longer).`
+     James slammed the door in the face of storm outside, and took a moment to shake the water from his hair before he spoke. `J Nat, we're taking on water faster than we can pump it out. We need to <button onclick='Place.travel.Sail.lostCargo();'>lighten the load</button> (random cargo will be lost) or put <button onclick='Place.travel.Sail.extraDelay();'>more men on the pumps</button> (stuck in the storm longer).`
   """
 
 s.StormSpeedOrSafety =
   label: 'Storm'
   text: -> """
   |||| travel/DeckNight
-    Storm clouds darken the sky, and winds begin to pick up. Natalie can feel the energy building, crawling along her skin and ready to break at any moment. It's a big one. Should the Lapis <button onclick="Place.travel.Sail.makeProgress();">ride into the teeth of the storm</button> (use the strong wind to make progress) or <button onclick="Place.travel.Sail.reduceDamage();">douse the sails</button> while there's still time (ship will take less damage)?
+    Storm clouds darken the sky, and winds begin to pick up. Natalie can feel the energy building, crawling along her skin and ready to break at any moment. It's a big one. Should the Lapis <button onclick='Place.travel.Sail.makeProgress();'>ride into the teeth of the storm</button> (use the strong wind to make progress) or <button onclick='Place.travel.Sail.reduceDamage();'>douse the sails</button> while there's still time (ship will take less damage)?
   """
 
 Story.StormLoseCargo =

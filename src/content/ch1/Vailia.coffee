@@ -13,7 +13,6 @@ Game.starting =
     delay: 0
   reputation:
     Vailia: 0
-    MtJulia: 0
   people:
     Natalie:
       xp: 0
@@ -83,6 +82,8 @@ s.Ch1 =
   effects:
     xp:
       Natalie: 3
+    reputation:
+      MtJulia: 0
   text: -> """
   || N/Normal
     The Guild.
@@ -310,7 +311,7 @@ s.AsaraWorriesJames =
 s.AlkeniaRoute =
   label: 'Route to Alkenia'
   history:
-    FirstStormSick2: 0
+    Intro: 0
   effects:
     xp:
       James: 3

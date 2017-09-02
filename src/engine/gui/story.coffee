@@ -25,9 +25,10 @@ $.extend Story, {
       'onclick=\'Story.apply("' + place + '", "' + story + '");Story.displayWithOverlay("' + story + '");\''
     else ''
 
-    return """<td class="story #{if onclick then 'active' else '' }" #{onclick} story="#{story}">
+    rep = Story.reputationNeeded(story)
+    return """<td class="story #{if onclick then 'active' else '' } #{if Story[story].blocking then 'blocking' else ''}" #{onclick} story="#{story}">
       <div>
-        <span class="label">#{Story[story].label}</span><span class="cost">#{Story.reputationNeeded(story)} rep</span>
+        <span class="label">#{Story[story].label}</span><span class="cost">#{if rep then rep + ' rep' else ''}</span>
         <span class="success">✓</span>
       </div>
       <div class="participants">#{Game.drawEffects Story.effects(story)}</div>

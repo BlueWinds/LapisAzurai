@@ -46,7 +46,9 @@ window.Cargo =
       if g.availableCargo.filter((c)-> c.from is place).length > 4
         continue
 
-      g.availableCargo.push Cargo.create(place)
+      cargo = Cargo.create(place)
+      if cargo
+        g.availableCargo.push cargo
 
   create: (from)->
     potentialDestinations = {}
@@ -54,6 +56,7 @@ window.Cargo =
       potentialDestinations[destination] = goods.length
 
     to = Math.weightedChoice(potentialDestinations)
+    unless to then return
     name = Math.choice Place[from].goods[to]
     return {name, from, to, start: g.day}
 

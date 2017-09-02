@@ -63,7 +63,6 @@ a {
 
 table {
   background-color: #181818;
-  border-collapse: collapse;
   border-spacing: 0;
   position: relative;
   width: 100%;
@@ -100,6 +99,10 @@ table td {
 .repair .success, .story .success {
   line-height: 2.8em;
   right: 0;
+}
+
+.story.blocking {
+  border: 1px solid #2a9fd6;
 }
 
 #flex {
@@ -463,4 +466,41 @@ button:disabled {
 
 .skill.mouse-over + .skill {
   display: none;
+}
+
+.help {
+  cursor: pointer;
+  position: absolute;
+  width: 300px;
+  background: #000;
+  padding: 0 15px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  z-index: 1;
+  line-height: 1.42857143;
+  height: auto;
+}
+
+.help.bottom:before {
+  content: "";
+  border-color: transparent transparent #999 transparent;
+  position: absolute;
+  top: -21px;
+  left: 155px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+}
+
+.help.top:before {
+  content: "";
+  border-color: #999 transparent transparent transparent;
+  position: absolute;
+  bottom: -21px;
+  left: 155px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
 }

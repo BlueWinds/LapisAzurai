@@ -58,7 +58,7 @@ window.Story = {
     Game.applyEffects(Story.effects(story))
     if place
       g.reputation[place] -= Story.reputationNeeded(story)
-    if Story[story].apply then Story[story].apply()
+    Story[story].apply?()
     g.history[story] = g.day
     Game.passDay()
 
