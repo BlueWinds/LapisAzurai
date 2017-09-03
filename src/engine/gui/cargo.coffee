@@ -18,20 +18,19 @@ $.extend Cargo, {
 
   draw: (cargo)->
     i = g.availableCargo.indexOf(cargo)
-    onclick = if g.map.from is cargo.from and Cargo.maxCargo() > g.cargo.length and Story.canSail()
+    onclick = if g.map.from is cargo.from and Cargo.maxCargo() > g.cargo.length and Cargo.canPickUpDeliver()
       'onclick="Cargo.clickAccept(' + i + ');"'
     else ''
 
     accept = Cargo.acceptTimeRemaining(cargo)
-    deliver = Cargo.deliveryTimeRemaining(cargo)
     """<td class="cargo accept #{i} #{if onclick then 'active' else ''}" #{onclick}>
       <div>Load <span class="what">#{cargo.name}</span> for <span class="to">#{Place[cargo.to].name}</span><span class="success">✓</span></div>
-      <div><span class="remaining">#{accept} days to pick up, #{deliver} days to deliver</span></div>
+      <div><span class="remaining">#{accept} days to accept</div>
     </nd>"""
 
   drawDelivery: (cargo)->
     i = g.cargo.indexOf(cargo)
-    onclick = if g.map.from is cargo.to and Story.canSail()
+    onclick = if g.map.from is cargo.to and Cargo.canPickUpDeliver()
       'onclick="Cargo.clickDeliver(' + i + ');"'
     else ''
 

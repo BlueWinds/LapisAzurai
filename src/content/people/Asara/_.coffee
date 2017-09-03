@@ -13,7 +13,7 @@ Person.Asara =
       description: "Double the benefits of all of Kat's 1st tier skills"
       requiresAnd: ['Fear']
     Desert:
-      description: "Unlock Asara's events after prologue"
+      description: "Unlock events focused on Asara in Chapter 2"
       requiresAnd: ['Regret']
 
     Duty:

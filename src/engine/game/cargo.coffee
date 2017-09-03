@@ -17,6 +17,9 @@ window.Cargo =
 
   toReputation: -> 8
 
+  canPickUpDeliver: ->
+    not Story.visibleStories(Place[g.map.from].stories[g.chapter]).some (p)-> Story[p].blocking
+
   deliveryTimeRemaining: (cargo)->
     passed = g.day - cargo.start
     travel = Place.travelDays(cargo.from, cargo.to)

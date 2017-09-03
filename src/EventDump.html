@@ -77,6 +77,13 @@
         w.append('<li>' + link + ' is missing a label</li>');
       }
 
+      var history = Story[story].history
+      for (prereq in history) {
+        if (history[prereq] !== -1 && history[prereq] < 20 && !Story[story].blocking) {
+          w.append('<li>' + link + ' must be done within ' + history[prereq] + ' days of ' + prereq + ".</li>");
+        }
+      }
+
       sections = Story.render(story);
       sections.each(function(i) {
         section = $(this).attr('id', story + i)

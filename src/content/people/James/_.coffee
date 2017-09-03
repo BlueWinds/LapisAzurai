@@ -8,7 +8,7 @@ Person.James =
       description: 'Repair the ship 50% faster'
       doubledBy: 'Duty'
     Trustworthy:
-      description: '+1 day to deliver cargo'
+      description: '+2 days to deliver cargo'
       doubledBy: 'Duty'
     Stoic:
       description: 'Storms are half a day shorter (on average)'
@@ -20,7 +20,7 @@ Person.James =
       requiresOr: ['Trustworthy', 'Stoic']
       doubledBy: 'Duty'
     Apprentice:
-      description: "Unlock James' events after prologue"
+      description: 'Unlock events focused on James in Chapter 2'
       requiresAnd: ['Reliable', 'Trustworthy']
 
     Reliable2:
@@ -30,7 +30,7 @@ Person.James =
       doubledBy: 'Power'
     Trustworthy2:
       name: 'Trustworthy 2'
-      description: '+1 day to deliver cargo'
+      description: '+2 days to deliver cargo'
       requiresOr: ['WeatherEye', 'Reliable2']
       doubledBy: 'Power'
     Organized:

@@ -78,7 +78,7 @@ s.Ch1 =
   label: 'Chapter 1 - Vailia'
   blocking: true
   history:
-    Intro: 0
+    Intro: -1
   effects:
     xp:
       Natalie: 3
@@ -121,12 +121,17 @@ s.Ch1 =
 
     `Guildmaster Please let me know when you return.` He didn't react to her gesture, other than adjust a stack of papers, but she suspected he was pleased. Hard to tell, with the Guildmaster. She also knew a dismissal when she heard one.
   """
+  apply: ->
+    unless g.availableCargo.filter((f)-> f.from is 'Vailia').length
+      c = Cargo.create('Vailia')
+      g.availableCargo.push(c)
 
 s.ReadyToGo =
   label: 'Ready to Set Sail'
   blocking: true
   history:
-    Ch1: 0
+    Ch1: -1
+  minCargo: 1
   effects:
     xp:
       James: 2
@@ -163,16 +168,12 @@ s.ReadyToGo =
 
     `N Have a good night. Stop worrying.` She looked away and picked up her pen again.
   """
-  apply: ->
-    unless g.availableCargo.filter((f)-> f.from is 'Vailia').length
-      c = Cargo.create('Vailia')
-      g.availableCargo.push(c)
 
 s.FirstStormSick =
   label: 'Storm - Aftermath'
   blocking: true
   history:
-    FirstStorm: 0
+    FirstStorm: -1
   effects:
     xp:
       James: 3
@@ -218,7 +219,7 @@ s.FirstStormSick2 =
   label: 'Storm - Aftermath'
   blocking: true
   history:
-    FirstStormSick: 0
+    FirstStormSick: -1
   effects:
     xp:
       James: 2
@@ -244,7 +245,7 @@ s.FirstStormSick2 =
 s.WastingMoney =
   label: 'Wasting Money'
   history:
-    KatJoins: 0
+    KatJoins: 1000
   effects:
     xp:
       Kat: 5
@@ -270,7 +271,7 @@ s.WastingMoney =
 s.AsaraArrives =
   label: 'Asara Arrives'
   history:
-    AsaraAwakens: 0
+    AsaraAwakens: 1000
   effects:
     xp:
       Asara: 3
@@ -286,7 +287,7 @@ s.AsaraArrives =
 s.AsaraWorriesJames =
   label: 'James Worries'
   history:
-    AsaraAwakens: 0
+    AsaraAwakens: 1000
   effects:
     xp:
       Asara: 3
@@ -310,8 +311,9 @@ s.AsaraWorriesJames =
 
 s.AlkeniaRoute =
   label: 'Route to Alkenia'
+  required: true
   history:
-    Intro: 0
+    Intro: 1000
   effects:
     xp:
       James: 3
@@ -342,9 +344,10 @@ s.AlkeniaRoute =
 
 s.MeetMeghan =
   label: 'Lady Meghan'
+  required: true
   history:
-    AsaraArrives: 0
-    KatJoins: 0
+    AsaraAwakens: 120
+    KatJoins: 120
   effects:
     xp:
       Natalie: 3

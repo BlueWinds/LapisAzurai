@@ -5,14 +5,10 @@
   "author": "BlueWinds",
   "private": true,
   "devDependencies": {
-    "async": "2.x",
-    "canvas": "1.x",
     "coffeelint": "1.x",
     "livereload": "0.x",
     "nodemon": "1.x",
     "npm-run-all": "4.x",
-    "shelljs": "0.x",
-    "time-grunt": "1.x",
     "uglify-js": "3.x"
   },
   "keywords": [

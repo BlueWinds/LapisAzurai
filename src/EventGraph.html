@@ -54,6 +54,21 @@
       }
     });
 
+    for (var type in Place.travel) {
+      colors[type] = color(colorI);
+      var element = document.getElementsByClassName('place ' + type)[0];
+      element.style.color = colors[type];
+      Place.travel[type].stories.forEach(historyInThisChapter);
+      Place.travel[type].delayStories.forEach(historyInThisChapter);
+
+    }
+    function historyInThisChapter(story) {
+      console.log(story);
+      if (Object.keys(Story[story].history || []).every(function(s) { return places[s]; })) {
+        places[story] = 'Sail';
+      }
+    }
+
     for (var key in Story) {
       if (typeof Story[key] != 'object' || !places[key]) { continue; }
 
@@ -156,6 +171,7 @@
     <button onclick="drawEvents('Ch3')">Ch3</button>
     <div>Solid = Spend Rep</div>
     <div>Dashed = No Rep</div>
+    <div class="place Sail">Sail</div>
     <div class="place Vailia">Vailia</div>
     <div class="place MtJulia">Mt Julia</div>
     <div class="place Alkenia">Alkenia</div>

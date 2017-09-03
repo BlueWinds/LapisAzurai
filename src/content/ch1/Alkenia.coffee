@@ -3,7 +3,7 @@ s.AlkeniaArrive =
   label: 'Arrival'
   blocking: true
   history:
-    AlkeniaRoute: 0
+    AlkeniaRoute: -1
   effects:
     xp:
       Natalie: 3
@@ -31,8 +31,9 @@ s.AlkeniaArrive =
 
 s.MeetKat =
   label: 'Pickpocket'
+  required: true
   history:
-    AlkeniaArrive: 0
+    AlkeniaArrive: 1000
   effects:
     xp:
       Natalie: 2
@@ -60,8 +61,9 @@ s.MeetKat =
 
 s.MeetKat2 =
   label: 'Pickpocket (again)'
+  required: true
   history:
-    MeetKat: 0
+    MeetKat: 1000
   effects:
     xp:
       Natalie: 3
@@ -105,8 +107,9 @@ s.MeetKat2 =
 
 s.KatTrial =
   label: "Kat's Trial"
+  required: true
   history:
-    MeetKat2: 0
+    MeetKat2: 1000
   effects:
     xp:
       Natalie: 3
@@ -145,7 +148,7 @@ s.KatMeetsJames =
   label: 'Kat and James'
   blocking: true
   history:
-    KatTrial: 0
+    KatTrial: -1
   effects:
     xp:
       James: 2
@@ -175,8 +178,9 @@ s.KatMeetsJames =
 
 s.KatStorm =
   label: 'Out in a Storm'
+  required: true
   history:
-    KatMeetsJames: 0
+    KatTrial: 1000
   effects:
     xp:
       Natalie: 3
@@ -212,7 +216,7 @@ s.KatStorm2 =
   label: 'Out of the Storm'
   blocking: true
   history:
-    KatStorm: 0
+    KatStorm: -1
   text: -> """
   || travel/CabinDay
     `K You're a very nice lady, you know that?` Natalie woke to a hand patting her shoulder. She'd fallen asleep while tending to Kat, and now it seemed her charge had awakened first.
@@ -250,8 +254,9 @@ s.KatStorm2 =
 
 s.KatJoins =
   label: 'Kat Joins'
+  required: true
   history:
-    KatStorm2: 0
+    KatStorm: 1000
   effects:
     xp:
       Kat: 10

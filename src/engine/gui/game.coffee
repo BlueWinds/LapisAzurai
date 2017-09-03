@@ -45,9 +45,7 @@ $.extend Game, {
     c = $('#content')
 
     $('#new-game').click ->
-      Game.start($.extend(true, {}, Game.starting))
-      Game.drawStatus()
-      Place.drawMap()
+      Game.load($.extend(true, {}, Game.starting))
       Story.display('Intro')
 
     $('#save-game').click ->

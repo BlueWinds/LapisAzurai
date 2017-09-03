@@ -51,7 +51,7 @@ Place.repairEffects = ->
 
 oldDeliveryTimeRemaining = Cargo.deliveryTimeRemaining
 Cargo.deliveryTimeRemaining = (cargo)->
-  oldDeliveryTimeRemaining(cargo) + has('J', 'Trustworthy')
+  oldDeliveryTimeRemaining(cargo) + has('J', 'Trustworthy') * 2
 
 oldMaxCargo = Cargo.maxCargo
 Cargo.maxCargo = ->
@@ -99,10 +99,9 @@ Story.effects = (story)->
 
   return e
 
-oldMatchesHistory = Story.matchesHistory
-Story.matchesHistory = (extraTime, onlyOnce, story)->
-  extraTime += has('K', 'NeverTooLate') * 2
-  oldMatchesHistory(extraTime, onlyOnce, story)
+oldDaysUntilExpire = Story.daysUntilExpire
+Story.daysUntilExpire = (story)->
+  return oldDaysUntilExpire(story) + has('K', 'NeverTooLate') * 2
 
 oldStoryOccurs = Place.travel.Sail.storyOccurs
 Place.travel.Sail.storyOccurs = (from, to, distance)->

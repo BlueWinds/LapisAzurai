@@ -16,7 +16,7 @@ Person.Kat =
       doubledBy: 'Regret'
     StreetRat:
       name: 'Street Rat'
-      description: "Unlock Kat's events after prologue"
+      description: "Unlock events focused on Kat in Chapter 2"
       requiresAnd: ['Bright', 'Generous', 'SixthSense']
 
     HowNotToLose:
@@ -30,7 +30,7 @@ Person.Kat =
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Devilish:
-      description: '25% change to discard an expired cargo when completing a different delivery'
+      description: '25% change to discard an expired job when completing a different delivery'
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Deckhand:
@@ -69,6 +69,6 @@ Person.Kat =
       doubledBy: 'Desire'
     Devilish2:
       name: 'Devlish 2'
-      description: '25% chance to discard an expired cargo when completing another one'
+      description: '25% chance to discard an expired job when completing a different delivery'
       requiresAnd: ['FreeWoman']
       doubledBy: 'Desire'

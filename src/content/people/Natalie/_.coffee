@@ -20,7 +20,7 @@ Person.Natalie =
       requiresAnd: ['Overdeliver']
       doubledBy: 'Fear'
     Initiate:
-      description: 'Unlock Chapter 1'
+      description: 'Unlock Chapter 2'
       requiresAnd: ['Gregarious', 'Grounded']
 
     Overdeliver2:
@@ -44,7 +44,7 @@ Person.Natalie =
       requiresAnd: ['Gregarious2']
       doubledBy: 'Trust'
     Mage:
-      description: 'Unlock character routes'
+      description: 'Unlock Chapter 3'
       requiresAnd: ['WellInformed', 'SilverTongue2']
 
     WinningSmile2:

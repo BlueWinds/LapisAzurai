@@ -9,10 +9,21 @@ $.extend Person, {
 
   updateOverview: ->
     p = $('#overview .people')
-    for person of g.people when not p.find("[person=#{person}]").length
-      personDiv = $(Person.draw(person))
-      personDiv.find('object').on 'load', Person.activateSVG
-      p.append(personDiv)
+    for person of g.people
+      oldDiv = p.find("[person=#{person}]")
+      newDiv = $(Person.draw(person))
+      if oldDiv.length
+        # If the svg is already present, replacing it would cause an annoying flicker for the player. Instead we take the messier route of updating everything around it.
+        oldDiv.find('.picks').replaceWith(newDiv.find('.picks'))
+        oldDiv.find('.description').replaceWith(newDiv.find('.description'))
+
+        # Redraw the skill box, if there is one
+        skill = $(".skill[p=#{person}]").attr('skill')
+        if skill
+          $("[skill=#{skill}]").replaceWith(Person.drawSkill(person, skill))
+      else
+        newDiv.find('object').on 'load', Person.activateSVG
+        p.append(newDiv)
     return
 
   draw: (person)->
@@ -92,6 +103,6 @@ $.extend Person, {
     $("[skill=#{skill}").replaceWith(Person.drawSkill(person, skill))
 
     # Update available skill count
-    newPicks = $(Person.draw(person)).find('.picks')
-    $("[person=#{person}] .picks").replaceWith(newPicks)
+    newDiv = $(Person.draw(person))
+    $("[person=#{person}] .picks").replaceWith(newDiv.find('.picks'))
 }

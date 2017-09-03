@@ -31,7 +31,7 @@ s.FirstStorm =
   label: 'Storm'
   blocking: true
   history:
-    MtJuliaArrive: 0
+    MtJuliaArrive: -1
   effects:
     xp:
       Natalie: 3
@@ -128,7 +128,7 @@ s.StormDropOrDamage =
   minCargo: 1
   text: -> """
   |||| travel/SailingStorm
-    Seas heave, the hull groans, masts crack. A ferocious squall blew in without warning, giving the crew scant time to prepare. Should James help <button onclick='Place.travel.Sail.lostCargo();'>douse the sails</button> (random cargo will be lost) or <button onclick='Place.travel.Sail.extraDamage();'>secure the cargo</button> (ship will take more damage)?
+    Seas heave, the hull groans, masts crack. A ferocious squall blew in without warning, giving the crew scant time to prepare. Should James help <button onclick='Place.travel.Sail.lostCargo();'>douse the sails</button> or <button onclick='Place.travel.Sail.extraDamage();'>secure the cargo</button>?
   """
 
 s.StormDropOrDelay =
@@ -136,14 +136,14 @@ s.StormDropOrDelay =
   minCargo: 1
   text: -> """
   |||| travel/CabinStorm
-     James slammed the door in the face of storm outside, and took a moment to shake the water from his hair before he spoke. `J Nat, we're taking on water faster than we can pump it out. We need to <button onclick='Place.travel.Sail.lostCargo();'>lighten the load</button> (random cargo will be lost) or put <button onclick='Place.travel.Sail.extraDelay();'>more men on the pumps</button> (stuck in the storm longer).`
+     James slammed the door in the face of storm outside, and took a moment to shake the water from his hair before he spoke. `J Nat, we're taking on water faster than we can pump it out. We need to <button onclick='Place.travel.Sail.lostCargo();'>lighten the load</button> or put <button onclick='Place.travel.Sail.extraDelay();'>more men on the pumps</button>.`
   """
 
 s.StormSpeedOrSafety =
   label: 'Storm'
   text: -> """
   |||| travel/DeckNight
-    Storm clouds darken the sky, and winds begin to pick up. Natalie can feel the energy building, crawling along her skin and ready to break at any moment. It's a big one. Should the Lapis <button onclick='Place.travel.Sail.makeProgress();'>ride into the teeth of the storm</button> (use the strong wind to make progress) or <button onclick='Place.travel.Sail.reduceDamage();'>douse the sails</button> while there's still time (ship will take less damage)?
+    Storm clouds darken the sky, and winds begin to pick up. Natalie can feel the energy building, crawling along her skin and ready to break at any moment. It's a big one. Should the Lapis sail into <button onclick='Place.travel.Sail.makeProgress();'>the teeth of the storm</button> or <button onclick='Place.travel.Sail.reduceDamage();'>douse the sails</button> while there's still time?
   """
 
 Story.StormLoseCargo =

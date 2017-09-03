@@ -4,7 +4,7 @@ Place.Vailia.stories.Ch1.push('Ch2')
 Story.Ch2 =
   label: 'Chapter 2 - Kantis'
   history:
-    MeetMeghan: 0
+    MeetMeghan: 60
   effects:
     xp:
       Natalie: 3

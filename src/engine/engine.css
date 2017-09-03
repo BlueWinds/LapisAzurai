@@ -105,6 +105,10 @@ table td {
   border: 1px solid #2a9fd6;
 }
 
+.story.required {
+  border: 1px solid #ff8800;
+}
+
 #flex {
   top: 65px;
   left: 0px;
@@ -240,9 +244,10 @@ hr {
   text-align: center;
 }
 
-.place .cost {
-  font-size: 0.8em;
+.place .cost, .place .expires {
+  clear: right;
   float: right;
+  font-size: 0.8em;
 }
 
 .place .participants, .place .need {

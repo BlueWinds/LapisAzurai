@@ -26,9 +26,20 @@ $.extend Story, {
     else ''
 
     rep = Story.reputationNeeded(story)
-    return """<td class="story #{if onclick then 'active' else '' } #{if Story[story].blocking then 'blocking' else ''}" #{onclick} story="#{story}">
+    days = Story.daysUntilExpire(story)
+    expires = if days is 0
+      'Expires today'
+    else if days is 1
+      'Expires tomorrow'
+    else if days is Infinity
+      ''
+    else
+      "#{days} days"
+    return """<td class="story #{if onclick then 'active' else '' } #{if Story[story].blocking then 'blocking' else ''} #{if Story[story].required then 'required' else ''}" #{onclick} story="#{story}">
       <div>
-        <span class="label">#{Story[story].label}</span><span class="cost">#{if rep then rep + ' rep' else ''}</span>
+        <span class="label">#{Story[story].label}</span>
+        <span class="cost">#{if rep then rep + ' rep' else ''}</span>
+        <span class="expires">#{expires}</span>
         <span class="success">✓</span>
       </div>
       <div class="participants">#{Game.drawEffects Story.effects(story)}</div>

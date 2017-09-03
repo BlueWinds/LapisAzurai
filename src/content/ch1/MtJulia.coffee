@@ -3,7 +3,7 @@ s.MtJuliaArrive =
   label: 'Arrival'
   blocking: true
   history:
-    ReadyToGo: 0
+    ReadyToGo: -1
   effects:
     xp:
       James: 3
@@ -29,7 +29,7 @@ s.MtJuliaArrive =
 s.CheckShip =
   label: 'Check for Damage'
   history:
-    MtJuliaArrive: 0
+    MtJuliaArrive: 1000
   effects:
     xp:
       James: 3
@@ -47,7 +47,7 @@ s.CheckShip =
 s.VisitInn =
   label: 'Visit Inn'
   history:
-    MtJuliaArrive: 0
+    MtJuliaArrive: 1000
   effects:
     xp:
       Natalie: 3
@@ -70,8 +70,9 @@ s.VisitInn =
 
 s.MeetAsara =
   label: 'Castaway'
+  required: true
   history:
-    FirstStormSick: 0
+    FirstStormSick: 1000
   effects:
     xp:
       Natalie: 2
@@ -130,8 +131,9 @@ s.MeetAsara =
 
 s.AsaraAwakens =
   label: 'Castaway'
+  required: true
   history:
-    MeetAsara: 0
+    MeetAsara: 1000
   effects:
     xp:
       Natalie: 2

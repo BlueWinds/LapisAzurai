@@ -36,6 +36,12 @@ $.extend Place, {
     clickableStories = visibleStories.filter((s)-> not Story.unmetNeed(place, s))
     visibleStories = visibleStories.filter(Story.unmetNeed.bind(null, place))
 
+    # If there are blocking stories, then hide everything else until they're dealt with.
+    blocking = clickableStories.filter((s)-> Story[s].blocking)
+    if blocking.length
+      clickableStories = blocking
+
+
     return """<div place="#{place}" class="place">
       <img src="game/content/#{Place[place].img}">
       #{travel}
@@ -43,7 +49,7 @@ $.extend Place, {
       <div class="description">#{distanceDesc} - #{Math.floor(g.reputation[place])} reputation</div>
       <div class="table-wrapper"><table>
         #{Game.drawList clickableStories, Story.draw.bind(null, place)}
-        #{if g.damage and g.map.from is place then Game.drawList [true], Place.drawRepair else ''}
+        #{if !blocking.length and g.damage and g.map.from is place then Game.drawList [true], Place.drawRepair else ''}
         #{Game.drawList deliverable, Cargo.drawDelivery}
         #{Game.drawList available, Cargo.draw}
         #{Game.drawList visibleStories, Story.draw.bind(null, place)}
