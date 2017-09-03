@@ -1,6 +1,6 @@
 # modules
 node_modules/
-.DS_store
+package-lock.json
 
 # build
 dist/
