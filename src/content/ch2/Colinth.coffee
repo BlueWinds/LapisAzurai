@@ -4,7 +4,7 @@ s.ColinthArrive =
   label: 'Arrival'
   blocking: true
   history:
-    KantisRegion3: 0
+    KantisRegion3: true
   effects:
     xp:
       Kat: 3
@@ -28,7 +28,7 @@ s.ColinthArrive =
 s.ColinthAmulets =
   label: 'Magical Amulet'
   history:
-    ColinthArrive: 0
+    ColinthArrive: true
   effects:
     xp:
       Natalie: 2
@@ -49,7 +49,7 @@ s.ColinthAmulets =
 s.ColinthAmulets2 =
   label: 'Magical Amulet'
   history:
-    ColinthAmulets: 0
+    ColinthAmulets: true
   effects:
     xp:
       Kat: 3
@@ -95,7 +95,7 @@ s.ColinthAmulets2 =
 s.Muggers =
   label: 'Muggers'
   history:
-    ColinthArrive: 0
+    ColinthArrive: true
   effects:
     xp:
       Asara: 3
@@ -141,7 +141,7 @@ s.Muggers =
 s.KantianSorcerer =
   label: 'Sorcerer'
   history:
-    ColinthAmulets: 0
+    ColinthAmulets: true
   effects:
     xp:
       Natalie: 3
@@ -174,8 +174,8 @@ s.KantianSorcerer =
 s.AsarasTrauma =
   label: "Asara's Trauma"
   history:
-    Muggers: 0
-    AsaraTalkSisters: 0
+    Muggers: true
+    AsaraTalkSisters: true
   text: ->"""
   || travel/CabinNight
     `N Please, sit down.`
@@ -210,4 +210,5 @@ s.AsarasTrauma =
 
 Place.Colinth.stories.Ch2 = Object.keys(s)
 for key, value of s
+  value.place = 'Colinth'
   Story[key] = value

@@ -84,6 +84,7 @@ $.extend Place, {
       g.map.to = ''
       g.map.distance = 0
       Place.drawMap()
+      setTimeout (-> Place.showOverview(g.map.from, 1000)), 3500
 
   animateTravel: (event)->
     effects = Game.drawEffects(event.effects or {})

@@ -3,7 +3,7 @@ s = {}
 s.NonkeniaDiplomatSailing =
   label: 'Make nice with Diplomat'
   history:
-    NonkeniaDiplomat: 0
+    NonkeniaDiplomat: true
   effects:
     xp:
       Natalie: 3
@@ -27,7 +27,7 @@ s.NonkeniaDiplomatSailing =
 s.GatherWood =
   label: 'Gather Wood'
   history:
-    Ch2: 0
+    Ch2: true
   effects:
     xp:
       James: 3
@@ -41,7 +41,7 @@ s.GatherWood =
 s.ExploreForest =
   label: 'Explore Forest'
   history:
-    GatherWood: 0
+    GatherWood: true
   effects:
     xp:
       James: 3
@@ -79,7 +79,7 @@ s.ExploreForest =
 s.AbandonedShip =
   label: 'Encounter at Sea'
   history:
-    Ch2: 0
+    Ch2: true
   effects:
     xp:
       Asara: 3
@@ -97,7 +97,7 @@ s.AbandonedShip =
 
     `K How can you tell from here?` Kat shaded her eyes against the bright sun, leaning over the railing as though that would give her a better view of the wreck's interior.
 
-  || A/Tentative
+  || A/NormalFull
     `A They did not all escape the storm. One of them died, and it was a full moon,` Asara nodded, as if expecting that to somehow explain everything. When everyone on deck turned to look at her, she didn't shrink away from the attention as Natalie had assumed she would.
 
     `A It was at sea, but the full moon is a stronger influence. This falls within my lady's domain.` Her unusual confidence under scrutiny failed, and she hunched her shoulders under the gaze of the crew and officers.
@@ -109,7 +109,7 @@ s.AbandonedShip =
 s.AsarasMagic =
   label: "Asara's Magic"
   history:
-    TomenoiRoute: 0
+    TomenoiRoute: true
   effects:
     xp:
       Asara: 5
@@ -127,7 +127,7 @@ s.AsarasMagic =
 
     It did confirm, unfortunately, that Asara had been responsible for a pillar of silver flame visible from thirty kilometers away, which splintered a ship and made steel run like molasses. Not a comfortable thought. `N What is 'the blessing'?`
 
-  || A/Tentative
+  || A/NormalFull
     `A The blessing of steel,` she gestured to her silvery eyes. They were truly colorless, sapping even the gold from reflected lantern light. `A I will become strong for a time, nothing more. I merely wished to warn you so you did not think something was amiss.`
 
     `N If all it's going to do is make you strong, how would I know?`
@@ -147,4 +147,5 @@ s.AsarasMagic =
 
 Place.MtJulia.stories.Ch2 = Object.keys(s)
 for key, value of s
+  value.place = 'MtJulia'
   Story[key] = value

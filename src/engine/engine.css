@@ -96,6 +96,10 @@ table td {
   right: 0;
 }
 
+.cargoSearch .lowRep {
+  color: #cc0000;
+}
+
 .repair .success, .story .success {
   line-height: 2.8em;
   right: 0;
@@ -248,6 +252,7 @@ hr {
   clear: right;
   float: right;
   font-size: 0.8em;
+  text-align: right;
 }
 
 .place .participants, .place .need {
@@ -401,10 +406,11 @@ hr {
   clear: both;
 }
 
-.person img {
+#overview .person img {
   float: left;
   margin: 10px;
-  height: 150px;
+  max-width: 105px;
+  max-height: 150px;
 }
 
 .person .name {

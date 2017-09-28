@@ -9,14 +9,14 @@ Person.Natalie =
       description: '+5 Reputation when arriving at a port for the first time'
       doubledBy: 'Fear'
     Overdeliver:
-      description: '+1 Reputation at the destination when delivering cargo'
+      description: 'New jobs give +1 Reputation at the destination'
       doubledBy: 'Fear'
     Gregarious:
-      description: '+1 Reputation at the origin when delivering cargo'
+      description: 'New jobs give +1 Reputation at the origin'
       requiresAnd: ['WinningSmile']
       doubledBy: 'Fear'
     Grounded:
-      description: 'A new cargo becomes available whenever you deliver one'
+      description: '25% chance that a new job becomes available whenever you deliver cargo'
       requiresAnd: ['Overdeliver']
       doubledBy: 'Fear'
     Initiate:
@@ -25,22 +25,22 @@ Person.Natalie =
 
     Overdeliver2:
       name: 'Overdeliver 2'
-      description: '+1 Reputation at the destination when delivering cargo'
+      description: 'New jobs give +1 Reputation at the destination'
       requiresAnd: ['Initiate']
       doubledBy: 'Trust'
     Gregarious2:
       name: 'Gregarious 2'
-      description: '+1 Reputation at the origin when delivering cargo'
+      description: 'New jobs give +1 Reputation at the origin'
       requiresAnd: ['Initiate']
       doubledBy: 'Trust'
     WellInformed:
       name: 'Well Informed'
-      description: 'One additional cargo available daily'
+      description: 'Extra 10% chance of finding a job each day'
       requiresAnd: ['Overdeliver2']
       doubledBy: 'Trust'
     SilverTongue:
       name: 'Silver Tongue'
-      description: '+0.2 Reputation at each location daily'
+      description: '+0.5 Reputation when searching for a job'
       requiresAnd: ['Gregarious2']
       doubledBy: 'Trust'
     Mage:
@@ -54,17 +54,17 @@ Person.Natalie =
       doubledBy: 'Love'
     Grounded2:
       name: 'Grounded 2'
-      description: 'A new cargo becomes available whenever you deliver one'
+      description: '25% chance that a new job becomes available whenever you deliver cargo'
       requiresAnd: ['Mage']
       doubledBy: 'Love'
     WellInformed2:
       name: 'Well Informed 2'
-      description: 'One additional cargo available daily'
+      description: 'Extra 10% chance of finding a job each day'
       requiresAnd: ['WinningSmile2']
       doubledBy: 'Love'
     SilverTongue2:
       name: 'Silver Tongue 2'
-      description: '+0.2 Reputation at each location daily'
+      description: '+0.5 Reputation when searching for a job'
       requiresAnd: ['Grounded2']
       doubledBy: 'Love'
     Adept:

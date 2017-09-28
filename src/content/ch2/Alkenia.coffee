@@ -2,7 +2,7 @@ s = {}
 s.KatShowsSamsGrave =
   label: "Kat's Grave"
   history:
-    JamesUpsetMagic: 0
+    JamesUpsetMagic: true
   effects:
     xp:
       James: 3
@@ -50,7 +50,7 @@ s.KatShowsSamsGrave =
 s.AlkeniaWeaponsRunning =
   label: 'Forestry'
   history:
-    Ch2: 0
+    Ch2: true
   effects:
     xp:
       Natalie: 3
@@ -71,7 +71,7 @@ s.AlkeniaWeaponsRunning =
 s.AlkeniaWeaponsRunning2 =
   label: 'Weapons Running'
   history:
-    AlkeniaWeaponsRunning: 0
+    AlkeniaWeaponsRunning: true
   effects:
     xp:
       James: 3
@@ -92,7 +92,7 @@ s.AlkeniaWeaponsRunning2 =
 s.AlkeniaRaid =
   label: 'Nonkenian Raid'
   history:
-    NonkeniaHunters: 0
+    NonkeniaHunters: true
   effects:
     xp:
       Asara: 5
@@ -106,7 +106,7 @@ s.AlkeniaRaid =
 
     Time to get moving. They'd have to defend themselves if the Alkenians were too busy hiding from the storm.
 
-  || A/Tentative
+  || A/NormalFull
     `A That's far enough,` Asara held up an empty hand, the other resting on the sword at her hip. She should have had to shout to make herself heard, but her quiet voice carried over the gusting wind. `A You may not come here.` The sailors behind her held steady, forming a grim line with James at the center.
 
     The raiders stopped. Half a dozen women, each with the same barbed vine painted across their left cheek and running down their necks, slowly smudging as rain washed them clean, each with the same vicious looking dagger in one hand. They didn't say anything. The silence was more terrifying shouting would have been.
@@ -125,7 +125,7 @@ s.AlkeniaRaid =
 s.DeliciousFood =
   label: 'Delicious Food'
   history:
-    AsaraJoinsCrew: 0
+    AsaraJoinsCrew: true
   effects:
     xp:
       Kat: 3
@@ -150,7 +150,7 @@ s.DeliciousFood =
 s.KatBringsToys =
   label: 'Vailian Toys'
   history:
-    KatShowsSamsGrave: 0
+    KatShowsSamsGrave: true
   effects:
     xp:
       Kat: 3
@@ -172,4 +172,5 @@ s.KatBringsToys =
 
 Place.Alkenia.stories.Ch2 = Object.keys(s)
 for key, value of s
+  value.place = 'Alkenia'
   Story[key] = value

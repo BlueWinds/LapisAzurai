@@ -32,13 +32,17 @@ $.extend Game, {
 
   drawEffects: (e)->
     text = []
+
+    effectFuncs =
+      reputation: (place, amount)-> amount + ' rep'
+      xp: (person, amount)-> amount + 'xp for ' + person
+
     for key, results of e
       if typeof results is 'number'
         text.push "#{Math.round(results)} #{key}"
       else
-        at = if key is 'reputation' then 'at' else 'for'
         for name, amount of results when amount
-          text.push "#{amount} #{key} #{at} #{Place[name]?.name or Person[name]?.name}"
+          text.push effectFuncs[key](name, amount)
     return text.join('<br>\n')
 
   guiSetup: ->
@@ -91,6 +95,11 @@ $.extend Game, {
     Person.drawOverview()
     if (g.map.to and g.scroll < 0)
       Place.travel()
+
+  animateSuccess: (element)->
+    $(element).animate({opacity: 1}, 500).animate {opacity: 0}, 1500, ->
+      Place.drawMap()
+      Place.showOverview()
 }
 
 # Autosave every time a day passes
@@ -99,8 +108,18 @@ Game.passDay = ->
   oldPassDay()
 
   setTimeout ->
-    delete localStorage[localStorage.autosave]
+    unless g.day % 20 is 1
+      delete localStorage[localStorage.autosave]
     now = Date.now()
     localStorage.setItem now, jsyaml.safeDump(g)
     localStorage.autosave = now
+
+    if g.day % 20 is 0
+      delete localStorage[localStorage.autosave60]
+      localStorage.autosave60 = localStorage.autosave40
+      localStorage.autosave40 = localStorage.autosave20
+      localStorage.autosave20 = localStorage.autosave0
+      localStorage.autosave0 = localStorage.autosave
+      console.log localStorage.autosave0, localStorage.autosave20
+    else
   , 0

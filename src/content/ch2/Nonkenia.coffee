@@ -3,7 +3,7 @@ s = {}
 s.NonkeniaArrive =
   label: 'Arrival'
   history:
-    NonkeniaRoute: 0
+    NonkeniaRoute: true
   effects:
     xp:
       Natalie: 3
@@ -34,7 +34,7 @@ s.NonkeniaArrive =
 s.NonkeniaDiplomatDelivery =
   label: 'Deliver the "Diplomat"'
   history:
-    NonkeniaDiplomatSailing: 0
+    NonkeniaDiplomatSailing: true
   effects:
     xp:
       Natalie: 3
@@ -60,7 +60,7 @@ s.NonkeniaDiplomatDelivery =
 s.AsaraTalkEyes =
   label: 'Talk with Asara - Silver Eyes'
   history:
-    AsarasMagic: 0
+    AsarasMagic: true
   effects:
     xp:
       Asara: 3
@@ -82,7 +82,7 @@ s.AsaraTalkEyes =
 s.AsaraTalkSisters =
   label: 'Talk with Asara - Sisters'
   history:
-    AsaraTalkEyes: 0
+    AsaraTalkEyes: true
   effects:
     xp:
       Asara: 3
@@ -104,7 +104,7 @@ s.AsaraTalkSisters =
 s.JamesConfusion =
   label: 'Tension'
   history:
-    JamesParents: 0
+    JamesParents: true
   effects:
     xp:
       James: 3
@@ -126,7 +126,7 @@ s.JamesConfusion =
 s.NonkeniaHunters =
   label: 'Hunters'
   history:
-    NonkeniaArrive: 0
+    NonkeniaArrive: true
   effects:
     xp:
       Asara: 3
@@ -147,4 +147,5 @@ s.NonkeniaHunters =
 
 Place.Nonkenia.stories.Ch2 = Object.keys(s)
 for key, value of s
+  value.place = 'Nonkenia'
   Story[key] = value

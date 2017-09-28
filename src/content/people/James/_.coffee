@@ -12,7 +12,7 @@ Person.James =
       doubledBy: 'Duty'
     Stoic:
       description: 'Storms are half a day shorter (on average)'
-      requiresOr: ['Reliable', 'Stoic']
+      requiresOr: ['Reliable', 'WeatherEye']
       doubledBy: 'Duty'
     WeatherEye:
       name: 'Weather Eye'
@@ -35,11 +35,11 @@ Person.James =
       doubledBy: 'Power'
     Organized:
       description: '+1 cargo capacity'
-      requiresOr: ['Reliable2', 'Navigator']
+      requiresOr: ['Trustworthy2', 'Navigator']
       doubledBy: 'Power'
     Navigator:
       description: '+10% sail speed'
-      requiresOr: ['Trustworthy2', 'Organized']
+      requiresOr: ['Reliable2', 'Organized']
       doubledBy: 'Power'
     Journeyman:
       description: "Unlock James' route (also requires Mage on Natalie)"

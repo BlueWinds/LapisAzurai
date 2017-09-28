@@ -1,5 +1,5 @@
 $.extend Place, {
-  showOverview: (place = $('.place').attr('place') or g.map.from)->
+  showOverview: (place = $('.place').attr('place') or g.map.from, duration = 500)->
     o = $('#overview')
     Person.updateOverview()
 
@@ -8,7 +8,7 @@ $.extend Place, {
 
     unless o.hasClass('active')
       o.css({opacity: 0, display: 'block'})
-      .stop().delay(100).animate({opacity: 1}, 400)
+      .stop().delay(duration * 0.2).animate({opacity: 1}, duration * 0.8)
     o.addClass('active')
 
   hideOverview: (duration = 500)->
@@ -49,7 +49,8 @@ $.extend Place, {
       <div class="description">#{distanceDesc} - #{Math.floor(g.reputation[place])} reputation</div>
       <div class="table-wrapper"><table>
         #{Game.drawList clickableStories, Story.draw.bind(null, place)}
-        #{if !blocking.length and g.damage and g.map.from is place then Game.drawList [true], Place.drawRepair else ''}
+        #{if blocking.length is 0 and g.damage and g.map.from is place then Game.drawList [true], Place.drawRepair else ''}
+        #{if blocking.length is 0 then Game.drawList [place], Cargo.drawSearch else ''}
         #{Game.drawList deliverable, Cargo.drawDelivery}
         #{Game.drawList available, Cargo.draw}
         #{Game.drawList visibleStories, Story.draw.bind(null, place)}
@@ -71,10 +72,5 @@ $.extend Place, {
     Game.applyEffects Place.repairEffects()
 
     Game.showPassDayOverlay(undefined, 'Repaired the ship')
-    $('.repair.active .success')
-      .animate({opacity: 1}, 500)
-      .animate {opacity: 0}, 1500, ->
-        Place.drawMap()
-        Place.showOverview()
-
+    Game.animateSuccess('.repair.active .success')
 }

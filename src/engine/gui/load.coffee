@@ -1,6 +1,13 @@
 Story.Load =
   label: 'Load'
   text: ->
+    autosaves = [
+      localStorage.autosave
+      localStorage.autosave0
+      localStorage.autosave20
+      localStorage.autosave40
+      localStorage.autosave60
+    ]
     rows = for key in Object.keys(localStorage).sort().reverse()
       date = new Date(parseInt(key, 10))
       unless date.getTime() then continue
@@ -13,7 +20,7 @@ Story.Load =
       blob = URL.createObjectURL blob
 
       name = "#{game.chapter} - Day #{game.day} - #{game.map.from}"
-      if localStorage.autosave is key then name += ' (auto)'
+      if key in autosaves then name += ' (auto)'
 
       row = [
         name

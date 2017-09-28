@@ -1,5 +1,5 @@
 samplePlaceData =
-  name: 'Mt Julia'
+  name: 'Mt. Julia'
   paths:
     Vailia: -1 # -1: The path is ThereHere (it needs to be animated "in reverse")
     Alkenia: 1 # 1: The path goes HereThere (it is animated "forward")
@@ -10,18 +10,20 @@ samplePlaceData =
       'Silver'
       'Lumber'
     ]
-  stories: [
-    'ExploreWilds'
-  ]
+  stories:
+    Ch1: [
+      'ExploreWilds'
+    ]
+  jobChance: 0.3
 
 window.Place = {
   travel: {}
 
   repairEffects: ->
     e =
-      damage: -Math.min(10, g.damage)
+      damage: -Math.min(10, g.damage) * (if g.reputation[g.map.from] > 0 then 1 else 0.5)
       reputation: {}
-    e.reputation[g.map.from] = -Math.min(3, g.reputation[g.map.from])
+    e.reputation[g.map.from] = -Math.min(2, g.reputation[g.map.from])
     return e
 
   location: (place, distance)->
@@ -39,6 +41,7 @@ window.Place = {
     return if distance >= 0 then distance else element.getTotalLength() + distance
 
   travelDays: (from, to)-> # Returns days between two locations, including indirect routes
+    unless from and to then return 0
     sumLength = (sum, e)->
       sum + Math.ceil(e.getTotalLength() / Game.travelPxPerDay(e.attributes.travel.value))
     return Place.travelSteps(from, to).map(Place.svgElement).reduce(sumLength, 0)

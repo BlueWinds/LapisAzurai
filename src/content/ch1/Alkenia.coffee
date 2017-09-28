@@ -3,7 +3,7 @@ s.AlkeniaArrive =
   label: 'Arrival'
   blocking: true
   history:
-    AlkeniaRoute: -1
+    AlkeniaRoute: true
   effects:
     xp:
       Natalie: 3
@@ -33,7 +33,7 @@ s.MeetKat =
   label: 'Pickpocket'
   required: true
   history:
-    AlkeniaArrive: 1000
+    AlkeniaRoute: true
   effects:
     xp:
       Natalie: 2
@@ -62,8 +62,9 @@ s.MeetKat =
 s.MeetKat2 =
   label: 'Pickpocket (again)'
   required: true
+  extraDays: 30
   history:
-    MeetKat: 1000
+    MeetKat: true
   effects:
     xp:
       Natalie: 3
@@ -109,7 +110,7 @@ s.KatTrial =
   label: "Kat's Trial"
   required: true
   history:
-    MeetKat2: 1000
+    MeetKat2: true
   effects:
     xp:
       Natalie: 3
@@ -148,7 +149,7 @@ s.KatMeetsJames =
   label: 'Kat and James'
   blocking: true
   history:
-    KatTrial: -1
+    KatTrial: true
   effects:
     xp:
       James: 2
@@ -180,7 +181,7 @@ s.KatStorm =
   label: 'Out in a Storm'
   required: true
   history:
-    KatTrial: 1000
+    KatTrial: true
   effects:
     xp:
       Natalie: 3
@@ -216,7 +217,7 @@ s.KatStorm2 =
   label: 'Out of the Storm'
   blocking: true
   history:
-    KatStorm: -1
+    KatStorm: true
   text: -> """
   || travel/CabinDay
     `K You're a very nice lady, you know that?` Natalie woke to a hand patting her shoulder. She'd fallen asleep while tending to Kat, and now it seemed her charge had awakened first.
@@ -256,7 +257,7 @@ s.KatJoins =
   label: 'Kat Joins'
   required: true
   history:
-    KatStorm: 1000
+    KatStorm: true
   effects:
     xp:
       Kat: 10
@@ -307,4 +308,5 @@ s.KatJoins =
 
 Place.Alkenia.stories.Ch1 = Object.keys(s)
 for key, value of s
+  value.place = 'Alkenia'
   Story[key] = value

@@ -4,7 +4,7 @@ s.IronSandsArrive =
   label: 'Arrival'
   blocking: true
   history:
-    IronSandsRutter2: 0
+    IronSandsRutter2: true
   effects:
     xp:
       James: 3
@@ -41,8 +41,8 @@ s.IronSandsArrive =
 s.JamesUpsetMagic2 =
   label: 'James is Upset'
   history:
-    JamesUpsetMagic: 0
-    IronSandsArrive: 0
+    JamesUpsetMagic: true
+    IronSandsArrive: true
   effects:
     xp:
       Natalie: 3
@@ -95,7 +95,7 @@ s.JamesUpsetMagic2 =
 s.IronSandsRest =
   label: 'Resting in the Bunkhouse'
   history:
-    IronSandsArrive: 0
+    IronSandsArrive: true
   effects:
     xp:
       Kat: 3
@@ -109,7 +109,7 @@ s.IronSandsRest =
 s.IronSandsJamesFlirt =
   label: 'Flirting Cara'
   history:
-    IronSandsArrive: 0
+    IronSandsArrive: true
   effects:
     xp:
       James: 3
@@ -136,7 +136,7 @@ s.IronSandsJamesFlirt =
 s.IronSandsAsaraTalk =
   label: "Asara's Spirits"
   history:
-    IronSandsArrive: 0
+    IronSandsArrive: true
   effects:
     xp:
       Asara: 3
@@ -170,4 +170,5 @@ s.IronSandsAsaraTalk =
 
 Place.IronSands.stories.Ch2 = Object.keys(s)
 for key, value of s
+  value.place = 'IronSands'
   Story[key] = value

@@ -16,7 +16,7 @@ Person.Kat =
       doubledBy: 'Regret'
     StreetRat:
       name: 'Street Rat'
-      description: "Unlock events focused on Kat in Chapter 2"
+      description: 'Unlock events focused on Kat in Chapter 2'
       requiresAnd: ['Bright', 'Generous', 'SixthSense']
 
     HowNotToLose:

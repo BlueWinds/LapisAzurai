@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/css" href="../../../content.css"?>
 <svg
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/"
-  class="skills" viewBox="20 15 335 95"
+  class="skills" viewBox="5 10 365 105"
 >
  <metadata>
   <rdf:RDF>
@@ -58,7 +58,7 @@
   <circle r="7" fill="url(#solidGradient)"/>
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
- <g id="Devlish" transform="translate(173, 61)">
+ <g id="Devilish" transform="translate(173, 61)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
   <circle r="7" fill="url(#solidGradient)"/>
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>

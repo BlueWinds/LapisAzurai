@@ -31,7 +31,8 @@ s.FirstStorm =
   label: 'Storm'
   blocking: true
   history:
-    MtJuliaArrive: -1
+    MtJuliaArrive: true
+  place: 'Vailia' # Only used for counting when events should expire
   effects:
     xp:
       Natalie: 3
@@ -41,7 +42,7 @@ s.FirstStorm =
 
     `N What?` She slipped up out of bed, on her feet and shrugging on a shirt even while he answered. There was no light outside – still night. No, not night...
 
-    `J A storm is rolling in! I've got the crew pulling up the sails, but it's eating the horizon like you wouldn't believe...` He stepped out of the way as she opened the door in his face.
+    `J A storm is rolling in! I've got the crew reefing the sails, but it's eating the horizon like you wouldn't believe...` He stepped out of the way as she opened the door in his face.
 
   || N/Angry
     In one direction lay a peaceful night – dark sky and twinkling stars, ocean quiet but growing rougher. In the other... she groaned.
@@ -128,7 +129,7 @@ s.StormDropOrDamage =
   minCargo: 1
   text: -> """
   |||| travel/SailingStorm
-    Seas heave, the hull groans, masts crack. A ferocious squall blew in without warning, giving the crew scant time to prepare. Should James help <button onclick='Place.travel.Sail.lostCargo();'>douse the sails</button> or <button onclick='Place.travel.Sail.extraDamage();'>secure the cargo</button>?
+    Seas heaved, the hull groaned, masts cracked. A ferocious squall blew in without warning, giving the crew scant time to prepare. James rushed to help <button onclick='Place.travel.Sail.lostCargo();'>douse the sails</button> or <button onclick='Place.travel.Sail.extraDamage();'>secure the cargo</button> before things grew worse.
   """
 
 s.StormDropOrDelay =

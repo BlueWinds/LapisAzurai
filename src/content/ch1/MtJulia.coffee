@@ -3,7 +3,7 @@ s.MtJuliaArrive =
   label: 'Arrival'
   blocking: true
   history:
-    ReadyToGo: -1
+    ReadyToGo: true
   effects:
     xp:
       James: 3
@@ -27,15 +27,16 @@ s.MtJuliaArrive =
   """
 
 s.CheckShip =
-  label: 'Check for Damage'
+  label: 'Inspect the Ship'
   history:
-    MtJuliaArrive: 1000
+    MtJuliaArrive: true
+  maxDamage: 0
   effects:
     xp:
       James: 3
   text: -> """
   || places/MtJuliaDay
-    The Azurai shouldn't have taken any damage from such a minor voyage in calm weather, but it didn't hurt to check. James stripped down to his trunks – any issues would begin below the waterline on the outside of the hull long before they became visible to the occupants.
+    The Azurai seemed in fine shape at the moment, but it didn't hurt to check. James stripped down to his trunks – any issues would begin below the waterline on the outside of the hull long before they became visible to the occupants.
 
     He shook his head as someone whistled behind him, but he refused to dignify the catcall with a glance. Let Natalie have her fun. Or one of the sailors, if they were so bold. He didn't really want to know who it was. Yes he did, actually, but he still wasn't going to turn his head to look.
 
@@ -47,7 +48,7 @@ s.CheckShip =
 s.VisitInn =
   label: 'Visit Inn'
   history:
-    MtJuliaArrive: 1000
+    MtJuliaArrive: true
   effects:
     xp:
       Natalie: 3
@@ -72,7 +73,8 @@ s.MeetAsara =
   label: 'Castaway'
   required: true
   history:
-    FirstStormSick: 1000
+    FirstStormSick2: true
+  extraDays: 40
   effects:
     xp:
       Natalie: 2
@@ -92,7 +94,7 @@ s.MeetAsara =
 
     She shook herself free of the dream's grip. `J It'll be fine.`
 
-    He shook his head at the non-answer and turned to help cast off the ropes.
+    He pursed his lips at the non-answer and turned to help cast off the ropes.
 
   || travel/SailingNight
     The beacon and the sense of wild power only lasted for half an hour before guttering out. Natalie's own magic relaxed again, quieting her headache, but by then she had a good enough idea of its location to guide the Azurai. She knew they were getting close when they first sighted debris – shattered and burned wood, ash-blackened tatters of rope.
@@ -120,7 +122,7 @@ s.MeetAsara =
     `N Nothing we can do until morning. Back to Mt. Julia. We'll proceed as planned tomorrow.` She ignored the question.
 
   || J/Upset
-    `j Nat...` he searched her face uncomfortably. `J Is she a demon?`
+    `J Nat...` he searched her face uncomfortably. `J Is she a demon?`
 
     Natalie bit her lip, and after a moment shook her head. `N I don't know. But what can we do, just leave her there floating in the wreckage?`
 
@@ -132,8 +134,9 @@ s.MeetAsara =
 s.AsaraAwakens =
   label: 'Castaway'
   required: true
+  extraDays: 30
   history:
-    MeetAsara: 1000
+    MeetAsara: true
   effects:
     xp:
       Natalie: 2
@@ -147,7 +150,7 @@ s.AsaraAwakens =
     It took longer than those two days before their passenger woke enough to do more than take a few sips of water or broth and pass out again. Natalie sat plotting their progress on a chart when she heard a sound behind her, just a shifting of cloth and a rustle of movement before the links of the manacles descended around her throat, threatening to choke her. Only threatening, yet. They were tight, but not difficult to breathe around.
 
   || A/Angry
-      `A لا تصرخ. يمكنني كسر العنق.` The girl whispered gibberish in her ear.
+    `A لا تصرخ. يمكنني كسر العنق.` The girl whispered gibberish in her ear.
 
     `N Please, I only want to hel-` Natalie's voice was choked off mid-sound, though the chain relaxed again soon after. Despite the danger in the situation, she couldn't help but notice the hot breath tickling her ear and the unclothed chest pressed against her back. She'd been misled by the survivor's delicate features - this was a woman, both in body and in strength.
 
@@ -199,4 +202,5 @@ s.AsaraAwakens =
 
 Place.MtJulia.stories.Ch1 = Object.keys(s)
 for key, value of s
+  value.place = 'MtJulia'
   Story[key] = value

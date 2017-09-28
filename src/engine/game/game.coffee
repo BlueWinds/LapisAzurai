@@ -18,7 +18,9 @@ sampleGame =
     speedBonus: -12 # How many extra pixels of progress to make on the next day (negative will slow down, to minimum of 0px progress)
   availableCargo: [] # As g.cargo
   reputation:
-    Vailia: 0.95231
+    Vailia: 3
+  jobSearch:
+    Vailia: 0.58 # Accumulated chance from previous failed attempts to find cargo here
   people:
     Natalie:
       xp: 100

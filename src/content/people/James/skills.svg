@@ -46,12 +46,12 @@
   <circle r="7" fill="url(#solidGradient)"/>
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
- <g id="Trustworthy2" transform="translate(157, 33)">
+ <g id="Reliable2" transform="translate(157, 33)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
   <circle r="7" fill="url(#solidGradient)"/>
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>
  </g>
- <g id="Reliable2" transform="translate(157, 93)">
+ <g id="Trustworthy2" transform="translate(157, 93)">
   <circle r="12" fill="url(#bigBlurGradient)" filter="url(#bigBlur)"/>
   <circle r="7" fill="url(#solidGradient)"/>
   <circle r="7" fill="none" stroke="#ffc57d" stroke-width="1"/>

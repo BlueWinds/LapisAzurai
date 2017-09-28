@@ -5,15 +5,21 @@
   svg {
     top: 0;
     left: 0;
-    position: absolute;
+  }
+  td {
+    text-align: center;
   }
 </style>
 <script src="http://d3js.org/d3.v3.js"></script>
 <script src="../dist/game/lib.js"></script>
 <script src="../dist/game/compiled.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
 <script>
   function drawEvents(chapter) {
+    var allGoods = {};
     var chPlaces = {};
+
+    $('table, svg').remove();
     for (var p in Place) {
       if (Place[p].stories && Place[p].stories[chapter]) { chPlaces[p] = true; }
     }
@@ -29,6 +35,7 @@
         routes[d] = routes[d] || {label: d, value: 0};
         routes[d].value += goods[d].length;
         routes[p].value += goods[d].length;
+        goods[d].forEach(function(g) { allGoods[g] = allGoods[g] || 0; allGoods[g]++; });
       }
     }
     routes = Object.values(routes);
@@ -70,6 +77,15 @@
         })
         .attr("text-anchor", "middle")
         .text(function(d, i) { return routes[i].label; });
+    var table = $('<table><tr><th>Trade Good</th><th>Sources</th><th>From rep</th><th>To rep</th></tr></table>');
+    Object.keys(allGoods).sort(occurAlpha).forEach(function(good) {
+      var rep = Cargo.goods[good] || [];
+      table.append('<tr><td>' + good + '</td><td>' + allGoods[good] + '</td><td>' + rep[0] + '</td><td>' + rep[1] + '</td></tr>');
+    });
+    table.appendTo('body');
+    console.log(JSON.stringify(allGoods, null, 2));
+
+    function occurAlpha(a, b) { return allGoods[b] - allGoods[a] || a > b}
   }
 </script>
 </head>

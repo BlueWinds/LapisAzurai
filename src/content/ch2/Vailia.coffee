@@ -4,7 +4,7 @@ Place.Vailia.stories.Ch1.push('Ch2')
 Story.Ch2 =
   label: 'Chapter 2 - Kantis'
   history:
-    MeetMeghan: 60
+    MeetMeghan: true
   effects:
     xp:
       Natalie: 3
@@ -56,7 +56,7 @@ Story.Ch2 =
 s.TomenoiRoute =
   label: 'Route to Kantis'
   history:
-    Ch2: 0
+    Ch2: true
   effects:
     xp:
       Asara: 3
@@ -74,7 +74,7 @@ s.TomenoiRoute =
 
     Janos sat back down heavily in his chair. `Guildmaster Sorry, you gave me quite a fright. Who are you?`
 
-  || A/Tentative
+  || A/NormalFull
     `A Natalie sent me.`
 
     `Guildmaster You must be Asara, right. One of Natalie's new officers. Do you know why she sent you instead of James?`
@@ -95,7 +95,7 @@ s.TomenoiRoute =
 s.JamesUpsetMagic =
   label: 'James is Upset'
   history:
-    Ch2: 0
+    Ch2: true
   effects:
     xp:
       James: 3
@@ -120,7 +120,7 @@ s.JamesUpsetMagic =
 s.NonkeniaRoute =
   label: 'Nonkenia Rutter'
   history:
-    TomenoiRoute: 0
+    TomenoiRoute: true
   effects:
     xp:
       Asara: 3
@@ -130,7 +130,7 @@ s.NonkeniaRoute =
 
     It was... sloppy. Disorganized. It was <i>loud.</i>
 
-  || A/Tentative
+  || A/NormalFull
     She gave up hoping someone would approach her and finally went over to the desk set up to greet visitors. She waited for the clerk to recognize her. They'd never met, but he must have been given a description of her, surely...
 
     He grew nervous under her silence. With an internal shrug, Asara gave up hope of getting through this without having to speak to anyone. It wasn't a big deal, she tried to convince herself. Vailia was different from home, and she'd have to accept that if she wanted to make her way in Natalie's world. She could do this.
@@ -147,7 +147,7 @@ s.NonkeniaRoute =
 s.NonkeniaDiplomat =
   label: 'Diplomatic Delivery'
   history:
-    NonkeniaRoute: 0
+    NonkeniaRoute: true
   effects:
     xp:
       Natalie: 3
@@ -178,7 +178,7 @@ s.NonkeniaDiplomat =
 s.TrainCombatNat =
   label: 'Lessons for Natalie'
   history:
-    Ch2: 0
+    Ch2: true
   effects:
     xp:
       Natalie: 3
@@ -196,7 +196,7 @@ s.TrainCombatNat =
 s.TrainCombatJames =
   label: 'Lessons for James'
   history:
-    TrainCombatNat: 0
+    TrainCombatNat: true
   effects:
     xp:
       James: 3
@@ -218,7 +218,7 @@ s.TrainCombatJames =
 s.TrainCombatKat =
   label: 'Lessons for Kat'
   history:
-    TrainCombatNat: 0
+    TrainCombatNat: true
   effects:
     xp:
       Kat: 3
@@ -240,7 +240,7 @@ s.TrainCombatKat =
 s.TrainCombatKat =
   label: 'Lessons for Asara'
   history:
-    TrainCombatNat: 0
+    TrainCombatNat: true
   effects:
     xp:
       Asara: 3
@@ -260,7 +260,7 @@ s.TrainCombatKat =
 s.IronSandsRutter =
   label: 'Route to Iron Sands (part 1)'
   history:
-    JamesUpsetMagic: 0
+    JamesUpsetMagic: true
   effects:
     xp:
       Kat: 3
@@ -308,7 +308,7 @@ s.IronSandsRutter =
 s.IronSandsRutter2 =
   label: 'Route to Iron Sands (part 2)'
   history:
-    IronSandsRutter: 0
+    IronSandsRutter: true
   effects:
     xp:
       Kat: 3
@@ -351,7 +351,7 @@ s.IronSandsRutter2 =
 s.AsaraTalkFlames =
   label: 'Talk with Asara - Flames'
   history:
-    AsarasMagic: 0
+    AsarasMagic: true
   effects:
     xp:
       Asara: 3
@@ -380,7 +380,7 @@ s.AsaraTalkFlames =
 s.AsaraTalkNotMagic =
   label: 'Talk with Asara - Magic'
   history:
-    AsarasMagic: 0
+    AsarasMagic: true
   effects:
     xp:
       Asara: 3
@@ -392,7 +392,7 @@ s.AsaraTalkNotMagic =
 
     Now Natalie was genuinely curious. Everything she'd ever read suggested that, for humans, power came with birth, present or absent in set quantity from the moment when a potential sorcerer drew their first breath. Seeing her interest, Asara went on.
 
-  || A/Tentative
+  || A/NormalFull
     `A We are not witches. My sisters and I are priestesses. Guardians? Holy soldiers. I do not know a good word for it in Vailian, forgive me. Your birth defined you, but I was defined by a choice.`
 
     `N A choice?` Natalie prompted her to go on, leaning in closer. Asara was finally opening up a little - and beneath the sharp exterior there was something as fascinating as Nat has known there would be.
@@ -403,7 +403,7 @@ s.AsaraTalkNotMagic =
 s.AsaraTalkWitch =
   label: 'Talk with Asara - Witch'
   history:
-    AsaraTalkNotMagic: 0
+    AsaraTalkNotMagic: true
   effects:
     xp:
       Natalie: 3
@@ -424,7 +424,7 @@ s.AsaraTalkWitch =
 s.JamesParents =
   label: "James' Parents"
   history:
-    JamesUpsetMagic2: 0
+    JamesUpsetMagic2: true
   effects:
     xp:
       James: 3
@@ -444,7 +444,7 @@ s.JamesParents =
 s.JamesParents2 =
   label: "James' Parents"
   history:
-    JamesParents: 0
+    JamesParents: true
   blocking: true
   effects:
     xp:
@@ -476,7 +476,7 @@ s.JamesParents2 =
 s.TomenoiHistory2 =
   label: 'History'
   history:
-    TomenoiHistory: 0
+    TomenoiHistory: true
   effects:
     xp:
       Kat: 3
@@ -528,7 +528,7 @@ s.TomenoiHistory2 =
 s.MeghanSuitors =
   label: "Lady Meghan's Problem"
   history:
-    Ch2: 0
+    Ch2: true
   effects:
     xp:
       Natalie: 2
@@ -605,7 +605,7 @@ s.MeghanSuitors2 =
   label: "Lady Meghan's Problem"
   blocking: true
   history:
-    MeghanSuitors: 0
+    MeghanSuitors: true
   effects:
     xp:
       Natalie: 3
@@ -633,4 +633,5 @@ s.MeghanSuitors2 =
 
 Place.Vailia.stories.Ch2 = Object.keys(s)
 for key, value of s
+  value.place = 'Vailia'
   Story[key] = value

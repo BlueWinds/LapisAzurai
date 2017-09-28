@@ -8,18 +8,18 @@ has = (alias, skill, second)->
   unless second then value += has(alias, skill + '2', true)
   return value
 
-oldToReputation = Cargo.toReputation
-Cargo.toReputation = ->
-  return oldToReputation() + has('N', 'Overdeliver')
-
-oldFromReputation = Cargo.fromReputation
-Cargo.fromReputation = ->
-  return oldFromReputation() + has('N', 'Gregarious')
+oldCreate = Cargo.create
+Cargo.create = (from)->
+  cargo = oldCreate(from)
+  cargo.reputation[0] += has('N', 'Gregarious')
+  cargo.reputation[1] += has('N', 'Overdeliver')
+  return cargo
 
 oldDeliver = Cargo.deliver
 Cargo.deliver = (cargo)->
   effects = oldDeliver(cargo)
-  Cargo.createRandom(has('N', 'Grounded'))
+  if Math.random() < has('N', 'Grounded') * 0.25
+    g.availableCargo.push Cargo.create(g.map.from)
 
   # Select 0 or 1 expired cargoes...
   if Math.randomRound(has('K', 'Devilish') / 4)
@@ -30,17 +30,14 @@ Cargo.deliver = (cargo)->
 
   return effects
 
-oldNewCargoDaily = Cargo.newCargoDaily
-Cargo.newCargoDaily = ->
-  return oldNewCargoDaily() + has('N', 'WellInformed')
+oldSearchChance = Cargo.searchChance
+Cargo.searchChance = (place)->
+  return oldSearchChance(place) + has('N', 'WellInformed') * 0.1
 
-oldGamePassDay = Game.passDay
-Game.passDay = ->
-  oldGamePassDay()
-  add = 0.2 * has('N', 'SilverTongue')
-  for place of g.reputation
-    g.reputation[place] += add
-  return
+oldClickSearch = Cargo.clickSearch
+Cargo.clickSearch = (place)->
+  oldClickSearch(place)
+  g.reputation[g.map.from] += Math.randomRound(has('N', 'SilverTongue') * 0.5)
 
 oldRepairEffects = Place.repairEffects
 Place.repairEffects = ->
@@ -99,9 +96,9 @@ Story.effects = (story)->
 
   return e
 
-oldDaysUntilExpire = Story.daysUntilExpire
-Story.daysUntilExpire = (story)->
-  return oldDaysUntilExpire(story) + has('K', 'NeverTooLate') * 2
+oldExpirationDate = Story.expirationDate
+Story.expirationDate = (story)->
+  return oldExpirationDate(story) + has('K', 'NeverTooLate') * 2
 
 oldStoryOccurs = Place.travel.Sail.storyOccurs
 Place.travel.Sail.storyOccurs = (from, to, distance)->

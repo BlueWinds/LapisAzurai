@@ -6,13 +6,14 @@ Game.starting =
   cargo: []
   damage: 0
   availableCargo: []
+  jobSearch: {}
   map:
     from: 'Vailia'
     to: ''
     distance: 0
     delay: 0
   reputation:
-    Vailia: 0
+    Vailia: 5
   people:
     Natalie:
       xp: 0
@@ -78,7 +79,7 @@ s.Ch1 =
   label: 'Chapter 1 - Vailia'
   blocking: true
   history:
-    Intro: -1
+    Intro: true
   effects:
     xp:
       Natalie: 3
@@ -121,16 +122,12 @@ s.Ch1 =
 
     `Guildmaster Please let me know when you return.` He didn't react to her gesture, other than adjust a stack of papers, but she suspected he was pleased. Hard to tell, with the Guildmaster. She also knew a dismissal when she heard one.
   """
-  apply: ->
-    unless g.availableCargo.filter((f)-> f.from is 'Vailia').length
-      c = Cargo.create('Vailia')
-      g.availableCargo.push(c)
 
 s.ReadyToGo =
   label: 'Ready to Set Sail'
   blocking: true
   history:
-    Ch1: -1
+    Ch1: true
   minCargo: 1
   effects:
     xp:
@@ -173,7 +170,7 @@ s.FirstStormSick =
   label: 'Storm - Aftermath'
   blocking: true
   history:
-    FirstStorm: -1
+    FirstStorm: true
   effects:
     xp:
       James: 3
@@ -203,7 +200,7 @@ s.FirstStormSick =
 
     ` Magical drain. She must be quite powerful, to bring your ship through a storm like that.` Seeing the confusion reflected in James' face, he finally deigned to explain. ` Your captain here is a sorceress. And as I said, quite a powerful one at that. I wouldn't dare touch storm-energy. It's amazing she survived, but she'll make a full recovery, given enough time.` He patted James' arm. ` No charge, since I didn't do anything. Please ask her to stop by our temple once she awakens, if she is so inclined.`
 
-    Given the lack of response from James, he settled for patting him on the shoulder again. <q>I'll see myself out.</q>
+    Given the lack of response from James, he settled for patting him on the shoulder again. ` I'll see myself out.`
 
   || J/Upset
     A sorceress. Damn.
@@ -219,7 +216,7 @@ s.FirstStormSick2 =
   label: 'Storm - Aftermath'
   blocking: true
   history:
-    FirstStormSick: -1
+    FirstStormSick: true
   effects:
     xp:
       James: 2
@@ -245,7 +242,7 @@ s.FirstStormSick2 =
 s.WastingMoney =
   label: 'Wasting Money'
   history:
-    KatJoins: 1000
+    KatJoins: true
   effects:
     xp:
       Kat: 5
@@ -271,12 +268,12 @@ s.WastingMoney =
 s.AsaraArrives =
   label: 'Asara Arrives'
   history:
-    AsaraAwakens: 1000
+    AsaraAwakens: true
   effects:
     xp:
       Asara: 3
   text: -> """
-  || A/Tentative
+  || A/NormalFull
     `A Not leaving.`
 
     Natalie leaned against the door, but Asara held it closed against her. She let out an exasperated sigh and slumped against it. One of the crew quirked an eyebrow to see his captain locked out of her own room, but didn't say anything. Natalie rolled her eyes and hit him lightly in the shoulder. He chuckled.
@@ -287,7 +284,7 @@ s.AsaraArrives =
 s.AsaraWorriesJames =
   label: 'James Worries'
   history:
-    AsaraAwakens: 1000
+    AsaraAwakens: true
   effects:
     xp:
       Asara: 3
@@ -312,8 +309,9 @@ s.AsaraWorriesJames =
 s.AlkeniaRoute =
   label: 'Route to Alkenia'
   required: true
+  extraDays: 15
   history:
-    Intro: 1000
+    FirstStormSick2: true
   effects:
     xp:
       James: 3
@@ -346,8 +344,8 @@ s.MeetMeghan =
   label: 'Lady Meghan'
   required: true
   history:
-    AsaraAwakens: 120
-    KatJoins: 120
+    AsaraAwakens: true
+    KatJoins: true
   effects:
     xp:
       Natalie: 3
@@ -434,4 +432,5 @@ s.MeetMeghan =
 
 Place.Vailia.stories.Ch1 = Object.keys(s)
 for key, value of s
+  value.place = 'Vailia'
   Story[key] = value

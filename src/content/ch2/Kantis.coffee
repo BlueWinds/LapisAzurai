@@ -2,4 +2,5 @@ s = {}
 
 Place.Kantis.stories.Ch2 = Object.keys(s)
 for key, value of s
+  value.place = 'Kantis'
   Story[key] = value

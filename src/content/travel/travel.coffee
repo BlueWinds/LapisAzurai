@@ -17,8 +17,9 @@ s = {}
 s.FirstStorm2 =
   label: 'Storm'
   blocking: true
+  place: 'Vailia' # Only used for counting when events should expire
   history:
-    FirstStorm: 0
+    FirstStorm: true
   effects:
     xp:
       James: 3

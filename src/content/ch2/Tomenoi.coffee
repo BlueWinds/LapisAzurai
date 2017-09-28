@@ -4,7 +4,7 @@ s.TomenoiArrive =
   label: 'Arrival'
   blocking: true
   history:
-    TomenoiRoute: 0
+    TomenoiRoute: true
   effects:
     xp:
       Natalie: 3
@@ -39,7 +39,7 @@ s.TomenoiArrive =
 s.AsaraJoinsCrew =
   label: 'Asara Joins'
   history:
-    AsarasMagic: 0
+    AsarasMagic: true
   effects:
     xp:
       Asara: 3
@@ -68,7 +68,7 @@ s.AsaraJoinsCrew =
 s.StrandedShip =
   label: 'Stranded Ship'
   history:
-    TomenoiArrive: 0
+    TomenoiArrive: true
   effects:
     xp:
       Natalie: 3
@@ -103,7 +103,7 @@ s.StrandedShip =
 s.KantisRegion =
   label: 'Route to Kantis'
   history:
-    AsaraJoinsCrew: 0
+    AsaraJoinsCrew: true
   effects:
     xp:
       Natalie: 3
@@ -125,7 +125,7 @@ s.KantisRegion =
 s.KantisRegion2 =
   label: 'Route to Kantis'
   history:
-    KantisRegion: 0
+    KantisRegion: true
   effects:
     xp:
       Asara: 3
@@ -139,7 +139,7 @@ s.KantisRegion2 =
 
     ` Apologies for the delay, priestess. It is hard to find work here, and I could not leave my post until now.`
 
-  || A/Tentative
+  || A/NormalFull
     `A You live here?` she inquired. She'd been surprised to see another one of her people so far from home, but he was here, and there might be something he could do.
 
     ` There are more of us here than you might think,` he smiled. ` And not all who move beyond the desert forget what we are owed. How may I help you?` They looked little alike - his black hair and dark brown eyes compared to her own silver and blonde, but if one looked beyond the coloration, the resemblance was strong.
@@ -161,7 +161,7 @@ s.KantisRegion3 =
   label: 'Route to Kantis'
   blocking: true
   history:
-    KantisRegion2: 0
+    KantisRegion2: true
   effects:
     xp:
       Asara: 2
@@ -183,7 +183,7 @@ s.KantisRegion3 =
 s.TomenoiHistory =
   label: 'History'
   history:
-    TomenoiArrive: 0
+    TomenoiArrive: true
   effects:
     xp:
       Kat: 3
@@ -207,7 +207,7 @@ s.TomenoiHistory =
 s.SailorTroubles =
   label: 'Sailor Troubles'
   history:
-    TomenoiArrive: 0
+    TomenoiArrive: true
   effects:
     xp:
       James: 3
@@ -250,4 +250,5 @@ s.SailorTroubles =
 
 Place.Tomenoi.stories.Ch2 = Object.keys(s)
 for key, value of s
+  value.place = 'Tomenoi'
   Story[key] = value
