@@ -47,8 +47,8 @@
     margin: 10px;
   }
 </style>
-<script src="../dist/game/lib.js"></script>
-<script src="../dist/game/compiled.js"></script>
+<script src="game/lib.js"></script>
+<script src="game/compiled.js"></script>
 <script src="http://localhost:35729/livereload.js"></script>
 <script>
   window.g = {history: {}, people: {}}
@@ -114,10 +114,6 @@
       s.append('<h1 id="' + story + '">' + story + ' <a href="#">^</a></h1>');
       s.append(sections);
     }
-
-    $('img').each(function() {
-      this.src = this.src.replace('game/content', 'content')
-    })
   }
 </script>
 </head>

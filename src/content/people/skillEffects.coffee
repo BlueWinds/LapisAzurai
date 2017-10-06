@@ -2,9 +2,9 @@
 has = (alias, skill, second)->
   p = Person.alias[alias]
   doubledBy = Person[p].skills[skill].doubledBy
-  multiplier = if g.people.Asara?.skills[doubledBy] then 2 else 1
+  multiplier = if g?.people.Asara?.skills[doubledBy] then 2 else 1
 
-  value = (g.people[p]?.skills[skill] or 0) * multiplier
+  value = (g?.people[p]?.skills[skill] or 0) * multiplier
   unless second then value += has(alias, skill + '2', true)
   return value
 

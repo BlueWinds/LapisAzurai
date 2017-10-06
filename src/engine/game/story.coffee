@@ -41,7 +41,8 @@ window.Story = {
 
   matchesHistory: (onlyOnce, story)->
     if g.history[story]? and onlyOnce then return false
-    if Story.expirationDate(story) < g.day and not Story[story].blocking then return false
+    expires = Story.expirationDate(story)
+    if expires and expires < g.day then return false
     for key, value of Story[story].history
       if value and not g.history[key]? then return false
       if not value and g.history[key]? then return false

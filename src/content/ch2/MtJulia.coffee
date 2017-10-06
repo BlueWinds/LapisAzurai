@@ -108,6 +108,7 @@ s.AbandonedShip =
 
 s.AsarasMagic =
   label: "Asara's Magic"
+  required: true
   history:
     TomenoiRoute: true
   effects:

@@ -48,6 +48,7 @@ $.extend Place, {
     for place of g.reputation
       $('#' + place).show().animate {opacity: 1}, 200
       $('#' + place + 'Mask').attr('fill', 'url(#maskBlur)')
+      updateLabel(place)
 
     location = Place.location(g.map.from, g.distance)
     document.getElementById('Ship').attributes.x.value = location.x
@@ -114,3 +115,27 @@ $.extend Place, {
         event.path.setAttribute('stroke-dashoffset', length * direction - now)
     })
 }
+
+updateLabel = (place)->
+  visible = Story.visibleStories(Place[place].stories[g.chapter])
+  visible = visible.sort (a, b)->
+    Story.expirationDate(a) - Story.expirationDate(b)
+
+  span = $('#' + place + ' tspan').removeClass()
+  console.log(span)
+  if visible[0]
+    expiresClass = if Story[visible[0]].required then 'required'
+    else if Story[visible[0]].blocking then 'blocking'
+    else 'normal'
+
+    span.show()
+    span.children().addClass(expiresClass).text(Story.expirationDate(visible[0]) -  g.day)
+  else
+    span.hide()
+
+  box = $('#' + place)[0].getBBox()
+  rect = $('#' + place + ' rect')[0]
+  rect.setAttribute('x', box.x - 2)
+  rect.setAttribute('y', box.y - 2)
+  rect.setAttribute('width', box.width + 4)
+  rect.setAttribute('height', box.height + 4)

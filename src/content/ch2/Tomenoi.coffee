@@ -38,6 +38,7 @@ s.TomenoiArrive =
 
 s.AsaraJoinsCrew =
   label: 'Asara Joins'
+  required: true
   history:
     AsarasMagic: true
   effects:
@@ -102,6 +103,7 @@ s.StrandedShip =
 
 s.KantisRegion =
   label: 'Route to Kantis'
+  required: true
   history:
     AsaraJoinsCrew: true
   effects:
@@ -124,6 +126,7 @@ s.KantisRegion =
 
 s.KantisRegion2 =
   label: 'Route to Kantis'
+  required: true
   history:
     KantisRegion: true
   effects:

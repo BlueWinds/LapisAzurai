@@ -27,9 +27,7 @@ $.extend Story, {
 
     rep = Story.reputationNeeded(story)
     days = Story.expirationDate(story) - g.day
-    expires = if Story[story].blocking
-      ''
-    else if days is 0
+    expires = if days is 0
       'Expires today'
     else if days is 1
       'Expires tomorrow'

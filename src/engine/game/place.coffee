@@ -43,6 +43,9 @@ window.Place = {
   travelDays: (from, to)-> # Returns days between two locations, including indirect routes
     unless from and to then return 0
     sumLength = (sum, e)->
+      # Should be an error, but here for now so I can be lazy about drawing paths on the map.
+      # TODO: remove the return
+      unless e then return
       sum + Math.ceil(e.getTotalLength() / Game.travelPxPerDay(e.attributes.travel.value))
     return Place.travelSteps(from, to).map(Place.svgElement).reduce(sumLength, 0)
 

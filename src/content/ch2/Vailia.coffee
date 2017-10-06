@@ -3,6 +3,7 @@ s = {}
 Place.Vailia.stories.Ch1.push('Ch2')
 Story.Ch2 =
   label: 'Chapter 2 - Kantis'
+  required: true
   history:
     MeetMeghan: true
   effects:
@@ -55,6 +56,7 @@ Story.Ch2 =
 
 s.TomenoiRoute =
   label: 'Route to Kantis'
+  required: true
   history:
     Ch2: true
   effects:
@@ -94,6 +96,7 @@ s.TomenoiRoute =
 
 s.JamesUpsetMagic =
   label: 'James is Upset'
+  required: true
   history:
     Ch2: true
   effects:
@@ -119,6 +122,7 @@ s.JamesUpsetMagic =
 
 s.NonkeniaRoute =
   label: 'Nonkenia Rutter'
+  required: true
   history:
     TomenoiRoute: true
   effects:
@@ -259,6 +263,7 @@ s.TrainCombatKat =
 
 s.IronSandsRutter =
   label: 'Route to Iron Sands (part 1)'
+  required: true
   history:
     JamesUpsetMagic: true
   effects:
@@ -307,6 +312,7 @@ s.IronSandsRutter =
 
 s.IronSandsRutter2 =
   label: 'Route to Iron Sands (part 2)'
+  required: true
   history:
     IronSandsRutter: true
   effects:

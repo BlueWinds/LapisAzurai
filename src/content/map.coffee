@@ -301,3 +301,31 @@ Place.Amandais =
     Tomenoi: ['Coffee', 'Cork', 'Cumin', 'Decorative Stone', 'Indigo', 'Lemons', 'Papyrus', 'Pepper', 'Tea Leaves']
     Kantis: ['Chickens', 'Cloves', 'Cork', 'Cotton', 'Leather', 'Lemons', 'Live Goats', 'Papyrus', 'Pepper', 'Safflour']
     Amandais: ['Allspice', 'Almonds', 'Carpet', 'Cashews', 'Coffee', 'Cork', 'Figs', 'Gold Jewelry', 'Leather', 'Lemons', 'Liquorice', 'Pepper', 'Safflour', 'Saffron', 'Vanilla']
+
+Place.Spinis =
+  name: 'Spinis'
+  img: ''
+  paths: {}
+  stories: {}
+  jobChance: 0.4
+
+Place.Ment =
+  name: 'Ment'
+  img: ''
+  paths: {}
+  stories: {}
+  jobChance: 0.3
+
+Place.Crater =
+  name: 'Crater'
+  img: ''
+  paths: {}
+  stories: {}
+  jobChance: 0.1
+
+Place.Lephai =
+  name: 'Lephai'
+  img: ''
+  paths: {}
+  stories: {}
+  jobChance: 0.1

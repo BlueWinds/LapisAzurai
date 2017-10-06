@@ -62,7 +62,7 @@ enterMapHelp = ->
         help('header', "Mt. Julia now shows up on the map, but before you set sail you'll need to find some cargo. This isn't normally required, but it's usually a good idea.")
         return
 
-      help('header', "If your ship isn't full yet, you may want to search for more cargo in Vailia. When you're ready to set sail, click on Mt. Julia.")
+      help('header', 'An orange number next to a location means a required event is available there, while black means an optional event')
   , 100
 
 oldEnterMap = Story.enterMap
@@ -78,8 +78,6 @@ Place.showOverview = (place = $('.place').attr('place') or g.map.from, duration)
 
   setTimeout ->
     if g.map.from is 'MtJulia' and g.history.MtJuliaArrive is g.day - 1 and place is 'MtJulia'
-      help('[story="CheckShip"]', "Events expire after some number of days. You won't be ablo te catch every event on a given playthrough.")
-
       help('.cargoSearch', "Natalie's chance of finding cargo is slim at Mt. Julia at the best of times, and it's even worse right now. The chance of finding work is halved if you don't have any reputation to spend.")
 
       help('.cargoSearch', "Chances accumulate though - her odds will grow better the longer she keeps searching until she finds something, so after delivering your cargo, it's probably worth spending a few days looking before you head back to Vailia.")
@@ -138,9 +136,11 @@ firstVailiaHelp = (place)->
     return true
 
   if place is 'MtJulia' and g.cargo.length
-    help('.delivery.0', "Once you arrive at Mt. Julia, you'll be able to deliver the cargo you've taken aboard. Don't dawdle too long though - if the delivery expires, the cargo will still take up space in the ship and you won't get any reward when you do deliver it.")
+    help('.delivery.0', "You'll be able to deliver the cargo once you arrive. Don't dawdle too long though - if the delivery expires, the cargo will still take up space in the ship and you won't get any reward when you do deliver it.")
 
     help('.place .travel', "It takes 9 days to travel from Vailia to Mt. Julia. Now that there's nothing blocking you from leaving Vailia (such as mandatory events or a damaged ship), click the ship icon to set sail.")
+
+    help('[story="MtJuliaArrive"]', "Events expire after some number of days. You won't be ablo to catch every event on a given playthrough. Missing a blue or orange event is bad news - game over.")
     return true
 
 noSkillSelected = -> Object.keys(g.people.Natalie.skills).length is 0 and Object.keys(g.people.James.skills).length is 0

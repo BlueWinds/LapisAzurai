@@ -35,7 +35,7 @@ sampleGame =
   preventNextDamage: 5 # The next damage will be shielded
 
 window.Game =
-  travelPxPerDay: (type)-> 15 + (g.map.speedBonus or 0)
+  travelPxPerDay: (type)-> 15 + (g?.map.speedBonus or 0)
 
   updates: [] # Functions taking one argument, a game state.
 

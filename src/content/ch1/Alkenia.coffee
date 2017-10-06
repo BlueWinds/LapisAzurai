@@ -29,9 +29,9 @@ s.AlkeniaArrive =
     `N He's not... ah, yes, thank you.` She decided it wasn't worth arguing over.
   """
 
-s.MeetKat =
+s.Pickpocket =
   label: 'Pickpocket'
-  required: true
+  blocking: true
   history:
     AlkeniaRoute: true
   effects:
@@ -59,12 +59,12 @@ s.MeetKat =
     Natalie stopped, shook her head in dismay, assessed the situation. It wasn't much money, all told, but still... She shook her head. She was getting careless, to let someone lift off her. `N I'm afraid that was all my pocket money. Perhaps another time.`
   """
 
-s.MeetKat2 =
-  label: 'Pickpocket (again)'
+s.MeetKat =
+  label: 'Catching the Pickpocket'
   required: true
   extraDays: 30
   history:
-    MeetKat: true
+    Pickpocket: true
   effects:
     xp:
       Natalie: 3
@@ -110,7 +110,7 @@ s.KatTrial =
   label: "Kat's Trial"
   required: true
   history:
-    MeetKat2: true
+    MeetKat: true
   effects:
     xp:
       Natalie: 3
