@@ -9,10 +9,18 @@
   }
   .link {
     fill: none;
-    stroke: #aaa;
     stroke-width: 1.5px;
   }
-  #leadsTo { fill: #aaa; }
+  span.dashed:before {
+    content: "⤏";
+    font-size: 1.5em;
+    line-height: 0;
+  }
+  span.solid:before {
+    content: "→";
+    font-size: 1.5em;
+    line-height: 0;
+  }
   circle {
     stroke: #333;
     stroke-width: 1px;
@@ -22,62 +30,50 @@
     pointer-events: none;
   }
 
-  .blocking {
-    color: #2a9fd6;
-  }
-  .required {
-    color: #ff8800;
-  }
+  .links { margin-bottom: 20px; }
 </style>
 <script src="http://d3js.org/d3.v3.js"></script>
 <script src="game/lib.js"></script>
 <script src="game/compiled.js"></script>
 <script src="http://localhost:35729/livereload.js"></script>
 <script>
-  function drawEvents(chapter, colorBy) {
-    if (!chapter) {
-      chapter = window.location.hash.split('|')[0].substr(1) || 'Ch1';
-    }
+  var placeColors = d3.scale.category10();
+  var requiredColors = d3.scale.category10();
+  var characterColors = d3.scale.category10();
+  var linkColors = d3.scale.category10();
 
-    if (!colorBy) {
-      colorBy = window.location.hash.split('|')[1] || 'types';
-    }
+  $(function() {
+    var width = $(document).width(),
+        height = $(document).height();
 
-    window.location.hash = '#' + chapter + '|' + colorBy;
+    window.svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    window.defs = svg.append("defs");
+
+    makeColorExplanations();
+    drawEvents();
+  });
+
+  function drawEvents(chapter) {
+    chapter = setHash(chapter, null)[0];
+
     var links = [];
     var nodes = {};
-    var colors = {};
-    var colorI = 0;
-    var color = d3.scale.category10();
 
-
-    $('.colorBy').hide();
-    $('.' + colorBy).show();
-
-    var places = {};
-    places[chapter] = 'Vailia';
+    window.places = {};
     Object.keys(Place).forEach(function(place) {
-      if (!Place[place].stories) { return; }
+      if (!Place[place].stories || !Place[place].stories[chapter]) { return; }
 
-      var element = $('.places .' + place);
-      if (Place[place].stories[chapter]) {
-        Place[place].stories[chapter].forEach(function(story) { places[story] = place; });
-        colors[place] = color(colorI);
-        colorI++;
-        element.show().css('color', colors[place]);
-      } else {
-        element.hide();
-      }
+      Place[place].stories[chapter].forEach(function(story) { places[story] = place; });
     });
 
     for (var type in Place.travel) {
-      colors[type] = color(colorI);
-      var element = document.getElementsByClassName(type)[0];
-      element.style.color = colors[type];
       Place.travel[type].stories.forEach(historyInThisChapter);
       Place.travel[type].delayStories.forEach(historyInThisChapter);
-
     }
+
     function historyInThisChapter(story) {
       if (Object.keys(Story[story].history || []).every(function(s) { return places[s]; })) {
         places[story] = 'Sail';
@@ -112,48 +108,29 @@
       return true
     });
 
-    var width = $(document).width(),
-        height = $(document).height();
-
     var force = d3.layout.force()
-        .nodes(d3.values(nodes))
-        .links(links)
-        .size([width, height])
-        .linkDistance(60)
-        .charge(-300)
-        .on("tick", tick)
-        .start();
+      .nodes(d3.values(nodes))
+      .links(links)
+      .size([$(document).width(), $(document).height()])
+      .linkDistance(60)
+      .charge(-300)
+      .on("tick", tick)
+      .start();
 
-    d3.selectAll("svg > *").remove();
-    var svg = d3.select("body").append("svg")
-        .attr("width", width)
-        .attr("height", height);
+    d3.selectAll("svg > g").remove();
 
-    // Per-type markers, as they don't inherit styles.
-    svg.append("defs").selectAll("marker")
-        .data(["leadsTo"])
-      .enter().append("marker")
-        .attr("id", function(d) { return d; })
-        .attr("viewBox", "0 -5 10 10")
-        .attr("refX", 15)
-        .attr("refY", -1.5)
-        .attr("markerWidth", 6)
-        .attr("markerHeight", 6)
-        .attr("orient", "auto")
-      .append("path")
-        .attr("d", "M0,-5L10,0L0,5");
-
-    var path = svg.append("g").selectAll("path")
+    window.path = svg.append("g").selectAll("path")
         .data(force.links())
       .enter().append("path")
         .attr("class", "link")
-        .attr("marker-end", "url(#leadsTo)");
+        .attr('stroke', function(l) { return getLinkColor(getLinkGroup(l)); })
+        .attr('stroke-dasharray', function(l) { return Story[l.target.name].blocking ? '7,3' : null; })
+        .attr("marker-end", function(l) { return 'url(#' + getLinkGroup(l) + ')'; });
 
-    var circle = svg.append("g").selectAll("circle")
+    window.circle = svg.append("g").selectAll("circle")
         .data(force.nodes())
       .enter().append("circle")
         .attr("r", 7)
-        .attr('style', function(d) { return 'fill: ' + getColer(d); })
         .call(force.drag);
 
     var names = svg.append("g").selectAll("text")
@@ -170,6 +147,8 @@
         .attr("x", 0)
         .attr("y", "-1em")
         .attr("text-anchor", "middle")
+
+    recolor();
 
     // Use elliptical arc path segments to doubly-encode directionality.
     function tick() {
@@ -190,48 +169,146 @@
       return "translate(" + d.x + "," + d.y + ")";
     }
 
-    function getColer(d) {
-      if (colorBy === 'places') {
-        return colors[places[d.name]];
-      }
-      if (colorBy === 'types') {
-        if (Story[d.name].blocking) { return '#2a9fd6'; }
-        else if (Story[d.name].required) { return '#ff8800'; }
-        else { return '#000'; }
-      }
+    function getLinkGroup(l) {
+      var story = l.target.name;
+      var group = Story[story].requiredGroup || (Story[story].required ? 'Required' : 'Normal');
+      return group;
     }
   }
 
+  function makeColorExplanations() {
+    $('.links, .colorBy').empty();
+
+    $('<div><span class="solid"> Normal</div>').css('color', '#aaa').appendTo('.links');
+    $('<div><span class="dashed"> Blocking</div>').css('color', '#aaa').appendTo('.links');
+    $('<div><span class="solid"> Required</div>').css('color', linkColors('Required')).appendTo('.links');
+
+    $('<div>None</div>').css('color', '#aaa').appendTo('.required');
+
+    for (var place in Place) {
+      if (!Place[place].stories) { continue; }
+      $('<div>' + place + '</div>').css('color', placeColors(place)).appendTo('.colorBy.places');
+    }
+
+    for (var story in Story) {
+      var required = Story[story].required;
+      if (required && !$('.' + required).length) {
+        $('<div class="' + required + '">' + required + '</div>').css('color', requiredColors(required)).appendTo('.colorBy.required');
+      }
+
+      var requiredGroup = Story[story].requiredGroup;
+      if (requiredGroup && !$('.' + requiredGroup).length) {
+        $('<div class="' + requiredGroup + '"><span class="solid"></span> ' + requiredGroup + '</div>').css('color', linkColors(requiredGroup)).appendTo('.links');
+      }
+    }
+
+    for (var type in Place.travel) {
+      $('<div>' + type + '</div>').css('color', placeColors(type)).appendTo('.colorBy.places');
+    }
+
+    var people = [];
+    for (var person in Person) {
+      if (!Person[person].skills) { continue; }
+      $('<div>' + person + '</div>').css('color', characterColors(person)).appendTo('.colorBy.characters');
+      people.push(person);
+    }
+
+    people.forEach(function(p1) {
+      people.forEach(function(p2) {
+        // Define the gradient
+        var gradient = defs.append("svg:linearGradient")
+          .attr("id", p1 + '_' + p2)
+          .attr("x1", 0).attr("x2", 1)
+          .attr("y1", 0).attr("y2", 0);
+
+        // Define the gradient colors
+        gradient.append("svg:stop")
+          .attr("offset", "50%")
+          .attr("stop-color", characterColors(p1));
+
+        gradient.append("svg:stop")
+          .attr("offset", "50%")
+          .attr("stop-color", characterColors(p2));
+      });
+    });
+
+    // Per-type markers, as they don't inherit styles.
+    defs.selectAll("marker")
+      .data(linkColors.domain().concat('Normal'))
+    .enter().append("marker")
+      .attr("id", function(l) { return l; })
+      .attr("viewBox", "0 -5 10 10")
+      .attr("refX", 15)
+      .attr("refY", -1.5)
+      .attr("markerWidth", 6)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .attr('fill', function(group) { return getLinkColor(group); })
+    .append("path")
+      .attr("d", "M0,-5L10,0L0,5");
+
+  }
+
+  function getLinkColor(group) {
+    return group === 'Normal' ? '#aaa' : linkColors(group);
+  }
+
+  function recolor(colorBy) {
+    colorBy = setHash(null, colorBy)[1];
+
+    setHash(null, colorBy);
+    $('.colorBy').hide();
+    $('.' + colorBy).show();
+
+    circle.attr('fill', function(d) {
+      if (colorBy === 'places') {
+        return placeColors(places[d.name]);
+      }
+      if (colorBy === 'required') {
+        var required = Story[d.name].required;
+        return required ? requiredColors(required) : '#aaa';
+      }
+      if (colorBy === 'characters') {
+        if (!Story[d.name].effects || !Story[d.name].effects.xp) { return '#aaa'; }
+        var xp = Story[d.name].effects.xp;
+        var c = Object.keys(xp).sort().reverse();
+        var gradient = c[0] + '_' + (c[1] || c[0]);
+        return 'url(#' + gradient + ')';
+      }
+    });
+  }
+
+  function setHash(chapter, colorBy) {
+    var split = window.location.hash.substr(1).split('|')
+
+    if (!chapter) { chapter = split[0] || 'Ch1'; }
+    if (!colorBy) { colorBy = split[1] || 'location'; }
+
+    window.location.hash = '#' + chapter + '|' + colorBy;
+    return [chapter, colorBy];
+  }
+
+  // Override this, since we don't compile the map in like we do for index.html
   Place.svgElement = function([from, to] = [g.map.from, g.map.to]) {
     string = Place.direction(from, to) === 1 ? (from + '_' + to) : (to + '_' + from);
     return document.getElementById('map').contentDocument.getElementById(string);
   }
 </script>
 </head>
-<body onload="drawEvents()">
+<body>
   <div style="position: absolute; top: 0; left: 0; z-index: 1;">
     <button onclick="drawEvents('Ch1')">Ch1</button>
     <button onclick="drawEvents('Ch2')">Ch2</button>
     <button onclick="drawEvents('Ch3')">Ch3</button>
-    <button onclick="drawEvents(null, 'places')">Color places</button>
-    <button onclick="drawEvents(null, 'types')">Color types</button>
-    <div class="colorBy places">
-      <div class="Sail">Sail</div>
-      <div class="Vailia">Vailia</div>
-      <div class="MtJulia">Mt Julia</div>
-      <div class="Alkenia">Alkenia</div>
-      <div class="Nonkenia">Nonkenia</div>
-      <div class="IronSands">IronSands</div>
-      <div class="Tomenoi">Tomenoi</div>
-      <div class="Colinth">Colinth</div>
-      <div class="Kantis">Kantis</div>
-      <div class="Amandais">Amandais</div>
-    </div>
-    <div class="colorBy types">
-      <div class="blocking">Blocking</div>
-      <div class="required">Required</div>
-      <div class="normal">Normal</div>
-    </div>
+    <button onclick="recolor('places')">Color by places</button>
+    <button onclick="recolor('required')">Color by required</button>
+    <button onclick="recolor('characters')">Color by characters</button>
+  </div>
+  <div style="position: absolute; top: 2em; left: 0; z-index: -1;">
+    <div class="links"></div>
+    <div class="colorBy places"></div>
+    <div class="colorBy required"></div>
+    <div class="colorBy characters"></div>
   </div>
   <object style="display: none;" id="map" data="game/content/Map.svg"></object>
 </body>

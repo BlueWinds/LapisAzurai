@@ -3,6 +3,7 @@ s = {}
 s.ColinthArrive =
   label: 'Arrival'
   blocking: true
+  required: 'GameOverExploration'
   history:
     KantisRegion3: true
   effects:
@@ -27,6 +28,8 @@ s.ColinthArrive =
 
 s.ColinthAmulets =
   label: 'Magical Amulet'
+  required: 'GameOverPower'
+  requiredGroup: 'Ch2Routes'
   history:
     ColinthArrive: true
   effects:
@@ -94,6 +97,8 @@ s.ColinthAmulets2 =
 
 s.Muggers =
   label: 'Muggers'
+  required: 'GameOverViolence'
+  requiredGroup: 'Ch2Routes'
   history:
     ColinthArrive: true
   effects:
@@ -140,6 +145,8 @@ s.Muggers =
 
 s.KantianSorcerer =
   label: 'Sorcerer'
+  required: 'GameOverPower'
+  requiredGroup: 'Ch2Routes'
   history:
     ColinthAmulets: true
   effects:
@@ -173,6 +180,8 @@ s.KantianSorcerer =
 
 s.AsarasTrauma =
   label: "Asara's Trauma"
+  required: 'GameOverViolence'
+  requiredGroup: 'Ch2Routes'
   history:
     Muggers: true
     AsaraTalkSisters: true

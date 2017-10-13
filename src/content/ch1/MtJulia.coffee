@@ -2,6 +2,7 @@ s = {}
 s.MtJuliaArrive =
   label: 'Arrival'
   blocking: true
+  required: 'GameOverExploration'
   history:
     ReadyToGo: true
   effects:
@@ -71,7 +72,7 @@ s.VisitInn =
 
 s.MeetAsara =
   label: 'Castaway'
-  required: true
+  required: 'GameOverKindness'
   history:
     FirstStormSick2: true
   extraDays: 40
@@ -133,7 +134,7 @@ s.MeetAsara =
 
 s.AsaraAwakens =
   label: 'Castaway'
-  required: true
+  required: 'GameOverKindness'
   extraDays: 30
   history:
     MeetAsara: true

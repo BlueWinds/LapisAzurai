@@ -105,10 +105,9 @@ s.AbandonedShip =
     Natalie took pity on her - it was more than the poor girl usually explained herself, and if it was important to her... `N James, get your bow and some tar. Let's set it alight and we'll have a few minutes of silence.` Natalie turned back to smile at Asara, but she was already gone back below decks.
   """
 
-
 s.AsarasMagic =
   label: "Asara's Magic"
-  required: true
+  required: 'GameOverLove'
   history:
     TomenoiRoute: true
   effects:
@@ -144,6 +143,61 @@ s.AsarasMagic =
     And suddenly it was over. The manacles remained deformed, but the chain hadn't broken. The world no longer pounded nails into Natalie's head. Asara looked at her, then at the metal in her hands, pursing her lips. She threw them. It was a good throw – a plunk reached them a moment later as they landed in the water and sank.
 
     `A I am not yet ready.` She walked away, leaving Natalie with a million more questions.
+  """
+
+s.JamesUpsetMagic2 =
+  label: 'James is Upset'
+  required: 'GameOverTrust'
+  requiredGroup: 'Ch2Routes'
+  history:
+    JamesUpsetMagic: true
+  effects:
+    xp:
+      Natalie: 3
+      James: 3
+  text: ->"""
+  || travel/CabinNight
+    A hesitant knock. That could only mean one thing. James never hesitated to address business, no matter how bad the news. He must finally want to discuss whatever has been bothering him. Natalie hesitated a moment, then, `N Enter.`
+
+    `J Can I come in?`
+
+    She gestured to the bed, the only other place to sit in the room besides her chair, but he remained standing, closing the door behind him.
+
+    `J Why didn't you tell me?`
+
+    Straight to the point – it caught her off guard. How much time must he have spent agonizing over that question, to work up the nerve to ask her straight out?
+
+    `N I've never told anyone, James. Until the... the storm, there were precisely three people in the world who knew: me, the Guildmaster, and the hedge wizard he hired to teach me, with an unbreakable seal upon his mind to keep his silence.`
+
+  || J/Upset
+    `J That's not a reason. I would protect your secrets with my life, Nat, you know that.`
+
+    `N That's exactly the problem!` She punched his leg – not playfully, but with genuine anger. He didn't flinch. `N With your life! I don't want your life on the line.` She slumped back in her chair, hating herself for the sudden display. `N Do you know what happens to a childless sorceress of my power and inexperience and age?`
+
+    `J I... that's not fair...`
+
+    `N There aren't any.`
+
+    `N There aren't any. They all learn to use their magic to defend themselves, or they have a child with someone powerful who can protect them. If that secret got out, do you think a little girl without family wouldn't just disappear? Even in Vailia? In a heartbeat.`
+
+    She stood up from her chair. Natalie couldn't tower over him, but she could certainly press him back against the door with her unfair words. `N I was eight, when I learned. Could you have kept that secret for me? Not even hinted at it to your parents, when you were eight fucking years old?`
+
+    James didn't get angry. He just looked uncomfortable and hurt, and somehow that only fueled Natalie's anger. She screamed something and punched his chest, unable to find any better way to express herself. She tried to hit him again, but rather than taking this one, he caught her fist in one hand. She struggled a moment trying to free it, but his grip was too strong, and he pulled her into a hug.
+
+    `J I would have, Nat, even at eight I would have died rather than betray your trust.`
+
+  || N/Upset
+    She burst into tears. Sobs wracked her body as she stopped struggling and clung. He let go her hand and wrapped his other arm around her, supporting them both as she sagged against his chest. She wailed and shook in his arms, letting out a tiny portion of two decades of uncertainty and fear.
+
+    It didn't take long for Natalie to cry herself out. She was too self-aware to let loose for long, and she quickly quieted and stilled. She'd hurt him, even if her fist hadn't connected.
+
+    She tilted her head up to look into his eyes, green and green meeting in a quick and mutually aborted glance. They both blushed and stepped back to conversational distance. His own glance downward suggested that yes, he'd suddenly become as intensely aware of the way her breasts pressed against him as she had.
+
+    `N I'm sorry. Please, lets talk another time.`
+
+    He nodded and made a hurried escape from her room.
+
+    Natalie slumped against the wall and rubbed her eyes with the heel of her palms. He deserved a better apology. She deserved a brick to the head. She sniffled and hugged her chest.
   """
 
 Place.MtJulia.stories.Ch2 = Object.keys(s)

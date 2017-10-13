@@ -3,6 +3,7 @@ s = {}
 s.TomenoiArrive =
   label: 'Arrival'
   blocking: true
+  required: 'GameOverExploration'
   history:
     TomenoiRoute: true
   effects:
@@ -38,7 +39,7 @@ s.TomenoiArrive =
 
 s.AsaraJoinsCrew =
   label: 'Asara Joins'
-  required: true
+  required: 'GameOverKindness'
   history:
     AsarasMagic: true
   effects:
@@ -103,7 +104,7 @@ s.StrandedShip =
 
 s.KantisRegion =
   label: 'Route to Kantis'
-  required: true
+  required: 'GameOverExploration'
   history:
     AsaraJoinsCrew: true
   effects:
@@ -126,7 +127,7 @@ s.KantisRegion =
 
 s.KantisRegion2 =
   label: 'Route to Kantis'
-  required: true
+  required: 'GameOverLove'
   history:
     KantisRegion: true
   effects:
@@ -163,6 +164,7 @@ s.KantisRegion2 =
 s.KantisRegion3 =
   label: 'Route to Kantis'
   blocking: true
+  required: 'GameOverLove'
   history:
     KantisRegion2: true
   effects:

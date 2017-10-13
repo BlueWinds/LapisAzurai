@@ -107,6 +107,11 @@ oldPassDay = Game.passDay
 Game.passDay = ->
   oldPassDay()
 
+  end = Story.gameIsOver()
+  if end
+    Story.display(end)
+    return
+
   setTimeout ->
     unless g.day % 20 is 1
       delete localStorage[localStorage.autosave]

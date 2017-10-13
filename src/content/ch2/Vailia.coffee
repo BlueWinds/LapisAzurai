@@ -1,9 +1,9 @@
 s = {}
 
 Place.Vailia.stories.Ch1.push('Ch2')
-Story.Ch2 =
+s.Ch2 =
   label: 'Chapter 2 - Kantis'
-  required: true
+  required: 'GameOverFun'
   history:
     MeetMeghan: true
   effects:
@@ -56,7 +56,7 @@ Story.Ch2 =
 
 s.TomenoiRoute =
   label: 'Route to Kantis'
-  required: true
+  required: 'GameOverExploration'
   history:
     Ch2: true
   effects:
@@ -96,7 +96,7 @@ s.TomenoiRoute =
 
 s.JamesUpsetMagic =
   label: 'James is Upset'
-  required: true
+  required: 'GameOverTrust'
   history:
     Ch2: true
   effects:
@@ -122,7 +122,7 @@ s.JamesUpsetMagic =
 
 s.NonkeniaRoute =
   label: 'Nonkenia Rutter'
-  required: true
+  required: 'GameOverExploration'
   history:
     TomenoiRoute: true
   effects:
@@ -241,7 +241,7 @@ s.TrainCombatKat =
     Torril rubbed his forehead. Today was going to be a long day.
   """
 
-s.TrainCombatKat =
+s.TrainCombatAsara =
   label: 'Lessons for Asara'
   history:
     TrainCombatNat: true
@@ -263,9 +263,9 @@ s.TrainCombatKat =
 
 s.IronSandsRutter =
   label: 'Route to Iron Sands (part 1)'
-  required: true
+  required: 'GameOverExploration'
   history:
-    JamesUpsetMagic: true
+    Ch2: true
   effects:
     xp:
       Kat: 3
@@ -312,7 +312,7 @@ s.IronSandsRutter =
 
 s.IronSandsRutter2 =
   label: 'Route to Iron Sands (part 2)'
-  required: true
+  required: 'GameOverExploration'
   history:
     IronSandsRutter: true
   effects:
@@ -429,6 +429,8 @@ s.AsaraTalkWitch =
 
 s.JamesParents =
   label: "James' Parents"
+  required: 'GameOverTrust'
+  requiredGroup: 'Ch2Routes'
   history:
     JamesUpsetMagic2: true
   effects:
@@ -452,6 +454,8 @@ s.JamesParents2 =
   history:
     JamesParents: true
   blocking: true
+  required: 'GameOverTrust'
+  requiredGroup: 'Ch2Routes'
   effects:
     xp:
       James: 2
@@ -635,6 +639,52 @@ s.MeghanSuitors2 =
     Meghan nodded, accepting the apology. `Meghan Let's talk about something else. Um... have you read Treatise on Historical Storm Patterns?`
 
     Natalie relaxed and gave a tentative smile. `N I think he's wrong about the causes, but...`
+  """
+
+s.JamesCh3 =
+  label: 'Chapter 3 - James'
+  required: 'GameOverSorrow'
+  requiredGroup: 'Ch2Routes'
+  history:
+    JamesParents2: true
+    KantianSorcerer: true
+  effects:
+    xp:
+      Natalie: 2
+  text: -> """
+  || J/Sad
+    TODO
+
+    <button onclick="Story.continueWith('JamesCh3Yes')">`N Let me go with you?`</button> <button onclick="Story.continueWith('JamesCh3No')">`N I think you should speak with her.`</button>
+
+    <i>Going with him will commit you to James in Chapter 3, while no will lock out his route. No second chances.</i>
+  """
+
+s.JamesCh3Yes =
+  label: 'Chapter 3 - James'
+  required: 'GameOverSorrow'
+  requiredGroup: 'Ch2Routes'
+  history:
+    JamesCh3: true
+  effects:
+    xp:
+      James: 10
+  text: -> """
+  ||
+    TODO
+  """
+  apply: ->
+    g.chapter = 'Ch3'
+
+s.JamesCh3No =
+  label: 'Chapter 3 - Not James'
+  history:
+    JamesCh3: true
+  effects:
+    xp:
+      James: 3
+  text: -> """
+    TODO
   """
 
 Place.Vailia.stories.Ch2 = Object.keys(s)

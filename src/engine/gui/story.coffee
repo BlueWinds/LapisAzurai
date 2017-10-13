@@ -22,7 +22,7 @@ $.extend Story, {
     need = Story.unmetNeed(place, story)
 
     onclick = if g.map.from is place and not need
-      'onclick=\'Story.apply("' + place + '", "' + story + '");Story.displayWithOverlay("' + story + '");\''
+      'onclick=\'Game.passDay(); Story.apply("' + place + '", "' + story + '"); Story.displayWithOverlay("' + story + '");\''
     else ''
 
     rep = Story.reputationNeeded(story)
@@ -61,6 +61,12 @@ $.extend Story, {
     $('#stories').empty().append(elements)
     if g.scroll is -1 then g.scroll = 0
     Story.forwardSection(elements.first(), 1)
+
+  continueWith: (story)->
+    Story.apply(null, story)
+    elements = Story.render(story)
+    $('#stories').append(elements)
+    Story.changeSection(1, true)
 
   drawHistory: ->
     unless g.history.Intro?

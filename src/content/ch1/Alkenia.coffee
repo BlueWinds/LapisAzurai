@@ -2,6 +2,7 @@ s = {}
 s.AlkeniaArrive =
   label: 'Arrival'
   blocking: true
+  required: 'GameOverExploration'
   history:
     AlkeniaRoute: true
   effects:
@@ -31,6 +32,7 @@ s.AlkeniaArrive =
 
 s.Pickpocket =
   label: 'Pickpocket'
+  required: 'GameOverFun'
   blocking: true
   history:
     AlkeniaRoute: true
@@ -61,7 +63,7 @@ s.Pickpocket =
 
 s.MeetKat =
   label: 'Catching the Pickpocket'
-  required: true
+  required: 'GameOverFun'
   extraDays: 30
   history:
     Pickpocket: true
@@ -108,7 +110,7 @@ s.MeetKat =
 
 s.KatTrial =
   label: "Kat's Trial"
-  required: true
+  required: 'GameOverFun'
   history:
     MeetKat: true
   effects:
@@ -179,7 +181,7 @@ s.KatMeetsJames =
 
 s.KatStorm =
   label: 'Out in a Storm'
-  required: true
+  required: 'GameOverKindness'
   history:
     KatTrial: true
   effects:
@@ -255,7 +257,7 @@ s.KatStorm2 =
 
 s.KatJoins =
   label: 'Kat Joins'
-  required: true
+  required: 'GameOverFun'
   history:
     KatStorm: true
   effects:

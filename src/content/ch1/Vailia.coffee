@@ -28,7 +28,6 @@ s = {}
 
 s.Intro =
   label: 'Intro'
-  blocking: true
   text: -> """
   ||
     <center><i>Click anywhere on the page or use the right arrow key to advance</i></center>
@@ -126,6 +125,7 @@ s.Ch1 =
 s.ReadyToGo =
   label: 'Ready to Set Sail'
   blocking: true
+  required: 'GameOverExploration'
   history:
     Ch1: true
   minCargo: 1
@@ -169,6 +169,7 @@ s.ReadyToGo =
 s.FirstStormSick =
   label: 'Storm - Aftermath'
   blocking: true
+  required: 'GameOverExploration'
   history:
     FirstStorm: true
   effects:
@@ -215,6 +216,7 @@ s.FirstStormSick =
 s.FirstStormSick2 =
   label: 'Storm - Aftermath'
   blocking: true
+  required: 'GameOverExploration'
   history:
     FirstStormSick: true
   effects:
@@ -308,7 +310,7 @@ s.AsaraWorriesJames =
 
 s.AlkeniaRoute =
   label: 'Route to Alkenia'
-  required: true
+  required: 'GameOverExploration'
   extraDays: 15
   history:
     FirstStormSick2: true
@@ -342,7 +344,7 @@ s.AlkeniaRoute =
 
 s.MeetMeghan =
   label: 'Lady Meghan'
-  required: true
+  required: 'GameOverPower'
   history:
     AsaraAwakens: true
     KatJoins: true

@@ -2,6 +2,8 @@ s = {}
 
 s.NonkeniaArrive =
   label: 'Arrival'
+  blocking: true
+  required: 'GameOverExploration'
   history:
     NonkeniaRoute: true
   effects:
@@ -59,6 +61,8 @@ s.NonkeniaDiplomatDelivery =
 
 s.AsaraTalkEyes =
   label: 'Talk with Asara - Silver Eyes'
+  required: 'GameOverPower'
+  requiredGroup: 'Ch2Routes'
   history:
     AsarasMagic: true
   effects:
@@ -81,6 +85,8 @@ s.AsaraTalkEyes =
 
 s.AsaraTalkSisters =
   label: 'Talk with Asara - Sisters'
+  required: 'GameOverPower'
+  requiredGroup: 'Ch2Routes'
   history:
     AsaraTalkEyes: true
   effects:

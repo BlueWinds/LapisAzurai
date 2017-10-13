@@ -91,6 +91,10 @@
         }
       }
 
+      if (Story[story].required && !Story[Story[story].required]) {
+        w.append('<li>' + link + '\'s Game Over story doesn\'t exist (' + Story[story].required + ').</li>');
+      }
+
       sections = Story.render(story);
       sections.each(function(i) {
         section = $(this).attr('id', story + i)

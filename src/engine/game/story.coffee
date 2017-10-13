@@ -1,7 +1,8 @@
 sampleData =
   label: 'Explore Wilds'
   blocking: true # A blocking event prevents all other actions when the player is at that location. Will reduce their reputation to 0 if they wouldn't normally have enough to play an event.
-  required: true # If a required event is no longer available (timed out), show the game over screen.
+  required: 'GameOver' # This event will result in a game over screen (using the given story) if it expires unviewed.
+  requiredGroup: 'Ch2Routes' # This required event will only cause a game-over if /all/ events in its group are expired or viewed, and if the chapter hasn't changed.
   place: 'Vailia' # Used mostly to calculate how many days events should take to expire
   extraDays: 10 # Days added to the calculated expiration date, used to manually tweak balance
   skills:
@@ -73,7 +74,6 @@ window.Story = {
       g.reputation[place] -= Story.reputationNeeded(story)
     Story[story].apply?()
     g.history[story] = g.day
-    Game.passDay()
 
   travelEvent: (from, to, type)->
     stories = Place.travel[type].stories.filter(Story.matchesConditions)
@@ -87,7 +87,25 @@ window.Story = {
   delayEvent: (from, to, type)->
     stories = Place.travel[type].delayStories
     Math.choice(blockingEvents(stories)) or Math.choice(repeatableEvents(stories))
+
+  gameIsOver: ->
+    requiredEvents = {}
+    for place in Places when place.stories?[g.chapter]
+      for story in place.stories[g.chapter] when Story[story].required
+        group = Story[story].requiredGroup
+        if group
+          requiredEvents[group] or= []
+          requiredEvents[group].push(story)
+        else unless g.history[story]? or stillAvailable(story)
+          return Story[story].required
+
+    for events, group of requiredEvents
+      unless events.any(stillAvailable) then return Story[events[0]].required
+
+    return false
 }
 
 blockingEvents = (stories)-> Story.visibleStories(stories).filter((s)-> Story[s].blocking)
 repeatableEvents = (stories)-> Story.visibleStories(stories, false).filter((s)-> not Story[s].blocking)
+
+stillAvailable = (story)-> (not g.history[story]?) and Story.expirationDate(story) >= g.day
