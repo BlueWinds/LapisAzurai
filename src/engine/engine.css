@@ -112,9 +112,6 @@ table td {
 .story.required {
   border: 1px solid #ff8800;
 }
-#LabelLayer .required, #LabelLayer .blocking {
-  fill: #ff8800;
-}
 
 #flex {
   top: 65px;
@@ -228,6 +225,19 @@ hr {
 
 #LabelLayer g {
   cursor: pointer;
+}
+
+#LabelLayer .required, #LabelLayer .blocking {
+  fill: #ff8800;
+}
+
+#LabelLayer rect {
+  fill: #000;
+  stroke: #666;
+}
+
+#LabelLayer text {
+  fill: #ccc;
 }
 
 .place {

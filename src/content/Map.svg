@@ -38,6 +38,18 @@
     <path id="MtJulia_IronSands" travel="Sail" d="M 540 551 C 596 512, 551 694, 525 675"/>
     <path id="MtJulia_Tomenoi"   travel="Sail" d="M 540,551 c 36,-19 32, 7 71, -7 86, -31 240, -61 221, -75"/>
     <path id="Alkenia_Nonkenia"  travel="Sail" d="M 468 516 C 487 518, 468 508, 445 486"/>
+    <path id="MtJulia_Tomenoi-7" travel="Sail" d="m 830.65318,472.50891 c 168.60717,-29.77072 188.30992,-64.656 217.38402,-67.93814 19.935,-1.89785 7.9453,32.74404 31.5652,7.79639" />
+    <path id="MtJulia_Tomenoi-7-3" travel="Sail" d="m 830.65318,472.50891 c 168.60717,-29.77072 188.30992,-64.656 217.38402,-67.93814 4.9541,-0.32424 35.4588,27.57725 35.3121,37.30352" />
+    <path id="MtJulia_Tomenoi-7-3-6" travel="Sail" d="m 1077.5326,416.16885 c 1.8004,13.30544 45.7553,2.69153 85.5721,-19.25386 15.8474,-8.73441 17.2436,-14.8145 26.0389,-23.96581" />
+    <path id="MtJulia_Tomenoi-7-3-6-2" travel="Sail" d="m 1077.5326,416.16885 c 7.5137,11.06156 -8.8141,-2.17477 34.2383,11.5464 13.5908,4.33147 54.6676,47.1172 61.1446,64.12955" />
+    <path id="MtJulia_Tomenoi-7-3-6-2-6" travel="Sail" d="m 1077.5326,416.16885 c 7.5137,11.06156 17.6807,6.10487 34.2383,11.5464 13.5513,4.45354 104.3454,43.14297 131.3559,59.49295" />
+    <path id="MtJulia_Tomenoi-7-3-6-2-6-1" travel="Sail" d="m 1083.4939,442.33251 c 7.1826,-15.43329 7.7452,-20.38998 24.3028,-14.94845 13.5513,4.45354 108.3196,43.47416 135.3301,59.82414" />
+    <path id="MtJulia_Tomenoi-7-3-6-2-8" travel="Sail" d="m 1082.8316,441.67014 c 8.5072,-10.13432 5.0957,-20.05879 28.9393,-13.95489 13.8187,3.53755 54.6676,47.1172 61.1446,64.12955" />
+    <path id="MtJulia_Tomenoi-7-3-6-7" travel="Sail" d="m 1082.5004,441.67014 c 10.08,-27.43039 46.0865,-24.79687 80.6043,-44.75515 15.665,-9.05752 17.2436,-14.8145 26.0389,-23.96581" />
+    <path id="MtJulia_Tomenoi-7-3-6-7-9" travel="Sail" d="m 1189.8045,371.4588 c -7.3344,-20.68287 -9.4029,-27.37543 -12.9147,-38.91426"
+       sodipodi:nodetypes="cc" />
+    <path id="MtJulia_Tomenoi-7-3-6-7-9-0" travel="Sail" d="m 1176.8883,331.71653 c 8.8937,-7.43545 22.0597,-18.7646 33.1201,-29.30988"
+       sodipodi:nodetypes="cc" />
   </g>
   <svg id="Ship" x="0" y="0" overflow="visible">
     <circle cx="0" cy="0" r="5" style="fill:#DD0000;stroke:none"/>
@@ -45,69 +57,69 @@
   </svg>
   <g id="LabelLayer"  font-family="Sans" font-size="18px">
     <g id="Vailia">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="646" cy="566" r="5" />
-      <text x="655" y="572">Vailia <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="661" y="572">Vailia <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="MtJulia">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="540" cy="551" r="5" />
-      <text x="540" y="573" text-anchor="middle">Mt. Julia <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="540" y="577" text-anchor="middle">Mt. Julia <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Alkenia">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="468" cy="516" r="5" />
-      <text x="455" y="521" text-anchor="end">Alkenia <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="455" y="521" text-anchor="end">Alkenia <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Nonkenia">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="445" cy="486" r="5" />
-      <text x="445" y="477" text-anchor="middle">Nonkenia <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="445" y="473" text-anchor="middle">Nonkenia <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="IronSands">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="525" cy="675" r="5" />
-      <text x="525" y="695" text-anchor="middle">Iron Sands <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="525" y="699" text-anchor="middle">Iron Sands <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Tomenoi">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="832" cy="470" r="5" />
-      <text x="832" y="460" text-anchor="middle">Tomenoi <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="832" y="453" text-anchor="middle">Tomenoi <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Colinth">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="1079" cy="413" r="5" />
-      <text x="1079" y="403" text-anchor="middle">Colinth <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="1079" y="399" text-anchor="middle">Colinth <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Kantis">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="1083" cy="442" r="5" />
-      <text x="1083" y="464" text-anchor="middle">Kantis <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="1083" y="470" text-anchor="middle">Kantis <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Spinis">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="1173" cy="493" r="5" />
-      <text x="1173" y="515" text-anchor="middle">Spinis <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="1173" y="519" text-anchor="middle">Spinis <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Lephai">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="1190" cy="372" r="5" />
-      <text x="1198" y="378">Lephai <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="1202" y="378">Lephai <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Amandais">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="1243" cy="487" r="5" />
-      <text x="1243" y="507" text-anchor="middle">Amandais <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="1258" y="492">Amandais <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Ment">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="1177" cy="332" r="5" />
-      <text x="1164" y="336" text-anchor="end">Ment <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="1164" y="336" text-anchor="end">Ment <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Crater">
-      <rect fill="transparent" />
+      <rect rx="6" ry="6" />
       <circle cx="1211" cy="302" r="5" />
-      <text x="1143" y="307">Crater <tspan>(<tspan></tspan>)</tspan></text>
+      <text x="1139" y="307">Crater <tspan>- <tspan></tspan></tspan></text>
     </g>
   </g>
 </svg>

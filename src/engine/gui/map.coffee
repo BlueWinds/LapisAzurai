@@ -122,7 +122,6 @@ updateLabel = (place)->
     Story.expirationDate(a) - Story.expirationDate(b)
 
   span = $('#' + place + ' tspan').removeClass()
-  console.log(span)
   if visible[0]
     expiresClass = if Story[visible[0]].required then 'required'
     else if Story[visible[0]].blocking then 'blocking'
@@ -133,9 +132,9 @@ updateLabel = (place)->
   else
     span.hide()
 
-  box = $('#' + place)[0].getBBox()
+  box = $('#' + place + ' text')[0].getBBox()
   rect = $('#' + place + ' rect')[0]
-  rect.setAttribute('x', box.x - 2)
+  rect.setAttribute('x', box.x - 4)
   rect.setAttribute('y', box.y - 2)
-  rect.setAttribute('width', box.width + 4)
+  rect.setAttribute('width', box.width + 8)
   rect.setAttribute('height', box.height + 4)

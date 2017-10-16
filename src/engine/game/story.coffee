@@ -90,7 +90,7 @@ window.Story = {
 
   gameIsOver: ->
     requiredEvents = {}
-    for place in Places when place.stories?[g.chapter]
+    for place in Place when place.stories?[g.chapter]
       for story in place.stories[g.chapter] when Story[story].required
         group = Story[story].requiredGroup
         if group
