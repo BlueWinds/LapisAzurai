@@ -253,6 +253,72 @@ s.SailorTroubles =
     She laughed at his confused expression, poked him again, this time in the ribs. `N Hurting people is fun. You ever want some bite marks, you know where to find me.`
   """
 
+
+s.AsaraCh3 =
+  label: 'Chapter 3 - Asara'
+  required: 'GameOverLove'
+  requiredGroup: 'Ch2Routes'
+  history:
+    AsarasTrauma: true
+  effects:
+    xp:
+      Natalie: 2
+  text: -> """
+  || A/Crying
+    A feeling of presence, of patient waiting filled Natalie's bedroom – someone was at the door. She rubbed bleary eyes, drawn up out of a heavy sleep by the sensation. She slipped a sweater over bare shoulders and went to open the door.
+
+    Asara stood in the doorway, waiting in the darkness. Natalie wondered how long she'd been waiting there, saying nothing, without knocking. Silence stretched between them, and Natalie saw that Alara's cheeks were wet, eyes red and puffy . It didn't feel right to say anything, so she didn't, just stepped to the side and waited for the young woman to enter. The priestess. It was hard to know what to think of her, perched on the border between terrifying power and fragile girl, attractive equal and helpless innocent.
+
+    Asara closed the door behind her, leaving them alone together in the darkness, only moonlight from the small window to give shadowy form to the room's contents. Another moment of silence.
+
+    `A Can I kiss you?`
+
+    The words froze Natalie in place, catching her completely off guard. Her entire body flushed. Her throat went dry. Her heart pounded.
+
+    `A I'm sorry, I just...` Asara's voice came out strangled.
+
+    <button onclick="Story.continueWith('AsaraCh3Yes')">`N Please, don't apologize,`</button> <button onclick="Story.continueWith('AsaraCh3No')">`N Are you sure?`</button>
+
+    <i>Accepting her will commit you to Asara in Chapter 3, while hesitating will lock out her route. No second chances.</i>
+  """
+
+s.AsaraCh3Yes =
+  label: 'Chapter 3 - James'
+  required: 'GameOverLove'
+  requiredGroup: 'Ch2Routes'
+  history:
+    AsaraCh3: true
+  effects:
+    xp:
+      James: 10
+  text: -> """
+  || N/Embarrassed
+    `N No, please, don't apologize,` Natalie interrupted. She reached out carefully with one hand, brushing her fingertips softly across Asara's cheek. The other woman tensed, but didn't flinch back. Her cheek was cold.
+
+    Asara gently caught Natalie's hand in both of hers, held the fingers up to her eyes, pressed them against her lips. Natalie felt her heart pounding so loudly that it must have been audible clear across the room. It was... she hadn't felt this nervous in... well, ever.
+
+    Asara moved her lips down and kissed Natalie's wrist, carefully, as if afraid that it might shatter in her hands, or reach out and strike her in sudden anger. Natalie raised her other hand to touch Asara's cheek again, but the silver-eyed beauty caught it with one hand, gently lowered it back to Nat's side. She kissed Natalie's wrist again, sending shivers up her spine, and then let go her hand and stepped closer.
+
+    For a brief moment Natalie felt lips brush across her own, a warm caress that blurred her left her dazer. Then she blinked, and the feeling was gone - not only the kiss, but also the feeling of presence, the other silhouette in the darkness. Though she hadn't seen the door open, certainly hadn't noticed any movement, she was again alone in her room.
+  """
+  apply: ->
+    g.chapter = 'Ch3'
+
+s.AsaraCh3No =
+  label: 'Chapter 3 - Not James'
+  history:
+    AsaraCh3: true
+  effects:
+    xp:
+      James: 3
+  text: -> """
+    `N Are you sure?` Natalie interrupted the confession by laying a hand on Asara's shoulder. She jumped, startled by the contact, but at least she didn't shy away. Progress. `N I like you too, Asara, I like you a great deal, and nothing would make me happier than to kiss you right now. But are you sure it's what you want? I know... I know people who have gone through what you've gone through, and I know how much it makes you want someone to hold you and protect you, and I will do that, same as I have been, but I don't want to take advantage...` The words came out in a jumbled pile, rushing out until Natalie had to stop for breath. She dropped her hand, too embarrassed to keep touching Asara's shoulder.
+
+    Silence stretched out again. Asara was as silent as ever - even her breathing was too quiet to hear, a ghost of a person, a dark outline, yet intensely present in Natalie's awareness.
+
+    `N Please, I'm not saying no, just... I'm confused, Asara, and I don't want to make a mistake because we both thought we knew what we wanted.` Natalie blinked. The sense of presence was gone. Though she hadn't seen the door open, certainly hadn't noticed any movement, she was alone in her room.
+  """
+
 Place.Tomenoi.stories.Ch2 = Object.keys(s)
 for key, value of s
   value.place = 'Tomenoi'

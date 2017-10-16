@@ -282,7 +282,7 @@
     var split = window.location.hash.substr(1).split('|')
 
     if (!chapter) { chapter = split[0] || 'Ch1'; }
-    if (!colorBy) { colorBy = split[1] || 'location'; }
+    if (!colorBy) { colorBy = split[1] || 'places'; }
 
     window.location.hash = '#' + chapter + '|' + colorBy;
     return [chapter, colorBy];
