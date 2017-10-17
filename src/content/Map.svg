@@ -28,28 +28,26 @@
     <rect id="rect3963" mask="url(#MapMask)" height="1080" width="1542" fill="#000" />
   </g>
   <g id="PathLayer" stroke="#f00" stroke-dasharray="9, 6" stroke-width="1.5" fill="none">
-    <path id="Vailia_MtJulia"    travel="Sail" d="M 646 566 C 652 603, 557 525, 540 551"/>
-    <path id="Vailia_Alkenia"    travel="Sail" d="M 646 566 C 662 609, 467 485, 468 516"/>
-    <path id="Vailia_Nonkenia"   travel="Sail" d="M 646 566 C 658 603, 547 533, 445 486"/>
-    <path id="Vailia_IronSands"  travel="Sail" d="M 646 566 C 667 569, 511 702, 525 675"/>
-    <path id="Vailia_Tomenoi"    travel="Sail" d="M 646 566 C 633 584, 845 480, 832 470"/>
-    <path id="MtJulia_Alkenia"   travel="Sail" d="M 540 551 C 572 543, 463 502, 468 516"/>
-    <path id="MtJulia_Nonkenia"  travel="Sail" d="M 540 551 C 575 544, 457 494, 445 486"/>
-    <path id="MtJulia_IronSands" travel="Sail" d="M 540 551 C 596 512, 551 694, 525 675"/>
-    <path id="MtJulia_Tomenoi"   travel="Sail" d="M 540,551 c 36,-19 32, 7 71, -7 86, -31 240, -61 221, -75"/>
+    <path id="Vailia_MtJulia"    travel="Sail" d="M 646 566 C 652 603, 557 525,  540 551"/>
+    <path id="Vailia_Alkenia"    travel="Sail" d="M 646 566 C 662 609, 467 485,  468 516"/>
+    <path id="Vailia_Nonkenia"   travel="Sail" d="M 646 566 C 658 603, 547 533,  445 486"/>
+    <path id="Vailia_IronSands"  travel="Sail" d="M 646 566 C 667 569, 511 702,  525 675"/>
+    <path id="Vailia_Tomenoi"    travel="Sail" d="M 646 566 C 633 584, 845 480,  832 470"/>
+    <path id="MtJulia_Alkenia"   travel="Sail" d="M 540 551 C 572 543, 463 502,  468 516"/>
+    <path id="MtJulia_Nonkenia"  travel="Sail" d="M 540 551 C 575 544, 457 494,  445 486"/>
+    <path id="MtJulia_IronSands" travel="Sail" d="M 540 551 C 596 512, 551 694,  525 675"/>
+    <path id="MtJulia_Tomenoi"   travel="Sail" d="M 540 551 C 36,-19 32, 7 71, -7 86, -31 240, -61 221, -75"/>
     <path id="Alkenia_Nonkenia"  travel="Sail" d="M 468 516 C 487 518, 468 508, 445 486"/>
-    <path id="MtJulia_Tomenoi-7" travel="Sail" d="m 830.65318,472.50891 c 168.60717,-29.77072 188.30992,-64.656 217.38402,-67.93814 19.935,-1.89785 7.9453,32.74404 31.5652,7.79639" />
-    <path id="MtJulia_Tomenoi-7-3" travel="Sail" d="m 830.65318,472.50891 c 168.60717,-29.77072 188.30992,-64.656 217.38402,-67.93814 4.9541,-0.32424 35.4588,27.57725 35.3121,37.30352" />
-    <path id="MtJulia_Tomenoi-7-3-6" travel="Sail" d="m 1077.5326,416.16885 c 1.8004,13.30544 45.7553,2.69153 85.5721,-19.25386 15.8474,-8.73441 17.2436,-14.8145 26.0389,-23.96581" />
-    <path id="MtJulia_Tomenoi-7-3-6-2" travel="Sail" d="m 1077.5326,416.16885 c 7.5137,11.06156 -8.8141,-2.17477 34.2383,11.5464 13.5908,4.33147 54.6676,47.1172 61.1446,64.12955" />
-    <path id="MtJulia_Tomenoi-7-3-6-2-6" travel="Sail" d="m 1077.5326,416.16885 c 7.5137,11.06156 17.6807,6.10487 34.2383,11.5464 13.5513,4.45354 104.3454,43.14297 131.3559,59.49295" />
-    <path id="MtJulia_Tomenoi-7-3-6-2-6-1" travel="Sail" d="m 1083.4939,442.33251 c 7.1826,-15.43329 7.7452,-20.38998 24.3028,-14.94845 13.5513,4.45354 108.3196,43.47416 135.3301,59.82414" />
-    <path id="MtJulia_Tomenoi-7-3-6-2-8" travel="Sail" d="m 1082.8316,441.67014 c 8.5072,-10.13432 5.0957,-20.05879 28.9393,-13.95489 13.8187,3.53755 54.6676,47.1172 61.1446,64.12955" />
-    <path id="MtJulia_Tomenoi-7-3-6-7" travel="Sail" d="m 1082.5004,441.67014 c 10.08,-27.43039 46.0865,-24.79687 80.6043,-44.75515 15.665,-9.05752 17.2436,-14.8145 26.0389,-23.96581" />
-    <path id="MtJulia_Tomenoi-7-3-6-7-9" travel="Sail" d="m 1189.8045,371.4588 c -7.3344,-20.68287 -9.4029,-27.37543 -12.9147,-38.91426"
-       sodipodi:nodetypes="cc" />
-    <path id="MtJulia_Tomenoi-7-3-6-7-9-0" travel="Sail" d="m 1176.8883,331.71653 c 8.8937,-7.43545 22.0597,-18.7646 33.1201,-29.30988"
-       sodipodi:nodetypes="cc" />
+    <path id="Tomenoi_Colinth"   travel="Sail" d="M 832 470 C ___ ___, ___ ___, 1079 413"/>
+    <path id="Tomenoi_Kantis"    travel="Sail" d="M 832 470 C ___ ___, ___ ___, 1013 435"/>
+    <path id="Colinth_Lephai"    travel="Sail" d="M " />
+    <path id="Colinth_Spinis"    travel="Sail" d="M " />
+    <path id="Colinth_Amandais"  travel="Sail" d="M 1077.5326,416.16885 c 8,11.06156 17.6807,6.10487 34.2383,11.5464 13.5513,4.45354 104.3454,43.14297 131.3559,59.49295" />
+    <path id="Kantis_Amandais"   travel="Sail" d="M 1083.4939,442.33251 c 7,-15.43329 7.7452,-20.38998 24.3028,-14.94845 13.5513,4.45354 108.3196,43.47416 135.3301,59.82414" />
+    <path id="Kantis_Spinis"     travel="Sail" d="M 1082.8316,441.67014 c 9,-10 5,-20 29,-14 14,4 55,47 61,64" />
+    <path id="Kantis_Lephai"     travel="Sail" d="M 1083 442 c 10,-27 46,-25 81,-45 16,-9 17,-15 26,-24" />
+    <path id="Lephai_Ment"       travel="Sail" d="M 1190 371 c -7,-21 -9,-27 -13,-39" />
+    <path id="Ment_Crater"       travel="Sail" d="M 1177 332 c 9,-7 22,-18 33,-29" />
   </g>
   <svg id="Ship" x="0" y="0" overflow="visible">
     <circle cx="0" cy="0" r="5" style="fill:#DD0000;stroke:none"/>
