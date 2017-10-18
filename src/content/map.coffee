@@ -99,6 +99,10 @@ Place.Vailia =
     Tomenoi: 1
     Colinth: 'Tomenoi'
     Kantis: 'Tomenoi'
+    Spinis: 'Tomenoi'
+    Lephai: 'Tomenoi'
+    Ment: 'Tomenoi'
+    Crater: 'Tomenoi'
     Amandais: 'Tomenoi'
   stories: {}
   jobChance: 1.2
@@ -141,6 +145,10 @@ Place.MtJulia =
     Tomenoi: 1
     Colinth: 'Tomenoi'
     Kantis: 'Tomenoi'
+    Spinis: 'Tomenoi'
+    Lephai: 'Tomenoi'
+    Ment: 'Tomenoi'
+    Crater: 'Tomenoi'
     Amandais: 'Tomenoi'
   stories: {}
   jobChance: 0.3
@@ -170,6 +178,10 @@ Place.Alkenia =
     Tomenoi: 'Vailia'
     Colinth: 'Vailia'
     Kantis: 'Vailia'
+    Spinis: 'Vailia'
+    Lephai: 'Vailia'
+    Ment: 'Vailia'
+    Crater: 'Vailia'
     Amandais: 'Vailia'
   stories: {}
   jobChance: 0.65
@@ -193,6 +205,10 @@ Place.Nonkenia =
     Tomenoi: 'Vailia'
     Colinth: 'Vailia'
     Kantis: 'Vailia'
+    Spinis: 'Vailia'
+    Lephai: 'Vailia'
+    Ment: 'Vailia'
+    Crater: 'Vailia'
     Amandais: 'Vailia'
   stories: {}
   jobChance: 0.5
@@ -212,6 +228,10 @@ Place.IronSands =
     Tomenoi: 'Vailia'
     Colinth: 'Vailia'
     Kantis: 'Vailia'
+    Spinis: 'Vailia'
+    Lephai: 'Vailia'
+    Ment: 'Vailia'
+    Crater: 'Vailia'
     Amandais: 'Vailia'
   stories: {}
   jobChance: 0.5
@@ -232,6 +252,10 @@ Place.Tomenoi =
     IronSands: 'Vailia'
     Colinth: 1
     Kantis: 1
+    Spinis: 'Colinth'
+    Lephai: 'Colinth'
+    Ment: 'Colinth'
+    Crater: 'Colinth'
     Amandais: 1
   stories: {}
   jobChance: 0.8
@@ -253,6 +277,10 @@ Place.Colinth =
     IronSands: 'Tomenoi'
     Tomenoi: -1
     Kantis: 1
+    Spinis: 1
+    Lephai: 1
+    Ment: 'Lephai'
+    Crater: 'Lephai'
     Amandais: 1
   stories: {}
   jobChance: 0.6
@@ -273,6 +301,10 @@ Place.Kantis =
     IronSands: 'Tomenoi'
     Tomenoi: -1
     Colinth: -1
+    Spinis: 1
+    Lephai: 1
+    Ment: 'Lephai'
+    Crater: 'Lephai'
     Amandais: 1
   stories: {}
   jobChance: 0.9
@@ -281,6 +313,83 @@ Place.Kantis =
     Tomenoi: ['Canvas', 'Chickens', 'Dates', 'Flour', 'Garlic', 'Hatchets and Saws', 'Helmets', 'Olive Oil', 'Olives', 'Peanuts', 'Rope', 'Veined Marble', 'Wheat']
     Colinth: ['Anchors', 'Beer', 'Canvas', 'Dates', 'Flour', 'Hatchets and Saws', 'Honey', 'Olive Oil', 'Pickles', 'Rope', 'Silver', 'Wheat']
     Amandais: ['Beer', 'Carpet', 'Clothing', 'Hatchets and Saws', 'Honey', 'Linen', 'Olive Oil', 'Olives', 'Salt', 'Self Bows', 'Veined Marble']
+
+
+Place.Spinis =
+  name: 'Spinis'
+  img: ''
+  paths:
+    Vailia: 'Colinth'
+    MtJulia: 'Colinth'
+    Alkenia: 'Colinth'
+    Nonkenia: 'Colinth'
+    IronSands: 'Colinth'
+    Tomenoi: 'Colinth'
+    Colinth: -1
+    Kantis: -1
+    Lephai: 1
+    Ment: 'Lephai'
+    Crater: 'Lephai'
+    Amandais: 1
+  stories: {}
+  jobChance: 0.4
+
+Place.Lephai =
+  name: 'Lephai'
+  img: ''
+  paths:
+    Vailia: 'Colinth'
+    MtJulia: 'Colinth'
+    Alkenia: 'Colinth'
+    Nonkenia: 'Colinth'
+    IronSands: 'Colinth'
+    Tomenoi: 'Colinth'
+    Colinth: -1
+    Kantis: -1
+    Spinis: -1
+    Ment: 1
+    Crater: 'Ment'
+    Amandais: 1
+  stories: {}
+  jobChance: 0.1
+
+Place.Ment =
+  name: 'Ment'
+  img: ''
+  paths:
+    Vailia: 'Lephai'
+    MtJulia: 'Lephai'
+    Alkenia: 'Lephai'
+    Nonkenia: 'Lephai'
+    IronSands: 'Lephai'
+    Tomenoi: 'Lephai'
+    Colinth: 'Lephai'
+    Kantis: 'Lephai'
+    Spinis: 'Lephai'
+    Lephai: -1
+    Ment: 1
+    Crater: 'Lephai'
+  stories: {}
+  jobChance: 0.3
+
+Place.Crater =
+  name: 'Crater'
+  img: ''
+  paths:
+    Vailia: 'Ment'
+    MtJulia: 'Ment'
+    Alkenia: 'Ment'
+    Nonkenia: 'Ment'
+    IronSands: 'Ment'
+    Tomenoi: 'Ment'
+    Colinth: 'Ment'
+    Kantis: 'Ment'
+    Spinis: 'Ment'
+    Lephai: 'Ment'
+    Ment: -1
+    Crater: 'Ment'
+  stories: {}
+  jobChance: 0.1
 
 Place.Amandais =
   name: 'Amandais'
@@ -294,6 +403,10 @@ Place.Amandais =
     Tomenoi: -1
     Colinth: -1
     Kantis: -1
+    Spinis: -1
+    Lephai: -1
+    Ment: 'Lephai'
+    Crater: 'Lephai'
   stories: {}
   jobChance: 1.3
   goods:
@@ -301,31 +414,3 @@ Place.Amandais =
     Tomenoi: ['Coffee', 'Cork', 'Cumin', 'Decorative Stone', 'Indigo', 'Lemons', 'Papyrus', 'Pepper', 'Tea Leaves']
     Kantis: ['Chickens', 'Cloves', 'Cork', 'Cotton', 'Leather', 'Lemons', 'Live Goats', 'Papyrus', 'Pepper', 'Safflour']
     Amandais: ['Allspice', 'Almonds', 'Carpet', 'Cashews', 'Coffee', 'Cork', 'Figs', 'Gold Jewelry', 'Leather', 'Lemons', 'Liquorice', 'Pepper', 'Safflour', 'Saffron', 'Vanilla']
-
-Place.Spinis =
-  name: 'Spinis'
-  img: ''
-  paths: {}
-  stories: {}
-  jobChance: 0.4
-
-Place.Ment =
-  name: 'Ment'
-  img: ''
-  paths: {}
-  stories: {}
-  jobChance: 0.3
-
-Place.Crater =
-  name: 'Crater'
-  img: ''
-  paths: {}
-  stories: {}
-  jobChance: 0.1
-
-Place.Lephai =
-  name: 'Lephai'
-  img: ''
-  paths: {}
-  stories: {}
-  jobChance: 0.1

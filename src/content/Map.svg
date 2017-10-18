@@ -24,30 +24,32 @@
     </mask>
   </defs>
   <g id="MapLayer" >
-    <image id="image3956" xlink:href="game/content/Map.png" height="1080" width="1542" />
+    <image id="image3956" xlink:href="Map.png" height="1080" width="1542" />
     <rect id="rect3963" mask="url(#MapMask)" height="1080" width="1542" fill="#000" />
   </g>
   <g id="PathLayer" stroke="#f00" stroke-dasharray="9, 6" stroke-width="1.5" fill="none">
-    <path id="Vailia_MtJulia"    travel="Sail" d="M 646 566 C 652 603, 557 525,  540 551"/>
-    <path id="Vailia_Alkenia"    travel="Sail" d="M 646 566 C 662 609, 467 485,  468 516"/>
-    <path id="Vailia_Nonkenia"   travel="Sail" d="M 646 566 C 658 603, 547 533,  445 486"/>
-    <path id="Vailia_IronSands"  travel="Sail" d="M 646 566 C 667 569, 511 702,  525 675"/>
-    <path id="Vailia_Tomenoi"    travel="Sail" d="M 646 566 C 633 584, 845 480,  832 470"/>
-    <path id="MtJulia_Alkenia"   travel="Sail" d="M 540 551 C 572 543, 463 502,  468 516"/>
-    <path id="MtJulia_Nonkenia"  travel="Sail" d="M 540 551 C 575 544, 457 494,  445 486"/>
-    <path id="MtJulia_IronSands" travel="Sail" d="M 540 551 C 596 512, 551 694,  525 675"/>
-    <path id="MtJulia_Tomenoi"   travel="Sail" d="M 540 551 C 36,-19 32, 7 71, -7 86, -31 240, -61 221, -75"/>
-    <path id="Alkenia_Nonkenia"  travel="Sail" d="M 468 516 C 487 518, 468 508, 445 486"/>
-    <path id="Tomenoi_Colinth"   travel="Sail" d="M 832 470 C ___ ___, ___ ___, 1079 413"/>
-    <path id="Tomenoi_Kantis"    travel="Sail" d="M 832 470 C ___ ___, ___ ___, 1013 435"/>
-    <path id="Colinth_Lephai"    travel="Sail" d="M " />
-    <path id="Colinth_Spinis"    travel="Sail" d="M " />
-    <path id="Colinth_Amandais"  travel="Sail" d="M 1077.5326,416.16885 c 8,11.06156 17.6807,6.10487 34.2383,11.5464 13.5513,4.45354 104.3454,43.14297 131.3559,59.49295" />
-    <path id="Kantis_Amandais"   travel="Sail" d="M 1083.4939,442.33251 c 7,-15.43329 7.7452,-20.38998 24.3028,-14.94845 13.5513,4.45354 108.3196,43.47416 135.3301,59.82414" />
-    <path id="Kantis_Spinis"     travel="Sail" d="M 1082.8316,441.67014 c 9,-10 5,-20 29,-14 14,4 55,47 61,64" />
-    <path id="Kantis_Lephai"     travel="Sail" d="M 1083 442 c 10,-27 46,-25 81,-45 16,-9 17,-15 26,-24" />
-    <path id="Lephai_Ment"       travel="Sail" d="M 1190 371 c -7,-21 -9,-27 -13,-39" />
-    <path id="Ment_Crater"       travel="Sail" d="M 1177 332 c 9,-7 22,-18 33,-29" />
+    <path id="Vailia_MtJulia"    travel="Sail" d="M  646 566 C  652 603,  557 525,  540 551"/>
+    <path id="Vailia_Alkenia"    travel="Sail" d="M  646 566 C  662 609,  467 485,  468 516"/>
+    <path id="Vailia_Nonkenia"   travel="Sail" d="M  646 566 C  658 603,  547 533,  445 486"/>
+    <path id="Vailia_IronSands"  travel="Sail" d="M  646 566 C  667 569,  511 702,  525 675"/>
+    <path id="Vailia_Tomenoi"    travel="Sail" d="M  646 566 C  633 584,  845 480,  832 470"/>
+    <path id="MtJulia_Alkenia"   travel="Sail" d="M  540 551 C  572 543,  463 502,  468 516"/>
+    <path id="MtJulia_Nonkenia"  travel="Sail" d="M  540 551 C  575 544,  457 494,  445 486"/>
+    <path id="MtJulia_IronSands" travel="Sail" d="M  540 551 C  596 512,  551 694,  525 675"/>
+    <path id="MtJulia_Tomenoi"   travel="Sail" d="M  540 551 C  618 526,  545 582,  832 470"/>
+    <path id="Alkenia_Nonkenia"  travel="Sail" d="M  468 516 C  487 518,  468 508,  445 486"/>
+    <path id="Tomenoi_Colinth"   travel="Sail" d="M  832 470 C 1034 411, 1044 376, 1062 416, 1064 420, 1070 422, 1079 413"/>
+    <path id="Tomenoi_Kantis"    travel="Sail" d="M  832 470 C 1034 408, 1048 380, 1063 415, 1068 429, 1089 420, 1083 442"/>
+    <path id="Colinth_Lephai"    travel="Sail" d="M 1079 413 C 1123 412, 1147 416, 1190 372" />
+    <path id="Colinth_Spinis"    travel="Sail" d="M 1079 413 C 1120 419, 1171 477, 1173 493" />
+    <path id="Colinth_Amandais"  travel="Sail" d="M 1079 413 C 1079 413, 1243 487, 1243 487" />
+    <path id="Kantis_Spinis"     travel="Sail" d="M 1083 442 C 1094 398, 1157 442, 1173 493" />
+    <path id="Kantis_Lephai"     travel="Sail" d="M 1083 442 C 1089 409, 1134 434, 1190 372" />
+    <path id="Kantis_Amandais"   travel="Sail" d="M 1083 442 C 1098 409, 1113 426, 1243 487" />
+    <path id="Spinis_Amandais"   travel="Sail" d="M 1173 493 C 1181 461, 1181 468, 1243 487" />
+    <path id="Lephai_Ment"       travel="Sail" d="M 1190 372 C 1190 372, 1177 332, 1177 332" />
+    <path id="Lephai_Amandais"   travel="Sail" d="M 1190 372 C 1168 401, 1170 425, 1243 487" />
+    <path id="Ment_Crater"       travel="Sail" d="M 1177 332 C 1177 332, 1211 302, 1211 302" />
   </g>
   <svg id="Ship" x="0" y="0" overflow="visible">
     <circle cx="0" cy="0" r="5" style="fill:#DD0000;stroke:none"/>
@@ -104,11 +106,6 @@
       <circle cx="1190" cy="372" r="5" />
       <text x="1202" y="378">Lephai <tspan>- <tspan></tspan></tspan></text>
     </g>
-    <g id="Amandais">
-      <rect rx="6" ry="6" />
-      <circle cx="1243" cy="487" r="5" />
-      <text x="1258" y="492">Amandais <tspan>- <tspan></tspan></tspan></text>
-    </g>
     <g id="Ment">
       <rect rx="6" ry="6" />
       <circle cx="1177" cy="332" r="5" />
@@ -118,6 +115,11 @@
       <rect rx="6" ry="6" />
       <circle cx="1211" cy="302" r="5" />
       <text x="1139" y="307">Crater <tspan>- <tspan></tspan></tspan></text>
+    </g>
+    <g id="Amandais">
+      <rect rx="6" ry="6" />
+      <circle cx="1243" cy="487" r="5" />
+      <text x="1258" y="492">Amandais <tspan>- <tspan></tspan></tspan></text>
     </g>
   </g>
 </svg>
