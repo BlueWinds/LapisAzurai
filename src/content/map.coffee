@@ -314,7 +314,6 @@ Place.Kantis =
     Colinth: ['Anchors', 'Beer', 'Canvas', 'Dates', 'Flour', 'Hatchets and Saws', 'Honey', 'Olive Oil', 'Pickles', 'Rope', 'Silver', 'Wheat']
     Amandais: ['Beer', 'Carpet', 'Clothing', 'Hatchets and Saws', 'Honey', 'Linen', 'Olive Oil', 'Olives', 'Salt', 'Self Bows', 'Veined Marble']
 
-
 Place.Spinis =
   name: 'Spinis'
   img: ''
@@ -368,7 +367,7 @@ Place.Ment =
     Spinis: 'Lephai'
     Lephai: -1
     Ment: 1
-    Crater: 'Lephai'
+    Crater: 1
   stories: {}
   jobChance: 0.3
 

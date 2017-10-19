@@ -141,6 +141,7 @@ $.extend Story, {
     $('#stories').stop().scrollTo(to, 300, {over: 1}).focus()
 
   enterMap: ->
+    if Story.gameIsOver() then return
     g.scroll = -1
     if g.map.to then Place.travel()
     $('#content').stop().animate {opacity: 0}, 500, ->
@@ -157,7 +158,8 @@ $.extend Story, {
     $('#stories').on 'click', 'img', (e)->
       Game.showOverlay("<img src='#{e.target.src}'>")
       return false
-    $('#stories').on 'click', ->
+    $('#stories').on 'click', (e)->
+      if ($(e.target).closest('input, label').length) then return
       Story.changeSection(1)
 
     $(window).keydown(keyPress)

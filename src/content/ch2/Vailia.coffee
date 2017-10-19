@@ -669,10 +669,10 @@ s.JamesCh3Yes =
   effects:
     xp:
       James: 10
-  text: -> """
+  text: -> '''
   ||
     TODO
-  """
+  '''
   apply: ->
     g.chapter = 'Ch3'
 
@@ -683,9 +683,9 @@ s.JamesCh3No =
   effects:
     xp:
       James: 3
-  text: -> """
+  text: -> '''
     TODO
-  """
+  '''
 
 Place.Vailia.stories.Ch2 = Object.keys(s)
 for key, value of s

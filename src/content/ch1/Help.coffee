@@ -1,6 +1,7 @@
 queue = []
 
 help = (selector, text)->
+  unless g.showHelp then return
   if $('.help').length
     queue.push([selector, text])
     return
@@ -50,6 +51,7 @@ Story.canSail = ->
   return oldCanSail()
 
 enterMapHelp = ->
+  if Story.gameIsOver() then return
   if g.history.MtJuliaArrive then return
 
   setTimeout ->

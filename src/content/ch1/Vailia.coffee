@@ -7,6 +7,7 @@ Game.starting =
   damage: 0
   availableCargo: []
   jobSearch: {}
+  showHelp: true
   map:
     from: 'Vailia'
     to: ''
@@ -31,6 +32,7 @@ s.Intro =
   text: -> """
   ||
     <center><i>Click anywhere on the page or use the right arrow key to advance</i></center>
+    <center><label><input id="toggleHelp" type="checkbox" checked onchange="g.showHelp = document.getElementById('toggleHelp').checked;"> <i>Show help</i></label></center>
 
   ||
     <center>Natalie dreamt of Fire.</center>

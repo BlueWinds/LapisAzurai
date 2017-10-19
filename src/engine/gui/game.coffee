@@ -109,7 +109,8 @@ Game.passDay = ->
 
   end = Story.gameIsOver()
   if end
-    Story.display(end)
+    Story.display(Story[end].required)
+    g.history[Story[end].required] = g.day
     return
 
   setTimeout ->

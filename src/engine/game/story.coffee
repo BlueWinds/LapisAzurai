@@ -90,17 +90,17 @@ window.Story = {
 
   gameIsOver: ->
     requiredEvents = {}
-    for place in Place when place.stories?[g.chapter]
-      for story in place.stories[g.chapter] when Story[story].required
+    for place, data of Place when data.stories?[g.chapter]
+      for story in data.stories[g.chapter] when Story[story].required
         group = Story[story].requiredGroup
         if group
           requiredEvents[group] or= []
           requiredEvents[group].push(story)
-        else unless g.history[story]? or stillAvailable(story)
-          return Story[story].required
+        else if not g.history[story]? and Story.expirationDate(story) < g.day
+          return story
 
-    for events, group of requiredEvents
-      unless events.any(stillAvailable) then return Story[events[0]].required
+    for events, group of requiredEvents when not events.some(stillAvailable)
+      return events.first(hasntOccurred)
 
     return false
 }
@@ -109,3 +109,4 @@ blockingEvents = (stories)-> Story.visibleStories(stories).filter((s)-> Story[s]
 repeatableEvents = (stories)-> Story.visibleStories(stories, false).filter((s)-> not Story[s].blocking)
 
 stillAvailable = (story)-> (not g.history[story]?) and Story.expirationDate(story) >= g.day
+hasntOccurred = (story)-> return not g.history[story]?

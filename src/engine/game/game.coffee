@@ -2,6 +2,7 @@ sampleGame =
   version: 0
   day: 13
   chapter: 'Ch1'
+  showHelp: true
   cargo: [
     {
       name: 'Fish Hooks'
