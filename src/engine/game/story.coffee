@@ -30,15 +30,14 @@ window.Story = {
     return stories.filter(Story.matchesHistory.bind(null, onlyOnce)).filter(Story.matchesConditions)
 
   canSail: ->
-    if g.damage then return false
     not Story.visibleStories(Place[g.map.from].stories[g.chapter]).some (p)-> Story[p].blocking
 
   expirationDate: (story)->
     unless Story[story].history then return 0
     prereqsExpire = for key, value of Story[story].history
-      Story.expirationDate(key) + Place.travelDays(Story[key].place, Story[story].place)
-    timeAdded = (Story[story].extraDays or 0) + if Story[story].blocking then 7 else 20
-    return Math.max.apply(null, prereqsExpire) + timeAdded
+      Story.expirationDate(key)
+    timeAdded = (Story[story].extraDays or 0) + if Story[story].blocking then 0 else 10
+    return Math.max.apply(null, prereqsExpire) + timeAdded + prereqsExpire.length * 10
 
   matchesHistory: (onlyOnce, story)->
     if g.history[story]? and onlyOnce then return false
@@ -86,7 +85,7 @@ window.Story = {
 
   delayEvent: (from, to, type)->
     stories = Place.travel[type].delayStories
-    Math.choice(blockingEvents(stories)) or Math.choice(repeatableEvents(stories))
+    Math.choice(blockingEvents(stories)) or Math.choice(repeatableEvents(stories)) or null
 
   gameIsOver: ->
     requiredEvents = {}
@@ -99,7 +98,7 @@ window.Story = {
         else if not g.history[story]? and Story.expirationDate(story) < g.day
           return story
 
-    for events, group of requiredEvents when not events.some(stillAvailable)
+    for group, events of requiredEvents when not events.some(stillAvailable)
       return events.first(hasntOccurred)
 
     return false

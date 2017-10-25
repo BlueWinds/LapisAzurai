@@ -75,7 +75,7 @@ s.MeetAsara =
   required: 'GameOverKindness'
   history:
     FirstStormSick2: true
-  extraDays: 40
+  extraDays: 35
   effects:
     xp:
       Natalie: 2
@@ -135,7 +135,6 @@ s.MeetAsara =
 s.AsaraAwakens =
   label: 'Castaway'
   required: 'GameOverKindness'
-  extraDays: 30
   history:
     MeetAsara: true
   effects:

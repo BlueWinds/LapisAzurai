@@ -34,10 +34,12 @@ $.extend Place, {
       map.off('mousemove touchmove')
 
     $('#LabelLayer g').on 'click', ->
-      Place.showOverview(@id)
+      if $('#LabelLayer').hasClass('interactive')
+        Place.showOverview(@id)
       return false
 
-  drawMap: (interactive = true)->
+  drawMap: ->
+    $('#LabelLayer').toggleClass('interactive', not g.map.to)
     $('#PathLayer path').animate {opacity: 0}, 300, ->
       # Don't remove the attributes until after the animation is done to avoid an unpleasant flash
       $(@).removeAttr 'stroke-dasharray'
@@ -56,8 +58,8 @@ $.extend Place, {
 
   clickTravel: (to)->
     Place.hideOverview()
-    Place.drawMap(false)
     g.map.to = Place.travelSteps(g.map.from, to)[0][1]
+    Place.drawMap()
 
     direction = Place.direction(g.map.from, g.map.to)
     g.map.distance = Place.svgElement().getTotalLength() * (direction < 0)
@@ -65,7 +67,7 @@ $.extend Place, {
 
   travel: ->
     unless g.map.to
-      return Place.drawMap()
+      return
 
     event = Place.travelEvent(g.map)
     delete g.map.speedBonus
@@ -84,7 +86,7 @@ $.extend Place, {
       g.map.from = g.map.to
       g.map.to = ''
       g.map.distance = 0
-      Place.drawMap()
+      g.map.delay = 0
       setTimeout (-> Place.showOverview(g.map.from, 1000)), 3500
 
   animateTravel: (event)->
@@ -100,10 +102,12 @@ $.extend Place, {
         unless event.story then Place.travel()
 
     length = event.path.getTotalLength()
-    direction = event.pxTravel > 0
     ship = document.getElementById('Ship')
     event.path.setAttribute('stroke-dasharray', length)
     $(event.path).stop().css('opacity', 1)
+
+    # Convert -1/1 to 0/1
+    dashoffset = (event.direction + 1) / 2
 
     $({d: event.start}).animate({d: event.start + event.pxTravel}, {
       duration: 2000
@@ -112,14 +116,18 @@ $.extend Place, {
         pos = event.path.getPointAtLength(now)
         ship.setAttribute('x', pos.x)
         ship.setAttribute('y', pos.y)
-        event.path.setAttribute('stroke-dashoffset', length * direction - now)
+        event.path.setAttribute('stroke-dashoffset', length * dashoffset - now)
     })
 }
 
 updateLabel = (place)->
-  visible = Story.visibleStories(Place[place].stories[g.chapter])
-  visible = visible.sort (a, b)->
-    Story.expirationDate(a) - Story.expirationDate(b)
+  interactive = $('#LabelLayer').hasClass('interactive')
+
+  if interactive
+    visible = Story.visibleStories(Place[place].stories[g.chapter])
+    visible = visible.sort (a, b)->
+      Story.expirationDate(a) - Story.expirationDate(b)
+  else visible = []
 
   span = $('#' + place + ' tspan').removeClass()
   if visible[0]
@@ -132,8 +140,8 @@ updateLabel = (place)->
   else
     span.hide()
 
-  box = $('#' + place + ' text')[0].getBBox()
-  rect = $('#' + place + ' rect')[0]
+  box = $('#' + place + ' text').show()[0].getBBox()
+  rect = $('#' + place + ' rect').show()[0]
   rect.setAttribute('x', box.x - 4)
   rect.setAttribute('y', box.y - 2)
   rect.setAttribute('width', box.width + 8)

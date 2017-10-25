@@ -223,7 +223,7 @@ hr {
     top: 0;
 }
 
-#LabelLayer g {
+#LabelLayer.interactive g {
   cursor: pointer;
 }
 
@@ -296,6 +296,11 @@ hr {
 .travel.disabled {
   color: #666;
   cursor: default;
+}
+
+.sail-speed {
+  font-size: 0.28em;
+  color: #aaa;
 }
 
 .overlay {

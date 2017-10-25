@@ -83,7 +83,6 @@
       table.append('<tr><td>' + good + '</td><td>' + allGoods[good] + '</td><td>' + rep[0] + '</td><td>' + rep[1] + '</td></tr>');
     });
     table.appendTo('body');
-    console.log(JSON.stringify(allGoods, null, 2));
 
     function occurAlpha(a, b) { return allGoods[b] - allGoods[a] || a > b}
   }

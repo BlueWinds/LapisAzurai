@@ -36,7 +36,13 @@ sampleGame =
   preventNextDamage: 5 # The next damage will be shielded
 
 window.Game =
-  travelPxPerDay: (type)-> 15 + (g?.map.speedBonus or 0)
+  travelSpeed: (type, damage = g.damage)->
+    speed = if type is 'Sail'
+      Math.max(0.25, 1 - (damage / 50))
+    else 0.5
+
+  travelPxPerDay: (type)->
+    15 * Game.travelSpeed(type) + (g?.map.speedBonus or 0)
 
   updates: [] # Functions taking one argument, a game state.
 
@@ -48,6 +54,7 @@ window.Game =
       $.extend(true, {}, Game.starting) # Game.starting is defined in content/intro.coffee
 
   start: (data)->
+    console.log(data)
     window.g = data
     for i in [data.version ... Game.updates.length]
       Game.updates[i](data)

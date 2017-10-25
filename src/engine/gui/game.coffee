@@ -93,12 +93,9 @@ $.extend Game, {
     Place.drawMap()
     Story.drawHistory()
     Person.drawOverview()
-    if (g.map.to and g.scroll < 0)
-      Place.travel()
 
   animateSuccess: (element)->
     $(element).animate({opacity: 1}, 500).animate {opacity: 0}, 1500, ->
-      Place.drawMap()
       Place.showOverview()
 }
 
@@ -126,6 +123,5 @@ Game.passDay = ->
       localStorage.autosave40 = localStorage.autosave20
       localStorage.autosave20 = localStorage.autosave0
       localStorage.autosave0 = localStorage.autosave
-      console.log localStorage.autosave0, localStorage.autosave20
     else
   , 0

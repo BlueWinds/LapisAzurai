@@ -16,6 +16,7 @@ $.extend Place, {
     $('.logo').removeClass('active')
     $('#overview').removeClass('active').stop().animate {opacity: 0}, duration, ->
       unless $('#overview').hasClass('active') then $('#overview').css('display', 'none')
+    Place.drawMap()
 
   draw: (place)->
     location = Place.location(place)
@@ -28,6 +29,7 @@ $.extend Place, {
       disabled = if Story.canSail() then '' else 'disabled'
       travel = """<div class="travel #{disabled}" #{if disabled then '' else 'onclick="Place.clickTravel(\'' + place + '\');"'}>
         ⛵⇢
+        <div class="sail-speed">#{Math.round(Game.travelSpeed('Sail')) * 100}% speed</div>
       </div>"""
 
     deliverable = g.cargo.filter (job)-> job.to is place
@@ -59,13 +61,17 @@ $.extend Place, {
     </div>"""
 
   drawRepair: ->
+    newDamage = g.damage + Place.repairEffects().damage
+
+    oldPercent = Game.travelSpeed('Sail') * 100
+    newPercent = Game.travelSpeed('Sail', newDamage) * 100
     """<td class="story active repair" onclick="Place.clickRepair();">
       <div>
         <span class="label">Repair Ship</span>
         <span class="cost">#{Game.drawEffects(Place.repairEffects())}</span>
         <span class="success">✓</span>
       </div>
-      <div class="damage">#{Math.round(g.damage + Place.repairEffects().damage)} damage will remain</div>
+      <div class="damage">#{Math.round(oldPercent)}% → #{Math.round(newPercent)}% sail speed</div>
     </td>"""
 
   clickRepair: (i)->

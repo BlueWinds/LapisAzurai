@@ -4,6 +4,7 @@ Place.Vailia.stories.Ch1.push('Ch2')
 s.Ch2 =
   label: 'Chapter 2 - Kantis'
   required: 'GameOverFun'
+  extraDays: 25
   history:
     MeetMeghan: true
   effects:
@@ -262,7 +263,7 @@ s.TrainCombatAsara =
   """
 
 s.IronSandsRutter =
-  label: 'Route to Iron Sands (part 1)'
+  label: 'Route to Iron Sands'
   required: 'GameOverExploration'
   history:
     Ch2: true
@@ -311,7 +312,7 @@ s.IronSandsRutter =
   """
 
 s.IronSandsRutter2 =
-  label: 'Route to Iron Sands (part 2)'
+  label: 'Route to Iron Sands'
   required: 'GameOverExploration'
   history:
     IronSandsRutter: true

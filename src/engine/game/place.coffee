@@ -21,7 +21,7 @@ window.Place = {
 
   repairEffects: ->
     e =
-      damage: -Math.min(10, g.damage) * (if g.reputation[g.map.from] > 0 then 1 else 0.5)
+      damage: -Math.min(10 * (if g.reputation[g.map.from] > 0 then 1 else 0.5), g.damage)
       reputation: {}
     e.reputation[g.map.from] = -Math.min(2, g.reputation[g.map.from])
     return e
@@ -73,32 +73,32 @@ window.Place = {
     travel = path.attributes.travel.value
     dir = Place.direction(map.from, map.to)
 
-    if map.delay or Place.travel[travel].delayOccurs(map.from, map.to, map.distance)
-      duration = map.delay or Place.travel[travel].delayDuration(map.from, map.to, map.distance)
-      event = {
-        image: Math.choice(Place.travel[travel].delayImages)
-        pxTravel: if map.speedBonus > 0 then map.speedBonus * dir else 0
-        path: path
-        start: map.distance
-        delay: Math.max(0, duration - 1) # Subtract one day because this event already took up one of them
-        effects: {damage: Place.travel[travel].delayDailyDamage(map.from, map.to, map.distance)}
-      }
-      # If this is the first day of a delay, trigger an event
-      unless map.delay
-        event.story = Story.delayEvent(map.from, map.to, travel)
-      return event
-
     pxPerDay = Game.travelPxPerDay(travel) * dir
     to = Math.clamp(map.distance + pxPerDay, 0, path.getTotalLength())
+
     event = {
       image: Math.choice(Place.travel[travel].normalImages)
       path: path
       start: map.distance
+      direction: dir
       pxTravel: to - map.distance
       story: Story.travelEvent(map.from, map.to, travel)
     }
+
     if event.pxTravel isnt pxPerDay
       event.image = Place[map.to].img
+
+    if map.delay or Place.travel[travel].delayOccurs(map.from, map.to, map.distance)
+      duration = map.delay or Place.travel[travel].delayDuration(map.from, map.to, map.distance)
+
+      event.image = Math.choice(Place.travel[travel].delayImages)
+      event.delay = Math.max(0, duration - 1) # Subtract one day because this event already took up one of them
+      event.effects = {damage: Place.travel[travel].delayDailyDamage(map.from, map.to, map.distance)}
+
+      # If this is the first day of a delay, trigger an event
+      unless map.delay
+        event.story = Story.delayEvent(map.from, map.to, travel)
+
     return event
 
   direction: (from, to)->

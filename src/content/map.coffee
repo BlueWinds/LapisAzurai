@@ -93,8 +93,8 @@ Place.Vailia =
   img: 'places/VailiaDay.jpg'
   paths:
     MtJulia: 1
-    Alkenia: 1
-    Nonkenia: 1
+    Alkenia: 'MtJulia'
+    Nonkenia: 'MtJulia'
     IronSands: 1
     Tomenoi: 1
     Colinth: 'Tomenoi'
@@ -142,14 +142,14 @@ Place.MtJulia =
     Alkenia: 1
     Nonkenia: 1
     IronSands: 1
-    Tomenoi: 1
-    Colinth: 'Tomenoi'
-    Kantis: 'Tomenoi'
-    Spinis: 'Tomenoi'
-    Lephai: 'Tomenoi'
-    Ment: 'Tomenoi'
-    Crater: 'Tomenoi'
-    Amandais: 'Tomenoi'
+    Tomenoi: 'Vailia'
+    Colinth: 'Vailia'
+    Kantis: 'Vailia'
+    Spinis: 'Vailia'
+    Lephai: 'Vailia'
+    Ment: 'Vailia'
+    Crater: 'Vailia'
+    Amandais: 'Vailia'
   stories: {}
   jobChance: 0.3
   goods:
@@ -171,18 +171,18 @@ Place.Alkenia =
   name: 'Alkenia'
   img: 'places/AlkeniaDay.jpg'
   paths:
-    Vailia: -1
+    Vailia: 'MtJulia'
     MtJulia: -1
     Nonkenia: 1
-    IronSands: 'Vailia'
-    Tomenoi: 'Vailia'
-    Colinth: 'Vailia'
-    Kantis: 'Vailia'
-    Spinis: 'Vailia'
-    Lephai: 'Vailia'
-    Ment: 'Vailia'
-    Crater: 'Vailia'
-    Amandais: 'Vailia'
+    IronSands: 'MtJulia'
+    Tomenoi: 'MtJulia'
+    Colinth: 'MtJulia'
+    Kantis: 'MtJulia'
+    Spinis: 'MtJulia'
+    Lephai: 'MtJulia'
+    Ment: 'MtJulia'
+    Crater: 'MtJulia'
+    Amandais: 'MtJulia'
   stories: {}
   jobChance: 0.65
   goods:
@@ -198,18 +198,18 @@ Place.Nonkenia =
   name: 'Nonkenia'
   img: 'places/NonkeniaDay.jpg'
   paths:
-    Vailia: -1
+    Vailia: 'MtJulia'
     MtJulia: -1
     Alkenia: -1
-    IronSands: 'Vailia'
-    Tomenoi: 'Vailia'
-    Colinth: 'Vailia'
-    Kantis: 'Vailia'
-    Spinis: 'Vailia'
-    Lephai: 'Vailia'
-    Ment: 'Vailia'
-    Crater: 'Vailia'
-    Amandais: 'Vailia'
+    IronSands: 'MtJulia'
+    Tomenoi: 'MtJulia'
+    Colinth: 'MtJulia'
+    Kantis: 'MtJulia'
+    Spinis: 'MtJulia'
+    Lephai: 'MtJulia'
+    Ment: 'MtJulia'
+    Crater: 'MtJulia'
+    Amandais: 'MtJulia'
   stories: {}
   jobChance: 0.5
   goods:
@@ -246,7 +246,7 @@ Place.Tomenoi =
   img: 'places/TomenoiDay.jpg'
   paths:
     Vailia: -1
-    MtJulia: -1
+    MtJulia: 'Vailia'
     Alkenia: 'Vailia'
     Nonkenia: 'Vailia'
     IronSands: 'Vailia'

@@ -150,6 +150,7 @@ s.KatTrial =
 s.KatMeetsJames =
   label: 'Kat and James'
   blocking: true
+  required: 'GameOverKindness'
   history:
     KatTrial: true
   effects:

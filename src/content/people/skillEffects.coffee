@@ -54,9 +54,9 @@ oldMaxCargo = Cargo.maxCargo
 Cargo.maxCargo = ->
   oldMaxCargo() + has('J', 'Organized')
 
-oldTravelSpeed = Game.travelPxPerDay
+oldPxPerDay = Game.travelPxPerDay
 Game.travelPxPerDay = (travel)->
-  oldTravelSpeed(travel) + has('J', 'Navigator')
+  oldPxPerDay(travel) * (1 + has('J', 'Navigator') / 10)
 
 oldDelayDuration = Place.travel.Sail.delayDuration
 Place.travel.Sail.delayDuration = (from, to, distance)->

@@ -29,14 +29,10 @@
   </g>
   <g id="PathLayer" stroke="#f00" stroke-dasharray="9, 6" stroke-width="1.5" fill="none">
     <path id="Vailia_MtJulia"    travel="Sail" d="M  646 566 C  652 603,  557 525,  540 551"/>
-    <path id="Vailia_Alkenia"    travel="Sail" d="M  646 566 C  662 609,  467 485,  468 516"/>
-    <path id="Vailia_Nonkenia"   travel="Sail" d="M  646 566 C  658 603,  547 533,  445 486"/>
     <path id="Vailia_IronSands"  travel="Sail" d="M  646 566 C  667 569,  511 702,  525 675"/>
     <path id="Vailia_Tomenoi"    travel="Sail" d="M  646 566 C  633 584,  845 480,  832 470"/>
     <path id="MtJulia_Alkenia"   travel="Sail" d="M  540 551 C  572 543,  463 502,  468 516"/>
     <path id="MtJulia_Nonkenia"  travel="Sail" d="M  540 551 C  575 544,  457 494,  445 486"/>
-    <path id="MtJulia_IronSands" travel="Sail" d="M  540 551 C  596 512,  551 694,  525 675"/>
-    <path id="MtJulia_Tomenoi"   travel="Sail" d="M  540 551 C  618 526,  545 582,  832 470"/>
     <path id="Alkenia_Nonkenia"  travel="Sail" d="M  468 516 C  487 518,  468 508,  445 486"/>
     <path id="Tomenoi_Colinth"   travel="Sail" d="M  832 470 C 1034 411, 1044 376, 1062 416, 1064 420, 1070 422, 1079 413"/>
     <path id="Tomenoi_Kantis"    travel="Sail" d="M  832 470 C 1034 408, 1048 380, 1063 415, 1068 429, 1089 420, 1083 442"/>

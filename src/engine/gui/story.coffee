@@ -72,6 +72,12 @@ $.extend Story, {
     unless g.history.Intro?
       return Story.display('Intro')
 
+    end = Story.gameIsOver()
+    if end
+      Story.display(Story[end].required)
+      g.history[Story[end].required] = g.day
+      return
+
     if g.scroll >= 0
       inverted = {}
       for event, day of g.history then inverted[day] = event
