@@ -54,7 +54,6 @@ window.Game =
       $.extend(true, {}, Game.starting) # Game.starting is defined in content/intro.coffee
 
   start: (data)->
-    console.log(data)
     window.g = data
     for i in [data.version ... Game.updates.length]
       Game.updates[i](data)

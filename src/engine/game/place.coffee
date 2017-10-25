@@ -21,9 +21,9 @@ window.Place = {
 
   repairEffects: ->
     e =
-      damage: -Math.min(10 * (if g.reputation[g.map.from] > 0 then 1 else 0.5), g.damage)
+      damage: -Math.min(6 * (if g.reputation[g.map.from] > 0 then 1 else 0.5), g.damage)
       reputation: {}
-    e.reputation[g.map.from] = -Math.min(2, g.reputation[g.map.from])
+    e.reputation[g.map.from] = -Math.min(1, g.reputation[g.map.from])
     return e
 
   location: (place, distance)->

@@ -5,7 +5,7 @@ Person.James =
   svg: 'people/James/skills.svg'
   skills:
     Reliable:
-      description: 'Repair the ship 50% faster'
+      description: 'Repair the ship 25% faster'
       doubledBy: 'Duty'
     Trustworthy:
       description: '+2 days to deliver cargo'
@@ -25,7 +25,7 @@ Person.James =
 
     Reliable2:
       name: 'Reliable 2'
-      description: 'Repair the ship 50% faster'
+      description: 'Repair the ship 25% faster'
       requiresOr: ['Stoic', 'Trustworthy2']
       doubledBy: 'Power'
     Trustworthy2:

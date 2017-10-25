@@ -101,7 +101,7 @@ Place.travel.Sail.lostCargo = ->
   Story.changeSection(1, true)
 
 Place.travel.Sail.extraDamage = ->
-  damage = Math.random() * 15 + 10
+  damage = Math.random() * 10 + 5
   g.damage += damage
   g.nextDayDescription = "#{Math.round(damage)} extra damage"
   Story.changeSection(1, true)
@@ -113,7 +113,7 @@ Place.travel.Sail.extraDelay = ->
   Story.changeSection(1, true)
 
 Place.travel.Sail.makeProgress = ->
-  distance = Math.random() * 15 + 15
+  distance = (Math.random() + 1) * Game.travelPxPerDay('Sail')
   g.map.speedBonus = distance
   g.nextDayDescription = 'Kept sailing despite the danger'
   Story.changeSection(1, true)

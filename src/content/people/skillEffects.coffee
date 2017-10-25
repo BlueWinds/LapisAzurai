@@ -42,7 +42,7 @@ Cargo.clickSearch = (place)->
 oldRepairEffects = Place.repairEffects
 Place.repairEffects = ->
   e = oldRepairEffects()
-  e.damage *= (1 + 0.5 * has('J', 'Reliable'))
+  e.damage *= (1 + 0.25 * has('J', 'Reliable'))
   e.damage = Math.max(e.damage, -g.damage)
   return e
 
