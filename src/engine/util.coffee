@@ -1,3 +1,20 @@
+# Tweak this number to speed up (>1) or slow down (<1) all animations in the game
+speedFactor = 1
+oldAnimate = $.fn.animate
+$.fn.animate = ->
+  arg = Array.apply(null, arguments)
+  arg = arg.map((value)->
+    if (typeof value is 'number')
+      value / speedFactor
+    else if value.duration then value.duration /= speedFactor
+    return value
+  )
+  oldAnimate.apply(@, arg)
+
+oldSetTimeout = setTimeout
+window.setTimeout = (callback, delay)->
+  oldSetTimeout(callback, delay / speedFactor)
+
 String.rate = (number)-> switch number
   when 1 / 4 then 'a quarter'
   when 1 / 3 then 'a third'

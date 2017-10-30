@@ -29,3 +29,16 @@ img.Natalie.right { transform: scaleX(-0.8) scaleY(0.8); }
 .skills g circle:nth-child(2) {
   display: none;
 }
+
+.chapter {
+  background: #000;
+  text-align: center;
+}
+
+.chapter h1 {
+  margin: 25% 0 0 0;
+}
+
+.chapter h3 {
+  margin: 0;
+}

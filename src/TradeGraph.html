@@ -77,6 +77,7 @@
         })
         .attr("text-anchor", "middle")
         .text(function(d, i) { return routes[i].label; });
+
     var table = $('<table><tr><th>Trade Good</th><th>Sources</th><th>From rep</th><th>To rep</th></tr></table>');
     Object.keys(allGoods).sort(occurAlpha).forEach(function(good) {
       var rep = Cargo.goods[good] || [];

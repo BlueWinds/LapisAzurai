@@ -4,7 +4,7 @@ $.extend Place.travel.Sail, {
   delayOccurs: (from, to, distance)->
     if g.history.FirstStormSick then return Math.random() < 0.03
     # Always trigger a storm on the trip back to Vailia when we're almost in port
-    if g.history.MtJuliaArrive and not g.history.FirstStorm and distance < 30 then return true
+    if g.history.MtJuliaArrive and not g.history.FirstStorm and distance < 45 then return true
     # No storms until we've had the intro event about Natalie
     return false
   delayDailyDamage: (from, to, distance)->
@@ -34,6 +34,7 @@ s.FirstStorm =
     MtJuliaArrive: true
   place: 'Vailia' # Only used for counting when events should expire
   effects:
+    damage: 10
     xp:
       Natalie: 3
   text: -> """

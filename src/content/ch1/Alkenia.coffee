@@ -64,7 +64,7 @@ s.Pickpocket =
 s.MeetKat =
   label: 'Catching the Pickpocket'
   required: 'GameOverFun'
-  extraDays: 30
+  extraDays: 34
   history:
     Pickpocket: true
   effects:

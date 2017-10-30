@@ -87,8 +87,8 @@ window.Place = {
 
     if event.pxTravel isnt pxPerDay
       event.image = Place[map.to].img
-
-    if map.delay or Place.travel[travel].delayOccurs(map.from, map.to, map.distance)
+    # No storms the day you arrive in port
+    else if map.delay or Place.travel[travel].delayOccurs(map.from, map.to, map.distance)
       duration = map.delay or Place.travel[travel].delayDuration(map.from, map.to, map.distance)
 
       event.image = Math.choice(Place.travel[travel].delayImages)

@@ -30,7 +30,7 @@
     "coffee": "coffee --compile --output dist/ src/ && cat $(grep -v '^#' src/loadOrder) > dist/game/compiled.js && rm -rf dist/engine dist/content",
     "copy-css": "cp src/engine/engine.css dist/game/engine.css && cp src/content/content.css dist/game/content.css",
     "copy-images": "rsync -r --prune-empty-dirs --include='*/' --include='*.jpg' --include='*.png' --include='*.svg' --exclude='*' src/content dist/game/",
-    "copy-static": "cp src/content/CC-by-nc-sa-4.0.txt dist/game/CC-by-nc-sa-4.0.txt && cp src/engine/GPL.txt dist/game/GPL.txt && cp src/README.txt dist/README.txt && cp src/EventDump.html dist/ && cp src/EventGraph.html dist/",
+    "copy-static": "cp src/content/CC-by-nc-sa-4.0.txt dist/game/CC-by-nc-sa-4.0.txt && cp src/engine/GPL.txt dist/game/GPL.txt && cp src/README.txt dist/README.txt && cp src/EventDump.html dist/ && cp src/EventGraph.html dist/ && cp src/TradeGraph.html dist/",
     "string-replace": "sed '/<svg id=\"map\"><\\/svg>/r src/content/Map.svg' src/index.html | sed 's/<svg id=\"map\"><\\/svg>//' | sed 's/Map.png/game\\/content\\/Map.png/g' > dist/index.html",
     "uglify": "uglifyjs --compress -- src/lib/*.js > dist/game/lib.js",
     "watch": "nodemon --watch src/ -e coffee,css,html,svg --exec 'npm run compile'",

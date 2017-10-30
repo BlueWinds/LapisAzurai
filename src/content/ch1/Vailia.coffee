@@ -77,7 +77,7 @@ s.Intro =
   """
 
 s.Ch1 =
-  label: 'Chapter 1 - Vailia'
+  label: 'Vailia'
   blocking: true
   history:
     Intro: true
@@ -123,6 +123,8 @@ s.Ch1 =
 
     `Guildmaster Please let me know when you return.` He didn't react to her gesture, other than adjust a stack of papers, but she suspected he was pleased. Hard to tell, with the Guildmaster. She also knew a dismissal when she heard one.
   """
+  apply: ->
+    Game.showOverlay('<h1>Chapter 1</h1><h3>Vailia</h3>', 0, 'chapter overlay')
 
 s.ReadyToGo =
   label: 'Ready to Set Sail'
@@ -433,6 +435,59 @@ s.MeetMeghan =
 
     `N ...Yes sir.`
   """
+
+s.Ch2 =
+  label: 'Kantis'
+  required: 'GameOverFun'
+  history:
+    MeetMeghan: true
+  effects:
+    xp:
+      Natalie: 3
+  text: -> """
+  || places/GuildOffice
+    Natalie grinned and waved at the young man at the front desk, but didn't stop – no time to chat, only time to pause and shake water out her hair. Without James here to tug at her wrist she was running rather late, despite having given herself plenty of time to arrive. She hurried along the familiar corridors towards Janos' office.
+
+    She hesitated at his door - voices inside. She knocked smartly. The voices paused a moment, then resumed. Apparently he meant to finish whatever business he was attending before inviting her in. Natalie sighed and went over to a window. The view was impressive, looking down over the city. The Lapis was just barely visible from here. She tapped her foot on the polished wood floor, ran her finger along the windowsill (not as spotless as she'd kept it, when cleaning this office had been her job), and waited.
+
+    Ten minutes later the door opened, and a weary looking Guildmaster held it for his guests. A stern looking older woman nodded as Natalie as she brushed past, decked in a foreign and formal dress. Janos' knuckles whitened on the door frame, and he didn't so much as glance at Natalie as he watched the woman move sedately down the long hallway.
+
+  || Guildmaster/Skeptical
+    Finally, once she had turned out of sight he nodded to Natalie, and gestured with one hand for her to enter. While she made herself comfortable in her usual chair, he sat down behind the desk with a sigh.
+
+    `Guildmaster Don't get old, Natalie. Or at least retire when you do.` He massaged his temples with one hand.
+
+    `N Any time you want to feel young again, I'm sure there's dozens of women who'd be happy to help. Not me though, I don't like geezers,` she stuck out her tongue.
+
+  || N/Excited
+    He laughed and leaned across to ruffle her hair.
+
+    `Guildmaster You always know the right thing to say. I miss Wend sometimes, and now with you gone... none of the other Children have quite the same spark. I'm going to become boring.` He slapped his hands on the desk, wiping the happy expression off his face, business-like demeanor returning. `Guildmaster I hear you've been spending some time in Alkenia recently.
+
+    `N Alkenia, yes sir. Would you like me to tell you about it?` She had guessed his intentions correctly, and he nodded. `N It's doing well. They're clearing land for farming, starting to spread out beyond the city walls. Steel tools are everywhere. And weapons. They're terribly afraid of the forest.`
+
+    `Guildmaster They have every right to be. Lady Meghan assures me that...` he shook his head doubtfully. `Guildmaster They should be safe enough these days, if Nonkenia will leave them alone. The forest spirits are afraid of steel.`
+
+  || Guildmaster/Thinking
+    Natalie pondered his words, nodded. It fit with what she'd felt from the people there. Everyone seemed worried that the floor was going to drop out from under them. It hadn't been an entirely pleasant. `N Is there anything in specific you'd like to know?`
+
+    He grilled her briefly on the prices of various goods, quantities and qualities that she'd seen for sale. It was amazing the way he seemed to soak up information, fitting new facts into some sort of masterful puzzle only he could see. Finally, he gestured her to silence while he pondered the way the pieces fell together.
+
+    `Guildmaster You've done good work. It's time to send you beyond the borders, as it were. I will prepare a letter tonight, and have it sent to your ship. Please deliver it to Saottica. One of Kantis' outlying ports.`
+
+    She sat up straight, grinned, uncrossed her legs. `N Aye aye sir!`
+
+    `Guildmaster Stop it, you're making me feel old again,` he grumbled, but his smile said the opposite of his words.
+
+    Natalie stood and saluted, garnering another grumble, and turned to leave.
+
+    `Guildmaster Take some glass blowing tools with you. The price in Kantis won't disappoint.` Though it seemed an afterthought, the delivery was too timely and smooth. The advice was, she could guess, to be her means of payment for the mission. That, and a rutter to Kantis. A book showing the sea-lanes, tides, locations and details of a distant land was a secret worth many times what it would cost to have a different captain deliver the message. A promotion, effectively.
+
+    `N Aye aye sir!` She saluted again, and danced out before he could object.
+  """
+  apply: ->
+    g.chapter = 'Ch2'
+    Game.showOverlay('<h1>Chapter 2</h1><h3>Kantis</h3>', 0, 'chapter overlay')
 
 Place.Vailia.stories.Ch1 = Object.keys(s)
 for key, value of s
