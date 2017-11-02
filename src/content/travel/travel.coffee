@@ -49,6 +49,28 @@ s.FirstStorm2 =
     Slept.
   """
 
+s.Clouds =
+  label: 'Clouds on the Horizon'
+  history:
+    KatJoins: true
+  effects:
+    xp:
+      Kat: 2
+  text: -> """
+  || travel/DeckDay
+    ` Land ahoy!` The cry came from the crow's nest, stirring everyone into action. Most of the crew ran to the side of the ship where the watchman was pointing, while Natalie shaded her epes with one hand against the brilliant noon sun from where she stood at the helm.
+
+    `K Oy, that's not land, you dolt!` Kat had been the first to the railing, and she yelled back up to the watch. `K It's just a dark cloud!`
+
+    ` Looks like land to me.` ` Can't be, shouldn't be anything but open water out here.` ` Too dark for a cloud, and the shore's clear.` ` Hm, maybee...` Sailors discussed among themselves, while Kat ran to the helm.
+
+    `K Cap'n, permission to fetch your spyglass so you can set these dufus' aright?`
+    `N Granted.`
+
+  || K/Happy
+    It had looked like land to Natalie as well as the watchman, despite the lack of charted islands in the area, but the spyglass proved Kat right - nothing more than an unusual set of clouds. Natalie strained her senses watching it. Yes, the distant darkness smelled faintly of magic, even from here. The lapis steered well clear.
+  """
+
 Place.travel.Sail.stories = Object.keys(s)
 for key, value of s
   Story[key] = value
