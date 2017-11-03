@@ -38,7 +38,7 @@ s.VisitElakim =
     xp:
       Natalie: 5
   text: -> """
-  || place/KantisDay
+  || places/KantisDay
     Near the waterKantis was a city like any other, but as Natalie climbed higher up the slope surrounding the harbor, there was a wall. On one side things were noisy, commercial, disorderly, as if the people were frantic to make a sale. Passing under the arch, she ran face first into a wall of silence. Instead of streets and buildings, she faced footpaths and gardens, manicured trees and open space. Two of the four gate guards came over. Four seemed a rather large number of armed men to be keeping watch in a peaceful city.
 
     ` Can I help you?`
@@ -51,11 +51,12 @@ s.VisitElakim =
 
     ` Two gates east. This is Hoes Peland.` His companion muttered something about meddling Vailians, and Natalie took her leave before they could make up  their minds to do something more than grumble.
 
-  || place/KantisGarden
+  || places/KantisGarden
     The reception at House Appolon's gate was far more cordial, with a servant waiting to guide her to an immediate meeting with the master of the house. The way to tha manor house led them through a small orchard. The estate was immense, especially nestled as it was right next to a dense city, where so many others could have profitably used the space.
 
     As before, the felt the presence of another mage before she saw him. Elakim Appolon was waiting for her on a patio, magic coiled around him, controlled and ready. He stood as she approached.
 
+  || Elakim/Serious
     `Elakim Welcome to my summer estate. I'm glad to hear you landed at my pier. I hope they treated you well?` His accent was thicker than other Kantians. Probably a mark of status or nobility, Natalie decided.
 
     `N Very kind of you, thanks. I came to ask what exactly being your gues entails, though. Our last meeting was rather short-lived to have inspired such generosity on your part.`
@@ -66,13 +67,33 @@ s.VisitElakim =
 
     `Elkaim Ulterior motives, of course. We lords of Kantis are no less grasping of any advantage against our peers than you, but we're accustomed to cloaking it behind noble sentiments. Many in the city find the honesty of the Vailian obsession with money and power disconcerting. Please, sit.`
 
-    Natalie coughed politely, attempting to hide her dismay. She took a seat across from him, the freshly woved wicker chair accepting her weight without complaint. Was that how she came across, obsessed with money and power? Was that how outsiders saw the Guild? `N I suppose it I'm given the mask, I may as well wear it. What do you hope to gain?'
+    Natalie coughed politely, attempting to hide her dismay. She took a seat across from him, the freshly woved wicker chair accepting her weight without complaint. Was that how she came across, obsessed with money and power? Was that how outsiders saw the Guild? `N I suppose it I'm given the mask, I may as well wear it. What do you hope to gain?`
 
-    'Elakim I don't know yet, but it did seem prudent to keep you out of my rivals' hands. You're potentially quite valuable, you know - and alas, also quite vulnerable. A powerful, untrained mage without heir or family? Extending my protection and patronage was the only honorable thing to do. It was a stroke of fortune that you met me in Colinth, rather than one of the other lords. I already have an heir, and he's far too young for a bride.`
+    `Elakim I don't know yet, but it did seem prudent to keep you out of my rivals' hands. You're potentially quite valuable, you know - and alas, also quite vulnerable. A powerful, untrained mage without heir or family? Extending my protection and patronage was the only honorable thing to do. It was a stroke of fortune that you met me in Colinth, rather than one of the other lords. I already have an heir, and he's far too young for a bride.`
 
+  || N/Upset
     Natalie blanched at the implication. She was here alone. Why had she come alone? James - or better yet Asara - shou should be at her side. Whatever power the priestess held, it ought to be enough to make even a mage-lord think twice before harassing her. `N The Guild is not to be triffled with,` she forced an even tone, grasping for some manner of outside authority to hold as a shield.
 
     `Elakim Vailia's power may be waxing, but we are not yet overshadowoed in our own home,` Elakim frowned. `Elakim You have nothing to worry about from me. And as long as you don't make yourself too tempting a target, I doubt any of the other lords will risk my wrath by troubling you. Keep your friends close, Natalie. Kantis is not a safe place without allies to watch your back. I hope that someday you will count me among them.`
+  """
+
+
+s.KantisPots =
+  label: 'Pots, Pans and Complaints'
+  history:
+    KantisArrive: true
+  effects:
+    xp:
+      James: 3
+  text: -> """
+  || places/KantisDay
+    `J Can you believe the price of this?` James hefted the pot under his arm, replacement for one lost overboard during an unfortunate scuffle between two of the crew.
+
+    `N Hm? Seemed about fair to me.` Natalie responded absentmindedly, busy checking her notes on what the ship needed. On a larger vessel this would have been the quartermaster's job, but she and James shared that role as time allowed.
+
+    `J About fair for a sturdy Vailian pot, sure. But feel it, the texture's wrong. That means the metal's brittle. I'll be surprised if it lasts more than six months. They probably got some ash in the ingots and...`
+
+    `N You can take the James out of smithy, but you can't take the smithy ouf of James,` she inturrupted his rant with a grin and a ringing slap on the pot. `N No complaining. If they made pots like we do, we wouldn't be making money bringing Vailian pots here. Oh, come on, stop making that face and keep an eye out for good canvas. I want to lay in a better store in case we run into another storm like that last one.`
   """
 
 Place.Kantis.stories.Ch2 = Object.keys(s)

@@ -478,14 +478,14 @@ hr {
 button {
   color: #ffffff;
   cursor: pointer;
-  background-color: #2a9fd6;
-  border: 1px solid #2a9fd6;
+  background-color: #1a3f66;
+  border: 1px solid #1a3f66;
   border-radius: 6px;
 }
 
-button.active:hover, .skill button.active:focus {
-  background-color: #2386b4;
-  border-color: #1f79a3;
+button:hover, .skill button:focus {
+  background-color: #1a2f56;
+  border-color: #1a2f56;
 }
 
 button:disabled {

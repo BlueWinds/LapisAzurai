@@ -64,11 +64,29 @@ s.Clouds =
 
     ` Looks like land to me.` ` Can't be, shouldn't be anything but open water out here.` ` Too dark for a cloud, and the shore's clear.` ` Hm, maybee...` Sailors discussed among themselves, while Kat ran to the helm.
 
+  || K/Happy
     `K Cap'n, permission to fetch your spyglass so you can set these dufus' aright?`
     `N Granted.`
 
-  || K/Happy
     It had looked like land to Natalie as well as the watchman, despite the lack of charted islands in the area, but the spyglass proved Kat right - nothing more than an unusual set of clouds. Natalie strained her senses watching it. Yes, the distant darkness smelled faintly of magic, even from here. The lapis steered well clear.
+  """
+
+s.DistantShoals =
+  label: 'Distant Shoals'
+  history:
+    KatJoins: true
+  effects:
+    xp:
+      James: 2
+  text: -> """
+  || travel/SailingDay
+    `N Bring in the sails.` Natalie squinted against the noonday sun reflecting off the waves. `N Slow us down.`
+
+    `J Mainsail around! Kat, get those ropes stowed, now's not the time for messing around!` James put her quiet order into action with shouted commands, setting the crew in motion. `J What's wrong?`
+
+    `N See how the texture of the water's different? We've drifted a little west of where we should be. Nothing serious, just a few miles. There are shoals in this area. We'll take it slow.` That was the value of an accurate rutter - not just directions and distances, but landmarks, seasonal changes, dangers and observations, painstakingly compiled over decades, often at the cost of lives.
+
+    Natalie squinted against the sunlight again. Best not to scrape her ship along the underwater rocks in this region. At least it was high tide right now.
   """
 
 Place.travel.Sail.stories = Object.keys(s)

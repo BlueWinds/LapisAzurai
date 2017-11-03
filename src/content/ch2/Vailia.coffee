@@ -598,7 +598,7 @@ s.JamesCh3 =
     xp:
       Natalie: 2
   text: -> """
-  || J/Sad
+  ||
     TODO
 
     <button onclick="Story.continueWith('JamesCh3Yes')">`N Let me go with you?`</button> <button onclick="Story.continueWith('JamesCh3No')">`N I think you should speak with her.`</button>

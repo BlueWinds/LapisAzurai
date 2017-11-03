@@ -1,1 +1,2 @@
-Person.Elakim = {}
+Person.Elakim =
+  name: 'Elakim Appolon'

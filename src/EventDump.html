@@ -1,127 +1,156 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
-<style>
-  body {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-  }
-
-  #index {
-    margin: auto;
-    width: 20%;
-  }
-
-  img {
-    float: left;
-    max-width: 300px;
-    max-height: 200px;
-    margin: 0 15px 10px 0;
-  }
-
-  section {
-    clear: both;
-    margin-bottom: 20px;
-  }
-
-  hr {
-    clear: both;
-    margin-top: 20px;
-  }
-
-  h1 {
-    border-top: 5px solid black;
-    clear: both;
-    margin-top: 60px;
-    padding-top: 30px;
-    text-align: center;
-  }
-
-  h2 {
-    margin-bottom: 5px;
-  }
-
-  h4 {
-    margin: 10px;
-  }
-</style>
-<script src="game/lib.js"></script>
-<script src="game/compiled.js"></script>
-<script src="http://localhost:35729/livereload.js"></script>
-<script>
-  window.g = {history: {}, people: {}}
-
-  function drawEvents(chapter) {
-    var index = $('#index').empty()
-    var w = $('#warnings').empty()
-    var s = $('#stories').empty()
-
-    for (let type in Place.travel) {
-      index.append('<h2>' + type + '</h2>')
-      Place.travel[type].stories.forEach(drawStory);
-      index.append('<h2>' + type + ' Delay</h2>')
-      Place.travel[type].delayStories.forEach(drawStory);
+  <link href="game/content.css" rel="stylesheet">
+  <link href="game/engine.css" rel="stylesheet">
+  <style>
+    body {
+      background: #000;
+      color: #aaa;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
     }
 
-    for (let chapter in Place.Vailia.stories) {
-      index.append('<h2>' + chapter + '</h2>')
-      for (let place in Place) {
-        if (!Place[place].stories || !Place[place].stories[chapter] || !Place[place].stories[chapter].length) { continue; }
-
-        index.append('<h4>' + place + '</h4>')
-        Place[place].stories[chapter].forEach(drawStory);
-      }
+    a {
+      color: #6af;
     }
 
-    function drawStory(story) {
-      if (!Story[story].text) { return; }
+    li {
+      list-style: none;
+    }
 
-      const link = '<a href="#' + story + '">' + story + '</a>';
+    #index, #warnings {
+      padding: 0;
+      text-align: center;
+    }
 
-      if (!Story[story].label) {
-        w.append('<li>' + link + ' is missing a label</li>');
+    img {
+      float: left;
+      max-width: 300px;
+      max-height: 200px;
+      margin: 0 15px 10px 0;
+    }
+
+    section {
+      clear: both;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      border-top: 5px solid black;
+      clear: both;
+      margin-top: 60px;
+      padding-top: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    h4 {
+      margin: 10px;
+    }
+
+    section {
+      display: block;
+    }
+  </style>
+  <script src="game/lib.js"></script>
+  <script src="game/compiled.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script>
+    window.g = {history: {}, people: {}}
+
+    function drawEvents() {
+      var index = $('#index').empty()
+      var w = $('#warnings').empty()
+      var s = $('#stories').empty()
+
+      for (let type in Place.travel) {
+        index.append('<h2>' + type + '</h2>')
+        Place.travel[type].stories.forEach(drawStory);
+        index.append('<h2>' + type + ' Delay</h2>')
+        Place.travel[type].delayStories.forEach(drawStory);
       }
 
-      var history = Story[story].history
-      for (prereq in history) {
-        if (history[prereq] !== true && history[prereq] !== false) {
-          w.append('<li>' + link + ' has a non-boolean history (' + prereq + ', ' + history[prereq] + ').</li>');
+      for (let chapter in Place.Vailia.stories) {
+        let xp = {};
+        let xpHeader = $('<h5></h5>')
+
+        index.append('<h2>' + chapter + '</h2>')
+        index.append(xpHeader)
+
+        for (let place in Place) {
+          if (!Place[place].stories || !Place[place].stories[chapter] || !Place[place].stories[chapter].length) { continue; }
+
+          index.append('<h4>' + place + '</h4>')
+          Place[place].stories[chapter].forEach(drawStory);
+          xp = Place[place].stories[chapter].reduce(addXp, xp || {});
         }
+
+        xpHeader.html(Object.keys(xp).sort().reverse().map(function(c) { return c + ' - ' + xp[c] + 'xp'; }).join('<br>'));
       }
 
-      if (Story[story].required && !Story[Story[story].required]) {
-        w.append('<li>' + link + '\'s Game Over story doesn\'t exist (' + Story[story].required + ').</li>');
-      }
+      function drawStory(story) {
+        if (!Story[story].text) { return; }
 
-      sections = Story.render(story);
-      sections.each(function(i) {
-        section = $(this).attr('id', story + i)
-        const i_link = '<a href="#' + story + i + '">' + story + '[' + i + ']</a>';
-        len = section.text().length;
+        const link = '<a href="#' + story + '">' + story + '</a>';
 
-        if (section.find('img').length && len < 200) {
-          w.append('<li>' + i_link + ' has an image, but is only ' + len + ' characters long.</li>');
+        if (!Story[story].label) {
+          w.append('<li>' + link + ' is missing a label</li>');
         }
 
-        if (len > 1800) {
-           w.append('<li>' + i_link + ' is ' + len + ' characters long, consider breaking it up.</li>');
+        var history = Story[story].history
+        for (prereq in history) {
+          if (history[prereq] !== true && history[prereq] !== false) {
+            w.append('<li>' + link + ' has a non-boolean history (' + prereq + ', ' + history[prereq] + ').</li>');
+          }
         }
 
-        section.find('img').on('error', function(e) {
-          w.prepend('<li>' + i_link + ' wanted invalid image "' + decodeURI(this.src.split('content/')[1]) + '"</li>');
+        if (Story[story].required && !Story[Story[story].required]) {
+          w.append('<li>' + link + '\'s Game Over story doesn\'t exist (' + Story[story].required + ').</li>');
+        }
+
+        sections = Story.render(story);
+        sections.each(function(i) {
+          section = $(this).attr('id', story + i)
+          const i_link = '<a href="#' + story + i + '">' + story + '[' + i + ']</a>';
+          len = section.text().length;
+
+          if (section.find('img').length && len < 200) {
+            w.append('<li>' + i_link + ' has an image, but is only ' + len + ' characters long.</li>');
+          }
+
+          if (len > 1800) {
+            w.append('<li>' + i_link + ' is ' + len + ' characters long, consider breaking it up.</li>');
+          }
+
+          section.find('img').on('error', function(e) {
+            w.prepend('<li>' + i_link + ' wanted invalid image "' + decodeURI(this.src.split('content/')[1]) + '"</li>');
+          });
         });
-      });
 
-      index.append('<li>' + link + '</li>');
-      s.append('<h1 id="' + story + '">' + story + ' <a href="#">^</a></h1>');
-      s.append(sections);
+        index.append('<li>' + link + '</li>');
+        s.append('<h1 id="' + story + '">' + story + ' <a href="#">^</a></h1>');
+        s.append(sections);
+      }
+
+      function addXp(chXp, story) {
+        if (!Story[story].effects) { return chXp; }
+        for (let character in Story[story].effects.xp || {}) {
+          chXp[character] = chXp[character] || 0;
+          chXp[character] += Story[story].effects.xp[character];
+        }
+        return chXp;
+      }
     }
-  }
-</script>
+  </script>
 </head>
-<body onload="drawEvents('Ch1')">
+<body onload="drawEvents()">
   <ul id="warnings"></ul>
   <ul id="index"></ul>
   <div id="stories"></div>

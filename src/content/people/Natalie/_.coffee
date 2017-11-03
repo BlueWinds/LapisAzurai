@@ -21,7 +21,7 @@ Person.Natalie =
       doubledBy: 'Fear'
     Initiate:
       description: 'Unlock Chapter 2'
-      requiresAnd: ['Gregarious', 'Grounded']
+      requiresOr: ['Gregarious', 'Grounded']
 
     Overdeliver2:
       name: 'Overdeliver 2'
@@ -45,7 +45,7 @@ Person.Natalie =
       doubledBy: 'Trust'
     Mage:
       description: 'Unlock Chapter 3'
-      requiresAnd: ['WellInformed', 'SilverTongue2']
+      requiresOr: ['WellInformed', 'SilverTongue2']
 
     WinningSmile2:
       name: 'Winning Smile 2'
@@ -69,4 +69,4 @@ Person.Natalie =
       doubledBy: 'Love'
     Adept:
       description: 'Unlock endings'
-      requiresAnd: ['WellInformed2', 'SilverTongue2']
+      requiresOr: ['WellInformed2', 'SilverTongue2']

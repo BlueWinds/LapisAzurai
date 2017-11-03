@@ -20,7 +20,7 @@ sampleData =
 window.Person = {
   alias: {}
 
-  xpNeeded: (level)-> level * (level + 4)
+  xpNeeded: (level)-> Math.round(Math.pow(level, 1.5) * 4)
 
   level: (xp)->
     l = 0

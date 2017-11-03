@@ -155,7 +155,7 @@ s.KatMeetsJames =
     KatTrial: true
   effects:
     xp:
-      James: 2
+      James: 3
   text: -> """
   || places/AlkeniaNight
     `K Hi!`
@@ -187,7 +187,7 @@ s.KatStorm =
     KatTrial: true
   effects:
     xp:
-      Natalie: 3
+      Natalie: 2
   text: -> """
   || places/AlkeniaStorm
     Though the weather had maintained a pleasant tenor all through the day, as the sun set, clouds began to blow in from the horizon. Not a dangerous storm, just a bit of nasty rain to put a damper on Natalie's plans for the evening in town.
@@ -219,6 +219,7 @@ s.KatStorm =
 s.KatStorm2 =
   label: 'Out of the Storm'
   blocking: true
+  required: 'GameOverKindness'
   history:
     KatStorm: true
   text: -> """
@@ -260,7 +261,7 @@ s.KatJoins =
   label: 'Kat Joins'
   required: 'GameOverFun'
   history:
-    KatStorm: true
+    KatStorm2: true
   effects:
     xp:
       Kat: 10
