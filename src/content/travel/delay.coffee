@@ -4,7 +4,7 @@ $.extend Place.travel.Sail, {
   delayOccurs: (from, to, distance)->
     if g.history.FirstStormSick then return Math.random() < 0.03
     # Always trigger a storm on the trip back to Vailia when we're almost in port
-    if g.history.MtJuliaArrive and not g.history.FirstStorm and distance < 45 then return true
+    if g.history.MtJuliaArrive and not g.history.FirstStorm and distance < 75 then return true
     # No storms until we've had the intro event about Natalie
     return false
   delayDailyDamage: (from, to, distance)->
@@ -94,6 +94,8 @@ s.FirstStorm =
 
     James shook his head again, trying to clear it. That they hadn't sunk yet was nearly a miracle. Whatever manic state had come over her, Natalie was still alive, and still holding the wheel, turning as best she could to face each new assault from the storm. In a brief lull in the wind, he heard someone below shouting to get buckets and head below decks. He clasped her shoulder again and headed off to help.
   """
+  apply: ->
+    g.map.delay = 3
 
 Place.travel.Sail.lostCargo = ->
   cargo = Math.choice(g.cargo)

@@ -52,7 +52,7 @@ $.extend Place, {
       $('#' + place + 'Mask').attr('fill', 'url(#maskBlur)')
       updateLabel(place)
 
-    location = Place.location(g.map.from, g.distance)
+    location = Place.location(g.map)
     document.getElementById('Ship').attributes.x.value = location.x
     document.getElementById('Ship').attributes.y.value = location.y
 

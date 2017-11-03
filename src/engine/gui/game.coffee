@@ -111,7 +111,7 @@ Game.passDay = ->
     return
 
   setTimeout ->
-    unless g.day % 20 is 1
+    unless localStorage.autosave is localStorage.autosave0
       delete localStorage[localStorage.autosave]
     now = Date.now()
     localStorage.setItem now, jsyaml.safeDump(g)

@@ -26,14 +26,15 @@ window.Place = {
     e.reputation[g.map.from] = -Math.min(1, g.reputation[g.map.from])
     return e
 
-  location: (place, distance)->
+  location: (map)->
     # A path
-    if '_' in place
-      len = Place.distanceAlongPath(place, distance)
-      return element.getPointAtLength(len)
+    if map.to
+      path = Place.svgElement([map.from, map.to])
+      len = Place.distanceAlongPath(path.id, map.distance or 0)
+      return path.getPointAtLength(len)
 
     # A port
-    circle = document.getElementById(place).children[1]
+    circle = document.getElementById(map.from).children[1]
     return {x: circle.cx.baseVal.value, y: circle.cy.baseVal.value}
 
   distanceAlongPath: (place, distance)->
@@ -82,10 +83,10 @@ window.Place = {
       start: map.distance
       direction: dir
       pxTravel: to - map.distance
-      story: Story.travelEvent(map.from, map.to, travel)
+      story: unless map.delay then Story.travelEvent(map.from, map.to, travel)
     }
 
-    if event.pxTravel isnt pxPerDay
+    if to is 0 or to is path.getTotalLength()
       event.image = Place[map.to].img
     # No storms the day you arrive in port
     else if map.delay or Place.travel[travel].delayOccurs(map.from, map.to, map.distance)

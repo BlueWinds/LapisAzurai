@@ -54,7 +54,7 @@ $.extend Story, {
 
   display: (story, speed = 500)->
     elements = Story.render(story)
-    $('#content').css({display: 'block'}).animate {opacity: 1}, speed, ->
+    $('#content').css({display: 'block'}).stop().animate {opacity: 1}, speed, ->
       Place.drawMap()
       Place.hideOverview(speed)
 
@@ -149,11 +149,12 @@ $.extend Story, {
   enterMap: ->
     if Story.gameIsOver() then return
     g.scroll = -1
-    if g.map.to then Place.travel()
     $('#content').stop().animate {opacity: 0}, 500, ->
       # Make sure the user didn't cancel and go back to the previous page before hiding the #content + deactivating sections.
       if $('#content').css('opacity') is '0'
         $('#content').css {display: 'none'}
+
+    if g.map.to then Place.travel()
 
   exitMap: ->
     g.scroll = $('#stories').children().length - 1

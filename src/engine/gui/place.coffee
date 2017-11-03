@@ -19,8 +19,6 @@ $.extend Place, {
     Place.drawMap()
 
   draw: (place)->
-    location = Place.location(place)
-
     if g.map.from is place
       distanceDesc = 'Docked'
       travel = ''
