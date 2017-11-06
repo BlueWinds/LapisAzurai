@@ -96,6 +96,22 @@ s.KantisPots =
     `N You can take the James out of smithy, but you can't take the smithy ouf of James,` she inturrupted his rant with a grin and a ringing slap on the pot. `N No complaining. If they made pots like we do, we wouldn't be making money bringing Vailian pots here. Oh, come on, stop making that face and keep an eye out for good canvas. I want to lay in a better store in case we run into another storm like that last one.`
   """
 
+s.KatsDayOut =
+  label: "Kat's day out"
+  history:
+    KantisArrive: true
+  effects:
+    xp:
+      Kat: 2
+  text: -> """
+  || places/KantisDay
+    The higher one went in Kantis the nicer things became. Away from the noise and stink of the waterfront districts, the city was an entirely pleasant place. Up here the white marble was washed clean by the rain. The beggars and homeless were kept in check by patrols answering to the lords of Kantis, the mages ruling over the city from their high villas.
+
+    Regardless of the cause, Kat found it a pleasant place to take a walk. Strangers nodded at her (even if some of them did whisper unkind things about Vailians), guards didn't hassle her, and there was quiet and space aplenty. She'd missed that since her homeless days. Life aboard a ship was constantly busy and always crowded. Now, without the poverty and constant fear that had made her childhood so unpleasant it was relaxing indeed.
+
+    For the moment at least she was content to wander. The driving, restless spark was quiet. She imagined what the others would make of that, of manic Kat just enjoying a quiet walk by herself. James wouldn't believe it. She started making a crazy escapade to tell him. An attempted robbery, scuffle with the city guards and harrowing chase across the city roofs? She grinned. He'd totally believe that of her.
+  """
+
 Place.Kantis.stories.Ch2 = Object.keys(s)
 for key, value of s
   value.place = 'Kantis'
