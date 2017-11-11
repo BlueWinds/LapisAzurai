@@ -104,7 +104,7 @@ Story.GameOverSorrow =
 gameOverText = ->
   story = Story.gameIsOver()
   """
-  ||
+  ||-
     <center><i>Time has run out for "<b>#{Story[story].label}</b>" at #{Place[Story[story].place].name}. Natalie and her friends will carry on, but the story is incomplete...</i></center>
 
   """

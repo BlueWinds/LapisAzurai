@@ -437,7 +437,7 @@ s.MeetMeghan =
   """
 
 s.Ch2 =
-  label: 'Kantis'
+  label: 'Chapter 2 - Kantis'
   required: 'GameOverFun'
   history:
     MeetMeghan: true

@@ -15,6 +15,9 @@ Formatting guide:
 
 |||| travel/SailingStorm
   Starts a full-screen section. While active, the image will be used as a background rather than floating inline, and the text will be at the top of the screen. All other sections will be hidden.
+
+||-
+  This section cannot be clicked through by the player. As with a <button> tag, yourcode is responsible for calling Story.changeSection(1 true) when you're ready to carry on. Or don't, if this is a game-over screen.
 ###
 
 $.extend Story, {
@@ -108,6 +111,8 @@ $.extend Story, {
         sections.append(lastSection)
         if line.match /^\|\|\|\|/
           lastSection.addClass('full-screen')
+        if line.match /^\|\|-/
+          lastSection.addClass 'noClickThrough'
       else
         lastSection.append('<p>' + line + '</p>')
         if line.match /<button.*<\/button>/
@@ -147,7 +152,6 @@ $.extend Story, {
     $('#stories').stop().scrollTo(to, 300, {over: 1}).focus()
 
   enterMap: ->
-    if Story.gameIsOver() then return
     g.scroll = -1
     $('#content').stop().animate {opacity: 0}, 500, ->
       # Make sure the user didn't cancel and go back to the previous page before hiding the #content + deactivating sections.

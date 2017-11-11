@@ -1,6 +1,5 @@
 $.extend Place, {
   showOverview: (place = $('.place').attr('place') or g.map.from, duration = 500)->
-    if Story.gameIsOver() then return
     o = $('#overview')
     Person.updateOverview()
 

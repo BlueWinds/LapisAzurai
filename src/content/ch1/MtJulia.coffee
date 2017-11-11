@@ -137,6 +137,7 @@ s.AsaraAwakens =
   required: 'GameOverKindness'
   history:
     MeetAsara: true
+  extraDays: 15
   effects:
     xp:
       Natalie: 2
