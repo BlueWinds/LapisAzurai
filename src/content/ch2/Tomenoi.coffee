@@ -184,6 +184,9 @@ s.KantisRegion3 =
 
     Asara shook her head again. Too much sharing. Maybe later, once she'd seen that Natalie wouldn't try to hurt her with this information. Maybe.
   """
+  apply: ->
+    g.reputation.Colinth = 0
+    g.reputation.Kantis = 0
 
 s.TomenoiHistory =
   label: 'History'

@@ -99,7 +99,7 @@ Place.Vailia =
     Tomenoi: 1
     Colinth: 'Tomenoi'
     Kantis: 'Tomenoi'
-    Spinis: 'Tomenoi'
+    Naxins: 'Tomenoi'
     Lephai: 'Tomenoi'
     Ment: 'Tomenoi'
     Crater: 'Tomenoi'
@@ -145,7 +145,7 @@ Place.MtJulia =
     Tomenoi: 'Vailia'
     Colinth: 'Vailia'
     Kantis: 'Vailia'
-    Spinis: 'Vailia'
+    Naxins: 'Vailia'
     Lephai: 'Vailia'
     Ment: 'Vailia'
     Crater: 'Vailia'
@@ -178,7 +178,7 @@ Place.Alkenia =
     Tomenoi: 'MtJulia'
     Colinth: 'MtJulia'
     Kantis: 'MtJulia'
-    Spinis: 'MtJulia'
+    Naxins: 'MtJulia'
     Lephai: 'MtJulia'
     Ment: 'MtJulia'
     Crater: 'MtJulia'
@@ -205,7 +205,7 @@ Place.Nonkenia =
     Tomenoi: 'MtJulia'
     Colinth: 'MtJulia'
     Kantis: 'MtJulia'
-    Spinis: 'MtJulia'
+    Naxins: 'MtJulia'
     Lephai: 'MtJulia'
     Ment: 'MtJulia'
     Crater: 'MtJulia'
@@ -228,7 +228,7 @@ Place.IronSands =
     Tomenoi: 'Vailia'
     Colinth: 'Vailia'
     Kantis: 'Vailia'
-    Spinis: 'Vailia'
+    Naxins: 'Vailia'
     Lephai: 'Vailia'
     Ment: 'Vailia'
     Crater: 'Vailia'
@@ -252,7 +252,7 @@ Place.Tomenoi =
     IronSands: 'Vailia'
     Colinth: 1
     Kantis: 1
-    Spinis: 'Colinth'
+    Naxins: 'Colinth'
     Lephai: 'Colinth'
     Ment: 'Colinth'
     Crater: 'Colinth'
@@ -277,7 +277,7 @@ Place.Colinth =
     IronSands: 'Tomenoi'
     Tomenoi: -1
     Kantis: 1
-    Spinis: 1
+    Naxins: 1
     Lephai: 1
     Ment: 'Lephai'
     Crater: 'Lephai'
@@ -301,7 +301,7 @@ Place.Kantis =
     IronSands: 'Tomenoi'
     Tomenoi: -1
     Colinth: -1
-    Spinis: 1
+    Naxins: 1
     Lephai: 1
     Ment: 'Lephai'
     Crater: 'Lephai'
@@ -314,8 +314,8 @@ Place.Kantis =
     Colinth: ['Anchors', 'Beer', 'Canvas', 'Dates', 'Flour', 'Hatchets and Saws', 'Honey', 'Olive Oil', 'Pickles', 'Rope', 'Silver', 'Wheat']
     Amandais: ['Beer', 'Carpet', 'Clothing', 'Hatchets and Saws', 'Honey', 'Linen', 'Olive Oil', 'Olives', 'Salt', 'Self Bows', 'Veined Marble']
 
-Place.Spinis =
-  name: 'Spinis'
+Place.Naxins =
+  name: 'Naxins'
   img: ''
   paths:
     Vailia: 'Colinth'
@@ -345,7 +345,7 @@ Place.Lephai =
     Tomenoi: 'Colinth'
     Colinth: -1
     Kantis: -1
-    Spinis: -1
+    Naxins: -1
     Ment: 1
     Crater: 'Ment'
     Amandais: 1
@@ -364,7 +364,7 @@ Place.Ment =
     Tomenoi: 'Lephai'
     Colinth: 'Lephai'
     Kantis: 'Lephai'
-    Spinis: 'Lephai'
+    Naxins: 'Lephai'
     Lephai: -1
     Ment: 1
     Crater: 1
@@ -383,7 +383,7 @@ Place.Crater =
     Tomenoi: 'Ment'
     Colinth: 'Ment'
     Kantis: 'Ment'
-    Spinis: 'Ment'
+    Naxins: 'Ment'
     Lephai: 'Ment'
     Ment: -1
     Crater: 'Ment'
@@ -402,7 +402,7 @@ Place.Amandais =
     Tomenoi: -1
     Colinth: -1
     Kantis: -1
-    Spinis: -1
+    Naxins: -1
     Lephai: -1
     Ment: 'Lephai'
     Crater: 'Lephai'

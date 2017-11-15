@@ -4,7 +4,8 @@ s.KantisArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
-  history: {}
+  history:
+    KantisRegion3: true
   effects:
     xp:
       Natalie: 3

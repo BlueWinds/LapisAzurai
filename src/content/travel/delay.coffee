@@ -150,10 +150,6 @@ s.StormSpeedOrSafety =
     Storm clouds darken the sky, and winds begin to pick up. Natalie can feel the energy building, crawling along her skin and ready to break at any moment. It's a big one. Should the Lapis sail into <button onclick='Place.travel.Sail.makeProgress();'>the teeth of the storm</button> or <button onclick='Place.travel.Sail.reduceDamage();'>douse the sails</button> while there's still time?
   """
 
-Story.StormLoseCargo =
-  label: 'Lose Cargo'
-  text: -> 'Lost cargo'
-
 Place.travel.Sail.delayStories = Object.keys(s)
 for key, value of s
   Story[key] = value

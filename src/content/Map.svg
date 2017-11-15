@@ -16,7 +16,7 @@
       <circle id="TomenoiMask" cx="832" cy="470" r="150" fill="url(#maskBlur)" />
       <circle id="ColinthMask" cx="1079" cy="413" r="150" fill="url(#maskBlur)" />
       <ellipse id="KantisMask" cx="1013" cy="435" rx="250" ry="82" fill="url(#maskBlur)" />
-      <circle id="SpinisMask" cx="1173" cy="493" r="125" fill="url(#maskBlur)" />
+      <circle id="NaxinsMask" cx="1173" cy="493" r="125" fill="url(#maskBlur)" />
       <circle id="LephaiMask" cx="1190" cy="372" r="150" fill="url(#maskBlur)" />
       <circle id="AmandaisMask" cx="1243" cy="487" r="150" fill="url(#maskBlur)" />
       <circle id="MentMask" cx="1177" cy="332" r="150" fill="url(#maskBlur)" />
@@ -37,12 +37,12 @@
     <path id="Tomenoi_Colinth"   travel="Sail" d="M  832 470 C 1034 411, 1044 376, 1062 416, 1064 420, 1070 422, 1079 413"/>
     <path id="Tomenoi_Kantis"    travel="Sail" d="M  832 470 C 1034 408, 1048 380, 1063 415, 1068 429, 1089 420, 1083 442"/>
     <path id="Colinth_Lephai"    travel="Sail" d="M 1079 413 C 1123 412, 1147 416, 1190 372" />
-    <path id="Colinth_Spinis"    travel="Sail" d="M 1079 413 C 1120 419, 1171 477, 1173 493" />
+    <path id="Colinth_Naxins"    travel="Sail" d="M 1079 413 C 1120 419, 1171 477, 1173 493" />
     <path id="Colinth_Amandais"  travel="Sail" d="M 1079 413 C 1079 413, 1243 487, 1243 487" />
-    <path id="Kantis_Spinis"     travel="Sail" d="M 1083 442 C 1094 398, 1157 442, 1173 493" />
+    <path id="Kantis_Naxins"     travel="Sail" d="M 1083 442 C 1094 398, 1157 442, 1173 493" />
     <path id="Kantis_Lephai"     travel="Sail" d="M 1083 442 C 1089 409, 1134 434, 1190 372" />
     <path id="Kantis_Amandais"   travel="Sail" d="M 1083 442 C 1098 409, 1113 426, 1243 487" />
-    <path id="Spinis_Amandais"   travel="Sail" d="M 1173 493 C 1181 461, 1181 468, 1243 487" />
+    <path id="Naxins_Amandais"   travel="Sail" d="M 1173 493 C 1181 461, 1181 468, 1243 487" />
     <path id="Lephai_Ment"       travel="Sail" d="M 1190 372 C 1190 372, 1177 332, 1177 332" />
     <path id="Lephai_Amandais"   travel="Sail" d="M 1190 372 C 1168 401, 1170 425, 1243 487" />
     <path id="Ment_Crater"       travel="Sail" d="M 1177 332 C 1177 332, 1211 302, 1211 302" />
@@ -92,10 +92,10 @@
       <circle cx="1083" cy="442" r="5" />
       <text x="1083" y="470" text-anchor="middle">Kantis <tspan>- <tspan></tspan></tspan></text>
     </g>
-    <g id="Spinis">
+    <g id="Naxins">
       <rect rx="6" ry="6" />
       <circle cx="1173" cy="493" r="5" />
-      <text x="1173" y="519" text-anchor="middle">Spinis <tspan>- <tspan></tspan></tspan></text>
+      <text x="1173" y="519" text-anchor="middle">Naxins <tspan>- <tspan></tspan></tspan></text>
     </g>
     <g id="Lephai">
       <rect rx="6" ry="6" />

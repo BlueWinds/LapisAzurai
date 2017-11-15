@@ -89,6 +89,168 @@ s.DistantShoals =
     Natalie squinted against the sunlight again. Best not to scrape her ship along the underwater rocks in this region. At least it was high tide right now.
   """
 
+s.FogSpirit =
+  label: 'Fog Spirit'
+  history:
+    AsaraAwakens: true
+  effects:
+    xp:
+      Natalie: 2
+  text: -> """
+  || travel/DeckFog
+    A grey fog descended over the ship in the night and, by the time anyone thought to wake Natalie, the Lapis was becalmed in dim water. The lightlessness dragged at spirits and numbing thoughts. Natalie looked around at the crew - lethargic, barely staying awake. It was unnatural the way they dragged at their tasks, when every nerve in her screamed that something was wrong. Only Asara seemed alert, tense and silent. Nothing unusual there.
+
+    Drooping sails and silent waves suggested that the Lapis wasn't going anywhere soon. Haranging enthusiasm into them seemed useless. There was magic at work.
+
+    `N Come out, come out!` Her voice echoed, as though the world itself were small. No response. Time to do things the hard way then, if whatever was causing this didn't want to talk. She dug her mind down, bracing against the ship, and <i>pushed</i>. The mist obeyed only reluctantly, begrudgingly stirring and swirling around them. While holding the ship together in a storm felt like holding a tiger by the tail, this felt like pulling on a stubborn mule. It didn't want to obey.
+
+    The mist slowed in its stirring. She pushed harder, headache growing, but like a mill grinding to a halt, some greater force resisted and canceled her magic, stilling the small wind she'd managed to summon.
+
+  ||
+    Silence.
+
+    ` You are a feisty one.` Natalie jumped at the voice hissing from both a thousand miles away and right next to her ear.
+
+    `N You stopped my ship and bewitched my crew. Feisty doesn't even begin to cover it.` She poked one of sailors, who was standing motionless and drooling slightly. `N Please explain.`
+
+    ` I explain NOTHING.` The hissing voice rose in volume with each word, until the final "nothing" made Natalie clutch at her ears.
+
+    Immediately the sense of presence disappeared, the fog began to dissolve, and the people around her stirred. She sunk to her knees, still clutching her head.
+
+    James staggered woozily to her side. `J What happened? I heard some wind, and...</q> he raised a hand to touch her shoulder, lowered it again.
+
+    `N I don't know. A spirit. A ghost. A god. I think... I think it was scared of me?` She shook her head helplessly. `N It's gone.`
+  """
+
+s.FishSpirit =
+  label: 'Fish Spirit'
+  history:
+    AsaraAwakens: true
+  effects:
+    xp:
+      Natalie: 2
+  text: -> """
+  || travel/DeckDay
+    `N Nets out! Lower the sails. James, get everyone on deck. We're going fishing!` Sailors scrambled to obey their excited captain as the water around them churned and boiled with fish. For a dozen yards in every direction the water was silver with the glint of scales, a school as large and hungry as Natalie had ever seen. If they'd been properly equipped as a fishing vessel they'd be able to make a month's catch in just a few hours, but even so she couldn't resist the chance to stock up their larder.
+
+    They had only to drop a net overboard before it was full, then pull it aboard to fill a barrel with the flopping, squirming take. They set up a line - catch, behead, scale, gut, drop in a barrel and sprinkle salt over the top.
+
+  ||
+    They had half a dozen barrels filled when the screaming started. Two massive tentacles, thick as tree trunks, wrapped over the sides of the Lapis, flailing around until they found James and one of the sailors, wrapping around their waists and pulling them off the deck. Dangling a hundred feet over the ocean still surging with fish, their struggles were of no avail against... whatever.
+
+    Before anyone could gather weapons, or even formulate a coherent response to the sudden invasion by the oddly non-destructive tentacles (they hadn't even knocked anything over in their questing), the monster's body rose out of the water. A giant face, a wise old man hoary with age, but green and dripping with sea water stared back at them.
+
+    ` Why are you hurting my friends?` It rumbled in a deep masculine voice, a frown rippling across its giant brow.
+
+    Natalie looked up at James and her sailor, hanging there, unharmed but clearly held hostage. They'd stopped struggling - being dropped would be worse than their current situation. Despite that, she felt no hostility from the creature, merely sadness. Sadness, and an overwhelming ability to destroy her ship and everyone on it. `N Sorry?` she ventured.
+
+    ` Why? The creature almost sounded like it was whining.
+
+    `N Um... we didn't know they were your friends. We'll stop? Please set my people down?`
+
+  ||
+    The giant-octopus / old-man / ocean-spirit let out a weary sigh, sufficient even from a hundred yards to briefly puff the Lapis' sails, and lowered the crew back to the deck. ` You hurt them.`
+
+    `N I'm very, very sorry. May we please depart? We promise to do no more harm here.` At her gesture the rest of the crew quietly cut away the net they'd had raised halfway out of the water when the monster appeared, dropping its still squirming contents back into the ocean.
+
+    ` Whyyyy...` The old man's face slowly slid back into the water almost without a ripple.
+
+    `N Let's... let's not stick around waiting for him to change his mind. Everyone, full speed.` Suddenly exhausted, Natalie slumped against the ship's wheel. `N Fuck.`
+  """
+
+s.ShipStories =
+  label: 'Stories on Deck'
+  history:
+    FirstStorm2: true
+  effects:
+    xp:
+      Natalie: 2
+  text: -> '''
+  || travel/DeckNight
+    In the evenings, while a pair of lookouts kept watch, most of the crew gathered on-deck to share stories and drinks and company amid the stars. Natalie made a sure to end up leaning against the same rail as one of her sailors. The ocean lapped against the hull somewhere below, mild waves gently rocking the Lapis Azurai. They talked for some time, content to watch the others from a distance, letting bonds deepen with the setting of the sun.
+  '''
+
+s.ShipTalking =
+  label: 'Talking With the Crew'
+  history:
+    FirstStorm2: true
+  effects:
+    xp:
+      Natalie: 2
+  text: -> '''
+  || travel/DeckNight
+    With colder weather setting in, those not on duty preferred to gather in the cargo hold, if it was empty enough, or squeeze into the sleeping area if not. Hot and crowded was better than windy and chill, and those too near the doorway still kept cloaks on to protect against stray drafts.
+
+    Though she often preferred to keep her own company, or entertain a smaller group in her own quarters, Natalie also made it a point to spend plenty of time mingling with the crew, especially when off duty. Aside from the purely practical considerations of keeping in touch with their mood and fostering a sense of companionship, she also found it fascinating to listen to them – why they left their homes to risk lives on the open ocean, what they wanted, who they wanted to be. She spent hours listening to and talking with the crew.
+  '''
+
+s.ShipMusic =
+  label: 'Music on Deck'
+  history:
+    FirstStorm2: true
+  effects:
+    xp:
+      James: 2
+  text: -> """
+  || travel/DeckNight
+    As often as not it had rained in the evenings recently, so those not on watch found themselves crammed into the sleeping quarters. The humidity made the confines not entirely comfortable, but at least they could easily regulate temperature, between body heat and frozen rain outside.
+
+    Tonight the crew played music, rather than talk, rain beating a staccato counterpoint on the deck overhead. A beat up old guitar was passed around, everyone who knew how to play it taking turns until it finally made its way into one particular set of hands. He was the best, and everyone knew it, strong and clear baritone voice filling the space.
+
+    Sitting side by side on the top bunk, Natalie and James relaxed, and it wasn't long before a drowsy captain was leaning on her first mate, lulled by the soothing tones and a sad song of home-far-away. He gently shifted her to lean against the wall instead, and covered her with a blanket when the song ended.
+  """
+
+s.ShipSports =
+  label: 'Sports on Deck'
+  history:
+    KatJoins: true
+  effects:
+    xp:
+      Kat: 2
+  text: -> """
+  || travel/DeckNight
+    Some evenings, once most of the day's work was done, rather than lay about and rest or play music, the crew decided to be a little more energetic. Tossing items around wasn't entirely practical on a small ship, but wrestling or running games were entirely too popular. Natalie hadn't intended to participate, but she couldn't resist when Kat bowled her over on the way to one of the goals.
+
+  ||
+    Wrapping both arms around Kat's thigh she clung on like a burr, hanging from her leg and slowing her down enough for the other team to catch up. Together Natalie and the other team wrestled away control of the colored strip of cloth that was the aim, and Kat fled back to the other side of the ship. Natalie stuck her tongue out at the thief, and she good naturedly cursed at the captain before chasing the fleeing sailor now in possession of the cloth.
+  """
+
+s.ShipPracticeCombat =
+  label: 'Mock Battle'
+  history:
+    ColinthArrive: true
+  effects:
+    xp:
+      James: 2
+  text: -> """
+  || J/Normal
+    `J I'd like to run the crew through some exercises, captain.` James came up alongside Natalie, interrupting her reverie watching the horrizon.
+
+    `N You're worried about pirates.`
+
+    He nodded. `J The waters around Kantis and Colinth don't feel as safe as those closer to Vailia.`
+
+    `N I doubt there's anything with a sail that can cath us here, but if one of the rowwed vessels found us while the winds unfavorable... Go ahead. A little boarding practice never hurt anyone.`
+
+    James nodded and got to work. With much shouting and waving of arms he divided the crew up into two teams. Half of them pretended to board, while the others repelled using oars and poles wrapped in cloth as weapons. It was still unbelievably noisy as some of the sailors got very much into the spirit, with battle cries and dramatic 'death scenes' as they were slain.
+
+    Fun. Natalie desperately hoped they'd never see the real thing. Asara stayed on the sidelines, watching. No one had any doubts over her readiness for war.
+  """
+
+s.ShipPracticeReading =
+  label: 'Shipboard Education'
+  history:
+    FirstStorm2: true
+  effects:
+    xp:
+      Natalie: 2
+  text: -> """
+  || N/Normal
+    While the world was a vast place, and Natalie had seen barely a fraction of it, the was already one of the most well-traveled and well-educated individuals in Vailia. She could read and write, which marked her as more educated than 75% of Vailians, much less smaller and less developed cities like Alkenia or Nonkenia.
+
+    A bit of teaching was a fun way to pass the time, for those few among the crew who were interested. Natalie enjoyed discussing history, mathematics, natural history and all the other subjects she'd had the privilage to spend time learning while others were busy struggling to find enough food to eat.
+  """
+
 Place.travel.Sail.stories = Object.keys(s)
 for key, value of s
   Story[key] = value
