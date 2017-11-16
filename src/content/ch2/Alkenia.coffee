@@ -283,6 +283,7 @@ s.KatCh3Yes =
   """
   apply: ->
     g.chapter = 'Ch3'
+    Game.showOverlay('<h1>Chapter 3</h1><h3>Kat</h3>', 0, 'chapter overlay')
 
 s.KatCh3No =
   label: 'Chapter 3 - Not Kat'

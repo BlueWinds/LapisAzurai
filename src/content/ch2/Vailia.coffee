@@ -598,12 +598,54 @@ s.JamesCh3 =
     xp:
       Natalie: 2
   text: -> """
-  ||
-    TODO
+  || travel/CabinNight
+    'N Your father is dead.` Natalie handed James the letter, gestured him to sit on her bed. He sat.
 
-    <button onclick="Story.continueWith('JamesCh3Yes')">`N Let me go with you?`</button> <button onclick="Story.continueWith('JamesCh3No')">`N I think you should speak with her.`</button>
+    `J He is?`
 
-    <i>Going with him will commit you to James in Chapter 3, while no will lock out his route. No second chances.</i>
+    `N Your mother wrote me,because she says you didn't respond last time she tried, and she doesn't know if you read her letters or even get them.`
+
+    `J I visited her a few months ago.`
+
+    `N After I harangued you into it. Anyway, I'm not here to accuse you of anything. I just wanted to let you know.`
+
+    James held the letter delicatly, as if afraid to wrinkle the paper, but didn't open it. Natalie studdied his face, looking for some clue as to his thoughts. When he got like this, it was impossible to tell what he was thinking. James' face wasn't carved from granite like his father's had been, but just... blank. He gave nothing away.
+
+  || N/Embarrassed
+    `N Come on James, talk to me.`
+
+    `J How did it happen?`
+
+    `N A fire of some sort. The house caught, and it was spreading across the neighborhood before Lady Meghan showed up and put the whole thing out. I just can't believe that much power in a mage, to...`
+
+    `J Please, not now.`
+
+    `N Yeah, sorry.` Natalie shifted uncomfortably in her chair. There was enough in there for him to deal with already, without adding magic to the mix. `N Anyway, your mother's staying with one of your uncles for now.`
+
+    `J Christoph. He always writes letters for my par... for my mother.`
+
+    `N Hm, wasn't he the tall thin fellow, runs a sawmill with his husband?`
+
+    `J They're divorced now, but Christoph still works at the mill. They make better business partners than they did a couple.` A snort accompanied that last statement, and Natalie grabbed ahold of that crack in his impasivity. She leaned forward, resting her chin in her hands.
+
+    `N You're talking now, that's good. Keep doing that. So when are you going to go speak with your mother?`
+
+  || J/Upset
+    `J I don't know. The ship...`
+
+    `N James Thadel!` Her sharp tone made him jump. `N I am your captain and your closest friend and sometimes I know you better than you know yoursely. As much as you had problems with your father, he's dead now, and I won't let you use me as an excuse to avoid your mother. So when are you going to see her?`
+
+    James crossed his arms over his chest, shoulders hunched, then realizing what he was doing, uncrossed them and sat up straighter, looking uncomfortable. He took a deep breath, leaned back in the bed, head tilted up to watch the ceiling. They waited in silence, just the noise of the city filtering through layers of wood and tar to keep them company. Finaly James let out a gusty sigh and returned to the present.
+
+    `J You're right, damn it, you're right.`
+
+    `N I know I am.`
+
+    He gave her a nasty look, and she snapped her mouth shut. `J I suppose now is as good a time as any.`
+
+    She reached over and gave his shoulder a squeeze. <button onclick="Story.continueWith('JamesCh3Yes')">`N I'll come with you.`</button> <button onclick="Story.continueWith('JamesCh3No')">`N Take as much time as you need.`</button>
+
+    <i>Going with him will commit you to James in Chapter 3, while sending him alone will lock out his route. No second chances.</i>
   """
 
 s.JamesCh3Yes =
@@ -617,10 +659,52 @@ s.JamesCh3Yes =
       James: 10
   text: -> '''
   ||
-    TODO
+    `N I'll come with you. I haven't seen your mother in almost a year, and this way I can make sure you don't get lost on the way there.` She shook her head, regretting the hurt look her words had garnered. `N Sorry, sorry, I meant it as a joke, and an imprication.`
+
+    `J I keep my word, Nat. Just let me grab some money, I can at least do that much for her.`
+
+  || places/VailiaNight
+    Christoph Thadel's apartment was tucked away on the upper floor in the back corner of a tenament, curiously modest for someone who helped run a business as important as a sawmill. Natalie supressed her economic speculations and waited quietly while James knocked. Clean, though. The smells inside the building were predominatly pleasant, cooking smoke, freshly sanded wood, soap. A hint of roasting chicken tickeled their noses.
+
+    A still youthful scarecrow of a man opened the door, all elbows ane graceless height. ` James. And miss Rowena, if I remember correctly,` he bowed to her. ` Please come in, we were just about to sit down for supper. Will you join us?`
+
+    `J No, thank you. I just came to see...`
+
+    `N We'd be delighted to stay, thank you.`
+
+    Christoph looked between them, then nodded to Natalie. ` I'll set twomore places. Mellisa's in the bedroom, I imagine she'll be out in a moment.` He gestured them in and turned to the kitchen, leaving them temporarily alone.
+
+    `J You're presuming an aweful lot today, captain,` he growled at her. She ignored him and looked around the room.
+
+    ` James?` His mother arrived, dark circles under her eyes, but expression brightening at the sight of her only son. She rushed over to hug him. Mellisa was frailer than in Natalie's memories, a small, tired woman who rose only to her son's shoulder. She nearly vanished from sight when wrapped in his arms.
+
+    As snappish as he'd been getting to this point, James embraced her without hesitation. ` I was worried you wouldn't come,` the muffled words emerged from James' shoulder.
+
+    ` Miss, if you wouldn't mind?` Christoph rescued Natalie by offerring her a stack of plates to set out on the table. ` I was hoping James would come this evening, so I made something special.` In a lower voice just for her, ` Thank you for making him stay.Mellisa needs him here right now. She and her husband lived in that home for almost twenty five years.`
+
+    `N They married young?`
+
+    He nodded, following her around the small table with a handful of silver ware. On the other side of the room, James and his mother talked in low voices. James shook his head, refusing something she tried to hand him.
+
+    ` Very young. Losing her husband and the house at the same time was a terrible blow.` They retreated to the kitchen, giving Mellisa and her son more space.
+
+    `N Does she need money? It's no hardship, we've had a run of successes lately.`
+
+    ` No, thank you. Kind of you to offer, but there are enough Thadels to take care of our own. Forgive a relative his prying, but are you and James...?` He left the question open, but she quickly shook her head.
+
+    `N Just friends. He's my first mate, but nothing more.`
+
+    ` First mate?` Christoph's eyebrows rose. ` I had the impression he ran away to become a common sailor.`
+
+    `N The Lapis Azurai is one of the finest ships in the city. I am Guildmaster Janos' protege, after all, and act as his personal courrier on a regular basis.` Natalie had the sudden urge to boast, both feeling that it wouldn't be taken amiss and that she had to fill in whatever else James' family hadn't seen fit to tell this uncle.
+
+    ` Huh. I'll bring the food out if you all will sit down.`
+
+  ||
   '''
   apply: ->
     g.chapter = 'Ch3'
+    Game.showOverlay('<h1>Chapter 3</h1><h3>James</h3>', 0, 'chapter overlay')
 
 s.JamesCh3No =
   label: 'Chapter 3 - Not James'
@@ -630,7 +714,16 @@ s.JamesCh3No =
     xp:
       James: 3
   text: -> '''
-    TODO
+  || N/Upset
+    `N Take as much time as you need. I can keep everyone in line by myself for at least one night.`
+
+    He slouched over, rubbing eyes with the palms of his hands. `J It's not easy, you know? Even though he's gone, it doesn't feel like it yet. The things he said about you... my parents never liked the Guild.`
+
+    `N And then when your father decided I took you away from him...` Natalie left unsaid the painful arguments they both remembered.
+
+    `J You did, though. That's the thing, he was right. You asked, and I said yes. I chose you over my family, over my apprenticeship. I don't regret it though,` he added hastily. `J Well, I mean, I do regret what happened, but... you know what I mean.`
+
+    Natalie patted his back. `N I do. Now, go talk with your mother. I'll be here when you get back if you want to talk more. Say hello to Christoph for me.`
   '''
 
 Place.Vailia.stories.Ch2 = Object.keys(s)

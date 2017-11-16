@@ -306,6 +306,7 @@ s.AsaraCh3Yes =
   """
   apply: ->
     g.chapter = 'Ch3'
+    Game.showOverlay('<h1>Chapter 3</h1><h3>Asara</h3>', 0, 'chapter overlay')
 
 s.AsaraCh3No =
   label: 'Chapter 3 - Not Asara'

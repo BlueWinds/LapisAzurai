@@ -181,7 +181,7 @@ s.ShipTalking =
   || travel/DeckNight
     With colder weather setting in, those not on duty preferred to gather in the cargo hold, if it was empty enough, or squeeze into the sleeping area if not. Hot and crowded was better than windy and chill, and those too near the doorway still kept cloaks on to protect against stray drafts.
 
-    Though she often preferred to keep her own company, or entertain a smaller group in her own quarters, Natalie also made it a point to spend plenty of time mingling with the crew, especially when off duty. Aside from the purely practical considerations of keeping in touch with their mood and fostering a sense of companionship, she also found it fascinating to listen to them – why they left their homes to risk lives on the open ocean, what they wanted, who they wanted to be. She spent hours listening to and talking with the crew.
+    Though she often preferred to keep her own company, or entertain a smaller group in her own quarters, Natalie also made it a point to spend plenty of time mingling with the crew, especially when off duty. Aside from the purely practical considerations of keeping in touch with their mood and fostering a sense of companionship, she also found it fascinating to listen to them - why they left their homes to risk lives on the open ocean, what they wanted, who they wanted to be. She spent hours listening to and talking with the crew.
   '''
 
 s.ShipMusic =
@@ -234,7 +234,7 @@ s.ShipPracticeCombat =
 
     James nodded and got to work. With much shouting and waving of arms he divided the crew up into two teams. Half of them pretended to board, while the others repelled using oars and poles wrapped in cloth as weapons. It was still unbelievably noisy as some of the sailors got very much into the spirit, with battle cries and dramatic 'death scenes' as they were slain.
 
-    Fun. Natalie desperately hoped they'd never see the real thing. Asara stayed on the sidelines, watching. No one had any doubts over her readiness for war.
+    Asara stayed on the sidelines, watching. No one had any doubts over her readiness for battle.
   """
 
 s.ShipPracticeReading =
@@ -249,6 +249,38 @@ s.ShipPracticeReading =
     While the world was a vast place, and Natalie had seen barely a fraction of it, the was already one of the most well-traveled and well-educated individuals in Vailia. She could read and write, which marked her as more educated than 75% of Vailians, much less smaller and less developed cities like Alkenia or Nonkenia.
 
     A bit of teaching was a fun way to pass the time, for those few among the crew who were interested. Natalie enjoyed discussing history, mathematics, natural history and all the other subjects she'd had the privilage to spend time learning while others were busy struggling to find enough food to eat.
+  """
+
+s.PiratesFlee =
+  label: 'Running from Pirates'
+  history:
+    AsaraAwakens: true
+  effects:
+    xp:
+      Natalie: 2
+  text: -> """
+  || travel/DeckDay
+    ` Sails! Ship ahoy!` The sailor called out from her position on the starboard side of the deck, and everyone turned to look. Natalie shaded her eyes, trying to make out anything in the bright sun.
+
+    There was indeed a dark spot on the horizon - and watching it for several minutes, one by one everyone convinced themselves it was a ship, sailing in their direction, crossing paths at an angle.
+
+    `N Everyone take a rest, we're letting them catch us!` Natalie's shouted command slowed shipboard activity to a crawl. Meeting with another vessel out in the middle of the ocean might not be the safest possible action, and it would be good to have everyone rested and alert by the time they were close in case there was trouble. James fetched his sword, buckled it on. The rest of the crew did the same.
+
+    Just in case.
+
+    Coming in from the windward-side, the vessel bearing down on them was significantly larger than the Azurai, though not nearly as sleek. Harder angles, square sails, and flying no colors. Kantian, or from Colinth perhaps. Definitely not Vailian. The number of crew on its deck and their drawn weapons weren't particularly encouraging.
+
+  || A/Scared
+    Natalie's eyes found one member of the crew who didn't appear nervous. Asara was somewhere far beyond nervous, exploring the distant lands of 'frozen in fear' and 'absolutely terrified.' Her hand gripped the hilt of her sword, knuckles white. She was whispering something repetitively to herself in her own foreign tongue.
+
+    `N Ok, change of plans. Full sail!</q> Natalie called out commands, setting the crew back in motion. They kept their weapons close at hand as they worked, canvas billowing up to catch the wind.
+
+    Groaning against its weight, the Azurai bobbed precipitously in the wind, full sails heeling it to an uncomfortable angle before the rudder caught hold and swung the prow around. Then, like a bow sprung from an arrow, the ship surged forward. Perpendicular to the wind they cut away.
+
+  ||
+    The Azurai's crew cheered and whooped as the other ship crossed their wake, still sailing with the wind and unable to arrest its momentum in time to pursue. The pirates - for that's what they clearly were, from up close - returned the jeers and shouts, waving swords and axes, impotent as their own vessel carried them further away. Asara had disappeared somewhere belowe decks.
+
+    Rather than joining in her crew's cheers, Natalie let out a breath she'd been holding. It'd been close.
   """
 
 Place.travel.Sail.stories = Object.keys(s)
