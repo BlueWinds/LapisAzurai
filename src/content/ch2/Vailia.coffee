@@ -416,7 +416,7 @@ s.JamesParents2 =
 
     `J Neither of my parents know how to write.`
 
-    `N They hired someone. They want us to come to dinner tomorrow. I think we should.`
+    `N They asked an uncle. They want us to come to dinner tomorrow. I think we should.`
 
     James sat back down and picked up his rope. `J We were going to set sail in the morning, weren't we?`
 
@@ -672,21 +672,21 @@ s.JamesCh3Yes =
 
     `N We'd be delighted to stay, thank you.`
 
-    Christoph looked between them, then nodded to Natalie. ` I'll set twomore places. Mellisa's in the bedroom, I imagine she'll be out in a moment.` He gestured them in and turned to the kitchen, leaving them temporarily alone.
+    Christoph looked between them, then nodded to Natalie. ` I'll set twomore places. Melissa's in the bedroom, I imagine she'll be out in a moment.` He gestured them in and turned to the kitchen, leaving them temporarily alone.
 
     `J You're presuming an aweful lot today, captain,` he growled at her. She ignored him and looked around the room.
 
-    ` James?` His mother arrived, dark circles under her eyes, but expression brightening at the sight of her only son. She rushed over to hug him. Mellisa was frailer than in Natalie's memories, a small, tired woman who rose only to her son's shoulder. She nearly vanished from sight when wrapped in his arms.
+    ` James?` His mother arrived, dark circles under her eyes, but expression brightening at the sight of her only son. She rushed over to hug him. Melissa was frailer than in Natalie's memories, a small, tired woman who rose only to her son's shoulder. She nearly vanished from sight when wrapped in his arms.
 
     As snappish as he'd been getting to this point, James embraced her without hesitation. ` I was worried you wouldn't come,` the muffled words emerged from James' shoulder.
 
-    ` Miss, if you wouldn't mind?` Christoph rescued Natalie by offerring her a stack of plates to set out on the table. ` I was hoping James would come this evening, so I made something special.` In a lower voice just for her, ` Thank you for making him stay.Mellisa needs him here right now. She and her husband lived in that home for almost twenty five years.`
+    ` Miss, if you wouldn't mind?` Christoph rescued Natalie by offerring her a stack of plates to set out on the table. ` I was hoping James would come this evening, so I made something special.` In a lower voice just for her, ` Thank you for making him stay. Melissa needs him here right now. She and her husband lived in that home for almost twenty five years.`
 
     `N They married young?`
 
     He nodded, following her around the small table with a handful of silver ware. On the other side of the room, James and his mother talked in low voices. James shook his head, refusing something she tried to hand him.
 
-    ` Very young. Losing her husband and the house at the same time was a terrible blow.` They retreated to the kitchen, giving Mellisa and her son more space.
+    ` Very young. Losing her husband and the house at the same time was a terrible blow.` They retreated to the kitchen, giving Melissa and her son more space.
 
     `N Does she need money? It's no hardship, we've had a run of successes lately.`
 
@@ -694,13 +694,29 @@ s.JamesCh3Yes =
 
     `N Just friends. He's my first mate, but nothing more.`
 
-    ` First mate?` Christoph's eyebrows rose. ` I had the impression he ran away to become a common sailor.`
+    ` First mate?` Christoph's eyebrows rose. ` I heard he ran away to become a common sailor.`
 
-    `N The Lapis Azurai is one of the finest ships in the city. I am Guildmaster Janos' protege, after all, and act as his personal courrier on a regular basis.` Natalie had the sudden urge to boast, both feeling that it wouldn't be taken amiss and that she had to fill in whatever else James' family hadn't seen fit to tell this uncle.
+    `N The Lapis Azurai is one of the finest ships in the city. I am Guildmaster Janos' protege, after all, and act as his personal courrier on a regular basis.` Natalie had the sudden urge to boast on James' behalf, both feeling that it wouldn't be taken amiss and that she had to fill in whatever else his family hadn't seen fit to tell this uncle.
 
     ` Huh. I'll bring the food out if you all will sit down.`
 
   ||
+    Whatever well of conversation James and his mother had tapped at first seemed to have run dry, and so dinner was filled mostly with Christoph asking Natalie about their adventures, occasionally attempting to draw James into the conversation with questions about shipboard life. That got only mono-sylabic answers, and shrugs. The chicken was excellent, roasted and stuffed with carrots and potatoes. A welcome change from the stale fare that usuallf filled their diet at sea.
+
+    With plates picked clean and Natalie's last tale of distant shores finished, an awkward silence settled over the table. As much as she hated to give up on the attempt to get James and his mother talking, to get James to acknowledge some feeling other than stoic indifference to his father's death, she just didn't have it in her to push harder. Although he'd agreed to come, James had put up a wall thicker than she could chip away alone, and Melissa's withdrawn and self-absorbed silence wasn't helping. Christoph caught her eye, silently asking for advice. She only shook her head, sighed. He nodded in sympathy.
+
+    ` I'm sorry I don't have any desert prepared, but I'd imagine you two have to get going soon. Time and tide, after all.`
+
+    `N I'm afraid so.` Natalie and James rose from their places, gathered their coats from where they'd laid them near the door. `N Thank you for dinner, it was lovely.` Natalie hugged both Christoph and Melissa, the latter managing a wan smile. Though James's mother had always been civil with her, Natalie often wondered just what Melissa thought of her son's best friend, and suspected it wasn't all that flattering.
+
+    `J Thank you for dinner. Christoph, mum.` James shook his uncle's hand, then hesitated before his mother. He settled for a hug, too long for James' taste and too short for Melissa's.
+
+  ||
+    They were out of the apartment and Natalie was halfway down the first flight of stairs when she noticed James was still standing at the top of the stairs, looking back at the closed door. She stopped, waited for him, hopeful.
+
+    `J I... think I'd like to stay a bit longer. If you don't mind, Nat?`
+
+    `N Not at all. Please. I'll go ahead.` She supressed her reaction - smiling would have offended him at the moment. Instead she came back up, clapped him on the shoulder. Though she'd been needed to force this visit, and toget them in the same room, now her presence would restrain the emotions that needed to come out. `N Don't stay up too late, we've got an early day tomorrow.` She pushed him back towards the door.
   '''
   apply: ->
     g.chapter = 'Ch3'

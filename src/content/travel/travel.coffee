@@ -283,6 +283,60 @@ s.PiratesFlee =
     Rather than joining in her crew's cheers, Natalie let out a breath she'd been holding. It'd been close.
   """
 
+s.AbandonedShipBurn =
+  label: 'Abandoned Ship'
+  history:
+    AsaraAwakens: true
+  effects:
+    xp:
+      Asara: 1
+  text: => """
+  || travel/DeckDay
+    ` Ship ahead!` The sailor sitting in the crow's nest shouted out his find, sending those on deck and free rushing to the bow. Natalie shaded her eyes, trying to make out anything against the setting sun.
+
+    Drifting slowly closer, it became apparent that the other ship was abandoned, listing to one side as though it had taken on a great deal of water. The Azurai put on sail to approach more rapidly.
+
+    It was more of a half-floating wreck than a real ship at this point, wind-slashed sails and rotting timbers. James suggested immediately that they fire the thing and be on their way - a funeral fitting an abandoned ship. Though there might still be cargo aboard worth salvaging, not to mention curiosity for its own sake, Natalie bowed to tradition. The decididng factor was Asara - she seemed rather uncomfortable, more so than usual even, at the thought of crossing over to take a look. Better to keep the priestess happy than rob a grave.
+
+    Natalie ordered a bow produced, and had James soak a rag in oil. Burning an abandoned ship wasn't hard - with pitch rubbed into the hull, oil in the ropes and wax in the canvas, even a nearly-rotten hulk like this was soon ablaze. They watched solemnly, Natalie giving voice to a prayer they were all thinking.
+
+    When the wreck finally collapsed down the middle, they set sail again. Time to get going, and hope that the Azurai never met the same fate.
+  """
+
+s.AbandonedShipSearch =
+  label: 'Abandoned Ship'
+  history:
+    AsaraAwakens: true
+  effects:
+    xp:
+      Kat: 1
+  text: => """
+  || travel/DeckDay
+    ` Ship ahead!` The sailor sitting in the crow's nest shouted out his find, sending those on deck and free rushing to the bow. Natalie shaded her eyes, trying to make out anything against the setting sun.
+
+    Drifting slowly closer, it became apparent that the other ship was abandoned, listing to one side as though it had taken on a great deal of water. The Azurai put on sail to approach more rapidly.
+
+    It was more of a half-floating wreck than a real ship at this point, wind-slashed sails and rotting timbers. James suggested immediately that they fire the thing and be on their way, but Natalie held off. There might still be valuables aboard, and Asara seemed more curious than concerned over the idea of paying it a visit. If their resident priestess seemed unconcerned, it was worth the risk.
+
+    Natalie led the expedition, guiding from the prow of the Azurai's longboat as they rowed in closer than she wished to risk the larger vessel. It was with a solemn air that they searched the wreck.
+
+    While they didn't find any cargo beyond thoroughly water-ruined provisions, Kat did discover a stash of well-preserved canvas, and one of the crew stumbled upon a still-sealed barrel of pitch. Not the most glamorous of treasure, but combined with a some usable boards pried up from the deck, nothing to scoff at.
+  """
+
+s.VailianShip =
+  label: 'Vailian Ship'
+  history:
+    FirstStorm2: true
+  effects:
+    xp:
+      James: 1
+  text: => """
+  || travel/SailingDay
+    Triangular sails - James was the first to spot them in the distance, another ship approaching - and he loudly guessed that it was a Vailian vessel. Despite all odds, so far from home, he was proven right half an hour later, when they were close enough to make out more details. A Vailian-made ship meant Vailian crew - the city did not sell to outsiders, jealously guarding its ship-building secrets.
+
+  The two vessels pulled up alongside each other and, after a few shouted exchanges, two officers jumped over to the Lapis for a closer discussion. They were just as eager as Natalie and James to share news of home, and the crews spent half an hour shooting the breeze while the officers shared knowledge of the winds and currents in the area.
+  """s
+
 Place.travel.Sail.stories = Object.keys(s)
 for key, value of s
   Story[key] = value
