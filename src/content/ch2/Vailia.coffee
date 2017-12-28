@@ -493,6 +493,8 @@ s.MeghanSuitors =
   || places/VailiaNight
     `N James. Stop fidgeting and stand still. Yes, I know. It's too fancy for you. But stop fidgeting anyway, because you're here now and I'm not leaving until I've made my rounds.` Grasping him firmly by the upper arm - without appearing to do so, because actually needing to drag her date around by the arm was too embarrassing to contemplate - Natalie made her way to the next noble she wished to speak with.
 
+    He was enthusiastically discussing some point of politics or other with Antinua Vanyavanadar, completely undeterred she casually demolished his argument with an acidic comment. She was famous for, among other things, being indespensible at high society gatherings. Antinua served the vital function of keeping everyone else entertained while she punctured windbags and inflated egos. She was also partnered to the heir of one of Vailia's more influential trading partners, though that shy princess seldom appeared herself.
+
     Before she could get there though, Janos swept in and took her other arm, tugging her away. `Guildmaster Oh, Natalie, just the person I was looking forward to seeing tonight.` Natalie flashed James an apologetic look for leaving him alone, and let the Guildmaster pull her away.
 
     `N Having a pleasant evening, sir?`
@@ -504,7 +506,7 @@ s.MeghanSuitors =
     Janos quirked an eyebrow at her, as if the answer should be obvious. `Guildmaster Lady Meghan reaches the age of majority today.` He stopped, as though it should be obvious to her why that was important.
 
   || N/Upset
-    Natalie said nothing.
+    It was, but Natalie said nothing.
 
     `Guildmaster Every fine young man in the city is here aiming for her affection.`
 
@@ -516,7 +518,7 @@ s.MeghanSuitors =
 
     `Guildmaster ...`
 
-    `N I appreciate all you've done for me, sir, but I'll having no more truck with this particular plan of yours than she will.` Natalie gestured towards the center of the garden, where a regular flock of smartly dressed young men clustered around a thoroughly miserable Lady Meghan.
+    `N I appreciate all you've done for me, sir, but I'll be having no more truck with this particular plan of yours than she will.` Natalie gestured towards the center of the garden, where a regular flock of smartly dressed young men clustered around a thoroughly miserable Lady Meghan.
 
     With one last poisonous look at Janus Natalie pulled her arm out of his hand and spun smartly, dress whirling around her. She went to go find James.
 
@@ -569,11 +571,11 @@ s.MeghanSuitors2 =
   || places/VailiaNight
     `N I can't believe I got away with that,` Natalie burst into nervous giggles as soon as the door to Meghan's tiny little house closed behind them.
 
-    `Meghan That was magnificent. I wish I could do that,` Meghan's gave was admiring, and Natalie was suddenly bashful.
+    `Meghan It was magnificent. I wish I could do that,` Meghan's gave was admiring, and Natalie was suddenly bashful.
 
     `N You're the most powerful wizard in the world, you could totally do that. Also one of the most politically influential people in Vailia, and smart, and...`
 
-    Meghan shook her head. `Meghan And all I really want is to read my books and be left alone. They,` she gestured vaguely at the door, indicating the rest of the world, `Meghan just assume I'm going to marry some guy. I mean, yes, I'll have a child eventually. Continuing the magic unbroken is more important than my preferences, but, just... <i>eventually.</i> Not now.`
+    Meghan shook her head. `Meghan And all I really want is to read my books and be left alone. They,` she gestured vaguely at the door, indicating the rest of the world, `Meghan just assume I'm going to marry some man. I mean, yes, I'll have a child eventually. Continuing the magic unbroken is more important than my preferences, but, just... <i>eventually.</i> Not now.`
 
     `N You like girls, then?`
 
@@ -584,7 +586,7 @@ s.MeghanSuitors2 =
 
     Meghan nodded, accepting the apology. `Meghan Let's talk about something else. Um... have you read Treatise on Historical Storm Patterns?`
 
-    Natalie relaxed and gave a tentative smile. `N I think he's wrong about the causes, but...`
+    Natalie relaxed and gave a tentative smile. `N I think he's wrong about the causes, but it's an interesting thought, and very thorough research.`
   """
 
 s.JamesCh3 =
