@@ -290,7 +290,7 @@ s.AbandonedShipBurn =
   effects:
     xp:
       Asara: 1
-  text: => """
+  text: -> """
   || travel/DeckDay
     ` Ship ahead!` The sailor sitting in the crow's nest shouted out his find, sending those on deck and free rushing to the bow. Natalie shaded her eyes, trying to make out anything against the setting sun.
 
@@ -310,7 +310,7 @@ s.AbandonedShipSearch =
   effects:
     xp:
       Kat: 1
-  text: => """
+  text: -> """
   || travel/DeckDay
     ` Ship ahead!` The sailor sitting in the crow's nest shouted out his find, sending those on deck and free rushing to the bow. Natalie shaded her eyes, trying to make out anything against the setting sun.
 
@@ -330,12 +330,12 @@ s.VailianShip =
   effects:
     xp:
       James: 1
-  text: => """
+  text: -> '''
   || travel/SailingDay
     Triangular sails - James was the first to spot them in the distance, another ship approaching - and he loudly guessed that it was a Vailian vessel. Despite all odds, so far from home, he was proven right half an hour later, when they were close enough to make out more details. A Vailian-made ship meant Vailian crew - the city did not sell to outsiders, jealously guarding its ship-building secrets.
 
-  The two vessels pulled up alongside each other and, after a few shouted exchanges, two officers jumped over to the Lapis for a closer discussion. They were just as eager as Natalie and James to share news of home, and the crews spent half an hour shooting the breeze while the officers shared knowledge of the winds and currents in the area.
-  """
+    The two vessels pulled up alongside each other and, after a few shouted exchanges, two officers jumped over to the Lapis for a closer discussion. They were just as eager as Natalie and James to share news of home, and the crews spent half an hour shooting the breeze while the officers shared knowledge of the winds and currents in the area.
+  '''
 
 Place.travel.Sail.stories = Object.keys(s)
 for key, value of s
