@@ -148,7 +148,7 @@ s.KantianSorcerer =
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
   history:
-    ColinthAmulets: true
+    ColinthArrive: true
   effects:
     xp:
       Natalie: 3

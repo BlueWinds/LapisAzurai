@@ -179,40 +179,41 @@ s.KatCh3 =
   required: 'GameOverFun'
   requiredGroup: 'Ch2Routes'
   history:
-    KatBringsToys: true
+    ColinthAmulets2: true
+    KantianSorcerer: true
   effects:
     xp:
       Natalie: 2
   text: -> """
   || K/Happy
-    Natalie moved quietly down the stairs into the cargo hold, timing her steps with the gentle rocking of the ship to mask the sound of movement. She should have known it was futile - Kat looked up the instant her captain came into view, starting guiltily with a bottle still in her hand.
+    Natalie moved quietly down the stairs into the cargo hold, timing her steps with the ship's gentle rocking to mask the sound of movement. She should have known it was futile - Kat looked up the instant her captain came into view, starting guiltily with a bottle still in her hand.
 
-    `K Um, Natalie, hi.` Her words were slurred slightly, the bottle in her hand missing some liquid. It hardly seemed enough to get someone drunk, but Kat was both twig-thin and completely unused to alcohol. That much, along with the cups she'd had at dinner, might indeed have been enough.
+    `K Um, Captain, hi.` Her words were slurred slightly, but the bottle in her hand still mostly full. It hardly seemed enough to get someone drunk, but Kat was both twig-thin and completely unused to alcohol stronger than grog. That much, along with the cups she'd had at dinner, might indeed have been enough.
 
-    `N Carrying on the party on your own, I see? With a fresh bottle, no less.` Two steps forward and Natalie was close enough to reach for the wine.
+    `N Carrying on the party on your own, I see? With a fresh bottle, no less.` Two steps forward brought Natalie close enough to reach for the wine.
 
     Kat pulled it back, hugged it to her chest. `K I bought this one fair and square.`
 
-    `N Then I'm sure you won't mind me taking a look, make sure it doesn't match our cargo?` Natalie grabbed for it again, wrapped her hands around the stem and the base, above and below where Kat clutched it. Natalie's yank brought them closer together, rather than separating the bottle from the other woman's clutches.
+    `N Then I'm sure you won't mind me taking a look, make sure it doesn't match our cargo?` Natalie grabbed for it again, wrapping her hands around the stem and the base, above and below where Kat clutched it. Natalie yanked, but the other woman's grip held, bring them closer together, rather than freeing the bottle.
 
-    `K No, it's mine. You want it, you'll have to take it.` Lantern light glinted in her eye, a challenge if Natalie had ever heard one.
+    `K No, it's mine. You want it, you'll have to take it.` Lantern light glinted in her eye, her challenge a tangible presence in the air.
 
-    She abandoned her grip on the bottle to pull on Kat's arm instead - just as she managed to wrestle it free, Kat stepped closer and hooked a leg behind Nat's knee. As she tottered and fell, Natalie managed to twist Kat around beneath her, a feat only possible because the thief was at least a little drunk and already unsteady. They fell backwards onto the stairs, and Kat let out a sudden oof of air as Natalie landed on top of her, wine bottle sandwiched between.
+    She abandoned her grip on the bottle to pull on Kat's arm instead, but just as she managed to wrestle the hand free of the bottle, Kat stepped in until their noses almost touched and hooked a leg behind Natalie's knee. As she tottered and fell, Natalie managed to twist Kat around beneath her, a feat only possible because the thief was already unsteady with drink. They fell backwards onto the stairs, and Kat wheezed as Natalie landed on top of her, wine bottle sandwiched between.
 
   || N/Embarrassed
-    As Kat blinked up at her and tried to catch her breath, a wide grin on her face, Natalie was entirely too aware of the warm body pressed against hers. Suddenly self-conscious, she pushed away and stood up again. `N Maybe we should talk about this in the morning.`
+    As Kat blinked up at her and tried to catch her breath, a wide grin on her face, Natalie became entirely too aware of the warm body pressed against hers. Self-conscious, she pushed away and stood up again. `N Maybe we should talk about this in the morning.`
 
-    Kat carefully set the wine bottle aside and stood up herself. She opened her mouth as if to speak... and instead wrapped herself around Natalie in a bear hug, pinning arms to her sides. Their mouths pressed together in a sudden kiss, then broke apart again as Natalie struggled to pull away. Kat let her escape the kiss, but didn't let go. The sweet tang of wine lingered in on Natalie's tongue.
+    Kat carefully set the wine bottle aside and stood up herself. She opened her mouth as if to speak... and instead wrapped herself around Natalie in a bear hug, pinning arms to her sides. Their mouths pressed together in a sudden kiss, then broke apart again as Natalie struggled to pull away. Kat let her escape the kiss, but didn't let go the hug. The sweet tang of wine lingered in on Natalie's tongue.
 
-    `N You're drunk, Kat. Go sleep it off, we'll forget this ever happened.` It was Nat's turn to try and catch her breath - the kiss had stolen it all, leaving her panting.
+    It was Natalie's turn to try and catch her breath - the kiss had stolen it all, leaving her panting. `N You're drunk, Kat. Go sleep it off, we'll forget this ever happened.`
 
-    `K I'm not that drunk. It was just... it's easier if I pretend, maybe? I don't know.` She loosened her grip, letting Nat out to arm's length. `K Do... you want me to stop?` Was that pleading in Kat's voice, fear of rejection? Or perhaps Natalie was projecting - she was really the one scared of finding out that Kat was just acting out of her drink rather than her feelings.
+    `K I'm not that drunk. It was just... it's easier if I pretend, maybe? I don't know.` She loosened her grip, letting Natalie out to arm's length. `K Do you want me to stop?` Was that pleading in Kat's voice, fear of rejection? Or perhaps Natalie was projecting and was she the one scared of finding out that Kat was speaking from the bottle rather than heart.
 
     `K Hey, um, Nat, say something?` Kat's voice was quiet, hesitant.
 
     `N Fuck. Are you just horny or are you in love with me?` She pulled herself out of Kat's arms and stood up straight, brushing a stray strand of hair back out of her eyes.
 
-    The thief laughed and shoved Natalie playfully, serious mood completely broken. The twinkle was back in her eye. `K No fair, you first. Love or lust?`
+    The thief laughed and shoved Natalie playfully, the serious mood gone as quickly as it had come. The twinkle was back in her eye. `K No fair, you first. Love or lust?`
 
     <button onclick="Story.continueWith('KatCh3Yes')">`N I think both?`</button> <button onclick="Story.continueWith('KatCh3No')">`N Just having fun.`</button>
 
@@ -236,48 +237,48 @@ s.KatCh3Yes =
 
     `N Granted, sailor.`
 
-    The adrenalin must have cleared her head, because Kat wasn't slow any more, getting her arms back around Nat before she could react. Natalie struggled and twisted, but no matter how she tried to move, couldn't get her arms free. They lurched into a crate, sending bottles clinking, then Kat got her leg back in between her captain's thighs and used the leverage of superior height to bring them both down, Kat on top.
+    The adrenalin must have cleared her head, because Kat wasn't slow any more, getting her arms back around Natalie before she could react. Natalie struggled and twisted, getting her arms free occasionally but always finding them pinned to her sides again a moment later. They lurched into a crate, sending bottles clinking, then Kat got her leg back in between her captain's thighs and used the leverage of superior height to bring them both down to the floor, Kat on top.
 
   || N/Embarrassed
-    Natalie lay there, heart thudding loudly in her ears, arms still pinned at her sides as another woman lay on top of her. She wasn't holding back anymore, using all her strength, and still unable to escape. She couldn't catch her breath, couldn't squirm free...
+    Natalie lay there, heart thudding loudly in her ears, arms still pinned at her sides. She could get an arm loose, or a leg, but not for more than a moment or two. She couldn't catch her breath, couldn't squirm free...
 
-    Kat apparently liked whatever look was on her face, because she leaned down and kissed Nat on the nose with a grin. In the moment of distraction the kiss created she rolled her prey over onto her back, catching both of Nat's arms with her knees before they could escape, straddling her lower back. Hot breath on the back of Natalie's neck sent shivers down her spine, and she cried out as Kat bit down. It only lasted a moment, but left her panting when the teeth finally let go.
+    Kat apparently liked whatever look was on her face, because she leaned down and kissed Natalie on the nose with a grin. In the moment of distraction the kiss created she rolled her prey over onto her belly, catching both of Natalie's arms with her knees before they could escape, straddling her lower back. Hot breath on her skin sent shivers down Natalie's spine, and she cried out as Kat bit down on the back of her neck. It only lasted a moment, but left her panting when the teeth finally let go.
 
-    `K Damn, I like that sound,` Kat shifted her weight, rummaging overhead for something. Natalie craned her head to see what was going on, twisted around just far enough to see the thief pull something out of a crate. Kat grinned down at her, and moved what she'd found so Nat could see. A length of rope - easy enough to find anywhere on a ship, especially in the cargo hold. `K If you keep resisting, I'm going to have to bite you again,` she promised with a grin.
+    `K Damn, I like that sound,` Kat shifted her weight, rummaging overhead for something. Natalie craned her head to see what was going on, twisted around just far enough to see the thief pull something out of a chest. Kat grinned down at her, and held what she'd found so Natalie could see. A coil of rope - easy enough to find anywhere on the ship, especially in the cargo hold. `K If you keep resisting, I'm going to have to bite you again,` she promised with a grin.
 
-    First around one arm then the other, Kat looped the rope, and with a shift of her weight and a sudden yank, pulled Nat's arms together. `N Oww!`
+    Kat looped the rope first around one arm then the other, and with a shift of her weight and a sudden yank, pulled Natalie's arms together behind her back. `N Oww!`
 
-    `K Sorry, sorry,` Kat apologized, pausing in her attempt to tie a knot to rub Natalie's arms where the rope had cut into flesh. Adjusting the rope took away the discomfort, and Nat relaxed her cheek back into the floorboards while Kat finished tieing her wrists together. She felt Kat moving, the weight lift off her back, felt hands on her hips.
+    `K Sorry, sorry,` Kat apologized, pausing in her knot to rub Natalie's arms where the rope had cut into flesh. The discomfort eased as she adjusted the rope, and Natalie relaxed her cheek back into the floorboards while Kat finished tieing her wrists together. She felt Kat moving, the weight lift off her back, felt hands on her hips.
 
   || K/Happy
-    `K Roll over and lay flat,` Kat ordered, kneeling beside her. Pretending to obey, Natalie rolled over, then curled up her knees and aimed a double-footed kick at Kat's chest. Caught off guard by the sudden return action, Kat sprawled back into the crates behind her with a surprised yelp.
+    `K Roll over and lay flat,` Kat ordered, kneeling beside her. Pretending to obey, Natalie rolled over, then curled up her knees and aimed a double-footed kick at Kat's chest. Caught off guard by the return, Kat sprawled back into the crates behind her with a surprised yelp.
 
-    `K Biting it is then,` Kat smirked. Catching Nat's attempt to kick her again with both hands, she knelt down and trapped her captain's legs between her thighs. A rough grope at Nat's breasts with both hands, then with a violent motion she tore open Natalie's blouse, sending buttons scattering everywhere.
+    `K Biting it is then,` Kat smirked. Catching Natalie's attempt to kick her again with both hands, she knelt down and trapped her captain's legs between her thighs. Kat groped roughly at Natalie's breasts with both hands, then with a violent motion she tore open Natalie's blouse, sending buttons scattering everywhere.
 
-    `N Hey! You're going to sew those baaAAAH!` Her objection rose to a high-pitched squeal as Kat pulled aside her bra and bit down - hard - on the tender nipple beneath. Natalie bucked and jerked, the motion only adding to her pain as Kat refused to let go. A rough hand gripped her hair and yanked, pulling her head up off the floor. She finally stopped thrashing as the pain of yanking her nipple against Kat's teeth became too much.
+    `N Hey! You're going to sew those baaAAAH!` Her objection rose to a high-pitched squeal as Kat pulled aside her bra and bit down - hard - on the tender flesh beneath. Natalie bucked and jerked, the motion only adding to her pain as Kat refused to let go. A rough hand gripped her hair and yanked, pulling her head up off the floor. She finally stopped thrashing as the pain of pulling her nipple away from Kat's teeth became too much.
 
-    Finally the torture ended, Kat releasing her nipple and relaxing the grip on Natalie's hair. Her chest heaved as she sucked down air, a wordless groan escaping her lips as the excruciating bite was replaced with a gentle sucking sensation.
+    Finally the torture ended, Kat releasing her nipple and relaxing the grip on Natalie's hair. Natalie's chest heaved as she sucked down air, a wordless groan escaping her lips as the excruciating bite was replaced with a gentle sucking sensation.
 
-    Shifting wood and bootsteps brought Nat back to the present moment. The hatch at the top of the stairway opened. ` Is something wrong down here?` A crewman poked his head in from above.
+    Shifting wood and bootsteps brought Natalie back to the present moment. The hatch at the top of the stairway opened. ` Is something wrong down here?` A crewman poked his head in from above.
 
     Kat looked up at the voice, froze, one of Natalie's breasts still in her hand, still straddling the captain. She could imagine what what he must be seeing, a bare chest and ripped shirt and trailing rope and Kat's cheeks already brilliant red and growing brighter by the second...
 
     No one breathed.
 
   || Sailors/MSad
-    ` Um... sorry, c-carry on.` He stuttered and backed out, slamming the hatch closed.
+    ` Um... s-sorry, carry on.` He stuttered and backed out, slamming the hatch closed.
 
-    Natalie burst out laughing, accompanied a moment later by Kat's nervous giggles. It went on until they were both gasping for breath - and Natalie's first words, `N Yes, let's c-carry on,` set them both off again until their sides hurt.
+    Natalie burst out laughing, accompanied a moment later by Kat's nervous giggles. It went on until they were both gasping for breath - and Natalie's first words, `N Yes, let's c-carry on,` set them off again until their sides hurt.
 
-    Kat lay spent on top of her, and more than anything, Natalie really just wanted to hug her. Instead she had to settle for kissing the other woman on the lower lip and rubbing their cheeks together. It turned into a real kiss - tentative, exploratory, but real. Finally Natalie broke it.
+    Kat lay spent on top of her, and more than anything, Natalie wanted to hug her. Instead she had to settle for kissing the other woman on the lower lip and rubbing their cheeks together. It turned into a real kiss - tentative, but real. Finally Natalie broke it.
 
     `N I think maybe we'd better call it here for tonight, before anyone else stumbles in on us.`
 
-    `K But, um, just for tonight, right? We can do this again?` Kat rolled off to the side, sat up, straightened Natalie's bra so it at least mostly covered her breasts again.
+    `K But, um, just for tonight, right? We can do this again?` Kat rolled off to the side, sat up, straightened Natalie's bra so it at least mostly covered her breasts again. She bit her lip, looked at the floor.
 
-    Nat heard the worry in the question, understood what was really being asked. She smiled up at the other woman, meeting uncertain brown eyes with her own kind gaze. `N Thank you, Kat. I mean it. I want this, and I want you.` She lifted up, kissed the taller woman on the shoulder and relaxed back to the hard floor.
+    Natalie heard the worry in the question, guessed what was really being asked. She smiled up at the other woman, meeting uncertain brown eyes with her own kind gaze. `N Thank you, Kat. I mean it. I want this, and I want you.` She lifted up, kissed the taller woman on the shoulder and relaxed back to the hard floor.
 
-    It was the right thing to say. She saw the relief flood through the thin body, tension she sleeting away.
+    It was the right thing to say. She saw the relief flood through the thin body, tension sleeting away.
 
     `N You still have to sew those buttons back on though. Now untie me so we can start hunting for them.`
   """
@@ -300,13 +301,13 @@ s.KatCh3No =
 
     `N Granted, sailor.`
 
-     The adrenalin must have cleared her head, because Kat wasn't slow any more, getting her arms back around Nat before she could react. Natalie struggled and twisted, but no matter how she tried to move, couldn't get her arms free. They lurched into a crate, sending bottles clinking, then Kat got her leg back in between her captain's thighs and used the leverage of superior height to bring them both down, Kat on top.
+     The adrenalin must have cleared her head, because Kat wasn't slow any more, getting her arms back around Natalie before she could react. Natalie struggled and twisted, but no matter how she tried to move, couldn't get her arms free. They lurched into a crate, sending bottles clinking, then Kat got her leg back in between her captain's thighs and used the leverage of superior height to bring them both down, Kat on top.
 
      With her arms still pinned, Natalie curled up her knees and aimed a double-footed kick at Kat's chest. Caught off guard by the sudden return action, Kat sprawled back into the crates behind her with a surprised yelp.
 
-    `K Biting it is then,` Kat smirked. Catching Nat's attempt to kick her again with both hands, she knelt down and trapped her captain's legs with her body weight, between her thighs. A rough grope at Nat's breasts with both hands, then with a violent motion she tore open Natalie's blouse, sending buttons scattering everywhere.
+    `K Biting it is then,` Kat smirked. Catching Natalie's attempt to kick her again with both hands, she knelt down and trapped her captain's legs with her body weight, between her thighs. She groped roughly at Natalie's breasts with both hands, then with a violent motion she tore open Natalie's blouse, sending buttons scattering everywhere.
 
-    `N Hey! You're going to sew those baaAAAH!` Her objection rose to a high-pitched squeal as Kat chomped on her shoulder. Natalie bucked and jerked, the motion only adding to her pain as Kat refused to let go. Shifting wood and bootsteps brought Nat back to the present moment.
+    `N Hey! You're going to sew those baaAAAH!` Her objection rose to a high-pitched squeal as Kat chomped on her shoulder. Natalie bucked and jerked, the motion only adding to her pain as Kat refused to let go. Shifting wood and bootsteps brought Natalie back to the present moment.
 
     The hatch at the top of the stairway opened. ` Is something wrong down here?` A crewman poked his head in from above.
 
@@ -319,7 +320,7 @@ s.KatCh3No =
 
     Natalie burst out laughing, accompanied a moment later by Kat's nervous giggles, then a full laugh from both women. It went on until they were both gasping for breath - and Natalie's first words, `N Yes, let's c-carry on,` set them both off again until their sides hurt.
 
-    Kat lay collapsed on top of her, and more than anything, Nat really just wanted to hug her. She did that. `N I think maybe we'd better call it here for tonight, before anyone else stumbles in on us.`
+    Kat lay collapsed on top of her, and more than anything, Natalie really just wanted to hug her. She did that. `N I think maybe we'd better call it here for tonight, before anyone else stumbles in on us.`
 
     `N You still have to sew those buttons back on though. Now get off so we can start hunting for them.`
   """

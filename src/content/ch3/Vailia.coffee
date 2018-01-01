@@ -44,7 +44,7 @@ s.AboutAntinua =
 s.AsarasChallenge =
   label: "Asara's Challenge"
   history:
-    AsaraToVisitSister: true
+    AboutAntinua: true
   effects:
     xp:
       Natalie: 2
@@ -173,6 +173,7 @@ s.AsarasDuel =
   """
 
 Place.Vailia.stories.Ch3 = Object.keys(s)
+Place.Vailia.stories.Ch3.push('JamesCh3Yes')
 for key, value of s
   value.place = 'Vailia'
   Story[key] = value

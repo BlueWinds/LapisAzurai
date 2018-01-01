@@ -270,7 +270,7 @@ s.AsaraCh3 =
   || A/Crying
     A feeling of presence, of patient waiting filled Natalie's bedroom – someone was at the door. She rubbed bleary eyes, drawn up out of a heavy sleep by the sensation. She slipped a sweater over bare shoulders and went to open the door.
 
-    Asara stood in the doorway, waiting in the darkness. Natalie wondered how long she'd been waiting there, saying nothing, without knocking. Silence stretched between them, and Natalie saw that Alara's cheeks were wet, eyes red and puffy . It didn't feel right to say anything, so she didn't, just stepped to the side and waited for the young woman to enter. The priestess. It was hard to know what to think of her, perched on the border between terrifying power and fragile girl, attractive equal and helpless innocent in equal measure.
+    Asara stood in the doorway, waiting in the darkness. Natalie wondered how long she'd been waiting there, saying nothing, without knocking. Silence stretched between them, and Natalie saw that Asara's cheeks were wet, eyes red and puffy . It didn't feel right to say anything, so she didn't, just stepped to the side and waited for the young woman to enter. The priestess. It was hard to know what to think of her, perched on the border between terrifying power and fragile girl, attractive equal and helpless innocent in equal measure.
 
     Asara closed the door behind her, leaving them alone together in the darkness, only moonlight from the small window to give shadowy form to the room's contents. Another moment of silence.
 
@@ -302,7 +302,7 @@ s.AsaraCh3Yes =
 
     Asara moved her lips down and kissed Natalie's wrist, carefully, as if afraid that it might shatter in her hands, or reach out and strike her in sudden anger. Natalie raised her other hand to touch Asara's cheek again, but the silver-eyed beauty caught it with one hand, gently lowered it back to Nat's side. She kissed Natalie's wrist again, sending shivers up her spine, and then let go her hand and stepped closer.
 
-    For a brief moment Natalie felt lips brush across her own, a warm caress that blurred her thoughts and left her dazed. She blinked, and the feeling was gone - not only the kiss, but also the feeling of Asara's presence, the other silhouette in the darkness. Though she hadn't noticed any movement, certainly hadn't seen the door open, she was again alone in her room.
+    For a brief moment Natalie felt lips brush across her own, a warm caress that and left her dazed. She blinked, and the feeling was gone - not only the kiss, but also the feeling of Asara's presence, the other silhouette in the darkness. Though she hadn't noticed any movement, and certainly hadn't seen the door open, she was again alone in her room.
   """
   apply: ->
     g.chapter = 'Ch3'

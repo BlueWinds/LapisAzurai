@@ -35,6 +35,29 @@ s.AsaraToVisitSister =
     One hand had strayed to the hilt of her sword, knuckles white around the pomel. `A I've delayed far too long. No more weakness.`
   """
 
+s.AmuletsEverywhere =
+  label: 'Another Amulet'
+  history:
+    KatCh3Yes: true
+  effects:
+    xp:
+      Kat: 3
+      Natalie: 2
+  text: ->"""
+  ||
+    `K Captain, he's got one of those amulets.`
+
+    `N I know, I can feel it.` Natalie ignored Kat's anxious tug on her sleeve. `N I've gotten more sensitive to them since you dropped one in my lap. There's one other in the marketplace here, and the harbor master has one as well.`
+
+    They stepped aside to let someone else enter, catching a glimpse inside as the door swung closed. Among the dirty and weary village of shepherds and ranchers, this building stoop out. White marble, Kantian styel, it held the largest reseller of Lephian goods in the area. And the owner, like every well-placed businessman in the Kantian region it seemed, had a magical artifact.
+
+    `N Creepy.`
+
+    `K Definitely.`
+
+    `N Well, in we go. No point darkening his doorstep when there's deals to be made.`
+  """
+
 Place.Lephai.stories.Ch3 = Object.keys(s)
 for key, value of s
   value.place = 'Lephai'
