@@ -224,7 +224,7 @@ s.KatStorm2 =
     KatStorm: true
   text: -> """
   || travel/CabinDay
-    `K You're a very nice lady, you know that?` Natalie woke to a hand patting her shoulder. She'd fallen asleep while tending to Kat, and now it seemed her charge had awakened first.
+    `K You're a nice lady, you know that?` Natalie woke to a hand patting her shoulder. She'd fallen asleep while tending to Kat, and now it seemed her charge had awakened first.
 
     `N Hmm?`
 

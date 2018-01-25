@@ -60,7 +60,7 @@ s.VisitElakim =
   || Elakim/Serious
     `Elakim Welcome to my summer estate. I'm glad to hear you landed at my pier. I hope they treated you well?` His accent was thicker than other Kantians. Probably a mark of status or nobility, Natalie decided.
 
-    `N Very kind of you, thanks. I came to ask what exactly being your gues entails, though. Our last meeting was rather short-lived to have inspired such generosity on your part.`
+    `N Very kind of you, thanks. I came to ask what exactly being your guest entails, though. Our last meeting was rather short-lived to have inspired such generosity on your part.`
 
     `Elakim Spoken like a true Vailian, more concerned about a few coins than about making friends in a foreign city.` He laughed, a sound she found difficult to interpret.
 

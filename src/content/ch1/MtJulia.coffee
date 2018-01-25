@@ -183,7 +183,7 @@ s.AsaraAwakens =
 
     While they ate in silence, except the clanking of chains, Natalie finally had a chance to examine Asara while awake. She wasn't as delicate as she'd seemed while sleeping. Her arms had deceptive strength, and she wasn't afraid to use it violently. Her entire aspect seemed controlled, no wasted movements or unconscious gesturing. Dangerous. Natalie didn't doubt the girl could and would have killed her had her earlier answers proven unsatisfactory. Natalie caught herself staring and looked away.
 
-    `A Please remove these,` Asara suddenly said. She set aside the buttered-roll half finished and rattled her chains. She didn't make a face – she displayed very few expressions – but Natalie could tell that she didn't like the taste of the food.
+    `A Please remove these,` Asara suddenly said. She set aside the buttered-roll half finished and rattled her chains. She didn't make a face - she seldom emoted - but Natalie could tell that she didn't like the taste of the food.
 
   || travel/DeckDay
     `N Of course, sorry. Let's go below to where the tools are.` Natalie opened the door and stepped out – several of the crew were around and looked at her curiously, but quickly scattered when she gestured them to clear the area. Asara hesitated at the doorway, then stepped out onto the deck behind her. She glanced around, then nodded approval at Natalie to lead the way.

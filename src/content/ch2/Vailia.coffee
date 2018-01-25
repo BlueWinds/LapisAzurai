@@ -105,7 +105,7 @@ s.NonkeniaDiplomat =
   || places/GuildOffice
     `N Guildmaster Janos,` Natalie grinned and sauntered into his office unannounced. It had cost her an obol at the front desk to see him on the quiet, but the look of surprise on his face as she sat herself down across from him was worth it.
 
-    ` Ah, welcome. I didn't know your ship was back already. Doing well, I hope?`
+    `Guildmaster Ah, welcome. I didn't know your ship was back already. Doing well, I hope?`
 
     `N Things are going well. Even found a few trustworthy officers. I also wanted to thank you for the route to Nonkenia - that was unexpected, and quite generous. Not sure what I did to earn that one. But that isn't why I'm here. I'm here because you need me to deliver something irreplaceable to Alkenia.`
 
@@ -114,15 +114,15 @@ s.NonkeniaDiplomat =
     `N Easy. <i>You</i> wanted to see me when I got back, which means you want something moved. You wanted to see <i>me</i> when I got back, which means you can't afford to have it lost at sea. You wanted to see me when I <i>got back</i>, which means it has something to do with Alkenia, since I've had a lot of dealings there recently.`
 
   || Guildmaster/Serious
-    ` Very good, but wrong on two counts. Nonkenia is the destination, which answers why I gave you the rutter to get there. Also, it's a 'them' I want delivered, not an 'it.' You are certainly correct that I would very much prefer to trust them to your care compared to someone else's, though.`
+    `Guildmaster Very good, but wrong on two counts. Nonkenia is the destination, which answers why I gave you the rutter to get there. Also, it's a 'them' I want delivered, not an 'it.' You are certainly correct that I would much prefer to trust them to your care compared to someone else's, though.`
 
-    ` This feud between Alkenia and Nonkenia is doing no one any good. A war right in our backyard is bad business. While the prince, and thus Vailia, certainly has made a policy of non-interference in foreign politics, as a private individual I have somewhat greater freedom of action.` He smiled at the irony in those last words. The prince did what the Guild asked him to. "Private individual" indeed.
+    `Guildmaster This feud between Alkenia and Nonkenia is doing no one any good. A war right in our backyard is bad business. While the prince, and thus Vailia, certainly has made a policy of non-interference in foreign politics, as a private individual I have somewhat greater freedom of action.` He smiled at the irony in those last words. The prince did what the Guild asked him to. "Private individual" indeed.
 
-    ` Please don't make that face. All I'm going to do is attempting to start peace talks, nothing objectionable. I wish you to carry a pair of diplomats to Nonkenia to arrange things, with all possible haste. You will, of course, be paid.`
+    `Guildmaster Please don't make that face. All I'm going to do is attempting to start peace talks, nothing objectionable. I wish you to carry a pair of diplomats to Nonkenia to arrange things, with all possible haste. You will, of course, be paid.`
 
     He didn't need to ask if she'd do it. Any number of reasons would have been sufficient alone - money, loyalty the man who was not far from a father, a desire to do good for the people of both cities, earning favor from the Guild. She just nodded.
 
-    ` Excellent. I'll tell Ameliss to meet you at your ship this afternoon.`
+    `Guildmaster Excellent. I'll tell Ameliss to meet you at your ship this afternoon.`
   """
 
 s.TrainCombatNat =
@@ -178,7 +178,7 @@ s.TrainCombatKat =
 
     ` Ah, you must be Kat. Natalie told me about you. I hear you're quick like a demon and lazy like one too.`
 
-    `K That wasn't very nice of her.` Kat stuck out her tongue. `K Accurate though,` she chuckled at her sally.
+    `K That wasn't nice of her.` Kat stuck out her tongue. `K Accurate though,` she chuckled at her sally.
 
     ` Well, we'll soon work that out of you. Do you know any weapons work?`
 
@@ -219,7 +219,7 @@ s.IronSandsRutter =
   || places/GuildOffice
     `Guildmaster Come in. Kat, is it?`
 
-    Kat stepped into the office quietly. She'd been in a place this swanky several times before - usually when something very bad was about to happen. She perched on the edge of the offered seat and folder her hands in her lap.
+    Kat stepped into the office quietly. She'd been in a place this swanky several times before - usually when something bad was about to happen. She perched on the edge of the offered seat and folder her hands in her lap.
 
     `Guildmaster I wonder why Natalie sent you. It's usually James' job to pick up sensitive documents.`
 
@@ -388,7 +388,7 @@ s.JamesParents =
 
     The roar of the forge and billows of soot from the chimney above showed him what he'd find if he went inside - his father shirtless and sweating, his mother shoveling charcoal into the furnace. That had been her job before James had been old enough, and doubtless was again since he'd run off with Natalie.
 
-    He could smell it too, and not only in his imagination. Hot metal, smoke, sweat, warm winters and blazing summers nestled alone in the attic above the shop. The heat and smells were benefits - better clean industry than effluent odors from the street, and they never worried about staying warm, unlike so many others. There were worse lots in life, and he had only to turn around to be reminded of that. smithies[D[D[D[D[D[D[D[D[D[C[S clustered in the poorest part of Vailia not because they were themselves poor, but because no one else would tolerate the noise.
+    He could smell it too, and not only in his imagination. Hot metal, smoke, sweat, warm winters and blazing summers nestled alone in the attic above the shop. The heat and smells were benefits - better clean industry than effluent odors from the street, and they never worried about staying warm, unlike so many others. There were worse lots in life, and he had only to turn around to be reminded of that. Smithies clustered in the poorest part of Vailia not because they were themselves poor, but because no one else would tolerate the noise.
 
     James remembered his father, loud and angry that he would abandon his apprenticeship and family history, and his mother, jaw set grimly and glancing every few minutes towards the distant sea. It had claimed both her mother and her fist husband.
 

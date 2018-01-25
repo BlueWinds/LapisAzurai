@@ -60,7 +60,7 @@ s.ExploreForest =
 
     Slowly, much more slowly than their legs and minds reported, they began to draw nearer. More worrisome than the mere fact that they'd come at least a mile on their way to a destination only a hundred yards distant, were the changes in the forest around them. It was darker now, the trees closer overhead, the bushes more thorny and with fewer friendly leaves.
 
-    Something was very wrong here. ` We should go back, sir. I don't like this.` The crewman hugged himself, looking around nervously.
+    Something was very here. ` We should go back, sir. I don't like this.` The crewman hugged himself, looking around nervously.
 
   || J/Upset
     `J Nor I. Just a little further, we are making progress.` He gestured to the hut - by now only half as far away. They started walking again.
@@ -123,7 +123,7 @@ s.AsarasMagic =
 
     `N You, um, you aren't going to burn the ship down, are you?`
 
-    `A No. That was...` she shuddered, suddenly looking very small and vulnerable. Natalie regretted asking the question, and had to stop herself before she put a hand on Asara's shoulder. `A ...I cannot do such a thing again. My sisters may be so powerful, but I am not. I will be summoning only the blessing, not the flames.`
+    `A No. That was...` she shuddered, suddenly looking small and vulnerable. Natalie regretted asking the question, and had to stop herself before she put a hand on Asara's shoulder. `A ...I cannot do such a thing again. My sisters may be so powerful, but I am not. I will be summoning only the blessing, not the flames.`
 
     It did confirm, unfortunately, that Asara had been responsible for a pillar of silver flame visible from thirty kilometers away, which splintered a ship and made steel run like molasses. Not a comfortable thought. `N What is 'the blessing'?`
 

@@ -178,7 +178,7 @@ s.KantisRegion3 =
 
     `N I won't tell anyone.` She sighed and leaned back in her seat, backing away from the still standing woman. `N I want to help, Asara, I really do. But I can't do anything if you won't talk with me. Please?`
 
-    Asara started to shake her head again, then shuddered and stopped. Pushing people away was easy. She was very good at at. But... she forced herself to meet Natalie's gaze. Maybe. Maybe she could try. `A It is... I saw you could not do this alone. So I asked some of my people to help.`
+    Asara started to shake her head again, then shuddered and stopped. Pushing people away was easy. She was good at at. But... she forced herself to meet Natalie's gaze. Maybe. Maybe she could try. `A It is... I saw you could not do this alone. So I asked some of my people to help.`
 
     `N Your people?` Natalie leaned closer again, interest piqued.
 

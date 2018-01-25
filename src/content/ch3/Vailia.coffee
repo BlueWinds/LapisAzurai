@@ -167,7 +167,7 @@ s.AsarasDuel =
 
     ' I can't do it.` She an uneven breath. ` She won. Ready your ship.` She strode past them without looking back.
 
-    Hathawa tried to say something, but Natalie wasn't listening. She ran to Asara's side. There was no smoke, very little ash, just a circle burned completely clean all the way down to rock, and at the center, Asara laying on her side sobbing. Natalie fell to her knees, hesitated. Asara's clothing was untouched,  pale skin looking unburned.  Hard to tell, with Natalie still seeing spots and still adjusting to the darkness. No, she'd hesitated before, and almost lost Asara because she'd been afraid to say anything, afraid to challenge her decision and risk the trust they'd built. No hestiating now. Natalie gathered Asara in her arms, hugged her fiercely.
+    Hathawa tried to say something, but Natalie wasn't listening. She ran to Asara's side. There was no smoke, little ash, just a circle burned completely clean all the way down to rock, and at the center, Asara laying on her side sobbing. Natalie fell to her knees, hesitated. Asara's clothing was untouched,  pale skin looking unburned.  Hard to tell, with Natalie still seeing spots and still adjusting to the darkness. No, she'd hesitated before, and almost lost Asara because she'd been afraid to say anything, afraid to challenge her decision and risk the trust they'd built. No hestiating now. Natalie gathered Asara in her arms, hugged her fiercely.
 
     Asara clung to Natalie like a drowning woman, sobbing slowly drawing to a close, ragged breaths easing as pain subsided. Neither of them spoke. Glass smouldered around the edges of the burned circle.
   """

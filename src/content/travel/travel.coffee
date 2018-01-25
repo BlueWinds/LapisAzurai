@@ -232,7 +232,7 @@ s.ShipPracticeCombat =
 
     `N I doubt there's anything with a sail that can cath us here, but if one of the rowwed vessels found us while the winds unfavorable... Go ahead. A little boarding practice never hurt anyone.`
 
-    James nodded and got to work. With much shouting and waving of arms he divided the crew up into two teams. Half of them pretended to board, while the others repelled using oars and poles wrapped in cloth as weapons. It was still unbelievably noisy as some of the sailors got very much into the spirit, with battle cries and dramatic 'death scenes' as they were slain.
+    James nodded and got to work. With much shouting and waving of arms he divided the crew up into two teams. Half of them pretended to board, while the others repelled using oars and poles wrapped in cloth as weapons. It was still unbelievably noisy as some of the sailors got into the drama of it, with battle cries and 'death scenes' as they were slain.
 
     Asara stayed on the sidelines, watching. No one had any doubts over her readiness for battle.
   """

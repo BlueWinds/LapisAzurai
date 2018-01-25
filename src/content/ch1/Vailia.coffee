@@ -69,7 +69,7 @@ s.Intro =
     Natalie poked James in the forehead, causing him to wince. `N I knew it, you just woke up too.`
 
   || J/Embarrassed
-    He shook his head, mop of hair unruly and uncombed, trying to deny it, but she quirked an eyebrow, and he finally relented. `J Hey, it was our very first night on board your new ship. A little drinking seemed in order.` He dropped his eyes guiltily.
+    He shook his head, mop of hair unruly and uncombed, trying to deny it, but she quirked an eyebrow, and he finally relented. `J Hey, it was our first night on board your new ship. A little drinking seemed in order.` He dropped his eyes guiltily.
 
     `N Never said it wasn't. Now, come on, I want breakfast before we meet with the Guildmaster.`
 
@@ -231,7 +231,7 @@ s.FirstStormSick2 =
   || travel/CabinDay
     Natalie jerked awake, pulse pounding. The ship... the ship was safe, rocking gently beneath her. Instinctively she reached out, feeling fractures and weak points... and winced back, mind burning. Like touching a half-healed wound, or pulling with a strained muscle, the minor effort she'd put forth was enough to warn her that further pressing her magic would only lead to passing out again.
 
-    She felt weak, swinging her legs down off the edge of the bed, but steady enough. Someone had dressed her in a nightgown, and a cup of water waited on the desk for her attention. Also a roll, freshly baked even. Very considerate of them. She tore into it with an appetite.
+    She felt weak, swinging her legs down off the edge of the bed, but steady enough. Someone had dressed her in a nightgown, and a cup of water waited on the desk for her attention. Also a roll, freshly baked even. Considerate of them. She tore into it with an appetite.
 
     They were, she surmised, back in Vailia. Mount Julia didn't have fresh baked garlic-cheese-rolls. They. Better check who <q>they</q> were. Her last memory was of pounding power surging through her body and a wave towering over the ship, threatening to reduce the Lapis to splinters if she couldn't grip the entire vessel tightly enough.
 
