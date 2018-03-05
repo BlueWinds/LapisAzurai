@@ -195,6 +195,7 @@ s.TomenoiHistory =
   effects:
     xp:
       Kat: 3
+  cost: 2
   text: ->"""
   || places/TomenoiDay
     Too much James brooding. Too much Asara brooding. Too much Natalie hovering over them and pretending not too. Kat went for a walk. Too much everyone being idiots and not talking to each other the way they should.
@@ -266,6 +267,7 @@ s.AsaraCh3 =
   effects:
     xp:
       Natalie: 2
+  cost: 0
   text: -> """
   || A/Crying
     A feeling of presence, of patient waiting filled Natalie's bedroom – someone was at the door. She rubbed bleary eyes, drawn up out of a heavy sleep by the sensation. She slipped a sweater over bare shoulders and went to open the door.

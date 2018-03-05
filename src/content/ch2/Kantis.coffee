@@ -40,7 +40,7 @@ s.VisitElakim =
       Natalie: 5
   text: -> """
   || places/KantisDay
-    Near the waterKantis was a city like any other, but as Natalie climbed higher up the slope surrounding the harbor, there was a wall. On one side things were noisy, commercial, disorderly, as if the people were frantic to make a sale. Passing under the arch, she ran face first into a wall of silence. Instead of streets and buildings, she faced footpaths and gardens, manicured trees and open space. Two of the four gate guards came over. Four seemed a rather large number of armed men to be keeping watch in a peaceful city.
+    Near the water Kantis was a city like any other, but as Natalie climbed higher up the slope surrounding the harbor, there was a wall. On one side things were noisy, commercial, disorderly, as if the people were frantic to make a sale. Passing under the arch, she ran face first into a wall of silence. Instead of streets and buildings, she faced footpaths and gardens, manicured trees and open space. Two of the four gate guards came over. Four seemed a rather large number of armed men to be keeping watch in a peaceful city.
 
     ` Can I help you?`
 

@@ -1,8 +1,9 @@
 sampleData =
   label: 'Explore Wilds'
-  blocking: true # A blocking event prevents all other actions when the player is at that location. Will reduce their reputation to 0 if they wouldn't normally have enough to play an event.
+  blocking: true # A blocking event prevents all other actions when the player is at that location. Costs no reputation.
   required: 'GameOver' # This event will result in a game over screen (using the given story) if it expires unviewed.
   requiredGroup: 'Ch2Routes' # This required event will only cause a game-over if /all/ events in its group are expired or viewed, and if the chapter hasn't changed.
+  cost: 1 # Multiplier on the event's cost. Defaults to 1 if absent.
   place: 'Vailia' # Used mostly to calculate how many days events should take to expire
   extraDays: 10 # Days added to the calculated expiration date, used to manually tweak balance
   skills:
@@ -19,7 +20,9 @@ sampleData =
   text: -> '''|| ...etc...'''
 
 window.Story = {
-  reputationNeeded: (story)-> if Story[story].blocking then 0 else 15
+  reputationNeeded: (story)->
+    mult = if Story[story].cost? then Story[story].cost else 1
+    if Story[story].blocking then 0 else (15 * mult)
 
   skillNeeded: (story)->
     for skill, person of Story[story].skills

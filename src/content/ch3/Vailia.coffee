@@ -2,6 +2,7 @@ s = {}
 
 s.AboutAntinua =
   label: "Seeking Meghan's Help"
+  cost: 0
   history:
     AsaraToVisitSister: true
   effects:
@@ -32,6 +33,7 @@ s.AboutAntinua =
 
     Natalie cocked her head, confused by the assertion. `N I'm pretty sure Asara could twist me into a pretzel with one hand.`
 
+  ||
     ` Apples to oranges, as I said. Their gifts flow in a more martial direction, and it would probably kill you to draw on your full strength. Something's broken with your magic, I'm not entirely sure what. Regardless,` Meghan shrugged, ` not my point. My point is that you and Asara are a good match. Antinua operates more at my level.` A long pause as she let that sink in. ` I don't know where she comes from. I don't know why she's here. I do know that we have an understanding, and that I will be most annoyed if you start a fight you can't finish inside my city.`
 
     Natalie nodded slowly, goosebumps running up her arms. `N Thank you for the warning. I'll be careful.`
@@ -43,6 +45,7 @@ s.AboutAntinua =
 
 s.AsarasChallenge =
   label: "Asara's Challenge"
+  cost: 0
   history:
     AboutAntinua: true
   effects:
@@ -50,14 +53,14 @@ s.AsarasChallenge =
       Natalie: 2
       Asara: 2
   text: ->"""
-  ||
+  || A/Sad
     ` Asara.`
 
     The priestess in question tensed at the unfriendly tone.
 
     ` I didn't expect the goddess to pick you, sister.`
 
-    ` I've changed, Antinua.` Asara held her chin up as the older woman approached and circled around her. This was Antinua's home, a modest stand-alone house in one of the nicer parts of the city. Modest by the standards of the circles Antinua was moving in these days, of course. The wealthy. The powerful. It was a far cry from the tents both of them had grown up in, moving every few months with only the possessions they could carry on their backs.
+    `A I've changed, Antinua.` Asara held her chin up as the older woman approached and circled around her. This was Antinua's home, a modest stand-alone house in one of the nicer parts of the city. Modest by the standards of the circles Antinua was moving in these days, of course. The wealthy. The powerful. It was a far cry from the tents both of them had grown up in, moving every few months with only the possessions they could carry on their backs.
 
     ` You have indeed. I approve. Why are you here?`
 
@@ -69,6 +72,7 @@ s.AsarasChallenge =
 
     ` I gave that duty to Alanda.` Antinua cut in, firm but not arngy, as though duty were something that could be laid aside like a debt that had been discharged.
 
+  ||
     `A Alanda's dead.`
 
     ` Amaria.`
@@ -85,6 +89,7 @@ s.AsarasChallenge =
 
     ` It's not my problem any more.` Despite the flicker of horror before, the unreadable face had set to stone, now completely unyielding.
 
+  || A/Scared
     `A We need you,` came out a whisper. Her throat was too choked up for more.
 
     ` You want horror, Asara? How many have you killed? Tens, hundreds, have died by my hand. I killed and I killed and I killed for the goddess, and not a thing changed. It's not worth it. Go north. Let them have their patch of sand.` ANtinua had risen as she spoke, pacing quickly back and forth in front of the priestess. Her face was still frozen in severity, but now Asara could hear the pain behind the mask, pain given and pain received. ` I've built a new life here. I won't go back.`
@@ -148,6 +153,7 @@ s.AsarasDuel =
 
     James made an angry noise, ready to object, but Natalie put a hand on his arm. She could feel the change coming a moment before the flames pulsed and grew again. Asara staggered and went to her knees. Natalie had to shield her eyes from the light in order to make out Asara's grimace, still holding Antinua's hand. Where before the power had been balanced, coming from each equally, now the elder sister's magic dominatied. Antinua's expression was grim, almost pitying as Asara struggled back to her feet. The younger priestess found reserves from somewhere, pushed harder, increased her own power to balance the magic again.
 
+  ||
     The three witnesses had to retreat from the heat, stepping back from the now towering bonfire. Natalie tried to find something to say to Hathawa, couldn't. She gripped James' arm harder, tried to keep her breathing steady. She wanted to rush forward and drag Asara out, "purpose" be damned, but she was helpless, rooted in place by fear and lack of power. This was beyond her.
 
     ` She should give up.` Hathawa hugged her arms across her chest, looking almost as thoroughly miserable as Natalie felt.

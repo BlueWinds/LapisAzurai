@@ -53,6 +53,7 @@ s.AlkeniaWeaponsRunning =
   label: 'Forestry'
   history:
     Ch2: true
+  cost: 2
   effects:
     xp:
       Natalie: 3
@@ -77,6 +78,7 @@ s.AlkeniaWeaponsRunning2 =
   effects:
     xp:
       James: 3
+  cost: 0
   text: ->"""
   || travel/CabinDay
     `J Are you sure we should be doing this, Nat?` James kicked the cask. Compared to the beating it'd take during loading or unloading, a stray kick was nothing. It did waft the scent of the pine oil and honey in Natalie's direction, one sealing the contents against saltwater in case the hold flooded and the other hinting at the contents. Most deals were primarily in goods - far easier for a company to find spare stock than hard cash, and easier for the merchants as well. Only large companies had enough cash to outright purchase enough cargo to fill a ship. `J I don't like being an arms merchant.`
@@ -94,7 +96,7 @@ s.AlkeniaWeaponsRunning2 =
 s.AlkeniaRaid =
   label: 'Nonkenian Raid'
   history:
-    NonkeniaHunters: true
+    NonkeniaArrive: true
   effects:
     xp:
       Asara: 5
@@ -229,6 +231,7 @@ s.KatCh3Yes =
   effects:
     xp:
       Kat: 10
+  cost: 0
   text: -> """
   ||
     `N I think both?`

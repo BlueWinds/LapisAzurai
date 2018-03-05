@@ -2,6 +2,7 @@ s = {}
 
 s.AsaraToVisitSister =
   label: 'Desert Horizons'
+  cost: 3
   history:
     AsaraCh3Yes: true
   effects:

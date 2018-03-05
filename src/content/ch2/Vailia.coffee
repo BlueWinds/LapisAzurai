@@ -48,6 +48,7 @@ s.JamesUpsetMagic =
   effects:
     xp:
       James: 3
+  cost: 2
   text: ->"""
   || travel/CabinNight
     `N So, when're you going to say something?`
@@ -96,6 +97,7 @@ s.NonkeniaRoute =
 
 s.NonkeniaDiplomat =
   label: 'Diplomatic Delivery'
+  cost: 3
   history:
     NonkeniaRoute: true
   effects:
@@ -377,6 +379,7 @@ s.JamesParents =
   label: "James' Parents"
   required: 'GameOverTrust'
   requiredGroup: 'Ch2Routes'
+  cost: 2
   history:
     JamesUpsetMagic2: true
   effects:
@@ -436,6 +439,7 @@ s.TomenoiHistory2 =
   effects:
     xp:
       Kat: 3
+  cost: 0
   text: ->"""
   || places/VailiaDay
     `Meghan Natalie, welcome. And you are...`
@@ -593,6 +597,7 @@ s.JamesCh3 =
   label: 'Chapter 3 - James'
   required: 'GameOverSorrow'
   requiredGroup: 'Ch2Routes'
+  cost: 0
   history:
     JamesParents2: true
     KantianSorcerer: true
@@ -660,12 +665,11 @@ s.JamesCh3Yes =
     xp:
       James: 10
   text: -> '''
-  ||
+  || places/VailiaNight
     `N I'll come with you. I haven't seen your mother in almost a year, and this way I can make sure you don't get lost on the way there.` She shook her head, regretting the hurt look her words had garnered. `N Sorry, sorry, I meant it as a joke, and an imprication.`
 
     `J I keep my word, Nat. Just let me grab some money, I can at least do that much for her.`
 
-  || places/VailiaNight
     Christoph Thadel's apartment was tucked away on the upper floor in the back corner of a tenament, curiously modest for someone who helped run a business as important as a sawmill. Natalie supressed her economic speculations and waited quietly while James knocked. Clean, though. The smells inside the building were predominatly pleasant, cooking smoke, freshly sanded wood, soap. A hint of roasting chicken tickeled their noses.
 
     A still youthful scarecrow of a man opened the door, all elbows ane graceless height. ` James. And miss Rowena, if I remember correctly,` he bowed to her. ` Please come in, we were just about to sit down for supper. Will you join us?`
@@ -674,7 +678,8 @@ s.JamesCh3Yes =
 
     `N We'd be delighted to stay, thank you.`
 
-    Christoph looked between them, then nodded to Natalie. ` I'll set twomore places. Melissa's in the bedroom, I imagine she'll be out in a moment.` He gestured them in and turned to the kitchen, leaving them temporarily alone.
+  ||
+    Christoph looked between them, then nodded to Natalie. ` I'll set two more places. Melissa's in the bedroom, I imagine she'll be out in a moment.` He gestured them in and turned to the kitchen, leaving them temporarily alone.
 
     `J You're presuming an aweful lot today, captain,` he growled at her. She ignored him and looked around the room.
 
@@ -684,6 +689,7 @@ s.JamesCh3Yes =
 
     ` Miss, if you wouldn't mind?` Christoph rescued Natalie by offerring her a stack of plates to set out on the table. ` I was hoping James would come this evening, so I made something special.` In a lower voice just for her, ` Thank you for making him stay. Melissa needs him here right now. She and her husband lived in that home for almost twenty five years.`
 
+  || N/Normal
     `N They married young?`
 
     He nodded, following her around the small table with a handful of silver ware. On the other side of the room, James and his mother talked in low voices. James shook his head, refusing something she tried to hand him.

@@ -35,6 +35,7 @@ s.NonkeniaArrive =
 
 s.NonkeniaDiplomatDelivery =
   label: 'Deliver the "Diplomat"'
+  cost: 0
   history:
     NonkeniaDiplomatSailing: true
   effects:
@@ -114,6 +115,7 @@ s.JamesConfusion =
   effects:
     xp:
       James: 3
+  cost: 0
   text: -> """
   || travel/DeckDay
     `N Look, are you going to jump me or not?` Natalie finally expressed her frustration straight to James' face. Those deckhands who happened to be in the area were wise enough to clear out immediately. He gaped at her, turned a bright shade of red. Though he worked his mouth, nothing came out.

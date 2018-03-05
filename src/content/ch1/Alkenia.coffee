@@ -65,6 +65,7 @@ s.MeetKat =
   label: 'Catching the Pickpocket'
   required: 'GameOverFun'
   extraDays: 34
+  cost: 2
   history:
     Pickpocket: true
   effects:
@@ -111,6 +112,7 @@ s.MeetKat =
 s.KatTrial =
   label: "Kat's Trial"
   required: 'GameOverFun'
+  cost: 0
   history:
     MeetKat: true
   effects:
@@ -149,8 +151,7 @@ s.KatTrial =
 
 s.KatMeetsJames =
   label: 'Kat and James'
-  blocking: true
-  required: 'GameOverKindness'
+  cost: 0
   history:
     KatTrial: true
   effects:

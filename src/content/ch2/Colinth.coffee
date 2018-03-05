@@ -35,6 +35,7 @@ s.ColinthAmulets =
   effects:
     xp:
       Natalie: 2
+  cost: 2
   text: -> """
   || places/ColinthDay
     Natalie winced and rubbed her forehead. Something in the air around here felt miserable, a constant low buzzing. It had begun when she'd entered the shop, and Kat had only shaken her head, not feeling anything, when Nat had asked her. `N I'm sorry, what I got distracted. What was that?` She tried to refocus on the conversation.
@@ -56,6 +57,7 @@ s.ColinthAmulets2 =
   effects:
     xp:
       Kat: 3
+  cost: 0
   text: -> """
   || travel/CabinNight
     `N You didn't.`
@@ -152,6 +154,7 @@ s.KantianSorcerer =
   effects:
     xp:
       Natalie: 3
+  cost: 2
   text: ->"""
   || places/ColinthNight
     Natalie stood in the storm, luxuriating it the feel of wind and lightning and rain untamed. The region around Kantis felt somehow different from that around Vailia - wilder, less controlled. Perhaps it was the lack of Lady Meghan. Without a supremely powerful sorceress drawing the elements into her orbit, they were free. For once Natalie's magic didn't hurt. She let the power flow through and around her, ignoring the chill seeping steadily through her bones and rivulets of water finding their way underneath her cloak.
@@ -185,6 +188,7 @@ s.AsarasTrauma =
   history:
     Muggers: true
     AsaraTalkSisters: true
+  cost: 2
   text: ->"""
   || travel/CabinNight
     `N Please, sit down.`

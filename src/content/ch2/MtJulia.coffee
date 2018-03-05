@@ -2,6 +2,7 @@ s = {}
 
 s.NonkeniaDiplomatSailing =
   label: 'Make nice with Diplomat'
+  cost: 0
   history:
     NonkeniaDiplomat: true
   effects:
@@ -155,6 +156,7 @@ s.JamesUpsetMagic2 =
     xp:
       Natalie: 3
       James: 3
+  cost: 0
   text: ->"""
   || travel/CabinNight
     A hesitant knock. That could only mean one thing. James never hesitated to address business, no matter how bad the news. He must finally want to discuss whatever has been bothering him. Natalie hesitated a moment, then, `N Enter.`
