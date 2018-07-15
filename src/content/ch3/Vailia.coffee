@@ -14,7 +14,7 @@ s.AboutAntinua =
 
     Lady Meghan Vailia nodded, gestured Natalie to come in. Her house was even more filled with books than last time Natalie had visited, and Meghan had to move a pile of them off the couch to make room for her guest to sit. ` Ask.`
 
-    `N I'd like to know more about Antinua Vanyavanadar andher sisters.` She sat carefully, and steadied some books on the other end of the couch so the motion didn't disturb them.
+    `N I'd like to know more about Antinua Vanyavanadar and her sisters.` She sat carefully, and steadied some books on the other end of the couch so the motion didn't disturb them.
 
     ` What makes you think I know much about her than you? The worked for the Guild for years, after all.`
 
@@ -171,11 +171,67 @@ s.AsarasDuel =
   ||
     The flames died, leaving afterimages burned into Natalie's eyes. Antinua stood, fists clenched, teeth clenched. Asara lay curled on the ground. Her ragged sobs wracked with pain were the only sound, echoing in the silence left behind by the sudden death of the moonlit inferno. Antinua whirled and stalked towards the observers, stopping in front of Natalie and Hathawa.
 
-    ' I can't do it.` She an uneven breath. ` She won. Ready your ship.` She strode past them without looking back.
+    ` I can't do it.` She an uneven breath. ` She won. Ready your ship.` She strode past them without looking back.
 
     Hathawa tried to say something, but Natalie wasn't listening. She ran to Asara's side. There was no smoke, little ash, just a circle burned completely clean all the way down to rock, and at the center, Asara laying on her side sobbing. Natalie fell to her knees, hesitated. Asara's clothing was untouched,  pale skin looking unburned.  Hard to tell, with Natalie still seeing spots and still adjusting to the darkness. No, she'd hesitated before, and almost lost Asara because she'd been afraid to say anything, afraid to challenge her decision and risk the trust they'd built. No hestiating now. Natalie gathered Asara in her arms, hugged her fiercely.
 
     Asara clung to Natalie like a drowning woman, sobbing slowly drawing to a close, ragged breaths easing as pain subsided. Neither of them spoke. Glass smouldered around the edges of the burned circle.
+  """
+
+s.AboutUTC =
+  label: 'Moonlit Confrontation'
+  blocking: true
+  history:
+    AsarasChallenge2: true
+  effects:
+    xp:
+      Natalie: 2
+      Asara: 2
+  text: ->"""
+  || N/Normal
+    `N I have a favor to ask.`
+
+    Lady Meghan nodded and stepped aside, inviting Natalie into her home. It was, if possible, even more crowded with books than on the captain's last visit. Meghan had to clear a stack off the couch to open space for her guest. Natalie steadied a pile of books with one hand as she sat.
+
+    `Meghan What sort of favor?`
+
+    `N I need to know about the UTC.`
+
+    Lady Meghan, sitting in her overstuffed armchair, leaned forward, resting her chin in her hands. `Meghan What makes you think I know anything about that? They're the Guild's competitors, after all. Go ask Janos.`
+
+    `N The Guild's competitors who are ruled by mages, and rely heavily on enchanted amulets for reasons I don't understand. You must keep tabs on them.`
+
+    Meghan leaned back, folded her hands in her lap with a simle. `Meghan Why the sudden interest?`
+
+    `N They've invited me to join. I'm considering it.`
+
+    `Meghan Are you.` Given the flat tone, she was not impressed. `Meghan Considering giving up your magic?`
+
+    `N A tenth of it, yes.`
+
+  || Meghan/Serious
+    `Meghan You do need to know more, then.` Her mouth drew into a line as she thought for a moment. `Meghan A demonstration, I think. This will not be pleasant, but I can guide you to a similar experience if you would know what it feels like.`
+
+    Given the shift in tone, Natalie hesitated before agreeing. She nodded. `N I should know.`
+
+    Meghan's posture changed subtly, chin tilted up a fraction, shoulders more relaxed. `Meghan Ok. Expand your power, slowly. Imagine a formless mist, filling the room. Don't shape it.` She closed her eyes as Natalie began to do so, lips opening in a soft sigh. `Meghan Good. Faster. I'll tell you when to stop.`
+
+    Natalie's experience was less pleasant. As always, rousing her magic brought with it pain, a pressure in her skull that grew worse as she drew on more power. The current was deep. She'd never explored exactly how deep her power ran, but deep enough for any task she'd ever set it.
+
+    The mist of unshaped magic exponded through the room, encouraged occasionally by Mehgan's whispered `Meghan keep going` or `Meghan stop shaping it.` If Natalie relaxed the pressure the began to dissipate immediately, unravelling back into mundane reality. Each increase in volume was paid for with increasing discomfort, growing from the headache into a pins-and-needles sensation expanding from her shoulders down her back.
+
+  ||
+    Finally Meghan called a halt. `Meghan Enough. Hold there. That's a tenth of your power. No, relax, don't start making it do something. You'll feel like this all the time. It'll get a bit easier as you get used to it, but the sensation will never go away.`
+
+    Natalie took a deep breath and closed her eyes. More bearable. She let go the power. Slowly the pain began to disipate, leaving behind on and unpleasant memory and lingering tightness across her skin. It was nothing compared to when she blazed a path for her ship through a storm, but unpleasant none the less.
+
+    `Meghan For most mages, magic is joy. To give up a portion of their pride, their freedom to do as they will, is a hard choice.` Meghan filled the silence. `Meghan Your magic is broken. I don't know why, don't ask. Giving away power would be worse for you.`
+
+    `N That was...Thanks.` Natalie leaned back against the couch, rubbed her arms vigorously, rubbing away the pins and needles memory. `N I'm glad I came to see you.`
+
+    `Meghan I am too. Will you stay a while? I was just about to make lunch.`
+
+    `N Of course.`
   """
 
 Place.Vailia.stories.Ch3 = Object.keys(s)

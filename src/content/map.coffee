@@ -1,5 +1,8 @@
 Cargo.goods =
   'Alchemical Reagents': [12, 7]
+  'Allspice': [8, 6]
+  'Almonds': [3, 3]
+  'Amber': [5, 8]
   'Anchors': [2, 2]
   'Apples': [2, 3]
   'Apple Vinegar': [4, 4]
@@ -12,33 +15,46 @@ Cargo.goods =
   'Bronze Sculpture': [12, 4]
   'Butter': [4, 2]
   'Candles': [4, 9]
+  'Camphor': [6, 6]
   'Canvas': [4, 3]
   'Carpet': [5, 3]
+  'Cashews': [4, 4]
   'Cast Iron Cookware': [3, 10]
   'Chains': [3, 8]
+  'Chalk': [4, 4],
   'Chamomile': [9, 5]
   'Charcoal': [8, 4]
   'Chickens': [3, 2]
   'Cheese': [5, 4]
   'Clockwork Machinery': [3, 10]
+  'Clothing': [3, 4]
   'Cloves': [8, 6]
   'Coffee': [9, 10]
   'Composite Bows': [5, 12]
+  'Copper': [2, 4]
+  'Coral': [2, 5]
   'Cork': [6, 6]
   'Cotton': [2, 3]
   'Cumin': [3, 10]
   'Dates': [3, 3]
   'Decorative Stone': [5, 5]
+  'Expensive Pottery': [7, 9]
+  'Eucalyptus': [3, 5]
   'Fashionable Clothing': [4, 10]
+  'Feathers': [4, 7]
+  'Figs': [2, 4]
   'Fine Furniture': [4, 3]
   'Fine Wine': [7, 12]
   'Fish Hooks': [4, 7]
   'Flour': [4, 4]
+  'Frankincense': [5, 10]
   'Fruit Jam': [4, 4]
   'Furs': [7, 5]
   'Garlic': [3, 4]
   'Glass Beads': [6, 8]
   'Glass Jars': [3, 8]
+  'Gold': [7, 9]
+  'Gold Jewelry': [7, 12]
   'Hatchets and Saws': [3, 8]
   'Hats': [4, 8]
   'Helmets': [4, 9]
@@ -46,47 +62,83 @@ Cargo.goods =
   'Indigo': [10, 6]
   'Ink': [3, 10]
   'Iron': [5, 3]
+  'Ivory': [4, 11]
+  'Jasmine': [6, 7]
   'Kitchen Utensils': [3, 5]
+  'Lavender': [3, 5]
   'Lead': [4, 4]
   'Leather': [7, 4]
   'Lemons': [4, 2]
+  'Lilac': [5, 6]
+  'Liquorice': [5, 4]
   'Linen': [4, 10]
+  'Limestone': [2, 4]
+  'Live Cattle': [2, 3]
+  'Live Goats': [2, 3]
   'Lumber': [2, 2]
   'Maiden Tea': [2, 9]
   'Masts': [2, 4]
   'Matches': [3, 9]
   'Mint': [6, 4]
+  'Mirrors and Lenses': [6, 11]
   'Mulberries': [4, 3]
+  'Mercury': [7, 11]
   'Mustard': [6, 4]
+  'Myrrh': [10, 8]
   'Nails and Tacks': [5, 5]
   'Nails': [4, 5]
+  'Nutmeg': [4, 8]
   'Oars': [5, 6]
   'Olives': [5, 5]
   'Olive Oil': [3, 10]
   'Onions': [3, 3]
+  'Opal': [7, 8]
   'Oranges': [4, 3]
   'Paper': [5, 7]
+  'Papyrus': [4, 5]
   'Peanuts': [2, 4]
+  'Pearls': [5, 11]
   'Pepper': [4, 12]
   'Pickled Fish': [2, 3]
   'Pickles': [3, 6]
+  'Raisins': [2, 4]
+  'Red Pepper': [4, 9]
   'Rope': [3, 7]
+  'Rosehips': [3, 6]
   'Rough Clothing': [3, 8]
+  'Rubber': [3, 10]
+  'Ruby': [6, 10]
+  'Safflower Oil': [4, 5]
+  'Saffron': [9, 10]
   'Sage': [8, 6]
   'Salt': [3, 9]
+  'Sandalwood': [4, 10]
+  'Sapphires': [8, 8]
+  'Self Bows': [5, 8]
+  'Silver': [5, 5]
   'Smoked Fish': [3, 3]
   'Smoked Game Meat': [4, 4]
   'Soap': [2, 5]
   'Spears': [5, 12]
   'Steel Tools': [6, 11]
   'Steel Wire': [3, 5]
+  'Stone Sculpture': [6, 3]
+  'Sulfur': [4, 9]
   'Swords': [5, 12]
   'Tar': [4, 4]
+  'Tea Leaves': [3, 5]
+  'Tin': [3, 5]
+  'Topaz': [6, 7]
+  'Turmeric': [5, 9]
+  'Vanilla': [7, 7]
   'Veined Marble': [3, 2]
   'Walnuts': [4, 5]
   'Wax': [4, 10]
   'Wheat': [3, 4]
+  'Woad': [4, 7]
+  'Wood Carvings': [5, 7]
   'Wool': [2, 4]
+  'Wormwood': [4, 4]
 
 Place.Vailia =
   name: 'Vailia'
@@ -115,24 +167,6 @@ Place.Vailia =
     Colinth: ['Anchors', 'Apple Vinegar', 'Bronze Sculpture', 'Candles', 'Carpet', 'Chains', 'Composite Bows', 'Fashionable Clothing', 'Fine Wine', 'Hats', 'Helmets', 'Ink', 'Linen', 'Maiden Tea', 'Matches', 'Paper', 'Pickles', 'Steel Tools', 'Steel Wire']
     Kantis: ['Anchors', 'Apple Vinegar', 'Basil', 'Brandy', 'Bronze Sculpture', 'Candles', 'Carpet', 'Chamomile', 'Clockwork Machinery', 'Composite Bows', 'Fashionable Clothing', 'Fine Furniture', 'Hats', 'Helmets', 'Ink', 'Linen', 'Matches', 'Mirrors and Lenses', 'Paper', 'Raisins', 'Sage', 'Steel Tools', 'Steel Wire', 'Walnuts']
     Amandais: ['Basil', 'Brandy', 'Candles', 'Carpet', 'Chamomile', 'Composite Bows', 'Fine Wine', 'Glass Beads', 'Helmets', 'Ink', 'Lavender', 'Lilac', 'Maiden Tea', 'Matches', 'Mirrors and Lenses', 'Paper', 'Raisins', 'Sage', 'Steel Tools', 'Steel Wire', 'Wormwood']
-  deliverDescriptions:
-    '*': [
-      "`N I don't care how leng we've been away, no one Leaves until everything's unloaded. Your sweetheart will just have to wait.` Natalie slapped the sailor's forearm. `N Motivation to shift all this faster, eh?`"
-      "`N Take this over to the Guild hall, will you?` Natalie handed James a bag of coins. `N Don't want the bean counters getting upset over a missing tithe.`"
-    ]
-    MtJulia: [
-
-    ]
-  acceptDescriptions:
-    '*': [
-      'Fine Vailian goods, fresh from a Guild warehouse.'
-      "Gossip from the Guild. ` Be careful. I heard Lady Meghan saying there's a big storm on the way in.`"
-    ]
-    MtJulia: [
-      'A trading post and safe harbor for Vailian ships, the Guild kept Mt. Julia well supplied for those stranded by storms.'
-      'With a permanent population number less than a dozen, Mt. Julia produced little of its own.'
-      "`N Don't make that face, cash on delivery is fine just this once.` Natalie slapped James on the back. `N The inn at Mt. Julia always pays, don't worry about it.`"
-    ]
 
 Place.MtJulia =
   name: 'Mt. Julia'
@@ -155,17 +189,6 @@ Place.MtJulia =
   goods:
     Vailia: ['Lumber', 'Maiden Tea', 'Masts', 'Smoked Fish']
     Tomenoi: ['Lumber']
-  deliverDescriptions:
-    '*': [
-      "James shivers. `J Something about this place always feels off. Let's hurry.`"
-      'The inn at Mt. Julia stockpiles supplies, ready to aid damaged ships that can make it to the harbor.'
-      'With only a few permanent residents, most supplies delivered to Mt. Julia are resold to other ships.'
-      (c)-> """` Whad\'ya got for me?` The girl kicks one of the crates, listening to the sound. ` Fuck, more #{c.name.toLowerCase()}? Well, my own damn fault for asking for too much. Unload it, I'll buy.`"""
-    ]
-  acceptDescriptions: [
-    'A few intrepid woodsman make their home on the island, supplying lumber and other forest products to Vailia\'s shipyards.'
-    'The rugged terrain and steep mountains makes it difficult to exploit the forest. And the wolves. Can\'t forget the wolves.'
-  ]
 
 Place.Alkenia =
   name: 'Alkenia'
@@ -409,7 +432,7 @@ Place.Amandais =
   stories: {}
   jobChance: 1.3
   goods:
-    Vailia: ['Alchemical Reagents', 'Allspice', 'Almonds', 'Amber', 'Bronze Sculpture', 'Camphor', 'Carpet', 'Cashews', 'Cloves', 'Coffee', 'Coral', 'Cork', 'Cumin', 'Decorative Stone', 'Eucalyptus', 'Feathers', 'Figs', 'Frankincense', 'Gold', 'Gold Jewelry', 'Indigo', 'Ivory', 'Jasmine', 'Lemons', 'Liquorice', 'Myrrh', 'Nutmeg', 'Opal', 'Pearls', 'Pepper', 'Rubber', 'Ruby', 'Safflour', 'Saffron', 'Sandalweed', 'Saphires', 'Stone Sculpture', 'Sulphur', 'Tea Leaves', 'Topaz', 'Tumeric', 'Vanilla', 'Wood Carvings']
+    Vailia: ['Alchemical Reagents', 'Allspice', 'Almonds', 'Amber', 'Bronze Sculpture', 'Camphor', 'Carpet', 'Cashews', 'Cloves', 'Coffee', 'Coral', 'Cork', 'Cumin', 'Decorative Stone', 'Eucalyptus', 'Feathers', 'Figs', 'Frankincense', 'Gold', 'Gold Jewelry', 'Indigo', 'Ivory', 'Jasmine', 'Lemons', 'Liquorice', 'Myrrh', 'Nutmeg', 'Opal', 'Pearls', 'Pepper', 'Rubber', 'Ruby', 'Safflower Oil', 'Saffron', 'Sandalwood', 'Sapphires', 'Stone Sculpture', 'Sulfur', 'Tea Leaves', 'Topaz', 'Turmeric', 'Vanilla', 'Wood Carvings']
     Tomenoi: ['Coffee', 'Cork', 'Cumin', 'Decorative Stone', 'Indigo', 'Lemons', 'Papyrus', 'Pepper', 'Tea Leaves']
-    Kantis: ['Chickens', 'Cloves', 'Cork', 'Cotton', 'Leather', 'Lemons', 'Live Goats', 'Papyrus', 'Pepper', 'Safflour']
-    Amandais: ['Allspice', 'Almonds', 'Carpet', 'Cashews', 'Coffee', 'Cork', 'Figs', 'Gold Jewelry', 'Leather', 'Lemons', 'Liquorice', 'Pepper', 'Safflour', 'Saffron', 'Vanilla']
+    Kantis: ['Chickens', 'Cloves', 'Cork', 'Cotton', 'Leather', 'Lemons', 'Live Goats', 'Papyrus', 'Pepper', 'Safflower Oil']
+    Amandais: ['Allspice', 'Almonds', 'Carpet', 'Cashews', 'Coffee', 'Cork', 'Figs', 'Gold Jewelry', 'Leather', 'Lemons', 'Liquorice', 'Pepper', 'Safflower Oil', 'Saffron', 'Vanilla']

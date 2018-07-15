@@ -273,7 +273,7 @@ s.PiratesFlee =
   || A/Scared
     Natalie's eyes found one member of the crew who didn't appear nervous. Asara was somewhere far beyond nervous, exploring the distant lands of 'frozen in fear' and 'absolutely terrified.' Her hand gripped the hilt of her sword, knuckles white. She was whispering something repetitively to herself in her own foreign tongue.
 
-    `N Ok, change of plans. Full sail!</q> Natalie called out commands, setting the crew back in motion. They kept their weapons close at hand as they worked, canvas billowing up to catch the wind.
+    `N Ok, change of plans. Full sail!` Natalie called out commands, setting the crew back in motion. They kept their weapons close at hand as they worked, canvas billowing up to catch the wind.
 
     Groaning against its weight, the Azurai bobbed precipitously in the wind, full sails heeling it to an uncomfortable angle before the rudder caught hold and swung the prow around. Then, like a bow sprung from an arrow, the ship surged forward. Perpendicular to the wind they cut away.
 

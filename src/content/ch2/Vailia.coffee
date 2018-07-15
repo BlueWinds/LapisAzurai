@@ -5,6 +5,7 @@ s.TomenoiRoute =
   required: 'GameOverExploration'
   history:
     Ch2: true
+  extraDays: 10
   effects:
     xp:
       Asara: 3
@@ -129,6 +130,7 @@ s.NonkeniaDiplomat =
 
 s.TrainCombatNat =
   label: 'Lessons for Natalie'
+  extraDays: 100
   history:
     Ch2: true
   effects:
@@ -149,6 +151,7 @@ s.TrainCombatJames =
   label: 'Lessons for James'
   history:
     TrainCombatNat: true
+    NonkeniaRoute: true
   effects:
     xp:
       James: 3
@@ -171,6 +174,7 @@ s.TrainCombatKat =
   label: 'Lessons for Kat'
   history:
     TrainCombatNat: true
+    KatShowsSamsGrave: true
   effects:
     xp:
       Kat: 3
@@ -193,6 +197,7 @@ s.TrainCombatAsara =
   label: 'Lessons for Asara'
   history:
     TrainCombatNat: true
+    IronSandsArrive: true
   effects:
     xp:
       Asara: 3
@@ -212,8 +217,9 @@ s.TrainCombatAsara =
 s.IronSandsRutter =
   label: 'Route to Iron Sands'
   required: 'GameOverExploration'
+  extraDays: 15
   history:
-    Ch2: true
+    NonkeniaArrive: true
   effects:
     xp:
       Kat: 3
@@ -334,7 +340,7 @@ s.AsaraTalkFlames =
 s.AsaraTalkNotMagic =
   label: 'Talk with Asara - Magic'
   history:
-    AsarasMagic: true
+    AsaraTalkFlames: true
   effects:
     xp:
       Asara: 3
@@ -387,15 +393,15 @@ s.JamesParents =
       James: 3
   text: ->"""
   || places/VailiaDay
-    James raised a hand to knock, hesitated, lowered it again. The weather beaten door was the same as ever, but not the same at all. Scarred and blackened with soot, he traced a finger along a groove where the boards were coming apart. His mother had wanted to replace it for years, but James agreed with his father - it was a piece of family history, as irreplaceable in its own way as the anvil upon which three generations had made their living.
+    James raised a hand to knock, hesitated, lowered it again. The weather beaten door was the same as ever. Scarred and blackened, he traced a finger along a groove where the boards were coming apart. His mother had wanted to replace it for years, but James agreed with his father - it was a piece of family history, as irreplaceable in its own way as the anvil inside, upon which three generations of Thadels had made their living. He wondered how much of the soot on his fingers came from his grandfather. The door probably remembered him better than James did.
 
-    The roar of the forge and billows of soot from the chimney above showed him what he'd find if he went inside - his father shirtless and sweating, his mother shoveling charcoal into the furnace. That had been her job before James had been old enough, and doubtless was again since he'd run off with Natalie.
+    The roar of the forge and billows of soot from the chimney above spoke of what he'd find if he went inside - his father shirtless and sweating, his mother shoveling charcoal into the furnace. That had been her job before James had been old enough, and doubtless was again since he'd run off to join Natalie's crew.
 
-    He could smell it too, and not only in his imagination. Hot metal, smoke, sweat, warm winters and blazing summers nestled alone in the attic above the shop. The heat and smells were benefits - better clean industry than effluent odors from the street, and they never worried about staying warm, unlike so many others. There were worse lots in life, and he had only to turn around to be reminded of that. Smithies clustered in the poorest part of Vailia not because they were themselves poor, but because no one else would tolerate the noise.
+    He could smell it too, and not only in his imagination. Hot metal tickled his nose, smoke, sweat, warm winters and blazing summers, nestled alone in the attic above the shop. The heat and smells were benefits - better clean industry than effluent odors from the street, and they never worried about staying warm, unlike many neighbors. There were worse lots in life, and he had only to look around to be reminded of that. Smithies clustered in the poorest part of Vailia not because they were themselves poor, but because no one else would tolerate the noise.
 
-    James remembered his father, loud and angry that he would abandon his apprenticeship and family history, and his mother, jaw set grimly and glancing every few minutes towards the distant sea. It had claimed both her mother and her fist husband.
+    James remembered his father, loud and angry that he would abandon his apprenticeship and family history, and his mother, jaw set grimly and glancing every few minutes towards the distant sea. It had claimed both her own mother and her first husband. Her silent fear had been more painful than his father's sound and fury.
 
-    He turned away and left without knocking. They be happier without the reminder of his presence.
+    He turned away and left without knocking. They would be happier without the reminder of his absence.
   """
 
 s.JamesParents2 =
@@ -411,21 +417,21 @@ s.JamesParents2 =
       Natalie: 2
   text: ->"""
   || travel/DeckNight
-    `N You didn't speak with them.` Natalie came up behind James and rapped him on the back of his head.
+    `N You didn't speak with them.` Natalie stole up behind James and rapped him on the back of his head.
 
-    `J Why do you say that?` James lay down the rope he was splicing together, having cut out the frayed patch. He tried to turn to look at her without standing up, but she shifted around to stay out of his sight.
+    `J Why do you say that?` James lay down the rope he was splicing together, having cut out the frayed patch. He tried to turn to face her without standing up, but she shifted around, staying out of his sight.
 
-    `N You are transparent.` Natalie waved a hand in front of his face. `N I can see my fingers though your skull, that's how transparent you are.` She jammed a rolled up piece of paper against his chest as he finally stood and turned to face her. `N And because your father wrote to me.`
+    `N You are transparent.` Natalie jammed a rolled up piece of paper against his chest as he finally stood and turned to face her. He took a half step back as she jabbed him again. Though he was almost six inches taller, there'd never been any doubt who was in charge, even before she'd become captain. `N And because your father wrote to me.`
 
     `J Neither of my parents know how to write.`
 
-    `N They asked an uncle. They want us to come to dinner tomorrow. I think we should.`
+    `N Your uncle Christoph wrote it. They want us to come to dinner tomorrow. I think we should.`
 
-    James sat back down and picked up his rope. `J We were going to set sail in the morning, weren't we?`
+    James sat back down and picked up his rope. `J Weren't we going to set sail in the morning?`
 
     `N We can stay here another day to see your parents.`
 
-    `J No, if we're ready to leave, we should leave. We can have dinner some other time.`
+    `J If we're ready to leave, we should leave. Daren's mooning after some guy again, you know how he gets if we're in port too long. We can have dinner with my parents some other time.`
 
     She rapped him on the back of the head with her knuckles again. `N You're an idiot about some things, James Thadel. I'll let you get away with it this time if you promise to write them a letter.`
 
@@ -487,8 +493,9 @@ s.TomenoiHistory2 =
 
 s.MeghanSuitors =
   label: "Lady Meghan's Problem"
+  extraDays: 30
   history:
-    Ch2: true
+    KantisRegion3: true
   effects:
     xp:
       Natalie: 2
@@ -606,43 +613,43 @@ s.JamesCh3 =
       Natalie: 2
   text: -> """
   || travel/CabinNight
-    'N Your father is dead.` Natalie handed James the letter, gestured him to sit on her bed. He sat.
+    `N Your father died.` Natalie handed James the letter, gestured him to sit on her bed. He sat. `N I'm sorry.`
 
-    `J He is?`
+    `J What?`
 
-    `N Your mother wrote me,because she says you didn't respond last time she tried, and she doesn't know if you read her letters or even get them.`
+    `N Your mother wrote me. She says you didn't respond last time she tried, and she doesn't know if you read her letters.`
 
     `J I visited her a few months ago.`
 
-    `N After I harangued you into it. Anyway, I'm not here to accuse you of anything. I just wanted to let you know.`
+    `N Only after I harangued you into it. Anyway, I'm not here to accuse you of anything. I just wanted to let you know.`
 
-    James held the letter delicatly, as if afraid to wrinkle the paper, but didn't open it. Natalie studdied his face, looking for some clue as to his thoughts. When he got like this, it was impossible to tell what he was thinking. James' face wasn't carved from granite like his father's had been, but just... blank. He gave nothing away.
+    James held the letter delicately, as if afraid to wrinkle the paper. Hunched over, he unfolded the letter, considered it, folded it again without reading anything. Natalie studdied his face, looking for some clue as to his thoughts. When he got like this, it was impossible to tell what he was thinking. James' face wasn't carved from granite like his father's had been, but just... blank. He gave nothing away.
 
   || N/Embarrassed
     `N Come on James, talk to me.`
 
     `J How did it happen?`
 
-    `N A fire of some sort. The house caught, and it was spreading across the neighborhood before Lady Meghan showed up and put the whole thing out. I just can't believe that much power in a mage, to...`
+    `N A fire. Maybe a spark from the smithy caught the roof or something, she doesn't know. Anyway, your house caught, and it was spreading across the neighborhood before Lady Meghan showed up and put out the whole thing. I just can't believe that much power in a mage, to...`
 
     `J Please, not now.`
 
-    `N Yeah, sorry.` Natalie shifted uncomfortably in her chair. There was enough in there for him to deal with already, without adding magic to the mix. `N Anyway, your mother's staying with one of your uncles for now.`
+    `N Yeah, sorry.` Natalie shifted uncomfortably in her chair. There was enough in there for him to deal with already, without adding his fear of magic into the mix. `N Anyway, your mother's staying with one of your uncles for now.`
 
     `J Christoph. He always writes letters for my par... for my mother.`
 
     `N Hm, wasn't he the tall thin fellow, runs a sawmill with his husband?`
 
-    `J They're divorced now, but Christoph still works at the mill. They make better business partners than they did a couple.` A snort accompanied that last statement, and Natalie grabbed ahold of that crack in his impasivity. She leaned forward, resting her chin in her hands.
+    `J They're divorced now, but Christoph still works at the mill. They make better business partners than they did a couple.` A snort accompanied that last statement, and Natalie siezed that crack in his impasivity. She leaned forward, resting her chin in her hands. Bland details were fine - he was at least speaking with her, rather than pushing her out, brooding in silence.
 
     `N You're talking now, that's good. Keep doing that. So when are you going to go speak with your mother?`
 
   || J/Upset
     `J I don't know. The ship...`
 
-    `N James Thadel!` Her sharp tone made him jump. `N I am your captain and your closest friend and sometimes I know you better than you know yoursely. As much as you had problems with your father, he's dead now, and I won't let you use me as an excuse to avoid your mother. So when are you going to see her?`
+    `N James Thadel!` Her sharp tone made him jump. `N I am your captain and your closest friend and sometimes I know you better than you know yourself. For all your problems with your father, he's dead now, and I won't let you use me as an excuse to avoid your mother. She wrote to <em>me</em>. Since when is she willing to acknowledge my existence? She needs your support. When are you going to see her?`
 
-    James crossed his arms over his chest, shoulders hunched, then realizing what he was doing, uncrossed them and sat up straighter, looking uncomfortable. He took a deep breath, leaned back in the bed, head tilted up to watch the ceiling. They waited in silence, just the noise of the city filtering through layers of wood and tar to keep them company. Finaly James let out a gusty sigh and returned to the present.
+    James crossed his arms over his chest, shoulders hunched, then realizing what he was doing, uncrossed them and sat up straighter, the pose forced and uncomfortable. He took a deep breath and leaned back in the bed, head tilted up to watch the ceiling. They waited in silence, with the noise of the city filtering through layers of wood and tar to keep them company. Finally James let out a sigh and returned to the present.
 
     `J You're right, damn it, you're right.`
 
@@ -659,6 +666,7 @@ s.JamesCh3Yes =
   label: 'Chapter 3 - James'
   required: 'GameOverSorrow'
   requiredGroup: 'Ch2Routes'
+  extraDays: -1000 # Hiding it from appearing normally
   history:
     JamesCh3: true
   effects:
@@ -666,54 +674,56 @@ s.JamesCh3Yes =
       James: 10
   text: -> '''
   || places/VailiaNight
-    `N I'll come with you. I haven't seen your mother in almost a year, and this way I can make sure you don't get lost on the way there.` She shook her head, regretting the hurt look her words had garnered. `N Sorry, sorry, I meant it as a joke, and an imprication.`
+    `N I'll come with you. I haven't seen your mother in almost a year, and this way I can make sure you don't get lost on the way there.` She shook her head, regretting the hurt look her words had garnered. `N Sorry, sorry, I meant it as a joke, not an imprication.`
 
     `J I keep my word, Nat. Just let me grab some money, I can at least do that much for her.`
 
-    Christoph Thadel's apartment was tucked away on the upper floor in the back corner of a tenament, curiously modest for someone who helped run a business as important as a sawmill. Natalie supressed her economic speculations and waited quietly while James knocked. Clean, though. The smells inside the building were predominatly pleasant, cooking smoke, freshly sanded wood, soap. A hint of roasting chicken tickeled their noses.
+    Christoph Thadel's apartment was tucked away on the upper floor in the back corner of a tenement, curiously modest for someone who helped run a major business. Natalie pulled her away mind from money and waited quietly while James knocked. Clean, though. The smells inside the building were predominatly pleasant, cooking smoke, freshly sanded wood, soap. A hint of roasting chicken tickled their noses.
 
-    A still youthful scarecrow of a man opened the door, all elbows ane graceless height. ` James. And miss Rowena, if I remember correctly,` he bowed to her. ` Please come in, we were just about to sit down for supper. Will you join us?`
+    A scarecrow of a man opened the door, all elbows and graceless height. ` James. And Miss Rowena, if I remember correctly,` he bowed to her. ` Please come in, we were just about to sit down for supper. Will you join us?`
 
-    `J No, thank you. I just came to see...`
+    `J No. I just came to see...`
 
     `N We'd be delighted to stay, thank you.`
 
   ||
     Christoph looked between them, then nodded to Natalie. ` I'll set two more places. Melissa's in the bedroom, I imagine she'll be out in a moment.` He gestured them in and turned to the kitchen, leaving them temporarily alone.
 
-    `J You're presuming an aweful lot today, captain,` he growled at her. She ignored him and looked around the room.
+    `J You're presuming an awful lot today, captain,` he growled at her. She pointedly ignored him and looked around the room. Well made furniture, mostly polished wood. Clean and tidy, tending towards dark and cozy.
 
     ` James?` His mother arrived, dark circles under her eyes, but expression brightening at the sight of her only son. She rushed over to hug him. Melissa was frailer than in Natalie's memories, a small, tired woman who rose only to her son's shoulder. She nearly vanished from sight when wrapped in his arms.
 
-    As snappish as he'd been getting to this point, James embraced her without hesitation. ` I was worried you wouldn't come,` the muffled words emerged from James' shoulder.
+    As snappish as he'd been getting to this point, James embraced her without hesitation.
 
-    ` Miss, if you wouldn't mind?` Christoph rescued Natalie by offerring her a stack of plates to set out on the table. ` I was hoping James would come this evening, so I made something special.` In a lower voice just for her, ` Thank you for making him stay. Melissa needs him here right now. She and her husband lived in that home for almost twenty five years.`
+    ` I was worried you wouldn't come,` the muffled words emerged from James' shoulder.
+
+    ` Miss, if you wouldn't mind?` Christoph rescued Natalie from spectating by offerring her a stack of plates to set out on the table. ` I was hoping James would drop by this evening, so I made something special.` In a lower voice just for her, ` Thank you for making him stay. Melissa needs him here right now. She and her husband lived in that home for almost twenty five years.`
 
   || N/Normal
-    `N They married young?`
+    `N Isn't he her second husband?`
 
-    He nodded, following her around the small table with a handful of silver ware. On the other side of the room, James and his mother talked in low voices. James shook his head, refusing something she tried to hand him.
+    He nodded, following her around the small table with a handful of silverware. On the other side of the room, James and his mother talked in low voices. James shook his head, refusing something she tried to hand him.
 
-    ` Very young. Losing her husband and the house at the same time was a terrible blow.` They retreated to the kitchen, giving Melissa and her son more space.
+    ` She married very young the first time. This is the second husband she's outlived, and the house burning down at the same time has been a terrible blow.` They retreated to the kitchen, giving Melissa and her son more space.
 
     `N Does she need money? It's no hardship, we've had a run of successes lately.`
 
-    ` No, thank you. Kind of you to offer, but there are enough Thadels to take care of our own. Forgive a relative his prying, but are you and James...?` He left the question open, but she quickly shook her head.
+    ` No, thank you. Kind of you to offer, but there are enough Thadels for us to take care of our own. Forgive a relative his prying, but are you and James...?` He left the question open, but she quickly shook her head.
 
     `N Just friends. He's my first mate, but nothing more.`
 
-    ` First mate?` Christoph's eyebrows rose. ` I heard he ran away to become a common sailor.`
+    ` First mate?` Christoph's eyebrows rose. ` I heard he ran away to become a common sailor. And you a captain.`
 
-    `N The Lapis Azurai is one of the finest ships in the city. I am Guildmaster Janos' protege, after all, and act as his personal courrier on a regular basis.` Natalie had the sudden urge to boast on James' behalf, both feeling that it wouldn't be taken amiss and that she had to fill in whatever else his family hadn't seen fit to tell this uncle.
+    `N The Lapis Azurai is one of the finest ships in the city, and I couldn't run it without him.` Natalie had the sudden urge to boast on James' behalf, both feeling that it wouldn't be taken amiss and that she had to fill in whatever else his family hadn't seen fit to tell this uncle. `N I'm Guildmaster Janos' protege. I'll likely inherit a seat on the council, someday.`
 
-    ` Huh. I'll bring the food out if you all will sit down.`
+    ` Huh. That's rather different than what I've heard about you.` He glanced over at Melissa, and Natalie thought she heard a muttered ` ...and somewhat more believable.` He shook his head and returned his attention to practical matters. ` I'll bring the food out if you all will sit down.`
 
   ||
-    Whatever well of conversation James and his mother had tapped at first seemed to have run dry, and so dinner was filled mostly with Christoph asking Natalie about their adventures, occasionally attempting to draw James into the conversation with questions about shipboard life. That got only mono-sylabic answers, and shrugs. The chicken was excellent, roasted and stuffed with carrots and potatoes. A welcome change from the stale fare that usuallf filled their diet at sea.
+    Whatever well of conversation James and his mother had tapped seemed to have run dry. Dinner was filled mostly with Christoph asking Natalie about their adventures and occasionally attempting to draw James into the conversation with questions about shipboard life. His efforts only yielded monosyllabic answers and the occasional shrug. The chicken was excellent, roasted and stuffed with carrots and potatoes, a welcome change from the stale fare that usually filled their diet at sea.
 
-    With plates picked clean and Natalie's last tale of distant shores finished, an awkward silence settled over the table. As much as she hated to give up on the attempt to get James and his mother talking, to get James to acknowledge some feeling other than stoic indifference to his father's death, she just didn't have it in her to push harder. Although he'd agreed to come, James had put up a wall thicker than she could chip away alone, and Melissa's withdrawn and self-absorbed silence wasn't helping. Christoph caught her eye, silently asking for advice. She only shook her head, sighed. He nodded in sympathy.
+    As much as she hated to give up on the attempt to get James and his mother talking, to get James to acknowledge some feeling other than stoic indifference to his father's death, she just didn't have it in her to push harder. With plates picked clean and Natalie's last tale of distant shores finished, an awkward silence settled over the table. Although he'd agreed to come, James had put up a wall thicker than she could chip away alone, and Melissa's withdrawn and self-absorbed silence wasn't helping. Christoph caught her eye, silently asking for advice. She only shook her head, sighed. He nodded in sympathy.
 
-    ` I'm sorry I don't have any desert prepared, but I'd imagine you two have to get going soon. Time and tide, after all.`
+    ` I'm sorry I don't have any dessert prepared, but I'd imagine you two have to get going soon. Time and tide, after all.`
 
     `N I'm afraid so.` Natalie and James rose from their places, gathered their coats from where they'd laid them near the door. `N Thank you for dinner, it was lovely.` Natalie hugged both Christoph and Melissa, the latter managing a wan smile. Though James's mother had always been civil with her, Natalie often wondered just what Melissa thought of her son's best friend, and suspected it wasn't all that flattering.
 
@@ -724,7 +734,7 @@ s.JamesCh3Yes =
 
     `J I... think I'd like to stay a bit longer. If you don't mind, Nat?`
 
-    `N Not at all. Please. I'll go ahead.` She supressed her reaction - smiling would have offended him at the moment. Instead she came back up, clapped him on the shoulder. Though she'd been needed to force this visit, and toget them in the same room, now her presence would restrain the emotions that needed to come out. `N Don't stay up too late, we've got an early day tomorrow.` She pushed him back towards the door.
+    `N Not at all. Please. I'll go ahead.` She suppressed her reaction - smiling would have offended him at the moment. Instead she came back up, clapped him on the shoulder. Though she'd been needed to force this visit, her presence now would restrain the emotions that needed to come out. `N Don't stay up too late, we've got an early day tomorrow.` She pushed him back towards the door.
   '''
   apply: ->
     g.chapter = 'Ch3'
@@ -732,6 +742,7 @@ s.JamesCh3Yes =
 
 s.JamesCh3No =
   label: 'Chapter 3 - Not James'
+  extraDays: -1000 # Hiding it from appearing normally
   history:
     JamesCh3: true
   effects:
@@ -745,7 +756,7 @@ s.JamesCh3No =
 
     `N And then when your father decided I took you away from him...` Natalie left unsaid the painful arguments they both remembered.
 
-    `J You did, though. That's the thing, he was right. You asked, and I said yes. I chose you over my family, over my apprenticeship. I don't regret it though,` he added hastily. `J Well, I mean, I do regret what happened, but... you know what I mean.`
+    `J You did, though. That's the thing, he was right. You asked, and I said yes. I chose you over my family, over my apprenticeship. Not that I regret it,` he added hastily. `J Well, I mean, I do regret what happened, but... you know what I mean.`
 
     Natalie patted his back. `N I do. Now, go talk with your mother. I'll be here when you get back if you want to talk more. Say hello to Christoph for me.`
   '''

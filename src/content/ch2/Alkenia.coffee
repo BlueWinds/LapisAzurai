@@ -3,6 +3,7 @@ s.KatShowsSamsGrave =
   label: "Kat's Grave"
   required: 'GameOverKindness'
   requiredGroup: 'Ch2Routes'
+  extraDays: 15
   history:
     JamesUpsetMagic: true
   effects:
@@ -155,6 +156,7 @@ s.KatBringsToys =
   label: 'Vailian Toys'
   required: 'GameOverFun'
   requiredGroup: 'Ch2Routes'
+  extraDays: 10
   history:
     KatShowsSamsGrave: true
   effects:

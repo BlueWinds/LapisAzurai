@@ -35,7 +35,10 @@
     "uglify": "uglifyjs --compress -- src/lib/*.js > dist/game/lib.js",
     "watch": "nodemon --watch src/ -e coffee,css,html,svg --exec 'npm run compile'",
     "livereload": "livereload dist/game/ -w 150",
-    "remove-livereload": "sed -i 's/<script src=\"http:\\/\\/localhost:35729\\/livereload.js\"><\\/script>//' dist/index.html"
+    "remove-livereload": "sed -i 's/<script src=\"http:\\/\\/localhost:35729\\/livereload.js\"><\\/script>//' dist/index.html",
+    "word-diff-add": "git diff --word-diff=porcelain | grep -e '^+[^+]' | wc -w",
+    "word-diff-rm": "git diff --word-diff=porcelain | grep -e '^-[^-]' | wc -w",
+    "word-diff": "echo $((`npm run word-diff-add` - `npm run word-diff-rm`))"
   },
   "coffeelintConfig": {
     "arrow_spacing": {

@@ -39,6 +39,7 @@
     <path id="Colinth_Lephai"    travel="Sail" d="M 1079 413 C 1123 412, 1147 416, 1190 372" />
     <path id="Colinth_Naxins"    travel="Sail" d="M 1079 413 C 1120 419, 1171 477, 1173 493" />
     <path id="Colinth_Amandais"  travel="Sail" d="M 1079 413 C 1079 413, 1243 487, 1243 487" />
+    <path id="Colinth_Kantis"    travel="Sail" d="M 1079 413 C 1089 424, 1096 441, 1083 442" />
     <path id="Kantis_Naxins"     travel="Sail" d="M 1083 442 C 1094 398, 1157 442, 1173 493" />
     <path id="Kantis_Lephai"     travel="Sail" d="M 1083 442 C 1089 409, 1134 434, 1190 372" />
     <path id="Kantis_Amandais"   travel="Sail" d="M 1083 442 C 1098 409, 1113 426, 1243 487" />

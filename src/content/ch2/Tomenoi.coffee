@@ -40,6 +40,7 @@ s.TomenoiArrive =
 s.AsaraJoinsCrew =
   label: 'Asara Joins'
   required: 'GameOverKindness'
+  extraDays: 65
   history:
     AsarasMagic: true
   effects:
@@ -70,7 +71,7 @@ s.AsaraJoinsCrew =
 s.StrandedShip =
   label: 'Stranded Ship'
   history:
-    TomenoiArrive: true
+    KantisRegion3: true
   effects:
     xp:
       Natalie: 3
@@ -105,6 +106,7 @@ s.StrandedShip =
 s.KantisRegion =
   label: 'Route to Kantis'
   required: 'GameOverExploration'
+  extraDays: 10
   history:
     AsaraJoinsCrew: true
   effects:
@@ -128,6 +130,7 @@ s.KantisRegion =
 s.KantisRegion2 =
   label: 'Route to Kantis'
   required: 'GameOverLove'
+  extraDays: 30
   history:
     KantisRegion: true
   effects:
@@ -216,7 +219,7 @@ s.TomenoiHistory =
 s.SailorTroubles =
   label: 'Sailor Troubles'
   history:
-    TomenoiArrive: true
+    KantisRegion3: true
   effects:
     xp:
       James: 3

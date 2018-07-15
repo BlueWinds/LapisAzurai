@@ -4,6 +4,7 @@ s.IronSandsArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
+  extraDays: 10
   history:
     IronSandsRutter2: true
   effects:

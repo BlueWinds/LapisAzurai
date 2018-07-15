@@ -4,6 +4,7 @@ s.NonkeniaArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
+  extraDays: 50
   history:
     NonkeniaRoute: true
   effects:

@@ -4,6 +4,7 @@ s.ColinthArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
+  extraDays: 30
   history:
     KantisRegion3: true
   effects:
@@ -31,7 +32,7 @@ s.ColinthAmulets =
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
   history:
-    ColinthArrive: true
+    KantianSorcerer: true
   effects:
     xp:
       Natalie: 2

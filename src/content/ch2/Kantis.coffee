@@ -4,6 +4,7 @@ s.KantisArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
+  extraDays: 30
   history:
     KantisRegion3: true
   effects:
@@ -82,7 +83,7 @@ s.VisitElakim =
 s.KantisPots =
   label: 'Pots, Pans and Complaints'
   history:
-    KantisArrive: true
+    VisitElakim: true
   effects:
     xp:
       James: 3
@@ -100,7 +101,7 @@ s.KantisPots =
 s.KatsDayOut =
   label: "Kat's day out"
   history:
-    KantisArrive: true
+    VisitElakim: true
   effects:
     xp:
       Kat: 2

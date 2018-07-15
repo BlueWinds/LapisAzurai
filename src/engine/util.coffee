@@ -1,5 +1,5 @@
 # Tweak this number to speed up (>1) or slow down (<1) all animations in the game
-speedFactor = 1
+speedFactor = 1.5
 oldAnimate = $.fn.animate
 $.fn.animate = ->
   arg = Array.apply(null, arguments)
