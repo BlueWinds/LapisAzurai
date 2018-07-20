@@ -5,7 +5,7 @@ Person.Asara =
   svg: 'people/Asara/skills.svg'
   skills:
     Tears:
-      description: 'Nothing'
+      description: 'Nothing. Emptyness.'
     Fear:
       description: "Double the benefit of all of Natalie's 1st tier skills"
       requiresAnd: ['Tears']
@@ -13,7 +13,8 @@ Person.Asara =
       description: "Double the benefits of all of Kat's 1st tier skills"
       requiresAnd: ['Fear']
     Desert:
-      description: 'Unlock events focused on Asara in Chapter 2'
+      name: 'The Desert'
+      description: 'Nothing. Sand.'
       requiresAnd: ['Regret']
 
     Duty:
@@ -23,7 +24,8 @@ Person.Asara =
       description: "Double the benefit of all of Natalie's 2nd tier skills"
       requiresAnd: ['Duty']
     Moon:
-      description: "Unlock Asara's route (also requires Mage on Natalie)"
+      name: 'The Moon'
+      description: 'Nothing. Silver Light.'
       requiresAnd: ['Trust']
 
     Death:
@@ -33,7 +35,8 @@ Person.Asara =
       description: "Double the benefits of all of James' 2nd tier skills"
       requiresAnd: ['Death']
     Goddess:
-      description: "Unlock Asara's ending (also requires Adept on Natalie)"
+      name: 'The Goddess'
+      description: 'Nothing and no one.'
       requiresAnd: ['Power']
 
     Love:

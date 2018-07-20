@@ -1,6 +1,8 @@
 # Skill overrides
 has = (alias, skill, second)->
   p = Person.alias[alias]
+  unless Person[p].skills[skill] then return 0
+
   doubledBy = Person[p].skills[skill].doubledBy
   multiplier = if g?.people.Asara?.skills[doubledBy] then 2 else 1
 
@@ -44,15 +46,21 @@ Place.repairEffects = ->
   e = oldRepairEffects()
   e.damage *= (1 + 0.25 * has('J', 'Reliable'))
   e.damage = Math.max(e.damage, -g.damage)
+  if has('J', 'Apprentice') and e.reputation[g.map.from]
+    e.reputation[g.map.from]  = -Math.randomRound(0.5)
   return e
 
 oldDeliveryTimeRemaining = Cargo.deliveryTimeRemaining
 Cargo.deliveryTimeRemaining = (cargo)->
-  oldDeliveryTimeRemaining(cargo) + has('J', 'Trustworthy') * 2
+  oldDeliveryTimeRemaining(cargo) + has('J', 'Trustworthy') * 5
+
+oldAcceptTimeRemaining = Cargo.acceptTimeRemaining
+Cargo.acceptTimeRemaining = (cargo)->
+  oldAcceptTimeRemaining(cargo) + has('J', 'Organized') * 5
 
 oldMaxCargo = Cargo.maxCargo
 Cargo.maxCargo = ->
-  oldMaxCargo() + has('J', 'Organized')
+  oldMaxCargo() + has('J', 'Journeyman') + has('J', 'Master')
 
 oldPxPerDay = Game.travelPxPerDay
 Game.travelPxPerDay = (travel)->
@@ -73,10 +81,9 @@ oldEffects = Story.effects
 Story.effects = (story)->
   e = oldEffects(story)
 
-  # We use the story name as a seed, so that this is deterministic for a given story
   if story.xp
     for i in [0 ... has('K', 'Bright')]
-      person = Math.choice(Object.keys(e.xp), story)
+      person = Math.choice(Object.keys(e.xp))
       e.xp[person] += 1
 
     nonParticipants = ['Natalie', 'James', 'Kat', 'Asara'].filter((p)-> not e.xp[p])
@@ -98,7 +105,7 @@ Story.effects = (story)->
 
 oldExpirationDate = Story.expirationDate
 Story.expirationDate = (story)->
-  return oldExpirationDate(story) + has('K', 'NeverTooLate') * 2
+  return oldExpirationDate(story) + has('K', 'NeverTooLate') * 3
 
 oldStoryOccurs = Place.travel.Sail.storyOccurs
 Place.travel.Sail.storyOccurs = (from, to, distance)->
@@ -107,3 +114,16 @@ Place.travel.Sail.storyOccurs = (from, to, distance)->
 oldReputationNeeded = Story.reputationNeeded
 Story.reputationNeeded = (story)->
   Math.max(0, oldReputationNeeded(story) - 2 * has('K', 'HowNotToLose'))
+
+oldDailyDamage = Place.travel.Sail.delayDailyDamage
+Place.travel.Sail.delayDailyDamage = (from, to, distance)->
+  baseDamage = oldDailyDamage(from, to, distance)
+  return Math.max(0, baseDamage - has('N', 'Initiate') - has('N', 'Mage') - has('N', 'Adept') * 2)
+
+oldXpNeeded = Person.xpNeeded
+Person.xpNeeded = (level)->
+  xp = oldXpNeeded(level)
+  xp -= has('K', 'StreetRat') * 3
+  xp -= has('K', 'Deckhand') * 4
+  xp -= has('K', 'FreeWoman') * 5
+  return xp

@@ -35,7 +35,7 @@ s.VisitElakim =
   label: 'Visit Elakim'
   required: 'GameOverPower'
   history:
-    KantisArrive: true
+    KantianSorcerer: true
   effects:
     xp:
       Natalie: 5

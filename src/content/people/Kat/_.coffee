@@ -16,7 +16,7 @@ Person.Kat =
       doubledBy: 'Regret'
     StreetRat:
       name: 'Street Rat'
-      description: 'Unlock events focused on Kat in Chapter 2'
+      description: '+3 xp for all characters'
       requiresAnd: ['Bright', 'Generous', 'SixthSense']
 
     HowNotToLose:
@@ -26,7 +26,7 @@ Person.Kat =
       doubledBy: 'Regret'
     NeverTooLate:
       name: 'Never Too Late'
-      description: 'Events are available for two extra days'
+      description: 'Events are available for longer'
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Devilish:
@@ -34,7 +34,7 @@ Person.Kat =
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Deckhand:
-      description: "Unlock Kat' route (also requires Mage on Natalie)"
+      description: '+4 xp for all characters'
       requiresOr: ['HowNotToLose', 'NeverTooLate', 'Devilish']
 
     Bright2:
@@ -54,7 +54,7 @@ Person.Kat =
       doubledBy: 'Desire'
     FreeWoman:
       name: 'Free Woman'
-      description: "Unlock Kat's ending (also requires Adept on Natalie)"
+      description: '+5 xp for all characters'
       requiresOr: ['Bright2', 'Generous2', 'SixthSense2']
 
     HowNotToLose2:
@@ -64,7 +64,7 @@ Person.Kat =
       doubledBy: 'Desire'
     NeverTooLate2:
       name: 'Never Too Late 2'
-      description: 'Events are available for two extra days'
+      description: 'Events are available for longer'
       requiresAnd: ['FreeWoman']
       doubledBy: 'Desire'
     Devilish2:

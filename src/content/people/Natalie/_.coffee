@@ -20,7 +20,7 @@ Person.Natalie =
       requiresAnd: ['Overdeliver']
       doubledBy: 'Fear'
     Initiate:
-      description: 'Unlock Chapter 2'
+      description: 'Suffer one less damage each day in storms'
       requiresOr: ['Gregarious', 'Grounded']
 
     Overdeliver2:
@@ -44,7 +44,7 @@ Person.Natalie =
       requiresAnd: ['Gregarious2']
       doubledBy: 'Trust'
     Mage:
-      description: 'Unlock Chapter 3'
+      description: 'Suffer one less damage each day in storms'
       requiresOr: ['WellInformed', 'SilverTongue2']
 
     WinningSmile2:
@@ -68,5 +68,5 @@ Person.Natalie =
       requiresAnd: ['Grounded2']
       doubledBy: 'Love'
     Adept:
-      description: 'Unlock endings'
+      description: 'Suffer two less damage each day in storms'
       requiresOr: ['WellInformed2', 'SilverTongue2']

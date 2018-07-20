@@ -93,15 +93,13 @@ Place.showOverview = (place = $('.place').attr('place') or g.map.from, duration)
 
       help('.place .description', 'Natalie has a separate reputation at each port, representing how well regarded she is at that location. You spend reputation to view events and progress the story, as well as to repair damage and search the city for jobs.')
 
-      help('[story="Ch1"]', "Certain events block progress until you view them - like \"Chapter 1\", and are outlined in blue. You won't be able to take most other actions until you view on them.")
+      help('[story="Ch1"]', "Certain events block progress until you view them - like \"Chapter 1\". You won't be able to take most other actions until you view on them.")
       return
 
     if firstVailiaHelp(place) then return
 
     if g.day is g.history.FirstStormSick2 + 1 and place is 'Vailia'
-      help('.required', "Pay particular attention to events with orange borders, which advance the main plot. If you don't unlock them before they expire, you'll be treated to the game over screen.")
-
-      help('.required', 'It can be worth delaying on them in order to pursue side-quests, though, since unlocking one event starts the countdown on the next one - plan ahead!')
+      help('.required', "Pay particular attention to events with orange borders, which advance the main plot. If you don't explore them before they expire, you'll be treated to the game over screen.")
 
       help('.repair', "The Lapis Azurai is damaged, and you won't be able to set sail until it's repaired. Calling in the necessary favors and purchasing supplies costs reputation (if you have any) as well as time.")
   , 100
@@ -117,8 +115,6 @@ skillHelp = ->
 
 skillText = (person)->
   help('[person="' + person + '"] .description', "#{person} has enough experience to gain a new skill. Characters each have their specialty - James focuses on sailing and storms, while Natalie deals with cargo and reputation.")
-
-  help('[person="' + person + '"] object', "You'll need certain skills to unlock events as the game goes forward - Natalie's 'Initiate', for example, is required before you can enter Chapter 2.")
 
 firstVailiaHelp = (place)->
   unless haventSailedYet() then return false

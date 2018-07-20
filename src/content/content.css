@@ -42,3 +42,38 @@ img.Natalie.right { transform: scaleX(-0.8) scaleY(0.8); }
 .chapter h3 {
   margin: 0;
 }
+
+#LabelLayer .JamesRoute, #LabelLayer .KatRoute, #LabelLayer .AsaraRoute {
+  fill: #2a9fd6
+}
+
+.story.JamesRoute, .story.KatRoute, .story.AsaraRoute {
+  border-color: #2a9fd6;
+  position: relative;
+}
+
+.story.JamesRoute:after, .story.KatRoute:after, .story.AsaraRoute:after {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.story.JamesRoute:after {
+  background-image: url("content/people/James/Normal.png");
+}
+
+.story.KatRoute:after {
+  background-image: url("content/people/Kat/Normal.png");
+}
+
+.story.AsaraRoute:after {
+  background-image: url("content/people/Asara/Normal.png");
+}

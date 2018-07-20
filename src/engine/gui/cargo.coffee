@@ -21,9 +21,15 @@ $.extend Cargo, {
       'onclick="Cargo.clickSearch(\'' + place + '\');"'
     else ''
 
+    makeDestOption = (dest)->"<option value=#{dest} #{if g.jobFocus is dest then 'selected' else ''}>#{Place[dest].name}</option>"
+
+    select = """<select class="searchFocus" onclick="event.stopPropagation()" onchange="Cargo.changeSearchFocus()">
+      #{Object.keys(Cargo.potentialDestinations(place)).map(makeDestOption)}
+    </select>"""
+
     """<td class="cargoSearch #{if onclick then 'active' else ''}" #{onclick}>
       <div>
-        <span class="label">Search for jobs</span>
+        <span class="label">Search for jobs - #{select}</span>
         <span class="cost">
           <span class="#{if g.reputation[place] then '' else 'lowRep'}">#{Math.round(Cargo.searchChance(place) * 100)}%</span>
           <br>#{-Cargo.searchCost(place)} rep
@@ -68,8 +74,15 @@ $.extend Cargo, {
       #{remainingDiv Cargo.deliveryTimeRemaining(cargo)}
     </td>"""
 
+  changeSearchFocus: ->
+    g.jobFocus = $('select.searchFocus').val()
+
   clickSearch: (place)->
+    # Call this in case the last place where focus was set isn't
+    # on the list of available options for this location.
+    Cargo.changeSearchFocus()
     Game.passDay()
+
     chance = Cargo.searchChance(place)
     while chance > Math.random()
       g.availableCargo.push Cargo.create(place)

@@ -31,6 +31,7 @@ s.ColinthAmulets =
   label: 'Magical Amulet'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
+  _class: 'KatRoute'
   history:
     KantianSorcerer: true
   effects:
@@ -53,6 +54,9 @@ s.ColinthAmulets =
 
 s.ColinthAmulets2 =
   label: 'Magical Amulet'
+  required: 'GameOverPower'
+  requiredGroup: 'Ch2Routes'
+  _class: 'KatRoute'
   history:
     ColinthAmulets: true
   effects:
@@ -102,6 +106,7 @@ s.Muggers =
   label: 'Muggers'
   required: 'GameOverViolence'
   requiredGroup: 'Ch2Routes'
+  _class: 'AsaraRoute'
   history:
     ColinthArrive: true
   effects:
@@ -149,7 +154,6 @@ s.Muggers =
 s.KantianSorcerer =
   label: 'Sorcerer'
   required: 'GameOverPower'
-  requiredGroup: 'Ch2Routes'
   history:
     ColinthArrive: true
   effects:
@@ -186,6 +190,7 @@ s.AsarasTrauma =
   label: "Asara's Trauma"
   required: 'GameOverViolence'
   requiredGroup: 'Ch2Routes'
+  _class: 'AsaraRoute'
   history:
     Muggers: true
     AsaraTalkSisters: true

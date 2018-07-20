@@ -8,7 +8,7 @@ Person.James =
       description: 'Repair the ship 25% faster'
       doubledBy: 'Duty'
     Trustworthy:
-      description: '+2 days to deliver cargo'
+      description: '+5 days to deliver cargo'
       doubledBy: 'Duty'
     Stoic:
       description: 'Storms are half a day shorter (on average)'
@@ -20,7 +20,8 @@ Person.James =
       requiresOr: ['Trustworthy', 'Stoic']
       doubledBy: 'Duty'
     Apprentice:
-      description: 'Unlock events focused on James in Chapter 2'
+      description: '50% chance repairing the ship costs no reputation'
+      doubledBy: 'Duty'
       requiresAnd: ['Reliable', 'Trustworthy']
 
     Reliable2:
@@ -30,11 +31,11 @@ Person.James =
       doubledBy: 'Power'
     Trustworthy2:
       name: 'Trustworthy 2'
-      description: '+2 days to deliver cargo'
+      description: '+5 days to deliver cargo'
       requiresOr: ['WeatherEye', 'Reliable2']
       doubledBy: 'Power'
     Organized:
-      description: '+1 cargo capacity'
+      description: '+5 days to accept cargo'
       requiresOr: ['Trustworthy2', 'Navigator']
       doubledBy: 'Power'
     Navigator:
@@ -42,7 +43,7 @@ Person.James =
       requiresOr: ['Reliable2', 'Organized']
       doubledBy: 'Power'
     Journeyman:
-      description: "Unlock James' route (also requires Mage on Natalie)"
+      description: '+1 cargo capacity'
       requiresAnd: ['Reliable2', 'Trustworthy2']
 
     WeatherEye2:
@@ -57,7 +58,7 @@ Person.James =
       doubledBy: 'Devotion'
     Organized2:
       name: 'Organized 2'
-      description: '+1 cargo capacity'
+      description: '+5 days to accept cargo'
       requiresOr: ['WeatherEye2', 'Navigator2']
       doubledBy: 'Devotion'
     Navigator2:
@@ -66,5 +67,5 @@ Person.James =
       requiresOr: ['Stoic2', 'Organized2']
       doubledBy: 'Devotion'
     Master:
-      description: "Unlock James' ending (also requires Adept on Natalie)"
+      description: '+1 Cargo Capacity'
       requiresAnd: ['Stoic2', 'WeatherEye2']

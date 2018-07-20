@@ -151,7 +151,6 @@ s.KatTrial =
 
 s.KatMeetsJames =
   label: 'Kat and James'
-  cost: 0
   history:
     KatTrial: true
   effects:

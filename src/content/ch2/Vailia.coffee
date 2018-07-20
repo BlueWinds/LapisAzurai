@@ -385,6 +385,7 @@ s.JamesParents =
   label: "James' Parents"
   required: 'GameOverTrust'
   requiredGroup: 'Ch2Routes'
+  _class: 'JamesRoute'
   cost: 2
   history:
     JamesUpsetMagic2: true
@@ -411,6 +412,7 @@ s.JamesParents2 =
   blocking: true
   required: 'GameOverTrust'
   requiredGroup: 'Ch2Routes'
+  _class: 'JamesRoute'
   effects:
     xp:
       James: 2
@@ -604,6 +606,7 @@ s.JamesCh3 =
   label: 'Chapter 3 - James'
   required: 'GameOverSorrow'
   requiredGroup: 'Ch2Routes'
+  _class: 'JamesRoute'
   cost: 0
   history:
     JamesParents2: true
@@ -664,8 +667,8 @@ s.JamesCh3 =
 
 s.JamesCh3Yes =
   label: 'Chapter 3 - James'
-  required: 'GameOverSorrow'
   requiredGroup: 'Ch2Routes'
+  _class: 'JamesRoute'
   extraDays: -1000 # Hiding it from appearing normally
   history:
     JamesCh3: true
@@ -742,6 +745,8 @@ s.JamesCh3Yes =
 
 s.JamesCh3No =
   label: 'Chapter 3 - Not James'
+  requiredGroup: 'Ch2Routes'
+  _class: 'JamesRoute'
   extraDays: -1000 # Hiding it from appearing normally
   history:
     JamesCh3: true

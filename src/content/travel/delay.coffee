@@ -9,7 +9,7 @@ $.extend Place.travel.Sail, {
     return false
   delayDailyDamage: (from, to, distance)->
     damage = 5 * (Math.random() + 0.5)
-    # Damage has been prevented, probably by
+    # Damage has been prevented, probably by one of the below events
     if g.preventNextDamage
       if g.preventNextDamage > damage
         g.preventNextDamage -= damage
@@ -20,7 +20,6 @@ $.extend Place.travel.Sail, {
     return damage
   delayDuration: (from, to, distance)-> 4 * (Math.random() + 0.5)
   delayImages: [
-    p + 'CabinStorm.jpg',
     p + 'DeckStorm.jpg',
     p + 'SailingStorm.jpg'
   ]
@@ -130,6 +129,7 @@ Place.travel.Sail.reduceDamage = ->
 s.StormDropOrDamage =
   label: 'Storm'
   minCargo: 1
+  extraDays: 10000
   text: -> """
   |||| travel/SailingStorm
     Seas heaved, the hull groaned, masts cracked. A ferocious squall blew in without warning, giving the crew scant time to prepare. James rushed to help <button onclick='Place.travel.Sail.lostCargo();'>douse the sails</button> or <button onclick='Place.travel.Sail.extraDamage();'>secure the cargo</button> before things grew worse.
@@ -138,6 +138,7 @@ s.StormDropOrDamage =
 s.StormDropOrDelay =
   label: 'Storm'
   minCargo: 1
+  extraDays: 10000
   text: -> """
   |||| travel/CabinStorm
      James slammed the door in the face of storm outside, and took a moment to shake the water from his hair before he spoke. `J Nat, we're taking on water faster than we can pump it out. We need to <button onclick='Place.travel.Sail.lostCargo();'>lighten the load</button> or put <button onclick='Place.travel.Sail.extraDelay();'>more men on the pumps</button>.`
@@ -145,6 +146,7 @@ s.StormDropOrDelay =
 
 s.StormSpeedOrSafety =
   label: 'Storm'
+  extraDays: 10000
   text: -> """
   |||| travel/DeckNight
     Storm clouds darken the sky, and winds begin to pick up. Natalie can feel the energy building, crawling along her skin and ready to break at any moment. It's a big one. Should the Lapis sail into <button onclick='Place.travel.Sail.makeProgress();'>the teeth of the storm</button> or <button onclick='Place.travel.Sail.reduceDamage();'>douse the sails</button> while there's still time?

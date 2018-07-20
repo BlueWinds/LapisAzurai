@@ -79,6 +79,8 @@ s.Intro =
 s.Ch1 =
   label: 'Vailia'
   blocking: true
+  required: 'GameOverExploration'
+  _class: 'JamesRoute'
   history:
     Intro: true
   effects:

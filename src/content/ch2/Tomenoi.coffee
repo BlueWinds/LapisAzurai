@@ -4,6 +4,7 @@ s.TomenoiArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
+  extraDays: 20
   history:
     TomenoiRoute: true
   effects:
@@ -265,6 +266,7 @@ s.AsaraCh3 =
   label: 'Chapter 3 - Asara'
   required: 'GameOverLove'
   requiredGroup: 'Ch2Routes'
+  _class: 'AsaraRoute'
   history:
     AsarasTrauma: true
   effects:
@@ -292,8 +294,9 @@ s.AsaraCh3 =
 
 s.AsaraCh3Yes =
   label: 'Chapter 3 - Asara'
-  required: 'GameOverLove'
   requiredGroup: 'Ch2Routes'
+  _class: 'AsaraRoute'
+  extraDays: -1000 # Hiding it from appearing normally
   history:
     AsaraCh3: true
   effects:
@@ -315,6 +318,9 @@ s.AsaraCh3Yes =
 
 s.AsaraCh3No =
   label: 'Chapter 3 - Not Asara'
+  requiredGroup: 'Ch2Routes'
+  _class: 'AsaraRoute'
+  extraDays: -1000 # Hiding it from appearing normally
   history:
     AsaraCh3: true
   effects:

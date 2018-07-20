@@ -9,6 +9,7 @@
     "livereload": "0.x",
     "nodemon": "1.x",
     "npm-run-all": "4.x",
+    "opn-cli": "^3.1.0",
     "uglify-js": "3.x"
   },
   "keywords": [
@@ -22,7 +23,8 @@
     "url": "https://github.com:BlueWinds/LapisAzurai.git"
   },
   "scripts": {
-    "start": "coffeelint -q src/ || true && run-s clean && run-p copy-images uglify watch livereload",
+    "start": "coffeelint -q src/ || true && run-s clean compile && run-p copy-images uglify && run-p livereload browser watch",
+    "browser": "sleep 2 && opn $(pwd)/dist/index.html",
     "compile": "run-p coffee copy-static copy-css string-replace",
     "build-dist": "run-s full-compile remove-livereload && cd dist && zip -r LapisAzurai.zip *",
     "full-compile": "coffeelint -q src/ && run-s clean && run-p copy-images copy-static uglify compile",

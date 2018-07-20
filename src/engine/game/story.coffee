@@ -2,7 +2,8 @@ sampleData =
   label: 'Explore Wilds'
   blocking: true # A blocking event prevents all other actions when the player is at that location. Costs no reputation.
   required: 'GameOver' # This event will result in a game over screen (using the given story) if it expires unviewed.
-  requiredGroup: 'Ch2Routes' # This required event will only cause a game-over if /all/ events in its group are expired or viewed, and if the chapter hasn't changed.
+  requiredGroup: 'Ch2Routes' # This required event will only cause a game-over if *all* events in its group are expired or viewed, and if the chapter hasn't changed.
+  _class: 'KatRoute' # Adds this class to the map view for the event
   cost: 1 # Multiplier on the event's cost. Defaults to 1 if absent.
   place: 'Vailia' # Used mostly to calculate how many days events should take to expire
   extraDays: 10 # Days added to the calculated expiration date, used to manually tweak balance
@@ -36,10 +37,10 @@ window.Story = {
     not Story.visibleStories(Place[g.map.from].stories[g.chapter]).some (p)-> Story[p].blocking
 
   expirationDate: (story)->
-    unless Story[story].history then return 0
+    unless Story[story].history then return (Story[story].extraDays or 0)
     prereqsExpire = for key, value of Story[story].history
       Story.expirationDate(key)
-    timeAdded = (Story[story].extraDays or 0) + if Story[story].blocking then 4 else 16
+    timeAdded = (Story[story].extraDays or 0) + if Story[story].blocking then 4 else 15
     return Math.max.apply(null, prereqsExpire) + timeAdded + prereqsExpire.length * 12
 
   matchesHistory: (onlyOnce, story)->

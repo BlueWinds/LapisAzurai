@@ -33,12 +33,17 @@ window.Cargo =
       Cargo.acceptTimeRemaining(cargo) >= 0
     return
 
-  create: (from)->
-    potentialDestinations = {}
+  potentialDestinations: (from)->
+    dest = {}
     for destination, goods of Place[from].goods when g.reputation[destination]?
-      potentialDestinations[destination] = goods.length
+      dest[destination] = goods.length
+      # If the player is focusing on this location, quadruple the changes cargo will be headed here
+      if destination is g.jobFocus
+        dest[destination] += goods.length * 3
+    return dest
 
-    to = Math.weightedChoice(potentialDestinations)
+  create: (from)->
+    to = Math.weightedChoice(Cargo.potentialDestinations(from))
     unless to then return
     name = Math.choice Place[from].goods[to]
     reputation = [Cargo.goods[name][0], Cargo.goods[name][1]]

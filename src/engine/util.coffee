@@ -70,29 +70,23 @@ Math.sumObject = (items)->
     sum += val
   return sum
 
-getRand = (seed)->
-  if seed
-    (new Math.seedrandom(seed))()
-  else
-    Math.random()
-
-Math.randomRound = (number, seed)->
+Math.randomRound = (number)->
   result = Math.floor(number)
-  if getRand(seed) < number % 1 then result += 1
+  if Math.random() < number % 1 then result += 1
   return result
 
-Math.keyChoice = (items, seed)->
+Math.keyChoice = (items)->
   if items instanceof Array
-    choice = Math.floor(getRand(seed) * items.length)
+    choice = Math.floor(Math.random() * items.length)
     return choice
-  return Math.choice(Object.keys(items), seed)
+  return Math.choice(Object.keys(items))
 
-Math.choice = (items, seed)->
-  return items[Math.keyChoice(items, seed)]
+Math.choice = (items)->
+  return items[Math.keyChoice(items)]
 
-Math.weightedChoice = (weights, seed)->
+Math.weightedChoice = (weights)->
   sum = Math.sumObject weights
-  choice = Math.floor(getRand(seed) * sum)
+  choice = Math.floor(Math.random() * sum)
   for key, value of weights
     choice -= value
     if choice <= 0 then return key

@@ -3,6 +3,7 @@ s.KatShowsSamsGrave =
   label: "Kat's Grave"
   required: 'GameOverKindness'
   requiredGroup: 'Ch2Routes'
+  _class: 'KatRoute'
   extraDays: 15
   history:
     JamesUpsetMagic: true
@@ -154,8 +155,6 @@ s.DeliciousFood =
 
 s.KatBringsToys =
   label: 'Vailian Toys'
-  required: 'GameOverFun'
-  requiredGroup: 'Ch2Routes'
   extraDays: 10
   history:
     KatShowsSamsGrave: true
@@ -182,9 +181,10 @@ s.KatCh3 =
   label: 'Chapter 3 - Kat'
   required: 'GameOverFun'
   requiredGroup: 'Ch2Routes'
+  _class: 'KatRoute'
   history:
     ColinthAmulets2: true
-    KantianSorcerer: true
+    KatShowsSamsGrave: true
   effects:
     xp:
       Natalie: 2
@@ -226,8 +226,9 @@ s.KatCh3 =
 
 s.KatCh3Yes =
   label: 'Chapter 3 - Kat'
-  required: 'GameOverFun'
   requiredGroup: 'Ch2Routes'
+  _class: 'KatRoute'
+  extraDays: -1000
   history:
     KatCh3: true
   effects:
@@ -293,6 +294,9 @@ s.KatCh3Yes =
 
 s.KatCh3No =
   label: 'Chapter 3 - Not Kat'
+  requiredGroup: 'Ch2Routes'
+  _class: 'KatRoute'
+  extraDays: -1000
   history:
     KatCh3: true
   effects:

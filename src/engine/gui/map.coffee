@@ -131,12 +131,10 @@ updateLabel = (place)->
 
   span = $('#' + place + ' tspan').removeClass()
   if visible[0]
-    expiresClass = if Story[visible[0]].required then 'required'
-    else if Story[visible[0]].blocking then 'blocking'
-    else 'normal'
+    expiresClass = if Story[visible[0]].required then 'required' else 'normal'
 
     span.show()
-    span.children().addClass(expiresClass).text(Story.expirationDate(visible[0]) -  g.day)
+    span.children().addClass(expiresClass).addClass(Story[visible[0]]._class).text(Story.expirationDate(visible[0]) -  g.day)
   else
     span.hide()
 

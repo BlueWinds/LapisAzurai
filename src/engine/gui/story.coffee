@@ -36,7 +36,12 @@ $.extend Story, {
       'Expires tomorrow'
     else
       "#{days} days"
-    return """<td class="story #{if onclick then 'active' else '' } #{if Story[story].blocking then 'blocking' else ''} #{if Story[story].required then 'required' else ''}" #{onclick} story="#{story}">
+
+    required = if Story[story].required then 'required' else ''
+    active = if onclick then 'active' else ''
+    _class = ['story', required, active, Story[story]._class].join(' ')
+
+    return """<td class="#{_class}" #{onclick} story="#{story}">
       <div>
         <span class="label">#{Story[story].label}</span>
         <span class="cost">#{if rep then -rep + ' rep' else ''}</span>

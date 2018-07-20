@@ -65,6 +65,8 @@ s.AsaraTalkEyes =
   label: 'Talk with Asara - Silver Eyes'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
+  extraDays: 80
+  _class: 'AsaraRoute'
   history:
     AsarasMagic: true
   effects:
@@ -89,6 +91,7 @@ s.AsaraTalkSisters =
   label: 'Talk with Asara - Sisters'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
+  _class: 'AsaraRoute'
   history:
     AsaraTalkEyes: true
   effects:
@@ -136,6 +139,7 @@ s.NonkeniaHunters =
   label: 'Hunters'
   history:
     NonkeniaArrive: true
+  extraDays: 30
   effects:
     xp:
       Asara: 3

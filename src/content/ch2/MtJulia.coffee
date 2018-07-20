@@ -150,6 +150,7 @@ s.JamesUpsetMagic2 =
   label: 'James is Upset'
   required: 'GameOverTrust'
   requiredGroup: 'Ch2Routes'
+  _class: 'JamesRoute'
   history:
     JamesUpsetMagic: true
   effects:

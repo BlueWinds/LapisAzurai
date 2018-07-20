@@ -38,6 +38,7 @@
 <script>
   var placeColors = d3.scale.category20();
   var requiredColors = d3.scale.category10();
+  var _classColors = d3.scale.category10();
   var characterColors = d3.scale.category10();
   var linkColors = d3.scale.category10();
 
@@ -195,6 +196,11 @@
         $('<div class="' + required + '">' + required + '</div>').css('color', requiredColors(required)).appendTo('.colorBy.required');
       }
 
+      var _class = Story[story]._class;
+      if (_class && !$('.' + _class).length) {
+        $('<div class="' + _class + '">' + _class + '</div>').css('color', _classColors(_class)).appendTo('.colorBy._class');
+      }
+
       var requiredGroup = Story[story].requiredGroup;
       if (requiredGroup && !$('.' + requiredGroup).length) {
         $('<div class="' + requiredGroup + '"><span class="solid"></span> ' + requiredGroup + '</div>').css('color', linkColors(requiredGroup)).appendTo('.links');
@@ -274,6 +280,10 @@
         var gradient = c[0] + '_' + (c[1] || c[0]);
         return 'url(#' + gradient + ')';
       }
+      if (colorBy === '_class') {
+        var _class = Story[d.name]._class
+        return _class ? _classColors(_class) : '#aaa';
+      }
     });
   }
 
@@ -302,12 +312,14 @@
     <button onclick="recolor('places')">Color by places</button>
     <button onclick="recolor('required')">Color by required</button>
     <button onclick="recolor('characters')">Color by characters</button>
+    <button onclick="recolor('_class')">Color by class</button>
   </div>
   <div style="position: absolute; top: 2em; left: 0; z-index: -1;">
     <div class="links"></div>
     <div class="colorBy places"></div>
     <div class="colorBy required"></div>
     <div class="colorBy characters"></div>
+    <div class="colorBy _class"></div>
   </div>
   <object style="display: none;" id="map" data="game/content/Map.svg"></object>
 </body>
