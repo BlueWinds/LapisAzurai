@@ -16,6 +16,8 @@ Story.Load =
       catch e
         continue
 
+      unless game.map then continue
+
       blob = new Blob([localStorage[key]], {type: 'text/plain'})
       blob = URL.createObjectURL blob
 

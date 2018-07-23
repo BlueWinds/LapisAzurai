@@ -5,7 +5,7 @@ ssh-add
 echo "Compiling..."
 npm run build-dist
 echo "Uploading..."
-scp dist/LapisAzurai.zip threewestwinds.com:threewestwinds.com/LapisAzurai.zip
+scp dist/LapisAzurai.zip threewestwinds.com:LapisAzurai.zip
 echo "Unpacking..."
-ssh threewestwinds.com "cd threewestwinds.com/ && rm -rf LapisAzurai && unzip -qd LapisAzurai LapisAzurai.zip"
+ssh threewestwinds.com "cd LapisAzurai && rm -rf * && mv ../LapisAzurai.zip . && unzip -q LapisAzurai.zip"
 echo "Deployed."

@@ -50,10 +50,11 @@ window.Game =
 
   mostRecentGameData: ->
     last = Object.keys(localStorage).map((key) -> parseFloat(key) or 0).sort().pop()
-    return if last
-      jsyaml.safeLoad(localStorage[last])
-    else
-      $.extend(true, {}, Game.starting) # Game.starting is defined in content/intro.coffee
+    if last
+      game = jsyaml.safeLoad(localStorage[last])
+      if game.map then return game
+
+    return $.extend(true, {}, Game.starting) # Game.starting is defined in content/intro.coffee
 
   start: (data)->
     window.g = data
