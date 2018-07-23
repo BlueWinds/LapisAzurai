@@ -13,7 +13,6 @@ $.extend Place.travel.Sail, {
   randomStormOccurs: ->
     min = Place.travel.Sail.minStormInterval()
     cycle = 100
-    console.log(min, g.lastStorm)
     return g.lastStorm + Math.random() * cycle + min < g.day
 
   delayDailyDamage: (from, to, distance)->

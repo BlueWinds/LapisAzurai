@@ -72,10 +72,9 @@ $.extend Place, {
     event = Place.travelEvent(g.map)
     delete g.map.speedBonus
 
-    if event.delay
+    if event.delay?
       g.map.delay = event.delay
       g.lastStorm = g.day
-      event.pxTravel = 0
 
     g.map.distance += event.pxTravel
     if event.effects
