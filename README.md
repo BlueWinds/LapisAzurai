@@ -13,20 +13,20 @@ The rest of this section is dedicated to setting up a development environment so
 
 The game's source code resides in, surprise surprise, the /src directory. It is written in [Coffeescript](http://coffeescript.org/) and CSS, and runs in a web browser. Browsers don't know how to handle coffeescript though - it needs to be compiled to javascript first, and all the files moved into their proper locations.
 
-For that, you'll need to install [NodeJS](http://nodejs.org/) and [Grunt](http://gruntjs.com/) (which can be installed via NPM: `npm install -g grunt-cli`). With those two pieces of software installed, use npm to pull in all the other development dependencies from the command line:
+For that, you'll need to install [NodeJS](http://nodejs.org/). Once that's installed, use npm to pull in all the other development dependencies from the command line:
 
 ```
 $ cd /wherever/you/downloaded/the/repository
 $ npm install
 ```
 
-After downloading the necessary dependencies, you can compile the game with
+Now you compile the game with
 
 ```
 $ npm start
 ```
 
-This will compile the game, then watch for changes to any of the source code and recompile. If that went well (no errors), you can now open "/dist/index.html" and it will load your new freshly compiled copy of the game. For the development you can use the task `grunt dev` to start a process which opens a new window and refreshes the browser automatically on changes :)
+This will compile the game, then watch for changes to any of the source code and recompile. If that went well (no errors), you can now open "/dist/index.html" and it will load your new freshly compiled copy of the game. It also runs a process which recompiles and then refreshes the browser automatically if you change the source. :)
 
 When ready to distribute, `npm run build-dist` cleans up the current build, starts a new one, removes the live-reload script, and then compresses a ready-to-ship LapisAzurai.zip. Easy peasy!
 

@@ -129,4 +129,4 @@ Cargo.drawSearchLabel = (place)->
   if has('N', 'Initiate')
     oldDrawSkillLabel(place)
   else
-    """<span class="label">Search for jobs</span>"""
+    '''<span class="label">Search for jobs</span>'''

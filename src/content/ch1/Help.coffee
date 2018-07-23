@@ -64,7 +64,7 @@ enterMapHelp = ->
         help('header', "Before you set sail you'll need to find some cargo. This isn't normally required, but it's always a good idea.")
         return
 
-      help('header', "An orange number next to a location means a required event is available there, while black grep shows an optional one.")
+      help('header', 'An orange number next to a location means a required event is available there, while black grep shows an optional one.')
       help('header', "The number of days remaining is absolute - it's usually best to advance the story as soon as possible, so you can see the next steps.")
   , 100
 
@@ -82,7 +82,7 @@ Place.showOverview = (place = $('.place').attr('place') or g.map.from, duration)
   setTimeout ->
     if g.map.from is 'MtJulia' and g.history.MtJuliaArrive is g.day - 1 and place is 'MtJulia'
       help('.cargoSearch', "The chance of finding work is halved if you don't have any reputation to spend.")
-      help('.cargoSearch', "Chances accumulate though - her odds will grow better the longer she keeps searching until she finds something.")
+      help('.cargoSearch', 'Chances accumulate though - her odds will grow better the longer she keeps searching until she finds something.')
       return
 
     if skillHelp() then return
@@ -133,7 +133,7 @@ firstVailiaHelp = (place)->
     help('.place .travel', 'It takes 9 days to travel from Vailia to Mt. Julia. Click the ship icon to set sail.')
 
     help('[story="MtJuliaArrive"]', "You won't be ablo to catch every event on a given playthrough, so don't worry if you miss some with grey borders.")
-    help('[story="MtJuliaArrive"]', "Missing an orange event means game over though, so pay attention to those!")
+    help('[story="MtJuliaArrive"]', 'Missing an orange event means game over though, so pay attention to those!')
     return true
 
 noSkillSelected = -> Object.keys(g.people.Natalie.skills).length is 0 and Object.keys(g.people.James.skills).length is 0
