@@ -185,7 +185,7 @@ Place.MtJulia =
     Crater: 'Vailia'
     Amandais: 'Vailia'
   stories: {}
-  jobChance: 0.3
+  jobChance: 0.4
   goods:
     Vailia: ['Lumber', 'Maiden Tea', 'Masts', 'Smoked Fish']
     Tomenoi: ['Lumber']

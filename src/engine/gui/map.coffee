@@ -72,7 +72,11 @@ $.extend Place, {
     event = Place.travelEvent(g.map)
     delete g.map.speedBonus
 
-    g.map.delay = event.delay or 0
+    if event.delay
+      g.map.delay = event.delay
+      g.lastStorm = g.day
+      event.pxTravel = 0
+
     g.map.distance += event.pxTravel
     if event.effects
       Game.applyEffects(event.effects)
@@ -92,6 +96,7 @@ $.extend Place, {
   animateTravel: (event)->
     effects = Game.drawEffects(event.effects or {})
     if event.story
+      g.lastTravelEvent = g.day
       Story.apply(null, event.story)
       Story.display(event.story, 2000)
       Game.showPassDayOverlay g.day, effects

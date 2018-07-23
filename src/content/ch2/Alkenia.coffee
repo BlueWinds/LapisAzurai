@@ -15,7 +15,7 @@ s.KatShowsSamsGrave =
   || places/AlkeniaDay
     James jerked and rubbed the side of his head, looking around for the source of the sting. Kat. Sitting on the roof at the edge of the market, she gave him a cheerful wave and hucked another pebble at his head. This one missed, stinging the back of another shopper. James muttered an apology on her on her behalf and went to see what she wanted.
 
-    By the time he reached the edge of the market, she was back on the ground. `J Oww," he greeted her.
+    By the time he reached the edge of the market, she was back on the ground. `J Oww,` he greeted her.
 
     `K I want to show you a thing.`
 
@@ -40,7 +40,7 @@ s.KatShowsSamsGrave =
 
     James brushed off another stone - another name, a different date, but the same formula. `J Us who?`
 
-    `Kids on the street. The guards always take care of the bodies, so there's nothing to bury.`
+    ` Kids on the street. The guards always take care of the bodies, so there's nothing to bury.`
 
     They sat in silence. The early afternoon sun was still hidden by the buildings around them, leaving the little cemetery in shade.
 
@@ -87,7 +87,7 @@ s.AlkeniaWeaponsRunning2 =
 
     `N Alkenia's a next door neighbor. It's not like we're selling them to some bloodthirsty warlord. He's just a lumberjack. All he wants is hunting gear anyway, bows and spears and knives, rather than swords and armor.` The lantern swayed in her hand, casting dancing shadows across the interior of the cargo hold.
 
-    'J It's not hunting gear, Nat. This is too expensive for putting food on the table - you only pay this much money when you're killing people.` He sighed. `J I know, I know the deal you made wasn't evil or anything. It just feels like a foot in the door. Once you do this, you're the sort of person who does it, you know? Just... as a favor to me. Take these back and pay the penalty for non delivery.`
+    `J It's not hunting gear, Nat. This is too expensive for putting food on the table - you only pay this much money when you're killing people.` He sighed. `J I know, I know the deal you made wasn't evil or anything. It just feels like a foot in the door. Once you do this, you're the sort of person who does it, you know? Just... as a favor to me. Take these back and pay the penalty for non delivery.`
 
   || N/Upset
     She laid a hand on Jame's forearm with an encouraging smile. `N We won't be those sorts of people.` She closed her eyes and calculated. The fine for breaking contract, the cost of another days wages to unload everything and find another job, the hit to her reputation as reliable... James didn't need to know. Two months ago this would have bankrupted her. Today... she could do it. He spoke softly, but she could tell how much turning him away would hurt. `N I'll... it'll be close, but I can eat the cost.` Literally. He didn't need to know if she skipped a few meals this week to cut expenses.

@@ -6,6 +6,7 @@ Game.starting =
   cargo: []
   damage: 0
   availableCargo: []
+  jobFocus: ''
   jobSearch: {}
   showHelp: true
   map:
@@ -13,6 +14,8 @@ Game.starting =
     to: ''
     distance: 0
     delay: 0
+  lastTravelEvent: 0
+  lastStorm: 0
   reputation:
     Vailia: 5
   people:
@@ -80,7 +83,6 @@ s.Ch1 =
   label: 'Vailia'
   blocking: true
   required: 'GameOverExploration'
-  _class: 'JamesRoute'
   history:
     Intro: true
   effects:

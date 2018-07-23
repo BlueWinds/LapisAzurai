@@ -18,8 +18,10 @@ sampleGame =
     delay: 0 # If there is an ongoing delay, how many more days it will last
     speedBonus: -12 # How many extra pixels of progress to make on the next day (negative will slow down, to minimum of 0px progress)
   availableCargo: [] # As g.cargo
+  lastTravelEvent: 0 # When we last showed a travel event.
   reputation:
     Vailia: 3
+  jobFocus: 'Vailia' # Last selected focus when searching for jobs
   jobSearch:
     Vailia: 0.58 # Accumulated chance from previous failed attempts to find cargo here
   people:

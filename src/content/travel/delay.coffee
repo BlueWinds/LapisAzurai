@@ -2,11 +2,20 @@ p = 'travel/'
 
 $.extend Place.travel.Sail, {
   delayOccurs: (from, to, distance)->
-    if g.history.FirstStormSick then return Math.random() < 0.03
+    if g.history.FirstStormSick then return Place.travel.Sail.randomStormOccurs()
     # Always trigger a storm on the trip back to Vailia when we're almost in port
     if g.history.MtJuliaArrive and not g.history.FirstStorm and distance < 75 then return true
     # No storms until we've had the intro event about Natalie
     return false
+
+  # Split from the main function to remove story-specific elements
+  minStormInterval: -> 70
+  randomStormOccurs: ->
+    min = Place.travel.Sail.minStormInterval()
+    cycle = 100
+    console.log(min, g.lastStorm)
+    return g.lastStorm + Math.random() * cycle + min < g.day
+
   delayDailyDamage: (from, to, distance)->
     damage = 5 * (Math.random() + 0.5)
     # Damage has been prevented, probably by one of the below events
@@ -18,6 +27,7 @@ $.extend Place.travel.Sail, {
         damage -= g.preventNextDamage
         g.preventNextDamage = 0
     return damage
+
   delayDuration: (from, to, distance)-> 4 * (Math.random() + 0.5)
   delayImages: [
     p + 'DeckStorm.jpg',

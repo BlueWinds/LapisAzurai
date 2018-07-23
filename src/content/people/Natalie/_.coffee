@@ -20,7 +20,7 @@ Person.Natalie =
       requiresAnd: ['Overdeliver']
       doubledBy: 'Fear'
     Initiate:
-      description: 'Suffer one less damage each day in storms'
+      description: "Focus job search on specific destination, tripling the chance that she'll find cargo bound for that port instead of somewhere else."
       requiresOr: ['Gregarious', 'Grounded']
 
     Overdeliver2:
@@ -68,5 +68,5 @@ Person.Natalie =
       requiresAnd: ['Grounded2']
       doubledBy: 'Love'
     Adept:
-      description: 'Suffer two less damage each day in storms'
+      description: 'Suffer one less damage each day in storms'
       requiresOr: ['WellInformed2', 'SilverTongue2']

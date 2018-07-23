@@ -35,7 +35,7 @@ s.Pickpocket =
   required: 'GameOverFun'
   blocking: true
   history:
-    AlkeniaRoute: true
+    AlkeniaArrive: true
   effects:
     xp:
       Natalie: 2
@@ -151,6 +151,8 @@ s.KatTrial =
 
 s.KatMeetsJames =
   label: 'Kat and James'
+  blocking: true
+  cost: 0
   history:
     KatTrial: true
   effects:

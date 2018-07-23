@@ -10,7 +10,11 @@ Place.travel.Sail =
     p + 'SailingDay.jpg'
     p + 'SailingNight.jpg'
   ]
-  travelStoryOccurs: -> Math.random() < 0.04
+  minEventInterval: -> 70
+  travelStoryOccurs: ->
+    min = Place.travel.Sail.minEventInterval()
+    cycle = 100
+    return g.lastTravelEvent + Math.random() * cycle + min < g.day
 
 s = {}
 
@@ -51,6 +55,7 @@ s.FirstStorm2 =
 
 s.Clouds =
   label: 'Clouds on the Horizon'
+  extraDays: 10000
   history:
     KatJoins: true
   effects:
@@ -73,6 +78,7 @@ s.Clouds =
 
 s.DistantShoals =
   label: 'Distant Shoals'
+  extraDays: 10000
   history:
     KatJoins: true
   effects:
@@ -91,6 +97,7 @@ s.DistantShoals =
 
 s.FogSpirit =
   label: 'Fog Spirit'
+  extraDays: 10000
   history:
     AsaraAwakens: true
   effects:
@@ -124,6 +131,7 @@ s.FogSpirit =
 
 s.FishSpirit =
   label: 'Fish Spirit'
+  extraDays: 10000
   history:
     AsaraAwakens: true
   effects:
@@ -160,6 +168,7 @@ s.FishSpirit =
 
 s.ShipStories =
   label: 'Stories on Deck'
+  extraDays: 10000
   history:
     FirstStorm2: true
   effects:
@@ -172,6 +181,7 @@ s.ShipStories =
 
 s.ShipTalking =
   label: 'Talking With the Crew'
+  extraDays: 10000
   history:
     FirstStorm2: true
   effects:
@@ -186,6 +196,7 @@ s.ShipTalking =
 
 s.ShipMusic =
   label: 'Music on Deck'
+  extraDays: 10000
   history:
     FirstStorm2: true
   effects:
@@ -202,6 +213,7 @@ s.ShipMusic =
 
 s.ShipSports =
   label: 'Sports on Deck'
+  extraDays: 10000
   history:
     KatJoins: true
   effects:
@@ -217,6 +229,7 @@ s.ShipSports =
 
 s.ShipPracticeCombat =
   label: 'Mock Battle'
+  extraDays: 10000
   history:
     ColinthArrive: true
   effects:
@@ -239,6 +252,7 @@ s.ShipPracticeCombat =
 
 s.ShipPracticeReading =
   label: 'Shipboard Education'
+  extraDays: 10000
   history:
     FirstStorm2: true
   effects:
@@ -253,6 +267,7 @@ s.ShipPracticeReading =
 
 s.PiratesFlee =
   label: 'Running from Pirates'
+  extraDays: 10000
   history:
     AsaraAwakens: true
   effects:
@@ -285,6 +300,7 @@ s.PiratesFlee =
 
 s.AbandonedShipBurn =
   label: 'Abandoned Ship'
+  extraDays: 10000
   history:
     AsaraAwakens: true
   effects:
@@ -305,6 +321,7 @@ s.AbandonedShipBurn =
 
 s.AbandonedShipSearch =
   label: 'Abandoned Ship'
+  extraDays: 10000
   history:
     AsaraAwakens: true
   effects:
@@ -323,8 +340,40 @@ s.AbandonedShipSearch =
     While they didn't find any cargo beyond thoroughly water-ruined provisions, Kat did discover a stash of well-preserved canvas, and one of the crew stumbled upon a still-sealed barrel of pitch. Not the most glamorous of treasure, but combined with a some usable boards pried up from the deck, nothing to scoff at.
   """
 
+
+s.AbandonedShip =
+  label: 'Encounter at Sea'
+  extraDays: 10000
+  history:
+    AsaraAwakens: true
+  effects:
+    xp:
+      Asara: 3
+  text: ->"""
+  || travel/SailingDay
+    `K Ship ahoy!` Kat called out from her position on the starboard side of the deck, and everyone turned to look. Natalie shaded her eyes, trying to make out anything in the bright sun.
+
+    Drifting slowly closer, it became apparent that the other ship was abandoned, listing to one side as though it had taken on a great deal of water. The Azurai put on sail to approach more rapidly.
+
+    It was more of a half-floating wreck than a real ship at this point, wind-slashed sails and rotting timbers. One of the crew suggested immediately that they fire the thing and be on their way – a funeral fitting an abandoned ship. Hard to say though – there might still be something valuable aboard, and even if not, some of the wood or sailcloth might still be salvageable. Not to mention curiosity for its own sake.
+
+    Natalie was about to give the order to lower one of the boats when Asara spoke up. Natalie hadn't seen her arrive on deck - she spent much of her time below, hiding in Natalie's cabin or the cargo hold.
+
+    `A The crew escaped in boats and the cargo is rotten. We should send them on their way.`
+
+    `K How can you tell from here?` Kat shaded her eyes against the bright sun, leaning over the railing as though that would give her a better view of the wreck's interior.
+
+  || A/NormalFull
+    `A They did not all escape the storm. One of them died, and it was a full moon,` Asara nodded, as if expecting that to somehow explain everything. When everyone on deck turned to look at her, she didn't shrink away from the attention as Natalie had assumed she would.
+
+    `A It was at sea, but the full moon is a stronger influence. This falls within my lady's domain.` Her unusual confidence under scrutiny failed, and she hunched her shoulders under the gaze of the crew and officers.
+
+    Natalie took pity on her - it was more than the poor girl usually explained herself, and if it was important to her... `N James, get your bow and some tar. Let's set it alight and we'll have a few minutes of silence.` Natalie turned back to smile at Asara, but she was already gone back below decks.
+  """
+
 s.VailianShip =
   label: 'Vailian Ship'
+  extraDays: 10000
   history:
     FirstStorm2: true
   effects:

@@ -11,12 +11,12 @@ Person.James =
       description: '+5 days to deliver cargo'
       doubledBy: 'Duty'
     Stoic:
-      description: 'Storms are half a day shorter (on average)'
+      description: 'Storms average half a day shorter'
       requiresOr: ['Reliable', 'WeatherEye']
       doubledBy: 'Duty'
     WeatherEye:
       name: 'Weather Eye'
-      description: '10% less likely to be caught in a storm'
+      description: '+5 minimum days between storms'
       requiresOr: ['Trustworthy', 'Stoic']
       doubledBy: 'Duty'
     Apprentice:
@@ -48,12 +48,12 @@ Person.James =
 
     WeatherEye2:
       name: 'Weather Eye 2'
-      description: '10% less likely to be caught in a storm'
+      description: '+5 minimum days between storms'
       requiresOr: ['Organized', 'Stoic2']
       doubledBy: 'Devotion'
     Stoic2:
       name: 'Stoic 2'
-      description: 'Storms are half a day shorter (on average)'
+      description: 'Storms average half a day shorter'
       requiresOr: ['Navigator', 'WeatherEye2']
       doubledBy: 'Devotion'
     Organized2:

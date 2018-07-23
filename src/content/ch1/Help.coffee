@@ -56,15 +56,16 @@ enterMapHelp = ->
 
   setTimeout ->
     unless g.history.Ch1?
-      help('header', "This is the world map, showing all the places you've discovered so far. Right now there's only one - Vailia, Natalie's home city. Select it to learn more (and click this popup to close it).")
+      help('header', "This is the world map, showing all the places you've discovered so far. Select Vailia to learn more about the port city.")
       return
 
     if haventSailedYet()
       unless g.cargo.length
-        help('header', "Mt. Julia now shows up on the map, but before you set sail you'll need to find some cargo. This isn't normally required, but it's usually a good idea.")
+        help('header', "Before you set sail you'll need to find some cargo. This isn't normally required, but it's always a good idea.")
         return
 
-      help('header', 'An orange number next to a location means a required event is available there, while black means an optional event')
+      help('header', "An orange number next to a location means a required event is available there, while black grep shows an optional one.")
+      help('header', "The number of days remaining is absolute - it's usually best to advance the story as soon as possible, so you can see the next steps.")
   , 100
 
 oldEnterMap = Story.enterMap
@@ -80,28 +81,23 @@ Place.showOverview = (place = $('.place').attr('place') or g.map.from, duration)
 
   setTimeout ->
     if g.map.from is 'MtJulia' and g.history.MtJuliaArrive is g.day - 1 and place is 'MtJulia'
-      help('.cargoSearch', "Natalie's chance of finding cargo is slim at Mt. Julia at the best of times, and it's even worse right now. The chance of finding work is halved if you don't have any reputation to spend.")
-
-      help('.cargoSearch', "Chances accumulate though - her odds will grow better the longer she keeps searching until she finds something, so after delivering your cargo, it's probably worth spending a few days looking before you head back to Vailia.")
-
+      help('.cargoSearch', "The chance of finding work is halved if you don't have any reputation to spend.")
+      help('.cargoSearch', "Chances accumulate though - her odds will grow better the longer she keeps searching until she finds something.")
       return
 
     if skillHelp() then return
 
     if g.day is 0
-      help('.place .name', "This is the overview for Vailia, Natalie's home city. On the left side you can see information about the location, while the right side has information about your characters. You can click this image to return to the world map at any time.")
+      help('.place .name', 'On the left side you can see information about the location, while the right side has information about your characters. Clicking the image returns to the world map.')
 
-      help('.place .description', 'Natalie has a separate reputation at each port, representing how well regarded she is at that location. You spend reputation to view events and progress the story, as well as to repair damage and search the city for jobs.')
-
-      help('[story="Ch1"]', "Certain events block progress until you view them - like \"Chapter 1\". You won't be able to take most other actions until you view on them.")
+      help('.place .description', 'Natalie has a separate reputation at each port. You spend reputation to view events, repair damage after a storm and search the city for jobs.')
       return
 
     if firstVailiaHelp(place) then return
 
-    if g.day is g.history.FirstStormSick2 + 1 and place is 'Vailia'
-      help('.required', "Pay particular attention to events with orange borders, which advance the main plot. If you don't explore them before they expire, you'll be treated to the game over screen.")
-
-      help('.repair', "The Lapis Azurai is damaged, and you won't be able to set sail until it's repaired. Calling in the necessary favors and purchasing supplies costs reputation (if you have any) as well as time.")
+    if place is 'Vailia'
+      if g.day is g.history.FirstStormSick2
+        help('.repair', "The Lapis Azurai is damaged, and sailing is slowed until it's repaired. Calling in the necessary favors and purchasing supplies costs reputation as well as time.")
   , 100
 
 skillHelp = ->
@@ -120,25 +116,24 @@ firstVailiaHelp = (place)->
   unless haventSailedYet() then return false
   if not g.cargo.length and place is 'Vailia'
     if not g.availableCargo.length
-      help('.place .cargoSearch', "Natalie has some contacts in the city, but she doesn't know who actually has cargo that they'll pay her to move. She'll have to make new friends, speak with her old ones, and generally search the city for goods that need to be moved from Vailia to elsewhere.")
+      help('.place .cargoSearch', "Natalie has contacts, but she doesn't have any cargo yet. She'll have to make new friends, speak with her old ones, and search the city for goods that need to be moved from Vailia to elsewhere.")
 
-      help('.place .cargoSearch .cost', "The chance of finding a job varries by port. Vailia's a busy city, so it'll be easy to find cargo here. With a chance above 100% she's guaranteed to find one job, and has a chance of finding more than one.")
+      help('.place .cargoSearch .cost', "The chance of finding a job varries by port. Vailia's a busy city, so it'll be easy to find cargo here. With a chance above 100% she's guaranteed to find at least one job.")
       return true
 
     c = g.availableCargo[0]
     help('.cargo.accept', "Right now, someone in #{Place[c.from].name} is willing to pay Natalie to deliver #{c.name} to #{Place[c.to].name}. The job will disappear if she doesn't accept it in #{Cargo.acceptTimeRemaining(c)} days.")
 
-    help('.cargo.accept .cost', "If she delivers the cargo before it expires, she'll gain #{c.reputation[0]} reputation at the origin and #{c.reputation[1]} at the destination. Different goods are worth different ammounts - it can sometimes be worthwhile to keep searching even once you have an offer.")
+    help('.cargo.accept .cost', "If she delivers the cargo before it expires, she'll gain #{c.reputation[0]} reputation at the origin and #{c.reputation[1]} at the destination. ")
 
-    help('header .cargo', "Natalie's ship can carry up to three loads at a time - it's good to accept as many jobs as you can, if they all share a destination.")
+    help('header .cargo', "Natalie's ship can carry up to three loads at a time. Even if a job expires, you'll need to dilever the cargo to free up space.")
     return true
 
   if place is 'MtJulia' and g.cargo.length
-    help('.delivery.0', "You'll be able to deliver the cargo once you arrive. Don't dawdle too long though - if the delivery expires, the cargo will still take up space in the ship and you won't get any reward when you do deliver it.")
+    help('.place .travel', 'It takes 9 days to travel from Vailia to Mt. Julia. Click the ship icon to set sail.')
 
-    help('.place .travel', "It takes 9 days to travel from Vailia to Mt. Julia. Now that there's nothing blocking you from leaving Vailia (such as mandatory events or a damaged ship), click the ship icon to set sail.")
-
-    help('[story="MtJuliaArrive"]', "Events expire after some number of days. You won't be ablo to catch every event on a given playthrough. Missing a blue or orange event is bad news - game over.")
+    help('[story="MtJuliaArrive"]', "You won't be ablo to catch every event on a given playthrough, so don't worry if you miss some with grey borders.")
+    help('[story="MtJuliaArrive"]', "Missing an orange event means game over though, so pay attention to those!")
     return true
 
 noSkillSelected = -> Object.keys(g.people.Natalie.skills).length is 0 and Object.keys(g.people.James.skills).length is 0

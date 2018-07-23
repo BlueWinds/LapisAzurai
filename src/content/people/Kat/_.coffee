@@ -12,7 +12,7 @@ Person.Kat =
       doubledBy: 'Regret'
     SixthSense:
       name: 'Sixth Sense'
-      description: 'Extra 1% chance each day to get event while sailing'
+      description: '5 fewer days between events while sailing (these events grant XP)'
       doubledBy: 'Regret'
     StreetRat:
       name: 'Street Rat'
@@ -49,7 +49,7 @@ Person.Kat =
       doubledBy: 'Death'
     SixthSense2:
       name: 'Sixth Sense 2'
-      description: 'Extra 1% chance each day to get event while sailing'
+      description: '5 fewer days between events while sailing (these events grant XP)'
       requiresAnd: ['Deckhand']
       doubledBy: 'Desire'
     FreeWoman:

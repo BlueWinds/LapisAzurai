@@ -70,12 +70,9 @@ oldDelayDuration = Place.travel.Sail.delayDuration
 Place.travel.Sail.delayDuration = (from, to, distance)->
   return Math.max(1, oldDelayDuration(from, to, distance) - has('J', 'Stoic') * 0.5)
 
-oldDelayOccurs = Place.travel.Sail.delayOccurs
-Place.travel.Sail.delayOccurs = (from, to, distance)->
-  if oldDelayOccurs(from, to, distance)
-    if Math.random() > (has('J', 'WeatherEye') * 0.1)
-      return true
-  return false
+oldMinStormInterval = Place.travel.Sail.minStormInterval
+Place.travel.Sail.minStormInterval = ->
+  return oldMinStormInterval() + has('J', 'WeatherEye') * 5
 
 oldEffects = Story.effects
 Story.effects = (story)->
@@ -107,9 +104,8 @@ oldExpirationDate = Story.expirationDate
 Story.expirationDate = (story)->
   return oldExpirationDate(story) + has('K', 'NeverTooLate') * 3
 
-oldStoryOccurs = Place.travel.Sail.storyOccurs
-Place.travel.Sail.storyOccurs = (from, to, distance)->
-  return oldStoryOccurs(from, to, distance) or Math.random() < has('K', 'SixthSense') * 0.01
+oldMinTravelEventInterval = Place.travel.Sail.minEventInterval
+Place.travel.Sail.minEventInterval = -> oldMinTravelEventInterval() - has('K', 'SixthSense') * 5
 
 oldReputationNeeded = Story.reputationNeeded
 Story.reputationNeeded = (story)->
@@ -118,7 +114,7 @@ Story.reputationNeeded = (story)->
 oldDailyDamage = Place.travel.Sail.delayDailyDamage
 Place.travel.Sail.delayDailyDamage = (from, to, distance)->
   baseDamage = oldDailyDamage(from, to, distance)
-  return Math.max(0, baseDamage - has('N', 'Initiate') - has('N', 'Mage') - has('N', 'Adept') * 2)
+  return Math.max(0, baseDamage - has('N', 'Mage') - has('N', 'Adept'))
 
 oldXpNeeded = Person.xpNeeded
 Person.xpNeeded = (level)->
@@ -127,3 +123,10 @@ Person.xpNeeded = (level)->
   xp -= has('K', 'Deckhand') * 4
   xp -= has('K', 'FreeWoman') * 5
   return xp
+
+oldDrawSkillLabel = Cargo.drawSearchLabel
+Cargo.drawSearchLabel = (place)->
+  if has('N', 'Initiate')
+    oldDrawSkillLabel(place)
+  else
+    """<span class="label">Search for jobs</span>"""

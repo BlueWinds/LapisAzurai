@@ -16,20 +16,25 @@ $.extend Cargo, {
     )
     $('header .cargo').attr 'title', c.join('\n')
 
+  drawSearchLabel: (place)->
+    potentialDests = Object.keys(Cargo.potentialDestinations(place))
+    makeDestOption = (dest)->"<option value=#{dest} #{if g.jobFocus is dest then 'selected' else ''}>#{Place[dest].name}</option>"
+
+    return """<span class="label">
+      Search for jobs -
+      <select class="searchFocus" onclick="event.stopPropagation()" onchange="Cargo.changeSearchFocus()">
+        #{potentialDests.map(makeDestOption)}
+      </select>
+    </span>"""
+
   drawSearch: (place)->
     onclick = if g.map.from is place and g.cargo.length < Cargo.maxCargo()
       'onclick="Cargo.clickSearch(\'' + place + '\');"'
     else ''
 
-    makeDestOption = (dest)->"<option value=#{dest} #{if g.jobFocus is dest then 'selected' else ''}>#{Place[dest].name}</option>"
-
-    select = """<select class="searchFocus" onclick="event.stopPropagation()" onchange="Cargo.changeSearchFocus()">
-      #{Object.keys(Cargo.potentialDestinations(place)).map(makeDestOption)}
-    </select>"""
-
     """<td class="cargoSearch #{if onclick then 'active' else ''}" #{onclick}>
       <div>
-        <span class="label">Search for jobs - #{select}</span>
+        #{Cargo.drawSearchLabel(place)}
         <span class="cost">
           <span class="#{if g.reputation[place] then '' else 'lowRep'}">#{Math.round(Cargo.searchChance(place) * 100)}%</span>
           <br>#{-Cargo.searchCost(place)} rep
@@ -75,7 +80,7 @@ $.extend Cargo, {
     </td>"""
 
   changeSearchFocus: ->
-    g.jobFocus = $('select.searchFocus').val()
+    g.jobFocus = $('select.searchFocus').val() or ''
 
   clickSearch: (place)->
     # Call this in case the last place where focus was set isn't
@@ -85,8 +90,10 @@ $.extend Cargo, {
 
     chance = Cargo.searchChance(place)
     while chance > Math.random()
-      g.availableCargo.push Cargo.create(place)
       chance--
+      g.availableCargo.push Cargo.create(place)
+      if g.availableCargo.length > 10
+        g.availableCargo.shift()
 
     g.jobSearch[place] = Math.max(0, chance)
     g.reputation[place] -= Cargo.searchCost(place)
