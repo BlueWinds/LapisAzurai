@@ -45,7 +45,7 @@ Person.Natalie =
       doubledBy: 'Trust'
     Mage:
       description: 'Suffer one less damage each day in storms'
-      requiresOr: ['WellInformed', 'SilverTongue2']
+      requiresOr: ['WellInformed', 'SilverTongue']
 
     WinningSmile2:
       name: 'Winning Smile 2'
