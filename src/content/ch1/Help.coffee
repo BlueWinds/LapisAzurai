@@ -64,7 +64,7 @@ enterMapHelp = ->
         help('header', "Before you set sail you'll need to find some cargo. This isn't normally required, but it's always a good idea.")
         return
 
-      help('header', 'An orange number next to a location means a required event is available there, while black grep shows an optional one.')
+      help('header', 'An orange number next to a location means a required event is available there, while black numbers shows an optional one.')
       help('header', "The number of days remaining is absolute - it's usually best to advance the story as soon as possible, so you can see the next steps.")
   , 100
 
@@ -118,7 +118,7 @@ firstVailiaHelp = (place)->
     if not g.availableCargo.length
       help('.place .cargoSearch', "Natalie has contacts, but she doesn't have any cargo yet. She'll have to make new friends, speak with her old ones, and search the city for goods that need to be moved from Vailia to elsewhere.")
 
-      help('.place .cargoSearch .cost', "The chance of finding a job varries by port. Vailia's a busy city, so it'll be easy to find cargo here. With a chance above 100% she's guaranteed to find at least one job.")
+      help('.place .cargoSearch .cost', "The chance of finding a job varies by port. Vailia's a busy city, so it'll be easy to find cargo here. With a chance above 100% she's guaranteed to find at least one job.")
       return true
 
     c = g.availableCargo[0]
@@ -126,13 +126,13 @@ firstVailiaHelp = (place)->
 
     help('.cargo.accept .cost', "If she delivers the cargo before it expires, she'll gain #{c.reputation[0]} reputation at the origin and #{c.reputation[1]} at the destination. ")
 
-    help('header .cargo', "Natalie's ship can carry up to three loads at a time. Even if a job expires, you'll need to dilever the cargo to free up space.")
+    help('header .cargo', "Natalie's ship can carry up to three loads at a time. Even if a job expires, you'll need to deliver the cargo to free up space.")
     return true
 
   if place is 'MtJulia' and g.cargo.length
     help('.place .travel', 'It takes 9 days to travel from Vailia to Mt. Julia. Click the ship icon to set sail.')
 
-    help('[story="MtJuliaArrive"]', "You won't be ablo to catch every event on a given playthrough, so don't worry if you miss some with grey borders.")
+    help('[story="MtJuliaArrive"]', "You won't be able to catch every event on a given playthrough, so don't worry if you miss some with grey borders.")
     help('[story="MtJuliaArrive"]', 'Missing an orange event means game over though, so pay attention to those!')
     return true
 
