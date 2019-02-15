@@ -23,6 +23,12 @@ $.extend Person, {
           $("[skill=#{skill}]").replaceWith(Person.drawSkill(person, skill))
       else
         newDiv.find('object').on 'load', Person.activateSVG
+        newDiv.mouseenter ->
+          newDivPerson = @attributes.person.value
+          console.log(newDivPerson)
+          p.find(".skill[p!=#{newDivPerson}]").remove()
+          p.find(".person[person!=#{newDivPerson}] object").each ->
+            $(@contentDocument).find('.active').removeClass('active')
         p.append(newDiv)
     return
 
@@ -77,7 +83,7 @@ $.extend Person, {
     selected = g.people[person].skills[skill]
 
     selectButton = if selected
-      '<button disabled>Already selected</button>'
+      ''
     else if Person.unmetRequirements(person, skill)
       "<button disabled>Requires #{Person.unmetRequirements(person, skill)}</button>"
     else if Person.skillPoints(person) <= 0

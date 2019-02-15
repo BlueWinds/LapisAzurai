@@ -463,12 +463,14 @@ hr {
   border-radius: 6px;
   display: table;
   margin: auto;
-  padding: 10px;
+  padding: 0 10px 0 10px;
   text-align: center;
 }
 
 .skill .name {
-  padding: 0;
+  color: #fff;
+  font-weight: 700;
+  margin: 5px;
 }
 
 button {

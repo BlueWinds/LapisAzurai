@@ -287,7 +287,7 @@ s.AsaraCh3 =
 
     `A I'm sorry, I just...` Asara's voice came out strangled.
 
-    <button onclick="Story.continueWith('AsaraCh3Yes')">`N Please, don't apologize,`</button> <button onclick="Story.continueWith('AsaraCh3No')">`N Are you sure?`</button>
+    <button onclick="Story.continueWith(event, 'AsaraCh3Yes')">`N Please, don't apologize,`</button> <button onclick="Story.continueWith(event, 'AsaraCh3No')">`N Are you sure?`</button>
 
     <i>Accepting her will commit you to Asara in Chapter 3, while hesitating will lock out her route. No second chances.</i>
   """

@@ -219,7 +219,7 @@ s.KatCh3 =
 
     The thief laughed and shoved Natalie playfully, the serious mood gone as quickly as it had come. The twinkle was back in her eye. `K No fair, you first. Love or lust?`
 
-    <button onclick="Story.continueWith('KatCh3Yes')">`N I think both?`</button> <button onclick="Story.continueWith('KatCh3No')">`N Just having fun.`</button>
+    <button onclick="Story.continueWith(event, 'KatCh3Yes')">`N I think both?`</button> <button onclick="Story.continueWith(event, 'KatCh3No')">`N Just having fun.`</button>
 
     <i>Saying you love her will commit you to Kat in Chapter 3, while an hour of fun will lock out her route. No second chances.</i>
   """

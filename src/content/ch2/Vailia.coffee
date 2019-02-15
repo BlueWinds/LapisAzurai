@@ -238,9 +238,7 @@ s.IronSandsRutter =
   || K/Serious
     Kat shook her head.
 
-    `Guildmaster It's because she likes you. Natalie's like a daughter to me, and if she likes you, then it's my pleasure to make your acquaintance.`
-
-    `Guildmaster Oh, come now, I'm not that scary, am I?` Janos' smile faltered slightly at Kat's continued nervous shifting.
+    `Guildmaster It's because she likes you. Natalie's like a daughter to me, and if she likes you, then it's my pleasure to make your acquaintance.` Janos' smile faltered slightly at Kat's continued nervous shifting. `Guildmaster Oh, come now, I'm not that scary, am I?`
 
     `K Well... there are stories, you know? That you're the richest man in Vailia.`
 
@@ -250,7 +248,7 @@ s.IronSandsRutter =
 
     `Guildmaster It has.`
 
-    `K And that you`re a super powerful wizard.`
+    `K And that you're a super powerful wizard.`
 
     `Guildmaster You made that up.`
 
@@ -660,7 +658,7 @@ s.JamesCh3 =
 
     He gave her a nasty look, and she snapped her mouth shut. `J I suppose now is as good a time as any.`
 
-    She reached over and gave his shoulder a squeeze. <button onclick="Story.continueWith('JamesCh3Yes')">`N I'll come with you.`</button> <button onclick="Story.continueWith('JamesCh3No')">`N Take as much time as you need.`</button>
+    She reached over and gave his shoulder a squeeze. <button onclick="Story.continueWith(event, 'JamesCh3Yes')">`N I'll come with you.`</button> <button onclick="Story.continueWith(event, 'JamesCh3No')">`N Take as much time as you need.`</button>
 
     <i>Going with him will commit you to James in Chapter 3, while sending him alone will lock out his route. No second chances.</i>
   """

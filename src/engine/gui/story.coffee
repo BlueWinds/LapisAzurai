@@ -70,11 +70,15 @@ $.extend Story, {
     if g.scroll is -1 then g.scroll = 0
     Story.forwardSection(elements.first(), 1)
 
-  continueWith: (story)->
+  continueWith: (e, story)->
     Story.apply(null, story)
-    elements = Story.render(story)
-    $('#stories').append(elements)
-    Story.changeSection(1, true)
+    $('#stories button').attr('disabled', true)
+    e.stopPropagation()
+    setTimeout (->
+      elements = Story.render(story)
+      $('#stories').append(elements)
+      Story.changeSection(1, true)
+    ), 200
 
   drawHistory: ->
     unless g.history.Intro?
@@ -128,6 +132,7 @@ $.extend Story, {
   changeSection: (direction, force = false)->
     if g.scroll is 0 and direction < 0 and $('section.active').length is 1 then return
     currentElement = $('section.active').last()
+
     if currentElement.hasClass('noClickThrough') and direction >= 0 and not force then return
     targetElement = elementInDirection(currentElement, direction)
 
