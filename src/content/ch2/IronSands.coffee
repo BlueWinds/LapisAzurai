@@ -17,7 +17,7 @@ s.IronSandsArrive =
 
     Asara lifted her arms to the breeze and closed her eyes, a pleasant half smile on her lips.
 
-    There wasn't a single plant in sight anywhere in sight, dark sand unbroken except for a stone pier and single small warehouse sticking out into the water. Half a dozen people waited for them on there, ropes in hand to help them dock against the wind. A hundred yards back from the water rose cliffs, sheer and of the same dark tan stone as the beach, a hundred feet high. A path had been laboriously cut into the side of the cliff, narrow and treacherous switchbacks. Against the dusty sky Natalie could see buildings at the top - that must be the main camp.
+    There wasn't a single plant in sight, dark sand unbroken except for a stone pier and single small warehouse sticking out into the water. Half a dozen people waited for them on there, ropes in hand to help them dock against the wind. A hundred yards back from the water rose cliffs, sheer and of the same dark tan stone as the beach, a hundred feet high. A path had been laboriously cut into the side of the cliff, narrow and treacherous switchbacks. Against the dusty sky Natalie could see buildings at the top - that must be the main camp.
 
     The Lapis nosed against the pier, bobbing in choppy water and gusty, unpredictable wind. While the crew tied it down with ropes tossed up from the dock, Natalie hopped over to speak with the woman in charge. Asara and James followed.
 

@@ -13,7 +13,7 @@ s.KatShowsSamsGrave =
       Kat: 4
   text: ->"""
   || places/AlkeniaDay
-    James jerked and rubbed the side of his head, looking around for the source of the sting. Kat. Sitting on the roof at the edge of the market, she gave him a cheerful wave and hucked another pebble at his head. This one missed, stinging the back of another shopper. James muttered an apology on her on her behalf and went to see what she wanted.
+    James jerked and rubbed the side of his head, looking around for the source of the sting. Kat. Sitting on the roof at the edge of the market, she gave him a cheerful wave and hucked another pebble at his head. This one missed, stinging the back of another shopper. James muttered an apology on her behalf and went to see what she wanted.
 
     By the time he reached the edge of the market, she was back on the ground. `J Oww,` he greeted her.
 
@@ -34,7 +34,7 @@ s.KatShowsSamsGrave =
 
     She hunted a moment in the grass, then gestured him over and knelt by one of the stones, brushing dirt and grass away to reveal the surface. James crouched next to her.
 
-    ` For Sam, 15 Ascending Air 1217. Kat honors his memory.` chiseled into the stone in small careful letters. Only a few months old. Kat blew the dust away reverently.
+    ` For Sam, 15 Ascending Air 1271. Kat honors his memory.` chiseled into the stone in small careful letters. Only a few months old. Kat blew the dust away reverently.
 
     `K One of the priests makes them for us, since none of us can read.`
 
@@ -65,7 +65,7 @@ s.AlkeniaWeaponsRunning =
 
     `N I'm not planning on going myself, but thanks for the tip. Mostly I was wondering if there's anything you need?` Alkenia supplied most of Vailia's lumber - the small island nation didn't have large forests, and better to build the fleet with wood from the forested mainland. Some contacts in the industry would be an advantage for a rising young captain. Thus Natalie, here, at the edge of the forest, talking with the owner of one of the larger lumber companies. She hadn't been expecting to find him out here, carrying logs and a formidable axe himself, but it was a pleasant surprise. He seemed straightforward and easy to deal with.
 
-    ` Hah, a Vailian looking to help, there's a new one. You said you were a captain? Not much use to me, then. We already have an exclusive contract with charter company for forest products. Kind of you to ask, though.` With a grunt he heaved the log back to his shoulder, getting ready to leave. Then he paused, turning back to her, and she had to duck the swing of his beam. ` Well actually, maybe there is something. Bring me a dozen bows with spears and knives to match and I might start thinking you mean it about wanting to help. good Vailian ones, not the dreck we make here. That's what we need - help defending ourselves, not the pretty promises you'd prefer to give.` He laughed at her expression. That much weaponry was, not to put too fine a point on it, rather expensive.
+    ` Hah, a Vailian looking to help, there's a new one. You said you were a captain? Not much use to me, then. We already have an exclusive contract with a charter company for forest products. Kind of you to ask, though.` With a grunt he heaved the log back to his shoulder, getting ready to leave. Then he paused, turning back to her, and she had to duck the swing of his beam. ` Well actually, maybe there is something. Bring me a dozen bows with spears and knives to match and I might start thinking you mean it about wanting to help. good Vailian ones, not the dreck we make here. That's what we need - help defending ourselves, not the pretty promises you'd prefer to give.` He laughed at her expression. That much weaponry was, not to put too fine a point on it, rather expensive.
 
   || N/Normal
     Maybe she could work something out. `N I can bring you a load at-cost if you'll front 50% of the price.` Natalie winced. It was a huge risk, and if something went wrong, it could almost break her books. Quality arms weren't cheap, and her budget was always tight.
@@ -115,11 +115,11 @@ s.AlkeniaRaid =
   || A/NormalFull
     `A That's far enough,` Asara held up an empty hand, the other resting on the sword at her hip. She should have had to shout to make herself heard, but her quiet voice carried over the gusting wind. `A You may not come here.` The sailors behind her held steady, forming a grim line with James at the center.
 
-    The raiders stopped. Half a dozen women, each with the same barbed vine painted across their left cheek and running down their necks, slowly smudging as rain washed them clean, each with the same vicious looking dagger in one hand. They didn't say anything. The silence was more terrifying shouting would have been.
+    The raiders stopped. Half a dozen women, each with the same barbed vine painted across their left cheek and running down their necks, slowly smudging as rain washed them clean, each with the same vicious looking dagger in one hand. They didn't say anything. The silence was more terrifying than shouting would have been.
 
     No one moved. A gust of wind made everyone present stagger.
 
-    Without warning they swept forward again, seeming to move with a single mind. Asara smoothly drew and parried the wicked dagger aimed at her chest. Beside her, one of the crew screamed and fell, tangled with a vine-woman, but Asara had her own problems to attend to. Her attacker ducked slid under her probing counter-stroke and came at her again.
+    Without warning they swept forward again, seeming to move with a single mind. Asara smoothly drew and parried the wicked dagger aimed at her chest. Beside her, one of the crew screamed and fell, tangled with a vine-woman, but Asara had her own problems to attend to. Her attacker ducked, slid under her probing counter-stroke and came at her again.
 
   || A/Angry
     It was over in an instant, too quickly to think. One of Natalie's crew bled on the ground, and two of the Nonkenians lay dead at Asara's feet. The remainder fled as silently as they'd come, one clutching an injured arm where James had used his own blade. Asara contemplated further violence, but it wasn't necessary. Natalie was still here. She needed to stay with Natalie.
@@ -198,7 +198,7 @@ s.KatCh3 =
 
     Kat pulled it back, hugged it to her chest. `K I bought this one fair and square.`
 
-    `N Then I'm sure you won't mind me taking a look, make sure it doesn't match our cargo?` Natalie grabbed for it again, wrapping her hands around the stem and the base, above and below where Kat clutched it. Natalie yanked, but the other woman's grip held, bring them closer together, rather than freeing the bottle.
+    `N Then I'm sure you won't mind me taking a look, make sure it doesn't match our cargo?` Natalie grabbed for it again, wrapping her hands around the stem and the base, above and below where Kat clutched it. Natalie yanked, but the other woman's grip held, bringing them closer together, rather than freeing the bottle.
 
     `K No, it's mine. You want it, you'll have to take it.` Lantern light glinted in her eye, her challenge a tangible presence in the air.
 
@@ -207,11 +207,11 @@ s.KatCh3 =
   || N/Embarrassed
     As Kat blinked up at her and tried to catch her breath, a wide grin on her face, Natalie became entirely too aware of the warm body pressed against hers. Self-conscious, she pushed away and stood up again. `N Maybe we should talk about this in the morning.`
 
-    Kat carefully set the wine bottle aside and stood up herself. She opened her mouth as if to speak... and instead wrapped herself around Natalie in a bear hug, pinning arms to her sides. Their mouths pressed together in a sudden kiss, then broke apart again as Natalie struggled to pull away. Kat let her escape the kiss, but didn't let go the hug. The sweet tang of wine lingered in on Natalie's tongue.
+    Kat carefully set the wine bottle aside and stood up herself. She opened her mouth as if to speak... and instead wrapped herself around Natalie in a bear hug, pinning arms to her sides. Their mouths pressed together in a sudden kiss, then broke apart again as Natalie struggled to pull away. Kat let her escape the kiss, but didn't let go the hug. The sweet tang of wine lingered on Natalie's tongue.
 
     It was Natalie's turn to try and catch her breath - the kiss had stolen it all, leaving her panting. `N You're drunk, Kat. Go sleep it off, we'll forget this ever happened.`
 
-    `K I'm not that drunk. It was just... it's easier if I pretend, maybe? I don't know.` She loosened her grip, letting Natalie out to arm's length. `K Do you want me to stop?` Was that pleading in Kat's voice, fear of rejection? Or perhaps Natalie was projecting and was she the one scared of finding out that Kat was speaking from the bottle rather than heart.
+    `K I'm not that drunk. It was just... it's easier if I pretend, maybe? I don't know.` She loosened her grip, letting Natalie out to arm's length. `K Do you want me to stop?` Was that pleading in Kat's voice, fear of rejection? Or perhaps Natalie was projecting and she was the one scared of finding out that Kat was speaking from the bottle rather than heart.
 
     `K Hey, um, Nat, say something?` Kat's voice was quiet, hesitant.
 
@@ -222,15 +222,17 @@ s.KatCh3 =
     <button onclick="Story.continueWith(event, 'KatCh3Yes')">`N I think both?`</button> <button onclick="Story.continueWith(event, 'KatCh3No')">`N Just having fun.`</button>
 
     <i>Saying you love her will commit you to Kat in Chapter 3, while an hour of fun will lock out her route. No second chances.</i>
+
+    <hr />
   """
 
 s.KatCh3Yes =
   label: 'Chapter 3 - Kat'
   requiredGroup: 'Ch2Routes'
   _class: 'KatRoute'
-  extraDays: -1000
   history:
     KatCh3: true
+    KatCh3No: true
   effects:
     xp:
       Kat: 10
@@ -290,6 +292,7 @@ s.KatCh3Yes =
   """
   apply: ->
     g.chapter = 'Ch3'
+    g.history.Ch3Root = g.day
     Game.showOverlay('<h1>Chapter 3</h1><h3>Kat</h3>', 0, 'chapter overlay')
 
 s.KatCh3No =
@@ -325,7 +328,7 @@ s.KatCh3No =
     No one breathed.
 
   || Sailors/MSad
-    ` Um... sorry, c-carry on.` He stuttered and backed out, slammed the hatch closed.
+    ` Um... sorry, c-carry on.` He stuttered and backed out, slamming the hatch closed.
 
     Natalie burst out laughing, accompanied a moment later by Kat's nervous giggles, then a full laugh from both women. It went on until they were both gasping for breath - and Natalie's first words, `N Yes, let's c-carry on,` set them both off again until their sides hurt.
 

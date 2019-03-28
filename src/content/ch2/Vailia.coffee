@@ -121,9 +121,9 @@ s.NonkeniaDiplomat =
 
     `Guildmaster This feud between Alkenia and Nonkenia is doing no one any good. A war right in our backyard is bad business. While the prince, and thus Vailia, certainly has made a policy of non-interference in foreign politics, as a private individual I have somewhat greater freedom of action.` He smiled at the irony in those last words. The prince did what the Guild asked him to. "Private individual" indeed.
 
-    `Guildmaster Please don't make that face. All I'm going to do is attempting to start peace talks, nothing objectionable. I wish you to carry a pair of diplomats to Nonkenia to arrange things, with all possible haste. You will, of course, be paid.`
+    `Guildmaster Please don't make that face. All I'm attempting to do is start peace talks, nothing objectionable. I wish you to carry a pair of diplomats to Nonkenia to arrange things, with all possible haste. You will, of course, be paid.`
 
-    He didn't need to ask if she'd do it. Any number of reasons would have been sufficient alone - money, loyalty the man who was not far from a father, a desire to do good for the people of both cities, earning favor from the Guild. She just nodded.
+    He didn't need to ask if she'd do it. Any number of reasons would have been sufficient alone - money, loyalty to the man who was not far from a father, a desire to do good for the people of both cities, earning favor from the Guild. She just nodded.
 
     `Guildmaster Excellent. I'll tell Ameliss to meet you at your ship this afternoon.`
   """
@@ -142,7 +142,7 @@ s.TrainCombatNat =
 
     ` I do. I take it you're interested?`
 
-    `I captain a vessel and figured it would behoove me to know a thing or two more about this than I do.` She popped back to her feet and went over to the rack of wooden practice weapons, staying dry under the awning. She settled almost immediately on a narrow wooden blade. It felt ungainly and awkward in her hand.
+    `N I captain a vessel and figured it would behoove me to know a thing or two more about this than I do.` She popped back to her feet and went over to the rack of wooden practice weapons, staying dry under the awning. She settled almost immediately on a narrow wooden blade. It felt ungainly and awkward in her hand.
 
     Torril stood up slowly, unfolding his bulky six feet, shaking his head and sending drops scattering from his hair. ` I have literally never had to tell someone which end of a sword was which before. Here, that's the grip on the other end...`
   """
@@ -161,7 +161,7 @@ s.TrainCombatJames =
 
     ` What sort of help?`
 
-    `J Help with fighting. I thought I was decent, but...` James shook his head. The way Asara had to tossed him around like a rag doll had been unnerving.
+    `J Help with fighting. I thought I was decent, but...` James shook his head. The way Asara had tossed him around like a rag doll had been unnerving.
 
     ` Why?`
 
@@ -203,11 +203,11 @@ s.TrainCombatAsara =
       Asara: 3
   text: -> """
   || places/VailiaDay
-    `K I believe you can help me,` Asara spoke to the mercenary captain without preamble or introduction.
+    `A I believe you can help me,` Asara spoke to the mercenary captain without preamble or introduction.
 
   He stared at her, then slowly shook his head. ` If you are who you look like, then I think you could teach me, miss, rather than the other way around. Natalie didn't mention anyone like you on her crew.`
 
-  `A Not the sword.` She shook her head, grey eyes closing sadly for a moment. `K I have heard that you worked with one of my sisters. I would like to hear about her.`
+  `A Not the sword.` She shook her head, grey eyes closing sadly for a moment. `A I have heard that you worked with one of my sisters. I would like to hear about her.`
 
   Torril nodded. ` I was her captain for six months. Does Antinua know you're looking for her?`
 
@@ -321,7 +321,7 @@ s.AsaraTalkFlames =
 
     `N Oh. Well, thanks.` Disappointing, that she'd only heard Asara because she was <i>intentionally</i> making noise. `N Someday.`
 
-    `N You called that silver fire, what was it, 'the flames'? You can't do it again?` Natalie seized on the chance to ask one of the many questions that had been bothering her since the night when Asara had decided to ` test her power.`
+    `N You called that silver fire, what was it, 'the flames'? You can't do it again?` Natalie seized on the chance to ask one of the many questions that had been bothering her since the night when Asara had decided to "test her power."
 
     `A Please do not be afraid. I would never harm you.`
 
@@ -452,7 +452,7 @@ s.TomenoiHistory2 =
 
     `K Kat. Pleased to meetcha.`
 
-    `Meghan Please, come in,` Lady Meghan swept the door the rest of the way open and stepped aside. Her house was entirely out of place with its surroundings, a tiny little cot nestled among tremendous mansions, only two blocks from the palace itself. The inside was even more out of place - crammed with books, doodads and trinkets, it looked like it hadn't seen the hand of a maid in... well, ever. `Meghan I'm glad you came. I've had about all I can stand of dealing with Janos for the moment. You're not here on his business, are you?` She looked suddenly suspicious.
+    `Meghan Please, come in,` Lady Meghan swept the door the rest of the way open and stepped aside. Her house was entirely out of place with its surroundings, a tiny little cottage nestled among tremendous mansions, only two blocks from the palace itself. The inside was even more out of place - crammed with books, doodads and trinkets, it looked like it hadn't seen the hand of a maid in... well, ever. `Meghan I'm glad you came. I've had about all I can stand of dealing with Janos for the moment. You're not here on his business, are you?` She looked suddenly suspicious.
 
     `N No, not at all. What business is that?`
 
@@ -474,7 +474,7 @@ s.TomenoiHistory2 =
 
     `Meghan Ah, here we are. Rheia Vailia. Yes, she'd just survived the end of an age. That was a bad turning.` Meghan shook her head and replaced the book on her shelf.
 
-    `K Your family was around 1200 years age?` Kat leaned forward curiously, and Natalie had to laugh. The woman wasn't much for books, but this sounded like a <i>story</i>, and she loved stories.
+    `K Your family was around 1200 years ago?` Kat leaned forward curiously, and Natalie had to laugh. The woman wasn't much for books, but this sounded like a <i>story</i>, and she loved stories.
 
     Meghan laughed. `Meghan That stone's more like 3000 years old. It wasn't <i>this</i> era she's talking about. And my family is older than that stone by far.`
 
@@ -488,7 +488,7 @@ s.TomenoiHistory2 =
 
     `N Heh, sorry about that. Drink your tea Kat, and let's not antagonize the world-shakingly powerful wizard.`
 
-    `Meghan Quite alright. So, tell me about Kantis? I've always wanted to travel.` She steered the conversation in a lighter direction, and Natalie accepted the change, despite Kat's occasional sullen poke in the ribs and whisper that she wanted to know more. A pleasant afternoon.
+    `Meghan Quite alright. So, tell me about Kantis? I've always wanted to travel.` She steered the conversation in a different direction, and Natalie accepted the change, despite Kat's occasional sullen poke in the ribs and whisper that she wanted to know more. A pleasant afternoon.
   """
 
 s.MeghanSuitors =
@@ -582,7 +582,7 @@ s.MeghanSuitors2 =
   || places/VailiaNight
     `N I can't believe I got away with that,` Natalie burst into nervous giggles as soon as the door to Meghan's tiny little house closed behind them.
 
-    `Meghan It was magnificent. I wish I could do that,` Meghan's gave was admiring, and Natalie was suddenly bashful.
+    `Meghan It was magnificent. I wish I could do that,` Meghan's gaze was admiring, and Natalie was suddenly bashful.
 
     `N You're the most powerful wizard in the world, you could totally do that. Also one of the most politically influential people in Vailia, and smart, and...`
 
@@ -593,7 +593,7 @@ s.MeghanSuitors2 =
   || Meghan/Serious
     That got Natalie a sour look. `Meghan I don't like girls either, so don't think...`
 
-    Nat held up her hands. `N Sorry, sorry, I didn't mean it like that. Promise I'm not trying and get in your pants, I just wanted to make all those expectant looks sod off, and it seemed like you did too, so...` she trailed off hopefully.
+    Nat held up her hands. `N Sorry, sorry, I didn't mean it like that. Promise I'm not trying to get in your pants, I just wanted to make all those expectant looks sod off, and it seemed like you did too, so...` she trailed off, hopeful she hadn't soured the evening's tone.
 
     Meghan nodded, accepting the apology. `Meghan Let's talk about something else. Um... have you read Treatise on Historical Storm Patterns?`
 
@@ -641,7 +641,7 @@ s.JamesCh3 =
 
     `N Hm, wasn't he the tall thin fellow, runs a sawmill with his husband?`
 
-    `J They're divorced now, but Christoph still works at the mill. They make better business partners than they did a couple.` A snort accompanied that last statement, and Natalie siezed that crack in his impasivity. She leaned forward, resting her chin in her hands. Bland details were fine - he was at least speaking with her, rather than pushing her out, brooding in silence.
+    `J They're divorced now, but Christoph still works at the mill. They make better business partners than they did a couple.` A snort accompanied that last statement, and Natalie siezed that crack in his impassivity. She leaned forward, resting her chin in her hands. Bland details were fine - he was at least speaking with her, rather than pushing her out, brooding in silence.
 
     `N You're talking now, that's good. Keep doing that. So when are you going to go speak with your mother?`
 
@@ -661,15 +661,17 @@ s.JamesCh3 =
     She reached over and gave his shoulder a squeeze. <button onclick="Story.continueWith(event, 'JamesCh3Yes')">`N I'll come with you.`</button> <button onclick="Story.continueWith(event, 'JamesCh3No')">`N Take as much time as you need.`</button>
 
     <i>Going with him will commit you to James in Chapter 3, while sending him alone will lock out his route. No second chances.</i>
+
+    <hr />
   """
 
 s.JamesCh3Yes =
   label: 'Chapter 3 - James'
   requiredGroup: 'Ch2Routes'
   _class: 'JamesRoute'
-  extraDays: -1000 # Hiding it from appearing normally
   history:
     JamesCh3: true
+    JamesCh3No: true
   effects:
     xp:
       James: 10
@@ -739,6 +741,7 @@ s.JamesCh3Yes =
   '''
   apply: ->
     g.chapter = 'Ch3'
+    g.history.Ch3Root = g.day
     Game.showOverlay('<h1>Chapter 3</h1><h3>James</h3>', 0, 'chapter overlay')
 
 s.JamesCh3No =

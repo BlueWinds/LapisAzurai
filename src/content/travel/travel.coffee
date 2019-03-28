@@ -70,10 +70,10 @@ s.Clouds =
     ` Looks like land to me.` ` Can't be, shouldn't be anything but open water out here.` ` Too dark for a cloud, and the shore's clear.` ` Hm, maybee...` Sailors discussed among themselves, while Kat ran to the helm.
 
   || K/Happy
-    `K Cap'n, permission to fetch your spyglass so you can set these dufus' aright?`
-    `N Granted.`
+    `K Cap'n, permission to fetch your spyglass so you can set these dufi aright?`
+    `N That's not the plural... ah, whatever. Granted.`
 
-    It had looked like land to Natalie as well as the watchman, despite the lack of charted islands in the area, but the spyglass proved Kat right - nothing more than an unusual set of clouds. Natalie strained her senses watching it. Yes, the distant darkness smelled faintly of magic, even from here. The lapis steered well clear.
+    It had looked like land to Natalie as well as the watchman, despite the lack of charted islands in the area, but the spyglass proved Kat right - nothing more than an unusual set of clouds. Natalie strained her senses watching it. Yes, the distant darkness smelled faintly of magic, even from here. The Lapis steered well clear.
   """
 
 s.DistantShoals =
@@ -105,9 +105,9 @@ s.FogSpirit =
       Natalie: 2
   text: -> """
   || travel/DeckFog
-    A grey fog descended over the ship in the night and, by the time anyone thought to wake Natalie, the Lapis was becalmed in dim water. The lightlessness dragged at spirits and numbing thoughts. Natalie looked around at the crew - lethargic, barely staying awake. It was unnatural the way they dragged at their tasks, when every nerve in her screamed that something was wrong. Only Asara seemed alert, tense and silent. Nothing unusual there.
+    A grey fog descended over the ship in the night and, by the time anyone thought to wake Natalie, the Lapis was becalmed in dim water. The lightlessness dragged at spirits and numbed thoughts. Natalie looked around at the crew - lethargic, barely staying awake. It was unnatural the way they dragged at their tasks, when every nerve in her screamed that something was wrong. Only Asara seemed alert, tense and silent. Nothing unusual there.
 
-    Drooping sails and silent waves suggested that the Lapis wasn't going anywhere soon. Haranging enthusiasm into them seemed useless. There was magic at work.
+    Drooping sails and silent waves suggested that the Lapis wasn't going anywhere soon. Haranguing enthusiasm into them seemed useless. There was magic at work.
 
     `N Come out, come out!` Her voice echoed, as though the world itself were small. No response. Time to do things the hard way then, if whatever was causing this didn't want to talk. She dug her mind down, bracing against the ship, and <i>pushed</i>. The mist obeyed only reluctantly, begrudgingly stirring and swirling around them. While holding the ship together in a storm felt like holding a tiger by the tail, this felt like pulling on a stubborn mule. It didn't want to obey.
 
@@ -124,7 +124,7 @@ s.FogSpirit =
 
     Immediately the sense of presence disappeared, the fog began to dissolve, and the people around her stirred. She sunk to her knees, still clutching her head.
 
-    James staggered woozily to her side. `J What happened? I heard some wind, and...</q> he raised a hand to touch her shoulder, lowered it again.
+    James staggered woozily to her side. `J What happened? I heard some wind, and...` he raised a hand to touch her shoulder, but lowered it again.
 
     `N I don't know. A spirit. A ghost. A god. I think... I think it was scared of me?` She shook her head helplessly. `N It's gone.`
   """
@@ -260,7 +260,7 @@ s.ShipPracticeReading =
       Natalie: 2
   text: -> """
   || N/Normal
-    While the world was a vast place, and Natalie had seen barely a fraction of it, the was already one of the most well-traveled and well-educated individuals in Vailia. She could read and write, which marked her as more educated than 75% of Vailians, much less smaller and less developed cities like Alkenia or Nonkenia.
+    While the world was a vast place, and Natalie had seen barely a fraction of it, she was already one of the most well-traveled and well-educated individuals in Vailia. She could read and write, which marked her as more educated than 75% of Vailians, much less smaller and less developed cities like Alkenia or Nonkenia.
 
     A bit of teaching was a fun way to pass the time, for those few among the crew who were interested. Natalie enjoyed discussing history, mathematics, natural history and all the other subjects she'd had the privilage to spend time learning while others were busy struggling to find enough food to eat.
   """
@@ -293,7 +293,7 @@ s.PiratesFlee =
     Groaning against its weight, the Azurai bobbed precipitously in the wind, full sails heeling it to an uncomfortable angle before the rudder caught hold and swung the prow around. Then, like a bow sprung from an arrow, the ship surged forward. Perpendicular to the wind they cut away.
 
   ||
-    The Azurai's crew cheered and whooped as the other ship crossed their wake, still sailing with the wind and unable to arrest its momentum in time to pursue. The pirates - for that's what they clearly were, from up close - returned the jeers and shouts, waving swords and axes, impotent as their own vessel carried them further away. Asara had disappeared somewhere belowe decks.
+    The Azurai's crew cheered and whooped as the other ship crossed their wake, still sailing with the wind and unable to arrest its momentum in time to pursue. The pirates - for that's what they clearly were, from up close - returned the jeers and shouts, waving swords and axes, impotent as their own vessel carried them further away. Asara had disappeared somewhere below decks.
 
     Rather than joining in her crew's cheers, Natalie let out a breath she'd been holding. It'd been close.
   """
@@ -337,7 +337,7 @@ s.AbandonedShipSearch =
 
     Natalie led the expedition, guiding from the prow of the Azurai's longboat as they rowed in closer than she wished to risk the larger vessel. It was with a solemn air that they searched the wreck.
 
-    While they didn't find any cargo beyond thoroughly water-ruined provisions, Kat did discover a stash of well-preserved canvas, and one of the crew stumbled upon a still-sealed barrel of pitch. Not the most glamorous of treasure, but combined with a some usable boards pried up from the deck, nothing to scoff at.
+    While they didn't find any cargo beyond thoroughly water-ruined provisions, Kat did discover a stash of well-preserved canvas, and one of the crew stumbled upon a still-sealed barrel of pitch. Not the most glamorous of treasure, but combined with some usable boards pried up from the deck, nothing to scoff at.
   """
 
 

@@ -57,7 +57,7 @@ s.VisitInn =
   || places/Tavern
     Natalie was surprised, walking in, to see a little girl tending the bar. Perhaps twelve, she smiled and greeted Nat with a cheerful wave, not pausing in her current attempt to mop the floor into some state of cleanliness. Rather than spilled beer, though, her main enemy at the moment seemed to be leaves, seeds, and other detritus from the forest. It wasn't hard to understand why – other than the Azurai, there are no other ships docked in the bay.
 
-    ` What can I gettcha?
+    ` What can I gettcha?`
 
     `N Nothing right now, thank you. Where are your parents?`
 
@@ -161,7 +161,7 @@ s.AsaraAwakens =
 
     `A What do you want from me?`
 
-    `N I want-` the chain strangled her brielf, and she coughed when it was loosened again. Natalie continued more quietly. `N I want to help. We rescued you from the wreckage.`
+    `N I want-` the chain strangled her briefly, and she coughed when it was loosened again. Natalie continued more quietly. `N I want to help. We rescued you from the wreckage.`
 
   || A/Sad
     That seemed to satisfy her. The chain relaxed around Natalie's neck, then  the girl stepped back, all sense of menace fading. Natalie stood and turned to face her. The survivor huddled back against the bed, arms crossed over her breasts and looking quite thoroughly miserable. She walked with small shuffling steps, limited by the chain between her ankles.

@@ -20,9 +20,9 @@ s.NonkeniaDiplomatSailing =
 
     `N He is welcome to help himself to the galley, but yes, there was a bit of a scuffle when he took a piece of bread off one of the men's plates.` Natalie shrugged and tried not to smile. `N I made the two of them clean the food off the ceiling afterwards - it was only fair, since the sailor was the one who threw the soup - but can't fault him for sticking up for himself.`
 
-    Ameliss pursed her lips in annoyance, as though having trouble believing that Natalie would actually admit a food fight occurred on her ship. ` That is unfortunate, and I shall have to speak with him about him manners.`
+    Ameliss pursed her lips in annoyance, as though having trouble believing that Natalie would actually admit a food fight occurred on her ship. ` That is unfortunate, and I shall have to speak with him about his manners.`
 
-    It sounded like an apology, but couldn't help but feel like the Ameliss was more annoyed at her for refusing to fault the sailor than anything. She tried not to sigh. This was going to be a long voyage.
+    It sounded like an apology, but couldn't help but feel like Ameliss was more annoyed at her for refusing to fault the sailor than anything. She tried not to sigh. This was going to be a long voyage.
 """
 
 s.GatherWood =
@@ -131,7 +131,7 @@ s.JamesUpsetMagic2 =
   cost: 0
   text: ->"""
   || travel/CabinNight
-    A hesitant knock. That could only mean one thing. James never hesitated to address business, no matter how bad the news. He must finally want to discuss whatever has been bothering him. Natalie hesitated a moment, then, `N Enter.`
+    A hesitant knock. That could only mean one thing. James never hesitated to address business, no matter how bad the news. He must finally want to discuss whatever has been bothering him. Natalie took a moment to compose herself before opening the door. `N Yous?`
 
     `J Can I come in?`
 

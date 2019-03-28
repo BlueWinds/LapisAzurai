@@ -32,7 +32,6 @@ s.AsaraSleepTogether =
 
 s.ElakimAudience =
   label: "House Appolon's Offer"
-  cost: 2
   history:
     AmuletsEverywhere: true
   effects:
@@ -69,25 +68,25 @@ s.ElakimAudience =
 
     `N Since you've been so gracious a host so far, I wondered if you would indulge my curiosity in a small matter.`
 
-    Lord Appolon smiled at her words. Not her usual tone, but given his emphasis on Kantian politeness versus Vailian directness last time, it cost her nothing to play the game in a way hi might appreciate. `Elakim Indeed I might. What has piqued your interest?`
+    Lord Appolon smiled at her words. Not her usual tone, but given his emphasis on Kantian politeness versus Vailian directness last time, it cost her nothing to play the game in a way he might appreciate. `Elakim Indeed I might. What has piqued your interest?`
 
-    `N Amulets. I gather they mark one as a representative of one of the noble houses, but beyond thet I'm unsure their other functions. And they do have other functions, yes?` She arched an eyebrow, a deft expression tha whose precision would have done Janos proud.
+    `N Amulets. I gather they mark one as a representative of one of the noble houses, but beyond thet I'm unsure their other functions.`
 
   || Elakim/Normal
     `Elakm I'm surprised you didn't ask one of the bearers.`
 
-    She had, and learned nothing for her trouble. `N It seemed rude to go anywhere but the source.` Perhaps he'd heard of the questions. How much interest did these lords put in her ordinary actions? In Vailia she was no one - here, though... she wasn't sure.
+    She had, and learned nothing for her trouble. `N It seemed rude to go anywhere but the source.` She arched an eyebrow, a deft expression tha whose precision would have done Janos proud. Perhaps he'd heard of the questions. How much interest did these lords put in her ordinary actions? In Vailia she was no one - here, though... she wasn't sure.
 
-    He smiled appreciatively. A good answer, it seemed. `Elakim Inteeded. I had wished to broach the subject with you eventually, so this is as good a time as any. The Universal Trading Concern would welcome your participation. The amulets in question are badges of membership.
+    He smiled appreciatively. A good answer, it seemed. `Elakim Indeed. I had wished to broach the subject with you eventually, so this is as good a time as any. The Universal Trading Concern would welcome your participation. The amulets in question are badges of membership.
 
     The UTC. Kantian equivelent to the Guild, the name brought up memories. Wend, crazy as a fox but mind to match Janos underneath; the first Guild Child, closest thing Natalie had to a mother. She'd been mother to all those the Guild had adopted after her. Wend's partner, a member of the UTC. Their scrabble to pay off a debt, their sudden departure to seek fortune abroad. Natalie had been only eight. Were they still in Kantis somewhere? She should seek them out.
 
     `Elakim I see you're familiar. May I ask where the frown comes from?`
 
   ||
-    `N Memories, unrelated. I captain for the Guild, though. I mean no insult to say that I've no intention of changing alligence.`
+    `N Memories, unrelated. I captain for the Guild, though. I hope you won't take it amiss that I've no intention of changing alligence.`
 
-    `Elakim Of course not, nor I any interest in asking. Appologies if I implied anything other than integrity on your part. The offer is for a lord's seat, much the same as I hold. The UTC is as much a set-spell as it is a trading company, you see. We lords supply magic and direction, and reap the profits. Not being Kantian, you would of course require a sponsor.`
+    `Elakim Of course not, nor have I any interest in asking. The offer is for a lord's seat, much the same as I hold. The UTC is as much a set-spell as it is a trading company. We lords supply magic and direction, and reap the profits. Not being Kantian, you would of course require a sponsor.`
 
     `N You, naturally.`
 
@@ -101,22 +100,51 @@ s.ElakimAudience =
 
     `Elakim Unfurl your magic to its full extent, if you would?`
 
-    Natalie hestitated. Did she really wish to show Elakim exactly how powerful she was? He did seem friendly, and now that she knew his interest, perhaps she should trust him a little. She didn't instead she pushed outward with only part of her strength, enough to give her a headache, a dull throb tingling through her fingers, but not nearly the effort she expended when opening a passage through a storm for her ship to slip through.
+    Natalie hestitated. Did she really wish to show Elakim exactly how powerful she was? He did seem friendly, and now that she knew his interest, perhaps she should trust him a little. She didn't. Instead she pushed outward with only part of her strength, enough to give her a headache, a dull throb tingling through her fingers, but not nearly the effort she expended when opening a passage through a storm for her ship to slip through.
 
-    `Elakim Well. If we assume that's half of what you're actually capable of,` Elakim simeld as Natalie cursed herself. He was a far better mage than she, of course he would know. `Elakim It puts you almost on par with House Nemasi. She's the weakest of the six Great Houses. You'd likely be entitled to, say, a 7 percent share. Profits are paid out twice per year, equating to roughly...`
+    `Elakim Well. If we assume that's half of what you're actually capable of,` Elakim smiled as Natalie cursed herself. He was a far better mage than she, of course he would know. `Elakim It puts you almost on par with House Nemasi. She's the weakest of the six Great Houses. You'd likely be entitled to, say, a 7 percent share. Dividends are paid out twice per year, equating to roughly...`
 
   || N/Embarrassed
     Her mind blanked as he mentioned an astronomical sum. Natalie had seen the Guild master ledgers, gone over them with Janus when she was a child working her way through lessons in accounting. The UTC was as wealthy as the Guild. Did Janus know how extensive it was? Of course he had to. She took a deep breath, tried to calm her thoughts.
 
-    `N That is quite a lot to consider, the offer is very generous. Do you have a sample contract I could read?`
+    `N That is quite a lot to consider, the offer is very generous. Is the contract fairly standardized?`
 
-    `Elakim Of course. This technically requires a full meeting of the lords to make an offer of this magnitude, but,` he chuckled at something, `Elakim now that there are only six great houses, I'm reasonably certain they will see my point of view.`
+    `Elakim It is not, but I can show you parts of my own House's agreement with the UTC. All details subject to negatiation. This technically requires a full meeting of the lords to make an offer of this magnitude, but,` he chuckled at something, `Elakim now that there are only six great houses, I'm reasonably certain they will see my point of view.`
 
-    Riches handed to her on a silver platter, too good to be true. Where was the catch? A tenth of her magic? She couldn't use the full extent without hurting herself, she wouldn't miss it.  Handing Elakim more voting rights on the council? She didn't understand Kantian politics well enough to know the consequences. She'd need to understand before she made a move.
+    Riches handed to her on a silver platter, too good to be true. Where was the catch? A tenth of her magic? She couldn't use the full extent without hurting herself, she wouldn't miss it.  Handing Elakim more voting rights on the council? She didn't understand Kantian politics well enough to know the consequences. She'd need that knowledge before she agreed to anything.
 
-    `Elakim Please think it over. I'm afraid I'm expecting company soon - perhaps we can continue the discussion another time? I'll have a sample UTC contract delivered to your ship.` Natalie doubted there was any company inbound, but she was not about to decline the polite fiction that gave her time to think things through.
+    `Elakim Please think it over. I'm afraid I'm expecting company soon - perhaps we can continue the discussion another time? I'll have a copy of portions of my own contract delivered to your ship.` Natalie doubted there was any company inbound, but she was not about to decline the polite fiction that gave her time to think things through.
 
     `N Yes, of course. Thank you for taking time to speak with me.` Natalie nodded asd stood as he did. A few more polite words and she made her escape.
+  """
+
+s.NotBuringCity =
+  label: 'Relief'
+  history:
+    AsarasDuel: true
+  effects:
+    xp:
+      Natalie: 2
+      Asara: 2
+  text: ->"""
+  || travel/CabinDay
+    `N I admit, I'm actually kind of relieved we're headed to Naxins,` Natalie murmured, setting aside the brush. Asara had short enough hair that it wasn't necessary, but she enjoyed it and Natalie wasn't abount to argue with anything that could make the priestess sigh happily at her feet.
+
+    `A Why?`
+
+    `N Ever since your duel I've had this horrible image of Antinue just... burning down Kantis. The whole city. She could, couldn't she.` Natalie had felt the mercenary's presence ever since she came on board, a sensation on the back of her neck. Through walls, wakeful or asleep, her power was a palpable presence, so much stronger than Asara, as though there were a fire just a little too warm making her hairsstand on end.
+
+    `A ...Yes. Maybe. I'm not sure even she could stand against all the Mage Lords at once. One or two certainly, but not all seven. It's why they send soldiers and amulets to invade our land, rather than coming themselves.`
+
+    `N So what are the two of you going to do?`
+
+    `A North, into the desert. Four.`
+
+    `N Four?`
+
+    `A Though it breaks all tradition, Antinua will bring along Hathawa. If tradition is already broken...` She craned her neck to look up over her shoulder at Natalie, then looked away agin quickly.
+
+    She squeezed Asara's shoulder and kissed the top of her head. `N Of course I'll come.`
   """
 
 Place.Kantis.stories.Ch3 = Object.keys(s)

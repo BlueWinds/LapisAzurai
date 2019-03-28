@@ -1,51 +1,123 @@
 s = {}
 
+s.Ch3Root =
+  label: 'Non-route Ch3 Root'
+  history:
+    AsaraCh3Yes: true
+    JamesCh3Yes: true
+    KatCh3Yes: true
+  extraDays: ->
+    max = Math.max(Story.expirationDate('AsaraCh3Yes'), Story.expirationDate('KatCh3Yes'), Story.expirationDate('JamesCh3Yes'))
+
+    # g isn't defined in EventGraph.html or other strange places
+    unless g?
+      return 0
+
+    if g.history.AsaraCh3Yes
+      return Story.expirationDate('AsaraCh3Yes') - max
+    else if g.history.KatCh3Yes
+      return Story.expirationDate('KatCh3Yes') - max
+    else
+      return Story.expirationDate('JamesCh3Yes') - max
+  text: -> '''
+  ||
+    Placeholder event to serve as 'root' for non-route ch3 events. If you're seeing this in-game, it's a bug.
+  '''
+
+s.NonkeniaDiplomatConclusion =
+  label: 'Diplomatic Delivery - Conclusion'
+  cost: 0
+  history:
+    Ch3Root: true
+  effects:
+    xp:
+      Natalie: 3
+  text: -> '''
+  || places/GuildOffice
+    ` Hey, did you hear?`
+
+    Natalie abandoned her purposeful stride across the Guild hall to go speak with the boy at the reception desk. `N Have I heard what?`
+
+    ` Nonkenians killed out envoy's bodyguard, stole all her stuff and sent her back with a really rude note.`
+
+    Natalie sighed. It was about what she'd expected, really. What in the world had Janos been thinking?
+
+    ` I hear the Alkenians were really fed up with her handling of the 'peace talks' and sent a separate rude letter.` He laughed at her eye roll and frustrated sigh. She didn't blame them, if her interactions with Ameliss - the envoy - had been any indication. ` I know, right?`
+
+    `N Did you know I nearly made her walk the plank once?`
+
+    He leaned in and grinned, eager for a good story.
+  '''
+
+s.ExploreKantis =
+  label: 'Deeper into Kantian Waters'
+  history:
+    Ch3Root: true
+  effects:
+    xp:
+      Natalie: 3
+  text: ->"""
+  || places/GuildOffice
+    `Guildmaster We have before us an amazing opportunity,` Janos had come to visit Natalie, rather than the other way around - a first, in all their long years of acquaintance. She was used to seeing him in the highest circles of the city - the Guild headquarters, parties for the high-and-mighty, paying visit to the other movers and shakers of a city-turned-naval-power. He seemed out of place, sitting in the chair in her cramped cabain aboard a ship only just returned from sea and still smelling of too long occupation by too many people.
+
+    `N You want me to open up trade with more of the Kantian sea.`
+
+    `Guildmaster Sharp as always. It was a stroke of luck that opened sea routes to the east thirty years ago, a stranger washed up on our shore. Wend opened up the opportunity, and I seized it. Your position is similar. Your unique acquaintance with Asara, your contacts with the UTC... it's an opportunity to expand our reach again.`
+
+    The economics were clear. Vailian ships were the only ones fast and sturdy enough to brave the blue-water passage between Vailia and the eastern continent, turning Tomenoi from a barely inhabited island into a thriving waypoint of the rapidly expanding trade between West and East. A trade route controlled exclusively by Vailia. By the Guild. Vailia had been changed as well. Ideal placement, the secrets of superior shipbuilding and a twist of fate had turned a sleepy liesure-city into the center of a growing commercial empire.
+  || N/Upset
+    `N You want me to steal a rutter for the Kantian sea.` A statement, not a question. Kantis had kept its dominant position over the densly populated east by dint of the fact that Vailian captains had no maps, no sense for the currents, winds, weather and landmarks. Perhaps in another couple decades they could develop their own, but until then, Kantis' charts were a secret worth killing for, not for sale for any price.
+
+    The Guildmaster nodded solemly. `Guildmaster Acquire, however you can. Wend was a very wealthy woman when she left our shores with her partner.`
+
+    `N I'll see what I can do.`
+  """
+
 s.AboutAntinua =
   label: "Seeking Meghan's Help"
-  cost: 0
   history:
     AsaraToVisitSister: true
   effects:
     xp:
       Natalie: 3
-  text: ->"""
+  text: -> """
   || N/Normal
     `N I have a favor to ask.`
 
-    Lady Meghan Vailia nodded, gestured Natalie to come in. Her house was even more filled with books than last time Natalie had visited, and Meghan had to move a pile of them off the couch to make room for her guest to sit. ` Ask.`
+    Lady Meghan Vailia nodded, gestured Natalie to come in. Her house was even more filled with books than last time Natalie had visited, and Meghan had to move a pile of them off the couch to make room for her guest to sit. `Meghan Ask.`
 
     `N I'd like to know more about Antinua Vanyavanadar and her sisters.` She sat carefully, and steadied some books on the other end of the couch so the motion didn't disturb them.
 
-    ` What makes you think I know much about her than you? The worked for the Guild for years, after all.`
+    `Meghan What makes you think I know more about her than you? She worked for the Guild for years, after all.`
 
     `N You're smart, you're powerful and you're protective of the city. Of course you keep tabs on anyone who can level buildings with her bare hands.`
 
-    ` Is that how powerful you think Antinua is.` One corner of Meghan's mouth twitched downward.
+    `Meghan Is that how powerful you think Antinua is.` One corner of Meghan's mouth twitched downward.
 
     `N Well, I've felt Asara's magic from a distance as she shattered a ship, and she says Antinua's stronger, so...` She trailed off in the face of Meghan's frown.
 
   || Meghan/Serious
-    ` You do need to know more. Very well then.` Meghan sat in her own chair, well used, overstuffed, and free of books. Her brow burrowed for a moment, then relaxed as she nodded to herself, perhaps deciding how to explain things. ` Mages, you and I, we inherit the full measure of our parent's power when we're born. It doesn't become active right away, but it's always there, a steady hum of magic that neither grows nor shrinks. You know all this, yes?`
+    `Meghan You do need to know more. Very well then.` Meghan sat in her own chair, well used, overstuffed, and free of books. Her brow burrowed for a moment, then relaxed as she nodded to herself, perhaps deciding how to explain things. `Meghan Mages, you and I, we inherit the full measure of our parent's power when we're born. It doesn't become active right away, but it's always there, a steady hum of magic that neither grows nor shrinks. You know all this, yes?`
 
     Natalie nodded. Janos had told her something similar when she gained her power - or when it became active, rather, as Meghan was now explaining - but it was nearly impossible to find sources of information on the subject, and she was eager to learn more.
 
-    ` Antinua and Asara though, are not mages. They're closer to... champions, I suppose. They inherit shards of divine power. Their connection begins weak, but grows with time. The one on your ship? I've felt her becoming more powerful each time you visit, but slowly. Comparing human and divine magic isn't really fair in either direction, but if I had to, I'd say she's unlikely to ever surpass you.`
+    `Meghan Antinua and Asara though, are not mages. They're closer to... champions, I suppose. They inherit shards of divine power. Their connection begins weak, but grows with time. The one on your ship? I've felt her becoming more powerful each time you visit, but slowly. Comparing human and divine magic isn't really fair in either direction, but if I had to, I'd say she's unlikely to ever surpass you.`
 
     Natalie cocked her head, confused by the assertion. `N I'm pretty sure Asara could twist me into a pretzel with one hand.`
 
   ||
-    ` Apples to oranges, as I said. Their gifts flow in a more martial direction, and it would probably kill you to draw on your full strength. Something's broken with your magic, I'm not entirely sure what. Regardless,` Meghan shrugged, ` not my point. My point is that you and Asara are a good match. Antinua operates more at my level.` A long pause as she let that sink in. ` I don't know where she comes from. I don't know why she's here. I do know that we have an understanding, and that I will be most annoyed if you start a fight you can't finish inside my city.`
+    `Meghan Apples to oranges, as I said. Their gifts flow in a more martial direction, and it would probably kill you to draw on your full strength. Something's broken with your magic, I'm not entirely sure what. Regardless,` Meghan shrugged, `Meghan not my point. My point is that you and Asara are a good match. Antinua operates more at my level.` A long pause as she let that sink in. `Meghan I don't know where she comes from. I don't know why she's here. I do know that we have an understanding, and that I will be most annoyed if you start a fight you can't finish inside my city.`
 
     Natalie nodded slowly, goosebumps running up her arms. `N Thank you for the warning. I'll be careful.`
 
-    Meghan ran a hand through her hair, sighed. ` I never wanted this sort of responsibliity. But I have it, so I'm warning you now. I like you, and it'd be a shame to attend your funeral. That's what'll happen if you upset Antinua, because I won't protect you and Janus can't. Now go, I have things to do.`
+    Meghan ran a hand through her hair, sighed. `Meghan I never wanted this sort of responsibliity. But I have it, so I'm warning you now. I like you, and it'd be a shame to attend your funeral. That's what'll happen if you upset Antinua, because I won't protect you and Janus can't. Now go, I have things to do.`
 
     Natalie thanked her again and took her leave. On her way back to the Lapis she clasped her hands behind her back to keep them from shaking.
   """
 
 s.AsarasChallenge =
   label: "Asara's Challenge"
-  cost: 0
+  cost: 60
   history:
     AboutAntinua: true
   effects:
@@ -64,24 +136,24 @@ s.AsarasChallenge =
 
     ` You have indeed. I approve. Why are you here?`
 
-    Asara admired the way Antinua slid in the chair. Poised. Confident. Aware of her own power, but not afraid of it. Dangerous. Asara was dangerous too, of course, but there were matters of scale, and of will. She relaxed her shoulders, relaxed her body. This too was a battle, and being tense served her no better here than it did in a physical confrontation. The was here. She was going to do this. `A I'm here to bring you home.`
+    Asara admired the way Antinua slid into the chair. Poised. Confident. Aware of her own power, but not afraid of it. Dangerous. Asara was dangerous too, of course, but there were matters of scale, and of will. She relaxed her shoulders, relaxed her body. This too was a battle, and being tense served her no better here than it did in a physical confrontation. She was here. She was going to do this. `A I'm here to bring you home.`
 
     ` This is my home.`
 
     `A You have a duty as protector of our people...`
 
-    ` I gave that duty to Alanda.` Antinua cut in, firm but not arngy, as though duty were something that could be laid aside like a debt that had been discharged.
+    ` I gave that duty to Alanda.` Antinua cut in, firm but not angry, as though duty were something that could be laid aside like a debt that had been discharged.
 
   ||
     `A Alanda's dead.`
 
     ` Amaria.`
 
-    `A Amaria's dead. Anema's dead.` Asara took a shuddering breath. `A Aselia is leading our clan north, beyond the crater. Arada holds the southern front with volunteers from the north, if she hasn't fallen yet. I'm here to find you. We are the only four.`
+    `A Amaria's dead. Anema's dead.` Asara took a shuddering breath. `A Aselia is leading our clan north, beyond the crater. Arada holds the southern front with volunteers from the northern clans, if she hasn't fallen yet. I'm here to find you. We are the only four.`
 
     Antinua sat impassivly under the verbal onslaught, revealing nothing. ` There should be seven.`
 
-    `A There should be, but we <em>ran out of candidates.</em> Soon we'll have no choice but to call for a war. It's better than the line being broken.` Chest heaving, Asara wiped water out of her eyes with a sleeve. So much for her resolve. So much for being relaxed.
+    `A There should be, but we <em>ran out of candidates.</em> Soon we'll have no choice but to call for a jihad. It's better than the line being broken.` Chest heaving, Asara wiped water out of her eyes with a sleeve. So much for her resolve. So much for being relaxed.
 
     ` You can't do that. Do you know what happens when we go to war?` Antinua's eyes widened briefly, a moment of horror before she clamped back down, expressing returning to neutrality.
 
@@ -92,7 +164,7 @@ s.AsarasChallenge =
   || A/Scared
     `A We need you,` came out a whisper. Her throat was too choked up for more.
 
-    ` You want horror, Asara? How many have you killed? Tens, hundreds, have died by my hand. I killed and I killed and I killed for the goddess, and not a thing changed. It's not worth it. Go north. Let them have their patch of sand.` ANtinua had risen as she spoke, pacing quickly back and forth in front of the priestess. Her face was still frozen in severity, but now Asara could hear the pain behind the mask, pain given and pain received. ` I've built a new life here. I won't go back.`
+    ` You want horror, Asara? How many have you killed? A few? Dozens? Hundreds have died by my hand. I killed and I killed and I killed for the goddess, and not a thing changed. It's not worth it. Go north. Let them have their patch of sand.` Antinua had risen as she spoke, pacing quickly back and forth in front of the priestess. Her face was still frozen in severity, but now Asara could hear the pain behind the mask, pain given and pain received. ` I've built a new life here. I won't go back.`
 
     Asara forced herself to breathe again, forced her hand up, cevered with dancing silver flames, forced her mouth to form the words. `A Then I challenge you. You may have given up the title, but you still weild the Goddess' power. You cannot refuse.`
 
@@ -112,15 +184,15 @@ s.AsarasChallenge2 =
   || A/Angry
     `N You challenged her to a duel.`
 
-    `A No! Asara flinched at the vehemence of her own denial.`A It's a test, a... a comparison powers before  the judgment of the goddess.`
+    `A No! Asara flinched at the vehemence of her own denial. `A It's a test, a... a comparison powers before  the judgment of the Goddess.`
 
     `N That sounds like almost exactly the sort of thing Lady Meghan asked me not to do, starting a fight I can't finish.`
 
-    Asara held her chin up. `A No one in the world can deny me this right. It's what I came here to do, and I've done it.`
+    Asara held her chin up. `A No one can deny me this right. It's what I came here to do, and I've done it.`
 
     Natalie sighed and laid a hand on Asara's shoulder. `N No, I don't mean it like that. I'm just... worried, I guess.` She touched Asara's chin with her other hand, but Asara turned her head away, denying the sought after reassurance that this "test" was nothing to worry about. `N Tell me about it.`
 
-    The priestess hesitated a moment before she answered. `A We hold hands and invoke the fire. The goddess judges, and we are burned by the rightness of the other's cause.`
+    The priestess hesitated a moment before she answered. `A We hold hands and invoke the fire. The Goddess judges, and we are burned by the rightness of the other's cause.`
 
     `N She's going to kill you, isn't she.` Natalie hugged Asara's head against her chest, stroked the fine blonde hair.
 
@@ -179,10 +251,10 @@ s.AsarasDuel =
   """
 
 s.AboutUTC =
-  label: 'Moonlit Confrontation'
+  label: "Seeking Meghan's Help"
   blocking: true
   history:
-    AsarasChallenge2: true
+    ElakimAudience: true
   effects:
     xp:
       Natalie: 2

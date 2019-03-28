@@ -30,7 +30,7 @@ Person.Kat =
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Devilish:
-      description: '25% change to discard an expired job when completing a different delivery'
+      description: '25% chance to discard an expired job when completing a different delivery'
       requiresAnd: ['StreetRat']
       doubledBy: 'Death'
     Deckhand:

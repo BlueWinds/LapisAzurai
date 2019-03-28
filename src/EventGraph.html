@@ -120,25 +120,31 @@
     d3.selectAll("svg > g").remove();
 
     window.path = svg.append("g").selectAll("path")
-        .data(force.links())
-      .enter().append("path")
+      .data(force.links())
+      .enter()
+      .append("path")
         .attr("class", "link")
         .attr('stroke', function(l) { return getLinkColor(getLinkGroup(l)); })
         .attr('stroke-dasharray', function(l) { return Story[l.target.name].blocking ? '7,3' : null; })
         .attr("marker-end", function(l) { return 'url(#' + getLinkGroup(l) + ')'; });
 
     window.circle = svg.append("g").selectAll("circle")
-        .data(force.nodes())
-      .enter().append("circle")
+      .data(force.nodes())
+      .enter()
+      .append("a")
+      .attr("target", "dump")
+      .attr("href", function(d) { return "./EventDump.html#" + d.name;})
+      .append("circle")
         .attr("r", 7)
         .call(force.drag);
 
     var names = svg.append("g").selectAll("text")
         .data(force.nodes())
-      .enter().append("text")
-        .attr("x", 12)
-        .attr("y", ".31em")
-        .text(function(d) { return d.name; });
+        .enter()
+        .append("text")
+          .attr("x", 12)
+          .attr("y", ".31em")
+          .text(function(d) { return d.name; });
 
     var expires = svg.append("g").selectAll("text")
         .data(force.nodes())

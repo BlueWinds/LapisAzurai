@@ -22,7 +22,7 @@ s.NonkeniaArrive =
 
     `N Of course. I'm Natalie, this is James, and...`
 
-    ` Stop! Do not share your names so freely. Some might think you tried to ensnare them into reciprocating. Not me, of course. I am used to the ways of foreigners and know you mean no harm.` He gave a dry chuckle, and Natalie bit her tongue to avoid saying anything unfriendly. `What brings you to the shores of Nonkenia?`
+    ` Stop! Do not share your names so freely. Some might think you tried to ensnare them into reciprocating. Not me, of course. I am used to the ways of foreigners and know you mean no harm.` He gave a dry chuckle, and Natalie bit her tongue to avoid saying anything unfriendly. ` What brings you to the shores of Nonkenia?`
 
   || N/Embarrassed
     `N We come seeking opportunity for trade and mutual profit. I have a cargo hold full of things I think you might be interested in. But I was expecting a city, and all I see is an empty beach?`
@@ -51,14 +51,14 @@ s.NonkeniaDiplomatDelivery =
 
     `J ...`
 
-    'J ...I didn't think you'd really do it.`
+    `J ...I didn't think you'd really do it.`
 
   || N/Excited
     Natalie grinned and turned to Ameliss, the diplomat she was being paid to deliver. `N I'll be getting paid now, if you don't mind.` She held out her hand, and when Ameliss hesitated, began tapping a foot on the plank she'd rigged in order to make the bodyguard walk it.
 
     ` Treachery! Piracy! Filthy backstabber!` The normally composed diplomat backed towards the rail, hissing insults and clutching the bag of money Janos had given her to pay Natalie with. ` I'll make you pay for this, see if I don't!`
 
-    Natalie rolled her eyes and sighed. ` Can't take a joke, can you? Oh well. Come on boys, lower the boat and we'll take Ms. Not-going-for-a-swim ashore along with her luggage.`
+    Natalie rolled her eyes and sighed. `N Can't take a joke, can you? Oh well. Come on boys, lower the boat and we'll take Ms. Not-going-for-a-swim ashore along with her luggage.`
   """
 
 s.AsaraTalkEyes =
@@ -76,7 +76,7 @@ s.AsaraTalkEyes =
   || places/NonkeniaNight
     `N Your eyes, you pointed to them when you mentioned the 'blessing of steel'?` Natalie decided to press for some answers. She had many more questions, but this seemed safer than the others for the moment.
 
-    `A They are a symbol. Like my hair and my skin,` Asara gestured to her straw-blond hair and fair skin, shrugging, ` they set me and my sisters apart from my people. Are not all Azaraki tribes-women the color of sand, dusky eyed and dusky haired? I am, and I am not.`
+    `A They are a symbol. Like my hair and my skin,` Asara gestured to her straw-blond hair and fair skin, shrugging, `A they set me and my sisters apart from my people. Are not all Azaraki tribes-women the color of sand, dusky eyed and dusky haired? I am, and I am not.`
 
     `N Azaraki?`
 
@@ -101,7 +101,7 @@ s.AsaraTalkSisters =
   || places/NonkeniaDay
     `N You've mentioned your sisters a couple of times. Not biological sisters, I gather?` Natalie asked, curious to see if Asara would continue talking about herself. The young woman never volunteered information, only answered questions, but somehow it didn't feel like Natalie's intrusions were unwelcome.
 
-    `A There are seven of us. Well, perhaps six now. Or five,` she added a little sadly, then shook her head and quickly went on. `A We may pass on our power to a daughter, blood or adapted. Or if one dies without passing on her power, our goddess chooses another. That has happened too often of late.` A sad tone suggested that further inquiries into the matter would not be answered.
+    `A There are seven of us. Well, perhaps six now. Or five,` she added a little sadly, then shook her head and quickly went on. `A We may pass on our power to a daughter, blood or adopted. Or if one dies without passing on her power, our goddess chooses another. That has happened too often of late.` A sad tone suggested that further inquiries into the matter would not be answered.
 
     `N Your goddess? Which one?`
 

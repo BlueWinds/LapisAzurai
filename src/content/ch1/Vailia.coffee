@@ -372,7 +372,7 @@ s.MeetMeghan =
 
     Natalie couldn't breathe.
 
-    The girl smiled, and the pressure vanished, magic coiling back inside, waiting until called forth again. Natalie staggered with the sudden change in atmosphere and sat on down hard, hands folded in her lap. The display - clearly, that's what it had been - had worked. She was overawed and cowed.
+    The girl smiled, and the pressure vanished, magic coiling back inside, waiting until called forth again. Natalie staggered with the sudden change in atmosphere and sat down hard, hands folded in her lap. The display - clearly, that's what it had been - had worked. She was overawed and cowed.
 
     ` Natalie Rowena, allow me to introduce Lady Vailia.`
 
@@ -406,7 +406,7 @@ s.MeetMeghan =
 
     ` What day were you born?`
 
-    `N 15th of Descending Fire, 1274.`
+    `N 15th of Descending Fire, 1251.`
 
     ` Are you planning on having children any time soon?`
 
@@ -454,7 +454,7 @@ s.Ch2 =
 
     She hesitated at his door - voices inside. She knocked smartly. The voices paused a moment, then resumed. Apparently he meant to finish whatever business he was attending before inviting her in. Natalie sighed and went over to a window. The view was impressive, looking down over the city. The Lapis was just barely visible from here. She tapped her foot on the polished wood floor, ran her finger along the windowsill (not as spotless as she'd kept it, when cleaning this office had been her job), and waited.
 
-    Ten minutes later the door opened, and a weary looking Guildmaster held it for his guests. A stern looking older woman nodded as Natalie as she brushed past, decked in a foreign and formal dress. Janos' knuckles whitened on the door frame, and he didn't so much as glance at Natalie as he watched the woman move sedately down the long hallway.
+    Ten minutes later the door opened, and a weary looking Guildmaster held it for his guests. A stern older woman nodded at Natalie as she brushed past, decked in a foreign and formal dress. Janos' knuckles whitened on the door frame, and he didn't so much as glance at Natalie as he watched the woman move sedately down the long hallway.
 
   || Guildmaster/Skeptical
     Finally, once she had turned out of sight he nodded to Natalie, and gestured with one hand for her to enter. While she made herself comfortable in her usual chair, he sat down behind the desk with a sigh.
@@ -473,7 +473,7 @@ s.Ch2 =
     `Guildmaster They have every right to be. Lady Meghan assures me that...` he shook his head doubtfully. `Guildmaster They should be safe enough these days, if Nonkenia will leave them alone. The forest spirits are afraid of steel.`
 
   || Guildmaster/Thinking
-    Natalie pondered his words, nodded. It fit with what she'd felt from the people there. Everyone seemed worried that the floor was going to drop out from under them. It hadn't been an entirely pleasant. `N Is there anything in specific you'd like to know?`
+    Natalie pondered his words and nodded. It fit with what she'd felt from the people there. Everyone seemed worried that the floor was going to drop out from under them. It hadn't been an entirely pleasant experience. `N Is there anything in specific you'd like to know?`
 
     He grilled her briefly on the prices of various goods, quantities and qualities that she'd seen for sale. It was amazing the way he seemed to soak up information, fitting new facts into some sort of masterful puzzle only he could see. Finally, he gestured her to silence while he pondered the way the pieces fell together.
 

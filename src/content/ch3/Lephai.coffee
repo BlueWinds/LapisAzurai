@@ -10,7 +10,7 @@ s.AsaraToVisitSister =
       Asara: 3
   text: ->"""
   ||
-    Asara stared out over the flat desert, so intent on the horizon that Natalie wasn't sure her approachhad been noted until, without looking, Asara reached out to catch her hand. She was surprised by the affectionate gesture, even more surprised when Asaro squeezed her hand, seeking reasurance. Natalie returned the gesture.
+    Asara stared out over the flat desert, so intent on the horizon that Natalie wasn't sure her approach had been noted until, without looking, Asara reached out to catch her hand. She was surprised by the affectionate gesture, even more surprised when Asaro squeezed her hand, seeking reasurance. Natalie returned the gesture.
 
     `A I have to go.`
 
@@ -18,7 +18,7 @@ s.AsaraToVisitSister =
 
     `A Being here, seeing my home... out there,` she clarified with a nod, indicating the open desert rather than the small town they stood at the edge of. `A I've neglected my purpose.`
 
-    `N Asara.! Natalie took her shoulder, ignoring the small flinch the action garnered. `N What purpose? Where do you need to go?` When the priestess still hestiated, Natalie turned Asara to face her, rather than the open expanse of dust and parched shrubs. `N Tell me. I won't hurt you.`
+    `N Asara.` Natalie took her shoulder, ignoring the small flinch the action garnered. `N What purpose? Where do you need to go?` When the priestess still hestiated, Natalie turned Asara to face her, rather than the open expanse of dust and parched shrubs. `N Tell me. I won't hurt you.`
 
     `A I...` She shook her head, not in denial. `A I... must seek out my sister. But I'm scared of her. Antinua is so strong, and I'm not.`
 
@@ -27,7 +27,7 @@ s.AsaraToVisitSister =
   || A/Scared
     Asara nodded, eyes widening. `A You know of her?`
 
-    `N Of course. We meet every time there's a high society event. She's Hathawa's partner.` Seeing the blank look that garnered, Natalie went on. `N Hathawa Cheong. She's a princess from one of the southern regions. Very rich. Very important. Caused quite a scandal when she took a barbarian lover. Antinua's a mercenary, yes? Blonde hair, strange accent, silver eyes...` Natalie smacked her forehead and cursed herself for being so slow to see the obvious connection. `N ...just like you,` she finished lamely. Being at sea must have dulled her social instincts. Janos would be giving her <em>such</em> a look if he could see her now.
+    `N Of course. We meet every time there's a high society event. She's Hathawa's partner.` Seeing the blank look that garnered, Natalie went on. `N Hathawa Cheong. She's a princess from one of the southern regions. Very rich. Very important. Caused quite a scandal when she took a barbarian lover. Antinua's a mercenary, yes? Blonde hair, strange accent, silver eyes...` Natalie cursed herself for being so slow to see the obvious connection. `N ...just like you,` she finished lamely. Being at sea must have dulled her social instincts. Janos would be giving her <em>such</em> a look if he could see her now.
 
     Asara's brow furrowed, her voice completely flat. `A Mercenary.`
 

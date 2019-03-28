@@ -40,7 +40,8 @@ window.Story = {
     unless Story[story].history then return (Story[story].extraDays or 0)
     prereqsExpire = for key, value of Story[story].history
       Story.expirationDate(key)
-    timeAdded = (Story[story].extraDays or 0) + if Story[story].blocking then 4 else 15
+    extraDays = parseInt(Story[story].extraDays) or Story[story].extraDays?() or 0
+    timeAdded = extraDays + if Story[story].blocking then 4 else 15
     return Math.max.apply(null, prereqsExpire) + timeAdded + prereqsExpire.length * 12
 
   matchesHistory: (onlyOnce, story)->

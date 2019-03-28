@@ -84,7 +84,7 @@ s.StrandedShip =
 
     `K There, there!` Kat shouted and pointed impatiently.
 
-    Natalie looked where she was pointing again. Nothing, nothing... wait, there was a darker shadow. It solidified slowly as the Lapis came closer. The other ship was drifting, no intention to its motion. She gestured to James, currently taking a turn at the helm, and her nodded. They'd go take a look, rather than let it pass silently.
+    Natalie looked where she was pointing again. Nothing, nothing... wait, there was a darker shadow. It solidified slowly as the Lapis came closer. The other ship was drifting, no intention to its motion. She gestured to James, currently taking a turn at the helm, and he nodded. They'd go take a look, rather than let it pass silently.
 
     It was not a pleasant sight. The Kantian ship was missing one mast entirely, and the other square sail was ripped to shreds. Surviving a storm didn't necessarily mean living to tell the tale.
 
@@ -121,7 +121,7 @@ s.KantisRegion =
 
     `N None. They see a Vailian, they clam right up. I thought they might be more open than the Guild with their maps, but no luck at all. I still don't understand why Janos didn't just give me a full rutter for the region - Tomenoi's a great way point, and there's plenty of trading to be done here, but he asked me to deliver a letter to Kantis, then only gave directions halfway there.` She sighed and rubbed her eyes, followed by a cute little sneeze.
 
-    `J Why don't we just head back to Vailia and ask him? We can load up on cargo here, it won't be a waste of a trip. Have you tried these the dates? They're quite good, and would be an excellent novelty back home.`
+    `J Why don't we just head back to Vailia and ask him? We can load up on cargo here, it won't be a waste of a trip. Have you tried these dates? They're quite good, and would be an excellent novelty back home.`
 
     She let him put a piece of fruit in her mouth, but didn't let herself be distracted. `N That would be as much as admitting I can't figure it out. He always has a reason for what he does, and usually several.`
 
@@ -162,7 +162,7 @@ s.KantisRegion2 =
 
     `A You could hardly stop Natalie from showering you with coins. Wind at thy back,` she invoked the ritual words.
 
-    ` Thank you, priestess. You are kind.` He returned the correct response. He stood, bowed, and slipped back into the crowd. Asara's eyes smile faded. A taste of home like that should have been comforting, but all she could taste was ash. She fled for the docks and her room aboard the Lapis before her stoic mask could dissolve entirely.
+    ` Thank you, priestess. You are kind.` He returned the correct response. He stood, bowed, and slipped back into the crowd. Asara's smile faded. A taste of home like that should have been comforting, but all she could taste was ash. She fled for the docks and her room aboard the Lapis before her stoic mask could dissolve entirely.
   """
 
 s.KantisRegion3 =
@@ -208,7 +208,7 @@ s.TomenoiHistory =
 
     Something about the spring itself caught Kat's attention, and she took a closer look. Bending down, she saw that beneath the moss, the boulder had a smooth, flat surface. She brushed some of the dirt away, pausing to flick cold water over her face. It was a warm day. Definitely not natural.
 
-    Finally, her probing fingers felt something different - faint scratches in the rock, growing deeper and more distinct as she rubbed dirt and much out of them.
+    Finally, her probing fingers felt something different - faint scratches in the rock, growing deeper and more distinct as she rubbed dirt and muck out of them.
 
     ` ...flow eternally, as a symbol of our dedication that this may never happen again.
       - Rheia Vailia
@@ -259,80 +259,6 @@ s.SailorTroubles =
     `J What?`
 
     She laughed at his confused expression, poked him again, this time in the ribs. `N Hurting people is fun. You ever want some bite marks, you know where to find me.`
-  """
-
-
-s.AsaraCh3 =
-  label: 'Chapter 3 - Asara'
-  required: 'GameOverLove'
-  requiredGroup: 'Ch2Routes'
-  _class: 'AsaraRoute'
-  history:
-    AsarasTrauma: true
-  effects:
-    xp:
-      Natalie: 2
-  cost: 0
-  text: -> """
-  || A/Crying
-    A feeling of presence, of patient waiting filled Natalie's bedroom – someone was at the door. She rubbed bleary eyes, drawn up out of a heavy sleep by the sensation. She slipped a sweater over bare shoulders and went to open the door.
-
-    Asara stood in the doorway, waiting in the darkness. Natalie wondered how long she'd been waiting there, saying nothing, without knocking. Silence stretched between them, and Natalie saw that Asara's cheeks were wet, eyes red and puffy . It didn't feel right to say anything, so she didn't, just stepped to the side and waited for the young woman to enter. The priestess. It was hard to know what to think of her, perched on the border between terrifying power and fragile girl, attractive equal and helpless innocent in equal measure.
-
-    Asara closed the door behind her, leaving them alone together in the darkness, only moonlight from the small window to give shadowy form to the room's contents. Another moment of silence.
-
-    `A Can I kiss you?`
-
-    The words froze Natalie in place, catching her completely off guard. Her throat went dry. Her heart pounded.
-
-    `A I'm sorry, I just...` Asara's voice came out strangled.
-
-    <button onclick="Story.continueWith(event, 'AsaraCh3Yes')">`N Please, don't apologize,`</button> <button onclick="Story.continueWith(event, 'AsaraCh3No')">`N Are you sure?`</button>
-
-    <i>Accepting her will commit you to Asara in Chapter 3, while hesitating will lock out her route. No second chances.</i>
-  """
-
-s.AsaraCh3Yes =
-  label: 'Chapter 3 - Asara'
-  requiredGroup: 'Ch2Routes'
-  _class: 'AsaraRoute'
-  extraDays: -1000 # Hiding it from appearing normally
-  history:
-    AsaraCh3: true
-  effects:
-    xp:
-      Asara: 10
-  text: -> """
-  || N/Embarrassed
-    `N No, please, don't apologize,` Natalie interrupted. She reached out carefully with one hand, brushing her fingertips softly across Asara's cheek. The other woman tensed, but didn't flinch back. Her cheek was cold.
-
-    Asara gently caught Natalie's hand in both of hers, held the fingers, pressed them against her lips. Natalie felt her heart pounding so loudly that it must have been audible clear across the room. It was... she hadn't felt this nervous in... well, ever.
-
-    Asara moved her lips down and kissed Natalie's wrist, carefully, as if afraid that it might shatter in her hands, or reach out and strike her in sudden anger. Natalie raised her other hand to touch Asara's cheek again, but the silver-eyed beauty caught it with one hand, gently lowered it back to Nat's side. She kissed Natalie's wrist again, sending shivers up her spine, and then let go her hand and stepped closer.
-
-    For a brief moment Natalie felt lips brush across her own, a warm caress that and left her dazed. She blinked, and the feeling was gone - not only the kiss, but also the feeling of Asara's presence, the other silhouette in the darkness. Though she hadn't noticed any movement, and certainly hadn't seen the door open, she was again alone in her room.
-  """
-  apply: ->
-    g.chapter = 'Ch3'
-    Game.showOverlay('<h1>Chapter 3</h1><h3>Asara</h3>', 0, 'chapter overlay')
-
-s.AsaraCh3No =
-  label: 'Chapter 3 - Not Asara'
-  requiredGroup: 'Ch2Routes'
-  _class: 'AsaraRoute'
-  extraDays: -1000 # Hiding it from appearing normally
-  history:
-    AsaraCh3: true
-  effects:
-    xp:
-      Asara: 3
-  text: -> """
-  ||
-    `N Are you sure?` Natalie interrupted the confession by laying a hand on Asara's shoulder. She twitched, startled by the contact, but at least she didn't shy away. Progress. `N I like you too, Asara, I like you a great deal, and nothing would make me happier than to kiss you right now. But are you sure it's what you want? I know... I know people who have gone through what you've gone through, and I know how much it makes you want someone to hold you and protect you, and I will do that, same as I have been, but I don't want to take advantage...` The words came out in a jumbled mess, rushing out until Natalie had to stop for breath. She dropped her hand, too embarrassed to keep touching Asara's shoulder.
-
-    Silence stretched out again. Asara was as silent as ever - even her breathing was too quiet to hear, a ghost of a person, a dark outline, yet intensely present in Natalie's awareness.
-
-    `N Please, I'm not saying no, just... I'm confused, Asara, and I don't want to make a mistake because we both thought we knew what we wanted.` Natalie blinked. The sense of presence was gone. Though she hadn't seen the door open, certainly hadn't noticed any movement, she was alone in her room.
   """
 
 Place.Tomenoi.stories.Ch2 = Object.keys(s)

@@ -17,9 +17,9 @@ s.KatsReservations =
 
     `K You've been distracted ever since meeting with the fancy Kantian lord.` Kat rolled overonto her back. She wasn't wearing anything except pants, and the sight was rather distracting itself. `K So what'cha thinking about?`
 
-    `N Fame and fortune, the acquisition thereof.` She set the ledgeraside, wiggled Kat's head into a more comportable position on her lap.
+    `N Fame and fortune, the acquisition thereof.` She set the ledger aside, wiggled Kat's head into a more comportable position on her lap.
 
-    `K Daydreaming's my thing.You're supposed to be the level headed and practical one.`
+    `K Daydreaming's my thing. You're supposed to be the level headed and practical one.`
 
     `N Not daydreaming. Elakim offerefed my partial ownership of the UTC.`
 
@@ -45,7 +45,7 @@ s.KatsReservations =
 
     `K Seems like a raw deal for anyone who isn't a mage.`
 
-    `N I think it's not that mucgh worse than the Guild, and we're pretty fair, all things considered.`
+    `N I think it's not that much worse than the Guild, and we're pretty fair, all things considered.`
 
     `K That's three 'I think's in a row.`
 
@@ -58,6 +58,31 @@ s.KatsReservations =
     Kat rolled to her side and pulled her knees up, curling around Natalie's midriff. `K I don't, but that doesn't mean you shouldn't get all rich and stuff.` She squeezed Natalie's torso in a hug. `K I mean, you're not gonna leave behind your loyal crew, right cap'n?`
 
     `N Mercenary.` Natalie laughed. `N I'm not leaving you anywhere.`
+  """
+
+s.AntinuaAsksKantis =
+  label: "Antinua's Questions"
+  cost: 0
+  history:
+    AsarasDuel: true
+  effects:
+    xp:
+      James: 2
+  text: ->"""
+  || travel/DeckNight
+    Antinua and Hathawa shared James' cabin, relegating him to general quarters with the rest of the crew. He didn't mind much, enjoying the warmth that close company brought. He'd grown up sleeping in the attic above a smithy, in a neighborhood full of the same. Heat and noise were comfort. It was always cold at sea.
+
+    Hathawa kept to herself, friendly but reserved if approached alone. When Antinue was around she grew more animated, more confident dealing with strangers. The mercenary herself was all friendly banter and easy coradery, instantly popular with the sailors. James wondered if any of them felt the falsity of her mask the way he did.
+
+    ` Tell me of Kantis.` Antinua sought him out one evening - holding watch over an empty ocean, he had little excuse not to speak with her.
+
+    `J It's a city, the largest I've seen besides Vailia. More than its fair share of wealth. More than its fairshare of poverty. Little in between. What yould you like to know?`
+
+    ` An outsider's perspective. Asara sees nothing but evil there. It's hard to see past one's experiences. Natalie sees nothing but good. It's her nature.` She held up a hand to forestall his forming objection. ` So I come to you for your thoughts. It's no slight on your captain to speak of her as she is.`
+
+    He sighed and rubbed his hands together against the cold. `J I suppose so. Nat always does see the world through a rosy glow.`
+
+    ` Tell me more about the city.`
   """
 
 Place.Tomenoi.stories.Ch3 = Object.keys(s)

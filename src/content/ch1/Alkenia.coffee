@@ -10,7 +10,7 @@ s.AlkeniaArrive =
       Natalie: 3
   text: -> """
   || places/AlkeniaDay
-    Excited shouts and waving arms guided the Azurai into dock at Alkenia, one of Vailia's primary trading partners. Another free city, Alkenia nestled in the arms of an encircling mountain, stone bluffs trailing into the sea on either side of the city and providing protection from storms. A stream ran down the valley though the center of town fed by springs further up the slope. The Alkenians made their livings from the forest and the shore, supplying Vailia with timber in return for steady shipments manufactured goods or other items from farther afield. Without the vast and relatively safe forests, Natalie's homeland would be unable to keep a significant navy afloat against the terrible attrition of the open ocean.
+    Excited shouts and waving arms guided the Azurai into dock at Alkenia, one of Vailia's primary trading partners. Another free city, Alkenia nestled in the arms of an encircling mountain, stone bluffs trailing into the sea on either side of the city and providing protection from storms. A stream ran down the valley though the center of town fed by springs further up the slope. The Alkenians made their livings from the forest and the shore, supplying Vailia with timber in return for steady shipments of manufactured goods or other items from farther afield. Without the vast and relatively safe forests, Natalie's homeland would be unable to keep a significant navy afloat against the terrible attrition of the open ocean.
 
     For those reasons, and others, the arrival of a ship from the east was always a welcome sight. A gaggle of children stood gaping at them as sailors hopped down from the Azurai and began to secure it to the wharf. A man bearing a clipboard and a pen waited patiently for Natalie to disembark.
 
@@ -140,7 +140,7 @@ s.KatTrial =
   || N/Normal
     `N How did you even get those keys?` Natalie shoved the chains back into Kat's arms, or at least tried to. The thief was too busy grinning, and had no intention of taking them back.
 
-    `N One guy forgot his chin strap, so I nicked his helmet, and while he was getting it back from me I grabbed his wallet, and while two of them tried to hold me down I got the keys, and when the whole group piled on, I squirmed out and... been fun, but I gotta run. What's your name?`
+    `K One guy forgot his chin strap, so I nicked his helmet, and while he was getting it back from me I grabbed his wallet, and while two of them tried to hold me down I got the keys, and when the whole group piled on, I squirmed out and... been fun, but I gotta run. What's your name?`
 
     `N Natalie,` she answered, bemused and wondering exactly why she wasn't stopping Kat. A thief chatting with her victim and expressing not an ounce of remorse.
 
@@ -278,7 +278,7 @@ s.KatJoins =
     `N Repetitive. Yes, you did mention it. I take it being a maid isn't to your taste?`
 
   || K/Happy
-    Kat spun around, swinging her broom as though it were a dance partner. `K Oh, no, I love sweeping! And mopping, that's the best, all grimy and disgusting. Do you know what three day old vomit smells like? I know what three day old vomit smells like. Intimately.` She spun her broom around an rapped the ground its handle.
+    Kat spun around, swinging her broom as though it were a dance partner. `K Oh, no, I love sweeping! And mopping, that's the best, all grimy and disgusting. Do you know what three day old vomit smells like? I know what three day old vomit smells like. Intimately.` She spun her broom around and rapped its handle on the ground.
 
     `N Hey, it's better than being on the streets, isn't it?`
 

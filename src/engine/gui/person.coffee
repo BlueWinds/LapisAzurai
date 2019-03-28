@@ -25,7 +25,6 @@ $.extend Person, {
         newDiv.find('object').on 'load', Person.activateSVG
         newDiv.mouseenter ->
           newDivPerson = @attributes.person.value
-          console.log(newDivPerson)
           p.find(".skill[p!=#{newDivPerson}]").remove()
           p.find(".person[person!=#{newDivPerson}] object").each ->
             $(@contentDocument).find('.active').removeClass('active')
