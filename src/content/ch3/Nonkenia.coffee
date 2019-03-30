@@ -1,6 +1,4 @@
-s = {}
-
-s.ThievingKat =
+export ThievingKat =
   label: "Kat's Thievery"
   history:
     Ch3Root: true
@@ -24,8 +22,3 @@ s.ThievingKat =
 
     A mild flogging would only have her wisecracking and laughing, and a harsh one was more than... whatever this was... deserved. Something less traditional. Wearing a sign for a few days ought to to do the trick. "I'm an idiot and got caught," perhaps.
   """
-
-Place.Nonkenia.stories.Ch3 = Object.keys(s)
-for key, value of s
-  value.place = 'Nonkenia'
-  Story[key] = value

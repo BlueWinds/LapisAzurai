@@ -1,6 +1,4 @@
-s = {}
-
-s.TomenoiRoute =
+export TomenoiRoute =
   label: 'Route to Kantis'
   required: 'GameOverExploration'
   history:
@@ -41,7 +39,7 @@ s.TomenoiRoute =
   apply: ->
     g.reputation.Tomenoi = 0
 
-s.JamesUpsetMagic =
+export JamesUpsetMagic =
   label: 'James is Upset'
   required: 'GameOverTrust'
   history:
@@ -68,7 +66,7 @@ s.JamesUpsetMagic =
     She considered catching him at the door, chasing him out onto the deck, running after him... he was gone down the gangplank and into the city while she still sat at her desk, considering what to do.
   """
 
-s.NonkeniaRoute =
+export NonkeniaRoute =
   label: 'Nonkenia Rutter'
   required: 'GameOverExploration'
   history:
@@ -96,7 +94,7 @@ s.NonkeniaRoute =
   apply: ->
     g.reputation.Nonkenia = 0
 
-s.NonkeniaDiplomat =
+export NonkeniaDiplomat =
   label: 'Diplomatic Delivery'
   cost: 3
   history:
@@ -128,7 +126,7 @@ s.NonkeniaDiplomat =
     `Guildmaster Excellent. I'll tell Ameliss to meet you at your ship this afternoon.`
   """
 
-s.TrainCombatNat =
+export TrainCombatNat =
   label: 'Lessons for Natalie'
   extraDays: 100
   history:
@@ -147,7 +145,7 @@ s.TrainCombatNat =
     Torril stood up slowly, unfolding his bulky six feet, shaking his head and sending drops scattering from his hair. ` I have literally never had to tell someone which end of a sword was which before. Here, that's the grip on the other end...`
   """
 
-s.TrainCombatJames =
+export TrainCombatJames =
   label: 'Lessons for James'
   history:
     TrainCombatNat: true
@@ -170,7 +168,7 @@ s.TrainCombatJames =
     ` Good reason. Here, let's see what you know.` Torril tossed him a wooden practice blade.
   """
 
-s.TrainCombatKat =
+export TrainCombatKat =
   label: 'Lessons for Kat'
   history:
     TrainCombatNat: true
@@ -193,7 +191,7 @@ s.TrainCombatKat =
     Torril rubbed his forehead. Today was going to be a long day.
   """
 
-s.TrainCombatAsara =
+export TrainCombatAsara =
   label: 'Lessons for Asara'
   history:
     TrainCombatNat: true
@@ -214,7 +212,7 @@ s.TrainCombatAsara =
   `A No, and do not tell tell her. I'm not ready to face her yet.`
   """
 
-s.IronSandsRutter =
+export IronSandsRutter =
   label: 'Route to Iron Sands'
   required: 'GameOverExploration'
   extraDays: 15
@@ -262,7 +260,7 @@ s.IronSandsRutter =
     Rather than shake, Janos put a slim leather-bound folio in her hand. `Guildmaster I see that sticky-paper on your hand, miss. You'll have to clean that prank off the rutter before you give it to Natalie. Please thank her for her good work in Kantis.`
   """
 
-s.IronSandsRutter2 =
+export IronSandsRutter2 =
   label: 'Route to Iron Sands'
   required: 'GameOverExploration'
   history:
@@ -306,7 +304,7 @@ s.IronSandsRutter2 =
   apply: ->
     g.reputation.IronSands = 0
 
-s.AsaraTalkFlames =
+export AsaraTalkFlames =
   label: 'Talk with Asara - Flames'
   history:
     AsarasMagic: true
@@ -335,7 +333,7 @@ s.AsaraTalkFlames =
     She was speaking to empty air. Asara had already disappeared.
   """
 
-s.AsaraTalkNotMagic =
+export AsaraTalkNotMagic =
   label: 'Talk with Asara - Magic'
   history:
     AsaraTalkFlames: true
@@ -358,7 +356,7 @@ s.AsaraTalkNotMagic =
     `A I was five when my mother asked if I wished to join her on Azaraki's path, when I accepted the sword and the silver.` She shook her head at Natalie's horrified expression. `A I have seen the way you Vailians coddle your children. It's a wonder your city survives such indulgence.`
   """
 
-s.AsaraTalkWitch =
+export AsaraTalkWitch =
   label: 'Talk with Asara - Witch'
   history:
     AsaraTalkNotMagic: true
@@ -379,7 +377,7 @@ s.AsaraTalkWitch =
     `N I, um, I have to go help James in the cargo hold.`
   """
 
-s.JamesParents =
+export JamesParents =
   label: "James' Parents"
   required: 'GameOverTrust'
   requiredGroup: 'Ch2Routes'
@@ -403,7 +401,7 @@ s.JamesParents =
     He turned away and left without knocking. They would be happier without the reminder of his absence.
   """
 
-s.JamesParents2 =
+export JamesParents2 =
   label: "James' Parents"
   history:
     JamesParents: true
@@ -438,7 +436,7 @@ s.JamesParents2 =
     He sighed and bowed his head.
   """
 
-s.TomenoiHistory2 =
+export TomenoiHistory2 =
   label: 'History'
   history:
     TomenoiHistory: true
@@ -491,7 +489,7 @@ s.TomenoiHistory2 =
     `Meghan Quite alright. So, tell me about Kantis? I've always wanted to travel.` She steered the conversation in a different direction, and Natalie accepted the change, despite Kat's occasional sullen poke in the ribs and whisper that she wanted to know more. A pleasant afternoon.
   """
 
-s.MeghanSuitors =
+export MeghanSuitors =
   label: "Lady Meghan's Problem"
   extraDays: 30
   history:
@@ -570,7 +568,7 @@ s.MeghanSuitors =
     Escorting the maiden in whose honor the party had been thrown, Natalie made her exit to the sound of a pin dropping.
   """
 
-s.MeghanSuitors2 =
+export MeghanSuitors2 =
   label: "Lady Meghan's Problem"
   blocking: true
   history:
@@ -600,7 +598,7 @@ s.MeghanSuitors2 =
     Natalie relaxed and gave a tentative smile. `N I think he's wrong about the causes, but it's an interesting thought, and very thorough research.`
   """
 
-s.JamesCh3 =
+export JamesCh3 =
   label: 'Chapter 3 - James'
   required: 'GameOverSorrow'
   requiredGroup: 'Ch2Routes'
@@ -665,7 +663,7 @@ s.JamesCh3 =
     <hr />
   """
 
-s.JamesCh3Yes =
+export JamesCh3Yes =
   label: 'Chapter 3 - James'
   requiredGroup: 'Ch2Routes'
   _class: 'JamesRoute'
@@ -744,7 +742,7 @@ s.JamesCh3Yes =
     g.history.Ch3Root = g.day
     Game.showOverlay('<h1>Chapter 3</h1><h3>James</h3>', 0, 'chapter overlay')
 
-s.JamesCh3No =
+export JamesCh3No =
   label: 'Chapter 3 - Not James'
   requiredGroup: 'Ch2Routes'
   _class: 'JamesRoute'
@@ -766,9 +764,3 @@ s.JamesCh3No =
 
     Natalie patted his back. `N I do. Now, go talk with your mother. I'll be here when you get back if you want to talk more. Say hello to Christoph for me.`
   '''
-
-Place.Vailia.stories.Ch2 = Object.keys(s)
-Place.Vailia.stories.Ch2.push('Ch2')
-for key, value of s
-  value.place = 'Vailia'
-  Story[key] = value

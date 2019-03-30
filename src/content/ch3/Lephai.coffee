@@ -1,6 +1,4 @@
-s = {}
-
-s.AsaraToVisitSister =
+export AsaraToVisitSister =
   label: 'Desert Horizons'
   cost: 3
   history:
@@ -36,7 +34,7 @@ s.AsaraToVisitSister =
     One hand had strayed to the hilt of her sword, knuckles white around the pomel. `A I've delayed far too long. No more weakness.`
   """
 
-s.AmuletsEverywhere =
+export AmuletsEverywhere =
   label: 'Another Amulet'
   history:
     KatCh3Yes: true
@@ -58,8 +56,3 @@ s.AmuletsEverywhere =
 
     `N Well, in we go. No point darkening his doorstep when there's deals to be made.`
   """
-
-Place.Lephai.stories.Ch3 = Object.keys(s)
-for key, value of s
-  value.place = 'Lephai'
-  Story[key] = value

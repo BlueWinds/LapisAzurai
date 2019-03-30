@@ -1,1 +1,1 @@
-Person.Guard = {}
+export default {}

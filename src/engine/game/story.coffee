@@ -7,8 +7,6 @@ sampleData =
   cost: 1 # Multiplier on the event's cost. Defaults to 1 if absent.
   place: 'Vailia' # Used mostly to calculate how many days events should take to expire
   extraDays: 10 # Days added to the calculated expiration date, used to manually tweak balance
-  skills:
-    Natalie: 'Captain'
   history:
     DeliciousFood: 1 # Must have occurred
     Ch2: -1 # Event must not have occurred
@@ -24,11 +22,6 @@ window.Story = {
   reputationNeeded: (story)->
     mult = if Story[story].cost? then Story[story].cost else 1
     if Story[story].blocking then 0 else (15 * mult)
-
-  skillNeeded: (story)->
-    for skill, person of Story[story].skills
-      unless g.people[person].skills[skill] then return [person, skill]
-    return []
 
   visibleStories: (stories = [], onlyOnce = true)->
     return stories.filter(Story.matchesHistory.bind(null, onlyOnce)).filter(Story.matchesConditions)
@@ -61,14 +54,9 @@ window.Story = {
     return true
 
   unmetNeed: (place, story)->
-    [skill, person] = Story.skillNeeded(story)
-    need = if skill
-      """#{person} needs #{Person[person].skills[skill].label}"""
-    else if g.reputation[place] < Story.reputationNeeded(story)
+    return if g.reputation[place] < Story.reputationNeeded(story)
       """Need #{Math.ceil(Story.reputationNeeded(story) - g.reputation[place])} more rep"""
     else ''
-
-    return need
 
   effects: (story)-> JSON.parse(JSON.stringify(Story[story].effects or {}))
 

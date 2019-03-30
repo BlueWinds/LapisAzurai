@@ -1,6 +1,4 @@
-s = {}
-
-s.NonkeniaDiplomatSailing =
+export NonkeniaDiplomatSailing =
   label: 'Make nice with Diplomat'
   cost: 0
   history:
@@ -25,7 +23,7 @@ s.NonkeniaDiplomatSailing =
     It sounded like an apology, but couldn't help but feel like Ameliss was more annoyed at her for refusing to fault the sailor than anything. She tried not to sigh. This was going to be a long voyage.
 """
 
-s.GatherWood =
+export GatherWood =
   label: 'Gather Wood'
   history:
     Ch2: true
@@ -39,7 +37,7 @@ s.GatherWood =
     James pointed out several trees to the crew, marking them for felling and cutting into the planks and boards needed to keep the ship in good repair. Strange that no one lived here - wandering through the pleasant woodland paths, the usual explanation of "too rugged" didn't really hold up. Perhaps something else kept settlers away. James shivered and sought the Lapis out with his eyes. He already had a home, and it suddenly seemed more inviting than this far-too-perfect isle.
   """
 
-s.ExploreForest =
+export ExploreForest =
   label: 'Explore Forest'
   history:
     GatherWood: true
@@ -77,7 +75,7 @@ s.ExploreForest =
     James shuddered again.
   """
 
-s.AsarasMagic =
+export AsarasMagic =
   label: "Asara's Magic"
   required: 'GameOverLove'
   history:
@@ -117,7 +115,7 @@ s.AsarasMagic =
     `A I am not yet ready.` She walked away, leaving Natalie with a million more questions.
   """
 
-s.JamesUpsetMagic2 =
+export JamesUpsetMagic2 =
   label: 'James is Upset'
   required: 'GameOverTrust'
   requiredGroup: 'Ch2Routes'
@@ -173,8 +171,3 @@ s.JamesUpsetMagic2 =
 
     Natalie slumped against the wall and rubbed her eyes with the heel of her palms. He deserved a better apology. She deserved a brick to the head. She sniffled and hugged her chest.
   """
-
-Place.MtJulia.stories.Ch2 = Object.keys(s)
-for key, value of s
-  value.place = 'MtJulia'
-  Story[key] = value

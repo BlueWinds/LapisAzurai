@@ -1,3 +1,11 @@
+# These are included via <style> tags in index.html, but load them here
+# so that webpack copies over the files
+import './background.jpg'
+import './game.css'
+
+import $ from 'jquery'
+import yaml from 'js-yaml'
+
 startDay = 457783 # Ascending Earth 13, 1271
 
 dayList = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th', '13th', '14th', '15th', '16th', '17th', '18th', '19th', '20th', '21st', '22nd', '23rd', '24th', '25th', '26th', '27th', '28th', '29th', '30th']
@@ -55,7 +63,7 @@ $.extend Game, {
     $('#save-game').click ->
       unless g then return
 
-      localStorage.setItem Date.now(), jsyaml.safeDump(g)
+      localStorage.setItem Date.now(), yaml.safeDump(g)
       $('#save-game .success').animate {opacity: 1}, 500
       .animate {opacity: 0}, 2000
 
@@ -114,7 +122,7 @@ Game.passDay = ->
     unless localStorage.autosave is localStorage.autosave0
       delete localStorage[localStorage.autosave]
     now = Date.now()
-    localStorage.setItem now, jsyaml.safeDump(g)
+    localStorage.setItem now, yaml.safeDump(g)
     localStorage.autosave = now
 
     if g.day % 20 is 0

@@ -1,5 +1,4 @@
-s = {}
-s.AlkeniaArrive =
+export AlkeniaArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -30,7 +29,7 @@ s.AlkeniaArrive =
     `N He's not... ah, yes, thank you.` She decided it wasn't worth arguing over.
   """
 
-s.Pickpocket =
+export Pickpocket =
   label: 'Pickpocket'
   required: 'GameOverFun'
   blocking: true
@@ -61,7 +60,7 @@ s.Pickpocket =
     Natalie stopped, shook her head in dismay, assessed the situation. It wasn't much money, all told, but still... She shook her head. She was getting careless, to let someone lift off her. `N I'm afraid that was all my pocket money. Perhaps another time.`
   """
 
-s.MeetKat =
+export MeetKat =
   label: 'Catching the Pickpocket'
   required: 'GameOverFun'
   extraDays: 34
@@ -109,7 +108,7 @@ s.MeetKat =
     Natalie nodded and looked away. Don't feel too bad for her indeed.
   """
 
-s.KatTrial =
+export KatTrial =
   label: "Kat's Trial"
   required: 'GameOverFun'
   cost: 0
@@ -149,7 +148,7 @@ s.KatTrial =
     ` There she is! Stop her!` One of the pursuing guards finally made their way close enough to catch sight of Kat ducking through the outside door. Natalie just stepped out of the way and watched with a laugh. Somehow she didn't think Kat would get caught again any time soon.
   """
 
-s.KatMeetsJames =
+export KatMeetsJames =
   label: 'Kat and James'
   blocking: true
   cost: 0
@@ -182,7 +181,7 @@ s.KatMeetsJames =
     He shook his head, trying to make sense of the conversation, and gave up.
   """
 
-s.KatStorm =
+export KatStorm =
   label: 'Out in a Storm'
   required: 'GameOverKindness'
   history:
@@ -218,7 +217,7 @@ s.KatStorm =
     Natalie felt her forehead again and sat by Kat's side. It was going to be a long night.
   """
 
-s.KatStorm2 =
+export KatStorm2 =
   label: 'Out of the Storm'
   blocking: true
   required: 'GameOverKindness'
@@ -259,7 +258,7 @@ s.KatStorm2 =
     `N I suppose it's a better answer than 'no.'` Natalie laughed, drawing a smile from Kat as well. Despite nearly freezing to death, her mood didn't seem much affected. `N Let me ask around a bit today and see what I can arrange.`
   """
 
-s.KatJoins =
+export KatJoins =
   label: 'Kat Joins'
   required: 'GameOverFun'
   history:
@@ -311,8 +310,3 @@ s.KatJoins =
 
     `K Hey, don't worry about it. I kept this shitty job, didn't I? How much worse can it be?`
   """
-
-Place.Alkenia.stories.Ch1 = Object.keys(s)
-for key, value of s
-  value.place = 'Alkenia'
-  Story[key] = value

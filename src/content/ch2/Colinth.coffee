@@ -1,6 +1,4 @@
-s = {}
-
-s.ColinthArrive =
+export ColinthArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -27,7 +25,7 @@ s.ColinthArrive =
     Kat muttered darkly, but shook her head when Natalie asked. `K Don't worry about it. So, what are we here for?`
   """
 
-s.ColinthAmulets =
+export ColinthAmulets =
   label: 'Magical Amulet'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
@@ -52,7 +50,7 @@ s.ColinthAmulets =
     `N No! It hurts. It's magic.` She wanted to flick Kat's cheek, wipe off the speculative look that crossed her face, but instead had to turn attention back to the merchant. With the amulet. Which hurt to think about. `N I can't go lower than 50%, but I can certainly cut you in for half of the profit if it does go well. I'm looking to hedge the risk here, and that shouldn't be an issue if you're confident they'll keep properly on the voyage.` She fell back into haggling while Kat continued to stare at the amulet in a way that Nat tried to convince herself <i>didn't</i> mean she was going to steal it later.
   """
 
-s.ColinthAmulets2 =
+export ColinthAmulets2 =
   label: 'Magical Amulet'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
@@ -102,7 +100,7 @@ s.ColinthAmulets2 =
     `K That's...` Kat hesitated, then threw her arms around Natalie, burying her head in the other woman's neck. `K I was so scared.`
   """
 
-s.Muggers =
+export Muggers =
   label: 'Muggers'
   required: 'GameOverViolence'
   requiredGroup: 'Ch2Routes'
@@ -151,7 +149,7 @@ s.Muggers =
     `N Let's... let's just go.`
   """
 
-s.KantianSorcerer =
+export KantianSorcerer =
   label: 'Sorcerer'
   required: 'GameOverPower'
   history:
@@ -186,7 +184,7 @@ s.KantianSorcerer =
     As much as she wanted to call him back and ask him to explain more, Natalie didn't think it would go over well with Elakim. She watched him departing for a moment, then hugged herself and stepped back inside the inn. The storm no longer felt quite so welcoming.
   """
 
-s.AsarasTrauma =
+export AsarasTrauma =
   label: "Asara's Trauma"
   required: 'GameOverViolence'
   requiredGroup: 'Ch2Routes'
@@ -226,8 +224,3 @@ s.AsarasTrauma =
 
     `N Ssh, ssh, it's alright, you're with me now, I won't let anyone hurt you...`
   """
-
-Place.Colinth.stories.Ch2 = Object.keys(s)
-for key, value of s
-  value.place = 'Colinth'
-  Story[key] = value

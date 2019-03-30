@@ -1,3 +1,8 @@
+import $ from 'jquery'
+import 'jquery.scrollto'
+
+import people, {aliases} from '../../content/people/_.coffee'
+
 ###
 Formatting guide:
 
@@ -193,8 +198,8 @@ addSectionImage = (element, line)->
 
   if img
     # It might be an aliased person's name
-    name = Person.alias[img[1]] or img[1]
-    src = if Person[name]
+    name = aliases[img[1]] or img[1]
+    src = if people[name]
       "game/content/people/#{name}/#{img[2]}.png"
     else
       "game/content/#{img[1]}/#{img[2]}.jpg"

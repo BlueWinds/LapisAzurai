@@ -39,7 +39,7 @@ Use the game engine to make your own stuff without getting it touch (including c
 
 ## Longer
 * Everything in the "/src/content" folder is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
-  That means you can copy and distribute this folder (and any graphics, text, characters, etc. within) freely, as long as you (A) give credit (B) do not sell it (C) do not include it in another work that is being *sold*.
+  That means you can copy and distribute this folder (and any graphics, text, characters, etc. within) freely, as long as you (A) give credit (B) do not sell it (C) do not include it in another work that is being *sold* or *profited from*.
   If you do include it, or a derivative of it in another work, that work must be similarly licensed.
 * All code in the "/src/engine" folder is licensed under [the GPL v2](http://www.gnu.org/licenses/gpl.txt)
   This means that you can redistribute this folder freely as long as you (A) give credit.

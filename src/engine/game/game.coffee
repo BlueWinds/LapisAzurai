@@ -1,3 +1,6 @@
+import $ from 'jquery'
+import yaml from 'js-yaml'
+
 sampleGame =
   version: 0
   day: 13
@@ -51,7 +54,7 @@ window.Game =
   mostRecentGameData: ->
     last = Object.keys(localStorage).map((key) -> parseFloat(key) or 0).sort().pop()
     if last
-      game = jsyaml.safeLoad(localStorage[last])
+      game = yaml.safeLoad(localStorage[last])
       if game.map then return game
 
     return $.extend(true, {}, Game.starting) # Game.starting is defined in content/intro.coffee

@@ -1,6 +1,4 @@
-s = {}
-
-s.KatsReservations =
+export KatsReservations =
   label: "Kat's Reservations"
   cost: 0
   history:
@@ -60,7 +58,7 @@ s.KatsReservations =
     `N Mercenary.` Natalie laughed. `N I'm not leaving you anywhere.`
   """
 
-s.AntinuaAsksKantis =
+export AntinuaAsksKantis =
   label: "Antinua's Questions"
   cost: 0
   history:
@@ -84,9 +82,3 @@ s.AntinuaAsksKantis =
 
     ` Tell me more about the city.`
   """
-
-Place.Tomenoi.stories.Ch3 = Object.keys(s)
-Place.Tomenoi.stories.Ch3.push('AsaraCh3Yes')
-for key, value of s
-  value.place = 'Tomenoi'
-  Story[key] = value

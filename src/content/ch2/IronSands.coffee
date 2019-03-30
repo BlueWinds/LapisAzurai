@@ -1,6 +1,4 @@
-s = {}
-
-s.IronSandsArrive =
+export IronSandsArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -40,7 +38,7 @@ s.IronSandsArrive =
     `A The spirits in the sand are very hungry.` She stepped the rest of the way outside. `A It reminds me of home. I am glad there are no demons though. How long can we stay here, Natalie?`
   """
 
-s.IronSandsRest =
+export IronSandsRest =
   label: 'Resting in the Bunkhouse'
   history:
     IronSandsArrive: true
@@ -54,7 +52,7 @@ s.IronSandsRest =
     Still, it was immensely better than being outside, and the beer was decent as well as being reasonably cold. It had an odd tang to it, not entirely unpleasant. The chatter of miners eager for a new voice finally coaxed her into sharing news of home, and listened eagerly to every story she could think of, the taller the better. A better evening than many, even if she did wake up to spit out grit more than once during the night.
   """
 
-s.IronSandsJamesFlirt =
+export IronSandsJamesFlirt =
   label: 'Flirting Cara'
   history:
     IronSandsArrive: true
@@ -81,7 +79,7 @@ s.IronSandsJamesFlirt =
     Cara didn't say anything, and finally he was forced to lower the cup or look even more awkward. She was studying him, an odd half-smile on her face. She lay a hand over his on the table and she shook her head. `J She doesn't like you that way, kid.` James blushed and looked down, and she removed her hand from his. `J None of my business, I know. Just make sure you're not throwing away gold looking for diamonds.`
   """
 
-s.IronSandsAsaraTalk =
+export IronSandsAsaraTalk =
   label: "Asara's Spirits"
   history:
     IronSandsArrive: true
@@ -115,8 +113,3 @@ s.IronSandsAsaraTalk =
 
     That drew a momentary sharp look from Asara, but it faded into resignation as quickly as it had come. `A The world is not so arranged for your convenience. But you are not my people, I am only passing by. Do as you will.`
   """
-
-Place.IronSands.stories.Ch2 = Object.keys(s)
-for key, value of s
-  value.place = 'IronSands'
-  Story[key] = value

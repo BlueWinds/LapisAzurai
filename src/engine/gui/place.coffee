@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 $.extend Place, {
   showOverview: (place = $('.place').attr('place') or g.map.from, duration = 500)->
     o = $('#overview')

@@ -1,5 +1,4 @@
-Person.alias.N = 'Natalie'
-Person.Natalie =
+export default {
   name: 'Natalie'
   img: 'people/Natalie/Normal'
   svg: 'people/Natalie/skills.svg'
@@ -70,3 +69,4 @@ Person.Natalie =
     Adept:
       description: 'Suffer one less damage each day in storms'
       requiresOr: ['WellInformed2', 'SilverTongue2']
+}

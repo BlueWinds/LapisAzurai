@@ -1,6 +1,9 @@
+import $ from 'jquery'
+import people, {aliases} from '../../content/people/_.coffee'
+
 $.extend Person, {
   quote: (ignore, name, text)->
-    unless Person[name] then name = Person.alias[name]
+    unless people[name] then name = aliases[name]
     "<q class=#{name}>#{text}</q>"
 
   drawOverview: ->
@@ -40,13 +43,13 @@ $.extend Person, {
     s = if skillPoints is 1 then '' else 's'
 
     return """<div person="#{person}" class="person">
-      <img src="game/content/#{Person[person].img}.png">
+      <img src="game/content/#{people[person].img}.png">
       <div>
-        <div class="name">#{Person[person].name}</div>
+        <div class="name">#{people[person].name}</div>
         <div class="description">#{needed - xp}xp needed for next skill</div>
       </div>
       <div class="picks #{if skillPoints > 0 then 'active' else ''}">#{skillPoints} skill#{s} available</div>
-      <object data="game/content/#{Person[person].svg}"></object>
+      <object data="game/content/#{people[person].svg}"></object>
     </div>"""
 
   activateSVG: ->
@@ -57,8 +60,10 @@ $.extend Person, {
     # 1 = aura
     # 2 = fill
     # 3 = outline
+
     $('g circle:nth-child(2)', svg).css('display', 'none')
     for skill of g.people[person].skills
+      console.log skill
       $("##{skill} circle:nth-child(2)", svg).css('display', 'initial')
 
     $('g', svg).on 'click', ->
@@ -78,7 +83,7 @@ $.extend Person, {
         p.find(".skill.mouse-over[p=#{person}]").remove()
 
   drawSkill: (person, skill)->
-    data = Person[person].skills[skill]
+    data = people[person].skills[skill]
     selected = g.people[person].skills[skill]
 
     selectButton = if selected

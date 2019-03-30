@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 # Tweak this number to speed up (>1) or slow down (<1) all animations in the game
 speedFactor = 1.5
 oldAnimate = $.fn.animate

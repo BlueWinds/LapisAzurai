@@ -1,1 +1,1 @@
-Person.Cara = {}
+export default {}

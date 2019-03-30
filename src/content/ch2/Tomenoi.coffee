@@ -1,6 +1,4 @@
-s = {}
-
-s.TomenoiArrive =
+export TomenoiArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -38,7 +36,7 @@ s.TomenoiArrive =
     Natalie dug in her pocket. Better than anchoring in the bay and wasting time trying to move cargo by longboat.
   """
 
-s.AsaraJoinsCrew =
+export AsaraJoinsCrew =
   label: 'Asara Joins'
   required: 'GameOverKindness'
   extraDays: 65
@@ -69,7 +67,7 @@ s.AsaraJoinsCrew =
     Asara shook her head. `A I am not yet ready. I shall tell you when I am.`
   """
 
-s.StrandedShip =
+export StrandedShip =
   label: 'Stranded Ship'
   history:
     KantisRegion3: true
@@ -104,7 +102,7 @@ s.StrandedShip =
     Natalie reassured him that they'd share what they could, and shuddered. Money meant nothing compared to her pleasure that she could help one more crew return safely to port. She was captain of one of the finest ships in the world, and had her magic to protect herself - even so, the open ocean frightened her. Kantians were a brave people indeed.
   """
 
-s.KantisRegion =
+export KantisRegion =
   label: 'Route to Kantis'
   required: 'GameOverExploration'
   extraDays: 10
@@ -128,7 +126,7 @@ s.KantisRegion =
     `J I'm sure you'll figure something out.` James pressed the bag of dates into her hand, and leaned back against the wall himself. `J Don't worry about it so much.`
   """
 
-s.KantisRegion2 =
+export KantisRegion2 =
   label: 'Route to Kantis'
   required: 'GameOverLove'
   extraDays: 30
@@ -165,7 +163,7 @@ s.KantisRegion2 =
     ` Thank you, priestess. You are kind.` He returned the correct response. He stood, bowed, and slipped back into the crowd. Asara's smile faded. A taste of home like that should have been comforting, but all she could taste was ash. She fled for the docks and her room aboard the Lapis before her stoic mask could dissolve entirely.
   """
 
-s.KantisRegion3 =
+export KantisRegion3 =
   label: 'Route to Kantis'
   blocking: true
   required: 'GameOverLove'
@@ -192,7 +190,7 @@ s.KantisRegion3 =
     g.reputation.Colinth = 0
     g.reputation.Kantis = 0
 
-s.TomenoiHistory =
+export TomenoiHistory =
   label: 'History'
   history:
     TomenoiArrive: true
@@ -217,7 +215,7 @@ s.TomenoiHistory =
     Kat pulled her hand back, suddenly unwilling to touch the stone any further. Too much history.
   """
 
-s.SailorTroubles =
+export SailorTroubles =
   label: 'Sailor Troubles'
   history:
     KantisRegion3: true
@@ -260,8 +258,3 @@ s.SailorTroubles =
 
     She laughed at his confused expression, poked him again, this time in the ribs. `N Hurting people is fun. You ever want some bite marks, you know where to find me.`
   """
-
-Place.Tomenoi.stories.Ch2 = Object.keys(s)
-for key, value of s
-  value.place = 'Tomenoi'
-  Story[key] = value

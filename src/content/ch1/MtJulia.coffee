@@ -1,5 +1,4 @@
-s = {}
-s.MtJuliaArrive =
+export MtJuliaArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -27,7 +26,7 @@ s.MtJuliaArrive =
     `N Good. I hardly expect to make more on this trip than I've spent in supplies and wages, but it'll be worth it for a shakedown cruise. Let's not waste time.`
   """
 
-s.CheckShip =
+export CheckShip =
   label: 'Inspect the Ship'
   history:
     MtJuliaArrive: true
@@ -46,7 +45,7 @@ s.CheckShip =
     `J Nothing. We're clean.` James accepted the towel from a sailor, tussling it through his hair and rubbing the water off his back. No scrapes, no barnacles, no leaks.  The Guild hadn't skimped in giving Natalie a good vessel. The Lapis Azurai was a solid ship, straight out of the Vailian shipyards, not some rickety junk from Kantis. If there were ships anywhere in the world to match Vailian ones, even rumor hadn't reached James' ears.
   """
 
-s.VisitInn =
+export VisitInn =
   label: 'Visit Inn'
   history:
     MtJuliaArrive: true
@@ -70,7 +69,7 @@ s.VisitInn =
     ` Easier to clean up after too. So, what'cha got for me?`
   """
 
-s.MeetAsara =
+export MeetAsara =
   label: 'Castaway'
   required: 'GameOverKindness'
   history:
@@ -132,7 +131,7 @@ s.MeetAsara =
     `N I will. I'd tell you to get some sleep, but I know it wouldn't work.` She squeezed his shoulder with one hand. `N I'll watch over her.`
   """
 
-s.AsaraAwakens =
+export AsaraAwakens =
   label: 'Castaway'
   required: 'GameOverKindness'
   history:
@@ -200,8 +199,3 @@ s.AsaraAwakens =
 
     What a mess.
   """
-
-Place.MtJulia.stories.Ch1 = Object.keys(s)
-for key, value of s
-  value.place = 'MtJulia'
-  Story[key] = value

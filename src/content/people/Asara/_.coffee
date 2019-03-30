@@ -1,5 +1,4 @@
-Person.alias.A = 'Asara'
-Person.Asara =
+export default {
   name: 'Asara'
   img: 'people/Asara/Normal'
   svg: 'people/Asara/skills.svg'
@@ -48,3 +47,4 @@ Person.Asara =
     Devotion:
       description: "Double the benefits of all of James' 3rd tier skills"
       requiresAnd: ['Desire']
+}

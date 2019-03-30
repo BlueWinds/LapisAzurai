@@ -117,7 +117,7 @@ table td {
   position: absolute;
   overflow: hidden;
   flex-direction: column;
-  background: linear-gradient(0deg, black, transparent), url("content/background.jpg");
+  background: linear-gradient(0deg, black, transparent), url("background.jpg");
 }
 
 #container {

@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 p = 'travel/'
 
 $.extend Place.travel.Sail, {

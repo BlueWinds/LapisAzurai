@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 remainingDiv = (days) ->
   if days >= 0
     """<div><span class="remaining">#{days} days to deliver</span></div>"""

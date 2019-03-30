@@ -1,6 +1,4 @@
-s = {}
-
-s.NaxinsTroopMovement =
+export NaxinsTroopMovement =
   label: 'Kantian Troops'
   history:
     Ch3Root: true
@@ -26,8 +24,3 @@ s.NaxinsTroopMovement =
 
     She frowned and didn't answer.
   '''
-
-Place.Naxins.stories.Ch3 = Object.keys(s)
-for key, value of s
-  value.place = 'Naxins'
-  Story[key] = value

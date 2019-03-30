@@ -1,5 +1,4 @@
-Person.alias.K = 'Kat'
-Person.Kat =
+export default {
   name: 'Kat'
   img: 'people/Kat/Normal'
   svg: 'people/Kat/skills.svg'
@@ -72,3 +71,4 @@ Person.Kat =
       description: '25% chance to discard an expired job when completing a different delivery'
       requiresAnd: ['FreeWoman']
       doubledBy: 'Desire'
+}

@@ -1,6 +1,4 @@
-s = {}
-
-s.KantisArrive =
+export KantisArrive =
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -31,7 +29,7 @@ s.KantisArrive =
     ` You'll have to ask lord Elakim. All I know is that he instructed me to dock you freely. Please let me know if there's anything you might need, I'm also to provide all reasonable assistance. Have a nice stay.`
   """
 
-s.VisitElakim =
+export VisitElakim =
   label: 'Visit Elakim'
   required: 'GameOverPower'
   history:
@@ -79,7 +77,7 @@ s.VisitElakim =
     `Elakim Vailia's power may be waxing, but we are not yet overshadowed in our own home,` Elakim frowned. `Elakim You have nothing to worry about from me, and as long as you don't make yourself too tempting a target, I doubt any of the other lords will risk my wrath by troubling you. Keep your friends close, Natalie. Kantis is not a safe place without allies to watch your back. I hope that someday you will count me among them.`
   """
 
-s.KantisPots =
+export KantisPots =
   label: 'Pots, Pans and Complaints'
   history:
     VisitElakim: true
@@ -97,7 +95,7 @@ s.KantisPots =
     `N You can take the James out of the smithy, but you can't take the smithy out of James,` she inturrupted his rant with a grin and a ringing slap on the pot. `N No complaining. If they made pots like we do, we wouldn't be making money bringing Vailian pots here. Oh, come on, stop making that face and keep an eye out for good canvas. I want to lay in a better store in case we run into another storm like that last one.`
   """
 
-s.KatsDayOut =
+export KatsDayOut =
   label: "Kat's day out"
   history:
     VisitElakim: true
@@ -113,7 +111,7 @@ s.KatsDayOut =
     For the moment at least she was content to wander. The driving, restless spark was quiet. She imagined what the others would make of that, of manic Kat just enjoying a quiet walk by herself. James wouldn't believe it. She started making a crazy escapade to tell him. An attempted robbery, scuffle with the city guards and harrowing chase across the city roofs? She grinned. He'd totally believe that of her.
   """
 
-s.AsaraCh3 =
+export AsaraCh3 =
   label: 'Chapter 3 - Asara'
   required: 'GameOverLove'
   requiredGroup: 'Ch2Routes'
@@ -145,7 +143,7 @@ s.AsaraCh3 =
     <hr />
   """
 
-s.AsaraCh3Yes =
+export AsaraCh3Yes =
   label: 'Chapter 3 - Asara'
   requiredGroup: 'Ch2Routes'
   _class: 'AsaraRoute'
@@ -171,7 +169,7 @@ s.AsaraCh3Yes =
     Game.showOverlay('<h1>Chapter 3</h1><h3>Asara</h3>', 0, 'chapter overlay')
     Place.drawMap()
 
-s.AsaraCh3No =
+export AsaraCh3No =
   label: 'Chapter 3 - Not Asara'
   requiredGroup: 'Ch2Routes'
   _class: 'AsaraRoute'
@@ -189,8 +187,3 @@ s.AsaraCh3No =
 
     `N Please, I'm not saying no, just... I'm confused, Asara, and I don't want to make a mistake because we both thought we knew what we wanted.` Natalie blinked. The sense of presence was gone. Though she hadn't seen the door open, certainly hadn't noticed any movement, she was alone in her room.
   """
-
-Place.Kantis.stories.Ch2 = Object.keys(s)
-for key, value of s
-  value.place = 'Kantis'
-  Story[key] = value

@@ -1,1 +1,1 @@
-Person.Meghan = {}
+export default {}

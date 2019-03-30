@@ -1,0 +1,15 @@
+import * as Vailia from './Vailia.coffee'
+import * as MtJulia from './MtJulia.coffee'
+import * as Alkenia from './Alkenia.coffee'
+import * as Nonkenia from './Nonkenia.coffee'
+import * as Tomenoi from './Tomenoi.coffee'
+import * as IronSands from './IronSands.coffee'
+import * as Kantis from './Kantis.coffee'
+import * as Colinth from './Colinth.coffee'
+import * as Amandais from './Amandais.coffee'
+import * as Naxins from './Naxins.coffee'
+import * as Ment from './Ment.coffee'
+import * as Crater from './Crater.coffee'
+import * as Lephai from './Lephai.coffee'
+
+export default {Vailia, MtJulia, Alkenia, Nonkenia, Tomenoi, IronSands, Kantis, Colinth, Amandais, Naxins, Ment, Crater, Lephai}

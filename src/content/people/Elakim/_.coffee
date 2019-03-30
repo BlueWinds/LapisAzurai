@@ -1,2 +1,3 @@
-Person.Elakim =
+export default {
   name: 'Elakim Appolon'
+}

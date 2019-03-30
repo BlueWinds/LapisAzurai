@@ -1,2 +1,3 @@
-Person.Guildmaster =
+export default {
   name: 'Guildmaster Janos'
+}

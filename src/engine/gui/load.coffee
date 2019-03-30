@@ -1,3 +1,5 @@
+import yaml from 'js-yaml'
+
 Story.Load =
   label: 'Load'
   text: ->
@@ -12,7 +14,7 @@ Story.Load =
       date = new Date(parseInt(key, 10))
       unless date.getTime() then continue
       try
-        game = jsyaml.safeLoad(localStorage[key])
+        game = yaml.safeLoad(localStorage[key])
       catch e
         continue
 
@@ -56,7 +58,7 @@ Game.showLoadPage = ->
     reader.onload = =>
       $('.import-error').remove()
       try
-        Game.load(jsyaml.safeLoad(reader.result))
+        Game.load(yaml.safeLoad(reader.result))
       catch e
         console.log e
         error = $ '<tr class="import-error danger"><td colspan="3">That doesn\'t seem to be a valid save file.</td></tr>'
@@ -83,5 +85,5 @@ Game.showLoadPage = ->
       link.attr('download', name)
       link.click()
     else
-      Game.load(jsyaml.safeLoad(localStorage[key]))
+      Game.load(yaml.safeLoad(localStorage[key]))
     return false

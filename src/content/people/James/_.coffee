@@ -1,5 +1,4 @@
-Person.alias.J = 'James'
-Person.James =
+export default {
   name: 'James'
   img: 'people/James/Normal'
   svg: 'people/James/skills.svg'
@@ -69,3 +68,4 @@ Person.James =
     Master:
       description: '+1 Cargo Capacity'
       requiresAnd: ['Stoic2', 'WeatherEye2']
+}

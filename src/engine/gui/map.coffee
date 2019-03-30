@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 $.extend Place, {
   guiSetup: ->
     # Set up draggable map

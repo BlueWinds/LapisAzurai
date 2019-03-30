@@ -1,3 +1,5 @@
+import people from '../../content/people/_.coffee'
+
 samplePerson =
   xp: 100
   skills:
@@ -18,8 +20,6 @@ sampleData =
   quoteColor: '#8CDAFF'
 
 window.Person = {
-  alias: {}
-
   xpNeeded: (level)-> Math.round(Math.pow(level, 1.5) * 3)
 
   level: (xp)->
@@ -34,14 +34,14 @@ window.Person = {
 
   unmetRequirements: (person, skill)->
     skills = g.people[person].skills
-    data = Person[person].skills[skill]
+    data = people[person].skills[skill]
 
     unmetAnd = (data.requiresAnd or []).filter((s)-> not skills[s])
     if unmetAnd.length
-      return unmetAnd.map((s)-> Person[person].skills[s].name or s).wordJoin()
+      return unmetAnd.map((s)-> people[person].skills[s].name or s).wordJoin()
 
     if data.requiresOr and not data.requiresOr.some((s)-> skills[s])
-      return data.requiresOr.map((s)-> Person[person].skills[s].name or s).wordJoin('or')
+      return data.requiresOr.map((s)-> people[person].skills[s].name or s).wordJoin('or')
 
     return ''
 }

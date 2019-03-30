@@ -28,9 +28,7 @@ Game.starting =
   history:
     Intro: 0
 
-s = {}
-
-s.Intro =
+export Intro =
   label: 'Intro'
   text: -> """
   ||
@@ -79,7 +77,7 @@ s.Intro =
     `J Should have left half an hour ago,` he grumbled.
   """
 
-s.Ch1 =
+export Ch1 =
   label: 'Vailia'
   blocking: true
   required: 'GameOverExploration'
@@ -130,7 +128,7 @@ s.Ch1 =
   apply: ->
     Game.showOverlay('<h1>Chapter 1</h1><h3>Vailia</h3>', 0, 'chapter overlay')
 
-s.ReadyToGo =
+export ReadyToGo =
   label: 'Ready to Set Sail'
   blocking: true
   required: 'GameOverExploration'
@@ -174,7 +172,7 @@ s.ReadyToGo =
     `N Have a good night. Stop worrying.` She looked away and picked up her pen again.
   """
 
-s.FirstStormSick =
+export FirstStormSick =
   label: 'Storm - Aftermath'
   blocking: true
   required: 'GameOverExploration'
@@ -221,7 +219,7 @@ s.FirstStormSick =
     Why hadn't she told him?
   """
 
-s.FirstStormSick2 =
+export FirstStormSick2 =
   label: 'Storm - Aftermath'
   blocking: true
   required: 'GameOverExploration'
@@ -249,7 +247,7 @@ s.FirstStormSick2 =
     `N Nope, just a little something to eat and I'll be back in action. Good work,` she punched him lightly in the shoulder. `N We made it. That's one for the record books.`
   """
 
-s.WastingMoney =
+export WastingMoney =
   label: 'Wasting Money'
   history:
     KatJoins: true
@@ -275,7 +273,7 @@ s.WastingMoney =
     Kat grinned and kissed Nat's cheek again, cutting her off. `K Go, be boring and responsible. I love that about you.` She ran into the crowd before Natalie could formulate a response. She stared after the young woman, one hand rising up to touch her cheek.
   """
 
-s.AsaraArrives =
+export AsaraArrives =
   label: 'Asara Arrives'
   history:
     AsaraAwakens: true
@@ -291,7 +289,7 @@ s.AsaraArrives =
     `J Well, I guess that's that. Are you coming or not?` James smothered a smile, so Natalie hit him too. Apparently Asara wasn't ready to visit Vailia yet.
   """
 
-s.AsaraWorriesJames =
+export AsaraWorriesJames =
   label: 'James Worries'
   history:
     AsaraAwakens: true
@@ -316,7 +314,7 @@ s.AsaraWorriesJames =
     Her sudden flash of anger draining, she sighed and rubbed her temples. `N I know, I know it doesn't make sense. But it's important, and... it'll be ok. Trust me on this one.`
   """
 
-s.AlkeniaRoute =
+export AlkeniaRoute =
   label: 'Route to Alkenia'
   required: 'GameOverExploration'
   extraDays: 15
@@ -350,7 +348,7 @@ s.AlkeniaRoute =
     g.reputation.Alkenia = 0
 
 
-s.MeetMeghan =
+export MeetMeghan =
   label: 'Lady Meghan'
   required: 'GameOverPower'
   history:
@@ -440,7 +438,7 @@ s.MeetMeghan =
     `N ...Yes sir.`
   """
 
-s.Ch2 =
+export Ch2 =
   label: 'Chapter 2 - Kantis'
   required: 'GameOverFun'
   history:
@@ -492,8 +490,3 @@ s.Ch2 =
   apply: ->
     g.chapter = 'Ch2'
     Game.showOverlay('<h1>Chapter 2</h1><h3>Kantis</h3>', 0, 'chapter overlay')
-
-Place.Vailia.stories.Ch1 = Object.keys(s)
-for key, value of s
-  value.place = 'Vailia'
-  Story[key] = value

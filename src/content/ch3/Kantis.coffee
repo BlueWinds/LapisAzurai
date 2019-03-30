@@ -1,6 +1,4 @@
-s = {}
-
-s.AsaraSleepTogether =
+export AsaraSleepTogether =
   label: 'A late night knock'
   history:
     AsaraToVisitSister: true
@@ -30,7 +28,7 @@ s.AsaraSleepTogether =
     Her thoughts raced. Should she turn over, touch shoulders? No, better to let Asara decide what contact, if any, occurred. Perhaps she should... her train of thought was interrupted by Asara curling up against her back. It felt nice. Natalie held still, afraid to disturb anything. She wondered at the courage it must take for Asara to let anyone near her while she slept. If the priestess was going to get any sleep tonight. Natalie doubted she would.
   """
 
-s.ElakimAudience =
+export ElakimAudience =
   label: "House Appolon's Offer"
   history:
     AmuletsEverywhere: true
@@ -118,7 +116,7 @@ s.ElakimAudience =
     `N Yes, of course. Thank you for taking time to speak with me.` Natalie nodded asd stood as he did. A few more polite words and she made her escape.
   """
 
-s.NotBuringCity =
+export NotBuringCity =
   label: 'Relief'
   history:
     AsarasDuel: true
@@ -146,8 +144,3 @@ s.NotBuringCity =
 
     She squeezed Asara's shoulder and kissed the top of her head. `N Of course I'll come.`
   """
-
-Place.Kantis.stories.Ch3 = Object.keys(s)
-for key, value of s
-  value.place = 'Kantis'
-  Story[key] = value

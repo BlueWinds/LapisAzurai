@@ -1,1 +1,1 @@
-Person.Ameliss = {}
+export default {}

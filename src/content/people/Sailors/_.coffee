@@ -1,1 +1,1 @@
-Person.Sailors = {}
+export default {}

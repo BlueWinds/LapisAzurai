@@ -1,6 +1,4 @@
-s = {}
-
-s.JamesBiting =
+export JamesBiting =
   label: 'James sitting peacefully'
   history:
     Ch3Root: true
@@ -21,8 +19,3 @@ s.JamesBiting =
 
     Just like old times.
   '''
-
-Place.Amandais.stories.Ch3 = Object.keys(s)
-for key, value of s
-  value.place = 'Amandais'
-  Story[key] = value

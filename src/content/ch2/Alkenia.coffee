@@ -1,5 +1,4 @@
-s = {}
-s.KatShowsSamsGrave =
+export KatShowsSamsGrave =
   label: "Kat's Grave"
   required: 'GameOverKindness'
   requiredGroup: 'Ch2Routes'
@@ -51,7 +50,7 @@ s.KatShowsSamsGrave =
     `J I understand.` He put a hand reassuringly on her shoulder, the muscles tense beneath his touch. `J Let's go back to the market. Thank you for showing me this.`
   """
 
-s.AlkeniaWeaponsRunning =
+export AlkeniaWeaponsRunning =
   label: 'Forestry'
   history:
     Ch2: true
@@ -73,7 +72,7 @@ s.AlkeniaWeaponsRunning =
     ` Possible. And more generous than I was expecting, to be honest. Take a seat, let's talk.` He dropped the log with a tremendous thud, and gestured her to the impromptu bench. She sat.
   """
 
-s.AlkeniaWeaponsRunning2 =
+export AlkeniaWeaponsRunning2 =
   label: 'Weapons Running'
   history:
     AlkeniaWeaponsRunning: true
@@ -95,7 +94,7 @@ s.AlkeniaWeaponsRunning2 =
     James tilted his head with a little hmph sound. `J I didn't think you'd actually listen. Huh. That can't be the first time you've taken my advice...` His surprise turned into a pleased smile, and he patted her hand where it still lay on his arm. `J No, I think it <i>is</i> a first. Thank you.`
   """
 
-s.AlkeniaRaid =
+export AlkeniaRaid =
   label: 'Nonkenian Raid'
   history:
     NonkeniaArrive: true
@@ -128,7 +127,7 @@ s.AlkeniaRaid =
   """
 
 
-s.DeliciousFood =
+export DeliciousFood =
   label: 'Delicious Food'
   history:
     AsaraJoinsCrew: true
@@ -153,7 +152,7 @@ s.DeliciousFood =
     `K You're the best, thanks. Hey, have you ever had a corn dog before?`
   """
 
-s.KatBringsToys =
+export KatBringsToys =
   label: 'Vailian Toys'
   extraDays: 10
   history:
@@ -177,7 +176,7 @@ s.KatBringsToys =
     She'd planned to spend the rest of the day with them, but... They devoured her stories and listened raptly to her tales of far away ports, but ultimately it was too uncomfortable for Kat to stay longer. This was no longer her world. By sheer chance, she no longer belonged - and by sheer chance her friends remained stuck, hungry and cold. She fled back to the Lapis, and back to her new life.
   """
 
-s.KatCh3 =
+export KatCh3 =
   label: 'Chapter 3 - Kat'
   required: 'GameOverFun'
   requiredGroup: 'Ch2Routes'
@@ -226,7 +225,7 @@ s.KatCh3 =
     <hr />
   """
 
-s.KatCh3Yes =
+export KatCh3Yes =
   label: 'Chapter 3 - Kat'
   requiredGroup: 'Ch2Routes'
   _class: 'KatRoute'
@@ -295,7 +294,7 @@ s.KatCh3Yes =
     g.history.Ch3Root = g.day
     Game.showOverlay('<h1>Chapter 3</h1><h3>Kat</h3>', 0, 'chapter overlay')
 
-s.KatCh3No =
+export KatCh3No =
   label: 'Chapter 3 - Not Kat'
   requiredGroup: 'Ch2Routes'
   _class: 'KatRoute'
@@ -336,8 +335,3 @@ s.KatCh3No =
 
     `N You still have to sew those buttons back on though. Now get off so we can start hunting for them.`
   """
-
-Place.Alkenia.stories.Ch2 = Object.keys(s)
-for key, value of s
-  value.place = 'Alkenia'
-  Story[key] = value

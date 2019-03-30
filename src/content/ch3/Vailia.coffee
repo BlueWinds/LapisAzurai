@@ -1,6 +1,4 @@
-s = {}
-
-s.Ch3Root =
+export Ch3Root =
   label: 'Non-route Ch3 Root'
   history:
     AsaraCh3Yes: true
@@ -24,7 +22,7 @@ s.Ch3Root =
     Placeholder event to serve as 'root' for non-route ch3 events. If you're seeing this in-game, it's a bug.
   '''
 
-s.NonkeniaDiplomatConclusion =
+export NonkeniaDiplomatConclusion =
   label: 'Diplomatic Delivery - Conclusion'
   cost: 0
   history:
@@ -49,7 +47,7 @@ s.NonkeniaDiplomatConclusion =
     He leaned in and grinned, eager for a good story.
   '''
 
-s.ExploreKantis =
+export ExploreKantis =
   label: 'Deeper into Kantian Waters'
   history:
     Ch3Root: true
@@ -73,7 +71,7 @@ s.ExploreKantis =
     `N I'll see what I can do.`
   """
 
-s.AboutAntinua =
+export AboutAntinua =
   label: "Seeking Meghan's Help"
   history:
     AsaraToVisitSister: true
@@ -115,7 +113,7 @@ s.AboutAntinua =
     Natalie thanked her again and took her leave. On her way back to the Lapis she clasped her hands behind her back to keep them from shaking.
   """
 
-s.AsarasChallenge =
+export AsarasChallenge =
   label: "Asara's Challenge"
   cost: 60
   history:
@@ -171,7 +169,7 @@ s.AsarasChallenge =
     The sisters locked eyes. ` Very vell. The full moon is in two days. I'll see you then.`
   """
 
-s.AsarasChallenge2 =
+export AsarasChallenge2 =
   label: "Asara's Challenge"
   blocking: true
   history:
@@ -199,7 +197,7 @@ s.AsarasChallenge2 =
     No answer. She hugged Asara harder and kissed the top of her head.
   """
 
-s.AsarasDuel =
+export AsarasDuel =
   label: 'Moonlit Confrontation'
   blocking: true
   history:
@@ -250,7 +248,7 @@ s.AsarasDuel =
     Asara clung to Natalie like a drowning woman, sobbing slowly drawing to a close, ragged breaths easing as pain subsided. Neither of them spoke. Glass smouldered around the edges of the burned circle.
   """
 
-s.AboutUTC =
+export AboutUTC =
   label: "Seeking Meghan's Help"
   blocking: true
   history:
@@ -305,9 +303,3 @@ s.AboutUTC =
 
     `N Of course.`
   """
-
-Place.Vailia.stories.Ch3 = Object.keys(s)
-Place.Vailia.stories.Ch3.push('JamesCh3Yes')
-for key, value of s
-  value.place = 'Vailia'
-  Story[key] = value
