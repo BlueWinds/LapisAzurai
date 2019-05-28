@@ -1,4 +1,5 @@
 export NonkeniaArrive =
+  where: 'Nonkenia|Ch2'
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -33,6 +34,7 @@ export NonkeniaArrive =
   """
 
 export NonkeniaDiplomatDelivery =
+  where: 'Nonkenia|Ch2'
   label: 'Deliver the "Diplomat"'
   cost: 0
   history:
@@ -60,6 +62,7 @@ export NonkeniaDiplomatDelivery =
   """
 
 export AsaraTalkEyes =
+  where: 'Nonkenia|Ch2'
   label: 'Talk with Asara - Silver Eyes'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
@@ -86,6 +89,7 @@ export AsaraTalkEyes =
   """
 
 export AsaraTalkSisters =
+  where: 'Nonkenia|Ch2'
   label: 'Talk with Asara - Sisters'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
@@ -111,6 +115,7 @@ export AsaraTalkSisters =
   """
 
 export JamesConfusion =
+  where: 'Nonkenia|Ch2'
   label: 'Tension'
   history:
     JamesParents: true
@@ -134,6 +139,7 @@ export JamesConfusion =
   """
 
 export NonkeniaHunters =
+  where: 'Nonkenia|Ch2'
   label: 'Hunters'
   history:
     NonkeniaArrive: true

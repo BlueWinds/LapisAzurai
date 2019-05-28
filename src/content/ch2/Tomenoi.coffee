@@ -1,4 +1,5 @@
 export TomenoiArrive =
+  where: 'Tomenoi|Ch2'
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -37,6 +38,7 @@ export TomenoiArrive =
   """
 
 export AsaraJoinsCrew =
+  where: 'Tomenoi|Ch2'
   label: 'Asara Joins'
   required: 'GameOverKindness'
   extraDays: 65
@@ -68,6 +70,7 @@ export AsaraJoinsCrew =
   """
 
 export StrandedShip =
+  where: 'Tomenoi|Ch2'
   label: 'Stranded Ship'
   history:
     KantisRegion3: true
@@ -103,6 +106,7 @@ export StrandedShip =
   """
 
 export KantisRegion =
+  where: 'Tomenoi|Ch2'
   label: 'Route to Kantis'
   required: 'GameOverExploration'
   extraDays: 10
@@ -127,6 +131,7 @@ export KantisRegion =
   """
 
 export KantisRegion2 =
+  where: 'Tomenoi|Ch2'
   label: 'Route to Kantis'
   required: 'GameOverLove'
   extraDays: 30
@@ -164,6 +169,7 @@ export KantisRegion2 =
   """
 
 export KantisRegion3 =
+  where: 'Tomenoi|Ch2'
   label: 'Route to Kantis'
   blocking: true
   required: 'GameOverLove'
@@ -191,6 +197,7 @@ export KantisRegion3 =
     g.reputation.Kantis = 0
 
 export TomenoiHistory =
+  where: 'Tomenoi|Ch2'
   label: 'History'
   history:
     TomenoiArrive: true
@@ -216,6 +223,7 @@ export TomenoiHistory =
   """
 
 export SailorTroubles =
+  where: 'Tomenoi|Ch2'
   label: 'Sailor Troubles'
   history:
     KantisRegion3: true

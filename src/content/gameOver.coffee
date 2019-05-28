@@ -1,4 +1,7 @@
-Story.GameOverExploration =
+import Place from 'game/Place'
+import Story from 'game/Story'
+
+export GameOverExploration =
   label: 'Game Over'
   text: -> """
   ||
@@ -9,7 +12,7 @@ Story.GameOverExploration =
     #{gameOverText()}
   """
 
-Story.GameOverPower =
+export GameOverPower =
   label: 'Game Over'
   text: -> """
   ||
@@ -20,7 +23,7 @@ Story.GameOverPower =
     #{gameOverText()}
   """
 
-Story.GameOverFun =
+export GameOverFun =
   label: 'Game Over'
   text: -> """
   ||
@@ -33,7 +36,7 @@ Story.GameOverFun =
     #{gameOverText()}
   """
 
-Story.GameOverKindness =
+export GameOverKindness =
   label: 'Game Over'
   text: -> """
   ||
@@ -44,7 +47,7 @@ Story.GameOverKindness =
     #{gameOverText()}
   """
 
-Story.GameOverLove =
+export GameOverLove =
   label: 'Game Over'
   text: -> """
   ||
@@ -55,7 +58,7 @@ Story.GameOverLove =
     #{gameOverText()}
   """
 
-Story.GameOverSadness =
+export GameOverSadness =
   label: 'Game Over'
   text: -> """
   ||
@@ -66,7 +69,7 @@ Story.GameOverSadness =
     #{gameOverText()}
   """
 
-Story.GameOverTrust =
+export GameOverTrust =
   label: 'Game Over'
   text: -> """
   ||
@@ -77,7 +80,7 @@ Story.GameOverTrust =
     #{gameOverText()}
   """
 
-Story.GameOverViolence =
+export GameOverViolence =
   label: 'Game Over'
   text: -> """
   ||
@@ -88,7 +91,7 @@ Story.GameOverViolence =
     #{gameOverText()}
   """
 
-Story.GameOverSorrow =
+export GameOverSorrow =
   label: 'Game Over'
   text: -> """
   ||
@@ -102,9 +105,9 @@ Story.GameOverSorrow =
   """
 
 gameOverText = ->
-  story = Story.gameIsOver()
+  end = Story.gameIsOver()
   """
   ||-
-    <center><i>Time has run out for "<b>#{Story[story].label}</b>" at #{Place[Story[story].place].name}. Natalie and her friends will carry on, but the story is incomplete...</i></center>
+    <center><i>Time has run out for "<b>#{end.label}</b>" at #{Place[end.place].name}. Natalie and her friends will carry on, but the story is incomplete...</i></center>
 
   """

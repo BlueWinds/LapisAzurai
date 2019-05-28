@@ -1,4 +1,8 @@
+import Game from 'game/Game'
+import Story from 'game/Story'
+
 export KatShowsSamsGrave =
+  where: 'Alkenia|Ch2'
   label: "Kat's Grave"
   required: 'GameOverKindness'
   requiredGroup: 'Ch2Routes'
@@ -51,6 +55,7 @@ export KatShowsSamsGrave =
   """
 
 export AlkeniaWeaponsRunning =
+  where: 'Alkenia|Ch2'
   label: 'Forestry'
   history:
     Ch2: true
@@ -73,6 +78,7 @@ export AlkeniaWeaponsRunning =
   """
 
 export AlkeniaWeaponsRunning2 =
+  where: 'Alkenia|Ch2'
   label: 'Weapons Running'
   history:
     AlkeniaWeaponsRunning: true
@@ -95,6 +101,7 @@ export AlkeniaWeaponsRunning2 =
   """
 
 export AlkeniaRaid =
+  where: 'Alkenia|Ch2'
   label: 'Nonkenian Raid'
   history:
     NonkeniaArrive: true
@@ -128,6 +135,7 @@ export AlkeniaRaid =
 
 
 export DeliciousFood =
+  where: 'Alkenia|Ch2'
   label: 'Delicious Food'
   history:
     AsaraJoinsCrew: true
@@ -153,6 +161,7 @@ export DeliciousFood =
   """
 
 export KatBringsToys =
+  where: 'Alkenia|Ch2'
   label: 'Vailian Toys'
   extraDays: 10
   history:
@@ -177,6 +186,7 @@ export KatBringsToys =
   """
 
 export KatCh3 =
+  where: 'Alkenia|Ch2'
   label: 'Chapter 3 - Kat'
   required: 'GameOverFun'
   requiredGroup: 'Ch2Routes'
@@ -218,7 +228,7 @@ export KatCh3 =
 
     The thief laughed and shoved Natalie playfully, the serious mood gone as quickly as it had come. The twinkle was back in her eye. `K No fair, you first. Love or lust?`
 
-    <button onclick="Story.continueWith(event, 'KatCh3Yes')">`N I think both?`</button> <button onclick="Story.continueWith(event, 'KatCh3No')">`N Just having fun.`</button>
+    <button onclick="continueWith(event, 'KatCh3Yes')">`N I think both?`</button> <button onclick="continueWith(event, 'KatCh3No')">`N Just having fun.`</button>
 
     <i>Saying you love her will commit you to Kat in Chapter 3, while an hour of fun will lock out her route. No second chances.</i>
 
@@ -226,6 +236,7 @@ export KatCh3 =
   """
 
 export KatCh3Yes =
+  where: 'Alkenia|Ch2'
   label: 'Chapter 3 - Kat'
   requiredGroup: 'Ch2Routes'
   _class: 'KatRoute'
@@ -295,6 +306,7 @@ export KatCh3Yes =
     Game.showOverlay('<h1>Chapter 3</h1><h3>Kat</h3>', 0, 'chapter overlay')
 
 export KatCh3No =
+  where: 'Alkenia|Ch2'
   label: 'Chapter 3 - Not Kat'
   requiredGroup: 'Ch2Routes'
   _class: 'KatRoute'

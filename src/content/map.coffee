@@ -1,3 +1,36 @@
+import Cargo from 'game/Cargo'
+import Place from 'game/Place'
+
+export startingGame =
+  version: 0
+  day: 0
+  scroll: 0
+  chapter: 'Ch1'
+  cargo: []
+  damage: 0
+  availableCargo: []
+  jobFocus: ''
+  jobSearch: {}
+  showHelp: true
+  map:
+    from: 'Vailia'
+    to: ''
+    distance: 0
+    delay: 0
+  lastTravelEvent: 0
+  lastStorm: 0
+  reputation:
+    Vailia: 5
+  people:
+    Natalie:
+      xp: 0
+      skills: {}
+    James:
+      xp: 0
+      skills: {}
+  history:
+    Intro: 0
+
 Cargo.goods =
   'Alchemical Reagents': [12, 7]
   'Allspice': [8, 6]

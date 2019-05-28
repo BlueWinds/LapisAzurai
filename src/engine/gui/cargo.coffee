@@ -1,24 +1,33 @@
 import $ from 'jquery'
 
+import Game from 'game/Game'
+import Cargo from 'game/Cargo'
+import Place from 'game/Place'
+
+import {clickSearchSkill, searchSpecializeEnabled} from 'content/people/skillEffects'
+
 remainingDiv = (days) ->
   if days >= 0
     """<div><span class="remaining">#{days} days to deliver</span></div>"""
   else
     '''<div><span class="remaining expired">Expired</span></div>'''
 
+export drawCargo = ->
+  $('header .cargo').html "#{g.cargo.length}/#{Cargo.maxCargo()} Cargo"
+
+  byRemaining = (a, b)-> a.start - b.start
+
+  c = g.cargo.sort(byRemaining).map((c)->
+    time = Cargo.deliveryTimeRemaining(c)
+    "• #{c.name} from #{Place[c.from].name} to #{Place[c.to].name}, #{if time then time + ' days to deliver' else 'Expired'}"
+  )
+  $('header .cargo').attr 'title', c.join('\n')
+
 $.extend Cargo, {
-  drawCargo: ->
-    $('header .cargo').html "#{g.cargo.length}/#{Cargo.maxCargo()} Cargo"
-
-    byRemaining = (a, b)-> a.start - b.start
-
-    c = g.cargo.sort(byRemaining).map((c)->
-      time = Cargo.deliveryTimeRemaining(c)
-      "• #{c.name} from #{Place[c.from].name} to #{Place[c.to].name}, #{if time then time + ' days te deliver' else 'Expired'}"
-    )
-    $('header .cargo').attr 'title', c.join('\n')
-
   drawSearchLabel: (place)->
+    unless searchSpecializeEnabled()
+      return '''<span class="label">Search for jobs</span>'''
+
     potentialDests = Object.keys(Cargo.potentialDestinations(place))
     makeDestOption = (dest)->"<option value=#{dest} #{if g.jobFocus is dest then 'selected' else ''}>#{Place[dest].name}</option>"
 
@@ -102,6 +111,7 @@ $.extend Cargo, {
 
     Game.showPassDayOverlay(undefined, 'Repaired the ship')
     Game.animateSuccess('.cargoSearch .success')
+    clickSearchSkill()
 
   clickAccept: (i)->
     cargo = g.availableCargo[i]

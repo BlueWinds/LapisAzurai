@@ -1,4 +1,5 @@
 export KatsReservations =
+  where: 'Tomenoi|Ch3'
   label: "Kat's Reservations"
   cost: 0
   history:
@@ -59,6 +60,7 @@ export KatsReservations =
   """
 
 export AntinuaAsksKantis =
+  where: 'Tomenoi|Ch3'
   label: "Antinua's Questions"
   cost: 0
   history:

@@ -1,4 +1,5 @@
 export AsaraToVisitSister =
+  where: 'Lephai|Ch3'
   label: 'Desert Horizons'
   cost: 3
   history:
@@ -35,6 +36,7 @@ export AsaraToVisitSister =
   """
 
 export AmuletsEverywhere =
+  where: 'Lephai|Ch3'
   label: 'Another Amulet'
   history:
     KatCh3Yes: true

@@ -1,5 +1,10 @@
 import $ from 'jquery'
 
+import Cargo from 'game/Cargo'
+import Person from 'game/Person'
+import Place from 'game/Place'
+import Story from 'game/Story'
+
 queue = []
 
 help = (selector, text)->
@@ -46,13 +51,7 @@ clearHelp = ->
 
 haventSailedYet = -> g.map.from is 'Vailia' and not g.map.to and not g.history.MtJuliaArrive
 
-# During tutorial, don't let them sail until they've accepted cargo
-oldCanSail = Story.canSail
-Story.canSail = ->
-  if g.day is 1 then return false
-  return oldCanSail()
-
-enterMapHelp = ->
+mapHelp = ->
   if Story.gameIsOver() then return
   if g.history.MtJuliaArrive then return
 
@@ -70,15 +69,11 @@ enterMapHelp = ->
       help('header', "The number of days remaining is absolute - it's usually best to advance the story as soon as possible, so you can see the next steps.")
   , 100
 
-oldEnterMap = Story.enterMap
-Story.enterMap = ->
-  oldEnterMap()
+export enterMapHelp = ->
   clearHelp()
-  enterMapHelp()
+  mapHelp()
 
-oldShowOverview = Place.showOverview
-Place.showOverview = (place = $('.place').attr('place') or g.map.from, duration)->
-  oldShowOverview(place, duration)
+export showOverviewHelp = (place, duration)->
   clearHelp()
 
   setTimeout ->
@@ -140,16 +135,11 @@ firstVailiaHelp = (place)->
 
 noSkillSelected = -> Object.keys(g.people.Natalie.skills).length is 0 and Object.keys(g.people.James.skills).length is 0
 
-oldHideOverview = Place.hideOverview
-Place.hideOverview = (duration)->
-  oldHideOverview(duration)
+export hideOverviewHelp = ->
   clearHelp()
   setTimeout ->
     if $('#content').css('display') is 'none'
-      enterMapHelp()
+      mapHelp()
   , 0
 
-oldStoryDisplay = Story.display
-Story.display = (story, speed)->
-  oldStoryDisplay(story, speed)
-  clearHelp()
+export displayStoryHelp = -> clearHelp()

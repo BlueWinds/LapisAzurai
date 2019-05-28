@@ -1,4 +1,7 @@
-import people from '../../content/people/_.coffee'
+import {wordJoin} from 'game/util'
+
+import people from 'content/people'
+import {xpNeededSkill} from 'content/people/skillEffects'
 
 samplePerson =
   xp: 100
@@ -19,8 +22,8 @@ sampleData =
 
   quoteColor: '#8CDAFF'
 
-window.Person = {
-  xpNeeded: (level)-> Math.round(Math.pow(level, 1.5) * 3)
+Person = {
+  xpNeeded: (level)-> Math.round(Math.pow(level, 1.5) * 3 + xpNeededSkill())
 
   level: (xp)->
     l = 0
@@ -38,10 +41,12 @@ window.Person = {
 
     unmetAnd = (data.requiresAnd or []).filter((s)-> not skills[s])
     if unmetAnd.length
-      return unmetAnd.map((s)-> people[person].skills[s].name or s).wordJoin()
+      return wordJoin(unmetAnd.map((s)-> people[person].skills[s].name or s))
 
     if data.requiresOr and not data.requiresOr.some((s)-> skills[s])
-      return data.requiresOr.map((s)-> people[person].skills[s].name or s).wordJoin('or')
+      return wordJoin(data.requiresOr.map((s)-> people[person].skills[s].name or s), 'or')
 
     return ''
 }
+
+export default Person

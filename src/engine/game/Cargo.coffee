@@ -1,3 +1,11 @@
+import {choice, weightedChoice} from 'game/util'
+import Game from 'game/Game'
+import Place from 'game/Place'
+import Story, {storiesAt} from 'game/Story'
+
+import * as content from 'content'
+import {acceptTimeRemainingSkill, cargoCreateSkill, cargoDeliverSkill, cargoSearchChanceSkill, deliveryTimeRemainingSkill, maxCargoSkill} from 'content/people/skillEffects'
+
 sampleCargo =
   name: 'Fish Hooks'
   from: 'Vailia'
@@ -5,20 +13,20 @@ sampleCargo =
   start: 12 # Game day
   reputation: [3, 5] # This cargo is worth 3 reputation at the origin and 5 at the destination
 
-window.Cargo =
+Cargo =
   goods: {}
   acceptTimeRemaining: (cargo)->
     passed = g.day - cargo.start
-    return 30 - passed
+    return 30 - passed + acceptTimeRemainingSkill()
 
-  maxCargo: -> 3
+  maxCargo: -> 3 + maxCargoSkill()
 
   canPickUpDeliver: ->
-    not Story.visibleStories(Place[g.map.from].stories[g.chapter]).some (p)-> Story[p].blocking
+    not Story.visibleStories(storiesAt(g.map.from, g.chapter)).some (p)-> content[p].blocking
 
   searchChance: (place)->
     baseChance = Place[place].jobChance * (if g.reputation[place] > 0 then 1 else 0.5)
-    return baseChance + (g.jobSearch[place] or 0)
+    return baseChance + (g.jobSearch[place] or 0) + cargoSearchChanceSkill()
 
   searchCost: (place)->
     return Math.min(1, g.reputation[place])
@@ -26,7 +34,7 @@ window.Cargo =
   deliveryTimeRemaining: (cargo)->
     passed = g.day - cargo.start
     travel = Place.travelDays(cargo.from, cargo.to)
-    return 15 + travel - passed
+    return 15 + travel - passed + deliveryTimeRemainingSkill()
 
   passDay: ->
     g.availableCargo = g.availableCargo.filter (cargo)->
@@ -43,11 +51,12 @@ window.Cargo =
     return dest
 
   create: (from)->
-    to = Math.weightedChoice(Cargo.potentialDestinations(from))
+    to = weightedChoice(Cargo.potentialDestinations(from))
     unless to then return
-    name = Math.choice Place[from].goods[to]
+    name = choice(Place[from].goods[to])
     reputation = [Cargo.goods[name][0], Cargo.goods[name][1]]
-    return {name, from, to, start: g.day, reputation}
+    cargo = {name, from, to, start: g.day, reputation}
+    return cargoCreateSkill(cargo)
 
   accept: (cargo)->
     g.availableCargo = g.availableCargo.filter (c)-> c isnt cargo
@@ -65,4 +74,6 @@ window.Cargo =
     Game.passDay()
     Game.applyEffects(effects)
 
-    return effects
+    return cargoDeliverSkill(effects)
+
+export default Cargo

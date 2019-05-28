@@ -1,4 +1,5 @@
 export ThievingKat =
+  where: 'Nonkenia|Ch3'
   label: "Kat's Thievery"
   history:
     Ch3Root: true

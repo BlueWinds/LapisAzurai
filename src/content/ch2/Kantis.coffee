@@ -1,4 +1,11 @@
+import Game from 'game/Game'
+import Place from 'game/Place'
+import Story from 'game/Story'
+
+import {drawMap} from 'gui/map'
+
 export KantisArrive =
+  where: 'Kantis|Ch2'
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -30,6 +37,7 @@ export KantisArrive =
   """
 
 export VisitElakim =
+  where: 'Kantis|Ch2'
   label: 'Visit Elakim'
   required: 'GameOverPower'
   history:
@@ -78,6 +86,7 @@ export VisitElakim =
   """
 
 export KantisPots =
+  where: 'Kantis|Ch2'
   label: 'Pots, Pans and Complaints'
   history:
     VisitElakim: true
@@ -96,6 +105,7 @@ export KantisPots =
   """
 
 export KatsDayOut =
+  where: 'Kantis|Ch2'
   label: "Kat's day out"
   history:
     VisitElakim: true
@@ -112,6 +122,7 @@ export KatsDayOut =
   """
 
 export AsaraCh3 =
+  where: 'Kantis|Ch2'
   label: 'Chapter 3 - Asara'
   required: 'GameOverLove'
   requiredGroup: 'Ch2Routes'
@@ -136,7 +147,7 @@ export AsaraCh3 =
 
     `A I'm sorry, I just...` Asara's voice came out strangled.
 
-    <button onclick="Story.continueWith(event, 'AsaraCh3Yes')">`N Please, don't apologize,`</button> <button onclick="Story.continueWith(event, 'AsaraCh3No')">`N Are you sure?`</button>
+    <button onclick="continueWith(event, 'AsaraCh3Yes')">`N Please, don't apologize,`</button> <button onclick="continueWith(event, 'AsaraCh3No')">`N Are you sure?`</button>
 
     <i>Accepting her will commit you to Asara in Chapter 3, while hesitating will lock out her route. No second chances.</i>
 
@@ -144,6 +155,7 @@ export AsaraCh3 =
   """
 
 export AsaraCh3Yes =
+  where: 'Kantis|Ch2'
   label: 'Chapter 3 - Asara'
   requiredGroup: 'Ch2Routes'
   _class: 'AsaraRoute'
@@ -167,9 +179,10 @@ export AsaraCh3Yes =
     g.chapter = 'Ch3'
     g.history.Ch3Root = g.day
     Game.showOverlay('<h1>Chapter 3</h1><h3>Asara</h3>', 0, 'chapter overlay')
-    Place.drawMap()
+    drawMap()
 
 export AsaraCh3No =
+  where: 'Kantis|Ch2'
   label: 'Chapter 3 - Not Asara'
   requiredGroup: 'Ch2Routes'
   _class: 'AsaraRoute'

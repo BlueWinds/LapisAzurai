@@ -1,4 +1,8 @@
+import Game from 'game/Game'
+import Story from 'game/Story'
+
 export TomenoiRoute =
+  where: 'Vailia|Ch2'
   label: 'Route to Kantis'
   required: 'GameOverExploration'
   history:
@@ -40,6 +44,7 @@ export TomenoiRoute =
     g.reputation.Tomenoi = 0
 
 export JamesUpsetMagic =
+  where: 'Vailia|Ch2'
   label: 'James is Upset'
   required: 'GameOverTrust'
   history:
@@ -67,6 +72,7 @@ export JamesUpsetMagic =
   """
 
 export NonkeniaRoute =
+  where: 'Vailia|Ch2'
   label: 'Nonkenia Rutter'
   required: 'GameOverExploration'
   history:
@@ -95,6 +101,7 @@ export NonkeniaRoute =
     g.reputation.Nonkenia = 0
 
 export NonkeniaDiplomat =
+  where: 'Vailia|Ch2'
   label: 'Diplomatic Delivery'
   cost: 3
   history:
@@ -127,6 +134,7 @@ export NonkeniaDiplomat =
   """
 
 export TrainCombatNat =
+  where: 'Vailia|Ch2'
   label: 'Lessons for Natalie'
   extraDays: 100
   history:
@@ -146,6 +154,7 @@ export TrainCombatNat =
   """
 
 export TrainCombatJames =
+  where: 'Vailia|Ch2'
   label: 'Lessons for James'
   history:
     TrainCombatNat: true
@@ -169,6 +178,7 @@ export TrainCombatJames =
   """
 
 export TrainCombatKat =
+  where: 'Vailia|Ch2'
   label: 'Lessons for Kat'
   history:
     TrainCombatNat: true
@@ -192,6 +202,7 @@ export TrainCombatKat =
   """
 
 export TrainCombatAsara =
+  where: 'Vailia|Ch2'
   label: 'Lessons for Asara'
   history:
     TrainCombatNat: true
@@ -213,6 +224,7 @@ export TrainCombatAsara =
   """
 
 export IronSandsRutter =
+  where: 'Vailia|Ch2'
   label: 'Route to Iron Sands'
   required: 'GameOverExploration'
   extraDays: 15
@@ -261,6 +273,7 @@ export IronSandsRutter =
   """
 
 export IronSandsRutter2 =
+  where: 'Vailia|Ch2'
   label: 'Route to Iron Sands'
   required: 'GameOverExploration'
   history:
@@ -305,6 +318,7 @@ export IronSandsRutter2 =
     g.reputation.IronSands = 0
 
 export AsaraTalkFlames =
+  where: 'Vailia|Ch2'
   label: 'Talk with Asara - Flames'
   history:
     AsarasMagic: true
@@ -334,6 +348,7 @@ export AsaraTalkFlames =
   """
 
 export AsaraTalkNotMagic =
+  where: 'Vailia|Ch2'
   label: 'Talk with Asara - Magic'
   history:
     AsaraTalkFlames: true
@@ -357,6 +372,7 @@ export AsaraTalkNotMagic =
   """
 
 export AsaraTalkWitch =
+  where: 'Vailia|Ch2'
   label: 'Talk with Asara - Witch'
   history:
     AsaraTalkNotMagic: true
@@ -378,6 +394,7 @@ export AsaraTalkWitch =
   """
 
 export JamesParents =
+  where: 'Vailia|Ch2'
   label: "James' Parents"
   required: 'GameOverTrust'
   requiredGroup: 'Ch2Routes'
@@ -402,6 +419,7 @@ export JamesParents =
   """
 
 export JamesParents2 =
+  where: 'Vailia|Ch2'
   label: "James' Parents"
   history:
     JamesParents: true
@@ -437,6 +455,7 @@ export JamesParents2 =
   """
 
 export TomenoiHistory2 =
+  where: 'Vailia|Ch2'
   label: 'History'
   history:
     TomenoiHistory: true
@@ -490,6 +509,7 @@ export TomenoiHistory2 =
   """
 
 export MeghanSuitors =
+  where: 'Vailia|Ch2'
   label: "Lady Meghan's Problem"
   extraDays: 30
   history:
@@ -569,6 +589,7 @@ export MeghanSuitors =
   """
 
 export MeghanSuitors2 =
+  where: 'Vailia|Ch2'
   label: "Lady Meghan's Problem"
   blocking: true
   history:
@@ -599,6 +620,7 @@ export MeghanSuitors2 =
   """
 
 export JamesCh3 =
+  where: 'Vailia|Ch2'
   label: 'Chapter 3 - James'
   required: 'GameOverSorrow'
   requiredGroup: 'Ch2Routes'
@@ -656,7 +678,7 @@ export JamesCh3 =
 
     He gave her a nasty look, and she snapped her mouth shut. `J I suppose now is as good a time as any.`
 
-    She reached over and gave his shoulder a squeeze. <button onclick="Story.continueWith(event, 'JamesCh3Yes')">`N I'll come with you.`</button> <button onclick="Story.continueWith(event, 'JamesCh3No')">`N Take as much time as you need.`</button>
+    She reached over and gave his shoulder a squeeze. <button onclick="continueWith(event, 'JamesCh3Yes')">`N I'll come with you.`</button> <button onclick="continueWith(event, 'JamesCh3No')">`N Take as much time as you need.`</button>
 
     <i>Going with him will commit you to James in Chapter 3, while sending him alone will lock out his route. No second chances.</i>
 
@@ -664,6 +686,7 @@ export JamesCh3 =
   """
 
 export JamesCh3Yes =
+  where: 'Vailia|Ch2'
   label: 'Chapter 3 - James'
   requiredGroup: 'Ch2Routes'
   _class: 'JamesRoute'
@@ -743,6 +766,7 @@ export JamesCh3Yes =
     Game.showOverlay('<h1>Chapter 3</h1><h3>James</h3>', 0, 'chapter overlay')
 
 export JamesCh3No =
+  where: 'Vailia|Ch2'
   label: 'Chapter 3 - Not James'
   requiredGroup: 'Ch2Routes'
   _class: 'JamesRoute'

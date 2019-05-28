@@ -1,4 +1,5 @@
 export AlkeniaArrive =
+  where: 'Alkenia|Ch1'
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -30,6 +31,7 @@ export AlkeniaArrive =
   """
 
 export Pickpocket =
+  where: 'Alkenia|Ch1'
   label: 'Pickpocket'
   required: 'GameOverFun'
   blocking: true
@@ -61,6 +63,7 @@ export Pickpocket =
   """
 
 export MeetKat =
+  where: 'Alkenia|Ch1'
   label: 'Catching the Pickpocket'
   required: 'GameOverFun'
   extraDays: 34
@@ -109,6 +112,7 @@ export MeetKat =
   """
 
 export KatTrial =
+  where: 'Alkenia|Ch1'
   label: "Kat's Trial"
   required: 'GameOverFun'
   cost: 0
@@ -149,6 +153,7 @@ export KatTrial =
   """
 
 export KatMeetsJames =
+  where: 'Alkenia|Ch1'
   label: 'Kat and James'
   blocking: true
   cost: 0
@@ -182,6 +187,7 @@ export KatMeetsJames =
   """
 
 export KatStorm =
+  where: 'Alkenia|Ch1'
   label: 'Out in a Storm'
   required: 'GameOverKindness'
   history:
@@ -218,6 +224,7 @@ export KatStorm =
   """
 
 export KatStorm2 =
+  where: 'Alkenia|Ch1'
   label: 'Out of the Storm'
   blocking: true
   required: 'GameOverKindness'
@@ -259,6 +266,7 @@ export KatStorm2 =
   """
 
 export KatJoins =
+  where: 'Alkenia|Ch1'
   label: 'Kat Joins'
   required: 'GameOverFun'
   history:

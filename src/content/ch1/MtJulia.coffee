@@ -1,4 +1,5 @@
 export MtJuliaArrive =
+  where: 'MtJulia|Ch1'
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -27,6 +28,7 @@ export MtJuliaArrive =
   """
 
 export CheckShip =
+  where: 'MtJulia|Ch1'
   label: 'Inspect the Ship'
   history:
     MtJuliaArrive: true
@@ -46,6 +48,7 @@ export CheckShip =
   """
 
 export VisitInn =
+  where: 'MtJulia|Ch1'
   label: 'Visit Inn'
   history:
     MtJuliaArrive: true
@@ -70,6 +73,7 @@ export VisitInn =
   """
 
 export MeetAsara =
+  where: 'MtJulia|Ch1'
   label: 'Castaway'
   required: 'GameOverKindness'
   history:
@@ -132,6 +136,7 @@ export MeetAsara =
   """
 
 export AsaraAwakens =
+  where: 'MtJulia|Ch1'
   label: 'Castaway'
   required: 'GameOverKindness'
   history:

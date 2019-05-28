@@ -1,43 +1,11 @@
 import $ from 'jquery'
 
-p = 'travel/'
+import Game from 'game/Game'
+import Place from 'game/Place'
+import {choice} from 'game/util'
+import {changeSection} from 'gui/story'
 
-$.extend Place.travel.Sail, {
-  delayOccurs: (from, to, distance)->
-    if g.history.FirstStormSick then return Place.travel.Sail.randomStormOccurs()
-    # Always trigger a storm on the trip back to Vailia when we're almost in port
-    if g.history.MtJuliaArrive and not g.history.FirstStorm and distance < 75 then return true
-    # No storms until we've had the intro event about Natalie
-    return false
-
-  # Split from the main function to remove story-specific elements
-  minStormInterval: -> 70
-  randomStormOccurs: ->
-    min = Place.travel.Sail.minStormInterval()
-    cycle = 100
-    return g.lastStorm + Math.random() * cycle + min < g.day
-
-  delayDailyDamage: (from, to, distance)->
-    damage = 5 * (Math.random() + 0.5)
-    # Damage has been prevented, probably by one of the below events
-    if g.preventNextDamage
-      if g.preventNextDamage > damage
-        g.preventNextDamage -= damage
-        damage = 0
-      else
-        damage -= g.preventNextDamage
-        g.preventNextDamage = 0
-    return damage
-
-  delayDuration: (from, to, distance)-> 4 * (Math.random() + 0.5)
-  delayImages: [
-    p + 'DeckStorm.jpg',
-    p + 'SailingStorm.jpg'
-  ]
-}
-
-s = {}
-s.FirstStorm =
+export FirstStorm =
   label: 'Storm'
   blocking: true
   history:
@@ -107,62 +75,58 @@ s.FirstStorm =
   apply: ->
     g.map.delay = 3
 
-Place.travel.Sail.lostCargo = ->
-  cargo = Math.choice(g.cargo)
+window.stormLostCargo = ->
+  cargo = choice(g.cargo)
   g.cargo = g.cargo.filter((c)-> c isnt cargo)
   g.nextDayDescription = "Lost #{cargo.name} destined for #{Place[cargo.to].name}"
-  Story.changeSection(1, true)
+  changeSection(1, true)
 
-Place.travel.Sail.extraDamage = ->
+window.stormExtraDamage = ->
   damage = Math.random() * 10 + 5
   g.damage += damage
   g.nextDayDescription = "#{Math.round(damage)} extra damage"
-  Story.changeSection(1, true)
+  changeSection(1, true)
 
-Place.travel.Sail.extraDelay = ->
+window.stormExtraDelay = ->
   delay = Math.random() + 1
   g.map.delay += delay
   g.nextDayDescription = "Delayed #{Math.round(delay)} days"
-  Story.changeSection(1, true)
+  changeSection(1, true)
 
-Place.travel.Sail.makeProgress = ->
+window.stormMakeProgress = ->
   distance = (Math.random() + 1) * Game.travelPxPerDay('Sail')
   g.map.speedBonus = distance
   g.nextDayDescription = 'Kept sailing despite the danger'
-  Story.changeSection(1, true)
+  changeSection(1, true)
 
-Place.travel.Sail.reduceDamage = ->
+window.stormReduceDamage = ->
   damage = Math.random() * 15 + 5
   g.preventNextDamage += damage
   g.nextDayDescription = "#{Math.round(damage)} damage prevented"
-  Story.changeSection(1, true)
+  changeSection(1, true)
 
-s.StormDropOrDamage =
+export StormDropOrDamage =
   label: 'Storm'
   minCargo: 1
   extraDays: 10000
   text: -> """
   |||| travel/SailingStorm
-    Seas heaved, the hull groaned, masts cracked. A ferocious squall blew in without warning, giving the crew scant time to prepare. James rushed to help <button onclick='Place.travel.Sail.lostCargo();'>douse the sails</button> or <button onclick='Place.travel.Sail.extraDamage();'>secure the cargo</button> before things grew worse.
+    Seas heaved, the hull groaned, masts cracked. A ferocious squall blew in without warning, giving the crew scant time to prepare. James rushed to help <button onclick='stormLostCargo();'>douse the sails</button> or <button onclick='stormExtraDamage();'>secure the cargo</button> before things grew worse.
   """
 
-s.StormDropOrDelay =
+export StormDropOrDelay =
   label: 'Storm'
   minCargo: 1
   extraDays: 10000
   text: -> """
   |||| travel/CabinStorm
-     James slammed the door in the face of storm outside, and took a moment to shake the water from his hair before he spoke. `J Nat, we're taking on water faster than we can pump it out. We need to <button onclick='Place.travel.Sail.lostCargo();'>lighten the load</button> or put <button onclick='Place.travel.Sail.extraDelay();'>more men on the pumps</button>.`
+     James slammed the door in the face of storm outside, and took a moment to shake the water from his hair before he spoke. `J Nat, we're taking on water faster than we can pump it out. We need to <button onclick='stormLostCargo();'>lighten the load</button> or put <button onclick='stormExtraDelay();'>more men on the pumps</button>.`
   """
 
-s.StormSpeedOrSafety =
+export StormSpeedOrSafety =
   label: 'Storm'
   extraDays: 10000
   text: -> """
   |||| travel/DeckNight
-    Storm clouds darken the sky, and winds begin to pick up. Natalie can feel the energy building, crawling along her skin and ready to break at any moment. It's a big one. Should the Lapis sail into <button onclick='Place.travel.Sail.makeProgress();'>the teeth of the storm</button> or <button onclick='Place.travel.Sail.reduceDamage();'>douse the sails</button> while there's still time?
+    Storm clouds darken the sky, and winds begin to pick up. Natalie can feel the energy building, crawling along her skin and ready to break at any moment. It's a big one. Should the Lapis sail into <button onclick='stormMakeProgress();'>the teeth of the storm</button> or <button onclick='stormReduceDamage();'>douse the sails</button> while there's still time?
   """
-
-Place.travel.Sail.delayStories = Object.keys(s)
-for key, value of s
-  Story[key] = value

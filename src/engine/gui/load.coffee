@@ -1,15 +1,22 @@
 import yaml from 'js-yaml'
+import $ from 'jquery'
 
-Story.Load =
+import Game from 'game/Game'
+import Story from 'game/Story'
+import {hideOverview} from 'gui/place'
+import {forwardSection, render} from 'gui/story'
+
+autosaves = [
+  localStorage.autosave
+  localStorage.autosave0
+  localStorage.autosave20
+  localStorage.autosave40
+  localStorage.autosave60
+]
+
+export Load =
   label: 'Load'
   text: ->
-    autosaves = [
-      localStorage.autosave
-      localStorage.autosave0
-      localStorage.autosave20
-      localStorage.autosave40
-      localStorage.autosave60
-    ]
     rows = for key in Object.keys(localStorage).sort().reverse()
       date = new Date(parseInt(key, 10))
       unless date.getTime() then continue
@@ -44,12 +51,12 @@ Story.Load =
       #{table}
     """
 
-Game.showLoadPage = ->
-  Place.hideOverview()
-  elements = Story.render('Load')
+export showLoadPage = ->
+  hideOverview()
+  elements = render('Load')
   $('#content').css({display: 'block'}).animate({opacity: 1}, 300)
   $('#stories').empty().append(elements)
-  Story.forwardSection(elements.first(), 1)
+  forwardSection(elements.first(), 1)
 
   $('#stories input').change ->
     unless file = @files[0]

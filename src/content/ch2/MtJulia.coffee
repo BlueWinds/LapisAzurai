@@ -1,4 +1,5 @@
 export NonkeniaDiplomatSailing =
+  where: 'MtJulia|Ch2'
   label: 'Make nice with Diplomat'
   cost: 0
   history:
@@ -24,6 +25,7 @@ export NonkeniaDiplomatSailing =
 """
 
 export GatherWood =
+  where: 'MtJulia|Ch2'
   label: 'Gather Wood'
   history:
     Ch2: true
@@ -38,6 +40,7 @@ export GatherWood =
   """
 
 export ExploreForest =
+  where: 'MtJulia|Ch2'
   label: 'Explore Forest'
   history:
     GatherWood: true
@@ -76,6 +79,7 @@ export ExploreForest =
   """
 
 export AsarasMagic =
+  where: 'MtJulia|Ch2'
   label: "Asara's Magic"
   required: 'GameOverLove'
   history:
@@ -116,6 +120,7 @@ export AsarasMagic =
   """
 
 export JamesUpsetMagic2 =
+  where: 'MtJulia|Ch2'
   label: 'James is Upset'
   required: 'GameOverTrust'
   requiredGroup: 'Ch2Routes'

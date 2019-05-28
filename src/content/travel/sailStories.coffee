@@ -1,24 +1,4 @@
-p = 'travel/'
-
-Place.travel.Sail =
-  normalImages: [
-    p + 'CabinDay.jpg'
-    p + 'CabinNight.jpg'
-    p + 'DeckDay.jpg'
-    p + 'DeckNight.jpg'
-    p + 'DeckFog.jpg'
-    p + 'SailingDay.jpg'
-    p + 'SailingNight.jpg'
-  ]
-  minEventInterval: -> 70
-  travelStoryOccurs: ->
-    min = Place.travel.Sail.minEventInterval()
-    cycle = 100
-    return g.lastTravelEvent + Math.random() * cycle + min < g.day
-
-s = {}
-
-s.FirstStorm2 =
+export FirstStorm2 =
   label: 'Storm'
   blocking: true
   place: 'Vailia' # Only used for counting when events should expire
@@ -53,7 +33,27 @@ s.FirstStorm2 =
     Slept.
   """
 
-s.Clouds =
+export Ch3Storm2 =
+  label: 'Storm'
+  blocking: true
+  place: 'Tomenoi' # Only used for counting when events should expire
+  history:
+    Ch2: true
+    StormDropOrDamage: true
+  effects:
+    xp:
+      Asara: 3
+  text: -> """
+  || travel/DeckStorm
+    The latest storm rolled off into the distance, roiling clouds covering the sky from one horizon to the other. They retreated as rapidly as they'd struck, leaving the ship clear and the Lapis' crew laying exhausted across the deck. It had been a bad one. James crawled over to Natalie where she lay passed out. It had been a very bad one. Only a curtain of shimmering electric green coating every surface of the ship had kept the hurricane winds and towering waves from smashing them to splinters. They'd been struck by lightning twice, blinding, deafening surges of light accompanied by whimpers from the ship's captain, but no visible damage to the Lapis. Nalatie likely wouldn't wake for days.
+
+    Asara moved among the sailors on deck, checking for injuries and bringing water. She wasn't part of the crew, not really, useless with canvas and rope with no inclination to help with daily necessities, but the Lapis' passenger shone in moments of crisis. Saving lives had quieted most of the grumbling about laziness. No one who'd seen it would ever forget her running dive into a churning wall of water, nor the miracle that had brought her back on deck with the next crashing wave, dragging a spluttering man overboard back to the ship by his collar.
+
+  || travel/DeckDay
+    James thanked whatever gods were watching over them for blessing his life with the two of them, and for seeing the Lapis through another impossible storm. With a groan,he pushed himself up to his feet. No rest for the weary until they made landfall. Natalie and Asara had done their parts - his turn to do his.
+  """
+
+export Clouds =
   label: 'Clouds on the Horizon'
   extraDays: 10000
   history:
@@ -76,7 +76,7 @@ s.Clouds =
     It had looked like land to Natalie as well as the watchman, despite the lack of charted islands in the area, but the spyglass proved Kat right - nothing more than an unusual set of clouds. Natalie strained her senses watching it. Yes, the distant darkness smelled faintly of magic, even from here. The Lapis steered well clear.
   """
 
-s.DistantShoals =
+export DistantShoals =
   label: 'Distant Shoals'
   extraDays: 10000
   history:
@@ -95,7 +95,7 @@ s.DistantShoals =
     Natalie squinted against the sunlight again. Best not to scrape her ship along the underwater rocks in this region. At least it was high tide right now.
   """
 
-s.FogSpirit =
+export FogSpirit =
   label: 'Fog Spirit'
   extraDays: 10000
   history:
@@ -129,7 +129,7 @@ s.FogSpirit =
     `N I don't know. A spirit. A ghost. A god. I think... I think it was scared of me?` She shook her head helplessly. `N It's gone.`
   """
 
-s.FishSpirit =
+export FishSpirit =
   label: 'Fish Spirit'
   extraDays: 10000
   history:
@@ -166,7 +166,7 @@ s.FishSpirit =
     `N Let's... let's not stick around waiting for him to change his mind. Everyone, full speed.` Suddenly exhausted, Natalie slumped against the ship's wheel. `N Fuck.`
   """
 
-s.ShipStories =
+export ShipStories =
   label: 'Stories on Deck'
   extraDays: 10000
   history:
@@ -179,7 +179,7 @@ s.ShipStories =
     In the evenings, while a pair of lookouts kept watch, most of the crew gathered on-deck to share stories and drinks and company amid the stars. Natalie made a sure to end up leaning against the same rail as one of her sailors. The ocean lapped against the hull somewhere below, mild waves gently rocking the Lapis Azurai. They talked for some time, content to watch the others from a distance, letting bonds deepen with the setting of the sun.
   '''
 
-s.ShipTalking =
+export ShipTalking =
   label: 'Talking With the Crew'
   extraDays: 10000
   history:
@@ -194,7 +194,7 @@ s.ShipTalking =
     Though she often preferred to keep her own company, or entertain a smaller group in her own quarters, Natalie also made it a point to spend plenty of time mingling with the crew, especially when off duty. Aside from the purely practical considerations of keeping in touch with their mood and fostering a sense of companionship, she also found it fascinating to listen to them - why they left their homes to risk lives on the open ocean, what they wanted, who they wanted to be. She spent hours listening to and talking with the crew.
   '''
 
-s.ShipMusic =
+export ShipMusic =
   label: 'Music on Deck'
   extraDays: 10000
   history:
@@ -211,7 +211,7 @@ s.ShipMusic =
     Sitting side by side on the top bunk, Natalie and James relaxed, and it wasn't long before a drowsy captain was leaning on her first mate, lulled by the soothing tones and a sad song of home-far-away. He gently shifted her to lean against the wall instead, and covered her with a blanket when the song ended.
   """
 
-s.ShipSports =
+export ShipSports =
   label: 'Sports on Deck'
   extraDays: 10000
   history:
@@ -227,7 +227,7 @@ s.ShipSports =
     Wrapping both arms around Kat's thigh she clung on like a burr, hanging from her leg and slowing her down enough for the other team to catch up. Together Natalie and the other team wrestled away control of the colored strip of cloth that was the aim, and Kat fled back to the other side of the ship. Natalie stuck her tongue out at the thief, and she good naturedly cursed at the captain before chasing the fleeing sailor now in possession of the cloth.
   """
 
-s.ShipPracticeCombat =
+export ShipPracticeCombat =
   label: 'Mock Battle'
   extraDays: 10000
   history:
@@ -250,7 +250,7 @@ s.ShipPracticeCombat =
     Asara stayed on the sidelines, watching. No one had any doubts over her readiness for battle.
   """
 
-s.ShipPracticeReading =
+export ShipPracticeReading =
   label: 'Shipboard Education'
   extraDays: 10000
   history:
@@ -265,7 +265,7 @@ s.ShipPracticeReading =
     A bit of teaching was a fun way to pass the time, for those few among the crew who were interested. Natalie enjoyed discussing history, mathematics, natural history and all the other subjects she'd had the privilage to spend time learning while others were busy struggling to find enough food to eat.
   """
 
-s.PiratesFlee =
+export PiratesFlee =
   label: 'Running from Pirates'
   extraDays: 10000
   history:
@@ -298,7 +298,7 @@ s.PiratesFlee =
     Rather than joining in her crew's cheers, Natalie let out a breath she'd been holding. It'd been close.
   """
 
-s.AbandonedShipBurn =
+export AbandonedShipBurn =
   label: 'Abandoned Ship'
   extraDays: 10000
   history:
@@ -319,7 +319,7 @@ s.AbandonedShipBurn =
     When the wreck finally collapsed down the middle, they set sail again. Time to get going, and hope that the Azurai never met the same fate.
   """
 
-s.AbandonedShipSearch =
+export AbandonedShipSearch =
   label: 'Abandoned Ship'
   extraDays: 10000
   history:
@@ -341,7 +341,7 @@ s.AbandonedShipSearch =
   """
 
 
-s.AbandonedShip =
+export AbandonedShip =
   label: 'Encounter at Sea'
   extraDays: 10000
   history:
@@ -371,7 +371,7 @@ s.AbandonedShip =
     Natalie took pity on her - it was more than the poor girl usually explained herself, and if it was important to her... `N James, get your bow and some tar. Let's set it alight and we'll have a few minutes of silence.` Natalie turned back to smile at Asara, but she was already gone back below decks.
   """
 
-s.VailianShip =
+export VailianShip =
   label: 'Vailian Ship'
   extraDays: 10000
   history:
@@ -385,7 +385,3 @@ s.VailianShip =
 
     The two vessels pulled up alongside each other and, after a few shouted exchanges, two officers jumped over to the Lapis for a closer discussion. They were just as eager as Natalie and James to share news of home, and the crews spent half an hour shooting the breeze while the officers shared knowledge of the winds and currents in the area.
   '''
-
-Place.travel.Sail.stories = Object.keys(s)
-for key, value of s
-  Story[key] = value

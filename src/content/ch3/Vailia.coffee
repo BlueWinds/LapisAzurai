@@ -1,4 +1,7 @@
+import Story from 'game/Story'
+
 export Ch3Root =
+  where: 'Vailia|Ch3'
   label: 'Non-route Ch3 Root'
   history:
     AsaraCh3Yes: true
@@ -23,6 +26,7 @@ export Ch3Root =
   '''
 
 export NonkeniaDiplomatConclusion =
+  where: 'Vailia|Ch3'
   label: 'Diplomatic Delivery - Conclusion'
   cost: 0
   history:
@@ -48,6 +52,7 @@ export NonkeniaDiplomatConclusion =
   '''
 
 export ExploreKantis =
+  where: 'Vailia|Ch3'
   label: 'Deeper into Kantian Waters'
   history:
     Ch3Root: true
@@ -72,6 +77,7 @@ export ExploreKantis =
   """
 
 export AboutAntinua =
+  where: 'Vailia|Ch3'
   label: "Seeking Meghan's Help"
   history:
     AsaraToVisitSister: true
@@ -114,6 +120,7 @@ export AboutAntinua =
   """
 
 export AsarasChallenge =
+  where: 'Vailia|Ch3'
   label: "Asara's Challenge"
   cost: 60
   history:
@@ -170,6 +177,7 @@ export AsarasChallenge =
   """
 
 export AsarasChallenge2 =
+  where: 'Vailia|Ch3'
   label: "Asara's Challenge"
   blocking: true
   history:
@@ -198,6 +206,7 @@ export AsarasChallenge2 =
   """
 
 export AsarasDuel =
+  where: 'Vailia|Ch3'
   label: 'Moonlit Confrontation'
   blocking: true
   history:
@@ -249,6 +258,7 @@ export AsarasDuel =
   """
 
 export AboutUTC =
+  where: 'Vailia|Ch3'
   label: "Seeking Meghan's Help"
   blocking: true
   history:

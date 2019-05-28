@@ -1,4 +1,5 @@
 export AsaraSleepTogether =
+  where: 'Kantis|Ch3'
   label: 'A late night knock'
   history:
     AsaraToVisitSister: true
@@ -29,6 +30,7 @@ export AsaraSleepTogether =
   """
 
 export ElakimAudience =
+  where: 'Kantis|Ch3'
   label: "House Appolon's Offer"
   history:
     AmuletsEverywhere: true
@@ -116,7 +118,8 @@ export ElakimAudience =
     `N Yes, of course. Thank you for taking time to speak with me.` Natalie nodded asd stood as he did. A few more polite words and she made her escape.
   """
 
-export NotBuringCity =
+export NotBurningCity =
+  where: 'Kantis|Ch3'
   label: 'Relief'
   history:
     AsarasDuel: true

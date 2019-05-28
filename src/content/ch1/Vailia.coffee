@@ -1,34 +1,7 @@
-Game.starting =
-  version: 0
-  day: 0
-  scroll: 0
-  chapter: 'Ch1'
-  cargo: []
-  damage: 0
-  availableCargo: []
-  jobFocus: ''
-  jobSearch: {}
-  showHelp: true
-  map:
-    from: 'Vailia'
-    to: ''
-    distance: 0
-    delay: 0
-  lastTravelEvent: 0
-  lastStorm: 0
-  reputation:
-    Vailia: 5
-  people:
-    Natalie:
-      xp: 0
-      skills: {}
-    James:
-      xp: 0
-      skills: {}
-  history:
-    Intro: 0
+import Game from 'game/Game'
 
 export Intro =
+  where: 'Vailia|Ch1'
   label: 'Intro'
   text: -> """
   ||
@@ -78,6 +51,7 @@ export Intro =
   """
 
 export Ch1 =
+  where: 'Vailia|Ch1'
   label: 'Vailia'
   blocking: true
   required: 'GameOverExploration'
@@ -129,6 +103,7 @@ export Ch1 =
     Game.showOverlay('<h1>Chapter 1</h1><h3>Vailia</h3>', 0, 'chapter overlay')
 
 export ReadyToGo =
+  where: 'Vailia|Ch1'
   label: 'Ready to Set Sail'
   blocking: true
   required: 'GameOverExploration'
@@ -173,6 +148,7 @@ export ReadyToGo =
   """
 
 export FirstStormSick =
+  where: 'Vailia|Ch1'
   label: 'Storm - Aftermath'
   blocking: true
   required: 'GameOverExploration'
@@ -220,6 +196,7 @@ export FirstStormSick =
   """
 
 export FirstStormSick2 =
+  where: 'Vailia|Ch1'
   label: 'Storm - Aftermath'
   blocking: true
   required: 'GameOverExploration'
@@ -248,6 +225,7 @@ export FirstStormSick2 =
   """
 
 export WastingMoney =
+  where: 'Vailia|Ch1'
   label: 'Wasting Money'
   history:
     KatJoins: true
@@ -274,6 +252,7 @@ export WastingMoney =
   """
 
 export AsaraArrives =
+  where: 'Vailia|Ch1'
   label: 'Asara Arrives'
   history:
     AsaraAwakens: true
@@ -290,6 +269,7 @@ export AsaraArrives =
   """
 
 export AsaraWorriesJames =
+  where: 'Vailia|Ch1'
   label: 'James Worries'
   history:
     AsaraAwakens: true
@@ -315,6 +295,7 @@ export AsaraWorriesJames =
   """
 
 export AlkeniaRoute =
+  where: 'Vailia|Ch1'
   label: 'Route to Alkenia'
   required: 'GameOverExploration'
   extraDays: 15
@@ -349,6 +330,7 @@ export AlkeniaRoute =
 
 
 export MeetMeghan =
+  where: 'Vailia|Ch1'
   label: 'Lady Meghan'
   required: 'GameOverPower'
   history:
@@ -439,6 +421,7 @@ export MeetMeghan =
   """
 
 export Ch2 =
+  where: 'Vailia|Ch1'
   label: 'Chapter 2 - Kantis'
   required: 'GameOverFun'
   history:

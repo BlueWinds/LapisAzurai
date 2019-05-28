@@ -1,4 +1,5 @@
 export IronSandsArrive =
+  where: 'IronSands|Ch2'
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -39,6 +40,7 @@ export IronSandsArrive =
   """
 
 export IronSandsRest =
+  where: 'IronSands|Ch2'
   label: 'Resting in the Bunkhouse'
   history:
     IronSandsArrive: true
@@ -53,6 +55,7 @@ export IronSandsRest =
   """
 
 export IronSandsJamesFlirt =
+  where: 'IronSands|Ch2'
   label: 'Flirting Cara'
   history:
     IronSandsArrive: true
@@ -80,6 +83,7 @@ export IronSandsJamesFlirt =
   """
 
 export IronSandsAsaraTalk =
+  where: 'IronSands|Ch2'
   label: "Asara's Spirits"
   history:
     IronSandsArrive: true

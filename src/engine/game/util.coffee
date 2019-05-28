@@ -1,4 +1,37 @@
-window.featureDetect = ->
+import $ from 'jquery'
+
+export wordJoin = (words, join = 'and') ->
+  if words.length is 1 then return words[0]
+  str = words.slice(0, -1).join(', ')
+  str += " #{join} " + words[words.length - 1]
+  return str
+
+export randomRound = (number)->
+  result = Math.floor(number)
+  if Math.random() < number % 1 then result += 1
+  return result
+
+export choice = (items)-> (items)->
+  if items instanceof Array
+    return Math.floor(Math.random() * items.length)
+  return choice(Object.keys(items))
+
+sumObject = (items)->
+  sum = 0
+  for key, val of items
+    sum += val
+  return sum
+
+export weightedChoice = (weights)->
+  sum = sumObject weights
+  inc = Math.floor(Math.random() * sum)
+  for key, value of weights
+    inc -= value
+    if inc <= 0 then return key
+
+export clamp = (value, min, max)-> Math.min(max, Math.max(min, value))
+
+export featureDetect = ->
   try
     localStorage.setItem 'test', 'testVal'
     unless localStorage.test is 'testVal'

@@ -6,19 +6,53 @@ import './game.css'
 import $ from 'jquery'
 import yaml from 'js-yaml'
 
+import Game from 'game/Game'
+import Story from 'game/Story'
+
+import {drawCargo} from 'gui/cargo'
+import {showLoadPage} from 'gui/load'
+import {drawMap, mapGuiSetup} from 'gui/map'
+import {drawOverview} from 'gui/person'
+import {showOverview} from 'gui/place'
+import {displayStory, drawHistory, storyGuiSetup} from 'gui/story'
+
+import * as content from 'content'
+import {startingGame} from 'content/map'
+
 startDay = 457783 # Ascending Earth 13, 1271
 
 dayList = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th', '13th', '14th', '15th', '16th', '17th', '18th', '19th', '20th', '21st', '22nd', '23rd', '24th', '25th', '26th', '27th', '28th', '29th', '30th']
 monthList = ['Ascending', 'Resplendant', 'Descending']
 seasonList = ['Wood', 'Fire', 'Earth', 'Water']
 
-$ ->
-  if not featureDetect() then return
+export guiSetup = ->
+  c = $('#content')
 
-  if not $('#container').length then return
-  Game.guiSetup()
-  Story.guiSetup()
-  Game.load(Game.mostRecentGameData())
+  $('#new-game').click ->
+    load($.extend(true, {}, startingGame))
+    displayStory('Intro')
+
+  $('#save-game').click ->
+    unless g then return
+
+    localStorage.setItem Date.now(), yaml.safeDump(g)
+    $('#save-game .success').animate {opacity: 1}, 500
+    .animate {opacity: 0}, 2000
+
+  $('#load-game').click(showLoadPage)
+
+  $('#container').on 'click', '.overlay', ->
+    $('.overlay').animate {opacity: 0}, -> @remove()
+
+  mapGuiSetup()
+  storyGuiSetup()
+
+export load = (data = Game.mostRecentGameData()) ->
+  Game.start data
+  Game.drawStatus()
+  drawMap()
+  drawHistory()
+  drawOverview()
 
 $.extend Game, {
   year: (d = g.day)-> (d + startDay) // 360
@@ -31,7 +65,7 @@ $.extend Game, {
 
   drawStatus: (d = g.day)-> # Draws the status bar and included items
     $('header .day').html Game.date(d)
-    Cargo.drawCargo()
+    drawCargo()
 
   drawList: (items, draw)->
     if items.length
@@ -52,27 +86,6 @@ $.extend Game, {
         for name, amount of results when amount
           text.push effectFuncs[key](name, amount)
     return text.join('<br>\n')
-
-  guiSetup: ->
-    c = $('#content')
-
-    $('#new-game').click ->
-      Game.load($.extend(true, {}, Game.starting))
-      Story.display('Intro')
-
-    $('#save-game').click ->
-      unless g then return
-
-      localStorage.setItem Date.now(), yaml.safeDump(g)
-      $('#save-game .success').animate {opacity: 1}, 500
-      .animate {opacity: 0}, 2000
-
-    $('#load-game').click -> Game.showLoadPage()
-
-    $('#container').on 'click', '.overlay', ->
-      $('.overlay').animate {opacity: 0}, -> @remove()
-
-    Place.guiSetup()
 
   showOverlay: (element, duration = 0, c = 'overlay', done)->
     overlay = $("""<div class='#{c}'></div>""").css('opacity', 0).append(element)
@@ -95,16 +108,8 @@ $.extend Game, {
       result += '<br>' + g.nextDayDescription
     Game.showOverlay("<h1>#{Game.date(day)}</h1><h3>#{result}</h3>", 2000, 'dayOverlay', next)
 
-  load: (data)->
-    Game.start data
-    Game.drawStatus()
-    Place.drawMap()
-    Story.drawHistory()
-    Person.drawOverview()
-
   animateSuccess: (element)->
-    $(element).animate({opacity: 1}, 500).animate {opacity: 0}, 1500, ->
-      Place.showOverview()
+    $(element).animate({opacity: 1}, 500).animate {opacity: 0}, 1500, showOverview
 }
 
 # Autosave every time a day passes
@@ -114,8 +119,8 @@ Game.passDay = ->
 
   end = Story.gameIsOver()
   if end
-    Story.display(Story[end].required)
-    g.history[Story[end].required] = g.day
+    displayStory(end.required)
+    g.history[end.required] = g.day
     return
 
   setTimeout ->

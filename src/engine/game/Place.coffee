@@ -1,3 +1,11 @@
+import Game from 'game/Game'
+import Story from 'game/Story'
+import {choice, clamp} from 'game/util'
+
+import * as content from 'content'
+import * as travelData from 'content/travel'
+import {repairEffectsSkill} from 'content/people/skillEffects'
+
 samplePlaceData =
   name: 'Mt. Julia'
   paths:
@@ -10,13 +18,9 @@ samplePlaceData =
       'Silver'
       'Lumber'
     ]
-  stories:
-    Ch1: [
-      'ExploreWilds'
-    ]
   jobChance: 0.3
 
-window.Place = {
+Place = {
   travel: {}
 
   repairEffects: ->
@@ -24,7 +28,7 @@ window.Place = {
       damage: -Math.min(6 * (if g.reputation[g.map.from] > 0 then 1 else 0.5), g.damage)
       reputation: {}
     e.reputation[g.map.from] = -Math.min(1, g.reputation[g.map.from])
-    return e
+    return repairEffectsSkill(e)
 
   location: (map)->
     # A path
@@ -71,14 +75,14 @@ window.Place = {
 
   travelEvent: (map)->
     path = Place.svgElement([map.from, map.to])
-    travel = path.attributes.travel.value
+    type = path.attributes.travel.value
     dir = Place.direction(map.from, map.to)
 
-    pxPerDay = Game.travelPxPerDay(travel) * dir
-    to = Math.clamp(map.distance + pxPerDay, 0, path.getTotalLength())
+    pxPerDay = Game.travelPxPerDay(type) * dir
+    to = clamp(map.distance + pxPerDay, 0, path.getTotalLength())
 
     event = {
-      image: Math.choice(Place.travel[travel].normalImages)
+      image: choice(travelData[type].normalImages)
       path: path
       start: map.distance
       direction: dir
@@ -89,16 +93,16 @@ window.Place = {
     if to is 0 or to is path.getTotalLength()
       event.image = Place[map.to].img
     # No storms the day you arrive in port
-    else if map.delay or Place.travel[travel].delayOccurs(map.from, map.to, map.distance)
-      duration = map.delay or Place.travel[travel].delayDuration(map.from, map.to, map.distance)
+    else if map.delay or travelData[type].delayOccurs(map.from, map.to, map.distance)
+      duration = map.delay or travelData[type].delayDuration(map.from, map.to, map.distance)
 
-      event.image = Math.choice(Place.travel[travel].delayImages)
+      event.image = choice(travelData[type].delayImages)
       event.delay = Math.max(0, duration - 1) # Subtract one day because this event already took up one of them
-      event.effects = {damage: Place.travel[travel].delayDailyDamage(map.from, map.to, map.distance)}
+      event.effects = {damage: travelData[type].delayDailyDamage(map.from, map.to, map.distance)}
 
       # If this is the first day of a delay, trigger an event
       unless map.delay
-        event.story = Story.delayEvent(map.from, map.to, travel)
+        event.story = Story.delayEvent(map.from, map.to, type)
 
     return event
 
@@ -107,3 +111,5 @@ window.Place = {
       throw new Error('No direct path from ' + from + ' to ' + to)
     return Place[from].paths[to]
 }
+
+export default Place

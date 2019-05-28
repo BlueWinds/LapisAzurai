@@ -1,6 +1,11 @@
 import $ from 'jquery'
 import yaml from 'js-yaml'
 
+import Cargo from 'game/Cargo'
+
+import {startingGame} from 'content/map'
+import {sailSpeedSkill} from 'content/people/skillEffects'
+
 sampleGame =
   version: 0
   day: 13
@@ -40,10 +45,10 @@ sampleGame =
   damage: 12 # How much damage has been done to the ship already
   preventNextDamage: 5 # The next damage will be shielded
 
-window.Game =
+Game =
   travelSpeed: (type, damage = g.damage)->
     speed = if type is 'Sail'
-      Math.max(0.25, 1 - (damage / 50))
+      Math.max(0.25, 1 - (damage / 50)) * sailSpeedSkill()
     else 0.5
 
   travelPxPerDay: (type)->
@@ -57,7 +62,7 @@ window.Game =
       game = yaml.safeLoad(localStorage[last])
       if game.map then return game
 
-    return $.extend(true, {}, Game.starting) # Game.starting is defined in content/intro.coffee
+    return $.extend(true, {}, startingGame)
 
   start: (data)->
     window.g = data
@@ -82,3 +87,5 @@ window.Game =
 
     Cargo.passDay()
     delete g.nextDayDescription
+
+export default Game

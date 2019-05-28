@@ -1,4 +1,5 @@
 export JamesBiting =
+  where: 'Amandais|Ch3'
   label: 'James sitting peacefully'
   history:
     Ch3Root: true

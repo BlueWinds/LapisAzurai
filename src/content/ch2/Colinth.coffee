@@ -1,4 +1,5 @@
 export ColinthArrive =
+  where: 'Colinth|Ch2'
   label: 'Arrival'
   blocking: true
   required: 'GameOverExploration'
@@ -26,6 +27,7 @@ export ColinthArrive =
   """
 
 export ColinthAmulets =
+  where: 'Colinth|Ch2'
   label: 'Magical Amulet'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
@@ -51,6 +53,7 @@ export ColinthAmulets =
   """
 
 export ColinthAmulets2 =
+  where: 'Colinth|Ch2'
   label: 'Magical Amulet'
   required: 'GameOverPower'
   requiredGroup: 'Ch2Routes'
@@ -101,6 +104,7 @@ export ColinthAmulets2 =
   """
 
 export Muggers =
+  where: 'Colinth|Ch2'
   label: 'Muggers'
   required: 'GameOverViolence'
   requiredGroup: 'Ch2Routes'
@@ -150,6 +154,7 @@ export Muggers =
   """
 
 export KantianSorcerer =
+  where: 'Colinth|Ch2'
   label: 'Sorcerer'
   required: 'GameOverPower'
   history:
@@ -185,6 +190,7 @@ export KantianSorcerer =
   """
 
 export AsarasTrauma =
+  where: 'Colinth|Ch2'
   label: "Asara's Trauma"
   required: 'GameOverViolence'
   requiredGroup: 'Ch2Routes'
