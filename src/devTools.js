@@ -3,7 +3,7 @@ import $ from 'jquery'
 
 import Person from 'game/Person'
 import Place from 'game/Place'
-import Story from 'game/Story'
+import {expirationDate} from 'game/Story'
 
 import * as content from 'content'
 import * as travelData from 'content/travel'
@@ -57,7 +57,7 @@ window.eventGraph = function() {
       nodes[key] = {
         name: key,
         location: places[key],
-        expires: (Story.expirationDate(key) || '').toString()
+        expires: (expirationDate(key) || '').toString()
       };
       var h = content[key].history;
       for (var link in h) {

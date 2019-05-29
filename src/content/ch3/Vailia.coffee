@@ -1,4 +1,4 @@
-import Story from 'game/Story'
+import {expirationDate} from 'game/Story'
 
 export Ch3Root =
   where: 'Vailia|Ch3'
@@ -8,18 +8,18 @@ export Ch3Root =
     JamesCh3Yes: true
     KatCh3Yes: true
   extraDays: ->
-    max = Math.max(Story.expirationDate('AsaraCh3Yes'), Story.expirationDate('KatCh3Yes'), Story.expirationDate('JamesCh3Yes'))
+    max = Math.max(expirationDate('AsaraCh3Yes'), expirationDate('KatCh3Yes'), expirationDate('JamesCh3Yes'))
 
     # g isn't defined in EventGraph.html or other strange places
     unless g?
       return 0
 
     if g.history.AsaraCh3Yes
-      return Story.expirationDate('AsaraCh3Yes') - max
+      return expirationDate('AsaraCh3Yes') - max
     else if g.history.KatCh3Yes
-      return Story.expirationDate('KatCh3Yes') - max
+      return expirationDate('KatCh3Yes') - max
     else
-      return Story.expirationDate('JamesCh3Yes') - max
+      return expirationDate('JamesCh3Yes') - max
   text: -> '''
   ||
     Placeholder event to serve as 'root' for non-route ch3 events. If you're seeing this in-game, it's a bug.

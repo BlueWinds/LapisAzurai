@@ -3,7 +3,7 @@ import $ from 'jquery'
 import Game from 'game/Game'
 import Cargo from 'game/Cargo'
 import Place from 'game/Place'
-import Story, {storiesAt} from 'game/Story'
+import {canSail, storiesAt, unmetNeed, visibleStories} from 'game/Story'
 
 import {drawMap, travel} from 'gui/map'
 import {updateOverview} from 'gui/person'
@@ -40,7 +40,7 @@ draw = (place)->
     travelDiv = ''
   else
     distanceDesc = "#{Place.travelDays(g.map.from, place)} days sailing"
-    disabled = if Story.canSail() then '' else 'disabled'
+    disabled = if canSail() then '' else 'disabled'
     travelDiv = """<div class="travel #{disabled}" #{if disabled then '' else 'onclick="clickTravel(\'' + place + '\');"'}>
       ⛵⇢
       <div class="sail-speed">#{Math.round(Game.travelSpeed('Sail')) * 100}% speed</div>
@@ -48,15 +48,15 @@ draw = (place)->
 
   deliverable = g.cargo.filter (job)-> job.to is place
   available = g.availableCargo.filter (job)-> job.from is place
-  visibleStories = Story.visibleStories(storiesAt(place, g.chapter))
+  visible = visibleStories(storiesAt(place, g.chapter))
 
-  clickableStories = visibleStories.filter((s)-> not Story.unmetNeed(place, s))
-  visibleStories = visibleStories.filter(Story.unmetNeed.bind(null, place))
+  clickableHere = visible.filter((s)-> not unmetNeed(place, s))
+  visibleHere = visible.filter((s) -> unmetNeed(place, s))
 
   # If there are blocking stories, then hide everything else until they're dealt with.
-  blocking = clickableStories.filter((s)-> content[s].blocking)
+  blocking = clickableHere.filter((s)-> content[s].blocking)
   if blocking.length
-    clickableStories = blocking
+    clickableHere = blocking
 
 
   return """<div place="#{place}" class="place">
@@ -65,12 +65,12 @@ draw = (place)->
     <div class="name">#{Place[place].name}</div>
     <div class="description">#{distanceDesc} - #{Math.floor(g.reputation[place])} reputation</div>
     <div class="table-wrapper"><table>
-      #{Game.drawList clickableStories, drawStory.bind(null, place)}
+      #{Game.drawList clickableHere, drawStory.bind(null, place)}
       #{if blocking.length is 0 and g.damage and g.map.from is place then Game.drawList [true], drawRepair else ''}
       #{if blocking.length is 0 then Game.drawList [place], Cargo.drawSearch else ''}
       #{Game.drawList deliverable, Cargo.drawDelivery}
       #{Game.drawList available, Cargo.draw}
-      #{Game.drawList visibleStories, drawStory.bind(null, place)}
+      #{Game.drawList visibleHere, drawStory.bind(null, place)}
     </table></div>
   </div>"""
 

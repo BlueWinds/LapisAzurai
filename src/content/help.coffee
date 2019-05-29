@@ -3,7 +3,7 @@ import $ from 'jquery'
 import Cargo from 'game/Cargo'
 import Person from 'game/Person'
 import Place from 'game/Place'
-import Story from 'game/Story'
+import {gameIsOver} from 'game/Story'
 
 queue = []
 
@@ -52,7 +52,7 @@ clearHelp = ->
 haventSailedYet = -> g.map.from is 'Vailia' and not g.map.to and not g.history.MtJuliaArrive
 
 mapHelp = ->
-  if Story.gameIsOver() then return
+  if gameIsOver() then return
   if g.history.MtJuliaArrive then return
 
   setTimeout ->

@@ -4,7 +4,7 @@ import 'jquery.scrollto'
 import Game from 'game/Game'
 import Person from 'game/Person'
 import Place from 'game/Place'
-import Story from 'game/Story'
+import {applyStory, expirationDate, gameIsOver, reputationNeeded, storyEffects, unmetNeed} from 'game/Story'
 import {drawMap, travel} from 'gui/map'
 import {quote} from 'gui/person'
 import {hideOverview} from 'gui/place'
@@ -36,14 +36,14 @@ Formatting guide:
 ###
 
 export drawStory = (place, story)->
-  need = Story.unmetNeed(place, story)
+  need = unmetNeed(place, story)
 
   onclick = if g.map.from is place and not need
-    'onclick=\'Game.passDay(); Story.apply("' + place + '", "' + story + '"); displayWithOverlay("' + story + '");\''
+    'onclick=\'displayWithOverlay("' + place + '", "' + story + '");\''
   else ''
 
-  rep = Story.reputationNeeded(story)
-  days = Story.expirationDate(story) - g.day
+  rep = reputationNeeded(story)
+  days = expirationDate(story) - g.day
   expires = if days is 0
     'Expires today'
   else if days is 1
@@ -62,15 +62,18 @@ export drawStory = (place, story)->
       <span class="expires">#{expires}</span>
       <span class="success">✓</span>
     </div>
-    <div class="participants">#{Game.drawEffects Story.effects(story)}</div>
+    <div class="participants">#{Game.drawEffects(storyEffects(story))}</div>
     #{need}
   </td>"""
 
-window.displayWithOverlay = (story)->
+window.displayWithOverlay = (place, story)->
+  Game.passDay()
+  applyStory(place, story)
+
   $('.story[story="' + story + '"] .success')
     .animate({opacity: 1}, 500)
     .animate {opacity: 0}, 1500
-  Game.showPassDayOverlay g.day, Game.drawEffects(Story.effects(story)), (removeOverlay)->
+  Game.showPassDayOverlay g.day, Game.drawEffects(storyEffects(story)), (removeOverlay)->
     removeOverlay()
     displayStory(story)
 
@@ -84,10 +87,10 @@ export displayStory = (story, speed = 500)->
   if g.scroll is -1 then g.scroll = 0
   forwardSection(elements.first(), 1)
 
-  storyDisplayHelp(story, speed)
+  displayStoryHelp(story, speed)
 
 window.continueWith = (e, story)->
-  Story.apply(null, story)
+  applyStory(null, story)
   $('#stories button').attr('disabled', true)
   e.stopPropagation()
   setTimeout (->
@@ -100,7 +103,7 @@ export drawHistory = ->
   unless g.history.Intro?
     return displayStory('Intro')
 
-  end = Story.gameIsOver()
+  end = gameIsOver()
   if end
     displayStory(end.required)
     g.history[end.required] = g.day

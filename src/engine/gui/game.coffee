@@ -7,7 +7,7 @@ import $ from 'jquery'
 import yaml from 'js-yaml'
 
 import Game from 'game/Game'
-import Story from 'game/Story'
+import {gameIsOver} from 'game/Story'
 
 import {drawCargo} from 'gui/cargo'
 import {showLoadPage} from 'gui/load'
@@ -117,7 +117,7 @@ oldPassDay = Game.passDay
 Game.passDay = ->
   oldPassDay()
 
-  end = Story.gameIsOver()
+  end = gameIsOver()
   if end
     displayStory(end.required)
     g.history[end.required] = g.day

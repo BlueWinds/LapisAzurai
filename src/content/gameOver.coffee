@@ -1,5 +1,5 @@
 import Place from 'game/Place'
-import Story from 'game/Story'
+import {gameIsOver} from 'game/Story'
 
 export GameOverExploration =
   label: 'Game Over'
@@ -105,7 +105,7 @@ export GameOverSorrow =
   """
 
 gameOverText = ->
-  end = Story.gameIsOver()
+  end = gameIsOver()
   """
   ||-
     <center><i>Time has run out for "<b>#{end.label}</b>" at #{Place[end.place].name}. Natalie and her friends will carry on, but the story is incomplete...</i></center>

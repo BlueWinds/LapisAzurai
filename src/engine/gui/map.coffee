@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import Game from 'game/Game'
 import Place from 'game/Place'
-import Story, {storiesAt} from 'game/Story'
+import Story, {applyStory, expirationDate, storiesAt, visibleStories} from 'game/Story'
 import {showOverview} from 'gui/place'
 import {displayStory} from 'gui/story'
 
@@ -95,7 +95,7 @@ animateTravel = (event)->
   effects = Game.drawEffects(event.effects or {})
   if event.story
     g.lastTravelEvent = g.day
-    Story.apply(null, event.story)
+    applyStory(null, event.story)
     displayStory(event.story, 2000)
     Game.showPassDayOverlay g.day, effects
   else
@@ -123,20 +123,22 @@ animateTravel = (event)->
   })
 
 updateLabel = (place)->
-  interactive = $('#LabelLayer').hasClass('interactive')
+  span = $('#' + place + ' tspan').removeClass()
 
-  if interactive
-    visible = Story.visibleStories(storiesAt(place, g.chapter))
+  if $('#LabelLayer').hasClass('interactive')
+    visible = visibleStories(storiesAt(place, g.chapter))
     visible = visible.sort (a, b)->
-      Story.expirationDate(a) - Story.expirationDate(b)
+      expirationDate(a) - expirationDate(b)
   else visible = []
 
-  span = $('#' + place + ' tspan').removeClass()
   if visible[0]
     expiresClass = if content[visible[0]].required then 'required' else 'normal'
 
     span.show()
-    span.children().addClass(expiresClass).addClass(content[visible[0]]._class).text(Story.expirationDate(visible[0]) -  g.day)
+    span.children()
+      .addClass(expiresClass)
+      .addClass(content[visible[0]]._class)
+      .text(expirationDate(visible[0]) -  g.day)
   else
     span.hide()
 

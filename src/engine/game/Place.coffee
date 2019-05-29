@@ -1,5 +1,5 @@
 import Game from 'game/Game'
-import Story from 'game/Story'
+import {delayEvent, travelEvent} from 'game/Story'
 import {choice, clamp} from 'game/util'
 
 import * as content from 'content'
@@ -87,7 +87,7 @@ Place = {
       start: map.distance
       direction: dir
       pxTravel: to - map.distance
-      story: unless map.delay then Story.travelEvent(map.from, map.to, travel)
+      story: unless map.delay then travelEvent(map.from, map.to, travel)
     }
 
     if to is 0 or to is path.getTotalLength()
@@ -102,7 +102,7 @@ Place = {
 
       # If this is the first day of a delay, trigger an event
       unless map.delay
-        event.story = Story.delayEvent(map.from, map.to, type)
+        event.story = delayEvent(map.from, map.to, type)
 
     return event
 

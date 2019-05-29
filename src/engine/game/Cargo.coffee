@@ -1,7 +1,7 @@
 import {choice, weightedChoice} from 'game/util'
 import Game from 'game/Game'
 import Place from 'game/Place'
-import Story, {storiesAt} from 'game/Story'
+import {storiesAt, visibleStories} from 'game/Story'
 
 import * as content from 'content'
 import {acceptTimeRemainingSkill, cargoCreateSkill, cargoDeliverSkill, cargoSearchChanceSkill, deliveryTimeRemainingSkill, maxCargoSkill} from 'content/people/skillEffects'
@@ -22,7 +22,7 @@ Cargo =
   maxCargo: -> 3 + maxCargoSkill()
 
   canPickUpDeliver: ->
-    not Story.visibleStories(storiesAt(g.map.from, g.chapter)).some (p)-> content[p].blocking
+    not visibleStories(storiesAt(g.map.from, g.chapter)).some (p)-> content[p].blocking
 
   searchChance: (place)->
     baseChance = Place[place].jobChance * (if g.reputation[place] > 0 then 1 else 0.5)
