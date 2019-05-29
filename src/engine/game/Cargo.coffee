@@ -1,9 +1,10 @@
 import {choice, weightedChoice} from 'game/util'
 import Game from 'game/Game'
-import Place from 'game/Place'
+import {travelDays} from 'game/Place'
 import {storiesAt, visibleStories} from 'game/Story'
 
 import * as content from 'content'
+import * as places from 'content/places'
 import {acceptTimeRemainingSkill, cargoCreateSkill, cargoDeliverSkill, cargoSearchChanceSkill, deliveryTimeRemainingSkill, maxCargoSkill} from 'content/people/skillEffects'
 
 sampleCargo =
@@ -25,7 +26,7 @@ Cargo =
     not visibleStories(storiesAt(g.map.from, g.chapter)).some (p)-> content[p].blocking
 
   searchChance: (place)->
-    baseChance = Place[place].jobChance * (if g.reputation[place] > 0 then 1 else 0.5)
+    baseChance = places[place].jobChance * (if g.reputation[place] > 0 then 1 else 0.5)
     return baseChance + (g.jobSearch[place] or 0) + cargoSearchChanceSkill()
 
   searchCost: (place)->
@@ -33,7 +34,7 @@ Cargo =
 
   deliveryTimeRemaining: (cargo)->
     passed = g.day - cargo.start
-    travel = Place.travelDays(cargo.from, cargo.to)
+    travel = travelDays(cargo.from, cargo.to)
     return 15 + travel - passed + deliveryTimeRemainingSkill()
 
   passDay: ->
@@ -43,7 +44,7 @@ Cargo =
 
   potentialDestinations: (from)->
     dest = {}
-    for destination, goods of Place[from].goods when g.reputation[destination]?
+    for destination, goods of places[from].goods when g.reputation[destination]?
       dest[destination] = goods.length
       # If the player is focusing on this location, quadruple the changes cargo will be headed here
       if destination is g.jobFocus
@@ -53,7 +54,7 @@ Cargo =
   create: (from)->
     to = weightedChoice(Cargo.potentialDestinations(from))
     unless to then return
-    name = choice(Place[from].goods[to])
+    name = choice(places[from].goods[to])
     reputation = [Cargo.goods[name][0], Cargo.goods[name][1]]
     cargo = {name, from, to, start: g.day, reputation}
     return cargoCreateSkill(cargo)

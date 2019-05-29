@@ -1,5 +1,4 @@
 import Game from 'game/Game'
-import Story from 'game/Story'
 
 export KatShowsSamsGrave =
   where: 'Alkenia|Ch2'

@@ -1,12 +1,6 @@
-import Story from 'game/Story'
-
 import {eventIntervalSkill, stormDamageSkill, stormDurationSkill, stormIntervalSkill} from 'content/people/skillEffects'
-import * as sailStories from 'content/travel/sailStories'
-import * as sailDelayStories from 'content/travel/sailDelayStories'
 
 export Sail = {
-  stories: Object.keys(sailStories)
-  delayStories: Object.keys(sailDelayStories)
   normalImages: [
     'travel/CabinDay.jpg'
     'travel/CabinNight.jpg'

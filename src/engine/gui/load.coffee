@@ -2,7 +2,6 @@ import yaml from 'js-yaml'
 import $ from 'jquery'
 
 import Game from 'game/Game'
-import Story from 'game/Story'
 import {hideOverview} from 'gui/place'
 import {forwardSection, render} from 'gui/story'
 

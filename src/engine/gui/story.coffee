@@ -3,7 +3,6 @@ import 'jquery.scrollto'
 
 import Game from 'game/Game'
 import Person from 'game/Person'
-import Place from 'game/Place'
 import {applyStory, expirationDate, gameIsOver, reputationNeeded, storyEffects, unmetNeed} from 'game/Story'
 import {drawMap, travel} from 'gui/map'
 import {quote} from 'gui/person'

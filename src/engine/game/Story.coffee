@@ -1,8 +1,8 @@
 import {choice} from 'game/util'
 import Game from 'game/Game'
-import Place from 'game/Place'
 
 import * as content from 'content'
+import * as places from 'content/places'
 import * as travelData from 'content/travel'
 import {storyExpirationSkill, storyEffectsSkill, storyReputationNeededSkill} from 'content/people/skillEffects'
 
@@ -69,7 +69,7 @@ export applyStory = (place, story)->
   g.history[story] = g.day
 
 export travelEvent = (from, to, type)->
-  stories = travelData[type].stories
+  stories = storiesAt(type)
     .filter(matchesConditions)
 
   return if blockingEvents(stories).length
@@ -79,18 +79,18 @@ export travelEvent = (from, to, type)->
   else null
 
 export delayEvent = (from, to, type)->
-    stories = travelData[type].delayStories
-    choice(blockingEvents(stories)) or choice(repeatableEvents(stories)) or null
+  stories = storiesAt(type, 'delay')
+  choice(blockingEvents(stories)) or choice(repeatableEvents(stories)) or null
 
 export visibleStories = (stories = [])->
-  return stories
+  stories
     .filter(hasntOccurred)
     .filter(matchesHistory)
     .filter(matchesConditions)
 
 export gameIsOver = ->
   requiredEvents = {}
-  for place of Place
+  for place of places
     for story in storiesAt(place, g.chapter) when content[story].required
       group = content[story].requiredGroup
       if group

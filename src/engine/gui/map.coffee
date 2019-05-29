@@ -1,7 +1,8 @@
 import $ from 'jquery'
 import Game from 'game/Game'
-import Place from 'game/Place'
-import Story, {applyStory, expirationDate, storiesAt, visibleStories} from 'game/Story'
+import {currentCordinates, dailyTravel, pathSvg} from 'game/Place'
+import {applyStory, expirationDate, storiesAt, visibleStories} from 'game/Story'
+
 import {showOverview} from 'gui/place'
 import {displayStory} from 'gui/story'
 
@@ -60,7 +61,7 @@ export drawMap = ->
     $('#' + place + 'Mask').attr('fill', 'url(#maskBlur)')
     updateLabel(place)
 
-  location = Place.location(g.map)
+  location = currentCordinates(g.map)
   document.getElementById('Ship').attributes.x.value = location.x
   document.getElementById('Ship').attributes.y.value = location.y
 
@@ -68,7 +69,7 @@ export travel = ->
   unless g.map.to
     return
 
-  event = Place.travelEvent(g.map)
+  event = dailyTravel(g.map)
   delete g.map.speedBonus
 
   if event.delay?
@@ -80,11 +81,11 @@ export travel = ->
     Game.applyEffects(event.effects)
 
   Game.drawStatus()
-  Place.animateTravel(event)
+  animateTravel(event)
   Game.passDay()
 
   # We have arrived at the destination
-  if event.pxTravel and (g.map.distance <= 0 or g.map.distance >= Place.svgElement().getTotalLength())
+  if event.pxTravel and (g.map.distance <= 0 or g.map.distance >= pathSvg().getTotalLength())
     g.map.from = g.map.to
     g.map.to = ''
     g.map.distance = 0

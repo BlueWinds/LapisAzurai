@@ -1,4 +1,5 @@
 export FirstStorm2 =
+  where: 'Sail'
   label: 'Storm'
   blocking: true
   place: 'Vailia' # Only used for counting when events should expire
@@ -34,6 +35,7 @@ export FirstStorm2 =
   """
 
 export Ch3Storm2 =
+  where: 'Sail'
   label: 'Storm'
   blocking: true
   place: 'Tomenoi' # Only used for counting when events should expire
@@ -54,6 +56,7 @@ export Ch3Storm2 =
   """
 
 export Clouds =
+  where: 'Sail'
   label: 'Clouds on the Horizon'
   extraDays: 10000
   history:
@@ -77,6 +80,7 @@ export Clouds =
   """
 
 export DistantShoals =
+  where: 'Sail'
   label: 'Distant Shoals'
   extraDays: 10000
   history:
@@ -96,6 +100,7 @@ export DistantShoals =
   """
 
 export FogSpirit =
+  where: 'Sail'
   label: 'Fog Spirit'
   extraDays: 10000
   history:
@@ -130,6 +135,7 @@ export FogSpirit =
   """
 
 export FishSpirit =
+  where: 'Sail'
   label: 'Fish Spirit'
   extraDays: 10000
   history:
@@ -167,6 +173,7 @@ export FishSpirit =
   """
 
 export ShipStories =
+  where: 'Sail'
   label: 'Stories on Deck'
   extraDays: 10000
   history:
@@ -180,6 +187,7 @@ export ShipStories =
   '''
 
 export ShipTalking =
+  where: 'Sail'
   label: 'Talking With the Crew'
   extraDays: 10000
   history:
@@ -195,6 +203,7 @@ export ShipTalking =
   '''
 
 export ShipMusic =
+  where: 'Sail'
   label: 'Music on Deck'
   extraDays: 10000
   history:
@@ -212,6 +221,7 @@ export ShipMusic =
   """
 
 export ShipSports =
+  where: 'Sail'
   label: 'Sports on Deck'
   extraDays: 10000
   history:
@@ -228,6 +238,7 @@ export ShipSports =
   """
 
 export ShipPracticeCombat =
+  where: 'Sail'
   label: 'Mock Battle'
   extraDays: 10000
   history:
@@ -251,6 +262,7 @@ export ShipPracticeCombat =
   """
 
 export ShipPracticeReading =
+  where: 'Sail'
   label: 'Shipboard Education'
   extraDays: 10000
   history:
@@ -266,6 +278,7 @@ export ShipPracticeReading =
   """
 
 export PiratesFlee =
+  where: 'Sail'
   label: 'Running from Pirates'
   extraDays: 10000
   history:
@@ -299,6 +312,7 @@ export PiratesFlee =
   """
 
 export AbandonedShipBurn =
+  where: 'Sail'
   label: 'Abandoned Ship'
   extraDays: 10000
   history:
@@ -320,6 +334,7 @@ export AbandonedShipBurn =
   """
 
 export AbandonedShipSearch =
+  where: 'Sail'
   label: 'Abandoned Ship'
   extraDays: 10000
   history:
@@ -342,6 +357,7 @@ export AbandonedShipSearch =
 
 
 export AbandonedShip =
+  where: 'Sail'
   label: 'Encounter at Sea'
   extraDays: 10000
   history:
@@ -372,6 +388,7 @@ export AbandonedShip =
   """
 
 export VailianShip =
+  where: 'Sail'
   label: 'Vailian Ship'
   extraDays: 10000
   history:

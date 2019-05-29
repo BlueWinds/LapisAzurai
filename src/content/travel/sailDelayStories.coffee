@@ -1,11 +1,14 @@
 import $ from 'jquery'
 
 import Game from 'game/Game'
-import Place from 'game/Place'
 import {choice} from 'game/util'
+
 import {changeSection} from 'gui/story'
 
+import * as places from 'content/places'
+
 export FirstStorm =
+  where: 'Sail|delay'
   label: 'Storm'
   blocking: true
   history:
@@ -78,7 +81,7 @@ export FirstStorm =
 window.stormLostCargo = ->
   cargo = choice(g.cargo)
   g.cargo = g.cargo.filter((c)-> c isnt cargo)
-  g.nextDayDescription = "Lost #{cargo.name} destined for #{Place[cargo.to].name}"
+  g.nextDayDescription = "Lost #{cargo.name} destined for #{places[cargo.to].name}"
   changeSection(1, true)
 
 window.stormExtraDamage = ->
@@ -106,6 +109,7 @@ window.stormReduceDamage = ->
   changeSection(1, true)
 
 export StormDropOrDamage =
+  where: 'Sail|delay'
   label: 'Storm'
   minCargo: 1
   extraDays: 10000
@@ -115,6 +119,7 @@ export StormDropOrDamage =
   """
 
 export StormDropOrDelay =
+  where: 'Sail|delay'
   label: 'Storm'
   minCargo: 1
   extraDays: 10000
@@ -124,6 +129,7 @@ export StormDropOrDelay =
   """
 
 export StormSpeedOrSafety =
+  where: 'Sail|delay'
   label: 'Storm'
   extraDays: 10000
   text: -> """

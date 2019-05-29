@@ -1,7 +1,6 @@
 import Game from 'game/Game'
 import Cargo from 'game/Cargo'
 import Person from 'game/Person'
-import Place from 'game/Place'
 import {choice, randomRound} from 'game/util'
 
 import people from 'content/people'

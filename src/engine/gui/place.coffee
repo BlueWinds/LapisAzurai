@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 import Game from 'game/Game'
 import Cargo from 'game/Cargo'
-import Place from 'game/Place'
+import {direction, pathSvg, repairEffects, travelDays, travelSteps} from 'game/Place'
 import {canSail, storiesAt, unmetNeed, visibleStories} from 'game/Story'
 
 import {drawMap, travel} from 'gui/map'
@@ -10,6 +10,7 @@ import {updateOverview} from 'gui/person'
 import {drawStory} from 'gui/story'
 
 import * as content from 'content'
+import * as places from 'content/places'
 import {hideOverviewHelp, showOverviewHelp} from 'content/help'
 
 export showOverview = (place = $('.place').attr('place') or g.map.from, duration = 500)->
@@ -39,7 +40,7 @@ draw = (place)->
     distanceDesc = 'Docked'
     travelDiv = ''
   else
-    distanceDesc = "#{Place.travelDays(g.map.from, place)} days sailing"
+    distanceDesc = "#{travelDays(g.map.from, place)} days sailing"
     disabled = if canSail() then '' else 'disabled'
     travelDiv = """<div class="travel #{disabled}" #{if disabled then '' else 'onclick="clickTravel(\'' + place + '\');"'}>
       ⛵⇢
@@ -60,9 +61,9 @@ draw = (place)->
 
 
   return """<div place="#{place}" class="place">
-    <img src="game/content/#{Place[place].img}">
+    <img src="game/content/#{places[place].img}">
     #{travelDiv}
-    <div class="name">#{Place[place].name}</div>
+    <div class="name">#{places[place].name}</div>
     <div class="description">#{distanceDesc} - #{Math.floor(g.reputation[place])} reputation</div>
     <div class="table-wrapper"><table>
       #{Game.drawList clickableHere, drawStory.bind(null, place)}
@@ -76,22 +77,22 @@ draw = (place)->
 
 window.clickTravel = (to)->
   hideOverview()
-  g.map.to = Place.travelSteps(g.map.from, to)[0][1]
+  g.map.to = travelSteps(g.map.from, to)[0][1]
   drawMap()
 
-  direction = Place.direction(g.map.from, g.map.to)
-  g.map.distance = Place.svgElement().getTotalLength() * (direction < 0)
+  dir = direction(g.map.from, g.map.to)
+  g.map.distance = pathSvg().getTotalLength() * (dir < 0)
   travel()
 
 drawRepair = ->
-  newDamage = g.damage + Place.repairEffects().damage
+  newDamage = g.damage + repairEffects().damage
 
   oldPercent = Game.travelSpeed('Sail') * 100
   newPercent = Game.travelSpeed('Sail', newDamage) * 100
   """<td class="story active repair" onclick="clickRepair();">
     <div>
       <span class="label">Repair Ship</span>
-      <span class="cost">#{Game.drawEffects(Place.repairEffects())}</span>
+      <span class="cost">#{Game.drawEffects(repairEffects())}</span>
       <span class="success">✓</span>
     </div>
     <div class="damage">#{Math.round(oldPercent)}% → #{Math.round(newPercent)}% sail speed</div>
@@ -99,7 +100,7 @@ drawRepair = ->
 
 window.clickRepair = (i)->
   Game.passDay()
-  Game.applyEffects Place.repairEffects()
+  Game.applyEffects(repairEffects())
 
   Game.showPassDayOverlay(undefined, 'Repaired the ship')
   Game.animateSuccess('.repair.active .success')

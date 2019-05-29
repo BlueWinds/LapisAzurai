@@ -1,5 +1,4 @@
 import Game from 'game/Game'
-import Story from 'game/Story'
 
 export TomenoiRoute =
   where: 'Vailia|Ch2'

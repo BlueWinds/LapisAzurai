@@ -2,7 +2,6 @@ import $ from 'jquery'
 
 import Cargo from 'game/Cargo'
 import Person from 'game/Person'
-import Place from 'game/Place'
 import {gameIsOver} from 'game/Story'
 
 queue = []
@@ -119,7 +118,7 @@ firstVailiaHelp = (place)->
       return true
 
     c = g.availableCargo[0]
-    help('.cargo.accept', "Right now, someone in #{Place[c.from].name} is willing to pay Natalie to deliver #{c.name} to #{Place[c.to].name}. The job will disappear if she doesn't accept it in #{Cargo.acceptTimeRemaining(c)} days.")
+    help('.cargo.accept', "Right now, someone in Vailia is willing to pay Natalie to deliver #{c.name} to Mount Julia. The job will disappear if she doesn't accept it in #{Cargo.acceptTimeRemaining(c)} days.")
 
     help('.cargo.accept .cost', "If she delivers the cargo before it expires, she'll gain #{c.reputation[0]} reputation at the origin and #{c.reputation[1]} at the destination. ")
 

@@ -1,6 +1,4 @@
 import Game from 'game/Game'
-import Place from 'game/Place'
-import Story from 'game/Story'
 
 import {drawMap} from 'gui/map'
 
