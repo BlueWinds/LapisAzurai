@@ -1,3 +1,10 @@
+import 'content/people/Kat/Angry.png'
+import 'content/people/Kat/Happy.png'
+import 'content/people/Kat/Normal.png'
+import 'content/people/Kat/Sad.png'
+import 'content/people/Kat/Serious.png'
+import 'content/people/Kat/skills.svg'
+
 export default {
   name: 'Kat'
   img: 'people/Kat/Normal'

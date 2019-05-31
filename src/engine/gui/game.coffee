@@ -1,7 +1,7 @@
 # These are included via <style> tags in index.html, but load them here
 # so that webpack copies over the files
-import './background.jpg'
-import './game.css'
+import 'gui/background.jpg'
+import 'gui/game.css'
 
 import $ from 'jquery'
 import yaml from 'js-yaml'

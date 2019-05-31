@@ -18,7 +18,7 @@ export GameOverPower =
   ||
     <center>"Be not the slave of your own past - plunge into the sublime seas, dive deep, and swim far, so you shall come back with new self-respect, with new power, and with an advanced experience that shall explain and overlook the old."</center>
 
-  - Ralph Waldo Emerson</center>
+    <center>- Ralph Waldo Emerson</center>
 
     #{gameOverText()}
   """
@@ -108,6 +108,6 @@ gameOverText = ->
   end = gameIsOver()
   """
   ||-
-    <center><i>Time has run out for "<b>#{end.label}</b>" at #{places[end.place].name}. Natalie and her friends will carry on, but the story is incomplete...</i></center>
+    <center><i>Time has run out for "<b>#{end.label}</b>" at #{places[end.where.split('|')[0]].name}. Natalie and her friends will carry on, but the story is incomplete...</i></center>
 
   """

@@ -8,7 +8,7 @@ import {changeSection} from 'gui/story'
 import * as places from 'content/places'
 
 export FirstStorm =
-  where: 'Sail|delay'
+  where: 'Sail|Ch1|delay'
   label: 'Storm'
   blocking: true
   history:

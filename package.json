@@ -30,12 +30,11 @@
     "url": "https://github.com:BlueWinds/LapisAzurai.git"
   },
   "scripts": {
-    "start": "coffeelint -q src/ || true && run-s clean copy-images browser-info && run-p webpack:watch",
+    "start": "coffeelint -q src/ || true && run-s clean browser-info && run-p webpack:watch",
     "browser-info": "echo \"\\033[0;32mCompiling to\\033[0m file://$PWD/dist/index.html\"",
     "build-dist": "run-s compile remove-livereload && cd dist && zip -r LapisAzurai.zip *",
-    "compile": "coffeelint -q src/ && run-s clean copy-images && webpack --mode production",
-    "clean": "rm -rf dist/* || true && mkdir -p dist && mkdir dist/game && run-p copy-static string-replace",
-    "copy-images": "rsync -r --prune-empty-dirs --include='*/' --include='*.jpg' --include='*.png' --include='*.svg' --exclude='*' src/content dist/game/",
+    "compile": "coffeelint -q src/ && run-s clean && webpack --mode production",
+    "clean": "rm -rf dist/* || true && mkdir -p dist/game && run-p copy-static string-replace",
     "copy-static": "cp src/README.txt dist/README.txt && cp src/EventDump.html dist/ && cp src/EventGraph.html dist/ && cp src/TradeGraph.html dist/",
     "string-replace": "sed '/<svg id=\"map\"><\\/svg>/r src/content/Map.svg' src/index.html | sed 's/<svg id=\"map\"><\\/svg>//' | sed 's/Map.png/game\\/content\\/Map.png/g' > dist/index.html",
     "remove-livereload": "sed -i 's/<script src=\"http:\\/\\/localhost:35729\\/livereload.js\"><\\/script>//' dist/index.html",

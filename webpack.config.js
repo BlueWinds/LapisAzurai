@@ -16,7 +16,8 @@ module.exports = {
   devtool: 'inline-cheap-source-map',
   entry: {
     main: './src/index.coffee',
-    devTools: './src/devTools.js',
+    eventDump: './src/eventDump.coffee',
+    eventGraph: './src/eventGraph.coffee',
   },
   mode: 'development',
   module: {
@@ -26,8 +27,12 @@ module.exports = {
         use: 'happypack/loader',
       },
       {
-        test: /\.(png|jpg|gif|svg|css)$/,
-        use: [fileLoader],
+        test: /\.(png|jpg|gif|svg|html)$/,
+        use: fileLoader,
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader/url' }, fileLoader],
       },
     ]
   },

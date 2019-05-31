@@ -2,7 +2,7 @@ export NaxinsTroopMovement =
   where: 'Naxins|Ch3'
   label: 'Kantian Troops'
   history:
-    Ch3Root: true
+    Ch3: true
   effects:
     xp:
       Asara: 2

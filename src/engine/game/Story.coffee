@@ -70,6 +70,7 @@ export applyStory = (place, story)->
 
 export travelEvent = (from, to, type)->
   stories = storiesAt(type)
+    .concat(storiesAt(type, g.chapter))
     .filter(matchesConditions)
 
   return if blockingEvents(stories).length
@@ -79,7 +80,7 @@ export travelEvent = (from, to, type)->
   else null
 
 export delayEvent = (from, to, type)->
-  stories = storiesAt(type, 'delay')
+  stories = storiesAt(type, 'delay').concat(storiesAt(type, chapter, 'delay'))
   choice(blockingEvents(stories)) or choice(repeatableEvents(stories)) or null
 
 export visibleStories = (stories = [])->

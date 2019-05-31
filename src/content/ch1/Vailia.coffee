@@ -52,7 +52,7 @@ export Intro =
 
 export Ch1 =
   where: 'Vailia|Ch1'
-  label: 'Vailia'
+  label: 'The Guild'
   blocking: true
   required: 'GameOverExploration'
   history:

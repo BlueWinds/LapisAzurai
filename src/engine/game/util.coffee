@@ -16,7 +16,7 @@ export choice = (items)-> (items)->
     return Math.floor(Math.random() * items.length)
   return choice(Object.keys(items))
 
-sumObject = (items)->
+export sumObject = (items)->
   sum = 0
   for key, val of items
     sum += val

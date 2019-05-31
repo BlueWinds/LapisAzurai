@@ -1,8 +1,7 @@
 export FirstStorm2 =
-  where: 'Sail'
+  where: 'Sail|Ch1'
   label: 'Storm'
   blocking: true
-  place: 'Vailia' # Only used for counting when events should expire
   history:
     FirstStorm: true
   effects:
@@ -21,9 +20,9 @@ export FirstStorm2 =
   || travel/CabinNight
     He carried her down below decks, to her cabin. Against all odds, the interior was still dry. Even a Grandmother Storm that had snapped both masts and torn away every sail hadn't been a match for the rubber seal around the door to the captain's cabin.
 
-    Efficiently he stripped her, all the way down to bare skin. Any other time he would have hesitated, or at the very least been blushing and mortified as he worked, but not now. Any feelings beyond mere practicality were gone, washed away somewhere in the last six hours.
+    Efficiently he stripped her, all the way down to bare skin. Any other time he would have hesitated, or at the very least been blushing as he worked, but not now. Any feelings beyond mere practicality were gone, washed away somewhere in the last six hours.
 
-    He pulled the sheets up around her neck, then a blanket, then fumbled another one from a chest to lay over her. She didn't stir. Her skin still burned.
+    He pulled the sheets up around her neck, then a blanket, then fumbled another one from a chest to lay over her. She didn't stir. Her skin still burned with heat.
 
     He slumped to the floor, his back to her bed, and waited.
 
@@ -32,27 +31,6 @@ export FirstStorm2 =
 
   ||
     Slept.
-  """
-
-export Ch3Storm2 =
-  where: 'Sail'
-  label: 'Storm'
-  blocking: true
-  place: 'Tomenoi' # Only used for counting when events should expire
-  history:
-    Ch2: true
-    StormDropOrDamage: true
-  effects:
-    xp:
-      Asara: 3
-  text: -> """
-  || travel/DeckStorm
-    The latest storm rolled off into the distance, roiling clouds covering the sky from one horizon to the other. They retreated as rapidly as they'd struck, leaving the ship clear and the Lapis' crew laying exhausted across the deck. It had been a bad one. James crawled over to Natalie where she lay passed out. It had been a very bad one. Only a curtain of shimmering electric green coating every surface of the ship had kept the hurricane winds and towering waves from smashing them to splinters. They'd been struck by lightning twice, blinding, deafening surges of light accompanied by whimpers from the ship's captain, but no visible damage to the Lapis. Nalatie likely wouldn't wake for days.
-
-    Asara moved among the sailors on deck, checking for injuries and bringing water. She wasn't part of the crew, not really, useless with canvas and rope with no inclination to help with daily necessities, but the Lapis' passenger shone in moments of crisis. Saving lives had quieted most of the grumbling about laziness. No one who'd seen it would ever forget her running dive into a churning wall of water, nor the miracle that had brought her back on deck with the next crashing wave, dragging a spluttering man overboard back to the ship by his collar.
-
-  || travel/DeckDay
-    James thanked whatever gods were watching over them for blessing his life with the two of them, and for seeing the Lapis through another impossible storm. With a groan,he pushed himself up to his feet. No rest for the weary until they made landfall. Natalie and Asara had done their parts - his turn to do his.
   """
 
 export Clouds =

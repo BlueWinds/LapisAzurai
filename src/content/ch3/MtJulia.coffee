@@ -2,7 +2,7 @@ export MtJuliaShips =
   where: 'MtJulia|Ch3'
   label: 'Other ships in dock'
   history:
-    Ch3Root: true
+    Ch3: true
   effects:
     xp:
       Natalie: 2

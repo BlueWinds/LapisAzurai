@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
-  <link href="game/content.css" rel="stylesheet">
-  <link href="game/engine.css" rel="stylesheet">
   <style>
-    body {
+    #i {
       background: #000;
       color: #aaa;
       max-width: 960px;
@@ -13,33 +11,33 @@
       width: 90%;
     }
 
-    a {
+    #i a {
       color: #6af;
     }
 
-    li {
+    #i li {
       list-style: none;
     }
 
-    #index, #warnings {
+    #i #index, #warnings {
       padding: 0;
       text-align: center;
     }
 
-    img {
+    #i img {
       float: left;
       max-width: 300px;
       max-height: 200px;
       margin: 0 15px 10px 0;
     }
 
-    section {
+    #i section {
       clear: both;
       display: block;
       margin-bottom: 20px;
     }
 
-    h1 {
+    #i h1 {
       border-top: 5px solid black;
       clear: both;
       margin-top: 60px;
@@ -47,110 +45,22 @@
       text-align: center;
     }
 
-    h2 {
+    #i h2 {
       margin-bottom: 5px;
     }
 
-    h4 {
+    #i h4 {
       margin: 10px;
     }
 
-    section {
+    #i section {
       display: block;
     }
   </style>
-  <script src="game/lib.js"></script>
-  <script src="game/compiled.js"></script>
+  <script src="eventDump.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
-  <script>
-    window.g = {history: {}, people: {}}
-
-    function drawEvents() {
-      var index = $('#index').empty()
-      var w = $('#warnings').empty()
-      var s = $('#stories').empty()
-
-      for (let type in Place.travel) {
-        index.append('<h2>' + type + '</h2>')
-        Place.travel[type].stories.forEach(drawStory);
-        index.append('<h2>' + type + ' Delay</h2>')
-        Place.travel[type].delayStories.forEach(drawStory);
-      }
-
-      for (let chapter in Place.Vailia.stories) {
-        let xp = {};
-        let xpHeader = $('<h5></h5>')
-
-        index.append('<h2>' + chapter + '</h2>')
-        index.append(xpHeader)
-
-        for (let place in Place) {
-          if (!Place[place].stories || !Place[place].stories[chapter] || !Place[place].stories[chapter].length) { continue; }
-
-          index.append('<h4>' + place + '</h4>')
-          Place[place].stories[chapter].forEach(drawStory);
-          xp = Place[place].stories[chapter].reduce(addXp, xp || {});
-        }
-
-        xpHeader.html(Object.keys(xp).sort().reverse().map(function(c) { return c + ' - ' + xp[c] + 'xp'; }).join('<br>'));
-      }
-
-      function drawStory(story) {
-        if (!Story[story].text) { return; }
-
-        const link = '<a href="#' + story + '">' + story + '</a>';
-
-        if (!Story[story].label) {
-          w.append('<li>' + link + ' is missing a label</li>');
-        }
-
-        var history = Story[story].history
-        for (prereq in history) {
-          if (history[prereq] !== true && history[prereq] !== false) {
-            w.append('<li>' + link + ' has a non-boolean history (' + prereq + ', ' + history[prereq] + ').</li>');
-          }
-        }
-
-        if (Story[story].required && !Story[Story[story].required]) {
-          w.append('<li>' + link + '\'s Game Over story doesn\'t exist (' + Story[story].required + ').</li>');
-        }
-
-        sections = Story.render(story);
-        sections.each(function(i) {
-          section = $(this).attr('id', story + i)
-          const i_link = '<a href="#' + story + i + '">' + story + '[' + i + ']</a>';
-          len = section.text().length;
-
-          if (section.find('img').length && len < 200) {
-            w.append('<li>' + i_link + ' has an image, but is only ' + len + ' characters long.</li>');
-          }
-
-          if (len > 2000) {
-            w.append('<li>' + i_link + ' is ' + len + ' characters long, consider breaking it up.</li>');
-          }
-
-          section.find('img').on('error', function(e) {
-            w.prepend('<li>' + i_link + ' wanted invalid image "' + decodeURI(this.src.split('content/')[1]) + '"</li>');
-          });
-        });
-
-        index.append('<li>' + link + '</li>');
-        s.append('<h1 id="' + story + '">'+ Story[story].label + ' (' + story + ') <a href="#">^</a></h1>');
-        s.append(sections);
-      }
-
-      function addXp(chXp, story) {
-        if (!Story[story].effects) { return chXp; }
-        for (let character in Story[story].effects.xp || {}) {
-          chXp[character] = chXp[character] || 0;
-          chXp[character] += Story[story].effects.xp[character];
-        }
-        return chXp;
-      }
-    }
-  </script>
 </head>
-<body onload="drawEvents()">
+<body id="i">
   <ul id="warnings"></ul>
   <ul id="index"></ul>
   <div id="stories"></div>

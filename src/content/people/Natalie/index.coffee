@@ -1,3 +1,10 @@
+import 'content/people/Natalie/Angry.png'
+import 'content/people/Natalie/Embarrassed.png'
+import 'content/people/Natalie/Excited.png'
+import 'content/people/Natalie/Normal.png'
+import 'content/people/Natalie/skills.svg'
+import 'content/people/Natalie/Upset.png'
+
 export default {
   name: 'Natalie'
   img: 'people/Natalie/Normal'

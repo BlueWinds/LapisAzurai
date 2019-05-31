@@ -1,3 +1,12 @@
+import 'content/people/Asara/Angry.png'
+import 'content/people/Asara/Crying.png'
+import 'content/people/Asara/Embarrassed.png'
+import 'content/people/Asara/Grinning.png'
+import 'content/people/Asara/Normal.png'
+import 'content/people/Asara/NormalFull.png'
+import 'content/people/Asara/Sad.png'
+import 'content/people/Asara/Scared.png'
+
 export default {
   name: 'Asara'
   img: 'people/Asara/Normal'

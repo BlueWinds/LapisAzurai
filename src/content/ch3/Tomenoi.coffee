@@ -30,6 +30,7 @@ export KatsReservations =
 
     `N Magic. I help power the amulets, they give me a share of the profits.`
 
+  || K/Serious
     Kat was silent for a moment, and Natalie filled the silence by stroking Kat's cheek. She nuzzled the hand and spoke. `K I don't like those.`
 
     `N Why not?`

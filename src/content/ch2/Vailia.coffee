@@ -761,7 +761,7 @@ export JamesCh3Yes =
   '''
   apply: ->
     g.chapter = 'Ch3'
-    g.history.Ch3Root = g.day
+    g.history.Ch3 = g.day
     Game.showOverlay('<h1>Chapter 3</h1><h3>James</h3>', 0, 'chapter overlay')
 
 export JamesCh3No =

@@ -1,3 +1,15 @@
+import 'content/travel/CabinDay.jpg'
+import 'content/travel/CabinNight.jpg'
+import 'content/travel/CabinStorm.jpg'
+import 'content/travel/DeckDay.jpg'
+import 'content/travel/DeckFog.jpg'
+import 'content/travel/DeckNight.jpg'
+import 'content/travel/DeckStorm.jpg'
+import 'content/travel/SailingDay.jpg'
+import 'content/travel/SailingNight.jpg'
+import 'content/travel/SailingStorm.jpg'
+import 'content/travel/SilverFire.jpg'
+
 import {eventIntervalSkill, stormDamageSkill, stormDurationSkill, stormIntervalSkill} from 'content/people/skillEffects'
 
 export Sail = {
@@ -16,8 +28,8 @@ export Sail = {
   ]
 
   travelStoryOccurs: ->
-    min = 70 + eventIntervalSkill()
-    cycle = 100
+    min = 50 + eventIntervalSkill()
+    cycle = 50
     return g.lastTravelEvent + Math.random() * cycle + min < g.day
 
   delayOccurs: (from, to, distance)->

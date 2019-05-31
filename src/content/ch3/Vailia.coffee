@@ -1,6 +1,6 @@
 import {expirationDate} from 'game/Story'
 
-export Ch3Root =
+export Ch3 =
   where: 'Vailia|Ch3'
   label: 'Non-route Ch3 Root'
   history:
@@ -30,7 +30,7 @@ export NonkeniaDiplomatConclusion =
   label: 'Diplomatic Delivery - Conclusion'
   cost: 0
   history:
-    Ch3Root: true
+    Ch3: true
   effects:
     xp:
       Natalie: 3
@@ -55,7 +55,7 @@ export ExploreKantis =
   where: 'Vailia|Ch3'
   label: 'Deeper into Kantian Waters'
   history:
-    Ch3Root: true
+    Ch3: true
   effects:
     xp:
       Natalie: 3
@@ -65,9 +65,9 @@ export ExploreKantis =
 
     `N You want me to open up trade with more of the Kantian sea.`
 
-    `Guildmaster Sharp as always. It was a stroke of luck that opened sea routes to the east thirty years ago, a stranger washed up on our shore. Wend opened up the opportunity, and I seized it. Your position is similar. Your unique acquaintance with Asara, your contacts with the UTC... it's an opportunity to expand our reach again.`
+    `Guildmaster Sharp as always. It was a stroke of luck that opened sea routes to the east thirty years ago, a stranger washed up on our shore. Wend created up the opportunity, and I seized it. Your position is similar. Your unique acquaintance with Asara, your contacts within the UTC... it's an opportunity to expand our reach again.`
 
-    The economics were clear. Vailian ships were the only ones fast and sturdy enough to brave the blue-water passage between Vailia and the eastern continent, turning Tomenoi from a barely inhabited island into a thriving waypoint of the rapidly expanding trade between West and East. A trade route controlled exclusively by Vailia. By the Guild. Vailia had been changed as well. Ideal placement, the secrets of superior shipbuilding and a twist of fate had turned a sleepy liesure-city into the center of a growing commercial empire.
+    The economics were clear. Vailian ships were the only ones fast and sturdy enough to brave the blue-water passage between Vailia and the eastern continent, turning Tomenoi from a barely inhabited island into a thriving waypoint of the rapidly expanding trade between West and East. A trade route controlled exclusively by Vailia. By the Guild. Vailia had been changed as well. Ideal placement, the secrets of superior shipbuilding and a twist of fate had turned a sleepy liesure-city off the coast into the center of a growing commercial empire.
   || N/Upset
     `N You want me to steal a rutter for the Kantian sea.` A statement, not a question. Kantis had kept its dominant position over the densly populated east by dint of the fact that Vailian captains had no maps, no sense for the currents, winds, weather and landmarks. Perhaps in another couple decades they could develop their own, but until then, Kantis' charts were a secret worth killing for, not for sale for any price.
 
