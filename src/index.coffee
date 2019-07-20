@@ -1,7 +1,12 @@
+import './index.html'
+import 'content/Logo.png'
+import './README.txt'
+
 import $ from 'jquery'
 
 import {featureDetect} from 'game/util'
 import {guiSetup, load} from 'gui/game'
+
 
 # Tweak this number to speed up (>1) or slow down (<1) all animations in the game
 speedFactor = 1.5

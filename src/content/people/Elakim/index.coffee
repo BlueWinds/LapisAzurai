@@ -1,8 +1,8 @@
-import 'content/people/Elakim/Angry.png'
-import 'content/people/Elakim/Happy.png'
-import 'content/people/Elakim/Normal.png'
-import 'content/people/Elakim/Sad.png'
-import 'content/people/Elakim/Serious.png'
+export {default as Angry} from './Angry.png'
+export {default as Happy} from './Happy.png'
+export {default as Normal} from './Normal.png'
+export {default as Sad} from './Sad.png'
+export {default as Serious} from './Serious.png'
 
 export default {
   name: 'Elakim Appolon'

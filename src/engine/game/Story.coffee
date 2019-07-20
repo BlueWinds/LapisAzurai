@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import {choice} from 'game/util'
 import Game from 'game/Game'
 

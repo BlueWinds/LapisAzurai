@@ -9,6 +9,7 @@ import {quote} from 'gui/person'
 import {hideOverview} from 'gui/place'
 
 import * as content from 'content'
+import * as images from 'content/images'
 import people, {aliases} from 'content/people'
 import {displayStoryHelp, enterMapHelp} from 'content/help'
 
@@ -207,17 +208,14 @@ export storyGuiSetup = ->
     changeSection(-1)
 
 addSectionImage = (element, line)->
-  img = line.match(/ (.+)\/(.+)$/)
+  img = line.match(/\|\| (.+)$/)
 
   if img
-    # It might be an aliased person's name
-    name = aliases[img[1]] or img[1]
-    src = if people[name]
-      "game/content/people/#{name}/#{img[2]}.png"
-    else
-      "game/content/#{img[1]}/#{img[2]}.jpg"
+    src = images
+    for part in img[1].split('/') then src = src[part]
 
-    element.append( "<img src='#{src}'>")
+    if src
+      element.append( "<img src='.#{src}'>")
 
 elementInDirection = (element, direction)->
   return if direction < 0 and element.length then element.prev()

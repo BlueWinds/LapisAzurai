@@ -5,13 +5,16 @@ import {applyStory, expirationDate, storiesAt, visibleStories} from 'game/Story'
 
 import {showOverview} from 'gui/place'
 import {displayStory} from 'gui/story'
+import mapSvg from 'content/Map.svg'
+import mapImage from 'content/Map.png'
 
 import * as content from 'content'
 
 export mapGuiSetup = ->
   # Set up draggable map
-  map = $('#map')
+  map = $('#map').html(mapSvg)
   dragMap = $('#drag-map')
+  map.find('#MapLayer image').attr('xlink:href', mapImage)
 
   # Center the map initially
   w = map.width()

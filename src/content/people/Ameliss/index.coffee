@@ -1,7 +1,7 @@
-import 'content/people/Ameliss/Angry.png'
-import 'content/people/Ameliss/Happy.png'
-import 'content/people/Ameliss/Normal.png'
-import 'content/people/Ameliss/Sad.png'
-import 'content/people/Ameliss/Serious.png'
+export {default as Angry} from './Angry.png'
+export {default as Happy} from './Happy.png'
+export {default as Normal} from './Normal.png'
+export {default as Sad} from './Sad.png'
+export {default as Serious} from './Serious.png'
 
 export default {}

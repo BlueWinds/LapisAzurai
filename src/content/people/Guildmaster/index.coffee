@@ -1,8 +1,8 @@
-import 'content/people/Guildmaster/Normal.png'
-import 'content/people/Guildmaster/Serious.png'
-import 'content/people/Guildmaster/Skeptical.png'
-import 'content/people/Guildmaster/Smiling.png'
-import 'content/people/Guildmaster/Thinking.png'
+export {default as Normal} from './Normal.png'
+export {default as Serious} from './Serious.png'
+export {default as Skeptical} from './Skeptical.png'
+export {default as Smiling} from './Smiling.png'
+export {default as Thinking} from './Thinking.png'
 
 export default {
   name: 'Guildmaster Janos'

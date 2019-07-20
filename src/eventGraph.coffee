@@ -66,7 +66,7 @@ window.drawEvents = (chapter) ->
   nodes = {}
 
   for place of places
-    for story of storiesAt(place, chapter)
+    for story in storiesAt(place, chapter)
       places[story] = place
 
   for story in byChapter[chapter]
@@ -196,7 +196,11 @@ addPlaceColors = (chapter)->
   for place of places
     rep = sumObject(storiesAt(place, chapter).map(reputationNeeded))
     if rep
-      $('<div>' + place + ' - ' + rep + '</div>').css('color', placeColors(place)).appendTo('.colorBy.places')
+      $('<div>' + place + ' - ' + rep + '</div>')
+        .css('color', placeColors(place))
+        .appendTo('.colorBy.places')
+        .attr('place', place)
+        .on('click', ()-> recolor('places', $(this).attr('place')))
 
 addStoryColors = ->
   for story of content
@@ -213,7 +217,11 @@ addStoryColors = ->
       $('<div class="' + requiredGroup + '"><span class="solid"></span> ' + requiredGroup + '</div>').css('color', linkColors(requiredGroup)).appendTo('.links')
 
   for type of travelData
-    $('<div>' + type + '</div>').css('color', placeColors(type)).appendTo('.colorBy.places')
+    $('<div>' + type + '</div>')
+      .css('color', placeColors(type))
+      .appendTo('.colorBy.places')
+      .attr('place', type)
+      .on('click', ()-> recolor('places', $(this).attr('place')))
 
 addCharacterColors = (chapter)->
   for p1 in mainCharacters
@@ -236,16 +244,17 @@ addCharacterColors = (chapter)->
 
 getLinkColor = (group)-> if group is 'Normal' then '#aaa' else linkColors(group)
 
-window.recolor = (colorBy)->
-  colorBy = setHash(null, colorBy)[1]
+window.recolor = (colorBy, category)->
+  [ignore, colorBy, category] = setHash(null, colorBy, category)
 
-  setHash(null, colorBy)
   $('.colorBy').hide()
   $('.' + colorBy).show()
 
   circle.attr('fill', (d)->
     if colorBy is 'places'
-      return placeColors(places[d.name])
+      if not category or category is places[d.name]
+        return placeColors(places[d.name])
+      return '#999'
 
     if colorBy is 'required'
       required = content[d.name].required
@@ -263,11 +272,14 @@ window.recolor = (colorBy)->
       return if _class then _classColors(_class) else '#aaa'
   )
 
-setHash = (chapter, colorBy)->
+setHash = (chapter, colorBy, category)->
   split = window.location.hash.substr(1).split('|')
 
   unless chapter then chapter = split[0] or 'Ch1'
   unless colorBy then colorBy = split[1] or 'places'
+  unless category then category = split[2] or ''
 
-  window.location.hash = '#' + chapter + '|' + colorBy
-  return [chapter, colorBy]
+  if category is split[2] then category = ''
+
+  window.location.hash = '#' + chapter + '|' + colorBy + '|' + category
+  return [chapter, colorBy, category]

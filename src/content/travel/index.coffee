@@ -1,30 +1,20 @@
-import 'content/travel/CabinDay.jpg'
-import 'content/travel/CabinNight.jpg'
-import 'content/travel/CabinStorm.jpg'
-import 'content/travel/DeckDay.jpg'
-import 'content/travel/DeckFog.jpg'
-import 'content/travel/DeckNight.jpg'
-import 'content/travel/DeckStorm.jpg'
-import 'content/travel/SailingDay.jpg'
-import 'content/travel/SailingNight.jpg'
-import 'content/travel/SailingStorm.jpg'
-import 'content/travel/SilverFire.jpg'
+import * as images from './images'
 
 import {eventIntervalSkill, stormDamageSkill, stormDurationSkill, stormIntervalSkill} from 'content/people/skillEffects'
 
 export Sail = {
   normalImages: [
-    'travel/CabinDay.jpg'
-    'travel/CabinNight.jpg'
-    'travel/DeckDay.jpg'
-    'travel/DeckNight.jpg'
-    'travel/DeckFog.jpg'
-    'travel/SailingDay.jpg'
-    'travel/SailingNight.jpg'
+    images.CabinDay
+    images.CabinNight
+    images.DeckDay
+    images.DeckNight
+    images.DeckFog
+    images.SailingDay
+    images.SailingNight
   ]
   delayImages: [
-    'travel/DeckStorm.jpg',
-    'travel/SailingStorm.jpg'
+    images.DeckStorm,
+    images.SailingStorm
   ]
 
   travelStoryOccurs: ->

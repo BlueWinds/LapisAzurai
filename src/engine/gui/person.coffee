@@ -17,8 +17,8 @@ export updateOverview = ->
   for person of g.people
     oldDiv = p.find("[person=#{person}]")
     newDiv = $(draw(person))
+    # If the svg is already present, replacing it would cause an annoying flicker for the player. Instead we take the messier route of updating everything around it.
     if oldDiv.length
-      # If the svg is already present, replacing it would cause an annoying flicker for the player. Instead we take the messier route of updating everything around it.
       oldDiv.find('.picks').replaceWith(newDiv.find('.picks'))
       oldDiv.find('.description').replaceWith(newDiv.find('.description'))
 
@@ -27,11 +27,11 @@ export updateOverview = ->
       if skill
         $("[skill=#{skill}]").replaceWith(drawSkill(person, skill))
     else
-      newDiv.find('object').on('load', activateSVG)
+      activateSVG(newDiv.find('svg'))
       newDiv.mouseenter ->
         newDivPerson = @attributes.person.value
         p.find(".skill[p!=#{newDivPerson}]").remove()
-        p.find(".person[person!=#{newDivPerson}] object").each ->
+        p.find(".person[person!=#{newDivPerson}] svg").each ->
           $(@contentDocument).find('.active').removeClass('active')
       p.append(newDiv)
   return
@@ -45,18 +45,17 @@ draw = (person)->
   s = if skillPoints is 1 then '' else 's'
 
   return """<div person="#{person}" class="person">
-    <img src="game/content/#{people[person].img}.png">
+    <img src="#{people[person].img}">
     <div>
       <div class="name">#{people[person].name}</div>
       <div class="description">#{needed - xp}xp needed for next skill</div>
     </div>
     <div class="picks #{if skillPoints > 0 then 'active' else ''}">#{skillPoints} skill#{s} available</div>
-    <object data="game/content/#{people[person].svg}"></object>
+    #{people[person].svg}
   </div>"""
 
-activateSVG = ->
-  svg = @contentDocument
-  personElement = $(@).parent()
+activateSVG = (svg)->
+  personElement = $(svg).parent()
   person = personElement.attr('person')
   p = $('#overview .people')
   # 1 = aura

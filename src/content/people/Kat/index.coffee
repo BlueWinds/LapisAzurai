@@ -1,14 +1,15 @@
-import 'content/people/Kat/Angry.png'
-import 'content/people/Kat/Happy.png'
-import 'content/people/Kat/Normal.png'
-import 'content/people/Kat/Sad.png'
-import 'content/people/Kat/Serious.png'
-import 'content/people/Kat/skills.svg'
+export {default as Angry} from './Angry.png'
+export {default as Happy} from './Happy.png'
+import Normal from './Normal.png'
+export {Normal}
+export {default as Sad} from './Sad.png'
+export {default as Serious} from './Serious.png'
+import svg from './skills.svg'
 
 export default {
   name: 'Kat'
-  img: 'people/Kat/Normal'
-  svg: 'people/Kat/skills.svg'
+  img: Normal
+  svg: svg
   skills:
     Bright:
       description: 'Events grant +1 xp to a random participant'

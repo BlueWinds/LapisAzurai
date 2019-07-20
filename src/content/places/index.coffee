@@ -1,37 +1,8 @@
-import 'content/places/AlkeniaDay.jpg'
-import 'content/places/AlkeniaNight.jpg'
-import 'content/places/AlkeniaStorm.jpg'
-import 'content/places/AmandaisDay.jpg'
-import 'content/places/AmandaisNight.jpg'
-import 'content/places/ColinthDay.jpg'
-import 'content/places/ColinthNight.jpg'
-import 'content/places/GuildOffice.jpg'
-import 'content/places/IronSandsDay.jpg'
-import 'content/places/IronSandsNight.jpg'
-import 'content/places/IronSandsStorm.jpg'
-import 'content/places/KantisDay.jpg'
-import 'content/places/KantisGarden.jpg'
-import 'content/places/KantisStorm.jpg'
-import 'content/places/MtJuliaDay.jpg'
-import 'content/places/MtJuliaNight.jpg'
-import 'content/places/MtJuliaStorm.jpg'
-import 'content/places/NaxinsDay.jpg'
-import 'content/places/NaxinsStorm.jpg'
-import 'content/places/NonkeniaDay.jpg'
-import 'content/places/NonkeniaNight.jpg'
-import 'content/places/NonkeniaStorm.jpg'
-import 'content/places/PortDay.jpg'
-import 'content/places/PortNight.jpg'
-import 'content/places/PortStorm.jpg'
-import 'content/places/Tavern.jpg'
-import 'content/places/TomenoiDay.jpg'
-import 'content/places/TomenoiNight.jpg'
-import 'content/places/VailiaDay.jpg'
-import 'content/places/VailiaNight.jpg'
+import * as images from './images'
 
 export Vailia =
   name: 'Vailia'
-  img: 'places/VailiaDay.jpg'
+  img: images.VailiaDay
   paths:
     MtJulia: 1
     Alkenia: 'MtJulia'
@@ -59,7 +30,7 @@ export Vailia =
 
 export MtJulia =
   name: 'Mt. Julia'
-  img: 'places/MtJuliaDay.jpg'
+  img: images.MtJuliaDay
   paths:
     Vailia: -1
     Alkenia: 1
@@ -81,7 +52,7 @@ export MtJulia =
 
 export Alkenia =
   name: 'Alkenia'
-  img: 'places/AlkeniaDay.jpg'
+  img: images.AlkeniaDay
   paths:
     Vailia: 'MtJulia'
     MtJulia: -1
@@ -108,7 +79,7 @@ export Alkenia =
 
 export Nonkenia =
   name: 'Nonkenia'
-  img: 'places/NonkeniaDay.jpg'
+  img: images.NonkeniaDay
   paths:
     Vailia: 'MtJulia'
     MtJulia: -1
@@ -131,7 +102,7 @@ export Nonkenia =
 
 export IronSands =
   name: 'Iron Sands'
-  img: 'places/IronSandsDay.jpg'
+  img: images.IronSandsDay
   paths:
     Vailia: -1
     MtJulia: -1
@@ -155,7 +126,7 @@ export IronSands =
 
 export Tomenoi =
   name: 'Tomenoi'
-  img: 'places/TomenoiDay.jpg'
+  img: images.TomenoiDay
   paths:
     Vailia: -1
     MtJulia: 'Vailia'
@@ -180,7 +151,7 @@ export Tomenoi =
 
 export Colinth =
   name: 'Colinth'
-  img: 'places/ColinthDay.jpg'
+  img: images.ColinthDay
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
@@ -204,7 +175,7 @@ export Colinth =
 
 export Kantis =
   name: 'Kantis'
-  img: 'places/KantisDay.jpg'
+  img: images.KantisDay
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'
@@ -304,7 +275,7 @@ export Crater =
 
 export Amandais =
   name: 'Amandais'
-  img: 'places/AmandaisDay.jpg'
+  img: images.AmandaisDay
   paths:
     Vailia: 'Tomenoi'
     MtJulia: 'Tomenoi'

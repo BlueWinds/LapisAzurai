@@ -7,7 +7,7 @@ const fileLoader = {
   loader: 'file-loader', options: {
     name(file) {
       const p = path.parse(file)
-      return p.dir.replace(/.*\/src/, 'game') + '/[name].[ext]'
+      return p.dir.replace(/.*\/src/, '') + '/[name].[ext]'
     }
   }
 }
@@ -27,8 +27,12 @@ module.exports = {
         use: 'happypack/loader',
       },
       {
-        test: /\.(png|jpg|gif|svg|html)$/,
+        test: /\.(png|jpg|gif|html|txt)$/,
         use: fileLoader,
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
       },
       {
         test: /\.css$/,

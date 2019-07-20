@@ -1,16 +1,19 @@
-import 'content/people/Asara/Angry.png'
-import 'content/people/Asara/Crying.png'
-import 'content/people/Asara/Embarrassed.png'
-import 'content/people/Asara/Grinning.png'
-import 'content/people/Asara/Normal.png'
-import 'content/people/Asara/NormalFull.png'
-import 'content/people/Asara/Sad.png'
-import 'content/people/Asara/Scared.png'
+export {default as Angry} from './Angry.png'
+export {default as Crying} from './Crying.png'
+export {default as Embarrassed} from './Embarrassed.png'
+export {default as Grinning} from './Grinning.png'
+import Normal from './Normal.png'
+export {Normal}
+export {default as NormalFull} from './NormalFull.png'
+export {default as Sad} from './Sad.png'
+export {default as Scared} from './Scared.png'
+
+import svg from './skills.svg'
 
 export default {
   name: 'Asara'
-  img: 'people/Asara/Normal'
-  svg: 'people/Asara/skills.svg'
+  img: Normal
+  svg: svg
   skills:
     Tears:
       description: 'Nothing. Emptyness.'

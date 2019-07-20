@@ -1,7 +1,7 @@
-import 'content/people/Sailors/MAngry.png'
-import 'content/people/Sailors/MHappy.png'
-import 'content/people/Sailors/MNormal.png'
-import 'content/people/Sailors/MSad.png'
-import 'content/people/Sailors/MSerious.png'
+export {default as MAngry} from './MAngry.png'
+export {default as MHappy} from './MHappy.png'
+export {default as MNormal} from './MNormal.png'
+export {default as MSad} from './MSad.png'
+export {default as MSerious} from './MSerious.png'
 
 export default {}

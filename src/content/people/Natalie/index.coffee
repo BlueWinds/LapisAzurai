@@ -1,14 +1,15 @@
-import 'content/people/Natalie/Angry.png'
-import 'content/people/Natalie/Embarrassed.png'
-import 'content/people/Natalie/Excited.png'
-import 'content/people/Natalie/Normal.png'
-import 'content/people/Natalie/skills.svg'
-import 'content/people/Natalie/Upset.png'
+export {default as Angry} from './Angry.png'
+export {default as Embarrassed} from './Embarrassed.png'
+export {default as Excited} from './Excited.png'
+import Normal from './Normal.png'
+export {Normal}
+export {default as Upset} from './Upset.png'
+import svg from './skills.svg'
 
 export default {
   name: 'Natalie'
-  img: 'people/Natalie/Normal'
-  svg: 'people/Natalie/skills.svg'
+  img: Normal
+  svg: svg
   skills:
     WinningSmile:
       name: 'Winning Smile'

@@ -1,14 +1,15 @@
-import 'content/people/James/Angry.png'
-import 'content/people/James/Embarrassed.png'
-import 'content/people/James/Excited.png'
-import 'content/people/James/Normal.png'
-import 'content/people/James/skills.svg'
-import 'content/people/James/Upset.png'
+export {default as Angry} from './Angry.png'
+export {default as Embarrassed} from './Embarrassed.png'
+export {default as Excited} from './Excited.png'
+import Normal from './Normal.png'
+export {Normal}
+export {default as Upset} from './Upset.png'
+import svg from './skills.svg'
 
 export default {
   name: 'James'
-  img: 'people/James/Normal'
-  svg: 'people/James/skills.svg'
+  img: Normal
+  svg: svg
   skills:
     Reliable:
       description: 'Repair the ship 25% faster'
