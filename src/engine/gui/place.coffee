@@ -61,7 +61,7 @@ draw = (place)->
 
 
   return """<div place="#{place}" class="place">
-    <img src="game/content/#{places[place].img}">
+    <img src="#{places[place].img}">
     #{travelDiv}
     <div class="name">#{places[place].name}</div>
     <div class="description">#{distanceDesc} - #{Math.floor(g.reputation[place])} reputation</div>

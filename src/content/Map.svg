@@ -48,10 +48,10 @@
     <path id="Lephai_Amandais"   travel="Sail" d="M 1190 372 C 1168 401, 1170 425, 1243 487" />
     <path id="Ment_Crater"       travel="Sail" d="M 1177 332 C 1177 332, 1211 302, 1211 302" />
   </g>
-  <svg id="Ship" x="0" y="0" overflow="visible">
+  <g id="Ship" x="0" y="0" overflow="visible">
     <circle cx="0" cy="0" r="5" style="fill:#DD0000;stroke:none"/>
     <circle cx="0" cy="0" r="8" style="fill:none;stroke:#DD0000;stroke-width:1.2;"/>
-  </svg>
+  </g>
   <g id="LabelLayer"  font-family="Sans" font-size="18px">
     <g id="Vailia">
       <rect rx="6" ry="6" />

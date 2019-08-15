@@ -12,13 +12,12 @@ import * as content from 'content'
 
 export mapGuiSetup = ->
   # Set up draggable map
-  map = $('#map').html(mapSvg)
+  map = $('#map').html(mapSvg.replace(/<svg.+?>|<\/svg>/g, ''))
   dragMap = $('#drag-map')
   map.find('#MapLayer image').attr('xlink:href', mapImage)
 
   # Center the map initially
-  w = map.width()
-  h = map.height()
+  {width: w, height: h} = $('#MapLayer')[0].getBBox()
   dX = 0
   dY = 0
   center = ->
@@ -26,6 +25,7 @@ export mapGuiSetup = ->
     dY = (dragMap.height() - h) / 2
     map.css('transform', "translate(#{dX}px, #{dY}px)")
 
+  map.width(w).height(h)
   $(window).on 'resize', center
   center()
 
