@@ -11,9 +11,9 @@ export randomRound = (number)->
   if Math.random() < number % 1 then result += 1
   return result
 
-export choice = (items)-> (items)->
+export choice = (items)->
   if items instanceof Array
-    return Math.floor(Math.random() * items.length)
+    return items[Math.floor(Math.random() * items.length)]
   return choice(Object.keys(items))
 
 export sumObject = (items)->

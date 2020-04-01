@@ -39,7 +39,7 @@ export currentCordinates = (map)->
   circle = document.getElementById(map.from).children[1]
   return {x: circle.cx.baseVal.value, y: circle.cy.baseVal.value}
 
-distanceAlongPath: (place, distance)->
+distanceAlongPath = (place, distance)->
   element = document.getElementById(place)
   return if distance >= 0 then distance else element.getTotalLength() + distance
 
@@ -86,7 +86,7 @@ export dailyTravel = (map)->
     start: map.distance
     direction: dir
     pxTravel: to - map.distance
-    story: unless map.delay then travelEvent(map.from, map.to, travel)
+    story: unless map.delay then travelEvent(map.from, map.to, type)
   }
 
   if to is 0 or to is path.getTotalLength()

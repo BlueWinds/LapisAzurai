@@ -200,7 +200,7 @@ addPlaceColors = (chapter)->
         .css('color', placeColors(place))
         .appendTo('.colorBy.places')
         .attr('place', place)
-        .on('click', ()-> recolor('places', $(this).attr('place')))
+        .on('click', -> recolor('places', $(@).attr('place')))
 
 addStoryColors = ->
   for story of content
@@ -221,7 +221,7 @@ addStoryColors = ->
       .css('color', placeColors(type))
       .appendTo('.colorBy.places')
       .attr('place', type)
-      .on('click', ()-> recolor('places', $(this).attr('place')))
+      .on('click', -> recolor('places', $(@).attr('place')))
 
 addCharacterColors = (chapter)->
   for p1 in mainCharacters
@@ -250,27 +250,24 @@ window.recolor = (colorBy, category)->
   $('.colorBy').hide()
   $('.' + colorBy).show()
 
-  circle.attr('fill', (d)->
-    if colorBy is 'places'
+  colorize = {
+    places: (d)->
       if not category or category is places[d.name]
         return placeColors(places[d.name])
-      return '#999'
-
-    if colorBy is 'required'
+    required: (d)->
       required = content[d.name].required
-      return if required then requiredColors(required) else '#aaa'
-
-    if colorBy is 'characters'
-      unless content[d.name].effects?.xp then return '#aaa'
-      xp = content[d.name].effects.xp
-      c = Object.keys(xp).sort().reverse()
-      gradient = c[0] + '_' + (c[1] or c[0])
-      return 'url(#' + gradient + ')'
-
-    if colorBy is '_class'
+      if required then return requiredColors(required)
+    characters: (d)->
+      if content[d.name].effects?.xp
+        xp = content[d.name].effects.xp
+        c = Object.keys(xp).sort().reverse()
+        gradient = c[0] + '_' + (c[1] or c[0])
+        return 'url(#' + gradient + ')'
+    _class: (d)->
       _class = content[d.name]._class
-      return if _class then _classColors(_class) else '#aaa'
-  )
+      if _class then return _classColors(_class)
+  }
+  circle.attr('fill', (d)-> (colorize[colorBy]?(d) or '#aaa'))
 
 setHash = (chapter, colorBy, category)->
   split = window.location.hash.substr(1).split('|')

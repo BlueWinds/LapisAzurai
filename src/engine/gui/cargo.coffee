@@ -33,14 +33,14 @@ $.extend Cargo, {
 
     return """<span class="label">
       Search for jobs -
-      <select class="searchFocus" onclick="event.stopPropagation()" onchange="Cargo.changeSearchFocus()">
+      <select class="searchFocus" onclick="event.stopPropagation()" onchange="changeSearchFocusCargo()">
         #{potentialDests.map(makeDestOption)}
       </select>
     </span>"""
 
   drawSearch: (place)->
     onclick = if g.map.from is place and g.cargo.length < Cargo.maxCargo()
-      'onclick="Cargo.clickSearch(\'' + place + '\');"'
+      'onclick="clickSearchCargo(\'' + place + '\');"'
     else ''
 
     """<td class="cargoSearch #{if onclick then 'active' else ''}" #{onclick}>
@@ -57,7 +57,7 @@ $.extend Cargo, {
   draw: (cargo)->
     i = g.availableCargo.indexOf(cargo)
     onclick = if g.map.from is cargo.from and Cargo.maxCargo() > g.cargo.length and Cargo.canPickUpDeliver()
-      'onclick="Cargo.clickAccept(' + i + ');"'
+      'onclick="clickAcceptCargo(' + i + ');"'
     else ''
 
     accept = Cargo.acceptTimeRemaining(cargo)
@@ -73,7 +73,7 @@ $.extend Cargo, {
   drawDelivery: (cargo)->
     i = g.cargo.indexOf(cargo)
     onclick = if g.map.from is cargo.to and Cargo.canPickUpDeliver()
-      'onclick="Cargo.clickDeliver(' + i + ');"'
+      'onclick="clickDeliverCargo(' + i + ');"'
     else ''
 
     result = if Cargo.deliveryTimeRemaining(cargo) >= 0
@@ -89,40 +89,39 @@ $.extend Cargo, {
       </div>
       #{remainingDiv Cargo.deliveryTimeRemaining(cargo)}
     </td>"""
-
-  changeSearchFocus: ->
-    g.jobFocus = $('select.searchFocus').val() or ''
-
-  clickSearch: (place)->
-    # Call this in case the last place where focus was set isn't
-    # on the list of available options for this location.
-    Cargo.changeSearchFocus()
-    Game.passDay()
-
-    chance = Cargo.searchChance(place)
-    while chance > Math.random()
-      chance--
-      g.availableCargo.push Cargo.create(place)
-      if g.availableCargo.length > 10
-        g.availableCargo.shift()
-
-    g.jobSearch[place] = Math.max(0, chance)
-    g.reputation[place] -= Cargo.searchCost(place)
-
-    Game.showPassDayOverlay(undefined, 'Repaired the ship')
-    Game.animateSuccess('.cargoSearch .success')
-    clickSearchSkill()
-
-  clickAccept: (i)->
-    cargo = g.availableCargo[i]
-    Cargo.accept(cargo)
-
-    Game.showPassDayOverlay(undefined, "Loaded #{cargo.name.toLowerCase()} destined for #{cargo.to}")
-    Game.animateSuccess('.cargo.accept.' + i + ' .success')
-
-  clickDeliver: (i)->
-    effects = Cargo.deliver(i)
-
-    Game.showPassDayOverlay(undefined, Game.drawEffects(effects))
-    Game.animateSuccess('.cargo.delivery.' + i + ' .success')
 }
+
+window.changeSearchFocusCargo = -> g.jobFocus = $('select.searchFocus').val() or ''
+
+window.clickSearchCargo = (place)->
+  # Call this in case the last place where focus was set isn't
+  # on the list of available options for this location.
+  window.changeSearchFocusCargo()
+  Game.passDay()
+
+  chance = Cargo.searchChance(place)
+  while chance > Math.random()
+    chance--
+    g.availableCargo.push Cargo.create(place)
+    if g.availableCargo.length > 10
+      g.availableCargo.shift()
+
+  g.jobSearch[place] = Math.max(0, chance)
+  g.reputation[place] -= Cargo.searchCost(place)
+
+  Game.showPassDayOverlay(undefined, 'Repaired the ship')
+  Game.animateSuccess('.cargoSearch .success')
+  clickSearchSkill()
+
+window.clickAcceptCargo = (i)->
+  cargo = g.availableCargo[i]
+  Cargo.accept(cargo)
+
+  Game.showPassDayOverlay(undefined, "Loaded #{cargo.name.toLowerCase()} destined for #{cargo.to}")
+  Game.animateSuccess('.cargo.accept.' + i + ' .success')
+
+window.clickDeliverCargo = (i)->
+  effects = Cargo.deliver(i)
+
+  Game.showPassDayOverlay(undefined, Game.drawEffects(effects))
+  Game.animateSuccess('.cargo.delivery.' + i + ' .success')

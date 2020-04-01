@@ -67,8 +67,8 @@ activateSVG = (svg)->
     $("##{skill} circle:nth-child(2)", svg).css('display', 'initial')
 
   $('g', svg).on 'click', ->
-    p.find('object').each ->
-      $(@contentDocument).find('.active').removeClass('active')
+    p.find('svg').each ->
+      $(@).find('.active').removeClass('active')
     $(@).addClass('active')
 
     p.find(".skill[p=#{person}]").remove()
@@ -106,7 +106,7 @@ window.clickSkill = (person, skill)->
   showOverview()
 
   # Mark the skill as selected
-  svg = $("[person=#{person}] object")[0].contentDocument
+  svg = $("[person=#{person}] svg")[0].contentDocument
   $("##{skill} circle:nth-child(2)", svg).css('display', 'initial')
 
   # Redraw the skill box
