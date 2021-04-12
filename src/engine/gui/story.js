@@ -254,7 +254,7 @@ var addSectionImage = function(element, line){
     for (let part of img[1].split('/')) { src = src[part]; }
 
     if (src) {
-      return element.append( `<img src='.${src}'>`);
+      return element.append( `<img src='${src}'>`);
     }
   }
 };

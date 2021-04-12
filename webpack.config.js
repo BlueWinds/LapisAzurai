@@ -8,8 +8,7 @@ const fileLoader = {
     name(file) {
       const p = path.parse(file)
       const value = p.dir.replace(/.*\/src/, '') + '/[name].[ext]'
-      if (file.match('css')) { return value.replace(/^\//, '') }
-      return value
+      return value.replace(/^\//, '')
     }
   }
 }
