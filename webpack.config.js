@@ -7,7 +7,9 @@ const fileLoader = {
   loader: 'file-loader', options: {
     name(file) {
       const p = path.parse(file)
-      return p.dir.replace(/.*\/src/, '') + '/[name].[ext]'
+      const value = p.dir.replace(/.*\/src/, '') + '/[name].[ext]'
+      if (file.match('css')) { return value.replace(/^\//, '') }
+      return value
     }
   }
 }
@@ -15,15 +17,15 @@ const fileLoader = {
 module.exports = {
   devtool: 'inline-cheap-source-map',
   entry: {
-    main: './src/index.coffee',
-    eventDump: './src/eventDump.coffee',
-    eventGraph: './src/eventGraph.coffee',
+    main: './src/index.js',
+    eventDump: './src/eventDump.js',
+    eventGraph: './src/eventGraph.js',
   },
   mode: 'development',
   module: {
     rules: [
       {
-        test: /\.coffee$/,
+        test: /\.js$/,
         use: 'happypack/loader',
       },
       {
@@ -36,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [{ loader: 'style-loader/url' }, fileLoader],
+        use: [{loader: 'style-loader', options: {injectType: 'linkTag'}}, fileLoader],
       },
     ]
   },
@@ -45,7 +47,7 @@ module.exports = {
   },
   plugins:[
     new HappyPack({
-      loaders: ['coffee-loader'],
+      loaders: ['babel-loader'],
       verbose: false,
     }),
     new webpack.DefinePlugin({
@@ -59,7 +61,7 @@ module.exports = {
       game: path.resolve(__dirname, 'src/engine/game'),
       gui: path.resolve(__dirname, 'src/engine/gui'),
     },
-    extensions: ['.coffee', '.js', '.json']
+    extensions: ['.js', '.json']
   },
   stats: {
     assets: false,
